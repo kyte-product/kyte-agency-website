@@ -6,14 +6,15 @@ import { useMemo, useState } from "react";
 import type { WorkProject } from "@/lib/sanity";
 import "../WorkShowcase.css";
 
-const FILTERS = ["Website Design", "Brand Identity", "Content Marketing", "Media Production"] as const;
+const FILTERS = ["Website Design", "Mobile App Design", "Brand Identity", "Content Marketing", "Media Production"] as const;
 type WorkFilter = (typeof FILTERS)[number];
 
 function categoriesFor(project: WorkProject): WorkFilter[] {
   const source = [project.cardService, project.role, project.projectType, project.title, project.slug]
     .filter(Boolean).join(" ").toLowerCase();
   const inferred = [
-    /web|shopify|ecom|app design/.test(source) && "Website Design",
+    /web|shopify|ecom/.test(source) && "Website Design",
+    /mobile app|app design/.test(source) && "Mobile App Design",
     /brand|identity|packaging/.test(source) && "Brand Identity",
     /social|content|marketing/.test(source) && "Content Marketing",
     /video|production|explainer/.test(source) && "Media Production",
