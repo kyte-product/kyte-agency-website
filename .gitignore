@@ -1,0 +1,15 @@
+.DS_Store
+
+# Source references and unapproved content assets stay outside the site code.
+/Anand Website (Structure Reference)/
+/Case Study/
+/Design News/
+/Team Images/
+
+# The Markdown playbook is the versioned source for copy guidance.
+*.docx
+
+# Keep local secrets out of the shared repository.
+.env
+.env.*
+!.env.example

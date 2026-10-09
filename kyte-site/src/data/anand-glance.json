@@ -1,0 +1,670 @@
+{
+  "global": {
+    "title": "A Global Mobility Group, Rooted in India",
+    "body": "What began in 1961 has evolved into a global mobility solutions group, bringing together world-class technologies and deep manufacturing expertise to serve leading automotive manufacturers across the world.",
+    "ctas": [
+      {
+        "label": "Explore Our Partners",
+        "href": "#",
+        "primary": true
+      },
+      {
+        "label": "Partner with Us",
+        "href": "#contact"
+      }
+    ],
+    "list": [
+      "87 locations across the ANAND Group",
+      "Joint ventures with partners from the USA, France, Germany, South Korea and Switzerland",
+      "Technical collaborations with partners in the Netherlands, Spain and Japan",
+      "Trusted by OEMs including Toyota, Honda, BMW, Maruti Suzuki and Tata Motors"
+    ],
+    "graphics": {
+      "left": {
+        "type": "map"
+      },
+      "right": []
+    },
+    "map": {
+      "hq": {
+        "x": 144,
+        "y": 42.4,
+        "label": "ANAND HQ · New Delhi"
+      },
+      "countries": [
+        {
+          "id": "usa",
+          "name": "USA",
+          "x": 49.5,
+          "y": 32.9,
+          "type": "jv",
+          "partners": [
+            [
+              "Dana Incorporated",
+              "DANA.png",
+              "US$10.3B",
+              "42,000+"
+            ],
+            [
+              "Joyson Safety Systems",
+              "Joyson.png",
+              "US$5B",
+              "43,000+"
+            ]
+          ]
+        },
+        {
+          "id": "fra",
+          "name": "France",
+          "x": 99.6,
+          "y": 27.4,
+          "type": "jv",
+          "partners": [
+            [
+              "Forvia Clean Mobility",
+              "Forvia.png",
+              "US$29.5B",
+              "1,50,000+"
+            ],
+            [
+              "Valeo",
+              "valeo.png",
+              "US$23.8B",
+              "1,06,100+"
+            ]
+          ]
+        },
+        {
+          "id": "deu",
+          "name": "Germany",
+          "x": 104.6,
+          "y": 26.6,
+          "type": "jv",
+          "partners": [
+            [
+              "Henkel KGaA",
+              "Henkel.png",
+              "US$23.3B",
+              "47,700+"
+            ],
+            [
+              "MAHLE GmbH",
+              "mahle.png",
+              "US$13.9B",
+              "72,300+"
+            ]
+          ]
+        },
+        {
+          "id": "che",
+          "name": "Switzerland",
+          "x": 104.9,
+          "y": 30.4,
+          "type": "jv",
+          "partners": [
+            [
+              "APAG Holding AG",
+              "APAG.png",
+              "US$93M",
+              "500+"
+            ]
+          ]
+        },
+        {
+          "id": "nld",
+          "name": "Netherlands",
+          "x": 101.6,
+          "y": 23.6,
+          "type": "tech",
+          "partners": [
+            [
+              "KONI BV",
+              "koni.png"
+            ],
+            [
+              "Inalfa Roof Systems",
+              "Inalfa.png"
+            ]
+          ]
+        },
+        {
+          "id": "esp",
+          "name": "Spain",
+          "x": 96.5,
+          "y": 34.6,
+          "type": "tech",
+          "partners": [
+            [
+              "KYB Corporation",
+              "kyb.png"
+            ]
+          ]
+        },
+        {
+          "id": "kor",
+          "name": "South Korea",
+          "x": 173.5,
+          "y": 36.4,
+          "type": "jv",
+          "partners": [
+            [
+              "HL Mando",
+              "HL_mando.png",
+              "US$6.4B",
+              "17,150+"
+            ],
+            [
+              "SK Enmove",
+              "SK_enmove.png",
+              "US$3.5B",
+              "300+"
+            ],
+            [
+              "HL Klemove",
+              "HL-Klemove.png",
+              "US$1.3B",
+              "2,300+"
+            ],
+            [
+              "JINHAP",
+              "Jinhap.png",
+              "US$408M",
+              "1,200+"
+            ],
+            [
+              "CY Myutec",
+              "CY_Myutec.png",
+              "US$85.5M",
+              "500+"
+            ]
+          ]
+        },
+        {
+          "id": "jpn",
+          "name": "Japan",
+          "x": 181.5,
+          "y": 38.1,
+          "type": "tech",
+          "partners": [
+            [
+              "KYB Corporation",
+              "kyb.png"
+            ],
+            [
+              "Yamaha Motor Hydraulic Systems",
+              "Yamaha.png"
+            ]
+          ]
+        }
+      ]
+    },
+    "extra": {
+      "type": "cards",
+      "title": "More to Discover",
+      "items": [
+        {
+          "img": "/anand-glance/Forvia.png",
+          "text": "Eleven global joint-venture partners and four technical collaborations bring advanced engineering to India and the world.",
+          "link": "Our partners",
+          "href": "#"
+        },
+        {
+          "img": "/anand-glance/Toyota.png",
+          "text": "ANAND supplies leading OEMs across passenger cars, two-wheelers and commercial vehicles.",
+          "link": "Our customers",
+          "href": "#"
+        },
+        {
+          "img": "/anand-glance/global.png",
+          "text": "Corporate headquarters in New Delhi, with offices and clusters in Mumbai, Pune and Chennai.",
+          "link": "ANAND locations",
+          "href": "#contact"
+        }
+      ]
+    },
+    "quote": {
+      "text": "Power of People, Power of Partnership",
+      "name": "ANAND Group",
+      "role": "Our guiding philosophy"
+    },
+    "footer": {
+      "title": "Build the Future of Mobility with ANAND",
+      "ctas": [
+        {
+          "label": "Partner with Us",
+          "href": "#contact",
+          "primary": true
+        },
+        {
+          "label": "Contact Us",
+          "href": "mailto:contact@anandgroupindia.com"
+        }
+      ]
+    }
+  },
+  "revenue": {
+    "title": "US$2.2B+ in Group Revenue, Built Through Partnership",
+    "body": "ANAND grows by partnering with global technology leaders. Its joint ventures bring the engineering of some of the world's largest automotive suppliers to Indian manufacturing.",
+    "ctas": [
+      {
+        "label": "Explore Our Companies",
+        "href": "#glance",
+        "primary": true
+      },
+      {
+        "label": "Latest News",
+        "href": "#news"
+      }
+    ],
+    "list": [
+      "US$2.2B+ group revenue",
+      "Aim to be among the top 3 players in each segment",
+      "Target 8% return on sales",
+      "Aim to spend 2% of sales on R&D"
+    ],
+    "graphics": {
+      "left": {
+        "type": "chart",
+        "caption": "JV partners' global revenue, US$ Bn (CY 2024)"
+      },
+      "right": [
+        {
+          "src": "/anand-glance/cnc-closeup.jpg",
+          "caption": "Investing in capacity and automation"
+        },
+        {
+          "src": "/anand-glance/news2-scaled-1.jpeg",
+          "caption": "Gabriel India"
+        }
+      ]
+    },
+    "extra": {
+      "type": "cards",
+      "title": "Recent Milestones",
+      "items": [
+        {
+          "img": "/anand-glance/cnc-closeup.jpg",
+          "cover": true,
+          "text": "Gabriel India to invest Rs 180 crore in new capacity and automation in FY27.",
+          "link": "Read on Autocar Professional",
+          "href": "https://www.autocarpro.in/news/gabriel-india-to-invest-rs-180-crore-in-new-capacity-automation-in-fy27-133632"
+        },
+        {
+          "img": "/anand-glance/news3.jpg",
+          "cover": true,
+          "text": "Gabriel India unveils a ₹316.6 crore 'Project Jupiter' for HL Mando and HL Klemove stakes.",
+          "link": "Read on BusinessLine",
+          "href": "https://www.thehindubusinessline.com/companies/gabriel-india-unveils-3166-crore-project-jupiter-for-korean-linked-hl-mando-klemove-stakes/article71251030.ece"
+        },
+        {
+          "img": "/anand-glance/Gabriel-India-South-Koreas-HL-Klemove.jpg",
+          "cover": true,
+          "text": "Gabriel India and HL Klemove form a joint venture for autonomous driving.",
+          "link": "Read on The Economic Times",
+          "href": "https://economictimes.indiatimes.com/industry/auto/auto-news/gabriel-india-south-koreas-hl-klemove-form-jv-for-autonomous-driving/articleshow/133541512.cms"
+        }
+      ]
+    },
+    "quote": {
+      "text": "To create value sustainably through pursuit of excellence and good governance.",
+      "name": "The ANAND Way",
+      "role": "Our vision"
+    },
+    "footer": {
+      "title": "Grow with ANAND",
+      "ctas": [
+        {
+          "label": "Partner with Us",
+          "href": "#contact",
+          "primary": true
+        },
+        {
+          "label": "Contact Us",
+          "href": "mailto:contact@anandgroupindia.com"
+        }
+      ]
+    }
+  },
+  "companies": {
+    "title": "17 Automotive Companies, One Unified Group",
+    "body": "Almost all ANAND companies are successful partnership firms with a leading global automotive player. The core values of transparency, good governance and mutual trust have formed the foundation of these partnerships.",
+    "ctas": [
+      {
+        "label": "Explore Products & Solutions",
+        "href": "#solutions",
+        "primary": true
+      },
+      {
+        "label": "Partner with Us",
+        "href": "#contact"
+      }
+    ],
+    "list": [
+      "Partnerships with global leaders such as MAHLE, Valeo, Dana, Henkel and HL Mando",
+      "Six decades of integrating partners' technical expertise with local resources",
+      "Products across chassis, powertrain, safety, thermal and e-mobility",
+      "Driven by the ANAND value of forging lasting associations"
+    ],
+    "graphics": {
+      "left": {
+        "type": "logos",
+        "caption": "Our automotive companies"
+      },
+      "right": [
+        {
+          "src": "/anand-glance/chasis-control.png",
+          "caption": "Chassis: Gabriel India"
+        },
+        {
+          "src": "/anand-glance/safety.png",
+          "caption": "Safety: Joyson ANAND Abhishek"
+        }
+      ]
+    },
+    "extra": {
+      "type": "directory",
+      "title": "All 17 Companies",
+      "items": [
+        {
+          "name": "ANAND CY Myutec Automotive",
+          "products": "High-precision synchronizer rings",
+          "logo": "/anand-glance/companies/anand-cy-myutec-automotive.png",
+          "url": "https://www.anandgroupindia.com/acymautomotive/"
+        },
+        {
+          "name": "Anevolve Mando eMobility",
+          "products": "Motors and controllers",
+          "logo": "/anand-glance/companies/anevolve-mando-emobility.png",
+          "url": "https://www.anandgroupindia.com/anevolvemandoemobility/"
+        },
+        {
+          "name": "APAG CoSyst",
+          "products": "Interior and exterior lighting; motor control units",
+          "logo": "/anand-glance/companies/apag-cosyst.png",
+          "url": "https://www.anandgroupindia.com/automotive/our-companies/"
+        },
+        {
+          "name": "CY Myutec ANAND",
+          "products": "High-precision synchronizer rings",
+          "logo": "/anand-glance/companies/cy-myutec-anand.png",
+          "url": "https://www.anandgroupindia.com/cymyutecanand/"
+        },
+        {
+          "name": "Dana Anand India",
+          "products": "Axles, drive shafts and drivetrain components",
+          "logo": "/anand-glance/companies/dana-anand-india.png",
+          "url": "https://www.anandgroupindia.com/danaanandindia/"
+        },
+        {
+          "name": "Faurecia Clean Mobility",
+          "products": "Exhaust mufflers, catalytic converters and reinforcements",
+          "logo": "/anand-glance/companies/faurecia-clean-mobility.png",
+          "url": "https://www.anandgroupindia.com/faureciacleanmobility/"
+        },
+        {
+          "name": "Gabriel India",
+          "products": "Shock absorbers, struts, front forks and gas springs",
+          "logo": "/anand-glance/companies/gabriel-india.png",
+          "url": "https://www.anandgroupindia.com/gabrielindia/"
+        },
+        {
+          "name": "Henkel ANAND India",
+          "products": "Sealants, adhesives, coatings and NVH products",
+          "logo": "/anand-glance/companies/henkel-anand-india.png",
+          "url": "https://www.anandgroupindia.com/henkelanandindia/"
+        },
+        {
+          "name": "HL Klemove",
+          "products": "Autonomous driving and ADAS technology",
+          "logo": "/anand-glance/companies/hl-klemove.png",
+          "url": "https://www.anandgroupindia.com/automotive/our-companies/"
+        },
+        {
+          "name": "HL Mando Anand India",
+          "products": "Hydraulic brakes, electric power steering and struts",
+          "logo": "/anand-glance/companies/hl-mando-anand-india.png",
+          "url": "https://www.anandgroupindia.com/mandoautomotiveindia/"
+        },
+        {
+          "name": "ANAND I-Power",
+          "products": "Piston rings and cast iron covers",
+          "logo": "/anand-glance/companies/anand-i-power.png",
+          "url": "https://www.anandgroupindia.com/anandipower/"
+        },
+        {
+          "name": "Jinhap Gabriel Auto India",
+          "products": "Bearing cap, head cover and transmission bolts",
+          "logo": "/anand-glance/companies/jinhap-gabriel-auto-india.png",
+          "url": "https://www.anandgroupindia.com/automotive/our-companies/"
+        },
+        {
+          "name": "MAHLE ANAND Filter Systems",
+          "products": "Air intake, air cleaner, fuel and oil filter modules",
+          "logo": "/anand-glance/companies/mahle-anand-filter-systems.png",
+          "url": "https://www.anandgroupindia.com/mahleanandfiltersystems/"
+        },
+        {
+          "name": "MAHLE ANAND Thermal Systems",
+          "products": "Air conditioning, engine cooling and EGR coolers",
+          "logo": "/anand-glance/companies/mahle-anand-thermal-systems.png",
+          "url": "https://www.anandgroupindia.com/mahleanandthermalsystems/"
+        },
+        {
+          "name": "Joyson ANAND Abhishek Safety Systems",
+          "products": "Seat belts, airbags and steering wheels",
+          "logo": "/anand-glance/companies/joyson-anand-abhishek-safety-systems.png",
+          "url": "https://www.anandgroupindia.com/joysonanandabhisheksafetysystems/"
+        },
+        {
+          "name": "SK Enmove Gabriel India",
+          "products": "Engine oils, e-fluids, lubricants and greases",
+          "logo": "/anand-glance/companies/sk-enmove-gabriel-india.png",
+          "url": "https://www.anandgroupindia.com/sites/sk-enmove-gabriel-india/"
+        },
+        {
+          "name": "Valeo Friction Materials India",
+          "products": "Non-asbestos, lead-free clutch facings",
+          "logo": "/anand-glance/companies/valeo-friction-materials-india.png",
+          "url": "https://www.anandgroupindia.com/valeofrictionmaterialsindia/"
+        }
+      ]
+    },
+    "quote": {
+      "text": "Power of People, Power of Partnership",
+      "name": "ANAND Group",
+      "role": "Our guiding philosophy"
+    },
+    "footer": {
+      "title": "Find the Right ANAND Company for You",
+      "ctas": [
+        {
+          "label": "Explore Our Companies",
+          "href": "#",
+          "primary": true
+        },
+        {
+          "label": "Contact Us",
+          "href": "mailto:contact@anandgroupindia.com"
+        }
+      ]
+    }
+  },
+  "people": {
+    "title": "22,000+ People, Guided by the ANAND Way",
+    "body": "ANAND lives by the belief that business is 90% people. Founded by Deep C. Anand in 1961, the Group is governed today through the ANAND Supervisory Board.",
+    "ctas": [
+      {
+        "label": "Explore Careers",
+        "href": "#careers",
+        "primary": true
+      },
+      {
+        "label": "Culture at ANAND",
+        "href": "#"
+      }
+    ],
+    "list": [
+      "Attract and retain talent",
+      "Empower people and encourage accountability",
+      "Develop people for the skills and experience they need",
+      "Shop-floor excellence and people development programmes"
+    ],
+    "graphics": {
+      "left": {
+        "src": "/anand-glance/news1-scaled-1.jpeg",
+        "caption": "Powered by people"
+      },
+      "right": [
+        {
+          "src": "/anand-glance/ANAND-banner-scaled-1.jpeg",
+          "caption": "ANAND teams at Tech Shows 2026"
+        },
+        {
+          "src": "/anand-glance/news2-scaled-1.jpeg",
+          "caption": "Gabriel India campus"
+        }
+      ]
+    },
+    "extra": {
+      "type": "leaders",
+      "title": "Leadership",
+      "items": [
+        {
+          "initials": "DA",
+          "tone": "",
+          "photo": "/anand-glance/leader-deep-c-anand.jpg",
+          "name": "Deep C. Anand",
+          "role": "Founder",
+          "text": "Established Gabriel India, ANAND's first business venture, in 1961 at the age of 27."
+        },
+        {
+          "initials": "MG",
+          "tone": "r",
+          "photo": "/anand-glance/leader-mahendra-goyal.jpg",
+          "name": "Mahendra K. Goyal",
+          "role": "CEO & MD",
+          "text": "Appointed Chief Executive Officer and Managing Director of Gabriel India in July 2026."
+        },
+        {
+          "initials": "AS",
+          "tone": "c",
+          "photo": "/anand-glance/leader-anjali-singh.jpg",
+          "name": "Anjali Singh",
+          "role": "Chairperson, ANAND Supervisory Board",
+          "text": "Succeeded her father as Chairperson of the Supervisory Board in February 2011."
+        },
+        {
+          "initials": "JS",
+          "tone": "c",
+          "photo": "/anand-glance/leader-jaisal-singh.jpg",
+          "name": "Jaisal Singh",
+          "role": "Vice Chairman, ANAND Executive Board",
+          "text": "Director on the Group Supervisory Board and Founder of SUJÁN; launched ANEVOLVE with Anjali Singh in 2023."
+        }
+      ]
+    },
+    "quote": {
+      "text": "Business is 90% people.",
+      "name": "The ANAND Way",
+      "role": "Beliefs and business philosophy"
+    },
+    "footer": {
+      "title": "Grow Your Career at ANAND",
+      "ctas": [
+        {
+          "label": "Explore Careers",
+          "href": "#careers",
+          "primary": true
+        },
+        {
+          "label": "Join Us",
+          "href": "#"
+        }
+      ]
+    }
+  },
+  "sujan": {
+    "title": "SUJÁN: Experiential Luxury, Rooted in Conservation",
+    "body": "SUJÁN redefines experiential luxury through conservation-led hospitality. Its three wilderness and safari camps in Rajasthan each offer a unique travel experience rooted in conservation, culture and conscious luxury.",
+    "ctas": [
+      {
+        "label": "Visit SUJÁN",
+        "href": "https://thesujanlife.com",
+        "primary": true
+      },
+      {
+        "label": "Our Story",
+        "href": "https://thesujanlife.com/our-story"
+      }
+    ],
+    "list": [
+      "SUJÁN Sher Bagh was established 25 years ago as India's first positive impact safari camp",
+      "SUJÁN The Serai sits on a 100-acre private estate in the Great Thar Desert",
+      "SUJÁN Jawai is set among billion-year-old granite hills where leopards roam free",
+      "All three camps hold Platinum LEED certification"
+    ],
+    "graphics": {
+      "left": {
+        "src": "/anand-glance/sujan-leopard-rocks.jpg",
+        "caption": "A leopard at SUJÁN Jawai"
+      },
+      "right": [
+        {
+          "src": "/anand-glance/sujan-jawai.jpg",
+          "caption": "SUJÁN Jawai"
+        },
+        {
+          "src": "/anand-glance/sujan-the-serai.jpg",
+          "caption": "SUJÁN The Serai"
+        }
+      ]
+    },
+    "extra": {
+      "type": "cards",
+      "title": "The SUJÁN Collection",
+      "items": [
+        {
+          "img": "/anand-glance/sujan-jawai.jpg",
+          "cover": true,
+          "text": "Set among spellbinding, billion-year-old granite rock formations, where leopards roam wild and free in harmony with local communities.",
+          "link": "SUJÁN Jawai",
+          "href": "https://thesujanlife.com/sujan-camps/sujan-jawai"
+        },
+        {
+          "img": "/anand-glance/sujan-the-serai.jpg",
+          "cover": true,
+          "text": "An oasis of calm on a 100-acre private estate of desert scrub, inspired by the royal caravan sites of Rajputana.",
+          "link": "SUJÁN The Serai",
+          "href": "https://thesujanlife.com/sujan-camps/sujan-the-serai"
+        },
+        {
+          "img": "/anand-glance/sujan-sher-bagh.jpg",
+          "cover": true,
+          "text": "India's first positive impact safari camp, on the edge of the Ranthambhore Tiger Reserve.",
+          "link": "SUJÁN Sher Bagh",
+          "href": "https://thesujanlife.com/sujan-camps/sujan-sher-bagh"
+        }
+      ]
+    },
+    "quote": {
+      "text": "SUJÁN is without a doubt, the Maharaja of luxury safari experiences and it takes the comfort of its guests as seriously as the subject of conservation.",
+      "name": "Tatler Magazine",
+      "role": "",
+      "logo": "/anand-glance/sujan-wordmark.svg"
+    },
+    "footer": {
+      "title": "Plan Your SUJÁN Journey",
+      "ctas": [
+        {
+          "label": "Book a Stay",
+          "href": "https://thesujanlife.com",
+          "primary": true
+        },
+        {
+          "label": "Contact Reservations",
+          "href": "mailto:reservations@thesujanlife.com"
+        }
+      ]
+    }
+  }
+}

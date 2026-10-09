@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face { font-family: "DM Sans"; src: url("../node_modules/@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2") format("woff2"); font-weight: 100 1000; }
+    html, body { margin: 0; overflow: hidden; background: #f8f8f7; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="diagram"></canvas>
+  <script>
+    const mobile = new URLSearchParams(location.search).get("layout") === "mobile";
+    const width = mobile ? 720 : 1280;
+    const height = mobile ? 1120 : 640;
+    const canvas = document.getElementById("diagram");
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext("2d", { alpha: false });
+    const c = { bg: "#f8f8f7", ink: "#1a1a16", muted: "#6f706e", stroke: "#8054e9", purple: "#8054e9", lavender: "#e9e3fb", blue: "#538ee8", paleBlue: "#e6effc", white: "#ffffff" };
+    const strokeWidth = 3;
+    const ease = x => { const v = Math.max(0, Math.min(1, x)); return v * v * (3 - 2 * v); };
+    const reveal = (t, start, duration = 0.65) => ease((t - start) / duration);
+    const font = (size, weight = 400) => `${weight} ${size}px "DM Sans", Arial, sans-serif`;
+
+    function text(value, x, y, size, color = c.ink, weight = 400, align = "left", alpha = 1) {
+      ctx.save(); ctx.globalAlpha *= alpha; ctx.font = font(size, weight); ctx.fillStyle = color; ctx.textAlign = align; ctx.textBaseline = "middle"; ctx.fillText(value, x, y); ctx.restore();
+    }
+    function line(x1, y1, x2, y2) {
+      ctx.save(); ctx.strokeStyle = c.stroke; ctx.lineWidth = strokeWidth; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke(); ctx.restore();
+    }
+    function diamond(cx, cy, w, h, fill, progress, fillOpacity) {
+      const left = cx - w / 2, right = cx + w / 2, top = cy - h / 2, bottom = cy + h / 2;
+      const perimeter = 2 * Math.hypot(w / 2, h / 2) * 2;
+      ctx.save(); ctx.beginPath(); ctx.moveTo(left, cy); ctx.lineTo(cx, top); ctx.lineTo(right, cy); ctx.lineTo(cx, bottom); ctx.closePath();
+      ctx.globalAlpha = fillOpacity; ctx.fillStyle = fill; ctx.fill();
+      if (progress > 0) { ctx.globalAlpha = 1; ctx.strokeStyle = c.stroke; ctx.lineWidth = strokeWidth; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.setLineDash([perimeter * progress, perimeter]); ctx.stroke(); }
+      ctx.restore();
+    }
+    function dot(x, y, color, radius = 7, alpha = 1) { ctx.save(); ctx.globalAlpha = alpha; ctx.fillStyle = c.white; ctx.beginPath(); ctx.arc(x, y, radius + 3, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x, y, radius, 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
+    function groupLabel(value, x, y, color, alpha) {
+      text(value, x, y, mobile ? 20 : 18, color, 600, "left", alpha);
+    }
+    function detail(title, body, x, y, alpha, centered = false) {
+      ctx.save(); ctx.globalAlpha = alpha;
+      line(x, y - 18, x + (centered ? 0 : 38), y - 18);
+      text(title, x, y + 10, mobile ? 27 : 23, c.ink, 600, centered ? "center" : "left");
+      text(body, x, y + 43, mobile ? 21 : 17, c.muted, 400, centered ? "center" : "left");
+      ctx.restore();
+    }
+    function desktop(t) {
+      const center = 321, left = 350, right = 930, w = 440, h = 264;
+      text("A CLEAR PATH FROM QUESTION TO OUTCOME", 58, 53, 15, c.purple, 600, "left", reveal(t, 0));
+      text("KYTE / PROCESS", 1222, 53, 15, c.muted, 500, "right", reveal(t, 0));
+      line(58, 83, 1222, 83);
+      groupLabel("01  UNDERSTAND THE PROBLEM", 130, 121, c.purple, reveal(t, 0.3));
+      groupLabel("02  SHAPE THE SOLUTION", 710, 121, c.blue, reveal(t, 3.4));
+      diamond(left, center, w, h, c.lavender, reveal(t, 0.55, 1.7), reveal(t, 1.6, 0.8) * 0.6);
+      diamond(right, center, w, h, c.paleBlue, reveal(t, 3.6, 1.7), reveal(t, 4.7, 0.8) * 0.72);
+      const progress = reveal(t, 1.05, 5.3);
+      line(80, center, 80 + 1120 * progress, center);
+      const labels = [
+        ["DISCOVER", 240, 1.0], ["DEFINE", 460, 2.15],
+        ["DEVELOP", 820, 4.0], ["DELIVER", 1040, 5.25]
+      ];
+      for (const [name, x, start] of labels) { const a = reveal(t, start); dot(x, center, c.stroke, 6, a); text(name, x, center - 29, 21, c.ink, 600, "center", a); }
+      detail("Listen & learn", "People, product, context", 130, 526, reveal(t, 1.4));
+      detail("Frame the brief", "Find the useful focus", 404, 526, reveal(t, 2.5));
+      detail("Make & prototype", "Explore what could work", 710, 526, reveal(t, 4.3));
+      detail("Test & improve", "Refine the working answer", 984, 526, reveal(t, 5.65));
+    }
+    function mobileFrame(t) {
+      text("FROM QUESTION TO OUTCOME", 48, 50, 22, c.purple, 600, "left", reveal(t, 0));
+      line(48, 82, 672, 82);
+      groupLabel("01  UNDERSTAND THE PROBLEM", 48, 133, c.purple, reveal(t, 0.3));
+      diamond(360, 331, 540, 300, c.lavender, reveal(t, 0.55, 1.7), reveal(t, 1.6, 0.8) * 0.6);
+      line(64, 331, 64 + 592 * reveal(t, 1.05, 2.1), 331);
+      dot(225, 331, c.stroke, 7, reveal(t, 1.0)); dot(495, 331, c.stroke, 7, reveal(t, 2.1));
+      text("DISCOVER", 225, 300, 28, c.ink, 600, "center", reveal(t, 1.0));
+      text("DEFINE", 495, 300, 28, c.ink, 600, "center", reveal(t, 2.1));
+      detail("Listen & learn", "People & context", 96, 524, reveal(t, 1.4));
+      detail("Frame the brief", "Find the focus", 384, 524, reveal(t, 2.5));
+      line(48, 608, 672, 608);
+      groupLabel("02  SHAPE THE SOLUTION", 48, 663, c.blue, reveal(t, 3.4));
+      diamond(360, 851, 540, 300, c.paleBlue, reveal(t, 3.6, 1.7), reveal(t, 4.7, 0.8) * 0.72);
+      line(64, 851, 64 + 592 * reveal(t, 4.1, 2.15), 851);
+      dot(225, 851, c.stroke, 7, reveal(t, 4.0)); dot(495, 851, c.stroke, 7, reveal(t, 5.25));
+      text("DEVELOP", 225, 820, 28, c.ink, 600, "center", reveal(t, 4.0));
+      text("DELIVER", 495, 820, 28, c.ink, 600, "center", reveal(t, 5.25));
+      detail("Make & prototype", "Explore options", 96, 1040, reveal(t, 4.3));
+      detail("Test & improve", "Refine the answer", 384, 1040, reveal(t, 5.65));
+    }
+    window.renderFrame = t => {
+      ctx.fillStyle = c.bg; ctx.fillRect(0, 0, width, height);
+      if (mobile) mobileFrame(t); else desktop(t);
+      if (t > 7.4) { ctx.save(); ctx.globalAlpha = reveal(t, 7.4, 0.6); ctx.fillStyle = c.bg; ctx.fillRect(0, 0, width, height); ctx.restore(); }
+    };
+    document.fonts.ready.then(() => { window.renderFrame(7.0); window.readyToRender = true; });
+  </script>
+</body>
+</html>

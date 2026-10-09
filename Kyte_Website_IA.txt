@@ -1,0 +1,152 @@
+KYTE AGENCY WEBSITE: INFORMATION ARCHITECTURE
+kyte-agency.com
+Version 1 | October 2026
+
+======================================================================
+1. TOP NAVIGATION
+======================================================================
+
+Work | Services (hover menu) | Industries | Insights | About | Contact
+
+Careers sits in the footer, not the main nav.
+
+"Services" behaviour:
+- "Services" is a label only, not a link. There is no /services page.
+- Desktop: hovering on "Services" opens a two-column menu.
+- Mobile: no hover exists, so tapping "Services" expands the menu.
+- Each column heading (cluster) is clickable, with its sub pages
+  listed and clickable underneath.
+
+Services menu layout:
+
+  UI/UX Design & Development        Branding & Marketing
+  ----------------------------      ----------------------------
+  UX Research & Design Audits       Brand Strategy & Identity
+  Website Design & Development      Graphic Design
+  Mobile App Design                 Video Production & Motion Graphics
+  SaaS & Web App Design             Social Media Marketing
+  eCommerce & Shopify Websites      SEO & AI Search Optimisation
+
+
+======================================================================
+2. SITE STRUCTURE (SLUGS)
+======================================================================
+
+/
+├── /work
+│   └── /work/[case-study-slug]
+│
+├── /ui-ux-design-development
+│   ├── /ui-ux-design-development/ux-research-design-audit
+│   ├── /ui-ux-design-development/website-design-development
+│   ├── /ui-ux-design-development/mobile-app-design
+│   ├── /ui-ux-design-development/saas-web-app-design
+│   └── /ui-ux-design-development/ecommerce-shopify-websites
+│
+├── /branding-marketing
+│   ├── /branding-marketing/brand-strategy-identity
+│   ├── /branding-marketing/graphic-design
+│   ├── /branding-marketing/video-production-motion-graphics
+│   ├── /branding-marketing/social-media-marketing
+│   └── /branding-marketing/seo-ai-search-optimisation
+│
+├── /industries
+│   ├── /industries/fintech
+│   ├── /industries/saas-startups
+│   ├── /industries/d2c-ecommerce
+│   └── /industries/hospitality-food-beverage
+│
+├── /insights
+│   └── /insights/[article-slug]
+│
+├── /about
+├── /careers
+│   └── /careers/[role-slug]
+├── /contact
+│
+├── /ui-ux-design-agency-bangalore
+├── /web-design-company-bangalore
+│
+├── /privacy-policy
+└── /terms
+
+
+======================================================================
+3. STRUCTURE NOTES
+======================================================================
+
+- Cluster pages (/ui-ux-design-development and /branding-marketing)
+  are the dedicated landing pages and act as the parent folders for
+  their services. No separate /services folder is used.
+- Location pages sit at the top level so the keyword follows the
+  domain directly. Link them from the footer, not the main nav.
+- /industries needs its own overview page since it is a folder.
+  A simple grid linking to each industry is enough.
+- Case study slugs use the client name, e.g. /work/fincart.
+- /design-system is an internal working page for the website build. It is
+  not part of public navigation or the SEO route map and remains noindex.
+  No dates or project codes.
+- /graveyard/landing-page is an internal, noindex snapshot of the homepage
+  before the 9 October 2026 hero redesign. Keep it outside public navigation.
+- Dubai and UK location pages can be added later
+  (e.g. /web-design-company-dubai) without changing anything else.
+- Do not use "Framer" in nav labels or slugs (very low search volume).
+  Mention it in page copy instead.
+- Dropping "services" from URLs has no meaningful SEO impact. What
+  matters is keeping this structure fixed once live.
+
+
+======================================================================
+4. 301 REDIRECTS
+======================================================================
+
+Order matters. Specific rules first, catch-all last.
+
+  FROM                                   TO
+  -------------------------------------  ---------------------------
+  /services                              /
+  /services/ui-ux-design-development     /ui-ux-design-development
+  /services/branding-marketing           /branding-marketing
+  /services/*                            /
+
+- Set up in Framer: Site Settings > Redirects.
+- Test each rule in an incognito window after publishing.
+
+
+======================================================================
+5. THINGS TO WATCH
+======================================================================
+
+1. Never link to /services anywhere: footer, sitemap or internal
+   buttons. If nothing links to it, Google never treats it as a real
+   page. The redirect is only a safety net for people typing it in.
+
+2. Map the current site's URLs. Any existing kyte-agency.com page that
+   changes or disappears needs its own 301 to the closest new page.
+   This matters more than /services, since old URLs may already have
+   rankings and backlinks.
+
+
+======================================================================
+6. KEYWORD REFERENCE (Ubersuggest, India, monthly searches)
+======================================================================
+
+  Keyword                              Volume   SEO Difficulty
+  -----------------------------------  -------  --------------
+  website development company           9,900   53
+  social media marketing agency         6,600   34
+  seo agency                            6,600   29
+  web design company                    5,400   42
+  web design company bangalore          5,400   38
+  branding agency                       2,900   31
+  generative engine optimization        2,400   76 (informational)
+  video production company              1,600   31
+  graphic design agency                 1,000   15
+  ui ux design agency                     880   36
+  ui ux design company in bangalore       880   31
+  shopify web design company              880   39
+  ui ux design services                   720    6
+  mobile app design company               260   63
+  ux research agency                       30   14
+  saas design agency                       30   16
+  framer agency                            30   19

@@ -1,0 +1,52 @@
+.section-break {
+  --slash-rise: clamp(44px, 10.5vw, 220px);
+  position: relative;
+  height: clamp(170px, 22vw, 300px);
+  overflow: hidden;
+  background: var(--color-white);
+}
+
+.section-break::before {
+  position: absolute;
+  inset: 0;
+  background: var(--color-surface-secondary);
+  clip-path: polygon(0 100%, 100% calc(100% - var(--slash-rise)), 100% 100%);
+  content: "";
+}
+
+.section-break__bar {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  height: 38px;
+  transform: skewY(-6deg);
+}
+
+.section-break__bar--cyan {
+  right: -2%;
+  bottom: calc(var(--slash-rise) - 12px);
+  width: 38%;
+  background: var(--color-cyan);
+}
+
+.section-break__bar--blue {
+  right: 5%;
+  bottom: calc(var(--slash-rise) - 41px);
+  width: 26%;
+  background: var(--color-blue);
+}
+
+.section-break__bar--violet {
+  right: 5%;
+  bottom: calc(var(--slash-rise) - 62px);
+  width: 26%;
+  background: var(--color-electric);
+}
+
+@media (max-width: 640px) {
+  .section-break { height: 160px; }
+  .section-break__bar { height: 24px; }
+  .section-break__bar--cyan { right: -4%; bottom: calc(var(--slash-rise) - 6px); width: 60%; }
+  .section-break__bar--blue { right: 5%; bottom: calc(var(--slash-rise) - 24px); width: 44%; }
+  .section-break__bar--violet { right: 5%; bottom: calc(var(--slash-rise) - 39px); width: 44%; }
+}
