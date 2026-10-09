@@ -15,5 +15,5 @@ export const fincartProject: WorkProject = {
   featured: false,
   sortOrder: -1,
   projectUrl: "https://apps.apple.com/in/app/fincart-investment-app/id1540925421",
-  cover: { url: "/fincart/00.png", alt: "Fincart financial planning app shown on a phone" },
+  cover: { url: "/fincart/work-cover.png", alt: "Two Fincart app screens showing a financial overview and a goal roadmap" },
 };

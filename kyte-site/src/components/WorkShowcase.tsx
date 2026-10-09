@@ -10,13 +10,13 @@ import "./WorkShowcase.css";
 const projects = [
   // Preview-only dates requested for layout review. Replace with verified project timelines before publishing.
   {
-    name: "Collectbee.",
-    description: "A product-led website that makes an AI accounts receivable platform easier to understand.",
-    period: "2024–2025",
-    category: "AI accounts receivable · Website design",
-    image: "/kyte-work/collectbee.png",
-    alt: "Collectbee accounts receivable platform shown on a tablet",
-    href: "/work/collectbee",
+    name: "Fincart.",
+    description: "A connected mobile experience for financial planning, investing, and tracking progress.",
+    period: "",
+    category: "Mobile app · Product design",
+    image: "/fincart/work-cover.png",
+    alt: "Two Fincart app screens showing a financial overview and a goal roadmap",
+    href: "/work/fincart",
   },
   {
     name: "SpicyBayer.",
