@@ -1,0 +1,6 @@
+.landing-page-2-archive {
+  --color-blue: #4f65e8;
+  --color-cobalt: #4f65e8;
+  --gradient-brand: linear-gradient(120deg,#354ac7,#4f65e8,#8194f2);
+}
+body:has(.landing-page-2-archive) { padding-top: 0; }

@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { LayoutGrid, List } from "lucide-react";
+import { ChevronRight, LayoutGrid, List } from "lucide-react";
 import { useState } from "react";
+import { RevealWords } from "./RevealWords";
 import "./WorkShowcase.css";
 
 const projects = [
   // Preview-only dates requested for layout review. Replace with verified project timelines before publishing.
   {
     name: "Collectbee.",
-    logo: "/kyte-work/collectbee-icon.png",
     description: "A product-led website that makes an AI accounts receivable platform easier to understand.",
     period: "2024–2025",
     category: "AI accounts receivable · Website design",
@@ -20,7 +20,6 @@ const projects = [
   },
   {
     name: "SpicyBayer.",
-    logo: "/kyte-work/spicy-bayer-icon.png",
     description: "A warm website for a Bavarian, Indian and Tamil fusion restaurant.",
     period: "2025",
     category: "Restaurant · Website design",
@@ -30,7 +29,6 @@ const projects = [
   },
   {
     name: "Arka Inventory.",
-    logo: "/kyte-work/arka-inventory-icon.png",
     description: "A refreshed website for an inventory management platform.",
     period: "2025–2026",
     category: "Inventory management · Website design",
@@ -40,7 +38,6 @@ const projects = [
   },
   {
     name: "Maya.",
-    logo: "/kyte-work/maya-icon.png",
     description: "An explainer that introduces an AI-powered hiring platform.",
     period: "2026",
     category: "AI hiring · Explainer video",
@@ -65,8 +62,8 @@ export function WorkShowcase() {
       <div className="work-showcase__inner">
         <div className="work-showcase__heading">
           <div>
-            <p className="work-showcase__eyebrow">Case studies</p>
-            <h2 id="work-title">Selected work</h2>
+            <p className="work-showcase__eyebrow" data-reveal-words><RevealWords text="Case studies" /></p>
+            <h2 id="work-title" data-reveal-words data-reveal-delay="90"><RevealWords text="Selected work" /></h2>
           </div>
           <div className="work-showcase__view-toggle" role="group" aria-label="Project layout">
             <button type="button" aria-label="List view" aria-pressed={view === "list"} onClick={() => changeView("list")}>
@@ -83,12 +80,12 @@ export function WorkShowcase() {
               <Link className="work-project__visual" href={project.href} aria-label={`Explore ${project.name} project`}>
                 <Image src={project.image} alt={project.alt} fill sizes="(max-width: 760px) 90vw, 47vw" unoptimized={project.image.startsWith("https://")} />
               </Link>
-              <span className="work-project__mark" aria-hidden="true"><Image src={project.logo} alt="" width={52} height={52} /></span>
               <Link className="work-project__summary" href={project.href} aria-label={`View ${project.name} project`}><strong>{project.name}</strong> <span>{project.description}</span></Link>
               <div className="work-project__details"><span className="work-project__period">{project.period || "\u00a0"}</span><span className="work-project__separator" aria-hidden="true">·</span><span className="work-project__category">{project.category}</span></div>
             </article>
           ))}
         </div>
+        <Link className="work-showcase__all kyte-button" href="/work">All Case studies <ChevronRight size={16} aria-hidden="true" /></Link>
       </div>
     </section>
   );

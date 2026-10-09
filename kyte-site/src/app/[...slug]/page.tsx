@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -40,5 +40,5 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const title = plannedPages[slug.join("/")];
   if (!title) notFound();
-  return <><SiteHeader /><main className="planned-page"><p className="eyebrow">KYTE WEBSITE PREVIEW</p><h1>{title}</h1><p>We&apos;re designing this page next. The navigation is ready so the rest of the website can be built around the same structure.</p><Link href="/">Back to the homepage <ArrowUpRight size={15} aria-hidden="true" /></Link></main><SiteFooter /></>;
+  return <><SiteHeader /><main className="planned-page"><Link className="planned-page__back" href="/"><ArrowLeft size={18} strokeWidth={1.7} aria-hidden="true" /> Home</Link><p className="eyebrow">Page in progress</p><h1>{title}</h1><p>This page is being prepared for the new Kyte website.</p></main><SiteFooter /></>;
 }

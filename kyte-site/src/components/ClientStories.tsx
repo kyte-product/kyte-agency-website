@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, ArrowUpRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { RevealWords } from "./RevealWords";
 
 const stories = [
   { name: "Visual culture", image: "/design-news/dior.webp", title: "How Dior Redefined Luxury in India by Embracing Its Visual Language", summary: "Most global luxury houses simplify when they enter India. Dior did the opposite, and the Mumbai showcase shows what amplification instead of adaptation actually looks like." },
@@ -42,6 +43,7 @@ export function ClientStories() {
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
+    track.scrollTo({ left: 0, behavior: "instant" });
     updateControls();
     track.addEventListener("scroll", updateControls, { passive: true });
     const observer = new ResizeObserver(updateControls);
@@ -55,10 +57,14 @@ export function ClientStories() {
   const move = (direction: -1 | 1) => {
     const track = trackRef.current;
     if (!track) return;
-    const card = track.querySelector<HTMLElement>(".client-story");
-    if (!card) return;
-    const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 16;
-    track.scrollBy({ left: direction * (card.offsetWidth + gap), behavior: "smooth" });
+    const cards = Array.from(track.querySelectorAll<HTMLElement>(".client-story"));
+    if (!cards.length) return;
+    const rail = track.getBoundingClientRect().left;
+    const positions = cards.map((card, index) => index === 0 ? 0 : card.getBoundingClientRect().left - rail + track.scrollLeft);
+    const current = positions.reduce((nearest, position, index) =>
+      Math.abs(position - track.scrollLeft) < Math.abs(positions[nearest] - track.scrollLeft) ? index : nearest, 0);
+    const next = Math.max(0, Math.min(cards.length - 1, current + direction));
+    track.scrollTo({ left: positions[next], behavior: "smooth" });
   };
 
   return <>
@@ -66,18 +72,18 @@ export function ClientStories() {
       <div className="client-stories__inner">
         <div className="client-stories__intro">
           <div>
-            <h2 id="client-stories-title">Ideas and observations from Design News.</h2>
-            <Link className="client-stories__cta kyte-button" href="/insights">Explore Design News <ArrowUpRight size={16} aria-hidden="true" /></Link>
+            <h2 id="client-stories-title" data-reveal-words><RevealWords text="Ideas and observations from Design News." /></h2>
+            <Link className="client-stories__cta kyte-button" href="/insights">Explore Design News <ChevronRight size={16} aria-hidden="true" /></Link>
           </div>
-          <p className="client-stories__description">Writing from the Kyte team on visual culture, branding and the ideas shaping how people experience products.</p>
+          <p className="client-stories__description" data-reveal-words data-reveal-delay="150"><RevealWords text="Writing from the Kyte team on visual culture, branding and the ideas shaping how people experience products." /></p>
         </div>
 
         <div className="client-stories__controls" aria-label="Design News carousel controls">
           <button type="button" aria-label="Show previous articles" disabled={!canGoBack} onClick={() => move(-1)}>
-            <ArrowLeft size={18} aria-hidden="true" />
+            <ChevronLeft size={18} aria-hidden="true" />
           </button>
           <button type="button" aria-label="Show more articles" disabled={!canGoForward} onClick={() => move(1)}>
-            <ArrowRight size={18} aria-hidden="true" />
+            <ChevronRight size={18} aria-hidden="true" />
           </button>
         </div>
 
@@ -90,7 +96,7 @@ export function ClientStories() {
                   <span className="client-story__brandname">{story.name}</span>
                 </div>
                 <p>{story.title}</p>
-                <span className="client-story__action">View preview <ArrowUpRight size={15} aria-hidden="true" /></span>
+                <span className="client-story__action">View preview <ChevronRight size={15} aria-hidden="true" /></span>
               </button>
             </article>
           ))}

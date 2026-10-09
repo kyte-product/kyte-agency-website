@@ -37,11 +37,13 @@
 .system-work-row__details { display: grid; gap: 4px; font-size: var(--type-lead); }
 .system-work-row__details small { color: var(--muted); font-size: var(--type-lead); }
 .system-work-row__image { display: grid; place-items: center; aspect-ratio: 16/9; border-radius: var(--radius-large); color: var(--muted); background: #fff; font-size: var(--type-caption); }
-.system-contact-banner { position: relative; min-height: 210px; overflow: hidden; border-radius: var(--radius-large); color: #fff; background: #000; }
-.system-contact-banner::before { position: absolute; inset: 0 0 0 50%; content: ""; background: #000 url("/contact-gradient.png") center / cover no-repeat; }
-.system-contact-banner__mark { position: absolute; inset: 0 auto 0 0; display: block; width: 32%; background: #000 url('/kyte-motion-mark.svg') center / contain no-repeat; }
-.system-contact-banner__copy { position: relative; display: flex; align-items: center; width: 64%; min-height: 210px; margin-left: 32%; padding: 24px 0; font-size: var(--type-card); line-height: 1.2; text-shadow: 0 2px 12px rgba(9,9,38,.75); }
-@media (max-width: 520px) { .system-contact-banner { min-height: 320px; } .system-contact-banner::before { inset: 45% 0 0; } .system-contact-banner__mark { width: 100%; height: 45%; } .system-contact-banner__copy { align-items: flex-start; width: 100%; min-height: 0; margin-left: 0; padding: calc(45% + 20px) 20px 20px; } }
+.system-contact-banner { position: relative; isolation: isolate; min-height: 260px; overflow: hidden; padding: 9px; border-radius: var(--radius-large); background: #eaf5ed; }
+.system-contact-banner__effect { position: absolute !important; z-index: 0; inset: 0; width: 100% !important; height: 100% !important; border-radius: inherit; }
+.system-contact-banner__copy { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; width: 42%; min-height: 242px; padding: 22px; border-radius: var(--radius-large); color: var(--ink); background: #fff; }
+.system-contact-banner__copy strong { font-size: var(--heading-card); font-weight: 400; line-height: 1.15; }
+.system-contact-banner__copy small { color: var(--muted); font-size: var(--type-caption); line-height: 1.4; }
+.system-contact-banner__copy b { align-self: flex-start; padding: 12px 16px; border-radius: var(--radius-large); color: #fff; background: #050505; font-size: var(--type-caption); font-weight: 500; }
+@media (max-width: 520px) { .system-contact-banner { min-height: 410px; background-position: 62% center; } .system-contact-banner__copy { width: 100%; min-height: 250px; } }
 @media (max-width: 760px) { .system-work-row { grid-template-columns: 42px minmax(0,1fr); } .system-work-row__details { grid-column: 2; } .system-work-row__image { grid-column: 1 / -1; } }
 @media (max-width: 1000px) { .system-swatch-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } .system-hero { gap: 28px; } }
 @media (max-width: 760px) { .system-hero { grid-template-columns: 1fr; padding-block: 75px; }.system-hero__art { min-height: 280px; }.system-section { padding-block: 76px; }.system-section__intro { grid-template-columns: 1fr; gap: 18px; }.system-swatch-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }.system-gradient-grid, .system-component-grid, .system-rule-grid, .system-radius-grid { grid-template-columns: 1fr; }.system-type-list > div { grid-template-columns: 1fr; gap: 14px; }.system-layout-demo { grid-template-columns: 30px 1fr 30px; }.system-layout-demo > div { margin-inline: 20px; }.system-layout-demo > span { writing-mode: vertical-rl; }.system-section--last { padding-bottom: 95px; } }

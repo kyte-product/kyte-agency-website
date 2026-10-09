@@ -7,9 +7,9 @@
   <path class="route route-three" pathLength="100" d="M293.148 0v290.945l-.126 13.853-1.057 116.491-.076 8.186 7.317 3.671 131.843 66.224 132.127-199.711 4.515-6.825 8.186-.076 117.751-1.058 13.853-.126H1000"/>
   <style>
     .route{fill:none;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:10 1000;animation:route-trace 5s linear infinite}
-    .route-one{stroke:#907eff}
-    .route-two{stroke:#ac9fff;animation-delay:-1.666s}
-    .route-three{stroke:#5b35f3;animation-delay:-3.333s}
+    .route-one{stroke:#b9b9b9}
+    .route-two{stroke:#b9b9b9;animation-delay:-1.666s}
+    .route-three{stroke:#b9b9b9;animation-delay:-3.333s}
     @keyframes route-trace{0%{stroke-dashoffset:0;opacity:0}22%{opacity:1}78%{opacity:1}100%{stroke-dashoffset:-100;opacity:0}}
     @media (prefers-reduced-motion:reduce){.route{animation:none;opacity:.7;stroke-dashoffset:-42}}
   </style>

@@ -10,6 +10,8 @@ This file guides Codex and everyone working on the upcoming Kyte website in this
 4. `kyte-site/src/app/design-system/page.tsx` and the tokens in `kyte-site/src/app/globals.css` for the current visual foundation.
 5. The latest screenshots, links, and notes supplied by the user for the page being designed.
 
+For new Kyte website banners or Design News artwork, read `skills/kyte-editorial-art/SKILL.md` before generating an image. It records the visual direction and crop checks from the user's 9 October references.
+
 The IA and playbook are working plans. When a new user decision changes either, update the source file and record the decision in `WEBSITE_PROGRESS.md`. The older imported Kyte notes and any reference site are background, not permission to reuse claims, copy, designs, or old technical choices. Check current evidence before using them.
 
 ## How we will design and build

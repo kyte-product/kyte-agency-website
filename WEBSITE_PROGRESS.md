@@ -1,27 +1,110 @@
 # Kyte website context and progress
 
-Last updated: 9 October 2026, Asia/Kolkata
+Last updated: 10 October 2026, Asia/Kolkata
 
 This is the handoff file for future Codex chats and team members. Read `AGENTS.md` first for the full working rules. Update this file after every completed prompt. Keep the current state at the top and a short dated log below. Write confirmed facts separately from ideas and open decisions.
 
 ## Current state
 
-- **Phase:** Homepage preview includes the redesigned oversized hero sized to the viewport below the announcement and navbar, with two warm neutral service cards, client logos, selected work in a primary two-column grid with an editorial list toggle and a short fade-and-settle transition, a working approach section with four Kyte impact figures, an angled break, a ten-card service grid covering every child route in the IA, Design News draft previews, an animated Kyte-mark contact banner, and a multi-column footer with a gradient effect beneath its existing content. The shared navbar now hides while scrolling down and returns while scrolling up; its expanded menus use a short close delay to prevent accidental collapse while moving the pointer, and the Services and Industries panels slide side to side in one continuous, non-overlapping track. The angled section breaker keeps its slash and color bars without vertical guide lines. Design Philosophy and Kyte at a Glance have been removed from the active homepage. The brand color is cobalt `#4F65E8`; violet remains in expressive artwork. The process video is hidden for now, with its local source retained for revision. A minimal reusable case study template is available at `/work/collectbee`; its image and impact slots are placeholders, and it omits a testimonial until one is approved. The footer is also included on planned pages. The `Every detail` gallery was removed. The navbar has square corners at the top, then becomes narrower and rounded when scrolled. UI icons use Lucide, and DM Sans is bundled locally. A working `/design-system` page documents typography, spacing, components, and motion. The active homepage no longer shows the temporary Stripe and ANAND copy, metrics, links, logos, or imagery. It remains a `noindex` preview. The user confirmed on 9 October 2026 that required approvals for the current site material are in place. Confirm impact figures before launch.
-- **Next design step:** Populate the Collectbee template with approved images and verified impact figures, then review it alongside the Website Design & Development service page and homepage. Confirm current team roles, the SpicyBayer, Maya and Arka project descriptions, and Design News drafts before launch.
+- **Phase:** The active homepage at `/` follows the user-approved Kyte team preview source, with the previous homepage's client logo grid added between Services and Selected Work and a dark split project CTA after Design News. The shared header uses 12px backdrop blur and now switches its logo, links, and secondary controls to white when dark content passes beneath it. All active route families use the same split CTA and light gray footer. The homepage ticker and Design News carousel now reach the page rails. The Website Design page's mid-page CTA and controls follow the same tokens. The previous homepage is archived at `/graveyard/landing-page-2`. The shared color token is deep blue `#0249D9`, and `/design-system` documents this direction. The latest local source snapshot is live on the existing Vercel production address. The site remains `noindex, nofollow` and still needs launch review.
+- **Next design step:** Review the active routes' final copy and imagery, then verify published Sanity data, impact figures, Work project descriptions and Design News content before launch.
+- **Work index:** Card names now sit above summaries, service labels are chips, and service filters work in the local draft preview. Most Sanity `filterCategories` values are still empty, so those entries use their existing service and role text until editors categorize them.
 - **IA:** `Kyte_Website_IA.txt` is the current working route and navigation map. It has two service clusters and ten child services. It does not include a `/services` page.
-- **Homepage backup:** `/graveyard/landing-page` preserves the homepage from immediately before the 9 October hero redesign. It has separate component, style, logo-data and asset copies; it is internal and noindex.
+- **Homepage backups:** `/graveyard/landing-page-2` preserves the homepage active immediately before the team-preview transfer, with component and style snapshots. `/graveyard/landing-page` preserves the earlier 9 October version. Both are internal and noindex.
 - **Copy:** `Kyte_Website_SEO_Content_Playbook.md` is the current SEO and content guide, including agency examples, Ubersuggest research dated 8 October 2026, page briefs, and human writing rules. Its metrics are a snapshot and should be rechecked before publication.
 - **Code:** `kyte-site/` is a Next.js App Router and TypeScript app with one local Git repository at this workspace root, on branch `feat/goodface-hero-nav`. The current source was pushed to public `kyte-product/kyte-agency-website` on branch `codex/kyte-site-full-push` and merged into `main` through PR #1 on 9 October 2026; `.env.local` stays excluded. `Anand Website (Structure Reference)` remains reference material and is excluded from the new site deployment.
 - **Preview:** Vercel project `kyte-agency-website` uses `kyte-site` as its root directory. The Ready preview for `codex/kyte-site-full-push` is https://kyte-agency-website-ewo8c5ily-kyte-product.vercel.app. DM Sans is bundled from `@fontsource-variable/dm-sans`.
-- **Default Vercel address:** On 9 October 2026, the user approved publishing the working source to the default address. Latest production deployment `dpl_FEtBSKGTeMXK9dpZAgatqS1fQvAh` serves `https://kyte-agency-website.vercel.app/`. It contains the local source snapshot, including the Website Design & Development service page and the latest logo, work-grid, and menu refinements. The live site still emits `noindex, nofollow` and needs the full launch review before search indexing is enabled.
+- **Default Vercel address:** The latest production deployment `dpl_BjruBfzSCuLxacaeYSv1M1HQfCYW` serves `https://kyte-agency-website.vercel.app/`. It contains the current local source snapshot and the latest shared design-system refinements. The live site still emits `noindex, nofollow`; Work and Design News production listings remain empty until reviewed Sanity documents are published.
 - **Heading system:** Main homepage and design-system headings use slightly smaller sizes, lighter weights, and 1.2 line height. The Design Philosophy statement alone uses 1.3 line height. Eyebrows and small navigation labels retain their separate label styles.
 - **Homepage hero size:** The current headline uses a 60–104 px desktop range, with smaller tablet and mobile ranges. This local adjustment has not been published.
 - **Client logo hover:** The user linked the colored logo section in `Kyte-New-Website-Design`. Eleven named logos from that section now share one source file between their gray resting and colored hover states. Other logos remain gray at rest and turn solid black on hover. The same assets are used in the homepage grid and Kyte at a Glance client card. The grid blends baked white logo backgrounds into hovered tiles and gives compact marks extra height.
 - **External changes in this task:** The existing Sanity project and older GitHub and Vercel Framer projects were left intact. The user authorized publishing the complete source to `kyte-product/kyte-agency-website`, and that push succeeded. The `kyte-agency-website` Vercel project was configured to build from `kyte-site`, then a new preview deployment was created and reached `READY`.
-- **Latest visual updates:** Services and Selected Work use the shared `#FAFAFA` background. The “Two connected practices” card stays white. The footer utility row shares the white footer background, uses the exact supplied DesignRush badge PNG, uses a two-by-two layout at tablet widths, and has full-width dividers including one beneath the copyright row.
-- **Service page:** The Website Design & Development route now has a full Kyte page patterned on the supplied Goodface service-page structure. It includes rotating website-type tabs, horizontal purpose and audience cards, expandable work, process tabs, project-priority controls, responsive content sections, and FAQ accordion. It is included in the current Vercel production deployment.
+- **Latest visual updates:** Services, Selected Work, and the shared footer use the `#FAFAFA` surface. The “Two connected practices” card stays white. The shared contact CTA now uses a white content panel inset in a soft orange, violet, and yellow artwork frame, with a black Contact Us button linking to `/contact`; the animated Kyte logo routes use light gray strokes. The footer utility row shares the light gray footer background, uses the exact supplied DesignRush badge PNG, uses a two-by-two layout at tablet widths, and has full-width dividers including one beneath the copyright row. The homepage ticker and horizontal carousels reach the rails; carousel first cards line up with their headings, later cards scroll to the rail, and final cards end with the matching right inset.
+- **Service page:** The Website Design & Development route has a full Kyte page patterned on the supplied Goodface service-page structure. It includes rotating website-type tabs, horizontal purpose and audience cards, expandable work, process tabs, project-priority controls, responsive content sections, and FAQ accordion. The local version now uses shared heading and action tokens, plus homepage-style project cards; these latest changes are not deployed.
+- **CMS:** The user chose the existing `Kyte Website` Sanity project (`50pibtgs`) in the connected `product@kyte-agency.com` account. Its hosted `kyte-content` Studio already has Work, Services, and Design News document types. Ten new service drafts match the approved child routes; four older service drafts and all existing Work and Design News drafts remain intact. The current raw inventory is 19 Work, 14 Services, and 8 Design News drafts, with no published editorial documents. `kyte-site/src/lib/sanity.ts` provides published-only reads and `sanity-routes.ts` fixes service paths. Work and Design News routes use the CMS model, while service pages and homepage preview cards have not switched. The Studio schema source is outside this repository and must be located before schema changes. See `kyte-site/cms/README.md`.
+- **Editorial pages:** `/work` and `/insights` list Sanity entries, and their slug routes render the stored bodies and images. The Work grid and Design News article cards follow the homepage project-card geometry. Case studies use an inset cover, a linked Case study breadcrumb with a plain back chevron, facts beside the title, and a conditional live-work button when Sanity contains a valid project URL; article pages retain their text back link and metadata row. The Design News index retains a featured carousel and filters. The homepage retains its curated preview cards. Verify current published CMS content and deployment status before making further claims about either.
+- **Next CMS step:** Find the source repository or deployment owner for the hosted Studio schema, then review the content models and their references. Review dates, image descriptions, case study roles, claims, and content before publication. Resolve the Collectbee slug against the older `/work/collectbee` preview. Once approved entries are published, verify all new pages in a deployment and then connect the homepage previews.
 
 ## Confirmed direction
+
+### 10 October 2026: Open Work routes at the top without animated travel
+
+- Removed smooth scrolling from the root document, which had animated Next.js route changes from the previous scroll position. Kept smooth scrolling on the separate horizontal carousels. Matched the root scroll padding to the fixed header plus announcement height so route navigation lands at scroll position 0.
+- Combined the case study breadcrumb's back action and label into one plain text link with a left chevron. The icon no longer has a button border or background.
+- Changed `kyte-site/src/app/globals.css`, `src/app/work/[slug]/page.tsx`, `src/components/design-system/EditorialPages.css`, and this handoff. Local browser navigation from the homepage's All Case studies link and from a lower Work card both landed at `scrollY = 0`; the Collectbee breadcrumb is visible with no border. ESLint, production build, and `git diff --check` passed. The build could not resolve Sanity's CDN host, so live CMS data was not verified by the build. No deployment was made. Owner: Kyte website team.
+
+### 10 October 2026: Work case study navigation and CTA spacing
+
+- Replaced the standalone All work button on dynamic Work detail pages with a compact back arrow and normal-text breadcrumb. Both the arrow and Case study link return to `/work`; the client name identifies the current page. Removed the shared CTA's top padding only when it follows a Work detail page.
+- Marked the Work cover and shared dark CTA card for the existing scroll-aware navbar theme detection. Local browser review on Sproutova confirmed the navbar is dark over the white article body and switches to white controls over the dark cover and CTA. Checked the breadcrumb and CTA at 390px with no horizontal overflow.
+- Changed `kyte-site/src/app/work/[slug]/page.tsx`, `src/components/design-system/EditorialPages.css`, `src/components/SplitCtaBanner.tsx`, `src/components/SplitCtaBanner.css`, and this handoff. ESLint, production build, and `git diff --check` passed. The build could not resolve Sanity's CDN host, so live CMS fetches were not verified in that check. No deployment was made. Owner: Kyte website team.
+
+### 10 October 2026: Light gray motion lines in the CTA logo
+
+- Changed all three animated route strokes in `kyte-site/public/kyte-motion-mark.svg` to the CTA text-muted gray (`#b9b9b9`). The logo mark opacity and animation timing are unchanged.
+- Reviewed the CTA in the local browser and confirmed the animated lines render light gray against the charcoal art panel. No deployment or external write was made. Owner: Kyte website team.
+
+### 10 October 2026: Match the carousel end inset
+
+- Added matching right inset to the last Design News card and the Website Design purpose and audience carousels. The last card snaps to the padded end without leaving a gap after intermediate cards. Adjusted the Website Design next-arrow scroll so it reaches its final card instead of snapping back one step early. Updated `/design-system` with the end-spacing rule.
+- Changed `kyte-site/src/app/globals.css`, `src/components/WebsiteServicePage.css`, `WebsiteServicePage.tsx`, `src/app/design-system/page.tsx`, and this handoff. No external system or deployment changed.
+- Local browser review confirmed a 32px final-card gap on desktop and 20px on 390px mobile for Design News, working arrows to both ends, and no page overflow. The Website Design purpose carousel reached its 32px right inset and could scroll back. ESLint, production build, and `git diff --check` passed. The build could not resolve Sanity's API host, so published editorial content remains unverified. Owner: Kyte website team.
+
+### 10 October 2026: Keep the first Design News card inset
+
+- The first Design News card was losing its leading inset when browser scroll snapping restored the carousel to the rail. Added a first-card snap margin and changed the arrow controls to scroll to exact card positions. The first card now returns to the section-heading inset, while later cards align to the left rail. Matched the first-card snap margin on the Website Design purpose and audience carousels.
+- Changed `kyte-site/src/app/globals.css`, `src/components/ClientStories.tsx`, `WebsiteServicePage.css`, and this handoff. No deployment or external write was made.
+- Local browser review confirmed the first card at the 32px desktop inset, the second card at the rail, and the previous arrow restoring the first inset. At 390px, the first card aligns with its heading and the page has no horizontal overflow. ESLint, production build, and `git diff --check` passed. The build could not resolve Sanity's API host, so published editorial content remains unverified. Owner: Kyte website team.
+
+### 10 October 2026: Align horizontal tracks and footer surface
+
+- Extended the homepage client-logo ticker, Design News carousel, and Website Design purpose and audience carousels to the page rails. Following the user's refinement, the first card starts aligned with its section heading, while subsequent cards scroll to the left rail. Applied the shared `#FAFAFA` section surface to the active footer and documented these layout rules on `/design-system`. The footer rule is scoped to the active component because the archived footer stylesheet also loads in local preview.
+- Changed `kyte-site/src/app/globals.css`, `src/components/WebsiteServicePage.css`, `TeamPreviewFooter.tsx`, `TeamPreviewFooter.css`, `src/app/design-system/page.tsx`, and this handoff. Graveyard routes and external systems were not changed.
+- Checks: ESLint, production build, and `git diff --check` passed after the final refinement. The build could not resolve Sanity's API host, so published editorial content remains unverified. Local browser measurements confirmed the rail edges, first-card alignment at desktop and 390px mobile width, a later service card at the left rail after advancing, `#FAFAFA` footer color, and no page overflow. Owner: Kyte website team.
+
+### 9 October 2026: Automatic navbar contrast over dark sections
+
+- The shared fixed header now samples the surface beneath its navigation row as the page scrolls. Its logo, links, brochure control, and mobile menu icon turn white over dark surfaces and return to ink over light surfaces. Open desktop and mobile menus retain their light treatment. The showreel has an explicit dark-section marker because its video frames change color.
+- Updated `kyte-site/src/components/SiteHeader.tsx`, `src/components/Hero.tsx`, `src/app/globals.css`, `src/app/design-system/page.tsx`, and this handoff. Graveyard routes were not edited. No external system or deployment changed.
+- Local browser review confirmed the dark treatment over the showreel and service cards, the light treatment over a white section, and the white mobile menu icon at 390px. ESLint, production build, and `git diff --check` passed. The build could not resolve Sanity's API host, so editorial data remained unverified. Next action: review the transition on any newly added full-bleed imagery and mark surfaces whose appearance cannot be inferred from CSS. Owner: Kyte website team.
+
+### 9 October 2026: Apply the final system to active pages
+
+- Replaced the older RazorSense contact banner and duplicate footer on Work, Design News, case study, service, and planned routes with the same split CTA and footer components used by the homepage. The Design News article route now includes the shared CTA. Graveyard routes and their snapshots were not edited.
+- Aligned the Website Design page's mid-page CTA with the dark split treatment and 10% Kyte mark, switched its actions to the shared primary button, removed its redundant closing CTA, and brought its rails, control corners, muted text, and section surfaces into the active tokens. Aligned planned-route spacing and back controls. The design-system page now states that the CTA is shared across active pages.
+- Files changed: `kyte-site/src/components/SiteFooter.tsx`, `WebsiteServicePage.tsx`, `WebsiteServicePage.css`, `SplitCtaBanner.css`, `src/app/globals.css`, `src/app/insights/[slug]/page.tsx`, `src/app/design-system/page.tsx`, and this handoff. Removed the unused active `SiteFooter.css` and `RazorSenseCanvas.tsx`; archived copies remain under graveyard.
+- Checks: `npm run lint`, `npm run build`, and `git diff --check` passed. Local browser inspection confirmed the shared shell on Work, Design News, Website Design, and a planned page, plus a 390px service and case-study layout without horizontal overflow. Sanity's API host did not resolve during the production build, so that build did not verify published editorial content. Next action: review live content and imagery before launch. Owner: Kyte website team.
+
+### 9 October 2026: Team preview is the final homepage direction
+
+- The user selected `https://kyte-agency-team-preview.vercel.app/` as the final homepage direction and supplied its source in `delete-this-once-done/`. The new active homepage uses that source for its composition, styles, motion, and interactive service artwork. The design system now records its blue, neutral surfaces, typography, controls, layout and motion. This decision supersedes the earlier homepage card and CTA experiments.
+
+### 9 October 2026: Work index card labels and service filters
+
+- Separated each Work card's client name from its summary and placed the service label in a compact chip. Added All, Website Design, Brand Identity, Content Marketing, and Media Production filter chips above the grid, showing only categories with matching projects.
+- The Work listing reads Sanity `cardService` and `filterCategories` when available. Because most existing category fields are empty, it infers a filter group from the existing service, role, title, and slug for those entries. No Sanity documents were changed.
+- Files changed: `kyte-site/src/app/work/page.tsx`, `src/components/design-system/WorkIndex.tsx`, `EditorialPages.css`, `src/lib/sanity.ts`, and this handoff. ESLint and the production build passed. The build could not resolve Sanity's API host in this sandbox and therefore could not verify published content. Local browser review confirmed 19 cards under All, 6 under Brand Identity, 8 under Website Design, and a 390px layout without horizontal overflow. No GitHub or Vercel write was made. Next action: complete editorial categories in Sanity before publishing Work entries. Owner: Kyte website and content team.
+
+### 9 October 2026: Audit and refine non-home pages
+
+- Audited every active route family against the refined homepage and shared tokens. Recorded route-by-route findings, fixes, and remaining launch gaps in `kyte-site/INNER_PAGE_AUDIT.md`. Reference structures from Goodface, Pineapple, ANAND, and Stripe informed the review; no reference artwork or text was copied.
+- Matched Work, service-page work, and Design News cards to the homepage's image ratio, corner radius, type scale, and spacing. Unified case-study and article back links and metadata. Removed short per-fact lines, the Design News topic-circle row, angled transition, and decorative article side rail. Aligned service buttons, headings, tabs, FAQ icons, priority panel, and unfinished-route previews with the design system; removed the decorative priority orbit and benefit-card top rules. Added inner-page rules to `/design-system`. The homepage was not changed.
+- Files changed for this audit: `kyte-site/src/app/work/`, `src/app/insights/`, `src/app/[...slug]/page.tsx`, `src/app/globals.css`, `src/app/design-system/page.tsx`, `src/components/design-system/{EditorialPages,DesignNews,CaseStudyTemplate}*`, `src/components/WebsiteServicePage.*`, `kyte-site/INNER_PAGE_AUDIT.md`, and this handoff.
+- Local browser review covered `/work`, `/work/collectbee`, `/work/collectbee-website`, `/insights`, one article, and the Website Design & Development service page. Design News topic filtering returned one matching card, then All returned eight. The final production build, ESLint, and `git diff --check` passed. The build sandbox could not resolve Sanity's API host, so published-content rendering remains unverified. No GitHub, Sanity, or Vercel write was made. A fresh mobile visual review and approved content for placeholder IA pages remain. Owner: Kyte website team.
+
+### 9 October 2026: Populate Work and Design News from Sanity drafts in local preview
+
+- Inspected the local ANAND newsroom index and article page. Adapted its featured story carousel, four-topic guide row, filterable dated list, and article title/metadata/body layout for Kyte Design News. ANAND-specific media coverage, newsletters, and media kit were omitted because those content types do not exist in Kyte's CMS.
+- Read all 19 `workProject` and 8 `designNews` drafts from the existing Sanity project without changing or publishing them. Wrote a private local snapshot to `kyte-site/.local/sanity-preview.json`, ignored by Git. Added development-only snapshot reads and published-only production reads. Created Work and Design News listing and detail routes. The existing `/work/collectbee` preview remains in place; the Sanity draft uses `/work/collectbee-website`.
+- Files changed: `kyte-site/.gitignore`, `kyte-site/src/lib/sanity.ts`, `editorial.ts`, `src/components/design-system/EditorialBody.tsx`, `DesignNewsIndex.tsx`, `DesignNews.css`, `EditorialPages.css`, `src/app/work/`, `src/app/insights/`, both README files, and this handoff. No Sanity documents were altered or published, and no GitHub or Vercel changes were made.
+- Checks: Next.js production build and ESLint passed. The production build environment cannot resolve Sanity's public API host, so listings render their empty state there. Local browser review confirmed 19 Work cards, 8 Design News rows, working topic filtering, sample article and case study detail routes, loaded covers, and desktop/mobile layouts without overflow. All eight Design News drafts have missing publication dates and the same inaccurate cover alt text; cover images are decorative in the page until editors correct the descriptions. Next action: complete editorial review and decide when these drafts may be published. Owner: Kyte content and website team.
+
+### 9 October 2026: Set up the existing Sanity project for the new site
+
+- The user selected the existing `Kyte Website` project under `product@kyte-agency.com`. Confirmed the hosted Studio's `workProject`, `servicePage`, and `designNews` types and its public-read `production` dataset. The existing 31 editorial drafts were preserved.
+- Created ten `servicePage` drafts with the approved child-service slugs and placeholder scope sections. A raw query confirmed 19 Work, 14 Services, and 8 Design News drafts, with zero published editorial documents. No content was published or deleted.
+- Added published-only query functions, a stable service-route map, and a CMS handoff in `kyte-site/src/lib/sanity.ts`, `src/lib/sanity-routes.ts`, and `cms/README.md`; updated `kyte-site/README.md` and this handoff. The templates have not been switched to CMS rendering because no editorial entries are published yet. No GitHub push or Vercel deployment was made.
+- Checks: Sanity raw and published GROQ queries succeeded; `npm run build` and `npm run lint` passed. Next action: locate the Studio schema source, review its field and reference gaps, then approve and publish sample content for one page of each type before enabling CMS rendering. Owner: Kyte content and website team.
 
 ### 9 October 2026: Align the footer utility row to the design system
 
@@ -408,7 +491,7 @@ Checked on 8 October 2026 through the connected Sanity account. The authenticate
 
 The project has one `production` dataset with public read access and a hosted Studio at `https://www.sanity.io/@osvdnvrwy/studio/ukrt8lls3m5w87uie5qrotl8`. Its active Studio-deployed schema is `kyte-content` and already defines `workProject`, `designNews`, and `servicePage`. A raw inventory found **31 editorial drafts**: 19 work projects, 8 design news items, and 4 service pages. It also found 28 image assets and **no published editorial documents**. The 59 total records are drafts plus assets, not 59 articles or cases.
 
-**Decision for now:** Defer deletion and new project creation, as the user explicitly allowed. Existing content and a deployed schema need review before anything is removed. Do not describe the CMS as newly set up. When the new site's stack, schema, and content migration plan are clear, inspect the schema source and all current integrations, export content and assets, create the replacement project with separate preview and production settings, migrate or deliberately retire content, test references and routes, switch the website, and only then remove the old project if still desired. Confirm the exact project to remove at that stage because deletion is irreversible.
+**Decision on 9 October 2026:** The user selected the existing `Kyte Website` project for the new site. Preserve the older project content. Ten route-aligned service drafts were added, and a published-content read layer was added locally. Locate the Studio schema source and deployment owner before changing schema fields; do not replace the project as part of routine page work. Resolve the Collectbee draft slug against the preview route before turning on CMS rendering.
 
 ## Open decisions
 
@@ -434,6 +517,46 @@ The project has one `production` dataset with public read access and a hosted St
 | `kyte-site/src/app/globals.css` | Shared color, layout, radius, and motion tokens used across the preview |
 
 ## Task log
+
+### 9 October 2026: Match the transparent blurred reference navbar
+
+- Reviewed Pineapple Design's header at the top of the page and in its translucent glass state while scrolling. Set Kyte's nav row to a faint white tint with 12px backdrop blur and a soft lower edge; kept the announcement strip blue and the menu-open surface readable. Updated the design-system description.
+- Changed `kyte-site/src/app/globals.css`, `kyte-site/src/components/SiteHeader.tsx`, `kyte-site/src/app/design-system/page.tsx`, and this handoff. Local browser inspection confirmed the computed translucent background and 12px blur. ESLint, production build with TypeScript, and `git diff --check` passed. The build used local fallbacks after Sanity DNS failures in this sandbox. No GitHub push, deployment, or CMS write was made. Owner: Kyte website team.
+
+### 9 October 2026: Change split CTA artwork to dark gray
+
+- Changed the split CTA right panel from brand blue to solid dark gray `#303030`, retaining the animated Kyte mark at 10% opacity. Updated the design-system description.
+- Changed `kyte-site/src/components/SplitCtaBanner.css`, `src/app/design-system/page.tsx`, and this handoff. Desktop and 390 px mobile browser reviews confirmed the color, opacity, and no horizontal overflow. ESLint, production build with TypeScript, and `git diff --check` passed. The build used local fallbacks after Sanity DNS failures in this sandbox. No GitHub push, deployment, or CMS write was made. Owner: Kyte website team.
+
+### 9 October 2026: Simplify the split CTA graphic panel
+
+- Set the right panel to the solid shared brand blue `#0249D9` and the animated Kyte mark to 10% opacity. Removed the gradient and decorative bars. Updated the design-system specimen description.
+- Changed `kyte-site/src/components/SplitCtaBanner.tsx`, `SplitCtaBanner.css`, `src/app/design-system/page.tsx`, and this handoff. Browser inspection confirmed the computed blue background and 0.1 opacity; desktop and 390 px mobile screenshots showed the CTA without horizontal overflow. ESLint, production build with TypeScript, and `git diff --check` passed. The build used local fallbacks after Sanity DNS failures in this sandbox. No GitHub push, deployment, or CMS write was made. Owner: Kyte website team.
+
+### 9 October 2026: Put the animated Kyte mark in the split CTA
+
+- Replaced the right panel's temporary words with the existing `/kyte-motion-mark.svg`. The SVG animates its route traces and provides a reduced-motion state. Kept the dark blue panel and gradient bars behind the mark.
+- Changed `kyte-site/src/components/SplitCtaBanner.tsx`, `SplitCtaBanner.css`, `src/app/design-system/page.tsx`, and this handoff. Desktop and 390 px browser reviews confirmed the mark fits inside the panel, the mobile image stacks above the copy, and the page has no horizontal overflow. ESLint, production build with TypeScript, and `git diff --check` passed. The build used local fallbacks after Sanity DNS failures in this sandbox. No GitHub push, deployment, or CMS write was made. Owner: Kyte website team.
+
+### 9 October 2026: Use the shared button in the project CTA
+
+- Replaced the CTA banner's rounded pill with the existing `kyte-button` primary action from the design system. It now uses the shared 4px radius, 42px height, blue hover state, and directional chevron. Updated the design-system description and kept a white keyboard focus outline on the dark card.
+- Changed `kyte-site/src/components/SplitCtaBanner.tsx`, `SplitCtaBanner.css`, `src/app/design-system/page.tsx`, and this handoff. Local browser inspection confirmed the banner action renders with the shared class, 4px radius, and 42px height at desktop and 390 px, without horizontal overflow. ESLint, production build with TypeScript, and `git diff --check` passed. The build used local fallbacks after Sanity DNS failures in this sandbox. No GitHub push, deployment, or CMS write was made. Owner: Kyte website team.
+
+### 9 October 2026: Add a split project CTA inspired by High Alpha
+
+- The user supplied a screenshot and `highalpha.com` reference for a CTA banner. Inspected its live 50/50 dark card, large light heading, blue pill button, graphic right panel, and mobile graphic-first layout. Added the same composition below Design News and above the footer, with Kyte-specific copy, a `/contact` action, and an original CSS typographic graphic rather than copying High Alpha's survey artwork or text.
+- Added `kyte-site/src/components/SplitCtaBanner.tsx` and `SplitCtaBanner.css`; updated `src/app/page.tsx`, the `/design-system` specimen, and this handoff. Desktop and 390 px local browser reviews confirmed the banner renders and stacks without horizontal overflow. ESLint, production build with TypeScript, and `git diff --check` passed. The build completed with local fallbacks after Sanity DNS failures in this sandbox. No external site, CMS, GitHub, or Vercel write was made. Owner: Kyte website team.
+
+### 9 October 2026: Restore the previous client grid below Services
+
+- Brought the archived homepage's 24-logo client grid into the active homepage. After the user's placement correction, it sits between Services and Selected Work, while the team-preview logo ticker remains above the showreel. The grid retains the archived six-column desktop and three-column mobile layouts, thin rules, and grayscale-to-color hover treatment. Documented the added pattern on `/design-system`.
+- Changed `kyte-site/src/components/ClientGrid.tsx`, `ClientGrid.css`, `src/app/page.tsx`, `src/app/design-system/page.tsx`, and this handoff. Browser inspection confirmed the section order, 24 logos, six desktop columns, three columns at 390 px, and no horizontal overflow; the desktop grid was visually reviewed. ESLint, production build with TypeScript, and `git diff --check` passed. The build logged Sanity DNS failures in this sandbox and completed with local fallbacks. No GitHub push, deployment, or CMS write was made. Next action: confirm that the displayed client names are approved for the public site. Owner: Kyte website team.
+
+### 9 October 2026: Transfer team-preview homepage and archive the previous page
+
+- Archived the previous homepage at `/graveyard/landing-page-2` with snapshots of its components and global styles. Integrated the supplied preview source into the active homepage: header, hero, logo ticker, showreel, Hairline service cards, selected work, approach, Design News, and footer. Updated `/design-system` and the shared blue token to `#0249D9`. The supplied `delete-this-once-done/` directory remains untouched for review.
+- Checks: `npm run lint`, `npm run build`, and `git diff --check` passed. The build logged Sanity DNS failures in this sandbox and completed using local fallbacks. Local browser review confirmed the active homepage, interactive service artwork, Work page, design system, and archived route render. A narrow-viewport visual review is still needed. No GitHub, Vercel, or Sanity write was made. Owner: Kyte website team.
 
 ### 8 October 2026: Replace homepage reference content with Kyte content
 
@@ -1079,3 +1202,171 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Published the latest source snapshot on `codex/kyte-site-full-push` at `0d163afdadbac6b759b250b054be60cd5d9a7e7a`. Opened and merged GitHub PR #1, `https://github.com/kyte-product/kyte-agency-website/pull/1`, into `main`. GitHub reports merge commit `96d4c087e882fdf012f165cfff8b207844393703`, and a remote head check confirmed `main` points to it. Vercel's commit check passed before the merge.
 - The pushed snapshot differs from the previous source branch in 13 paths and includes the current service page, homepage refinements, and reusable Collectbee case study template. `.env.local` was not included. ESLint, production build, and staged diff checks passed.
 - The local checkout remains on `feat/goodface-hero-nav` with its staged snapshot. Automatic approval review rejected a broad `git switch --discard-changes` intended to align the checkout to merged `main`, because it could discard local work. The checkout was left intact. This handoff update follows the merge and does not change site behavior.
+
+### 9 October 2026: Refine Work case-study layout from browser feedback
+
+- Updated the Sanity-backed Work detail page and the Collectbee template so case-study facts sit to the right of the title on desktop without a top rule or padding, while stacking below the introduction on narrow screens. Changed the All work action to a white button with a neutral border and light gray hover state.
+- Inset cover images to the shared content edge. Gallery images now fill the row when alone or last in an odd count, with at most two images side by side on desktop and one column on mobile. Updated the design-system description and inner-page audit to match.
+- Changed `kyte-site/src/app/work/[slug]/page.tsx`, `kyte-site/src/components/design-system/EditorialPages.css`, `CaseStudyTemplate.css`, `kyte-site/src/app/design-system/page.tsx`, `kyte-site/INNER_PAGE_AUDIT.md`, and this handoff. No GitHub push or Vercel deployment was made.
+- Checks: ESLint, TypeScript through the production build, and `git diff --check` passed. Reviewed Spicy Tango at desktop and 390 px; the cover and single gallery image align to the content inset, and the mobile page has no horizontal overflow. The build reported Sanity DNS failures in this sandbox but completed successfully using its fallback.
+- Next action: review these changes on another Work entry with a multi-image gallery when one is available, then publish the reviewed source with the next deployment.
+
+### 9 October 2026: Tighten Work detail type and spacing
+
+- Reduced the Work case-study title and summary scales on desktop and mobile. Reduced the top and bottom padding around the Sanity-backed case-study body from 92/112 px to 56/64 px on desktop and from 65/75 px to 40/48 px on mobile. Applied the same title and summary scale to the reusable Collectbee template.
+- Enabled the existing shared project banner before the footer CTA area on both Work detail templates and updated the design-system description. This uses the current shared banner content and component.
+- Changed `kyte-site/src/components/design-system/EditorialPages.css`, `CaseStudyTemplate.css`, `CaseStudyTemplate.tsx`, `kyte-site/src/app/work/[slug]/page.tsx`, `kyte-site/src/app/design-system/page.tsx`, and this handoff. No GitHub push or Vercel deployment was made.
+- Checks: ESLint, production build with TypeScript, and `git diff --check` passed. Reviewed Spicy Tango at desktop and 390 px; the banner is present, and the mobile page has no horizontal overflow. The build could not resolve the Sanity CDN from this sandbox but completed successfully using its fallback.
+- Next action: review the adjusted layout with the team and publish the source in the next approved deployment.
+
+### 9 October 2026: Show live project links on Work case studies
+
+- Confirmed the existing Studio-deployed `workProject.projectUrl` field is the CMS source for live project URLs. Added it to the published Work detail query and rendered a primary `View live work` action below the case-study facts only for valid HTTP or HTTPS URLs. The external link opens in a new tab with `noopener noreferrer`. No CMS schema or content was changed.
+- Doodle Dept. has no `projectUrl` and shows no button. Accountify has `https://getaccountify.ai/` in Sanity and displays the button in the local preview. Updated the ignored development snapshot for Accountify so it exercises the existing CMS value, and documented the conditional action on `/design-system`.
+- Changed `kyte-site/src/lib/sanity.ts`, `kyte-site/src/app/work/[slug]/page.tsx`, `kyte-site/src/components/design-system/EditorialPages.css`, `kyte-site/src/app/design-system/page.tsx`, and this handoff. No GitHub push or Vercel deployment was made.
+- Checks: ESLint, production build with TypeScript, and `git diff --check` passed. Reviewed both Work pages and the button at desktop and 390 px, confirming no horizontal overflow. The build could not resolve the Sanity CDN in this sandbox but completed with its fallback.
+- Next action: add a verified live URL in Sanity for Doodle Dept. if one should appear there, and publish the reviewed site changes in the next deployment.
+
+### 9 October 2026: Remove the gradient below the shared footer
+
+- Removed the separate animated gradient band beneath the shared footer, including its unused component and CSS. The footer now ends at the copyright and legal-link row on Work pages and every other page using `SiteFooter`. The black project CTA banner above the footer remains. Updated the design-system description.
+- Changed `kyte-site/src/components/SiteFooter.tsx`, `SiteFooter.css`, removed `FooterGradientEffect.tsx`, and updated `kyte-site/src/app/design-system/page.tsx` and this handoff. No GitHub push or Vercel deployment was made.
+- Checks: ESLint, production build with TypeScript, and `git diff --check` passed. Reviewed `/work/doodle-dept.-website` at desktop and 390 px. The gradient element is absent, the copyright row is the footer's last section, and mobile has no horizontal overflow. The build could not resolve the Sanity CDN in this sandbox but completed with its fallback.
+- Next action: review the shared footer on the local preview, then publish the site changes with the next deployment.
+
+### 9 October 2026: Rebuild the shared contact banner from the supplied reference
+
+- Matched the reference banner's inset frame, full-height white content card, heading and lede placement, large right-side soft-color artwork, and black Contact Us action. The action links to `/contact`. The abstract image was generated for Kyte from the supplied visual reference; the reference site's asset and people photos were not reused.
+- Updated `kyte-site/src/components/SiteFooter.tsx`, `SiteFooter.css`, the contact-banner specimen and description on `/design-system`, and added `kyte-site/public/contact-banner-art.png`. The shared banner appears above the footer on pages that enable it, including Work case studies. No GitHub push or Vercel deployment was made.
+- Checks: reviewed `/work/staunch-fit-organic-growth` at desktop and 390 px. The mobile card is 350 px wide with no horizontal overflow. ESLint, production build with TypeScript, and `git diff --check` passed. The build could not resolve the Sanity CDN from this sandbox but completed with its fallback. Next action: review the local page and include the banner with the next site deployment.
+
+### 9 October 2026: Extend the contact banner to the page rails
+
+- Removed the extra horizontal inset from the shared contact banner frame. The artwork and white content card now span the site's full page width on the homepage and other pages that show the banner.
+- Changed `kyte-site/src/components/SiteFooter.css` and this handoff. No GitHub push or Vercel deployment was made.
+- Checks: reloaded the homepage at 1533 px and confirmed the banner card is 1344 px wide, aligned to the page rails, with no horizontal overflow. Responsive CSS keeps the banner within `--page-width` on narrower viewports. ESLint and `git diff --check` passed. Next action: include this local adjustment in the next site deployment. Owner: Kyte website team.
+
+### 9 October 2026: Align the contact banner with section content
+
+- Restored the shared `--section-inset` padding inside the banner frame after the user clarified that it should align with the other homepage sections. The banner card now shares the Work cards' left and right edges.
+- Changed `kyte-site/src/components/SiteFooter.css` and this handoff. No GitHub push or Vercel deployment was made.
+- Checks: reloaded the homepage at 1533 px and measured both the banner and Work grid at left 126.5 px and right 1406.5 px, with no horizontal overflow. ESLint and `git diff --check` passed. Next action: include the reviewed local adjustment in the next site deployment. Owner: Kyte website team.
+
+### 9 October 2026: Refine the contact banner art direction
+
+- The user rejected two generated banner experiments and supplied five more visual references. The desired direction is tactile editorial artwork with nuanced airbrush transitions, controlled saturated color, crisp geometry, and fine print grain, consistent with the current Design News images. The rejected trial images were removed from the active site; the earlier temporary `contact-banner-art.png` remains until a new image is selected.
+- Prepared a Higgsfield prompt for the shared banner's 1280 × 424 px displayed size and the white card covering its left 41%. Added `skills/kyte-editorial-art/SKILL.md` and linked it from `AGENTS.md` for future site imagery. Updated the design-system description and restored its temporary artwork preview. No Higgsfield, GitHub, or Vercel write was made.
+- Checks: reloaded the homepage and confirmed the temporary image is active with no horizontal overflow. ESLint and `git diff --check` passed. The skill frontmatter parsed as YAML; the bundled skill validator could not run because this Python environment lacks PyYAML. Next action: inspect the user's Higgsfield output at desktop and mobile sizes before replacing the temporary asset. Owner: Kyte website team.
+
+### 9 October 2026: Clarify the Higgsfield banner prompt
+
+- The user shared a Higgsfield result that rendered a split layout, white card, border, and recognizable objects copied from the references. The next prompt will request only a full-bleed abstract background pattern at 1280 × 424 px, with no layout, inset frame, border, text, or literal reference objects. The website supplies its own white card.
+- Updated `skills/kyte-editorial-art/SKILL.md` to record this prompt constraint. No website artwork or external service was changed. Next action: review the next Higgsfield output before integrating it. Owner: Kyte website team.
+
+### 9 October 2026: Refine the contact-banner art prompt after review
+
+- Reviewed the user's latest Higgsfield output. Its repeated high-contrast bands and heavy, uniform grain made the image feel busy and mechanical. Tightened the local editorial-art skill to favor one or two spacious forms, a restrained palette, and fine grain, while avoiding repeated stripes, stacked arches, and all-over noise.
+- Reviewed the existing Design News artwork (`dior.webp`, `menu.webp`, and `playlist.webp`) as style context. No banner image was installed and no external service was changed. Checks: inspected the saved artwork and `git diff --check`. Next action: generate another wide contact-banner background in Higgsfield and review the result before adding it to the site. Owner: Kyte website team.
+
+### 9 October 2026: Create an abstract contact-banner artwork candidate
+
+- Reviewed the ten images in `Higgsfield References` and used the colorful Solimar image and layered landscape as visual references for a new abstract draft. Saved the generated 2172 × 724 image as `kyte-site/public/contact-banner-art-candidate.png`. It is not connected to the banner yet, so the existing preview remains unchanged while the candidate is reviewed.
+- Checks: confirmed the 3:1 image dimensions and ran `git diff --check`. No external systems changed. Next action: review the candidate in the local banner and confirm whether to activate it. Owner: Kyte website team.
+
+### 9 October 2026: Apply the neon-retro contact-banner direction
+
+- The user clarified that the banner needs the reference's visible hazy analog grain and neon-retro palette. Generated `kyte-site/public/contact-banner-art-neon.png` at 2179 × 722 px using the supplied image as a visual reference. Updated the shared footer banner, design-system specimen, and editorial-art skill to use and document this direction. This is a local preview change only; nothing was deployed.
+- Replaced the previous unapproved `contact-banner-art-candidate.png` draft with this direction. Checks: confirmed the image dimensions, ran `git diff --check`, `npm run lint`, and `npm run build`. Lint and build passed; the build logged expected Sanity fetch failures because this environment cannot resolve `50pibtgs.apicdn.sanity.io`, then completed with local fallbacks. Next action: review the banner in the local browser at desktop and mobile sizes. Owner: Kyte website team.
+
+### 9 October 2026: Explore a sculptural banner focal point
+
+- The user shared two new visual references and said the banner still felt incomplete. Identified the missing visual anchor and dimensional shadows, then generated `kyte-site/public/contact-banner-art-sculptural-candidate.png` with the warmer neon palette, tactile grain, abstract reflective form, and angled planes. Kept it as a separate candidate; the current neon artwork remains active for comparison. Updated `skills/kyte-editorial-art/SKILL.md` to capture this conditional direction for future image work.
+- Checks: confirmed the generated file and wide dimensions. Next action: compare both artwork directions in the actual banner and keep the user's preferred one. Owner: Kyte website team.
+
+### 9 October 2026: Apply RazorSense styling to the contact banner
+
+- Replaced the CSS approximation with Razorpay Blade's actual `RazorSense` component inside the CTA and design-system specimen. Restored its Blade provider, reduced-motion pause behavior, disabled center mark, and the five self-hosted files required by the effect. Kept the white CTA panel, copy, button, and shared section inset.
+- Updated `kyte-site/src/components/RazorSenseCanvas.tsx`, `SiteFooter.tsx`, `SiteFooter.css`, the contact-banner specimen and its description, `package.json`, the lockfile, and this handoff. This is a local preview change only; nothing was deployed. Blade's i18nify React peer declares React 18 while the site uses React 19, so packages were installed with legacy peer resolution. Build and TypeScript checks pass, but runtime browser behavior should be reviewed.
+- Checks: `npm run lint`, `npm run build`, and `git diff --check` passed. Sanity fetches failed because the build environment could not resolve `50pibtgs.apicdn.sanity.io`; the build completed using local fallbacks. Refreshed the homepage in the local browser and confirmed the CTA content and link render. The WebGL effect still needs a visual review at desktop and mobile sizes. Next action: inspect the effect at both sizes. Owner: Kyte website team.
+
+### 10 October 2026: Join the open navigation into one rail-aligned card
+
+- Updated the shared desktop header so opening Services or Industries turns the navigation row and dropdown into one continuous bordered white card. The row now supplies the top border and 4 px top corners, while the dropdown supplies the side and bottom borders.
+- Constrained the navigation shell to the shared page rails and removed the full viewport blur and translucent strip while a desktop menu is open. Content beyond the left and right rails now remains unobstructed instead of showing a separate header surface.
+- Updated `kyte-site/src/components/SiteHeader.tsx`, `kyte-site/src/app/globals.css`, the navigation guidance on `kyte-site/src/app/design-system/page.tsx`, and this handoff. No external system or deployment was changed.
+- Checks: reviewed Services and Industries on the local homepage at 1543 px. The open card measured 1344 px from x=99.5 to x=1443.5, retained the 1 px outer border, used 4 px top corners, and disabled the full viewport header blur. No automated tests were run because this was a focused visual interaction change. Next action: review the hover transition in the local browser, then include the change in the next approved deployment. Owner: Kyte website team.
+
+### 10 October 2026: Correct navbar transparency and open-menu background bleed
+
+- Removed the white and dark color washes from the shared closed navbar while retaining its transparent blur layer and automatic light or dark controls. Moved the blur to the navigation background pseudo-element so the header element itself remains transparent.
+- Removed the pale color and blur from the desktop menu interaction overlay. It remains as an invisible click and hover boundary, while the page outside the rail-aligned menu card now keeps its exact underlying background.
+- Updated `kyte-site/src/app/globals.css`, the navigation description in `kyte-site/src/app/design-system/page.tsx`, and this handoff. No external system or deployment was changed.
+- Checks: inspected the local homepage at 1543 px over both light content and the dark-themed showreel. The closed header and its background layer report transparent backgrounds; the open menu remains white inside the 1344 px rails; the overlay reports a transparent background with no backdrop filter; and the page outside the card remains the live underlying section. No automated tests were run because this was a focused visual correction. Next action: review the corrected interaction in the local browser and include it in the next approved deployment. Owner: Kyte website team.
+
+### 10 October 2026: Restore the original closed-navbar translucency
+
+- Restored the original non-hover navbar treatment with 12 px backdrop blur, the subtle white tint over light sections, and the subtle dark tint over dark sections. Kept the corrected open-menu behavior: the joined menu card stays inside the rails and the area outside it receives no overlay color or blur.
+- Updated `kyte-site/src/app/globals.css`, the navigation description in `kyte-site/src/app/design-system/page.tsx`, and this handoff. No external system or deployment was changed.
+- Checks: inspected the loaded local styles and confirmed the closed dark state again uses its original translucent background value, while the menu interaction overlay remains transparent. No automated tests were run because this was a focused visual-state correction. Next action: review the closed and open states in the local browser, then include the adjustment in the next approved deployment. Owner: Kyte website team.
+
+### 10 October 2026: Restore the rendered non-hover navbar blur
+
+- Found that the original component-level `backdrop-filter` had been removed during the open-card change. Although the stylesheet retained the intended value, the local browser resolved it to `none`, so the non-hover glass effect was not visible.
+- Restored the 12 px blur directly on the shared header component for its closed state and explicitly switches it to `none` only while the mobile menu or a desktop mega menu is open. Kept the subtle light and dark translucent backgrounds and the transparent area outside an open desktop card.
+- Updated `kyte-site/src/components/SiteHeader.tsx`, `kyte-site/src/app/globals.css`, and this handoff. No external system or deployment was changed.
+- Checks: inspected the rendered local header and confirmed its inline and computed `backdrop-filter` now both resolve to `blur(12px)` in the non-hover state. No automated tests were run because this was a focused visual-state correction. Next action: review the restored glass treatment in the local browser, then include it in the next approved deployment. Owner: Kyte website team.
+
+### 10 October 2026: Keep the Brochure control filled on dark navbar sections
+
+- Changed the shared dark-navbar state so the Brochure control keeps a solid white surface with dark text instead of becoming a transparent outlined control. Its hover state remains filled.
+- Updated `kyte-site/src/app/globals.css`, the control guidance in `kyte-site/src/app/design-system/page.tsx`, and this handoff. No external system or deployment was changed.
+- Checks: reviewed the local header over the dark service cards. The Brochure control rendered with a white background, dark text, and a light border. No automated tests were run because this was a focused style correction. Next action: include the reviewed adjustment in the next approved deployment. Owner: Kyte website team.
+
+### 10 October 2026: Reuse the homepage project cards on the Work index
+
+- Replaced the Work index card structure with the homepage project card pattern while preserving the CMS-backed projects and service filters. The Work page now uses the same 16:9 media, inline client and summary copy, plain project details, hover treatment, two-column spacing, and responsive collapse as the homepage.
+- Kept the earlier two-line truncation for longer Work summaries so CMS entries remain aligned. Removed the old Work-only title, summary, metadata pill, and card-image styling.
+- Updated `kyte-site/src/components/design-system/WorkIndex.tsx`, `kyte-site/src/components/design-system/EditorialPages.css`, the shared-card note in `kyte-site/src/app/design-system/page.tsx`, and this handoff. No CMS content, external system, or deployment was changed.
+- Checks: reviewed `/work` in the local browser at 1093 px. All 19 CMS projects render through the shared homepage card classes, all five filters remain available, and the old Work card class is absent. No automated tests were run because this was a focused component reuse change. Next action: review the shared cards at the target desktop and mobile widths, then include the change in the next approved deployment. Owner: Kyte website team.
+
+### 10 October 2026: Refine the light navbar rule and Gully Labs ticker mark
+
+- Added a very subtle 7% ink bottom rule to the translucent light navbar. The existing light rule for the dark navbar remains unchanged.
+- Increased only the Gully Labs logo in the homepage client ticker from the shared 90 × 25 px limit to approximately 104 × 28 px on desktop and supplied a proportional mobile limit. Ticker spacing and animation remain unchanged.
+- Updated `kyte-site/src/app/globals.css`, `kyte-site/src/components/ClientLogos.tsx`, the navigation guidance in `kyte-site/src/app/design-system/page.tsx`, and this handoff. No external system or deployment was changed.
+- Checks: inspected the local homepage at 1093 px. The light navbar reports the intended inset bottom rule, and both ticker copies of Gully Labs render at approximately 104 × 28 px. No automated tests were run because these were focused visual adjustments. Next action: include the reviewed changes in the next approved deployment. Owner: Kyte website team.
+
+### 10 October 2026: Refine footer icon tones and the Work section label
+
+- Changed the shared footer AI and social icons to a softer 58% black at rest. ChatGPT and Grok turn solid black on hover; only Claude and Gemini restore their native brand colors.
+- Changed the homepage `CASE STUDIES` eyebrow above Selected work to the shared brand blue used by other section labels.
+- Updated `kyte-site/src/components/TeamPreviewFooter.css`, `kyte-site/src/components/WorkShowcase.css`, and this handoff. No external system or deployment was changed.
+- Checks: reloaded and inspected the rendered homepage. All four AI icons resolve to opacity 0.58 with a black filter at rest; the loaded hover rules make ChatGPT and Grok fully opaque black and restore native color only for Claude and Gemini; the Work eyebrow resolves to `rgb(2, 73, 217)`. No automated tests were run because these were focused visual adjustments. Next action: include the reviewed changes in the next approved deployment. Owner: Kyte website team.
+
+### 10 October 2026: Match Work filters and add project-date metadata
+
+- Restyled the Work index filters with the shared 42px button sizing, 4px control radius, and black active and hover treatment.
+- Added the homepage project-card date position to every Work card. The Sanity model and published query now accept an optional `period` value; existing drafts do not contain verified periods, so the local preview explicitly displays `Date pending` until editors supply them.
+- Updated `kyte-site/src/components/design-system/WorkIndex.tsx`, `EditorialPages.css`, `kyte-site/src/lib/sanity.ts`, the layout guidance on `kyte-site/src/app/design-system/page.tsx`, and this handoff. No CMS content, external system, or deployment was changed.
+- Checks: reloaded `/work` in the local browser. All five filters resolve to a 42px minimum height, 4px radius, 15px type, and 500 weight; the first project card renders the date slot before its category. No automated tests were run because this was a focused visual and data-display adjustment. Next action: add verified project periods to the Work entries in Sanity before publication. Owner: Kyte content and website team.
+
+### 10 October 2026: Redeploy the current site to Vercel production
+
+- Added `kyte-site/.npmrc` with `legacy-peer-deps=true` because the first staged Vercel build failed while resolving Razorpay Blade's React peer dependencies. The retry installed dependencies and built successfully.
+- Created production deployment `dpl_BjruBfzSCuLxacaeYSv1M1HQfCYW` from the current local source snapshot, initially with the main domain withheld. Verified the protected staged homepage and Work route, then promoted the same READY deployment to `https://kyte-agency-website.vercel.app/`.
+- The public homepage and `/work` return HTTP 200 and the browser confirmed the current homepage structure. The production Work page correctly shows its empty state because all current Work documents remain unpublished drafts in Sanity. The live site still emits `noindex, nofollow`.
+- Checks: `npm run lint`, `npm run build`, and `git diff --check` passed locally. The local build completed with expected Sanity DNS fallbacks. Vercel built 36 routes with Next.js 16.4.0, TypeScript passed, both public routes returned HTTP 200, and the post-deploy error scan found no logs. GitHub and Sanity were not changed. Rollback source: the prior production deployment recorded in this handoff is `dpl_FEtBSKGTeMXK9dpZAgatqS1fQvAh`. Next action: publish reviewed Sanity Work and Design News entries when approved, then complete the launch and indexing review. Owner: Kyte website team.
+
+### 10 October 2026: Publish Sanity Work and Design News entries
+
+- Diagnosed the production gap: the site queries Sanity with the `published` perspective, while its 19 Work projects and 8 Design News articles existed only as drafts. Published those 27 documents from the connected `Kyte Website` project with revision guards. Sanity's published perspective now returns all 19 Work projects and all 8 articles.
+- Verified on Vercel: `/work` lists all 19 projects, `/work/sproutova-brand-identity` renders its full published case study, and `/insights` shows all 8 articles. No Vercel deployment was needed for the content; the existing routes fetch published Sanity content with five-minute revalidation.
+- The 14 `servicePage` documents remain drafts. Ten explicitly contain placeholder summaries, and the four older entries are still under editorial review. The fixed service routes do not currently read these CMS documents, so publishing them would neither make them visible nor provide complete page content. News entries also have no publication dates; no dates were invented.
+- Updated the Design News date rendering locally to omit the misleading “Draft preview” label when the date is unset. `npm run lint`, `npm run build`, and `git diff --check` passed; the local build used its documented fallback because this environment cannot resolve the Sanity CDN. This small code change was not deployed. The Vercel connector denied project-scoped access (403), and the local CLI could not connect, so production code deployment was not available in this turn.
+- Next action: add editor-confirmed publication dates and complete/route the service content; deploy the local Design News date-display adjustment once Vercel project access is available. Owner: Kyte website team.
+
+### 10 October 2026: Attempt to deploy the current source to Vercel
+
+- Corrected the local Vercel project link to `kyte-agency-website` (`prj_9OhUuqvAA2Dt6PBpxnQHGFhLUU4E`), preserving the repository's `kyte-site` build root. Added a root `.vercelignore` for the monorepo upload and ignored Vercel's local project directory.
+- Uploaded 11.2 MB to production as deployment `dpl_CNZHbAkBdRt3ushWyw6ToUuFm7nL`. Vercel blocked it before the build and did not assign the production alias. Its `readyStateReason` is: “The deployment was blocked because the commit author doesn’t have permission to create deployments for this project.” The deployment metadata identifies the commit author as Mahir (`mahirmalde2004@gmail.com`); Vercel reports `TEAM_ACCESS_REQUIRED` and `isVerified: false`.
+- Confirmed the existing production deployment `dpl_BjruBfzSCuLxacaeYSv1M1HQfCYW` remains READY and owns `kyte-agency-website-kyte-product.vercel.app`. No production code change was released. Next action: verify the commit author email in Vercel or grant its account deployment permission, then retry. Owner: Kyte website team.
