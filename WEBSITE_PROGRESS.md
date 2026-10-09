@@ -27,6 +27,17 @@ This is the handoff file for future Codex chats and team members. Read `AGENTS.m
 
 ## Confirmed direction
 
+### 10 October 2026: Work copy, case study type, and Work navbar
+
+- Replaced the Work index heading with the simpler “Take a look at our work.”, highlighted “work” in the shared blue, added a full stop, and rewrote the supporting line and metadata to explain the project range plainly. The change follows the `/work` buyer goal in the SEO content playbook.
+- Matched Work case study content to the supplied Pineapple hierarchy: 18px gray uppercase section labels and 27px, medium-weight black body copy with 1.3 line height; 15px labels and 22px body copy on mobile. Kept Insights article typography unchanged. Documented this Work pattern on `/design-system`.
+- Marked Work card imagery as a dark nav surface. Local scroll review confirmed white nav controls over the cards and dark controls over the white text rows. Desktop case study review and a 390px layout check passed without horizontal overflow. `npm run lint`, `npm run build`, and `git diff --check` passed. The local build could not resolve Sanity's CDN host. Files: `kyte-site/src/app/work/page.tsx`, `src/components/design-system/WorkIndex.tsx`, `EditorialPages.css`, `src/app/design-system/page.tsx`, and this handoff. The user requested a GitHub main push and Vercel production deployment; verify the release before reporting completion. Owner: Kyte website team.
+
+### 10 October 2026: Keep future push and deploy requests fast
+
+- The user asked that routine GitHub main pushes and Vercel deployments take fewer steps. For an authorized release, review only the changed files and secret exclusions, run the required project checks once, push, then confirm the Vercel deployment is Ready and make a short live check of affected routes. Reuse the existing repository and project configuration instead of repeating discovery and broad audits. Report a real build or deployment blocker promptly.
+- This updates the release workflow only. No site code, GitHub branch, or Vercel deployment changed in this prompt. Next action: use this shorter flow for the next release. Owner: Codex.
+
 ### 10 October 2026: Release current site to GitHub main and Vercel production
 
 - Copied the current `kyte-site/` source, public assets, and project handoff into a clean checkout of public `kyte-product/kyte-agency-website` `main`. Excluded local environment files, build output, dependencies, and source reference folders. Committed the site release as `7abfc2ccebb7faeb95ec8bca47aa5b50f4161cec` and pushed it to `main`.

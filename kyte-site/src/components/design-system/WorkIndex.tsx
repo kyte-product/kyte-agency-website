@@ -51,7 +51,7 @@ export function WorkIndex({ projects }: { projects: WorkProject[] }) {
       const detail = project.cardService || project.role || project.projectType || "Case study";
       const period = project.period || "Date pending";
       return <article className="work-project" key={project._id}>
-        <Link className="work-project__visual" href={href} aria-label={`Explore ${name} project`}>
+        <Link className="work-project__visual" href={href} aria-label={`Explore ${name} project`} data-nav-theme="dark">
           {project.cover.url && <Image src={project.cover.url} alt={project.cover.alt || ""} fill unoptimized sizes="(max-width: 760px) 90vw, 47vw" />}
         </Link>
         <Link className="work-project__summary" href={href} aria-label={`View ${name} project`}><strong>{name}</strong>{project.summary && <> <span>{project.summary}</span></>}</Link>
