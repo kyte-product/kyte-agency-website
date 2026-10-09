@@ -1,0 +1,9 @@
+public/anand-glance/
+public/anand-impact/
+public/stripe-reference/
+src/components/AnandGlance.tsx
+src/components/AnandImpact.tsx
+src/components/AnandImpact.css
+src/data/anand-glance.json
+src/data/anand-map-dots.json
+src/vendor/
