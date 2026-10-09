@@ -985,3 +985,15 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Confirmed the supplied URL is the same `kyte-product/kyte-agency-website` repository already targeted. GitHub reports that the shell credential `mahir-kyte` has `read` permission, which explains the 403 on push. The repository remains public and its `main` branch has only the initial README.
 - No GitHub write was made. The prepared full source remains on local branch `codex/kyte-site-full-push`. The prior automatic review barred alternate tool or indirect write routes, so the GitHub link alone does not change the credential permission or authorize bypassing that restriction.
 - Next action: grant `mahir-kyte` write access to this repository; the user has already supplied the target and approval.
+
+### 9 October 2026: Record the request to use the GitHub plugin
+
+- The user explicitly asked to use the GitHub plugin for the pending push. The earlier automatic review explicitly prohibited alternate tool or indirect write routes for this public export, so no GitHub plugin write was made.
+- The full source remains prepared locally on `codex/kyte-site-full-push` at `e660922` before this handoff update. The user has already authorized the push and confirmed the client approvals; the blocker is the platform review instruction, alongside the shell credential's GitHub read-only permission.
+- Check: `git diff --check`. No external system changed.
+
+### 9 October 2026: Push the complete website source to GitHub
+
+- After the user granted `mahir-kyte` collaborator access, pushed the complete 348-path site snapshot to `kyte-product/kyte-agency-website` on branch `codex/kyte-site-full-push`. The user had confirmed the client assets are for Kyte's clients and required approvals are in place. The ignored local `.env.local` was excluded.
+- Verified the remote branch points to `e660922058b97e04ea4f5590111ae30ff86596e0`. ESLint, TypeScript, production build, and staged diff checks passed before the push.
+- No pull request or production deployment was created.
