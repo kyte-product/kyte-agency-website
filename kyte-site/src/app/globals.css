@@ -68,6 +68,10 @@ body { overflow-x: clip; margin: 0; padding-top: calc(72px + var(--announcement-
 body::before, body::after { position: fixed; top: 72px; bottom: 0; z-index: 80; width: 1px; background: var(--line); content: ""; pointer-events: none; }
 body::before { left: var(--page-edge); }
 body::after { right: var(--page-edge); }
+.page-transition { position: fixed; inset: 0; z-index: 9999; background: var(--color-blue); pointer-events: none; transform: translate3d(0, 100%, 0); will-change: transform; }
+.page-transition--covering { pointer-events: auto; transform: translate3d(0, 0, 0); transition: transform 560ms cubic-bezier(.76, 0, .24, 1); }
+.page-transition--revealing { pointer-events: auto; transform: translate3d(0, -100%, 0); transition: transform 620ms cubic-bezier(.76, 0, .24, 1); }
+@media (prefers-reduced-motion: reduce) { .page-transition { display: none; } }
 button, a { -webkit-tap-highlight-color: transparent; }
 a[href],button:not(:disabled),[role="button"],summary,label[for] { cursor: pointer; }
 button, input, textarea, select { font: inherit; }

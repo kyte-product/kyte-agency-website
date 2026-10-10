@@ -15,7 +15,7 @@ function isDarkUnderNav(header: HTMLElement): boolean {
   const samplePoints = [.25, .5, .75].map((part) => window.innerWidth * part);
   const darkPoints = samplePoints.filter((x) => {
     const underneath = document.elementsFromPoint(x, y).find((element) =>
-      !header.contains(element) && !element.closest(".nav-overlay, nextjs-portal"));
+      !header.contains(element) && !element.closest(".nav-overlay, .page-transition, nextjs-portal"));
     for (let element: Element | null | undefined = underneath; element && element !== document.body; element = element.parentElement) {
       const theme = element.getAttribute("data-nav-theme");
       if (theme) return theme === "dark";
