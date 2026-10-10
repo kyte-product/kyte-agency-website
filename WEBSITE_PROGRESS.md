@@ -29,6 +29,12 @@ This is the handoff file for future Codex chats and team members. Read `AGENTS.m
 
 ## Confirmed direction
 
+### 10 October 2026: Refine Design News list and add Resources
+
+- Removed the author dropdown, story count, and eyebrow above the Design News listing. Rebuilt its articles as responsive four-column newsroom rows based on the supplied local ANAND reference: metadata at left, a ruled category and title column, and a compact image at right. When a publication date is missing, the left column shows the existing author rather than inventing a date; the topic filters and load-more behavior remain.
+- Added a Resources section using the ANAND Interaction section's four-cover shelf and 3D book hover treatment, adapted to Kyte colors and four existing published Design News articles. Each cover links to its real article; no separate resource downloads were claimed. Files: `kyte-site/src/components/design-system/DesignNewsIndex.tsx`, `DesignNews.css`, and this handoff.
+- Checks: ESLint, TypeScript, production build, and `git diff --check` passed. The local build used its fallback because Sanity DNS is unavailable in this shell. Reviewed the local listing and Resources on desktop and at 390px mobile; the Consumer Psychology filter returned its one matching story. GitHub and Vercel publication are pending. Owner: Kyte website team.
+
 ### 10 October 2026: Replace the FinCart cover and feature it on the homepage
 
 - The user supplied a 3840 × 2160 FinCart cover showing two app screens. Added the exact image as `kyte-site/public/fincart/work-cover.png`, set it as the FinCart Work-index fallback cover, and put FinCart first in the homepage Selected Work cards in place of Collectbee. The other homepage projects remain in their existing order.
