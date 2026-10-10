@@ -15,7 +15,7 @@ function topic(article: DesignNewsArticle) {
 function date(article: DesignNewsArticle) {
   const value = article.publishedAt || article.updatedAt;
   return value
-    ? new Date(value).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })
+    ? new Date(value).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Kolkata" })
     : null;
 }
 
