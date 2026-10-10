@@ -9,13 +9,7 @@
 .editorial-shortcuts__item a:hover { text-decoration:underline }
 .editorial-collection__book-face { display:flex;flex-direction:column;align-items:flex-start;padding:11% 10% 10% 14%;isolation:isolate }
 .editorial-collection__book-logo { position:relative;z-index:2;width:62%;height:auto;object-fit:contain }
-.editorial-collection__book-art { position:absolute;inset:24% 0 22%;overflow:hidden;pointer-events:none }
-.editorial-collection__book-art span { position:absolute;display:block;background:currentColor;opacity:.84 }
-.editorial-collection__book-art span:first-child { width:64%;aspect-ratio:1;border-radius:50%;top:8%;right:-24% }
-.editorial-collection__book-art span:nth-child(2) { width:36%;aspect-ratio:1;border-radius:50%;top:40%;left:9%;background:#fff;opacity:.7 }
-.editorial-collection__book-art span:nth-child(3) { width:48%;height:18%;left:32%;bottom:4%;transform:rotate(-28deg);background:#fff;opacity:.85 }
-.editorial-collection__book-index { position:relative;z-index:2;margin-top:auto;font-size:clamp(9px,.8vw,12px);font-weight:600;letter-spacing:.1em }
-.editorial-collection__book-title { position:relative;z-index:2;max-width:90%;margin:0 0 14px;font-size:clamp(13px,1.35vw,23px);font-weight:600;line-height:1.18;letter-spacing:-.02em }
+.editorial-collection__book-title { position:relative;z-index:2;max-width:90%;margin:auto 0 0;font-size:clamp(13px,1.35vw,23px);font-weight:600;line-height:1.18;letter-spacing:-.02em }
 .editorial-guides { padding:110px var(--section-inset) 120px;background:var(--color-surface-secondary) }
 .editorial-guides__lead { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch }
 .editorial-guides__intro { display:flex;flex-direction:column;align-items:flex-start;padding-right:20px }
@@ -31,18 +25,18 @@
 .editorial-guides__featured-controls { position:absolute;right:30px;bottom:30px;display:flex;gap:8px }
 .editorial-guides button { display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.5);border-radius:var(--radius-small);background:rgba(255,255,255,.12);color:white;cursor:pointer }
 .editorial-guides button:hover { background:white;color:var(--ink) }
+.editorial-guides__featured-controls button { border-color:var(--line);background:white;color:var(--ink) }
+.editorial-guides__featured-controls button:hover { background:var(--color-control-hover) }
 .editorial-guides__highlights-head { display:flex;align-items:end;justify-content:space-between;gap:20px;margin:90px 0 24px }
 .editorial-guides__highlights-head h3 { margin:0;font-size:var(--heading-section-mobile);font-weight:500;letter-spacing:-.04em }
 .editorial-guides__highlights-head > div { display:flex;gap:8px }
 .editorial-guides__highlights-head button { border-color:var(--line);background:white;color:var(--ink) }
 .editorial-guides__highlights-head button:hover { background:var(--accent);color:white }
 .editorial-guides__highlights { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px }
-.editorial-guides__highlight { position:relative;display:flex;flex-direction:column;min-height:355px;padding:28px 24px 24px;border-radius:var(--radius-large);overflow:hidden }
-.editorial-guides__highlight::before { position:absolute;right:-38px;bottom:24px;width:130px;aspect-ratio:1;border:18px solid currentColor;border-radius:50%;opacity:.12;content:"" }
-.editorial-guides__highlight > span { font-size:var(--type-caption);font-weight:600;letter-spacing:.08em }
-.editorial-guides__highlight h4 { margin:24px 0 0;font-size:var(--type-subtitle);font-weight:500;line-height:1.3 }
-.editorial-guides__highlight p { margin:20px 0;font-size:var(--type-caption);line-height:1.6 }
-.editorial-guides__highlight img { width:38px;height:38px;object-fit:contain;margin-top:auto;filter:brightness(0);opacity:.65 }
+.editorial-guides__highlight { display:flex;flex-direction:column;min-height:355px;padding:28px 24px 24px;border-radius:var(--radius-large);color:white;overflow:hidden }
+.editorial-guides__highlight h4 { margin:0;font-size:var(--type-subtitle);font-weight:500;line-height:1.3 }
+.editorial-guides__highlight p { margin:24px 0 28px;color:rgba(255,255,255,.84);font-size:var(--type-caption);line-height:1.65 }
+.editorial-guides__highlight img { width:38px;height:38px;object-fit:contain;margin-top:auto;filter:brightness(0) invert(1);opacity:.85 }
 .editorial-collection--standalone { min-height:65vh }
 @media(max-width:900px) { .editorial-guides__lead { grid-template-columns:1fr 1fr }.editorial-guides__intro { grid-column:1/-1 }.editorial-guides__featured { grid-column:1/-1 }.editorial-guides__highlights { grid-template-columns:repeat(2,minmax(0,1fr)) } }
-@media(max-width:650px) { .editorial-shortcuts { grid-template-columns:1fr;padding-top:65px;padding-bottom:70px;gap:38px }.editorial-shortcuts__item { min-height:190px }.editorial-guides { padding-top:75px;padding-bottom:85px }.editorial-guides__featured { min-height:420px;padding:27px 24px }.editorial-guides__featured-copy { padding-right:0;padding-bottom:65px }.editorial-guides__featured-controls { right:24px;bottom:24px }.editorial-guides__mark { width:340px;height:340px;right:-80px;bottom:-70px }.editorial-guides__highlights-head { margin-top:64px }.editorial-guides__highlights-head h3 { font-size:28px }.editorial-guides__highlights { grid-template-columns:1fr }.editorial-guides__highlight { min-height:275px }.editorial-collection__book-title { font-size:clamp(13px,4vw,20px) } }
+@media(max-width:650px) { .editorial-shortcuts { grid-template-columns:1fr;padding-top:65px;padding-bottom:70px;gap:38px }.editorial-shortcuts__item { min-height:190px }.editorial-guides { padding-top:75px;padding-bottom:85px }.editorial-guides__featured { min-height:420px;padding:27px 24px }.editorial-guides__featured-copy { padding-right:0;padding-bottom:65px }.editorial-guides__featured-controls { right:24px;bottom:24px }.editorial-guides__mark { width:340px;height:340px;right:-80px;bottom:-70px }.editorial-guides__highlights-head { margin-top:64px }.editorial-guides__highlights-head h3 { font-size:28px }.editorial-guides__highlights { grid-template-columns:1fr }.editorial-guides__highlight { min-height:275px }.design-news__resource-book { --book-width:64cqw }.editorial-collection__book-title { font-size:clamp(11px,3vw,14px) } }
