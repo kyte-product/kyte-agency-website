@@ -49,7 +49,7 @@ export default async function DesignNewsArticlePage({ params }: Props) {
         </div>
       </div>
     </header>
-    {article.cover.url && <figure className="editorial-detail__work-cover editorial-detail__news-cover" data-nav-theme="dark"><Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 700px) 100vw, 90vw" /></figure>}
+    {article.cover.url && <figure className={`editorial-detail__work-cover editorial-detail__news-cover${article.slug === "why-sensory-branding-is-the-next-big-thing-in-2026" ? " editorial-detail__news-cover--cropped" : ""}`} data-nav-theme="dark"><Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 700px) 100vw, 90vw" /></figure>}
     <div className={`editorial-detail__article-layout${sections.length ? "" : " editorial-detail__article-layout--single"}`}>
       {sections.length > 0 && <ArticleTopics sections={sections} />}
       <article className="editorial-detail__article-main"><EditorialBody blocks={article.body} /></article>

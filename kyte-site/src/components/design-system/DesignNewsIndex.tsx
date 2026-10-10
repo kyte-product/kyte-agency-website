@@ -24,6 +24,10 @@ function articleMeta(article: DesignNewsArticle) {
   return publishedDate ? `${topic(article)} · ${publishedDate}` : topic(article);
 }
 
+function hasSideBars(article: DesignNewsArticle) {
+  return article.slug === "why-sensory-branding-is-the-next-big-thing-in-2026";
+}
+
 export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly = false }: { articles: DesignNewsArticle[]; showPlaceholders?: boolean; newsOnly?: boolean }) {
   const featured = useMemo(() => {
     if (newsOnly) return [];
@@ -50,7 +54,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
       <section className="design-news__hero" aria-labelledby="design-news-heading">
         <div className="design-news__intro">
           <p className="eyebrow">Design News</p>
-          <h1 id="design-news-heading">Ideas from Kyte</h1>
+          <h1 id="design-news-heading">Ideas from the <span>creative team.</span></h1>
           <p>Writing on visual culture, branding, and the ideas shaping how people experience products.</p>
           <a className="kyte-button" href="#all-stories">See all stories <ArrowUpRight size={17} aria-hidden="true" /></a>
         </div>
@@ -58,7 +62,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
           {featured.map((article, index) => <Link
             key={article._id}
             href={`/insights/${encodeURIComponent(article.slug)}`}
-            className={`design-news__slide${index === slide ? " is-active" : ""}`}
+            className={`design-news__slide${index === slide ? " is-active" : ""}${hasSideBars(article) ? " design-news__slide--cropped" : ""}`}
             aria-hidden={index !== slide}
             tabIndex={index === slide ? 0 : -1}
           >
@@ -84,7 +88,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
       <div className="design-news__rows">{filtered.slice(0, shown).map((article) => <Link className="design-news__row" key={article._id} href={`/insights/${encodeURIComponent(article.slug)}`}>
         <span className="design-news__row-date" title={article.publishedAt ? "Published date" : "Last updated"}>{date(article) || "Date pending"}</span>
         <span className="design-news__row-main"><span className="design-news__row-topic">{topic(article)}</span><strong>{article.title}</strong>{date(article) && <small>{article.author || "Kyte team"}</small>}</span>
-        <span className="design-news__row-image">{article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 700px) 35vw, 22vw" />}</span>
+        <span className={`design-news__row-image${hasSideBars(article) ? " design-news__row-image--cropped" : ""}`}>{article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 700px) 35vw, 22vw" />}</span>
       </Link>)}</div>
       {shown < filtered.length && <button className="design-news__more" type="button" onClick={() => setShown((value) => value + 8)}>Load more <ArrowRight size={16} aria-hidden="true" /></button>}
       {!newsOnly && <Link className="kyte-button design-news__view-all" href="/insights/design-news">View all Design News <ArrowRight size={17} aria-hidden="true" /></Link>}

@@ -8,14 +8,14 @@ import { RevealWords } from "./RevealWords";
 import "./WorkShowcase.css";
 
 const projects = [
-  // Preview-only dates requested for layout review. Replace with verified project timelines before publishing.
+  // Other project dates remain preview-only until their timelines are verified.
   {
     name: "Fincart.",
     description: "A connected mobile experience for financial planning, investing, and tracking progress.",
-    period: "",
+    period: "2025–2026",
     category: "Mobile app · Product design",
-    image: "/fincart/work-cover.png",
-    alt: "Two Fincart app screens showing a financial overview and a goal roadmap",
+    image: "/fincart/fincart-phone-cover.png",
+    alt: "FinCart app screen on an angled phone between metallic forms",
     href: "/work/fincart",
   },
   {

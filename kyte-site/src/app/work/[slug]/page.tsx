@@ -50,7 +50,7 @@ export default async function WorkDetailPage({ params }: Props) {
       <div className="editorial-detail__work-heading-grid">
         <div><h1 data-reveal-words={slug === "fincart" ? "" : undefined}>{slug === "fincart" ? <RevealWords text={project.title} /> : project.title}</h1>{project.summary && <p className="editorial-detail__summary" data-reveal-words={slug === "fincart" ? "" : undefined}>{slug === "fincart" ? <RevealWords text={project.summary} /> : project.summary}</p>}{projectUrl && <a className="editorial-detail__live-link kyte-button" href={projectUrl} target="_blank" rel="noopener noreferrer">{slug === "fincart" ? "View on App Store" : "View live work"} <ArrowUpRight size={18} strokeWidth={1.8} aria-hidden="true" /></a>}</div>
         <div className="editorial-detail__work-aside">
-          <dl className="editorial-detail__facts"><div><dt>Client</dt><dd>{project.client || project.title}</dd></div>{project.projectType?.trim() && <div><dt>Project type</dt><dd>{project.projectType}</dd></div>}{project.role && project.role !== project.title && <div><dt>Kyte&apos;s role</dt><dd>{project.role}</dd></div>}</dl>
+          <dl className="editorial-detail__facts"><div><dt>Client</dt><dd>{project.client || project.title}</dd></div>{project.period?.trim() && <div><dt>Timeline</dt><dd>{project.period}</dd></div>}{project.projectType?.trim() && <div><dt>Project type</dt><dd>{project.projectType}</dd></div>}{project.role && project.role !== project.title && <div><dt>Kyte&apos;s role</dt><dd>{project.role}</dd></div>}</dl>
         </div>
       </div>
     </header>

@@ -9,11 +9,11 @@ export const fincartProject: WorkProject = {
   client: "Fincart",
   role: "Product design, UX research and design system",
   projectType: "Mobile app",
-  period: "2025–26",
+  period: "2025–2026",
   cardService: "Mobile App Design",
   filterCategories: ["Mobile App Design"],
   featured: false,
   sortOrder: -1,
   projectUrl: "https://apps.apple.com/in/app/fincart-investment-app/id1540925421",
-  cover: { url: "/fincart/work-cover.png", alt: "Two Fincart app screens showing a financial overview and a goal roadmap" },
+  cover: { url: "/fincart/fincart-phone-cover.png", alt: "FinCart app screen on an angled phone between metallic forms" },
 };
