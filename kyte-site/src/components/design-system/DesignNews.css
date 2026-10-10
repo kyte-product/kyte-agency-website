@@ -1,5 +1,6 @@
 .design-news { width: var(--page-width); margin: 0 auto; }
-.design-news__soft { background: var(--color-surface-secondary); }
+.design-news__soft { position: relative; isolation: isolate; }
+.design-news__soft::before { position: absolute; z-index: -1; inset-block: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: var(--color-surface-secondary); content: ""; pointer-events: none; }
 .design-news__hero { display: grid; grid-template-columns: minmax(230px,1fr) minmax(0,2fr); gap: clamp(32px,5vw,76px); padding: clamp(64px,8vw,112px) var(--section-inset) 100px; }
 .design-news__intro h1 { margin: 16px 0 20px; font-size: var(--heading-display); font-weight: var(--heading-weight); line-height: var(--heading-line-height); letter-spacing: -.055em; }
 .design-news__intro > p:not(.eyebrow) { max-width: 450px; margin: 0 0 28px; color: var(--muted); font-size: var(--type-lead); line-height: 1.5; }
