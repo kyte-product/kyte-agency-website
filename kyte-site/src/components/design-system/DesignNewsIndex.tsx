@@ -50,7 +50,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
           <p className="eyebrow">Design News</p>
           <h1 id="design-news-heading">Ideas from Kyte</h1>
           <p>Writing on visual culture, branding, and the ideas shaping how people experience products.</p>
-          <a className="design-news__text-link" href="#all-stories">See all stories <ArrowUpRight size={17} aria-hidden="true" /></a>
+          <a className="kyte-button" href="#all-stories">See all stories <ArrowUpRight size={17} aria-hidden="true" /></a>
         </div>
         {featured.length > 0 && <div className="design-news__feature" aria-roledescription="carousel" aria-label="Featured Design News">
           {featured.map((article, index) => <Link
@@ -72,7 +72,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
         </div>}
       </section>
     </div>
-    {!newsOnly && <EditorialShortcuts showPlaceholders={showPlaceholders} />}
+    {!newsOnly && showPlaceholders && <EditorialShortcuts showPlaceholders />}
     <section className="design-news__listing" id="all-stories" aria-labelledby="all-stories-heading">
       <div className="design-news__listing-head"><h2 id="all-stories-heading">Design News</h2></div>
       <div className="design-news__filters" role="group" aria-label="Filter stories">
@@ -85,7 +85,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
         <span className="design-news__row-image">{article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 700px) 35vw, 22vw" />}</span>
       </Link>)}</div>
       {shown < filtered.length && <button className="design-news__more" type="button" onClick={() => setShown((value) => value + 8)}>Load more <ArrowRight size={16} aria-hidden="true" /></button>}
-      {!newsOnly && <Link className="design-news__view-all" href="/insights/design-news">View all Design News <ArrowRight size={17} aria-hidden="true" /></Link>}
+      {!newsOnly && <Link className="kyte-button design-news__view-all" href="/insights/design-news">View all Design News <ArrowRight size={17} aria-hidden="true" /></Link>}
     </section>
     {!newsOnly && showPlaceholders && <><EditorialResources /><EditorialGuides /></>}
   </main>;
