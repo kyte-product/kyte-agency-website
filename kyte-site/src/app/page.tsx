@@ -8,7 +8,11 @@ import { TeamPreviewFooter } from "@/components/TeamPreviewFooter";
 import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { ClientGrid } from "@/components/ClientGrid";
 import { SplitCtaBanner } from "@/components/SplitCtaBanner";
+import { designNewsEntries } from "@/lib/editorial";
 
-export default function Home() {
-  return <><SiteHeader /><main><TextRevealMotion /><Hero /><ServicesIntro /><ClientGrid /><WorkShowcase /><KyteApproach /><ClientStories /><SplitCtaBanner /></main><TeamPreviewFooter /></>;
+export const instant = false;
+
+export default async function Home() {
+  const articles = await designNewsEntries();
+  return <><SiteHeader /><main><TextRevealMotion /><Hero /><ServicesIntro /><ClientGrid /><WorkShowcase /><KyteApproach /><ClientStories articles={articles} /><SplitCtaBanner /></main><TeamPreviewFooter /></>;
 }
