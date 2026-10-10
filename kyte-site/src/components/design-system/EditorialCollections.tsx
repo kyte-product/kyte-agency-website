@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, FileText, Newspaper } from "lucide-react";
 import { useState } from "react";
 import { guideSamples, resourceSamples } from "@/lib/editorial-collections";
@@ -27,10 +28,9 @@ export function EditorialShortcuts({ showPlaceholders }: { showPlaceholders: boo
 export function EditorialResources({ standalone = false }: { standalone?: boolean }) {
   const Heading = standalone ? "h1" : "h2";
   return <section className={`design-news__resources${standalone ? " editorial-collection--standalone" : ""}`} aria-labelledby="design-news-resources-heading">
-    <div className="design-news__resources-head"><div><p className="eyebrow">From the Kyte team</p><Heading id="design-news-resources-heading">Resources</Heading><p>Practical material for teams working through product and brand decisions.</p></div>{!standalone && <Link className="design-news__resources-link" href="/insights/resources">See all resources <ArrowUpRight size={18} aria-hidden="true" /></Link>}</div>
-    <p className="editorial-collection__preview">Collection preview. These sample titles are not published resources.</p>
+    <div className="design-news__resources-head"><div><Heading id="design-news-resources-heading">Resources</Heading><p>Practical material for teams working through product and brand decisions.</p></div>{!standalone && <Link className="design-news__resources-link" href="/insights/resources">See all resources <ArrowUpRight size={18} aria-hidden="true" /></Link>}</div>
     <div className="design-news__resource-grid">{resourceSamples.map((sample, index) => <article className="design-news__resource" key={sample.title}>
-      <span className="design-news__resource-shelf"><span className="design-news__resource-book"><span className="design-news__resource-back" /><span className="design-news__resource-pages" /><span className="design-news__resource-face editorial-collection__book-face" style={{ background: sample.color, color: sample.accent }}><span className="editorial-collection__book-index">KYTE / {String(index + 1).padStart(2, "0")}</span><span className="editorial-collection__book-title">{sample.title}</span><span className="editorial-collection__book-mark">✳</span><span className="design-news__resource-binding" /></span></span></span>
+      <span className="design-news__resource-shelf"><span className="design-news__resource-book"><span className="design-news__resource-back" /><span className="design-news__resource-pages" /><span className="design-news__resource-face editorial-collection__book-face" style={{ backgroundColor: sample.color, color: sample.accent }}><Image className="editorial-collection__book-logo" src="/kyte-agency-logo.svg" alt="" width={1434} height={200} unoptimized /><span className="editorial-collection__book-art" aria-hidden="true"><span /><span /><span /></span><span className="editorial-collection__book-title">{sample.title}</span><span className="editorial-collection__book-index">{String(index + 1).padStart(2, "0")}</span><span className="design-news__resource-binding" /></span></span></span>
       <span className="design-news__resource-topic">{sample.kind}</span><strong>{sample.title}</strong>
     </article>)}</div>
   </section>;
@@ -46,15 +46,14 @@ export function EditorialGuides({ standalone = false }: { standalone?: boolean }
 
   return <section className={`editorial-guides${standalone ? " editorial-collection--standalone" : ""}`} aria-labelledby="editorial-guides-heading">
     <div className="editorial-guides__lead">
-      <div className="editorial-guides__intro"><p className="eyebrow">Learn with Kyte</p><Heading id="editorial-guides-heading">Guides</Heading><p>Clear, practical starting points for teams designing products and services.</p>{!standalone && <Link href="/insights/guides">See all guides <ArrowRight size={17} aria-hidden="true" /></Link>}<small>Collection preview. Guide titles and summaries are sample content.</small></div>
-      <div className="editorial-guides__featured" style={{ background: selected.color }} aria-live="polite">
-        <span className="editorial-guides__mark" style={{ color: selected.tint }} aria-hidden="true">K</span>
-        <span className="editorial-guides__featured-top">KYTE / SAMPLE GUIDE</span>
-        <div className="editorial-guides__featured-copy"><span>Featured guide · {String(featured + 1).padStart(2, "0")} / {String(guideSamples.length).padStart(2, "0")}</span><h3>{selected.title}</h3><p>{selected.summary}</p><span>Preview only</span></div>
+      <div className="editorial-guides__intro"><Heading id="editorial-guides-heading">Guides</Heading><p>Clear, practical starting points for teams designing products and services.</p>{!standalone && <Link href="/insights/guides">See all guides <ArrowRight size={17} aria-hidden="true" /></Link>}</div>
+      <div className="editorial-guides__featured" aria-live="polite">
+        <Image className="editorial-guides__mark" src="/kyte-mark.png" alt="" width={512} height={512} unoptimized />
+        <div className="editorial-guides__featured-copy"><h3>{selected.title}</h3><p>{selected.summary}</p></div>
         <div className="editorial-guides__featured-controls"><button type="button" onClick={() => moveFeatured(-1)} aria-label="Previous sample guide"><ArrowLeft size={18} /></button><button type="button" onClick={() => moveFeatured(1)} aria-label="Next sample guide"><ArrowRight size={18} /></button></div>
       </div>
     </div>
     <div className="editorial-guides__highlights-head"><h3>Recent highlights</h3><div><button type="button" onClick={() => setOffset((value) => (value - 1 + guideSamples.length) % guideSamples.length)} aria-label="Previous guide highlights"><ArrowLeft size={18} /></button><button type="button" onClick={() => setOffset((value) => (value + 1) % guideSamples.length)} aria-label="Next guide highlights"><ArrowRight size={18} /></button></div></div>
-    <div className="editorial-guides__highlights">{ordered.map((sample, index) => <article key={sample.title} className="editorial-guides__highlight" style={{ background: sample.color }}><span>GUIDE PREVIEW / {String(index + 1).padStart(2, "0")}</span><h4>{sample.title}</h4><p>{sample.summary}</p><small>Sample content</small></article>)}</div>
+    <div className="editorial-guides__highlights">{ordered.map((sample, index) => <article key={sample.title} className="editorial-guides__highlight" style={{ backgroundColor: sample.color, color: sample.tint }}><span>{String(index + 1).padStart(2, "0")} / GUIDE</span><h4>{sample.title}</h4><p>{sample.summary}</p><Image src="/kyte-mark.png" alt="" width={44} height={44} unoptimized /></article>)}</div>
   </section>;
 }

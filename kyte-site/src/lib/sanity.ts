@@ -46,6 +46,7 @@ export type DesignNewsArticle = {
   slug: string;
   summary: string | null;
   publishedAt: string | null;
+  updatedAt?: string | null;
   author: string | null;
   category: string | null;
   tags: string[] | null;
@@ -71,7 +72,7 @@ async function query<T>(groq: string, params: Record<string, string> = {}): Prom
 
 const workFields = `_id,title,"slug":slug.current,summary,client,role,projectType,period,cardService,filterCategories,featured,sortOrder,
   "cover":{"url":coverImage.asset->url,"alt":coverImage.alt}`;
-const newsFields = `_id,title,"slug":slug.current,summary,publishedAt,author,category,tags,featured,sortOrder,
+const newsFields = `_id,title,"slug":slug.current,summary,publishedAt,"updatedAt":_updatedAt,author,category,tags,featured,sortOrder,
   "cover":{"url":coverImage.asset->url,"alt":coverImage.alt}`;
 
 export function getPublishedWork(): Promise<WorkProject[]> {

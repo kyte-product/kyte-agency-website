@@ -31,6 +31,11 @@ This is the handoff file for future Codex chats and team members. Read `AGENTS.m
 
 ## Confirmed direction
 
+### 10 October 2026: Restore the current local Insights preview
+
+- The original workspace checkout had an older dev server listening at `127.0.0.1:3000` and contains unrelated staged and unstaged work. To preserve it, refreshed the isolated checkout from published `main` (`e7797bd`) and started the latest Insights preview at `http://127.0.0.1:3001/insights` with `SHOW_EDITORIAL_PLACEHOLDERS=true`.
+- Confirmed the browser loaded the local page and showed the Design News, Resources, and Guides shortcuts plus sample sections. Left the local server running and the preview tab open for the user. No production code, CMS content, GitHub branch, or Vercel deployment changed. Owner: Kyte website team.
+
 ### 10 October 2026: Add separate Insights collections with a safe launch state
 
 - Added the Anand newsroom-inspired shortcut row beneath the Insights hero, with dedicated Design News, Resources, and Guides routes. Adapted the reference's icon, rule, and text-link layout for three Kyte destinations. The Guides preview follows the reference's Media Coverage structure: introduction, large colored feature card, controls, and recent highlight cards. Resources uses a preview-only book shelf.
@@ -1479,3 +1484,10 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Corrected the local Vercel project link to `kyte-agency-website` (`prj_9OhUuqvAA2Dt6PBpxnQHGFhLUU4E`), preserving the repository's `kyte-site` build root. Added a root `.vercelignore` for the monorepo upload and ignored Vercel's local project directory.
 - Uploaded 11.2 MB to production as deployment `dpl_CNZHbAkBdRt3ushWyw6ToUuFm7nL`. Vercel blocked it before the build and did not assign the production alias. Its `readyStateReason` is: “The deployment was blocked because the commit author doesn’t have permission to create deployments for this project.” The deployment metadata identifies the commit author as Mahir (`mahirmalde2004@gmail.com`); Vercel reports `TEAM_ACCESS_REQUIRED` and `isVerified: false`.
 - Confirmed the existing production deployment `dpl_BjruBfzSCuLxacaeYSv1M1HQfCYW` remains READY and owns `kyte-agency-website-kyte-product.vercel.app`. No production code change was released. Next action: verify the commit author email in Vercel or grant its account deployment permission, then retry. Owner: Kyte website team.
+
+### 10 October 2026: Refine Insights listing and hidden collection previews
+
+- Aligned the shortcut accent rules with their titles, removed the extra rule before news topics, and added a View all Design News link below the list. The news date column now uses the verified Sanity update date when a publication date is absent. Publication dates remain unset in the CMS.
+- Removed the requested eyebrows and preview labels from Resources and Guides. Reworked the sample resource covers with flat warm colors, simple shapes, and the Kyte logo; moved the featured Guide copy to the top left, replaced its large letter with the Kyte mark, and used warm colors for the Guide highlights.
+- Updated the Insights components, styles, sample collection data, Sanity news projection, and this handoff in the isolated preview branch. The local preview snapshot was refreshed with the eight verified update timestamps for review only; it is ignored by Git. Resources and Guides remain hidden from production by `SHOW_EDITORIAL_PLACEHOLDERS` until real content is approved.
+- Checks: `npm run lint`, `npx tsc --noEmit`, `npm run build`, and `git diff --check` passed. The build used its existing content fallback because Sanity CDN DNS was unavailable locally. Reviewed Resources and Guides at desktop width, Guides at 390 px, and measured the shortcut rule against the title. Restarted the local preview after the build. Next action: publish the code when deployment access is available. Owner: Kyte website team.

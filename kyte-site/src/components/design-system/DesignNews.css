@@ -30,7 +30,7 @@
 .design-news__rows { display: flex; flex-direction: column; gap: 40px; }
 .design-news__row { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); column-gap: 24px; align-items: start; min-width: 0; }
 .design-news__row-date { position: relative; padding-left: 16px; color: var(--muted); font-size: var(--type-caption); line-height: 24px; }
-.design-news__row-date::before,.design-news__row-topic::before { position: absolute; top: 4px; left: -1px; width: 1px; height: 16px; background: var(--accent); content: ""; }
+.design-news__row-date::before { position: absolute; top: 4px; left: -1px; width: 1px; height: 16px; background: var(--accent); content: ""; }
 .design-news__row-main { grid-column: 2 / 4; display: block; min-width: 0; padding: 0 32px 0 16px; border-left: 1px solid var(--line); }
 .design-news__row-topic { position: relative; display: block; color: var(--accent); font-size: var(--type-caption); font-weight: 500; line-height: 24px; }
 .design-news__row-main strong { display: block; max-width: 650px; margin-top: 8px; font-size: var(--type-lead); font-weight: 500; line-height: 1.5; letter-spacing: -.01em; }
@@ -44,6 +44,8 @@
 .design-news__row:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .design-news__more { display: flex; align-items: center; gap: 8px; margin: 54px auto 0; padding: 12px 18px; border: 1px solid var(--line); border-radius: var(--radius-large); background: white; cursor: pointer; }
 .design-news__more:hover { background: var(--color-control-hover); }
+.design-news__view-all { display: flex; align-items: center; justify-content: center; gap: 9px; width: fit-content; margin: 54px auto 0; padding: 13px 19px; border: 1px solid var(--line); border-radius: var(--radius-small); color: var(--ink); font-size: var(--type-body); transition: background-color .2s ease, border-color .2s ease; }
+.design-news__view-all:hover { border-color: var(--accent); background: var(--color-control-hover); }
 .design-news__resources { padding: 110px var(--section-inset) 120px; background: var(--color-white); }
 .design-news__resources-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 48px; }
 .design-news__resources-head :is(h1,h2) { margin: 4px 0 16px; font-size: var(--heading-section); font-weight: var(--heading-weight); letter-spacing: -.04em; }
