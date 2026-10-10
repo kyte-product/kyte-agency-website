@@ -57,6 +57,9 @@ Services menu layout:
 │   └── /industries/hospitality-food-beverage
 │
 ├── /insights
+│   ├── /insights/design-news
+│   ├── /insights/resources (hidden until editorial launch)
+│   ├── /insights/guides (hidden until editorial launch)
 │   └── /insights/[article-slug]
 │
 ├── /about
