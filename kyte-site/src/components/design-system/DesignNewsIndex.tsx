@@ -28,12 +28,11 @@ export function DesignNewsIndex({ articles }: { articles: DesignNewsArticle[] })
     return (selected.length ? selected : articles.filter((article) => article.cover?.url)).slice(0, 4);
   }, [articles]);
   const topics = useMemo(() => [...new Set(articles.map(topic))], [articles]);
-  const authors = useMemo(() => [...new Set(articles.map((article) => article.author).filter((value): value is string => !!value))].sort(), [articles]);
+  const resources = useMemo(() => articles.filter((article) => article.cover?.url).slice(0, 4), [articles]);
   const [slide, setSlide] = useState(0);
   const [activeTopic, setActiveTopic] = useState("All");
-  const [author, setAuthor] = useState("");
   const [shown, setShown] = useState(8);
-  const filtered = articles.filter((article) => (activeTopic === "All" || topic(article) === activeTopic) && (!author || article.author === author));
+  const filtered = articles.filter((article) => activeTopic === "All" || topic(article) === activeTopic);
 
   useEffect(() => {
     if (featured.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -73,17 +72,24 @@ export function DesignNewsIndex({ articles }: { articles: DesignNewsArticle[] })
       </section>
     </div>
     <section className="design-news__listing" id="all-stories" aria-labelledby="all-stories-heading">
-      <div className="design-news__listing-head"><div><p className="eyebrow">Latest from Kyte</p><h2 id="all-stories-heading">Design News</h2></div></div>
+      <div className="design-news__listing-head"><h2 id="all-stories-heading">Design News</h2></div>
       <div className="design-news__filters" role="group" aria-label="Filter stories">
         {["All", ...topics].map((item) => <button key={item} type="button" aria-pressed={activeTopic === item} onClick={() => { setActiveTopic(item); setShown(8); }}>{item}</button>)}
-        {authors.length > 1 && <><label className="design-news__sr-only" htmlFor="design-news-author">Author</label><select id="design-news-author" value={author} onChange={(event) => { setAuthor(event.target.value); setShown(8); }}><option value="">All authors</option>{authors.map((name) => <option key={name} value={name}>{name}</option>)}</select></>}
       </div>
-      <p className="design-news__count" aria-live="polite">{filtered.length ? `Showing ${Math.min(shown, filtered.length)} of ${filtered.length} stories` : "No stories match these filters."}</p>
+      {filtered.length === 0 && <p className="design-news__empty" role="status">No stories match this topic.</p>}
       <div className="design-news__rows">{filtered.slice(0, shown).map((article) => <Link className="design-news__row" key={article._id} href={`/insights/${encodeURIComponent(article.slug)}`}>
-        <span className="design-news__row-image">{article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 700px) 100vw, 48vw" />}</span>
-        <span className="design-news__row-main"><span>{articleMeta(article)}</span><strong>{article.title}</strong><small>{article.author || "Kyte team"}</small></span>
+        <span className="design-news__row-date">{date(article) || article.author || "Kyte team"}</span>
+        <span className="design-news__row-main"><span className="design-news__row-topic">{topic(article)}</span><strong>{article.title}<ArrowUpRight size={17} aria-hidden="true" /></strong>{date(article) && <small>{article.author || "Kyte team"}</small>}</span>
+        <span className="design-news__row-image">{article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 700px) 35vw, 22vw" />}</span>
       </Link>)}</div>
       {shown < filtered.length && <button className="design-news__more" type="button" onClick={() => setShown((value) => value + 8)}>Load more <ArrowRight size={16} aria-hidden="true" /></button>}
     </section>
+    {resources.length > 0 && <section className="design-news__resources" aria-labelledby="design-news-resources-heading">
+      <div className="design-news__resources-head"><div><p className="eyebrow">From the Kyte team</p><h2 id="design-news-resources-heading">Resources</h2><p>Ideas and useful reading from our work in design, branding, and marketing.</p></div><a className="design-news__resources-link" href="#all-stories">See all stories <ArrowUpRight size={18} aria-hidden="true" /></a></div>
+      <div className="design-news__resource-grid">{resources.map((article) => <Link className="design-news__resource" key={article._id} href={`/insights/${encodeURIComponent(article.slug)}`}>
+        <span className="design-news__resource-shelf"><span className="design-news__resource-book"><span className="design-news__resource-back" /><span className="design-news__resource-pages" /><span className="design-news__resource-face">{article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 640px) 42vw, 15vw" />}<span className="design-news__resource-binding" /></span></span></span>
+        <span className="design-news__resource-topic">{topic(article)}</span><strong>{article.title}</strong><span className="design-news__resource-read">Read story <ArrowUpRight size={16} aria-hidden="true" /></span>
+      </Link>)}</div>
+    </section>}
   </main>;
 }
