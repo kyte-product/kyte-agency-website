@@ -55,6 +55,7 @@
 .editorial-detail__main .editorial-body { max-width: 820px; margin: 0 auto; }
 .editorial-detail__news-cover { margin-bottom: 0; }
 .editorial-detail__article-layout { display: grid; grid-template-columns: minmax(220px,285px) minmax(0,820px); gap: 64px; max-width: 1000px; margin-inline: auto; padding: 72px var(--section-inset) 112px; }
+.editorial-detail__article-layout--single { display: block; max-width: 820px; }
 .editorial-detail__article-main { min-width: 0; }
 .editorial-detail__article-main .editorial-body { max-width: 820px; }
 .editorial-detail__topics nav { position: sticky; top: 128px; max-height: calc(100vh - 144px); overflow-y: auto; scrollbar-width: thin; }
