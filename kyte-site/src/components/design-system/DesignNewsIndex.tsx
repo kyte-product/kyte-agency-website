@@ -83,7 +83,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
       {filtered.length === 0 && <p className="design-news__empty" role="status">No stories match this topic.</p>}
       <div className="design-news__rows">{filtered.slice(0, shown).map((article) => <Link className="design-news__row" key={article._id} href={`/insights/${encodeURIComponent(article.slug)}`}>
         <span className="design-news__row-date" title={article.publishedAt ? "Published date" : "Last updated"}>{date(article) || "Date pending"}</span>
-        <span className="design-news__row-main"><span className="design-news__row-topic">{topic(article)}</span><strong>{article.title}<ArrowUpRight size={17} aria-hidden="true" /></strong>{date(article) && <small>{article.author || "Kyte team"}</small>}</span>
+        <span className="design-news__row-main"><span className="design-news__row-topic">{topic(article)}</span><strong>{article.title}</strong>{date(article) && <small>{article.author || "Kyte team"}</small>}</span>
         <span className="design-news__row-image">{article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 700px) 35vw, 22vw" />}</span>
       </Link>)}</div>
       {shown < filtered.length && <button className="design-news__more" type="button" onClick={() => setShown((value) => value + 8)}>Load more <ArrowRight size={16} aria-hidden="true" /></button>}
