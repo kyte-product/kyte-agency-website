@@ -140,6 +140,9 @@ The routes below reproduce the proposed IA. Suggested query themes need validati
 | `/industries/d2c-ecommerce` | Find a partner for storefront and brand experience. | Product discovery, purchase journey, merchandising, mobile, retention touchpoints, proof. |
 | `/industries/hospitality-food-beverage` | Find a partner for memorable customer journeys. | Reservations, ordering, loyalty, packaging, brand, or websites only where Kyte has demonstrable experience. |
 | `/insights` | Browse useful thinking by topic. | Category labels tied to service and industry, featured work-led articles, authors and dates. |
+| `/insights/design-news` | Browse Kyte's published design stories. | Reuse the published article listing and topic filters; keep article links direct. |
+| `/insights/resources` | Find practical downloadable material. | Keep hidden and out of search until real, approved resources and working downloads are available. |
+| `/insights/guides` | Find step-by-step product and brand guidance. | Keep hidden and out of search until original, reviewed guides are available. |
 | `/insights/[article-slug]` | Answer a specific informational question. | Direct answer, original examples or analysis, source links, practical takeaway, author, updated date, related service. |
 | `/ui-ux-design-agency-bangalore` | Assess a Bangalore UI UX agency. | Actual Bangalore connection, relevant work, local context, process and contact. Avoid duplicating the main UI UX page. |
 | `/web-design-company-bangalore` | Assess a Bangalore web design company. | Actual local evidence, website scope, relevant work, delivery model and contact. Avoid duplicating the website service page. |

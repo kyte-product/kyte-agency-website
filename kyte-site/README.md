@@ -11,6 +11,12 @@ npm run dev
 
 Open `http://localhost:3000`. Run `npm run lint` and `npm run build` before sharing a change.
 
+## Preview editorial collections
+
+The Insights page includes a Design News destination. Resources and Guides are prepared with clearly labeled sample content and are hidden by default. Their routes return 404 and their shortcut cards and sections do not render on the public site.
+
+To review the sample layouts locally, start the site with `SHOW_EDITORIAL_PLACEHOLDERS=true npm run dev`. This server-side setting can also be used on a non-public preview deployment. Before enabling either collection in production, replace the sample arrays in `src/lib/editorial-collections.ts` with approved content and working detail or download destinations, then review the pages and update the route map. Do not enable the flag in production while sample content remains.
+
 ## Where to edit
 
 - `src/components/SiteHeader.tsx`: announcement bar, desktop dropdowns, mobile menu, and IA route labels.

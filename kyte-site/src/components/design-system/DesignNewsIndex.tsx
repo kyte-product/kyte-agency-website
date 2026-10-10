@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import type { DesignNewsArticle } from "@/lib/sanity";
+import { EditorialGuides, EditorialResources, EditorialShortcuts } from "./EditorialCollections";
 import "./DesignNews.css";
 
 function topic(article: DesignNewsArticle) {
@@ -22,13 +23,12 @@ function articleMeta(article: DesignNewsArticle) {
   return publishedDate ? `${topic(article)} · ${publishedDate}` : topic(article);
 }
 
-export function DesignNewsIndex({ articles }: { articles: DesignNewsArticle[] }) {
+export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly = false }: { articles: DesignNewsArticle[]; showPlaceholders?: boolean; newsOnly?: boolean }) {
   const featured = useMemo(() => {
     const selected = articles.filter((article) => article.featured && article.cover?.url);
     return (selected.length ? selected : articles.filter((article) => article.cover?.url)).slice(0, 4);
   }, [articles]);
   const topics = useMemo(() => [...new Set(articles.map(topic))], [articles]);
-  const resources = useMemo(() => articles.filter((article) => article.cover?.url).slice(0, 4), [articles]);
   const [slide, setSlide] = useState(0);
   const [activeTopic, setActiveTopic] = useState("All");
   const [shown, setShown] = useState(8);
@@ -71,6 +71,7 @@ export function DesignNewsIndex({ articles }: { articles: DesignNewsArticle[] })
         </div>}
       </section>
     </div>
+    {!newsOnly && <EditorialShortcuts showPlaceholders={showPlaceholders} />}
     <section className="design-news__listing" id="all-stories" aria-labelledby="all-stories-heading">
       <div className="design-news__listing-head"><h2 id="all-stories-heading">Design News</h2></div>
       <div className="design-news__filters" role="group" aria-label="Filter stories">
@@ -84,12 +85,6 @@ export function DesignNewsIndex({ articles }: { articles: DesignNewsArticle[] })
       </Link>)}</div>
       {shown < filtered.length && <button className="design-news__more" type="button" onClick={() => setShown((value) => value + 8)}>Load more <ArrowRight size={16} aria-hidden="true" /></button>}
     </section>
-    {resources.length > 0 && <section className="design-news__resources" aria-labelledby="design-news-resources-heading">
-      <div className="design-news__resources-head"><div><p className="eyebrow">From the Kyte team</p><h2 id="design-news-resources-heading">Resources</h2><p>Ideas and useful reading from our work in design, branding, and marketing.</p></div><a className="design-news__resources-link" href="#all-stories">See all stories <ArrowUpRight size={18} aria-hidden="true" /></a></div>
-      <div className="design-news__resource-grid">{resources.map((article) => <Link className="design-news__resource" key={article._id} href={`/insights/${encodeURIComponent(article.slug)}`}>
-        <span className="design-news__resource-shelf"><span className="design-news__resource-book"><span className="design-news__resource-back" /><span className="design-news__resource-pages" /><span className="design-news__resource-face">{article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 640px) 42vw, 15vw" />}<span className="design-news__resource-binding" /></span></span></span>
-        <span className="design-news__resource-topic">{topic(article)}</span><strong>{article.title}</strong><span className="design-news__resource-read">Read story <ArrowUpRight size={16} aria-hidden="true" /></span>
-      </Link>)}</div>
-    </section>}
+    {!newsOnly && showPlaceholders && <><EditorialResources /><EditorialGuides /></>}
   </main>;
 }
