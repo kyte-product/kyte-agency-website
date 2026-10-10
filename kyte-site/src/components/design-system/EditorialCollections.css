@@ -1,4 +1,5 @@
-.editorial-shortcuts { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:88px var(--section-inset) 100px;background:var(--color-surface-secondary) }
+.editorial-shortcuts { position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:88px var(--section-inset) 100px }
+.editorial-shortcuts::before { position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);border-bottom:1px solid var(--line);background:var(--color-surface-secondary);content:"";pointer-events:none }
 .editorial-shortcuts--single { grid-template-columns:minmax(0,1fr) }
 .editorial-shortcuts__item { position:relative;display:flex;flex-direction:column;align-items:flex-start;min-height:206px;padding-left:20px;border-left:1px solid var(--line) }
 .editorial-shortcuts__item::before { position:absolute;left:-1px;top:70px;width:2px;height:24px;background:var(--accent);content:"" }
@@ -10,7 +11,8 @@
 .editorial-collection__book-face { display:flex;flex-direction:column;align-items:flex-start;padding:11% 10% 10% 14%;isolation:isolate }
 .editorial-collection__book-logo { position:relative;z-index:2;width:62%;height:auto;object-fit:contain }
 .editorial-collection__book-title { position:relative;z-index:2;max-width:90%;margin:auto 0 0;font-size:clamp(13px,1.35vw,23px);font-weight:600;line-height:1.18;letter-spacing:-.02em }
-.editorial-guides { padding:110px var(--section-inset) 120px;background:var(--color-surface-secondary) }
+.editorial-guides { position:relative;isolation:isolate;padding:110px var(--section-inset) 120px }
+.editorial-guides::before { position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--color-surface-secondary);content:"";pointer-events:none }
 .editorial-guides__lead { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch }
 .editorial-guides__intro { display:flex;flex-direction:column;align-items:flex-start;padding-right:20px }
 .editorial-guides__intro :is(h1,h2) { margin:0 0 16px;font-size:var(--heading-section);font-weight:var(--heading-weight);letter-spacing:-.04em }
