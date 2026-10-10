@@ -23,7 +23,6 @@ const plannedPages: Record<string, string> = {
   "industries/d2c-ecommerce": "D2C & eCommerce",
   "industries/hospitality-food-beverage": "Hospitality & Food & Beverage",
   insights: "Insights",
-  about: "About",
   contact: "Contact",
   careers: "Careers",
   "ui-ux-design-agency-bangalore": "UI/UX Design Agency in Bangalore",
