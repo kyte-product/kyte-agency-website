@@ -217,7 +217,7 @@ export function SiteHeader() {
       </div>
       <div className={`nav-shell${activeMenu && !mobileOpen ? " is-open" : ""}`}>
         <div className="nav-row">
-          <Link className="brand" href="/" aria-label="Kyte home" onClick={() => { setOpenMenu(null); setMobileOpen(false); }}><Image className="brand__logo" src="/kyte-agency-logo.svg" alt="" width={1434} height={200} priority unoptimized /></Link>
+          <Link className="brand" href="/" aria-label="Kyte home" onClick={() => { setOpenMenu(null); setMobileOpen(false); }}><Image className="brand__logo" src="/kyte-agency-logo.svg" alt="" width={1379} height={200} priority unoptimized /></Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             <Link className="nav-link" href="/work" onMouseEnter={scheduleMenuClose}>Work</Link>
             <button className="nav-trigger" type="button" aria-expanded={activeMenu === "services"} aria-controls="services-menu" onMouseEnter={() => hoverDesktopMenu("services")} onMouseLeave={() => { if (menuOpenTimer.current) clearTimeout(menuOpenTimer.current); }} onClick={() => toggleDesktopMenu("services")} onKeyDown={(event) => { if (event.key === "ArrowDown") { event.preventDefault(); showDesktopMenu("services"); requestAnimationFrame(() => servicesPanelRef.current?.querySelector("a")?.focus()); } }}>Services <ChevronDown aria-hidden="true" /></button>

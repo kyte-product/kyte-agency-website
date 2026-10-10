@@ -26,9 +26,11 @@ function articleMeta(article: DesignNewsArticle) {
 
 export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly = false }: { articles: DesignNewsArticle[]; showPlaceholders?: boolean; newsOnly?: boolean }) {
   const featured = useMemo(() => {
+    if (newsOnly) return [];
     const selected = articles.filter((article) => article.featured && article.cover?.url);
     return (selected.length ? selected : articles.filter((article) => article.cover?.url)).slice(0, 4);
-  }, [articles]);
+  }, [articles, newsOnly]);
+  const ListingHeading = newsOnly ? "h1" : "h2";
   const topics = useMemo(() => [...new Set(articles.map(topic))], [articles]);
   const [slide, setSlide] = useState(0);
   const [activeTopic, setActiveTopic] = useState("All");
@@ -44,7 +46,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
   const changeSlide = (direction: -1 | 1) => setSlide((current) => (current + direction + featured.length) % featured.length);
 
   return <main className="design-news">
-    <div className="design-news__soft">
+    {!newsOnly && <div className="design-news__soft">
       <section className="design-news__hero" aria-labelledby="design-news-heading">
         <div className="design-news__intro">
           <p className="eyebrow">Design News</p>
@@ -71,10 +73,10 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
           </div>}
         </div>}
       </section>
-    </div>
+    </div>}
     {!newsOnly && showPlaceholders && <EditorialShortcuts showPlaceholders />}
     <section className="design-news__listing" id="all-stories" aria-labelledby="all-stories-heading">
-      <div className="design-news__listing-head"><h2 id="all-stories-heading">Design News</h2></div>
+      <div className="design-news__listing-head"><ListingHeading id="all-stories-heading">Design News</ListingHeading></div>
       <div className="design-news__filters" role="group" aria-label="Filter stories">
         {["All", ...topics].map((item) => <button key={item} type="button" aria-pressed={activeTopic === item} onClick={() => { setActiveTopic(item); setShown(8); }}>{item}</button>)}
       </div>

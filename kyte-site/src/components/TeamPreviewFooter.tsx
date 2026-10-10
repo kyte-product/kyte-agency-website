@@ -42,7 +42,7 @@ export function TeamPreviewFooter() {
       <div className="site-footer__inner">
         <div className="site-footer__grid">
           <div className="site-footer__brand">
-            <Link className="site-footer__logo" href="/" aria-label="Kyte home"><Image src="/kyte-agency-logo.svg" alt="" width={1434} height={200} unoptimized /></Link>
+            <Link className="site-footer__logo" href="/" aria-label="Kyte home"><Image src="/kyte-agency-logo.svg" alt="" width={1379} height={200} unoptimized /></Link>
             <p>Product, website and brand design for the next stage of your business.</p>
             <Link className="site-footer__more" href="/contact">Start a project <ChevronRight size={15} aria-hidden="true" /></Link>
           </div>
