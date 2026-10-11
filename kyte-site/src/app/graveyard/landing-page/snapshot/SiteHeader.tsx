@@ -91,7 +91,7 @@ export function SiteHeader() {
     <header ref={headerRef} className={`site-header${scrolled ? " is-scrolled" : ""}`} onMouseLeave={() => setOpenMenu(null)}>
       <div className={`nav-shell${activeMenu && !mobileOpen ? " is-open" : ""}`}>
         <div className="nav-row">
-          <Link className="brand" href="/" aria-label="Kyte home" onClick={() => { setOpenMenu(null); setMobileOpen(false); }}><Image className="brand__mark" src="/graveyard/landing-page/kyte-mark.png" alt="" width={34} height={34} priority /><span className="brand__name">kyte</span></Link>
+          <Link className="brand" href="/" aria-label="Kyte home" onClick={() => { setOpenMenu(null); setMobileOpen(false); }}><Image className="brand__mark" src="/kyte-agency-mark.png" alt="" width={34} height={34} priority  unoptimized /><span className="brand__name">kyte</span></Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             <Link className="nav-link" href="/work" onMouseEnter={closeDesktopMenu}>Work</Link>
             <button className="nav-trigger" type="button" aria-expanded={activeMenu === "services"} aria-controls="services-menu" onMouseEnter={() => openDesktopMenu("services")} onFocus={() => openDesktopMenu("services")} onClick={() => togglePinnedMenu("services")}>Services <ChevronDown aria-hidden="true" /></button>

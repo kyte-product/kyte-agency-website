@@ -36,7 +36,7 @@ export function SiteFooter({ showBanner = true }: { showBanner?: boolean }) {
       <div className="contact-banner__frame">
         <div className="contact-banner__card">
           <div className="contact-banner__motion" aria-hidden="true">
-            <Image src="/graveyard/landing-page/kyte-motion-mark.svg" alt="" width={1000} height={1000} />
+            <Image src="/kyte-agency-mark.png" alt="" width={1000} height={1000}  unoptimized />
           </div>
           <div className="contact-banner__content">
             <div className="contact-banner__top">
@@ -60,7 +60,7 @@ export function SiteFooter({ showBanner = true }: { showBanner?: boolean }) {
       <div className="site-footer__inner">
         <div className="site-footer__grid">
           <div className="site-footer__brand">
-            <Link className="site-footer__logo" href="/" aria-label="Kyte home"><Image src="/graveyard/landing-page/kyte-mark.png" alt="" width={34} height={34} /><span>kyte</span></Link>
+            <Link className="site-footer__logo" href="/" aria-label="Kyte home"><Image src="/kyte-agency-mark.png" alt="" width={34} height={34}  unoptimized /><span>kyte</span></Link>
             <p>Product, website and brand design for the next stage of your business.</p>
             <Link className="site-footer__more" href="/contact">Start a project <ArrowUpRight size={15} aria-hidden="true" /></Link>
           </div>

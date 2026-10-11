@@ -102,17 +102,20 @@ export function SiteHeader() {
     const onDesktopWidth = (event: MediaQueryListEvent) => {
       if (event.matches) { setMobileOpen(false); setOpenMenu(null); }
     };
+    const onContactOpen = () => { setMobileOpen(false); setOpenMenu(null); };
     const desktop = window.matchMedia("(min-width: 1200px)");
     window.addEventListener("scroll", onScroll, { passive: true });
     document.addEventListener("keydown", onKey);
     document.addEventListener("pointerdown", onOutside);
     desktop.addEventListener("change", onDesktopWidth);
+    window.addEventListener("kyte:contact-open", onContactOpen);
     onScroll();
     return () => {
       window.removeEventListener("scroll", onScroll);
       document.removeEventListener("keydown", onKey);
       document.removeEventListener("pointerdown", onOutside);
       desktop.removeEventListener("change", onDesktopWidth);
+      window.removeEventListener("kyte:contact-open", onContactOpen);
     };
   }, []);
 
@@ -224,6 +227,7 @@ export function SiteHeader() {
             <button className="nav-trigger" type="button" aria-expanded={activeMenu === "industries"} aria-controls="industries-menu" onMouseEnter={() => hoverDesktopMenu("industries")} onMouseLeave={() => { if (menuOpenTimer.current) clearTimeout(menuOpenTimer.current); }} onClick={() => toggleDesktopMenu("industries")} onKeyDown={(event) => { if (event.key === "ArrowDown") { event.preventDefault(); showDesktopMenu("industries"); requestAnimationFrame(() => industriesPanelRef.current?.querySelector("a")?.focus()); } }}>Industries <ChevronDown aria-hidden="true" /></button>
             <Link className="nav-link" href="/insights" onMouseEnter={scheduleMenuClose}>Insights</Link>
             <Link className="nav-link" href="/about" onMouseEnter={scheduleMenuClose}>About</Link>
+            <Link className="nav-link" href="/careers" onMouseEnter={scheduleMenuClose}>Careers</Link>
           </nav>
           <div className="nav-actions">
             <button className="brochure-button kyte-button kyte-button--outline" type="button" onMouseEnter={scheduleMenuClose}><Download size={16} aria-hidden="true" /> Brochure</button>
@@ -258,7 +262,7 @@ export function SiteHeader() {
             {openMenu === "services" && <div className="mobile-menu__sub" id="mobile-services">{services.map(group => <div className="mobile-menu__group" key={group.href}><h2>{group.title}</h2><ul>{group.items.map(([name, href]) => <li key={href}><Link href={href}><b>{name}</b><span>{serviceDescriptions[name]}</span></Link></li>)}</ul><Link className="mobile-menu__more" href={group.href}>Explore {group.title} <ChevronRight size={15} aria-hidden="true" /></Link></div>)}</div>}
             <button className="mobile-menu__trigger" type="button" aria-expanded={openMenu === "industries"} aria-controls="mobile-industries" onClick={() => setOpenMenu(openMenu === "industries" ? null : "industries")}>Industries <ChevronDown aria-hidden="true" /></button>
             {openMenu === "industries" && <div className="mobile-menu__sub" id="mobile-industries"><div className="mobile-menu__group"><h2>Selected experience</h2><ul>{industries.map(industry => <li key={industry.href}><Link href={industry.href}><b>{industry.title}</b><span>{industry.description}</span></Link></li>)}</ul><Link className="mobile-menu__more" href="/industries">Explore industries <ChevronRight size={15} aria-hidden="true" /></Link></div></div>}
-            <Link className="mobile-menu__link" href="/insights">Insights</Link><Link className="mobile-menu__link" href="/about">About</Link>
+            <Link className="mobile-menu__link" href="/insights">Insights</Link><Link className="mobile-menu__link" href="/about">About</Link><Link className="mobile-menu__link" href="/careers">Careers</Link>
           </div>
           <div className="mobile-menu__contact"><Link className="kyte-button" href="/contact">Contact Us <ChevronRight size={16} aria-hidden="true" /></Link></div>
         </nav>}

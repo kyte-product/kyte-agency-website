@@ -6,9 +6,9 @@ Version 1 | October 2026
 1. TOP NAVIGATION
 ======================================================================
 
-Work | Services (hover menu) | Industries | Insights | About | Contact
+Work | Services (hover menu) | Industries | Insights | About | Careers | Contact
 
-Careers sits in the footer, not the main nav.
+Careers is the last page link in the main nav, immediately after About. Contact remains the header action.
 
 "Services" behaviour:
 - "Services" is a label only, not a link. There is no /services page.

@@ -15,7 +15,7 @@ export function SplitCtaBanner() {
           </div>
         </div>
         <div className="split-cta__art">
-          <Image className="split-cta__motion-mark" src="/kyte-motion-mark.svg" alt="Animated Kyte logo" width={1000} height={1000} unoptimized />
+          <Image className="split-cta__motion-mark" src="/kyte-agency-mark.png" alt="" width={512} height={512} unoptimized />
         </div>
       </div>
     </div>

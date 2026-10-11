@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const philosophy = "We make space for research, sharp thinking and the craft that turns an idea into something people can use. The strongest work comes when product, brand and communication decisions share a clear direction.";
 const words = philosophy.split(/\s+/);
+const highlightedWords = new Set(["research", "craft", "product", "brand", "direction"]);
 
 export function PhilosophyReveal() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -28,7 +29,7 @@ export function PhilosophyReveal() {
     return () => { cancelAnimationFrame(frame); window.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
   }, []);
 
-  return <div ref={sectionRef} className="about-philosophy__statement-wrap"><h2 className="about-philosophy__statement" aria-label={philosophy}>{words.map((word, index) => <span aria-hidden="true" className={index < activeWords ? "is-active" : undefined} key={`${word}-${index}`}>{word} </span>)}</h2></div>;
+  return <div ref={sectionRef} className="about-philosophy__statement-wrap"><h2 className="about-philosophy__statement" aria-label={philosophy}>{words.map((word, index) => <span aria-hidden="true" className={[index < activeWords && "is-active", highlightedWords.has(word.replace(/[.,]/g, "").toLowerCase()) && "is-highlight"].filter(Boolean).join(" ")} key={`${word}-${index}`}>{word} </span>)}</h2></div>;
 }
 
 export function AboutScrollMotion() {
@@ -47,30 +48,4 @@ export function AboutScrollMotion() {
     return () => { observer.disconnect(); page?.classList.remove("about-motion-ready"); };
   }, []);
   return null;
-}
-
-export function ImpactNumber({ value, suffix }: { value: number; suffix: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const [display, setDisplay] = useState(value);
-
-  useEffect(() => {
-    if (!ref.current || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let frame = 0;
-    const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      observer.disconnect();
-      const start = performance.now();
-      const duration = 1100;
-      const tick = (now: number) => {
-        const t = Math.min(1, (now - start) / duration);
-        setDisplay(Math.round(value * (1 - (1 - t) ** 3)));
-        if (t < 1) frame = requestAnimationFrame(tick);
-      };
-      frame = requestAnimationFrame(tick);
-    }, { threshold: .3 });
-    observer.observe(ref.current);
-    return () => { observer.disconnect(); cancelAnimationFrame(frame); };
-  }, [value]);
-
-  return <span ref={ref} aria-label={`${value}${suffix}`}><span aria-hidden="true">{display}{suffix}</span></span>;
 }

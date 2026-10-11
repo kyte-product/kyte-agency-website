@@ -175,7 +175,7 @@ export function WebsiteServicePage() {
       <p className="eyebrow">Website design &amp; development</p>
       <h1 id="website-service-title"><span>Websites</span> that make the right things clear.</h1>
       <p>We bring the offer, brand, content and digital experience into one useful website, built for the people who need to understand and choose you.</p>
-      <a className="kyte-button" href="mailto:contact@kyte-agency.com?subject=Website%20project">Let&apos;s build your website <ArrowUpRight size={18} aria-hidden="true" /></a>
+      <Link className="kyte-button" href="/contact">Let&apos;s build your website <ArrowUpRight size={18} aria-hidden="true" /></Link>
     </section>
 
     <div className="website-service__hero-art" aria-label="Kyte website design presentation">
@@ -200,7 +200,7 @@ export function WebsiteServicePage() {
         {websiteTypes.map((item, index) => <button key={item.name} id={`website-type-tab-${index}`} type="button" role="tab" aria-selected={activeType === index} aria-controls="website-type-panel" onClick={() => { setActiveType(index); restartTypeTimer(); }}>{item.name}</button>)}
       </div>
       <div key={activeType} id="website-type-panel" className={`website-service__type-panel website-service__type-panel--${selectedType.theme}`} role="tabpanel" aria-labelledby={`website-type-tab-${activeType}`}>
-        <div className="website-service__type-copy"><h3>{selectedType.title}</h3><a className="kyte-button" href="mailto:contact@kyte-agency.com?subject=Website%20project">Talk about your website <ArrowUpRight size={16} aria-hidden="true" /></a><p>{selectedType.description}</p></div>
+        <div className="website-service__type-copy"><h3>{selectedType.title}</h3><Link className="kyte-button" href="/contact">Talk about your website <ArrowUpRight size={16} aria-hidden="true" /></Link><p>{selectedType.description}</p></div>
         <div className="website-service__type-visual"><Image src={selectedType.image} alt={selectedType.alt} fill sizes="(max-width: 760px) 90vw, 48vw" unoptimized={selectedType.image.startsWith("https://")} /></div>
       </div>
     </section>
@@ -227,7 +227,7 @@ export function WebsiteServicePage() {
       <div className="website-service__priority-panel" aria-live="polite"><span>{activePriority + 1} / {projectPriorities.length}</span><h3>{projectPriorities[activePriority].title}</h3><p>{projectPriorities[activePriority].body}</p><div><strong>{projectPriorities[activePriority].label}</strong></div></div>
     </section>
 
-    <section className="website-service__inline-cta"><div><p className="eyebrow">Start a project</p><h2>Let&apos;s make your next website useful from day one.</h2><p>Tell us what you&apos;re building. We&apos;ll help define the right starting point.</p><a className="kyte-button" href="mailto:contact@kyte-agency.com?subject=Website%20project">Start the conversation <ArrowUpRight size={18} aria-hidden="true" /></a></div><div className="website-service__inline-cta-art" aria-hidden="true"><Image src="/kyte-motion-mark.svg" alt="" width={1000} height={1000} unoptimized /></div></section>
+    <section className="website-service__inline-cta"><div><p className="eyebrow">Start a project</p><h2>Let&apos;s make your next website useful from day one.</h2><p>Tell us what you&apos;re building. We&apos;ll help define the right starting point.</p><Link className="kyte-button" href="/contact">Start the conversation <ArrowUpRight size={18} aria-hidden="true" /></Link></div><div className="website-service__inline-cta-art" aria-hidden="true"><Image src="/kyte-agency-mark.png" alt="" width={512} height={512} unoptimized /></div></section>
 
     <section className="website-service__section website-service__process" aria-labelledby="website-service-process-title">
       <SectionHeading id="website-service-process-title" label="Framework" title="How we take a website from brief to launch" description="We begin with the business, the audience and the job each page needs to do. Then design and development move together toward a useful site." centered />
