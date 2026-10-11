@@ -202,8 +202,10 @@ body:has(.careers-dialog[open]) { overflow: hidden; }
 .careers-page__table-role, .careers-page__table-team, .careers-page__table-level, .careers-page__table-action button { font-size: 18px; line-height: 1.35; }
 .careers-page__table-role { display: block; padding: 0; font-weight: 600; letter-spacing: -.015em; }
 .careers-page__table-team, .careers-page__table-level { color: #555; }
-.careers-page__table-action button { min-height: 46px; padding: 10px 15px; border: 1px solid #dedede; border-radius: var(--radius-small); background: #fff; }
-.careers-page__table-action button:hover { border-color: #bcbcbc; color: var(--color-blue); background: #fff; }
+.careers-page__table-action .kyte-button { min-height: 42px; padding: 9px 16px 9px 18px; border: 1px solid var(--line); border-radius: var(--radius-small); color: var(--ink); background: #fff; font-size: 15px; font-weight: 500; line-height: 22px; }
+.careers-page__table-action .kyte-button:hover { border-color: var(--line); color: var(--ink); background: var(--color-control-hover); }
+.careers-page__table-action .kyte-button svg { width: 16px; height: 16px; stroke-width: 1.75; }
+.careers-page__table-action .kyte-button:hover svg { transform: translateX(2px); }
 .careers-page__team-card { margin-top: 30px; }
 
 .careers-dialog__layout { height: min(740px, calc(100dvh - 48px)); min-height: 0; }
@@ -230,7 +232,7 @@ body:has(.careers-dialog[open]) { overflow: hidden; }
   .careers-page__brands { padding-bottom: 32px; }
   .careers-page__brands li { width: 140px; min-height: 66px; }
   .careers-page__brands img { max-width: 128px; max-height: 44px; }
-  .careers-page__table-role, .careers-page__table-team, .careers-page__table-level, .careers-page__table-action button { font-size: 16px; }
+  .careers-page__table-role, .careers-page__table-team, .careers-page__table-level { font-size: 16px; }
   .careers-dialog__layout { display: flex; flex-direction: column; height: calc(100dvh - 48px); overflow: hidden; }
   .careers-dialog__intro { flex: none; max-height: 42dvh; overflow-y: auto; }
   .careers-dialog__body { flex: 1; min-height: 0; }
@@ -239,7 +241,6 @@ body:has(.careers-dialog[open]) { overflow: hidden; }
 }
 @media (max-width: 480px) {
   .careers-page__hero h1 { font-size: clamp(32px, 8vw, 42px); }
-  .careers-page__table-action button { font-size: 14px; }
   .careers-page__table-action svg { width: 17px; height: 17px; }
   .careers-page__table-level { color: #555; }
 }

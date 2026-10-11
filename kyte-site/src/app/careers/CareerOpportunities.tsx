@@ -33,7 +33,7 @@ export function CareerOpportunities({ roles }: { roles: CareerRole[] }) {
         <strong className="careers-page__table-role">{role.title}</strong>
         <span className="careers-page__table-team">{[role.team, role.location].filter(Boolean).join(" · ")}</span>
         <span className="careers-page__table-level">{role.experienceLevel || sampleLevels[role.slug] || "Open level"}</span>
-        <div className="careers-page__table-action"><button type="button" onClick={event => open(role, event.currentTarget)}>View details <Plus size={18} aria-hidden="true" /></button></div>
+        <div className="careers-page__table-action"><button className="kyte-button kyte-button--outline" type="button" onClick={event => open(role, event.currentTarget)}>View details <Plus size={18} aria-hidden="true" /></button></div>
       </li>)}
     </ul>
 
