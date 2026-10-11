@@ -32,11 +32,11 @@ const compactMarks = new Set([
   "itc-infotech", "btg", "smash-guys", "red-rhino", "hot-ice", "kiara", "papa-johns", "crepdog-crew",
 ]);
 
-export function ClientLogos() {
+export function ClientLogos({ title = "Brands we have worked with", visibleTitle = false }: { title?: string; visibleTitle?: boolean } = {}) {
   return (
-    <section className="clients" aria-labelledby="clients-title">
+    <section className={`clients${visibleTitle ? " clients--careers" : ""}`} aria-labelledby="clients-title">
       <div className="clients__inner">
-        <h2 className="clients__title" id="clients-title">Brands we have worked with</h2>
+        <h2 className="clients__title" id="clients-title">{title}</h2>
         <div className="clients__ticker">
           <div className="clients__ticker-track">
             {[false, true].map((duplicate) => (

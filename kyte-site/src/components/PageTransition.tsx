@@ -43,6 +43,7 @@ export function PageTransition() {
 
       const destination = new URL(link.href, window.location.href);
       if (destination.origin !== window.location.origin || /\.[a-z0-9]+$/i.test(destination.pathname)) return;
+      if (destination.pathname === "/contact") return;
       if (destination.pathname === window.location.pathname) return;
 
       event.preventDefault();

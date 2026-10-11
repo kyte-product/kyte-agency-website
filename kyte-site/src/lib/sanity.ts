@@ -56,6 +56,30 @@ export type DesignNewsArticle = {
   body?: PortableTextBlock[];
 };
 
+export type CareerRole = {
+  _id: string;
+  title: string;
+  slug: string;
+  summary: string;
+  team: string | null;
+  location: string;
+  workMode: string;
+  experienceLevel: string | null;
+  employmentType: string | null;
+  responsibilities: string[];
+  requirements: string[];
+  hiringProcess: string | null;
+  applyUrl: string | null;
+  isPlaceholder: boolean | null;
+  sortOrder: number | null;
+  seo: { title?: string; description?: string } | null;
+};
+
+export type CareerPage = {
+  firstPortrait: CmsImage;
+  secondPortrait: CmsImage;
+};
+
 async function query<T>(groq: string, params: Record<string, string> = {}): Promise<T> {
   const url = new URL(`https://${PROJECT_ID}.apicdn.sanity.io/v${API_VERSION}/data/query/${DATASET}`);
   url.searchParams.set("query", groq);
@@ -97,4 +121,28 @@ export function getPublishedDesignNews(): Promise<DesignNewsArticle[]> {
 
 export function getPublishedDesignNewsBySlug(slug: string): Promise<DesignNewsArticle | null> {
   return query(`*[_type == "designNews" && slug.current == $slug][0]{${newsFields},body}`, { slug });
+}
+
+const careerFilter = `_type == "careerRole" && status == "open" && defined(title) && defined(slug.current)`;
+const careerFields = `_id,title,"slug":slug.current,summary,team,location,workMode,experienceLevel,employmentType,responsibilities,requirements,hiringProcess,applyUrl,isPlaceholder,sortOrder,seo`;
+
+export function getPublishedCareerRoles(): Promise<CareerRole[]> {
+  return query(`*[${careerFilter}] | order(sortOrder asc, title asc){${careerFields}}`);
+}
+
+export function getPublishedCareerRoleBySlug(slug: string): Promise<CareerRole | null> {
+  return query(`*[${careerFilter} && slug.current == $slug][0]{${careerFields}}`, { slug });
+}
+
+export function getPublishedCareerPage(): Promise<CareerPage | null> {
+  return query(`*[_type == "careerPage" && _id == "careers-page"][0]{"firstPortrait":{"url":heroPortraitOne.asset->url,"alt":heroPortraitOne.alt},"secondPortrait":{"url":heroPortraitTwo.asset->url,"alt":heroPortraitTwo.alt}}`);
+}
+
+export function isSafeApplicationUrl(value: string | null | undefined): boolean {
+  if (!value) return false;
+  try {
+    return ["https:", "http:"].includes(new URL(value).protocol);
+  } catch {
+    return false;
+  }
 }

@@ -1,0 +1,108 @@
+"use client";
+
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+
+// Temporary Unsplash architecture photographs. Sources are recorded in public/about-architecture/README.md.
+const slides = [
+  { src: "/about-architecture/glass-facade.avif", alt: "Sunlit glass facade of a modern building" },
+  { src: "/about-architecture/spiral-staircase.avif", alt: "Spiral staircase inside a modern building" },
+  { src: "/about-architecture/concrete-facade.avif", alt: "Geometric concrete building facade" },
+] as const;
+
+const clamp = (value: number) => Math.min(1, Math.max(0, value));
+
+export function AboutTeamShowcase() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const frameRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const frame = frameRef.current;
+    if (!section || !frame) return;
+
+    const layers = Array.from(frame.querySelectorAll<HTMLElement>(".about-team-showcase__slide"));
+    const wipe = frame.querySelector<HTMLElement>(".about-team-showcase__wipe");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let frameId = 0;
+
+    const render = () => {
+      frameId = 0;
+      if (reducedMotion.matches) {
+        frame.style.clipPath = "none";
+        layers.forEach((layer, index) => {
+          layer.style.transition = "none";
+          layer.style.opacity = index === 0 ? "1" : "0";
+          layer.style.clipPath = index === 0 ? "none" : "inset(0 100% 0 0)";
+        });
+        wipe?.getAnimations().forEach((animation) => animation.cancel());
+        return;
+      }
+
+      const bounds = section.getBoundingClientRect();
+      // Begin the crop expansion when the stage reaches the viewport midpoint.
+      const expansion = clamp((window.innerHeight * .5 - bounds.top) / (window.innerHeight * .65));
+      const eased = 1 - Math.pow(1 - expansion, 3);
+      const smallSide = Math.min(500, frame.clientWidth * (frame.clientWidth < 700 ? .76 : .46), frame.clientHeight * .88);
+      const insetX = Math.max(0, (frame.clientWidth - smallSide) / 2) * (1 - eased);
+      const insetY = Math.max(0, (frame.clientHeight - smallSide) / 2) * (1 - eased);
+      const lift = Math.min(frame.clientWidth < 700 ? 200 : 120, insetY * .75) * (1 - eased);
+      frame.style.clipPath = `inset(${insetY - lift}px ${insetX}px ${insetY + lift}px ${insetX}px round ${8 * (1 - eased)}px)`;
+
+    };
+    const schedule = () => { if (!frameId) frameId = requestAnimationFrame(render); };
+    let active = 0;
+    let busy = false;
+    let disposed = false;
+    const advance = async () => {
+      if (busy || reducedMotion.matches || document.hidden || !wipe) return;
+      busy = true;
+      const incomingIndex = (active + 1) % layers.length;
+      const incoming = layers[incomingIndex];
+      incoming.style.transition = "none";
+      const timing: KeyframeAnimationOptions = { duration: 600, easing: "cubic-bezier(.7, 0, 0, 1)", fill: "forwards" };
+      try {
+        const cover = wipe.animate([{ transform: "translateX(-101%)" }, { transform: "translateX(0)" }], timing);
+        await cover.finished;
+        wipe.style.transform = "translateX(0)";
+        cover.cancel();
+        if (disposed) return;
+        layers[active].style.opacity = "0";
+        incoming.style.clipPath = "none";
+        incoming.style.opacity = "1";
+        active = incomingIndex;
+        const reveal = wipe.animate([{ transform: "translateX(0)" }, { transform: "translateX(101%)" }], timing);
+        await reveal.finished;
+        wipe.style.transform = "translateX(-101%)";
+        reveal.cancel();
+      } catch {
+        wipe.style.transform = "translateX(-101%)";
+      } finally {
+        busy = false;
+      }
+    };
+    render();
+    const intervalId = window.setInterval(advance, 4600);
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    reducedMotion.addEventListener("change", schedule);
+    return () => {
+      disposed = true;
+      cancelAnimationFrame(frameId);
+      window.clearInterval(intervalId);
+      wipe?.getAnimations().forEach((animation) => animation.cancel());
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      reducedMotion.removeEventListener("change", schedule);
+    };
+  }, []);
+
+  return <section ref={sectionRef} className="about-team-showcase" aria-label="Architectural photography showcase" data-site-reveal-ignore>
+    <div className="about-team-showcase__sticky"><div ref={frameRef} className="about-team-showcase__frame">
+      {slides.map((slide, index) => <div className="about-team-showcase__slide" key={slide.src} style={index ? { clipPath: "inset(0 100% 0 0)" } : undefined} aria-hidden="true">
+        <Image src={slide.src} alt={slide.alt} fill sizes="100vw" unoptimized />
+      </div>)}
+      <div className="about-team-showcase__wipe" aria-hidden="true" />
+    </div></div>
+  </section>;
+}

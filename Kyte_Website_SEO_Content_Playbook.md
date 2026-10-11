@@ -105,7 +105,7 @@ The routes below reproduce the proposed IA. Suggested query themes need validati
 | `/work/[case-study-slug]` | Show how a specific problem was solved. Theme: client and problem, not a generic keyword. | Client context, brief, constraints, Kyte role, research, decisions, artefacts, launch or handoff, verified results, testimonial or caveat, related service CTA. |
 | `/about` | Explain who will do the work and why to trust Kyte. Theme: about Kyte agency. | Team and leadership only if current, operating model, values illustrated with behavior, selected clients and proof, contact path. |
 | `/contact` | Help a qualified buyer start a conversation. Theme: contact Kyte. | What to send, what happens next, relevant channels, realistic response expectation if confirmed, privacy statement for forms. |
-| `/careers` and `/careers/[role-slug]` | Help candidates assess real opportunities. | Current openings only; role scope, location or remote terms, expectations, hiring process, application route. No fabricated openings. |
+| `/careers` and `/careers/[role-slug]` | Help candidates assess opportunities. | Six CMS entries are explicitly marked as prelaunch placeholders with disabled Apply buttons. Before public launch, replace them with confirmed roles and verify scope, location or remote terms, experience level, hiring process and application route. Do not present fabricated openings as real vacancies. |
 | `/privacy-policy` and `/terms` | State current legal terms. | Obtain legal and operational review. Do not generate definitive legal statements from competitor examples. |
 
 ### UI UX Design and Development cluster
