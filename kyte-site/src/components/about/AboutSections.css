@@ -1,0 +1,76 @@
+.about-section-inner { width: var(--page-width); margin: 0 auto; padding-inline: var(--section-inset); }
+.about-page.about-motion-ready [data-about-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 650ms ease, transform 650ms cubic-bezier(.22, 1, .36, 1); }
+.about-page.about-motion-ready [data-about-reveal].is-visible { opacity: 1; transform: translateY(0); }
+.about-philosophy { padding: clamp(100px, 13vw, 192px) 0 clamp(104px, 11vw, 155px); color: #fff; background: var(--color-night); }
+.about-philosophy .about-section-inner { max-width: 1280px; }
+.about-philosophy .eyebrow, .about-impact .eyebrow { color: #82a8ff; }
+.about-philosophy__statement-wrap { margin: 34px 0 clamp(70px, 9vw, 120px); }
+.about-philosophy__statement { max-width: 1100px; margin: 0; color: #aaa; font-size: clamp(31px, 4.7vw, 68px); font-weight: 400; letter-spacing: -.055em; line-height: 1.35; }
+.about-philosophy__statement span { color: #777; transition: color 250ms ease; }
+.about-philosophy__statement span.is-active { color: #fff; }
+.about-philosophy__founder { display: flex; align-items: center; gap: 20px; min-height: 108px; padding: 20px 28px; border: 1px solid #383838; background: #1b1b1b; }
+.about-philosophy__founder img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: center 20%; }
+.about-philosophy__founder div { display: grid; gap: 3px; }
+.about-philosophy__founder strong { font-size: 19px; font-weight: 500; }
+.about-philosophy__founder span { color: #aaa; font-size: 16px; }
+.about-philosophy__founder a { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; color: #fff; font-size: 16px; }
+.about-philosophy__founder a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+.about-glance { padding: clamp(90px, 10vw, 145px) 0; background: var(--color-surface-secondary); }
+.about-glance__heading { max-width: 870px; margin-bottom: 58px; }
+.about-glance__heading h2 { max-width: 810px; margin: 17px 0 20px; font-size: clamp(40px, 5.8vw, 76px); font-weight: 400; letter-spacing: -.06em; line-height: 1.12; text-wrap: balance; }
+.about-glance__heading > p:last-child { max-width: 690px; margin: 0; color: var(--muted); font-size: clamp(18px, 1.9vw, 23px); line-height: 1.5; }
+.about-glance__grid { display: grid; grid-template-columns: 1.07fr 1fr 1fr; grid-template-rows: 210px 150px 112px 112px; gap: 16px; }
+.about-glance__card, .about-glance__logos, .about-glance__team { min-width: 0; overflow: hidden; }
+.about-glance__card { position: relative; padding: clamp(22px, 2.3vw, 34px); color: #fff; background: #171717; border: 1px solid #2d2d2d; border-left: 2px solid var(--color-blue); border-radius: var(--radius-large); transition: border-color 250ms ease, box-shadow 250ms ease, translate 250ms ease; }
+.about-glance__card:hover { translate: 0 -4px; border-color: #557fda; box-shadow: 0 16px 30px rgb(0 0 0 / 12%); }
+.about-glance__card h3, .about-glance__team h3 { margin: 0 0 10px; font-size: clamp(20px, 2vw, 26px); font-weight: 400; line-height: 1.25; letter-spacing: -.03em; }
+.about-glance__card p, .about-glance__team p { margin: 0; color: #aaa; font-size: 16px; line-height: 1.5; }
+.about-glance__agency { grid-column: 1; grid-row: 1 / 5; display: flex; flex-direction: column; justify-content: end; gap: 34px; }
+.about-glance__agency .about-glance__mark { position: absolute; top: 28px; left: 24px; width: 105px; height: 105px; opacity: .16; }
+.about-glance__agency p { max-width: 360px; font-size: 18px; }
+.about-glance__agency .kyte-button { display: inline-flex; justify-content: space-between; align-items: center; gap: 20px; width: min(100%, 250px); min-height: 52px; padding: 0 18px; color: #fff; background: var(--color-blue); border-radius: var(--radius-control); }
+.about-glance__agency .kyte-button:hover { background: var(--color-blue-hover); }
+.about-glance__tools { grid-column: 2; grid-row: 1 / 3; }
+.about-glance__tools p { max-width: 370px; }
+.about-glance__tool-window { overflow: hidden; margin-top: 32px; padding: 18px 0; border: 1px solid #353535; background: #101010; mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
+.about-glance__tool-track { display: flex; gap: 12px; width: max-content; animation: about-marquee 24s linear infinite; }
+.about-glance__tool-track span { display: grid; place-items: center; min-width: 92px; min-height: 46px; padding: 0 10px; border-radius: 6px; color: #fff; background: #272727; font-size: 14px; font-weight: 600; }
+.about-glance__tool-window:hover .about-glance__tool-track { animation-play-state: paused; }
+.about-glance__focus { grid-column: 2; grid-row: 3; padding-block: 17px; }
+.about-glance__focus h3 { margin-bottom: 4px; }
+.about-glance__focus p { max-width: 365px; font-size: 15px; }
+.about-glance__focus > span { position: absolute; right: 18px; bottom: 17px; width: 12px; height: 12px; border-radius: 50%; background: var(--color-blue); box-shadow: 0 0 0 6px rgb(2 73 217 / 16%); }
+.about-glance__clients { grid-column: 3; grid-row: 1 / 3; display: flex; flex-direction: column; justify-content: space-between; border-color: var(--color-blue); background: var(--color-blue); }
+.about-glance__clients:hover { border-color: #4a82ef; box-shadow: 0 16px 30px rgb(2 73 217 / 22%); }
+.about-glance__clients-number { font-size: clamp(62px, 8vw, 112px); font-weight: 400; line-height: 1; letter-spacing: -.07em; }
+.about-glance__clients-number span { font-size: .6em; vertical-align: .22em; }
+.about-glance__clients > img { position: absolute; top: 35px; right: 35px; width: 82px; height: 82px; opacity: .17; }
+.about-glance__clients p { color: #dce7ff; }
+.about-glance__logos { grid-column: 3; grid-row: 3; display: flex; align-items: center; border: 1px solid var(--line); border-radius: var(--radius-large); background: #fff; }
+.about-glance__logo-track { display: flex; align-items: center; gap: 34px; width: max-content; padding: 0 20px; animation: about-marquee 28s linear infinite; }
+.about-glance__logo-track img { width: auto; max-width: 105px; height: auto; max-height: 42px; object-fit: contain; filter: grayscale(1); opacity: .68; }
+.about-glance__logos:hover .about-glance__logo-track { animation-play-state: paused; }
+.about-glance__team { grid-column: 2 / 4; grid-row: 4; display: flex; align-items: center; gap: 24px; padding: 16px 24px; border: 1px solid var(--line); border-radius: var(--radius-large); background: #fff; }
+.about-glance__team h3 { margin-bottom: 2px; font-size: 21px; }
+.about-glance__team p { color: var(--muted); font-size: 14px; }
+.about-glance__avatars { display: flex; flex: none; padding-left: 10px; }
+.about-glance__avatars img { width: 42px; height: 42px; margin-left: -10px; border: 2px solid #fff; border-radius: 50%; object-fit: cover; object-position: center 20%; }
+.about-glance__team a { display: inline-flex; align-items: center; gap: 8px; flex: none; margin-left: auto; min-height: 44px; padding: 0 14px; color: #fff; background: var(--color-blue); border-radius: var(--radius-control); font-size: 14px; }
+.about-glance__team a:hover { background: var(--color-blue-hover); }
+
+.about-impact { padding: clamp(95px, 11vw, 170px) 0 clamp(115px, 13vw, 185px); color: #fff; background: var(--color-night); }
+.about-impact__layout { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(50px, 7vw, 115px); }
+.about-impact__intro { position: sticky; top: 140px; align-self: start; }
+.about-impact__intro h2 { margin: 20px 0 24px; font-size: clamp(48px, 5.8vw, 78px); font-weight: 400; line-height: 1.14; letter-spacing: -.06em; }
+.about-impact__intro > p:last-child { max-width: 460px; margin: 0; color: #aaa; font-size: 19px; line-height: 1.5; }
+.about-impact__cards { display: grid; align-content: start; gap: 18px; }
+.about-impact__card { min-height: 168px; margin-left: var(--card-offset, 0); padding: 28px 32px; border: 1px solid #303030; border-left: 2px solid var(--color-blue); border-radius: var(--radius-small); background: #1b1b1b; }
+.about-impact__card strong { display: block; margin-bottom: 14px; font-size: clamp(41px, 4.3vw, 60px); font-weight: 400; letter-spacing: -.055em; line-height: 1; font-variant-numeric: tabular-nums; }
+.about-impact__card p { max-width: 480px; margin: 0; color: #aaa; font-size: 17px; line-height: 1.42; }
+@keyframes about-marquee { to { transform: translateX(-50%); } }
+
+@media (max-width: 1050px) { .about-glance__grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; } .about-glance__agency { grid-column: 1; grid-row: 1 / 4; min-height: 530px; } .about-glance__tools { grid-column: 2; grid-row: 1; min-height: 240px; } .about-glance__focus { grid-column: 2; grid-row: 2; min-height: 130px; } .about-glance__clients { grid-column: 2; grid-row: 3; min-height: 200px; } .about-glance__logos { grid-column: 1; grid-row: 4; min-height: 105px; } .about-glance__team { grid-column: 2; grid-row: 4; } .about-glance__team { flex-wrap: wrap; gap: 10px; } .about-glance__team a { margin-left: 0; } }
+@media (max-width: 720px) { .about-philosophy__founder { flex-wrap: wrap; } .about-philosophy__founder a { margin-left: 84px; } .about-glance__grid { display: flex; flex-direction: column; gap: 12px; } .about-glance__agency { min-height: 450px; } .about-glance__tools { min-height: 280px; } .about-glance__focus { min-height: 150px; } .about-glance__clients { min-height: 280px; } .about-glance__logos { min-height: 100px; } .about-glance__team { min-height: 142px; } .about-impact__layout { grid-template-columns: 1fr; gap: 48px; } .about-impact__intro { position: static; } .about-impact__card { margin-left: 0; } }
+@media (max-width: 480px) { .about-philosophy__founder { gap: 14px; padding: 18px; } .about-philosophy__founder img { width: 50px; height: 50px; } .about-philosophy__founder strong { font-size: 16px; } .about-philosophy__founder span { font-size: 14px; } .about-philosophy__founder a { margin-left: 64px; } .about-glance__team { padding: 18px; } .about-glance__team a { width: 100%; justify-content: center; } .about-impact__card { padding: 24px; } }
+@media (prefers-reduced-motion: reduce) { .about-philosophy__statement span, .about-glance__card { transition: none; } .about-philosophy__statement span { color: #fff; } .about-glance__tool-track, .about-glance__logo-track { animation: none; } }
