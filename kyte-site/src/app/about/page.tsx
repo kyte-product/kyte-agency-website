@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const headlinePortraits = {
-    firstPortrait: { url: "/team-images/0392e3a4-d611-45e0-83f2-089bb0035181.png", alt: "Mahir Malde of Kyte" },
-    secondPortrait: { url: "/team-images/riya.jpg", alt: "Riya Pathak of Kyte" },
+    firstPortrait: { url: "/team-images/5eb7c535-2022-4e64-8e6e-df3888827fe1.png", alt: "Pratham of Kyte" },
+    secondPortrait: { url: "/team-images/ff98cefc-7213-4103-9472-0a3142e5b048.png", alt: "Varun Padmanabhan of Kyte" },
   };
   return <>
     <SiteHeader />

@@ -20,6 +20,7 @@ To review the sample layouts locally, start the site with `SHOW_EDITORIAL_PLACEH
 ## Where to edit
 
 - `src/components/SiteHeader.tsx`: announcement bar, desktop dropdowns, mobile menu, and IA route labels.
+- `src/components/SiteRevealMotion.tsx` and `src/components/SiteSmoothScroll.tsx`: default text and image reveals and smooth scrolling for every route. Both mount in the root layout. Mark a section `data-site-reveal-ignore` when it has its own motion; respect reduced-motion preferences.
 - `src/components/Hero.tsx`: homepage hero copy and CTA.
 - `src/app/globals.css`: shared visual tokens and homepage styles.
 - `src/app/design-system/page.tsx`: working design system documentation.

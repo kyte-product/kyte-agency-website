@@ -3,8 +3,10 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
-const selector = "h1, h2, h3, h4, h5, h6, p, blockquote, figcaption, dt, dd, .work-project__summary, .work-project__details, img, video";
+// Root-layout motion covers new routes automatically. Explicit page animations opt out below.
+const selector = "h1, h2, h3, h4, h5, h6, p, blockquote, figcaption, dt, dd, li, td, th, label, a, .work-project__summary, .work-project__details, img, video";
 const customMotion = "[data-reveal-words], [data-about-reveal], [data-fincart-image-reveal], .about-philosophy__statement, [data-site-reveal-ignore]";
+const textParent = "h1, h2, h3, h4, h5, h6, p, blockquote, figcaption, dt, dd, li, td, th, label";
 
 export function SiteRevealMotion() {
   const pathname = usePathname();
@@ -18,15 +20,15 @@ export function SiteRevealMotion() {
     const animations = new Set<Animation>();
     const reveal = (target: HTMLElement) => {
       observer.unobserve(target);
-      pending.get(target)?.cancel();
-      pending.delete(target);
       const media = target.matches("img, video");
       const animation = target.animate(
         media
-          ? [{ opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0)" }]
+          ? [{ opacity: 0, transform: "translateY(14px)" }, { opacity: 1, transform: "translateY(0)" }]
           : [{ opacity: 0, transform: "translateY(.4em)", filter: "blur(3px)" }, { opacity: 1, transform: "translateY(0)", filter: "blur(0)" }],
         { duration: media ? 650 : 540, easing: "cubic-bezier(.22,1,.36,1)", fill: "both" },
       );
+      pending.get(target)?.cancel();
+      pending.delete(target);
       animations.add(animation);
       animation.onfinish = () => { animation.cancel(); animations.delete(animation); };
     };
@@ -38,6 +40,9 @@ export function SiteRevealMotion() {
       const targets = root instanceof HTMLElement && root.matches(selector) ? [root, ...root.querySelectorAll<HTMLElement>(selector)] : root.querySelectorAll<HTMLElement>(selector);
       for (const target of targets) {
         if (seen.has(target) || target.closest(customMotion) || target.closest(".about-glance__tool-window, .about-glance__logos, .client-logos, .client-grid")) continue;
+        if (target.matches("li") && target.querySelector("img, video, h1, h2, h3, h4, h5, h6, p, blockquote")) continue;
+        if (target.matches("a") && (target.closest(textParent) || target.querySelector("img, video, h1, h2, h3, h4, h5, h6, p"))) continue;
+        if (target.matches("img, video") && target.closest(".careers-page__brands-track")) continue;
         if (target.matches(".about-page__service-mark, .about-glance__agency-mark, .split-cta__motion-mark, .website-service__inline-cta-art img")) continue;
         if (target.getBoundingClientRect().width === 0 || target.getBoundingClientRect().height === 0) continue;
         seen.add(target);

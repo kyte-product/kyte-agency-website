@@ -75,10 +75,6 @@ export type CareerRole = {
   seo: { title?: string; description?: string } | null;
 };
 
-export type CareerPage = {
-  firstPortrait: CmsImage;
-  secondPortrait: CmsImage;
-};
 
 async function query<T>(groq: string, params: Record<string, string> = {}): Promise<T> {
   const url = new URL(`https://${PROJECT_ID}.apicdn.sanity.io/v${API_VERSION}/data/query/${DATASET}`);
@@ -132,10 +128,6 @@ export function getPublishedCareerRoles(): Promise<CareerRole[]> {
 
 export function getPublishedCareerRoleBySlug(slug: string): Promise<CareerRole | null> {
   return query(`*[${careerFilter} && slug.current == $slug][0]{${careerFields}}`, { slug });
-}
-
-export function getPublishedCareerPage(): Promise<CareerPage | null> {
-  return query(`*[_type == "careerPage" && _id == "careers-page"][0]{"firstPortrait":{"url":heroPortraitOne.asset->url,"alt":heroPortraitOne.alt},"secondPortrait":{"url":heroPortraitTwo.asset->url,"alt":heroPortraitTwo.alt}}`);
 }
 
 export function isSafeApplicationUrl(value: string | null | undefined): boolean {

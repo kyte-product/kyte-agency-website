@@ -8,11 +8,10 @@ The existing **Kyte Website** Sanity project (`50pibtgs`, `production`) serves p
 | `servicePage` | Service content on stable IA routes |
 | `designNews` | Design News and articles |
 | `careerRole` | Careers opportunities and role details |
-| `careerPage` | Replaceable Careers hero portraits |
 
 The Careers page reads published `careerRole` documents marked **Open**, ordered by `sortOrder`. Editors can change the title, team, location, work mode, experience level, role scope, hiring process and application URL in Studio. The list opens a role details modal. The original `/careers/[role-slug]` route remains available for direct links and metadata. An Apply button is disabled until that role has a valid HTTP or HTTPS application URL.
 
-Six role entries are intentionally marked **Placeholder listing**. Their titles, locations, levels and descriptions are sample content approved for the prelaunch site. They have no application URLs. Replace and verify the content before public launch. The two hero portraits are also replaceable in the `careerPage` document.
+Six role entries are intentionally marked **Placeholder listing**. Their titles, locations, levels and descriptions are sample content approved for the prelaunch site. They have no application URLs. Replace and verify the content before public launch. The About headline portraits are fixed site assets; the unused `careerPage` Studio type has been removed. Its existing Sanity document remains stored for rollback and is not read by the website.
 
 `src/lib/sanity.ts` reads the published perspective with five-minute revalidation. Keep drafts and write credentials on the server. Do not put Sanity write credentials in browser code or `NEXT_PUBLIC_*` variables. Verify client claims, outcome figures, image descriptions and service scope before publishing editorial content.
 
