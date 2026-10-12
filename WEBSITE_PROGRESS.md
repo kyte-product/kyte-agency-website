@@ -34,6 +34,9 @@ This is the handoff file for future Codex chats and team members. Read `AGENTS.m
 
 ### 12 October 2026: Add homepage client perspectives and FAQ
 
+- Replaced the short testimonial headlines with each complete testimonial from the existing Kyte Framer website, combining the headline and review copy into a single quote per client. Kept the video and logo placeholders, progressive text reveal, first-card inset, and compact type. Updated the asset note and design-system description to record the full quote source.
+- Checks: ESLint, TypeScript, production build, diff check, and local desktop/mobile review passed. Build generated all routes and used the existing Sanity CDN fallback. Pushed the correction to PR #32; Vercel preview check is pending. No production deploy or merge was requested. Owner: Kyte website team.
+
 - Applied the latest homepage review: inset the first testimonial card, replaced client portraits with neutral future video placeholders, reduced quote type and card height, and changed quote words to reveal progressively on scroll like About. Kept the client names, roles, and short testimonial excerpts from the existing Kyte site, with a blank logo placeholder beside each attribution.
 - Added a Design News eyebrow and moved its action below the right-side description as a text link. Added a dot between the two hero service links and a pointer cursor over client logos.
 - Removed the four downloaded portrait files. Updated the asset note and design-system description. FAQ remains sticky on desktop and normal flow on mobile.
