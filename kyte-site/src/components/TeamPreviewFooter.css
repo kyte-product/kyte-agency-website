@@ -1,4 +1,4 @@
-.site-footer.site-footer--team-preview { padding: 62px 0 0; border-top: 1px solid var(--line); background: var(--color-surface-secondary); }
+.site-footer.site-footer--team-preview { padding: 62px 0 0; border-top: 1px solid var(--line); background: var(--color-surface-secondary); font-family: "DM Sans Variable", "DM Sans", sans-serif; }
 .site-footer__inner { width: var(--page-width); margin: 0 auto; padding-inline: 0; }
 .site-footer__grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 0; }
 .site-footer__brand, .site-footer__column { min-width: 0; padding-inline: 24px; }
@@ -7,6 +7,7 @@
 .site-footer__logo { display: inline-flex; align-items: center; }
 .site-footer__logo img { display: block; width: 150px; height: auto; }
 .site-footer__brand p { max-width: 230px; margin: 18px 0; color: var(--muted); font-size:var(--type-caption); line-height: 1.65; }
+.site-footer__brand address { margin: -6px 0 18px; color: var(--muted); font-size: var(--type-caption); font-style: normal; line-height: 1.5; }
 .site-footer__more { display: inline-flex; align-items: center; gap: 6px; color: var(--color-blue); font-size:15px; font-weight: 500; }
 .site-footer__more svg { transition: transform .2s cubic-bezier(.2,.7,.2,1); }
 .site-footer__more:hover svg { transform: translateX(2px); }
@@ -17,6 +18,9 @@
 .site-footer__bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size:var(--type-label); }
 .site-footer__bottom div { display: flex; flex-wrap: wrap; gap: 20px; }
 .site-footer__bottom a:hover { color: var(--ink); }
+.site-footer__cookie-button { padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.site-footer__cookie-button:hover { color: var(--ink); }
+.site-footer__cookie-button:focus-visible { outline: 2px solid var(--color-blue); outline-offset: 3px; }
 .site-footer__utility { margin-top: 48px; color: var(--ink); background: transparent; }
 .site-footer__utility-inner { width: var(--page-width); margin: 0 auto; padding: 0; }
 .site-footer__utility-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -31,6 +35,7 @@
 .site-footer__designrush small { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); font-size: var(--type-label); line-height: 1.4; }
 .site-footer__designrush:hover small, .site-footer__ai-links a:hover, .site-footer__social-links a:hover, .site-footer__reach a:hover { color: var(--color-blue); }
 .site-footer__ai-links, .site-footer__social-links { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+.site-footer__ai-hint { margin: -6px 0 0; color: var(--muted); font-size: var(--type-label); line-height: 1.35; }
 .site-footer__ai-links a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: var(--radius-control); color: var(--ink); transition: color .18s ease; }
 .site-footer__ai-icon { display: block; width: 20px; height: 20px; flex: 0 0 20px; object-fit: contain; filter: brightness(0); opacity: .58; transition: filter .18s ease, opacity .18s ease; }
 .site-footer__ai-link--chatgpt:hover .site-footer__ai-icon,

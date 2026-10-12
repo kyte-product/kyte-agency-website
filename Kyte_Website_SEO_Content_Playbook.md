@@ -100,7 +100,7 @@ The routes below reproduce the proposed IA. Suggested query themes need validati
 
 | Route | Primary job and query theme | Required content and proof |
 |---|---|---|
-| `/` | Explain Kyte's offer and route visitors by need. Theme: UI UX design agency plus broader brand and web capability. | Clear position, two service clusters, selected work, sectors, working method, approved proof, one primary contact CTA. |
+| `/` | Explain Kyte's offer and route visitors by need. Theme: UI UX design agency plus broader brand and web capability. | Clear position, two service clusters, selected work, sectors, working method, approved client testimonials, concise buyer FAQs, one primary contact CTA. |
 | `/work` | Help buyers find comparable work. Theme: design agency portfolio or case studies. | Filter by service and industry if enough cases exist; each card states client, challenge, work, and result where verified. |
 | `/work/[case-study-slug]` | Show how a specific problem was solved. Theme: client and problem, not a generic keyword. | Client context, brief, constraints, Kyte role, research, decisions, artefacts, launch or handoff, verified results, testimonial or caveat, related service CTA. |
 | `/about` | Explain who will do the work and why to trust Kyte. Theme: about Kyte agency. | Team and leadership only if current, operating model, values illustrated with behavior, selected clients and proof, contact path. |

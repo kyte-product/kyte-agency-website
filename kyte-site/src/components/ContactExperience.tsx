@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, ChevronDown, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { clientLogoAsset } from "@/data/clientLogoAssets";
@@ -22,13 +23,18 @@ const clientMarks = [
   ["Crepdog Crew", "crepdog-crew"], ["Contractzy", "contractzy"],
 ] as const;
 
-type ContactContentProps = { idPrefix: "modal" | "page" };
+type ContactContentProps = { idPrefix: "modal" | "page"; onNavigate?: () => void };
 
-export function ContactContent({ idPrefix }: ContactContentProps) {
+export function ContactContent({ idPrefix, onNavigate }: ContactContentProps) {
   const [submissionState, setSubmissionState] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [submissionMessage, setSubmissionMessage] = useState("");
   const pendingId = useRef<string | null>(null);
+  const successHeadingRef = useRef<HTMLHeadingElement>(null);
   const TitleTag = idPrefix === "page" ? "h1" : "h2";
+
+  useEffect(() => {
+    if (submissionState === "success") successHeadingRef.current?.focus();
+  }, [submissionState]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -49,24 +55,38 @@ export function ContactContent({ idPrefix }: ContactContentProps) {
       form.reset();
       pendingId.current = null;
       setSubmissionState("success");
-      setSubmissionMessage("Thanks for reaching out. Your enquiry has been sent to Kyte.");
     } catch (error) {
       setSubmissionState("error");
       setSubmissionMessage(error instanceof Error ? error.message : "We couldn't send your enquiry. Please try again.");
     }
   };
 
+  if (submissionState === "success") {
+    return <div className="contact-experience contact-experience--success" role="status">
+      <div className="contact-experience__success-mark" aria-hidden="true">
+        <svg viewBox="0 0 80 80" fill="none"><path d="m21 40 13 13 25-26" pathLength="1" /></svg>
+      </div>
+      <p className="contact-experience__success-eyebrow">Message received</p>
+      <TitleTag id={`${idPrefix}-contact-title`} ref={successHeadingRef} tabIndex={-1}>Thanks for reaching out.</TitleTag>
+      <p className="contact-experience__success-copy">We&apos;ve received your enquiry. The Kyte team will follow up by email.</p>
+      <div className="contact-experience__success-actions">
+        <Link className="kyte-button" href="/work" onClick={onNavigate}>Explore our work <ArrowUpRight size={17} aria-hidden="true" /></Link>
+        <Link className="kyte-button kyte-button--outline" href="/" onClick={onNavigate}>Back to home</Link>
+      </div>
+    </div>;
+  }
+
   return <div className="contact-experience">
     <div className="contact-experience__intro">
       <p className="contact-experience__eyebrow"><span className="contact-experience__eyebrow-mark" aria-hidden="true" /> Start a project</p>
       <TitleTag id={`${idPrefix}-contact-title`}>Let&apos;s make the next steps clearer.</TitleTag>
-      <div className="contact-experience__expect">
-        <div><strong>Your starting point</strong><span>What exists today, what needs to change, and why now.</span></div>
-        <div><strong>The work ahead</strong><span>Where product design, a website, or brand work can help.</span></div>
-        <div><strong>A clear next step</strong><span>How we can move forward.</span></div>
-      </div>
-      <div className="contact-experience__clients" aria-label="Selected Kyte clients">
-        <p>Selected clients</p>
+      <ol className="contact-experience__expect">
+        <li><span aria-hidden="true">1</span><strong>Define what needs to change</strong></li>
+        <li><span aria-hidden="true">2</span><strong>Explore how design can help</strong></li>
+        <li><span aria-hidden="true">3</span><strong>Agree on the next step</strong></li>
+      </ol>
+      <div className="contact-experience__clients" aria-label="Brands we have worked with">
+        <p>Brands we have worked with</p>
         <div className="contact-experience__clients-window"><div className="contact-experience__clients-track">
           {[false, true].map(duplicate => <ul key={String(duplicate)} aria-hidden={duplicate || undefined}>{clientMarks.map(([name, slug]) => { const logo = clientLogoAsset(slug); return <li key={slug}><Image src={`/client-logos/${slug}.avif`} alt={duplicate ? "" : name} width={logo.width} height={logo.height} /></li>; })}</ul>)}
         </div></div>
@@ -132,6 +152,6 @@ export function ContactModal() {
 
   return <dialog ref={dialogRef} className="contact-dialog" aria-labelledby="modal-contact-title" onClose={() => { setOpen(false); triggerRef.current?.focus(); }} onClick={(event) => { if (event.target === dialogRef.current) close(); }}>
     <button className="contact-dialog__close" type="button" aria-label="Close contact form" onClick={close}><X size={22} aria-hidden="true" /></button>
-    <ContactContent idPrefix="modal" />
+    {open && <ContactContent idPrefix="modal" onNavigate={close} />}
   </dialog>;
 }

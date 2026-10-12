@@ -3,6 +3,7 @@ import "@fontsource-variable/dm-sans";
 import { PageTransition } from "@/components/PageTransition";
 import { SiteRevealMotion } from "@/components/SiteRevealMotion";
 import { ContactModal } from "@/components/ContactExperience";
+import { CookieSettings } from "@/components/CookieSettings";
 import { SiteSmoothScroll } from "@/components/SiteSmoothScroll";
 import "lenis/dist/lenis.css";
 import "./globals.css";
@@ -15,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}<SiteSmoothScroll /><SiteRevealMotion /><ContactModal /><PageTransition /></body></html>;
+  return <html lang="en"><body>{children}<SiteSmoothScroll /><SiteRevealMotion /><ContactModal /><CookieSettings /><PageTransition /></body></html>;
 }

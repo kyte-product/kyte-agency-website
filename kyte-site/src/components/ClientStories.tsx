@@ -51,10 +51,13 @@ export function ClientStories({ articles }: { articles: DesignNewsArticle[] }) {
     <div className="client-stories__inner">
       <div className="client-stories__intro">
         <div>
+          <p className="eyebrow" data-reveal-words><RevealWords text="Design News" /></p>
           <h2 id="client-stories-title" data-reveal-words><RevealWords text="Ideas and observations from Design News." /></h2>
-          <Link className="client-stories__cta kyte-button" href="/insights">Explore Design News <ChevronRight size={16} aria-hidden="true" /></Link>
         </div>
-        <p className="client-stories__description" data-reveal-words data-reveal-delay="150"><RevealWords text="Writing from the Kyte team on visual culture, branding and the ideas shaping how people experience products." /></p>
+        <div className="client-stories__intro-copy">
+          <p className="client-stories__description" data-reveal-words data-reveal-delay="150"><RevealWords text="Writing from the Kyte team on visual culture, branding and the ideas shaping how people experience products." /></p>
+          <Link className="client-stories__cta" href="/insights">Explore Design News <ChevronRight size={18} aria-hidden="true" /></Link>
+        </div>
       </div>
 
       {stories.length > 0 && <div className="client-stories__controls" aria-label="Design News carousel controls">
