@@ -44,7 +44,7 @@ export default async function CareersPage() {
       <section className="careers-page__stage" aria-labelledby="careers-title">
         <div className="careers-page__inner">
           <div className="careers-page__hero">
-            <h1 id="careers-title"><span className="careers-page__headline-line">Make useful</span><span className="careers-page__headline-line">work with people.</span></h1>
+            <h1 id="careers-title"><span className="careers-page__headline-line">Make useful</span><span className="careers-page__headline-line careers-page__headline-accent">work with people.</span></h1>
             <div className="careers-page__hero-bottom">
               <p className="careers-page__intro">Product design, branding and marketing come together here. If you care about making useful work with a thoughtful team, we would like to hear from you.</p>
               <a className="kyte-button careers-page__jump" href="#careers-openings-title">View opportunities</a>

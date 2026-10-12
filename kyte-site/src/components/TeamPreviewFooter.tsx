@@ -80,7 +80,6 @@ export function TeamPreviewFooter() {
             <div className="site-footer__utility-cell">
               <p className="site-footer__utility-label">Ask AI about Kyte</p>
               <div className="site-footer__ai-links">{aiTools.map(([name, icon]) => <AiQuestionLink className={`site-footer__ai-link site-footer__ai-link--${icon}`} provider={name} key={name}><Image className="site-footer__ai-icon" src={`/ai-logos/${icon}.png`} alt="" width={24} height={24} /></AiQuestionLink>)}</div>
-              <p className="site-footer__ai-hint">Select a tool to copy the question.</p>
             </div>
             <div className="site-footer__utility-cell">
               <p className="site-footer__utility-label">Social media</p>

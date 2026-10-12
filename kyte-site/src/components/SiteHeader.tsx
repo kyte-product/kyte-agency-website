@@ -230,7 +230,7 @@ export function SiteHeader() {
             <Link className="nav-link" href="/careers" onMouseEnter={scheduleMenuClose}>Careers</Link>
           </nav>
           <div className="nav-actions">
-            <button className="brochure-button kyte-button kyte-button--outline" type="button" onMouseEnter={scheduleMenuClose}><Download size={16} aria-hidden="true" /> Brochure</button>
+            <button className="brochure-button kyte-button kyte-button--outline" type="button" onMouseEnter={scheduleMenuClose}>Brochure <Download size={16} aria-hidden="true" /></button>
             <Link className="contact-button kyte-button" href="/contact" onMouseEnter={scheduleMenuClose}>Contact Us <ChevronRight size={16} aria-hidden="true" /></Link>
           </div>
           <div className="mobile-actions"><button className="mobile-toggle" type="button" aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-expanded={mobileOpen} aria-controls="mobile-menu" onClick={() => { setMobileOpen(!mobileOpen); setOpenMenu(null); }}><span /><span /></button></div>

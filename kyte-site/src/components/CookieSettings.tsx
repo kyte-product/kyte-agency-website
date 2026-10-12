@@ -32,11 +32,10 @@ export function CookieSettings() {
       <div><button type="button" className="cookie-notice__settings" onClick={() => dialogRef.current?.showModal()}>Cookie settings</button><button type="button" className="cookie-notice__accept" onClick={saveChoice}>Got it</button></div>
     </aside>}
     <dialog ref={dialogRef} className="cookie-dialog" aria-labelledby="cookie-dialog-title">
-      <div className="cookie-dialog__top"><p className="eyebrow">YOUR PREFERENCES</p><button type="button" onClick={() => dialogRef.current?.close()} aria-label="Close cookie settings">×</button></div>
-      <h2 id="cookie-dialog-title">Cookie settings</h2>
+      <div className="cookie-dialog__top"><h2 id="cookie-dialog-title">Cookie preferences</h2><button type="button" onClick={() => dialogRef.current?.close()} aria-label="Close cookie settings">×</button></div>
       <p>Kyte currently uses an essential cookie to remember that you have seen this notice. No analytics or marketing cookies are active on this site.</p>
       <div className="cookie-dialog__category"><span><strong>Essential</strong><small>Remembers your cookie choice for six months.</small></span><span>Always on</span></div>
-      <button type="button" className="cookie-notice__accept" onClick={saveChoice}>Save settings</button>
+      <div className="cookie-dialog__actions"><button type="button" className="kyte-button" onClick={saveChoice}>Save settings</button></div>
     </dialog>
   </>;
 }
