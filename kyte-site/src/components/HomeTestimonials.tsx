@@ -7,7 +7,7 @@ import "./HomeTestimonials.css";
 
 // Full testimonials already published on Kyte's Framer website.
 // Source: https://www.kyte-agency.com/ (Testimonials, checked 12 October 2026).
-const testimonials = [
+export const clientTestimonials = [
   {
     quote: "Highly recommend kyte for outstanding design. Their expertise in digital design has been invaluable in creating a visually stunning social media and product packaging that perfectly represents our brand and products.",
     name: "Vaishali Chitnis",
@@ -107,7 +107,7 @@ export function HomeTestimonials() {
       </div>
 
       <div className="home-testimonials__track" ref={trackRef} tabIndex={0} aria-label="Client testimonials">
-        {testimonials.map((item) => <article className="home-testimonial" key={item.name}>
+        {clientTestimonials.map((item) => <article className="home-testimonial" key={item.name}>
           <div className="home-testimonial__portrait" role="img" aria-label={`Placeholder for a future video testimonial from ${item.name}`}>
             <span>Client story</span>
             <strong>Video coming soon</strong>

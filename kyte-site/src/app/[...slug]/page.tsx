@@ -5,6 +5,14 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ExpandingPhotoStage } from "@/components/ExpandingPhotoStage";
+import { ServiceOurProcess } from "@/components/ServiceOurProcess";
+import { WorkShowcase } from "@/components/WorkShowcase";
+import { HomeFaq } from "@/components/HomeFaq";
+import { TextRevealMotion } from "@/components/TextRevealMotion";
+import { ServiceTestimonials } from "@/components/ServiceTestimonials";
+import { ServiceOfferings } from "@/components/ServiceOfferings";
+import { ServiceApproach } from "@/components/ServiceApproach";
+import { ServiceDecisionStory, ServiceVisualBento } from "@/components/ServiceDecisionStory";
 import "../service-detail.css";
 
 const plannedPages: Record<string, string> = {
@@ -44,17 +52,26 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
 
   if (path === "ui-ux-design-development/ux-research-design-audit") {
     return <><SiteHeader /><main className="service-detail">
+      <TextRevealMotion />
       <section className="service-detail__hero" aria-labelledby="ux-audit-title">
         <div className="service-detail__hero-inner">
           <p className="eyebrow">UX Research &amp; Design Audits</p>
-          <h1 id="ux-audit-title"><span className="service-detail__headline-line">Find the friction <span className="service-detail__headline-portrait"><Image src="/team-images/5eb7c535-2022-4e64-8e6e-df3888827fe1.png" alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span></span><span className="service-detail__headline-line">Know what to <span className="service-detail__headline-accent">improve.</span> <span className="service-detail__headline-portrait"><Image src="/team-images/ff98cefc-7213-4103-9472-0a3142e5b048.png" alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span></span></h1>
+          <h1 id="ux-audit-title"><span className="service-detail__headline-line">Find the <span className="service-detail__headline-portrait"><Image src="https://images.unsplash.com/photo-1776278806688-64ef6a7e2cc5?auto=format&fit=crop&w=480&q=85" alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span> friction</span><span className="service-detail__headline-line">Know what to <span className="service-detail__headline-portrait"><Image src="https://images.unsplash.com/photo-1791197738079-d25b54cd42dc?auto=format&fit=crop&w=480&q=85" alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span> <span className="service-detail__headline-accent">improve.</span></span></h1>
           <div className="service-detail__hero-bottom">
             <p>We look at how people use your product, where friction appears, and which changes can make the experience clearer.</p>
             <Link className="kyte-button" href="/contact">Talk through an audit <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
         </div>
       </section>
-      <ExpandingPhotoStage label="Architectural photography showcase for UX research and design audits" />
+      <ExpandingPhotoStage label="Digital design imagery for UX research and design audits" />
+      <ServiceOfferings />
+      <ServiceApproach />
+      <ServiceDecisionStory />
+      <ServiceVisualBento />
+      <ServiceOurProcess />
+      <WorkShowcase />
+      <ServiceTestimonials />
+      <HomeFaq />
     </main><SiteFooter /></>;
   }
 
