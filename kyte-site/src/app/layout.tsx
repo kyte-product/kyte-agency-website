@@ -12,7 +12,10 @@ export const metadata: Metadata = {
   title: "Kyte | Product, website and brand design",
   description: "Kyte brings product, web and brand design together to help people understand, use and choose what you make.",
   robots: { index: false, follow: false },
-  icons: { icon: "/kyte-agency-mark.png" },
+  icons: { icon: [
+    { url: "/kyte-agency-mark.png", media: "(prefers-color-scheme: light)" },
+    { url: "/kyte-agency-mark-white.png", media: "(prefers-color-scheme: dark)" },
+  ] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
