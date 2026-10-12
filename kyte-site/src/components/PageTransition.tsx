@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 type Phase = "idle" | "covering" | "revealing";
 
 const COVER_DURATION = 950;
-const COVER_HOLD = 240;
+const COVER_HOLD = 480;
 const NAVIGATION_TIMEOUT = 10000;
 
 export function PageTransition() {
@@ -29,7 +29,7 @@ export function PageTransition() {
       previousPath.current = pathname;
       if (phaseRef.current === "covering") {
         if (fallbackTimer.current !== null) window.clearTimeout(fallbackTimer.current);
-        revealTimer.current = window.setTimeout(() => changePhase("revealing"), 120);
+        revealTimer.current = window.setTimeout(() => changePhase("revealing"), 180);
       }
     }
   }, [pathname]);
