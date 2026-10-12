@@ -83,8 +83,8 @@
   bottom: 32px;
   left: 50%;
   color: var(--ink);
-  font-size: clamp(20px, 1.9vw, 26px);
-  font-weight: 500;
+  font-size: clamp(21px, 2vw, 27px);
+  font-weight: 600;
   line-height: 1;
   white-space: nowrap;
   writing-mode: vertical-rl;
@@ -118,8 +118,8 @@
 
 .service-process__active-copy strong {
   color: var(--ink);
-  font-size: clamp(21px, 1.8vw, 27px);
-  font-weight: 400;
+  font-size: clamp(22px, 1.9vw, 28px);
+  font-weight: 500;
   line-height: 1.3;
   letter-spacing: -.025em;
 }
@@ -135,13 +135,13 @@
   right: 4%;
   bottom: 24px;
   width: min(44%, 440px);
-  max-height: 72%;
-  --hairline-plate: transparent;
-  --hairline-hi: #686a6d;
-  --hairline-edge: #686a6d;
-  --hairline-mid: #686a6d;
-  --hairline-lo: #686a6d;
-  --hairline-stroke: .85;
+  height: min(72%, 380px);
+  --hairline-plate: #fff;
+  --hairline-hi: var(--color-blue);
+  --hairline-edge: var(--color-blue);
+  --hairline-mid: var(--color-blue);
+  --hairline-lo: var(--color-blue);
+  --hairline-stroke: 1.2;
 }
 
 @media (max-width: 780px) {
@@ -154,20 +154,20 @@
   .service-process__step.is-active { flex: none; width: 100%; min-height: 72px; padding: 18px 20px; }
   .service-process__step-number { top: 20px; left: 20px; font-size: 28px; }
   .service-process__step.is-active .service-process__step-number { opacity: 1; color: #aaa; }
-  .service-process__step-name { top: 27px; right: 20px; bottom: auto; left: auto; font-size: 18px; writing-mode: horizontal-tb; transform: none; }
+  .service-process__step-name { top: 27px; right: 20px; bottom: auto; left: auto; font-size: 19px; font-weight: 600; writing-mode: horizontal-tb; transform: none; }
   .service-process__step.is-active .service-process__step-name { opacity: 0; }
   .service-process__active-number { top: 20px; right: 20px; font-size: 28px; }
   .service-process__step.is-active { min-height: 400px; }
   .service-process__active-copy { right: 22px; bottom: 22px; left: 22px; gap: 10px; width: auto; }
   .service-process__active-copy strong { max-width: 440px; font-size: 22px; }
   .service-process__active-copy > span { max-width: 560px; font-size: 15px; }
-  .service-process__figure { right: 6%; bottom: 168px; width: min(48%, 260px); max-height: 38%; }
+  .service-process__figure { right: 6%; bottom: 168px; width: min(48%, 260px); height: min(38%, 180px); }
 }
 
 @media (max-width: 420px) {
   .service-process__intro > p:last-child { font-size: 16px; }
   .service-process__step.is-active { min-height: 380px; }
-  .service-process__figure { right: 5%; bottom: 164px; width: 48%; max-height: 36%; }
+  .service-process__figure { right: 5%; bottom: 164px; width: 48%; height: min(36%, 160px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

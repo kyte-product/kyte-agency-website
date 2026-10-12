@@ -1,6 +1,6 @@
 import "./ServiceOfferings.css";
 
-const offerings = [
+export const auditOfferings = [
   {
     title: "User research & discovery",
     description: "Research plans and stakeholder conversations to clarify user needs, context, and the questions the project needs to answer.",
@@ -19,13 +19,14 @@ const offerings = [
   },
 ] as const;
 
-export function ServiceOfferings() {
+export function ServiceOfferings({ items = auditOfferings, serviceName = "UX research & design audits", heading = "What we offer", intro }: { items?: readonly { title: string; description: string }[]; serviceName?: string; heading?: string; intro?: string }) {
   return <section className="service-offerings" aria-labelledby="service-offerings-title">
     <div className="service-offerings__inner">
-      <p className="eyebrow">UX research &amp; design audits</p>
-      <h2 id="service-offerings-title">What we offer</h2>
+      <p className="eyebrow">{serviceName}</p>
+      <h2 id="service-offerings-title">{heading}</h2>
+      {intro && <p className="service-offerings__intro">{intro}</p>}
       <div className="service-offerings__list">
-        {offerings.map((offering, index) => <article className="service-offering" key={offering.title}>
+        {items.map((offering, index) => <article className="service-offering" key={offering.title}>
           <h3>{offering.title}</h3>
           <p>{offering.description}</p>
           <span className="service-offering__number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>

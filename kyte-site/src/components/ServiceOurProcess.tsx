@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Laptop, Riffle } from "@lucasmarkes/hairline/react";
+import { Laptop } from "@lucasmarkes/hairline/react";
 import "./ServiceOurProcess.css";
 
-const steps = [
+export const sharedSteps = [
   {
     name: "Discover",
     title: "Understand the problem, not the assumption.",
@@ -27,13 +27,18 @@ const steps = [
   },
 ] as const;
 
-function ProcessFigure({ index }: { index: number }) {
-  const Figure = index % 2 === 0 ? Laptop : Riffle;
-  const label = index % 2 === 0 ? "Laptop illustration" : "Card tray illustration";
-  return <Figure className="service-process__figure" theme="light" play label={label} aria-hidden="true" tabIndex={-1} />;
+function ProcessFigure() {
+  return <Laptop
+    className="service-process__figure"
+    theme="light"
+    play
+    label="Laptop illustration"
+    aria-hidden="true"
+    tabIndex={-1}
+  />;
 }
 
-export function ServiceOurProcess() {
+export function ServiceOurProcess({ steps = sharedSteps, intro = "As a digital agency working across product design, branding, content, and video, we run every project through the same four stages, so nothing gets lost between idea and launch." }: { steps?: readonly { name: string; title: string; description: string }[]; intro?: string }) {
   const [activeStep, setActiveStep] = useState(1);
 
   return <section className="service-process" aria-labelledby="service-process-title">
@@ -41,7 +46,7 @@ export function ServiceOurProcess() {
       <div className="service-process__intro">
         <p className="eyebrow">How we work</p>
         <h2 id="service-process-title">Our Process</h2>
-        <p>As a digital agency working across product design, branding, content, and video, we run every project through the same four stages, so nothing gets lost between idea and launch.</p>
+        <p>{intro}</p>
       </div>
       <div className="service-process__steps" aria-label="Our process">
         {steps.map((step, index) => {
@@ -68,7 +73,7 @@ export function ServiceOurProcess() {
                 <strong>{step.title}</strong>
                 <span>{step.description}</span>
               </span>
-              <ProcessFigure index={index} />
+              <ProcessFigure />
             </>}
           </button>;
         })}

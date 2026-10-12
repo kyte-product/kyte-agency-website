@@ -1,92 +1,108 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Gauge, Route, Search, Target, TrendingUp } from "lucide-react";
 import "./ServiceDecisionStory.css";
 
-const decisions = [
+export const auditDecisions = [
   {
-    title: "Where do people lose momentum?",
-    body: "Look closely at the moments where a task slows down, a choice becomes unclear, or someone leaves a journey unfinished. These are the moments worth investigating before changing a screen.",
+    title: "A focused research plan",
+    body: "Align on the questions to answer, the people to learn from, and the methods that fit the product and project scope.",
     image: "https://images.unsplash.com/photo-1587355760421-b9de3226a046?auto=format&fit=crop&w=1400&q=85",
     alt: "Designer reviewing wireframes at a desk",
+    Icon: Target,
   },
   {
-    title: "Which needs are still assumptions?",
-    body: "Compare what the team believes with what people actually say and do. That distinction helps everyone agree on the problem before deciding on a solution.",
+    title: "Evidence from real users",
+    body: "Bring interview notes, observed behaviors, and usability findings together to show where expectations and experience differ.",
     image: "https://images.unsplash.com/photo-1766555766657-ea8f81a67934?auto=format&fit=crop&w=1400&q=85",
     alt: "Laptop and planning notes on a design workspace",
+    Icon: Search,
   },
   {
-    title: "What should change first?",
-    body: "Put the findings in context: how often a problem appears, how much it affects a task, and what it may take to address. That creates a useful order for the next design decisions.",
+    title: "A clearer view of key journeys",
+    body: "See how important tasks connect across screens, including the steps that cause friction, confusion, or drop-off.",
     image: "https://images.unsplash.com/photo-1700887944225-f148dd124305?auto=format&fit=crop&w=1400&q=85",
     alt: "Digital design work open on a computer screen",
+    Icon: Route,
   },
   {
-    title: "How will we know it helped?",
-    body: "Define the signals to revisit after a change, from task completion and support questions to feedback from the people using the product. The audit can then guide the next round of learning.",
+    title: "Prioritised next steps",
+    body: "Turn the findings into a practical sequence of improvements, with context your team can use to plan and evaluate the work.",
     image: "https://images.unsplash.com/photo-1573805672213-81b449b17e8a?auto=format&fit=crop&w=1400&q=85",
     alt: "Responsive digital interface displayed on a laptop",
+    Icon: TrendingUp,
+  },
+  {
+    title: "A baseline for measuring progress",
+    body: "Capture where the experience stands today and identify useful signals to revisit after improvements are made.",
+    image: "https://images.unsplash.com/photo-1587355760421-b9de3226a046?auto=format&fit=crop&w=1400&q=85",
+    alt: "Designer reviewing wireframes at a desk",
+    Icon: Gauge,
   },
 ] as const;
 
-export function ServiceDecisionStory() {
+export type Decision = { title: string; body: string; image?: string; alt?: string };
+export type Deliverable = { title: string; body: string };
+const decisionIcons = [Target, Search, Route, TrendingUp, Gauge];
+const fallbackImages = auditDecisions.map(({ image, alt }) => ({ image, alt }));
+
+export function ServiceDecisionStory({ items = auditDecisions, eyebrow = "Research to recommendations", heading = "A useful picture of what to improve.", intro = "Bring user evidence, interface reviews, and product context together. Leave with a shared understanding of the experience and a clear path for the next design decisions." }: { items?: readonly Decision[]; eyebrow?: string; heading?: string; intro?: string }) {
   const [active, setActive] = useState(0);
-  const stepsRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const steps = [...(stepsRef.current?.querySelectorAll<HTMLElement>(".service-decisions__step") ?? [])];
-    if (!steps.length || !window.matchMedia("(min-width: 801px)").matches) return;
-    let frame = 0;
-    const update = () => {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        const center = window.innerHeight * .48;
-        const nearest = steps.reduce((best, step, index) => {
-          const rect = step.getBoundingClientRect();
-          const distance = Math.abs(rect.top + rect.height / 2 - center);
-          const bestRect = steps[best].getBoundingClientRect();
-          return distance < Math.abs(bestRect.top + bestRect.height / 2 - center) ? index : best;
-        }, 0);
-        setActive(nearest);
-      });
-    };
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-    return () => { cancelAnimationFrame(frame); window.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
-  }, []);
 
   return <section className="service-decisions" aria-labelledby="service-decisions-title">
     <div className="service-decisions__inner">
-      <div className="service-decisions__heading"><p className="eyebrow">From evidence to action</p><h2 id="service-decisions-title">The decisions an audit should help you make.</h2><p>Beyond a list of findings, an audit gives your team a clearer basis for the choices ahead.</p></div>
       <div className="service-decisions__layout">
-        <div className="service-decisions__steps" ref={stepsRef}>
-          {decisions.map((decision, index) => <article className={`service-decisions__step${active === index ? " is-active" : ""}`} key={decision.title}>
-            <span className="service-decisions__number">0{index + 1}</span><h3>{decision.title}</h3><p>{decision.body}</p>
-            <figure className="service-decisions__mobile-image"><Image src={decision.image} alt={decision.alt} fill unoptimized sizes="(max-width: 800px) 100vw, 1px" /></figure>
-          </article>)}
+        <div className="service-decisions__feature">
+          <div className="service-decisions__heading"><p className="eyebrow">{eyebrow}</p><h2 id="service-decisions-title">{heading}</h2><p>{intro}</p>
+            <Link className="kyte-button" href="/contact">Discuss your product <ArrowRight size={18} aria-hidden="true" /></Link>
+          </div>
+          <figure className="service-decisions__visual-frame" aria-live="polite">
+            <Image key={items[active].image ?? fallbackImages[active].image} src={items[active].image ?? fallbackImages[active].image} alt={items[active].alt ?? fallbackImages[active].alt} fill unoptimized sizes="(max-width: 800px) 100vw, 48vw" />
+          </figure>
         </div>
-        <div className="service-decisions__visual" aria-hidden="true"><div className="service-decisions__visual-frame">
-          {decisions.map((decision, index) => <div className={`service-decisions__visual-image${active === index ? " is-active" : ""}`} key={decision.title}><Image src={decision.image} alt="" fill unoptimized sizes="(max-width: 800px) 1px, 48vw" /></div>)}
-          <span className="service-decisions__visual-counter">0{active + 1} / 04</span>
-        </div></div>
+        <div className="service-decisions__steps" aria-label="Service outcomes">
+          {items.map((decision, index) => { const Icon = decisionIcons[index]; return <article className={`service-decisions__step${active === index ? " is-active" : ""}`} key={decision.title}>
+            <button id={`service-decision-tab-${index}`} className="service-decisions__toggle" type="button" aria-expanded={active === index} aria-controls={`service-decision-panel-${index}`} onClick={() => setActive(index)}>
+              <span className="service-decisions__icon" aria-hidden="true"><Icon size={19} strokeWidth={1.8} /></span><span>{decision.title}</span>
+            </button>
+            <div id={`service-decision-panel-${index}`} className="service-decisions__panel" role="region" aria-labelledby={`service-decision-tab-${index}`} hidden={active !== index}>
+              <p>{decision.body}</p>
+            </div>
+          </article>; })}
+        </div>
       </div>
     </div>
   </section>;
 }
 
-const visualWork = [
-  { src: "/kyte-work/collectbee-browser.png", alt: "CollectBee website interface" },
-  { src: "/kyte-work/revenue-grid.png", alt: "Revenue Grid product interface" },
-  { src: "/kyte-work/spicy-bayer.webp", alt: "Spicy Bayer digital design" },
-  { src: "/kyte-work/maya.webp", alt: "Maya digital experience" },
-  { src: "/fincart/fincart-phone-cover.png", alt: "Fincart mobile app design" },
+export const auditDeliverables = [
+  { title: "Research plan", body: "A focused plan for the questions, audiences, and methods that will guide the audit." },
+  { title: "User and stakeholder interviews", body: "Discussion notes that bring user needs and internal context into the same view." },
+  { title: "Usability findings", body: "Clear observations of where people hesitate, make errors, or need extra support." },
+  { title: "Journey and flow review", body: "A map of key tasks across screens, with friction points and missed opportunities called out." },
+  { title: "Interface and accessibility review", body: "A practical assessment of interface consistency, responsive behavior, and accessibility basics." },
+  { title: "Prioritised recommendations", body: "A sequenced set of next steps your team can use to plan improvements." },
+  { title: "Evidence summary", body: "A concise account of what the research supports, with assumptions kept separate from observed findings." },
+  { title: "Opportunity map", body: "Themes grouped by user need and likely impact to help shape a practical design backlog." },
+  { title: "Handoff discussion", body: "A working session to review findings, answer questions, and agree on the next decisions." },
 ] as const;
 
-export function ServiceVisualBento() {
-  return <section className="service-visuals" aria-labelledby="service-visuals-title"><div className="service-visuals__inner">
-    <div className="service-visuals__heading"><p className="eyebrow">The work in view</p><h2 id="service-visuals-title">Across screens and experiences.</h2></div>
-    <div className="service-visuals__grid">{visualWork.map((item, index) => <figure className={`service-visuals__tile service-visuals__tile--${index + 1}`} key={item.src}><Image src={item.src} alt={item.alt} fill sizes={index > 2 ? "(max-width: 700px) 100vw, 50vw" : "(max-width: 700px) 100vw, 33vw"} /></figure>)}</div>
-  </div></section>;
+export function ServiceDeliverables({ items = auditDeliverables, heading = "Useful outputs for the next decision." }: { items?: readonly Deliverable[]; heading?: string }) {
+  return <section className="service-deliverables" aria-labelledby="service-deliverables-title">
+    <div className="service-deliverables__inner">
+      <div className="service-deliverables__heading">
+        <p className="eyebrow">What you receive</p>
+        <h2 id="service-deliverables-title">{heading}</h2>
+      </div>
+      <div className="service-deliverables__grid">
+        {items.map((item) => <article className="service-deliverables__item" key={item.title}>
+          <h3>{item.title}</h3>
+          <p>{item.body}</p>
+        </article>)}
+      </div>
+    </div>
+  </section>;
 }

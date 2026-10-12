@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
-import { WebsiteServicePage } from "@/components/WebsiteServicePage";
+import { ServiceDetailTemplate } from "@/components/ServiceDetailTemplate";
+import { servicePages } from "@/data/servicePages";
+import { loadServicePageContent } from "@/lib/service-content";
 
-export const metadata: Metadata = {
-  title: "Website Design & Development | Kyte",
-  description: "Kyte designs and builds websites that explain complex offers clearly, support useful journeys, and give teams room to grow.",
-};
+const path = "ui-ux-design-development/website-design-development";
 
-export default function WebsiteDesignDevelopmentPage() {
-  return <><SiteHeader /><WebsiteServicePage /><SiteFooter /></>;
+export async function generateMetadata(): Promise<Metadata> {
+  const service = await loadServicePageContent(path);
+  return { title: service?.title || servicePages[path].title, description: service?.description || servicePages[path].description };
+}
+
+export default async function WebsiteDesignDevelopmentPage() {
+  const service = await loadServicePageContent(path);
+  return <ServiceDetailTemplate service={service || servicePages[path]} />;
 }

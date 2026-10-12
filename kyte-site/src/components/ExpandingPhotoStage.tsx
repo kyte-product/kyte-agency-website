@@ -41,8 +41,8 @@ export function ExpandingPhotoStage({ label = "Digital design showcase" }: { lab
       }
 
       const bounds = section.getBoundingClientRect();
-      // Start the crop expansion as the stage reaches the viewport midpoint.
-      const expansion = clamp((window.innerHeight * .5 - bounds.top) / (window.innerHeight * .65));
+      // Expand the crop while the image moves normally through the viewport.
+      const expansion = clamp((window.innerHeight * .88 - bounds.top) / (window.innerHeight * .88));
       const eased = 1 - Math.pow(1 - expansion, 3);
       const smallSide = Math.min(500, frame.clientWidth * (frame.clientWidth < 700 ? .76 : .46), frame.clientHeight * .88);
       const insetX = Math.max(0, (frame.clientWidth - smallSide) / 2) * (1 - eased);
@@ -100,7 +100,7 @@ export function ExpandingPhotoStage({ label = "Digital design showcase" }: { lab
   }, []);
 
   return <section ref={sectionRef} className="expanding-photo-stage" aria-label={label} data-site-reveal-ignore>
-    <div className="expanding-photo-stage__sticky"><div ref={frameRef} className="expanding-photo-stage__frame">
+    <div className="expanding-photo-stage__frame-wrap"><div ref={frameRef} className="expanding-photo-stage__frame">
       {slides.map((slide, index) => <div className="expanding-photo-stage__slide" key={slide.src} style={index ? { clipPath: "inset(0 100% 0 0)" } : undefined} aria-hidden="true">
         <Image src={slide.src} alt={slide.alt} fill sizes="100vw" unoptimized />
       </div>)}
