@@ -4,16 +4,16 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import "./ExpandingPhotoStage.css";
 
-// Temporary Unsplash architecture photographs. Sources are recorded in public/about-architecture/README.md.
+// Unsplash digital design photographs. Sources are recorded in public/ux-design-photos/README.md.
 const slides = [
-  { src: "/about-architecture/glass-facade.avif", alt: "Sunlit glass facade of a modern building" },
-  { src: "/about-architecture/spiral-staircase.avif", alt: "Spiral staircase inside a modern building" },
-  { src: "/about-architecture/concrete-facade.avif", alt: "Geometric concrete building facade" },
+  { src: "https://images.unsplash.com/photo-1782898669223-ab17b600d486?auto=format&fit=crop&w=2400&q=85", alt: "Hands typing on a laptop displaying a web interface" },
+  { src: "https://images.unsplash.com/photo-1772272935464-2e90d8218987?auto=format&fit=crop&w=2400&q=85", alt: "Laptop screen displaying web interface design options" },
+  { src: "https://images.unsplash.com/photo-1700887944225-f148dd124305?auto=format&fit=crop&w=2400&q=85", alt: "Computer screen displaying a graphic design layout in editing software" },
 ] as const;
 
 const clamp = (value: number) => Math.min(1, Math.max(0, value));
 
-export function ExpandingPhotoStage({ label = "Architectural photography showcase" }: { label?: string }) {
+export function ExpandingPhotoStage({ label = "Digital design showcase" }: { label?: string }) {
   const sectionRef = useRef<HTMLElement>(null);
   const frameRef = useRef<HTMLDivElement>(null);
 

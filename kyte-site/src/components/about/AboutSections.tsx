@@ -7,7 +7,6 @@ import { aboutImpact, aboutTeams } from "./aboutContent";
 import { PhilosophyReveal } from "./AboutMotion";
 import { FincartImpactNumber } from "@/components/design-system/FincartImpactNumber";
 import { AboutFocusFigure } from "./AboutFocusFigure";
-import { AboutHorizontalGallery } from "./AboutHorizontalGallery";
 import "./AboutSections.css";
 
 const clientMarks = [
@@ -39,7 +38,6 @@ export function AboutPhilosophy() {
         <a href="https://www.instagram.com/varun__padmanabhan/" target="_blank" rel="noopener noreferrer" aria-label="Varun Padmanabhan on Instagram"><span>80K Followers | 7M+ Monthly Impressions</span><Image src="/social-icons/instagram.png" alt="" width={22} height={22} /></a>
       </div>
     </div>
-    <AboutHorizontalGallery />
   </section>;
 }
 
