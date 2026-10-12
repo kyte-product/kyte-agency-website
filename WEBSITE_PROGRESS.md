@@ -1975,3 +1975,8 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Increased the vertical space in each service outcome row and between its title and supporting copy. Made titles slightly larger and lighter, tightened their letter spacing, and softened the inactive text and icon surface to a slightly darker gray. Kept the title and icon centered on a shared row axis and preserved the blue active icon.
 - Updated `kyte-site/src/components/ServiceDecisionStory.css`; applies to all ten service pages using the shared section. `npm run lint`, `npx tsc --noEmit`, `npm run build`, and `git diff --check` passed. The local build logged the existing Sanity CDN DNS fallback messages for Work and Design News.
 - Merged GitHub PR #44 to `main` as `7b567e65acf7fc6788ef99f0b960b4003a9946b5`. Vercel production deployment `dpl_G1sEmXfRumLbw2fYX5nXDhZGJR2o` reached Ready and received the canonical `https://kyte-agency.vercel.app/` alias. The Vercel preview and live Mobile App Design route loaded with the updated shared outcomes content. Owner: Kyte website team.
+
+### 12 October 2026: Reduce service inclusion illustrations
+
+- Reduced the geometric illustrations in the shared “What’s included” cards from 56–68px to 48–58px on larger screens and from 60px to 48px on mobile. The change applies to every service page using the shared section.
+- Updated `kyte-site/src/components/ServiceApproach.css`. `npm run lint`, `npx tsc --noEmit`, and `git diff --check` passed. Kept on a local feature branch for review; no production deployment made. Owner: Kyte website team.
