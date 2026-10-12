@@ -8,7 +8,8 @@ export function Hero() {
     <div className="hero__inner">
       <div className="hero__explore">
         <nav className="hero__explore-actions" aria-label="Explore Kyte services">
-          <Link className="hero__explore-button" href="/ui-ux-design-development">UI/UX Design &amp; Development <ChevronRight size={16} aria-hidden="true" /></Link>
+          <Link className="hero__explore-button" href="/ui-ux-design-development">UI/UX Design &amp; Development <span className="hero__explore-mobile-dot" aria-hidden="true">·</span><ChevronRight size={16} aria-hidden="true" /></Link>
+          <span className="hero__explore-dot" aria-hidden="true">·</span>
           <Link className="hero__explore-button" href="/branding-marketing">Branding &amp; Marketing <ChevronRight size={16} aria-hidden="true" /></Link>
         </nav>
       </div>

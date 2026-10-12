@@ -1,43 +1,61 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { RevealWords } from "./RevealWords";
 import "./HomeTestimonials.css";
 
-// Short excerpts and portraits were already published on the Kyte homepage.
+// Short excerpts were already published on the Kyte homepage.
 // Source: https://www.kyte-agency.com/ (Testimonials, checked 12 October 2026).
 const testimonials = [
   {
     quote: "Highly recommend kyte for outstanding design",
     name: "Vaishali Chitnis",
     role: "Founder, Spicy Tango",
-    image: "/testimonials/vaishali-chitnis.jpg",
-    imageAlt: "Vaishali Chitnis with Spicy Tango products",
   },
   {
     quote: "Professional, communicative, and efficient",
     name: "Gautami Raiker",
     role: "Co-Founder, Contractzy",
-    image: "/testimonials/gautami-raiker.jpg",
-    imageAlt: "Portrait of Gautami Raiker",
   },
   {
     quote: "Consistently delivered high-quality work on time",
     name: "Vikram Shastry",
     role: "CEO, Black Lotus",
-    image: "/testimonials/vikram-shastry.jpg",
-    imageAlt: "Portrait of Vikram Shastry",
   },
   {
     quote: "Exceeded our expectations",
     name: "Dr. Pooja Malhotra",
     role: "Cofounder, VNA Hospital",
-    image: "/testimonials/pooja-malhotra.png",
-    imageAlt: "Portrait of Dr. Pooja Malhotra",
   },
 ] as const;
+
+function ScrollRevealQuote({ quote }: { quote: string }) {
+  const quoteRef = useRef<HTMLQuoteElement>(null);
+  const words = quote.split(/\s+/);
+  const [activeWords, setActiveWords] = useState(1);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let frame = 0;
+    const update = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        if (!quoteRef.current) return;
+        const rect = quoteRef.current.getBoundingClientRect();
+        const travel = window.innerHeight + rect.height * .3;
+        const progress = Math.min(1, Math.max(0, (window.innerHeight * .78 - rect.top) / travel));
+        setActiveWords(Math.max(1, Math.ceil(progress * words.length)));
+      });
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => { cancelAnimationFrame(frame); window.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
+  }, [quote, words.length]);
+
+  return <blockquote ref={quoteRef} aria-label={quote}>{words.map((word, index) => <span className={index < activeWords ? "is-active" : ""} aria-hidden="true" key={`${word}-${index}`}>{word}{index < words.length - 1 ? " " : ""}</span>)}</blockquote>;
+}
 
 export function HomeTestimonials() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -54,6 +72,7 @@ export function HomeTestimonials() {
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
+    track.scrollTo({ left: 0, behavior: "instant" });
     updateControls();
     track.addEventListener("scroll", updateControls, { passive: true });
     const observer = new ResizeObserver(updateControls);
@@ -89,12 +108,13 @@ export function HomeTestimonials() {
 
       <div className="home-testimonials__track" ref={trackRef} tabIndex={0} aria-label="Client testimonials">
         {testimonials.map((item) => <article className="home-testimonial" key={item.name}>
-          <div className="home-testimonial__portrait">
-            <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 800px) 84vw, 440px" quality={90} />
+          <div className="home-testimonial__portrait" role="img" aria-label={`Placeholder for a future video testimonial from ${item.name}`}>
+            <span>Client story</span>
+            <strong>Video coming soon</strong>
           </div>
           <div className="home-testimonial__body">
             <span className="home-testimonial__mark" aria-hidden="true">“</span>
-            <blockquote data-reveal-words><RevealWords text={item.quote} /></blockquote>
+            <ScrollRevealQuote quote={item.quote} />
             <div className="home-testimonial__attribution">
               <span className="home-testimonial__logo-placeholder" aria-hidden="true" />
               <div className="home-testimonial__person"><strong>{item.name}</strong><span>{item.role}</span></div>
