@@ -21,7 +21,9 @@ export function ServiceTestimonials() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   function goTo(index: number) {
     const next = Math.max(0, Math.min(clientTestimonials.length - 1, index));
-    trackRef.current?.querySelectorAll<HTMLElement>(".service-testimonial")[next]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+    const track = trackRef.current;
+    const card = track?.querySelectorAll<HTMLElement>(".service-testimonial")[next];
+    if (track && card) track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: "smooth" });
     setActiveIndex(next);
   }
   return <section className="service-testimonials" aria-labelledby="service-testimonials-title">
