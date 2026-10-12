@@ -1968,3 +1968,9 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Set the favicon to use the existing black mark for light system preference and the supplied white mark for dark preference. Updated the design-system navigation notes.
 - Changed `kyte-site/src/components/SiteHeader.tsx`, `src/app/globals.css`, `src/app/layout.tsx`, `src/app/design-system/page.tsx`, and added the white mark and wordmark under `kyte-site/public/`. ESLint, TypeScript, production build, and `git diff --check` passed. The local build reported the existing Sanity CDN DNS fallback messages for Work and Design News.
 - Merged GitHub PR #42 to `main` as `38d52ead552e4a44b9a1cf24cd7737a93fdfd63c`. Vercel production deployment `dpl_GMgYiokHvzjv1BRZMerm6KgXcPJL` reached Ready and received the canonical `https://kyte-agency.vercel.app/` alias. The live homepage and both new white assets loaded in the browser. The production build output contains light and dark `prefers-color-scheme` favicon links. Updated the current state above. Owner: Kyte website team.
+
+
+### 12 October 2026: Refine service outcome list spacing
+
+- Increased the vertical space in each service outcome row and between its title and supporting copy. Made titles slightly larger and lighter, tightened their letter spacing, and softened the inactive text and icon surface to a slightly darker gray. Kept the title and icon centered on a shared row axis and preserved the blue active icon.
+- Updated `kyte-site/src/components/ServiceDecisionStory.css`; applies to all ten service pages using the shared section. `npm run lint`, `npx tsc --noEmit`, `npm run build`, and `git diff --check` passed. The local build logged the existing Sanity CDN DNS fallback messages for Work and Design News. Local implementation complete; release status pending. Owner: Kyte website team.
