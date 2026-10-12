@@ -34,6 +34,11 @@ This is the handoff file for future Codex chats and team members. Read `AGENTS.m
 
 ## Confirmed direction
 
+### 12 October 2026: Smooth the page-transition curve
+
+- Adjusted the blue cover to reach its fullest curve around the middle of the viewport, then reduce its radius through several smaller steps before it reaches the top. The reveal now starts from a flat edge, which avoids a shape jump after the fully covered hold. The flat darker-blue outer panel, stagger, navigation timing, and reduced-motion bypass remain in place.
+- Updated the `/design-system` motion description. Desktop and 390px browser frame samples showed the radius tapering to zero before the blue layer finished rising. ESLint, TypeScript, production build, and `git diff --check` passed. The build used the existing Sanity CDN fallback in this environment. Owner: Kyte website team.
+
 ### 12 October 2026: Add curved page transition, footer controls and draft legal routes
 
 - Replaced the flat blue page cover with a flat dark-blue outer panel and a brand-blue inner panel. The inner edge enters flat, curves through the middle of a slow-fast-slow rise, and flattens again at the top. The fully covered view holds for 480 ms before route change and 180 ms after the destination loads. Reduced-motion users still navigate directly. The archived Pineapple homepage was inspected, but its captured About destination returned 404, so the exact end frame could not be verified there.
