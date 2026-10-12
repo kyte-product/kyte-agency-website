@@ -74,7 +74,7 @@ export function PageTransition() {
   }, [router]);
 
   return <div aria-hidden="true" className={`page-transition page-transition--${phase}`}>
-    <span className="page-transition__blue" onAnimationEnd={() => { if (phaseRef.current === "revealing") changePhase("idle"); }} />
-    <span className="page-transition__black" />
+    <span className="page-transition__outer" onAnimationEnd={() => { if (phaseRef.current === "revealing") changePhase("idle"); }} />
+    <span className="page-transition__blue" />
   </div>;
 }

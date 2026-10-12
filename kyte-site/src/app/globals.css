@@ -72,13 +72,15 @@ body::after { right: var(--page-edge); }
 .page-transition--covering, .page-transition--revealing { pointer-events: auto; }
 .page-transition span { position: absolute; inset: 0; display: block; transform: translate3d(0, 105%, 0); will-change: transform, border-radius; }
 .page-transition__blue { background: var(--color-blue); }
-.page-transition__black { background: var(--color-night); }
-.page-transition--covering .page-transition__blue { animation: page-curve-cover 740ms cubic-bezier(.65,0,.2,1) both; }
-.page-transition--covering .page-transition__black { animation: page-curve-cover 740ms 170ms cubic-bezier(.65,0,.2,1) both; }
-.page-transition--revealing .page-transition__black { transform: translate3d(0,0,0); animation: page-curve-reveal 720ms cubic-bezier(.7,0,.25,1) both; }
-.page-transition--revealing .page-transition__blue { transform: translate3d(0,0,0); animation: page-curve-reveal 720ms 140ms cubic-bezier(.7,0,.25,1) both; }
-@keyframes page-curve-cover { 0% { transform: translate3d(0,105%,0); border-radius: 50% 50% 0 0 / 24% 24% 0 0; } 72% { border-radius: 50% 50% 0 0 / 20% 20% 0 0; } 100% { transform: translate3d(0,0,0); border-radius: 0; } }
+.page-transition__outer { background: var(--color-blue-hover); }
+.page-transition--covering .page-transition__outer { animation: page-flat-cover 740ms cubic-bezier(.65,0,.2,1) both; }
+.page-transition--covering .page-transition__blue { animation: page-curve-cover 740ms 170ms cubic-bezier(.65,0,.2,1) both; }
+.page-transition--revealing .page-transition__blue { transform: translate3d(0,0,0); animation: page-curve-reveal 720ms cubic-bezier(.7,0,.25,1) both; }
+.page-transition--revealing .page-transition__outer { transform: translate3d(0,0,0); animation: page-flat-reveal 720ms 140ms cubic-bezier(.7,0,.25,1) both; }
+@keyframes page-flat-cover { from { transform: translate3d(0,105%,0); } to { transform: translate3d(0,0,0); } }
+@keyframes page-curve-cover { 0% { transform: translate3d(0,105%,0); border-radius: 0; } 25% { border-radius: 50% 50% 0 0 / 12% 12% 0 0; } 55% { border-radius: 50% 50% 0 0 / 24% 24% 0 0; } 75% { border-radius: 50% 50% 0 0 / 20% 20% 0 0; } 100% { transform: translate3d(0,0,0); border-radius: 0; } }
 @keyframes page-curve-reveal { 0% { transform: translate3d(0,0,0); border-radius: 0 0 40% 40% / 0 0 8% 8%; } 100% { transform: translate3d(0,-105%,0); border-radius: 0 0 50% 50% / 0 0 12% 12%; } }
+@keyframes page-flat-reveal { from { transform: translate3d(0,0,0); } to { transform: translate3d(0,-105%,0); } }
 @media (prefers-reduced-motion: reduce) { .page-transition { display: none; } }
 button, a { -webkit-tap-highlight-color: transparent; }
 a[href],button:not(:disabled),[role="button"],summary,label[for] { cursor: pointer; }

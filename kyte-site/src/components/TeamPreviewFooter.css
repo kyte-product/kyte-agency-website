@@ -35,6 +35,7 @@
 .site-footer__designrush small { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); font-size: var(--type-label); line-height: 1.4; }
 .site-footer__designrush:hover small, .site-footer__ai-links a:hover, .site-footer__social-links a:hover, .site-footer__reach a:hover { color: var(--color-blue); }
 .site-footer__ai-links, .site-footer__social-links { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+.site-footer__ai-hint { margin: -6px 0 0; color: var(--muted); font-size: var(--type-label); line-height: 1.35; }
 .site-footer__ai-links a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: var(--radius-control); color: var(--ink); transition: color .18s ease; }
 .site-footer__ai-icon { display: block; width: 20px; height: 20px; flex: 0 0 20px; object-fit: contain; filter: brightness(0); opacity: .58; transition: filter .18s ease, opacity .18s ease; }
 .site-footer__ai-link--chatgpt:hover .site-footer__ai-icon,
