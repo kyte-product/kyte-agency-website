@@ -38,8 +38,9 @@ export function CareerOpportunities({ roles }: { roles: CareerRole[] }) {
     </ul>
 
     <dialog ref={dialogRef} className="careers-dialog" aria-labelledby="careers-dialog-title" onClose={() => { setSelected(null); triggerRef.current?.focus(); }} onClick={event => { if (event.target === dialogRef.current) close(); }}>
-      {selected && <div className="careers-dialog__layout">
-        <div className="careers-dialog__intro">
+      {selected && <div className="careers-drawer">
+        <header className="careers-drawer__header">
+          <div className="careers-drawer__intro">
           <p className="careers-dialog__eyebrow">{selected.team || "Kyte team"}</p>
           <h2 id="careers-dialog-title">{selected.title}</h2>
           <p>{selected.summary}</p>
@@ -48,16 +49,17 @@ export function CareerOpportunities({ roles }: { roles: CareerRole[] }) {
             <span>{selected.experienceLevel || sampleLevels[selected.slug] || "Open level"}</span>
             {selected.employmentType && <span>{selected.employmentType}</span>}
           </div>
-        </div>
-        <div className="careers-dialog__body">
+          </div>
           <button className="careers-dialog__close" type="button" aria-label="Close role details" onClick={close}><X size={21} aria-hidden="true" /></button>
+        </header>
+        <div className="careers-drawer__scroll">
           <div className="careers-dialog__content">
             {selected.responsibilities?.length > 0 && <section><h3>What you will do</h3><ul>{selected.responsibilities.map((item, index) => <li key={`${index}-${item}`}>{item}</li>)}</ul></section>}
             {selected.requirements?.length > 0 && <section><h3>What we are looking for</h3><ul>{selected.requirements.map((item, index) => <li key={`${index}-${item}`}>{item}</li>)}</ul></section>}
             {selected.hiringProcess && <section><h3>Hiring process</h3><p>{selected.hiringProcess}</p></section>}
           </div>
-          <div className="careers-dialog__footer">{isSafeApplicationUrl(selected.applyUrl) ? <a className="kyte-button careers-dialog__apply" href={selected.applyUrl!} target="_blank" rel="noopener noreferrer">Apply now <ArrowUpRight size={17} aria-hidden="true" /></a> : <button className="kyte-button careers-dialog__apply" type="button" disabled>Apply now</button>}</div>
         </div>
+        <div className="careers-dialog__footer">{isSafeApplicationUrl(selected.applyUrl) ? <a className="kyte-button careers-dialog__apply" href={selected.applyUrl!} target="_blank" rel="noopener noreferrer">Apply now <ArrowUpRight size={17} aria-hidden="true" /></a> : <button className="kyte-button careers-dialog__apply" type="button" disabled>Apply now</button>}</div>
       </div>}
     </dialog>
   </>;
