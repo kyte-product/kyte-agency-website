@@ -68,9 +68,17 @@ body { overflow-x: clip; margin: 0; padding-top: calc(72px + var(--announcement-
 body::before, body::after { position: fixed; top: 72px; bottom: 0; z-index: 80; width: 1px; background: var(--line); content: ""; pointer-events: none; }
 body::before { left: var(--page-edge); }
 body::after { right: var(--page-edge); }
-.page-transition { position: fixed; inset: 0; z-index: 9999; background: var(--color-blue); pointer-events: none; transform: translate3d(0, 100%, 0); will-change: transform; }
-.page-transition--covering { pointer-events: auto; transform: translate3d(0, 0, 0); transition: transform 560ms cubic-bezier(.76, 0, .24, 1); }
-.page-transition--revealing { pointer-events: auto; transform: translate3d(0, -100%, 0); transition: transform 620ms cubic-bezier(.76, 0, .24, 1); }
+.page-transition { position: fixed; inset: 0; z-index: 9999; overflow: hidden; pointer-events: none; }
+.page-transition--covering, .page-transition--revealing { pointer-events: auto; }
+.page-transition span { position: absolute; inset: 0; display: block; transform: translate3d(0, 105%, 0); will-change: transform, border-radius; }
+.page-transition__blue { background: var(--color-blue); }
+.page-transition__black { background: var(--color-night); }
+.page-transition--covering .page-transition__blue { animation: page-curve-cover 740ms cubic-bezier(.65,0,.2,1) both; }
+.page-transition--covering .page-transition__black { animation: page-curve-cover 740ms 170ms cubic-bezier(.65,0,.2,1) both; }
+.page-transition--revealing .page-transition__black { transform: translate3d(0,0,0); animation: page-curve-reveal 720ms cubic-bezier(.7,0,.25,1) both; }
+.page-transition--revealing .page-transition__blue { transform: translate3d(0,0,0); animation: page-curve-reveal 720ms 140ms cubic-bezier(.7,0,.25,1) both; }
+@keyframes page-curve-cover { 0% { transform: translate3d(0,105%,0); border-radius: 50% 50% 0 0 / 24% 24% 0 0; } 72% { border-radius: 50% 50% 0 0 / 20% 20% 0 0; } 100% { transform: translate3d(0,0,0); border-radius: 0; } }
+@keyframes page-curve-reveal { 0% { transform: translate3d(0,0,0); border-radius: 0 0 40% 40% / 0 0 8% 8%; } 100% { transform: translate3d(0,-105%,0); border-radius: 0 0 50% 50% / 0 0 12% 12%; } }
 @media (prefers-reduced-motion: reduce) { .page-transition { display: none; } }
 button, a { -webkit-tap-highlight-color: transparent; }
 a[href],button:not(:disabled),[role="button"],summary,label[for] { cursor: pointer; }

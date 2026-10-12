@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Mail, Phone } from "lucide-react";
+import { AiQuestionLink, CookieSettingsButton } from "./FooterActions";
 import "./TeamPreviewFooter.css";
 
 const productServices = [
@@ -27,10 +28,10 @@ const industries = [
 ] as const;
 
 const aiTools = [
-  ["ChatGPT", "https://chatgpt.com/", "chatgpt"],
-  ["Claude", "https://claude.ai/new", "claude"],
-  ["Gemini", "https://gemini.google.com/app", "gemini"],
-  ["Grok", "https://grok.com/", "grok"],
+  ["ChatGPT", "chatgpt"],
+  ["Claude", "claude"],
+  ["Gemini", "gemini"],
+  ["Grok", "grok"],
 ] as const;
 
 function FooterLinks({ items }: { items: readonly (readonly [string, string])[] }) {
@@ -44,6 +45,7 @@ export function TeamPreviewFooter() {
           <div className="site-footer__brand">
             <Link className="site-footer__logo" href="/" aria-label="Kyte home"><Image src="/kyte-agency-logo.svg" alt="" width={1379} height={200} unoptimized /></Link>
             <p>Product, website and brand design for the next stage of your business.</p>
+            <address>Bangalore, India</address>
             <Link className="site-footer__more" href="/contact">Start a project <ChevronRight size={15} aria-hidden="true" /></Link>
           </div>
 
@@ -71,13 +73,13 @@ export function TeamPreviewFooter() {
       <section className="site-footer__utility" aria-label="More ways to connect with Kyte">
         <div className="site-footer__utility-inner">
           <div className="site-footer__utility-grid">
-            <a className="site-footer__utility-cell site-footer__designrush" href="https://www.designrush.com/" target="_blank" rel="noreferrer">
+            <a className="site-footer__utility-cell site-footer__designrush" href="https://www.designrush.com/agency/profile/kyte-agency" target="_blank" rel="noopener noreferrer">
               <Image className="site-footer__designrush-badge" src="/designrush-verified-agency-2024.png" alt="DesignRush Verified Agency 2024" width={217} height={290} unoptimized />
               <span><strong>On DesignRush</strong><small>View agency profile <ChevronRight size={13} strokeWidth={1.7} aria-hidden="true" /></small></span>
             </a>
             <div className="site-footer__utility-cell">
               <p className="site-footer__utility-label">Ask AI about Kyte</p>
-              <div className="site-footer__ai-links">{aiTools.map(([name, href, icon]) => <a className={`site-footer__ai-link site-footer__ai-link--${icon}`} href={href} target="_blank" rel="noreferrer" aria-label={`Ask about Kyte on ${name}`} key={name}><Image className="site-footer__ai-icon" src={`/ai-logos/${icon}.png`} alt="" width={24} height={24} /></a>)}</div>
+              <div className="site-footer__ai-links">{aiTools.map(([name, icon]) => <AiQuestionLink className={`site-footer__ai-link site-footer__ai-link--${icon}`} provider={name} key={name}><Image className="site-footer__ai-icon" src={`/ai-logos/${icon}.png`} alt="" width={24} height={24} /></AiQuestionLink>)}</div>
             </div>
             <div className="site-footer__utility-cell">
               <p className="site-footer__utility-label">Social media</p>
@@ -94,7 +96,7 @@ export function TeamPreviewFooter() {
           </div>
           <div className="site-footer__bottom">
             <span>© 2026 Kyte Agency</span>
-            <div><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms">Terms</Link></div>
+            <div><CookieSettingsButton /><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms">Terms and conditions</Link></div>
           </div>
         </div>
       </section>
