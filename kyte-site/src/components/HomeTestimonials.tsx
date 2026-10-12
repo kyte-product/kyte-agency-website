@@ -11,7 +11,6 @@ import "./HomeTestimonials.css";
 const testimonials = [
   {
     quote: "Highly recommend kyte for outstanding design",
-    context: "Visuals for Spicy Tango’s social channels and product packaging.",
     name: "Vaishali Chitnis",
     role: "Founder, Spicy Tango",
     image: "/testimonials/vaishali-chitnis.jpg",
@@ -19,7 +18,6 @@ const testimonials = [
   },
   {
     quote: "Professional, communicative, and efficient",
-    context: "A rebrand from The Legal Capsule to Contractzy, with identity and web design.",
     name: "Gautami Raiker",
     role: "Co-Founder, Contractzy",
     image: "/testimonials/gautami-raiker.jpg",
@@ -27,7 +25,6 @@ const testimonials = [
   },
   {
     quote: "Consistently delivered high-quality work on time",
-    context: "Social and search advertising work for Black Lotus.",
     name: "Vikram Shastry",
     role: "CEO, Black Lotus",
     image: "/testimonials/vikram-shastry.jpg",
@@ -35,7 +32,6 @@ const testimonials = [
   },
   {
     quote: "Exceeded our expectations",
-    context: "Brochures, flyers and marketing materials for VNA Hospital.",
     name: "Dr. Pooja Malhotra",
     role: "Cofounder, VNA Hospital",
     image: "/testimonials/pooja-malhotra.png",
@@ -94,13 +90,15 @@ export function HomeTestimonials() {
       <div className="home-testimonials__track" ref={trackRef} tabIndex={0} aria-label="Client testimonials">
         {testimonials.map((item) => <article className="home-testimonial" key={item.name}>
           <div className="home-testimonial__portrait">
-            <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 700px) 88vw, 410px" />
+            <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 800px) 84vw, 440px" quality={90} />
           </div>
           <div className="home-testimonial__body">
             <span className="home-testimonial__mark" aria-hidden="true">“</span>
-            <blockquote>{item.quote}</blockquote>
-            <p className="home-testimonial__context">{item.context}</p>
-            <div className="home-testimonial__person"><strong>{item.name}</strong><span>{item.role}</span></div>
+            <blockquote data-reveal-words><RevealWords text={item.quote} /></blockquote>
+            <div className="home-testimonial__attribution">
+              <span className="home-testimonial__logo-placeholder" aria-hidden="true" />
+              <div className="home-testimonial__person"><strong>{item.name}</strong><span>{item.role}</span></div>
+            </div>
           </div>
         </article>)}
       </div>
