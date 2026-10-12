@@ -19,11 +19,12 @@ export const auditOfferings = [
   },
 ] as const;
 
-export function ServiceOfferings({ items = auditOfferings, serviceName = "UX research & design audits" }: { items?: readonly { title: string; description: string }[]; serviceName?: string }) {
+export function ServiceOfferings({ items = auditOfferings, serviceName = "UX research & design audits", heading = "What we offer", intro }: { items?: readonly { title: string; description: string }[]; serviceName?: string; heading?: string; intro?: string }) {
   return <section className="service-offerings" aria-labelledby="service-offerings-title">
     <div className="service-offerings__inner">
       <p className="eyebrow">{serviceName}</p>
-      <h2 id="service-offerings-title">What we offer</h2>
+      <h2 id="service-offerings-title">{heading}</h2>
+      {intro && <p className="service-offerings__intro">{intro}</p>}
       <div className="service-offerings__list">
         {items.map((offering, index) => <article className="service-offering" key={offering.title}>
           <h3>{offering.title}</h3>

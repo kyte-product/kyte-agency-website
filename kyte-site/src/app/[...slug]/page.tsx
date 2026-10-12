@@ -14,7 +14,7 @@ import { ServiceOfferings } from "@/components/ServiceOfferings";
 import { ServiceApproach } from "@/components/ServiceApproach";
 import { ServiceDecisionStory, ServiceDeliverables } from "@/components/ServiceDecisionStory";
 import { ServiceDetailTemplate } from "@/components/ServiceDetailTemplate";
-import { servicePages } from "@/data/servicePages";
+import { loadServicePageContent } from "@/lib/service-content";
 import type { Metadata } from "next";
 import "../service-detail.css";
 
@@ -49,9 +49,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
   const path = (await params).slug.join("/");
-  const service = servicePages[path];
+  const service = await loadServicePageContent(path);
   if (service) return { title: service.title, description: service.description };
-  if (path === "ui-ux-design-development/ux-research-design-audit") return { title: "UX Research & Design Audits | Kyte Agency", description: "Understand where people struggle in your product and turn research, usability findings, and journey reviews into prioritised improvements." };
   return { title: plannedPages[path] ? `${plannedPages[path]} | Kyte Agency` : "Kyte Agency" };
 }
 
@@ -61,32 +60,38 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
   const title = plannedPages[path];
   if (!title) notFound();
 
-  if (servicePages[path]) return <ServiceDetailTemplate service={servicePages[path]} />;
-
   if (path === "ui-ux-design-development/ux-research-design-audit") {
+    const service = await loadServicePageContent(path);
+    const outcomeItems = service?.outcomes.map(({ title, body }) => ({ title, body }));
+    const deliverableItems = service?.deliverables.map(({ title, body }) => ({ title, body }));
+    const faqItems = service?.faqs.map(({ title, body }) => ({ question: title, answer: body }));
+    const inline = service?.heroInline;
     return <><SiteHeader /><main className="service-detail">
       <TextRevealMotion />
       <section className="service-detail__hero" aria-labelledby="ux-audit-title">
         <div className="service-detail__hero-inner">
-          <p className="eyebrow">UX Research &amp; Design Audits</p>
-          <h1 id="ux-audit-title"><span className="service-detail__headline-line">Find the <span className="service-detail__headline-portrait"><Image src="https://images.unsplash.com/photo-1776278806688-64ef6a7e2cc5?auto=format&fit=crop&w=480&q=85" alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span> friction</span><span className="service-detail__headline-line">Know what to <span className="service-detail__headline-portrait"><Image src="https://images.unsplash.com/photo-1791197738079-d25b54cd42dc?auto=format&fit=crop&w=480&q=85" alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span> <span className="service-detail__headline-accent">improve.</span></span></h1>
+          <p className="eyebrow">{service?.name || "UX Research & Design Audits"}</p>
+          <h1 id="ux-audit-title"><span className="service-detail__headline-line">{inline?.lineOneLead || "Find the"} <span className="service-detail__headline-portrait"><Image src="https://images.unsplash.com/photo-1776278806688-64ef6a7e2cc5?auto=format&fit=crop&w=480&q=85" alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span> {inline?.lineOneFocus || "friction"}</span><span className="service-detail__headline-line">{inline?.lineTwoLead || "Know what to"} <span className="service-detail__headline-portrait"><Image src="https://images.unsplash.com/photo-1791197738079-d25b54cd42dc?auto=format&fit=crop&w=480&q=85" alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span> <span className="service-detail__headline-accent">{inline?.lineTwoFocus || "improve."}</span></span></h1>
           <div className="service-detail__hero-bottom">
-            <p>We look at how people use your product, where friction appears, and which changes can make the experience clearer.</p>
+            <p>{service?.opening || "We look at how people use your product, where friction appears, and which changes can make the experience clearer."}</p>
             <Link className="kyte-button" href="/contact">Talk through an audit <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
         </div>
       </section>
       <ExpandingPhotoStage label="Digital design imagery for UX research and design audits" />
-      <ServiceOfferings />
-      <ServiceApproach />
-      <ServiceDecisionStory />
-      <ServiceDeliverables />
-      <ServiceOurProcess />
+      <ServiceOfferings items={service?.offerings.length ? service.offerings.map(({ title, body }) => ({ title, description: body })) : undefined} serviceName={service?.name} heading={service?.offeringsHeading || "What we offer"} intro={service?.offeringsIntro} />
+      <ServiceApproach items={service?.inclusions?.length ? service.inclusions : undefined} heading={service?.includedHeading} intro={service?.includedIntro} />
+      <ServiceDecisionStory items={outcomeItems?.length ? outcomeItems : undefined} heading={service?.outcomesHeading} intro={service?.outcomesIntro} eyebrow="From scope to outcome" />
+      <ServiceDeliverables items={deliverableItems?.length ? deliverableItems : undefined} heading={service?.deliverablesHeading || "Useful outputs for the next decision."} />
+      <ServiceOurProcess intro={service?.processIntro} steps={service?.processSteps} />
       <WorkShowcase />
       <ServiceTestimonials />
-      <HomeFaq />
+      <HomeFaq items={faqItems?.length ? faqItems : undefined} heading={service?.faqHeading || "A few things you may be wondering."} />
     </main><SiteFooter /></>;
   }
+
+  const service = await loadServicePageContent(path);
+  if (service) return <ServiceDetailTemplate service={service} />;
 
   return <><SiteHeader /><main className="planned-page"><Link className="planned-page__back" href="/"><ArrowLeft size={18} strokeWidth={1.7} aria-hidden="true" /> Home</Link><p className="eyebrow">Page in progress</p><h1>{title}</h1><p>This page is being prepared for the new Kyte website.</p></main><SiteFooter /></>;
 }

@@ -4,15 +4,23 @@ export type ServicePageContent = {
   title: string;
   description: string;
   hero: [string, string];
+  heroInline?: { lineOneLead: string; lineOneFocus: string; lineTwoLead: string; lineTwoFocus: string };
   opening: string;
   offerings: { title: string; body: string }[];
+  offeringsHeading?: string;
+  offeringsIntro?: string;
   includedHeading: string;
   includedIntro: string;
+  inclusions?: { symbol: number; title: string; description: string }[];
   outcomesHeading: string;
   outcomesIntro: string;
   outcomes: { title: string; body: string }[];
   deliverables: { title: string; body: string }[];
+  deliverablesHeading?: string;
+  processIntro?: string;
+  processSteps?: { name: string; title: string; description: string }[];
   faqs: { title: string; body: string }[];
+  faqHeading?: string;
 };
 
 const pairs = (entries: [string, string][]) => entries.map(([title, body]) => ({ title, body }));

@@ -96,6 +96,8 @@ The draft should answer the user's question within the opening screen. Do not be
 
 The routes below reproduce the proposed IA. Suggested query themes need validation before final titles or copy. Dynamic pages are templates, not permission to invent clients, roles, or articles.
 
+**12 October 2026 update:** All ten child-service routes now have prelaunch copy and SEO fields in the existing Sanity `servicePage` records. The shared Next.js service layouts read that published CMS content. Treat the records as working copy from these briefs: complete the human editorial pass, confirm delivery boundaries, and replace temporary imagery and testimonial placeholders before public launch.
+
 ### Core pages
 
 | Route | Primary job and query theme | Required content and proof |

@@ -23,7 +23,7 @@ const images = [
 ];
 
 export function ServiceDetailTemplate({ service }: { service: ServicePageContent }) {
-  const inclusions = [
+  const inclusions = service.inclusions ?? [
     { symbol: 0, title: "The right context", description: `We begin with the audience, goals, existing material, and constraints behind the ${service.name.toLowerCase()} brief.` },
     { symbol: 1, title: "A clear working scope", description: "We agree on the outputs, responsibilities, and review points before detailed work begins." },
     { symbol: 2, title: "Decisions made together", description: "Working reviews give your team a chance to test directions and bring relevant context into each decision." },
@@ -39,13 +39,13 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
       </div>
     </section>
     <ExpandingPhotoStage label={`Design work imagery for ${service.name}`} />
-    <ServiceOfferings items={service.offerings.map((item) => ({ title: item.title, description: item.body }))} serviceName={service.name} />
+    <ServiceOfferings items={service.offerings.map((item) => ({ title: item.title, description: item.body }))} serviceName={service.name} heading={service.offeringsHeading} intro={service.offeringsIntro} />
     <ServiceApproach items={inclusions} heading={service.includedHeading} intro={service.includedIntro} />
     <ServiceDecisionStory items={decisions} heading={service.outcomesHeading} intro={service.outcomesIntro} eyebrow="From scope to outcome" />
-    <ServiceDeliverables items={service.deliverables} heading="What you can take forward." />
-    <ServiceOurProcess intro={`We shape each ${service.name.toLowerCase()} engagement around the brief, then move through discovery, definition, development, and delivery with clear reviews along the way.`} />
+    <ServiceDeliverables items={service.deliverables} heading={service.deliverablesHeading || "Useful outputs for the next decision."} />
+    <ServiceOurProcess intro={service.processIntro || `We shape each ${service.name.toLowerCase()} engagement around the brief, then move through discovery, definition, development, and delivery with clear reviews along the way.`} steps={service.processSteps} />
     <WorkShowcase />
     <ServiceTestimonials />
-    <HomeFaq items={service.faqs.map((item) => ({ question: item.title, answer: item.body }))} heading={`Questions about ${service.name.toLowerCase()}.`} />
+    <HomeFaq items={service.faqs.map((item) => ({ question: item.title, answer: item.body }))} heading={service.faqHeading || `Questions about ${service.name.toLowerCase()}.`} />
   </main><SiteFooter /></>;
 }

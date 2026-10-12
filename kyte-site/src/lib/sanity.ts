@@ -32,11 +32,43 @@ export type PortableTextBlock = {
   children?: { _key: string; _type: "span"; text: string; marks?: string[] }[];
 };
 
+export type ServicePageItem = {
+  _key?: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+};
+
 export type ServicePage = {
   _id: string;
   title: string;
   slug: string;
   summary: string | null;
+  hero?: {
+    lineOne?: string;
+    lineTwo?: string;
+    lineOneLead?: string;
+    lineOneFocus?: string;
+    lineTwoLead?: string;
+    lineTwoFocus?: string;
+    opening?: string;
+  } | null;
+  offeringsHeading?: string | null;
+  offeringsIntro?: string | null;
+  offerings?: ServicePageItem[] | null;
+  includedHeading?: string | null;
+  includedIntro?: string | null;
+  inclusions?: ServicePageItem[] | null;
+  outcomesHeading?: string | null;
+  outcomesIntro?: string | null;
+  outcomes?: ServicePageItem[] | null;
+  deliverablesHeading?: string | null;
+  deliverables?: ServicePageItem[] | null;
+  processIntro?: string | null;
+  processSteps?: ServicePageItem[] | null;
+  faqHeading?: string | null;
+  faqs?: ServicePageItem[] | null;
+  seo?: { title?: string | null; description?: string | null } | null;
   sections?: unknown[];
 };
 
@@ -108,7 +140,14 @@ export function getPublishedServices(): Promise<ServicePage[]> {
 }
 
 export function getPublishedServiceBySlug(slug: string): Promise<ServicePage | null> {
-  return query(`*[_type == "servicePage" && slug.current == $slug][0]{_id,title,"slug":slug.current,summary,sections}`, { slug });
+  return query(`*[_type == "servicePage" && slug.current == $slug][0]{
+    _id,title,"slug":slug.current,summary,hero,
+    offeringsHeading,offeringsIntro,"offerings":offerings[]{_key,title,description},
+    includedHeading,includedIntro,"inclusions":inclusions[]{_key,title,description},
+    outcomesHeading,outcomesIntro,"outcomes":outcomes[]{_key,title,description},
+    deliverablesHeading,"deliverables":deliverables[]{_key,title,description},
+    processIntro,"processSteps":processSteps[]{_key,title,subtitle,description},faqHeading,"faqs":faqs[]{_key,title,description},seo
+  }`, { slug });
 }
 
 export function getPublishedDesignNews(): Promise<DesignNewsArticle[]> {

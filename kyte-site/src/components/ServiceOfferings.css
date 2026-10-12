@@ -11,6 +11,8 @@
 
 .service-offerings__inner > .eyebrow { margin-bottom: 14px; }
 .service-offerings h2 { margin: 0 0 clamp(34px,4vw,54px); font-size: var(--heading-section); font-weight: var(--heading-weight); line-height: var(--heading-line-height); letter-spacing: -.045em; }
+.service-offerings__intro { max-width: 760px; margin: -4px 0 clamp(30px,3vw,42px); color: var(--muted); font-size: var(--type-lead); line-height: 1.55; }
+.service-offerings h2:has(+ .service-offerings__intro) { margin-bottom: 14px; }
 .service-offerings__list { border-top: 1px solid var(--line); }
 
 .service-offering {
