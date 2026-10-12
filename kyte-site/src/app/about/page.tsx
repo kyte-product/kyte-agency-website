@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { AboutImpact, AboutPhilosophy } from "@/components/about/AboutSections";
 import { AboutScrollMotion } from "@/components/about/AboutMotion";
-import { AboutTeamShowcase } from "@/components/about/AboutTeamShowcase";
+import { ExpandingPhotoStage } from "@/components/ExpandingPhotoStage";
 import { aboutTeams } from "@/components/about/aboutContent";
 import "./about.css";
 
@@ -35,7 +35,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <AboutTeamShowcase />
+      <ExpandingPhotoStage />
 
       <AboutPhilosophy />
       <AboutImpact />
