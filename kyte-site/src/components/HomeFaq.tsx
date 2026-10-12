@@ -28,18 +28,18 @@ const questions = [
   },
 ] as const;
 
-export function HomeFaq() {
+export function HomeFaq({ items = questions, heading = "A few things you may be wondering." }: { items?: readonly { question: string; answer: string }[]; heading?: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return <section className="home-faq" aria-labelledby="home-faq-title">
     <div className="home-faq__inner">
       <div className="home-faq__intro">
         <p className="eyebrow" data-reveal-words><RevealWords text="FAQ" /></p>
-        <h2 id="home-faq-title" data-reveal-words data-reveal-delay="70"><RevealWords text="A few things you may be wondering." /></h2>
+        <h2 id="home-faq-title" data-reveal-words data-reveal-delay="70"><RevealWords text={heading} /></h2>
         <p data-reveal-words data-reveal-delay="120"><RevealWords text="If your question is not here, tell us what you are working through." /></p>
       </div>
       <div className="home-faq__list">
-        {questions.map((item, index) => <article className={openIndex === index ? "is-open" : ""} key={item.question}>
+        {items.map((item, index) => <article className={openIndex === index ? "is-open" : ""} key={item.question}>
           <h3><button type="button" aria-expanded={openIndex === index} aria-controls={`home-faq-answer-${index}`} onClick={() => setOpenIndex(openIndex === index ? null : index)}>{item.question}<span aria-hidden="true">{openIndex === index ? <Minus size={20} strokeWidth={1.7} /> : <Plus size={20} strokeWidth={1.7} />}</span></button></h3>
           <div id={`home-faq-answer-${index}`} hidden={openIndex !== index}><p>{item.answer}</p></div>
         </article>)}

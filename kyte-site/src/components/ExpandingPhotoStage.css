@@ -1,5 +1,5 @@
-.expanding-photo-stage { position: relative; z-index: 81; height: 235dvh; background: var(--color-surface-secondary); }
-.expanding-photo-stage__sticky { position: sticky; top: 0; display: grid; place-items: center; width: 100%; height: 100dvh; }
+.expanding-photo-stage { position: relative; z-index: 81; height: 100dvh; background: var(--color-surface-secondary); }
+.expanding-photo-stage__frame-wrap { position: relative; display: grid; place-items: center; width: 100%; height: 100%; }
 .expanding-photo-stage__frame { position: relative; width: 100%; height: 100dvh; overflow: hidden; background: #171717; clip-path: inset(12% 30% round 8px); will-change: clip-path; }
 .expanding-photo-stage__slide { position: absolute; inset: 0; overflow: hidden; }
 .expanding-photo-stage__slide:not(:first-child) { opacity: 0; }
@@ -12,7 +12,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .expanding-photo-stage { height: auto; }
-  .expanding-photo-stage__sticky { position: relative; top: auto; height: auto; }
-  .expanding-photo-stage__frame { height: 100dvh; clip-path: none; will-change: auto; }
+  .expanding-photo-stage__frame-wrap { height: auto; }
+  .expanding-photo-stage__frame { height: min(85dvh, 760px); clip-path: none; will-change: auto; }
   .expanding-photo-stage__wipe { display: none; }
 }

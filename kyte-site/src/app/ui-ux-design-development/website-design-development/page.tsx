@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
-import { WebsiteServicePage } from "@/components/WebsiteServicePage";
+import { ServiceDetailTemplate } from "@/components/ServiceDetailTemplate";
+import { servicePages } from "@/data/servicePages";
 
-export const metadata: Metadata = {
-  title: "Website Design & Development | Kyte",
-  description: "Kyte designs and builds websites that explain complex offers clearly, support useful journeys, and give teams room to grow.",
-};
+export const metadata: Metadata = { title: servicePages["ui-ux-design-development/website-design-development"].title, description: servicePages["ui-ux-design-development/website-design-development"].description };
 
 export default function WebsiteDesignDevelopmentPage() {
-  return <><SiteHeader /><WebsiteServicePage /><SiteFooter /></>;
+  return <ServiceDetailTemplate service={servicePages["ui-ux-design-development/website-design-development"]} />;
 }

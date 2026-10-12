@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { Minus, Plus } from "lucide-react";
 import "./ServiceApproach.css";
 
-const serviceInclusions = [
+export const auditInclusions = [
   {
     symbol: 0,
     title: "User needs and behaviours",
@@ -48,17 +49,17 @@ function ApproachMark({ symbol, active }: { symbol: number; active: boolean }) {
   </svg>;
 }
 
-export function ServiceApproach() {
+export function ServiceApproach({ items = auditInclusions, heading = "A clearer view of what to improve.", intro = "A focused research and audit engagement connects evidence to action, giving your team a clear view of what users need, where they struggle, and which improvements to take forward." }: { items?: readonly { symbol: number; title: string; description: string }[]; heading?: string; intro?: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return <section className="service-approach" aria-labelledby="service-approach-title">
     <div className="service-approach__inner">
       <div className="service-approach__heading">
-        <div><p className="eyebrow">What’s included</p><h2 id="service-approach-title">A clearer view of what to improve.</h2></div>
-        <p>A focused research and audit engagement connects evidence to action, giving your team a clear view of what users need, where they struggle, and which improvements to take forward.</p>
+        <div><p className="eyebrow">What’s included</p><h2 id="service-approach-title">{heading}</h2></div>
+        <p>{intro}</p>
       </div>
-      <div className="service-approach__cards" aria-label="What a UX research and design audit includes">
-        {serviceInclusions.map((inclusion, index) => {
+      <div className="service-approach__cards" aria-label="What this service includes">
+        {items.map((inclusion, index) => {
           const isActive = activeIndex === index;
           return <article className={`service-approach__card${isActive ? " is-active" : ""}`} key={inclusion.title} onMouseEnter={() => setActiveIndex(index)}>
             <div className="service-approach__illustration">
@@ -66,7 +67,7 @@ export function ServiceApproach() {
             </div>
             <div className="service-approach__card-content">
               <button className="service-approach__toggle" type="button" aria-expanded={isActive} aria-controls={`service-approach-copy-${index}`} onClick={() => setActiveIndex(index)} onFocus={() => setActiveIndex(index)}>
-                <span>{inclusion.title}</span><span className="service-approach__icon" aria-hidden="true">{isActive ? "−" : "+"}</span>
+                <span>{inclusion.title}</span><span className="service-approach__icon" aria-hidden="true">{isActive ? <Minus size={18} strokeWidth={1.8} /> : <Plus size={18} strokeWidth={1.8} />}</span>
               </button>
               <div className="service-approach__copy" id={`service-approach-copy-${index}`} hidden={!isActive}><p>{inclusion.description}</p></div>
             </div>

@@ -12,7 +12,10 @@ import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { ServiceTestimonials } from "@/components/ServiceTestimonials";
 import { ServiceOfferings } from "@/components/ServiceOfferings";
 import { ServiceApproach } from "@/components/ServiceApproach";
-import { ServiceDecisionStory, ServiceVisualBento } from "@/components/ServiceDecisionStory";
+import { ServiceDecisionStory, ServiceDeliverables } from "@/components/ServiceDecisionStory";
+import { ServiceDetailTemplate } from "@/components/ServiceDetailTemplate";
+import { servicePages } from "@/data/servicePages";
+import type { Metadata } from "next";
 import "../service-detail.css";
 
 const plannedPages: Record<string, string> = {
@@ -44,11 +47,21 @@ export function generateStaticParams() {
   return Object.keys(plannedPages).map((path) => ({ slug: path.split("/") }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+  const path = (await params).slug.join("/");
+  const service = servicePages[path];
+  if (service) return { title: service.title, description: service.description };
+  if (path === "ui-ux-design-development/ux-research-design-audit") return { title: "UX Research & Design Audits | Kyte Agency", description: "Understand where people struggle in your product and turn research, usability findings, and journey reviews into prioritised improvements." };
+  return { title: plannedPages[path] ? `${plannedPages[path]} | Kyte Agency` : "Kyte Agency" };
+}
+
 export default async function PlannedPage({ params }: { params: Promise<{ slug: string[] }> }) {
   const { slug } = await params;
   const path = slug.join("/");
   const title = plannedPages[path];
   if (!title) notFound();
+
+  if (servicePages[path]) return <ServiceDetailTemplate service={servicePages[path]} />;
 
   if (path === "ui-ux-design-development/ux-research-design-audit") {
     return <><SiteHeader /><main className="service-detail">
@@ -67,7 +80,7 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
       <ServiceOfferings />
       <ServiceApproach />
       <ServiceDecisionStory />
-      <ServiceVisualBento />
+      <ServiceDeliverables />
       <ServiceOurProcess />
       <WorkShowcase />
       <ServiceTestimonials />

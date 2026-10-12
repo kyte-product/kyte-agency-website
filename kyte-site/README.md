@@ -30,6 +30,7 @@ To review the sample layouts locally, start the site with `SHOW_EDITORIAL_PLACEH
 - `src/lib/editorial.ts`: local draft preview in development and published CMS reads in production.
 - `src/app/work/` and `src/app/insights/`: CMS listing and detail routes.
 - `src/lib/sanity-routes.ts`: fixed public paths for the ten child services.
+- `src/data/servicePages.ts` and `src/components/ServiceDetailTemplate.tsx`: service-specific copy and the shared child-service layout. The audit page retains its bespoke hero and uses the same section components. Work remains unfiltered until case-to-service relationships are approved.
 - `../AGENTS.md` and `../WEBSITE_PROGRESS.md`: project rules and current handoff state.
 
 The first landing page remains under review. Keep Sanity write credentials out of this app. Verify provisional content before any production launch.
