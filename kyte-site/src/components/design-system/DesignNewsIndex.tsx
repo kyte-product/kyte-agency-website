@@ -53,7 +53,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
     {!newsOnly && <div className="design-news__soft">
       <section className="design-news__hero" aria-labelledby="design-news-heading">
         <div className="design-news__intro">
-          <p className="eyebrow">Design News</p>
+
           <h1 id="design-news-heading">Ideas from the <span>creative team.</span></h1>
           <p>Writing on visual culture, branding, and the ideas shaping how people experience products.</p>
           <a className="kyte-button" href="#all-stories">See all stories <ArrowUpRight size={17} aria-hidden="true" /></a>

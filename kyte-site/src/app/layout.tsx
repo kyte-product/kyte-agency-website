@@ -19,5 +19,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}<SiteSmoothScroll /><SiteRevealMotion /><ContactModal /><CookieSettings /><PageTransition /></body></html>;
+  return <html lang="en" data-palette="stripe" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: `(function(){try{var q=new URLSearchParams(location.search).get('palette');var p=q==='kyte'||q==='stripe'?q:localStorage.getItem('kyte-color-palette')||'stripe';if(q==='kyte'||q==='stripe')localStorage.setItem('kyte-color-palette',q);document.documentElement.dataset.palette=p}catch(e){document.documentElement.dataset.palette='stripe'}})();` }} /></head><body>{children}<SiteSmoothScroll /><SiteRevealMotion /><ContactModal /><CookieSettings /><PageTransition /></body></html>;
 }

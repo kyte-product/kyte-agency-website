@@ -35,7 +35,7 @@ export function ServiceTestimonials() {
   }
   return <section className="service-testimonials" aria-labelledby="service-testimonials-title">
     <div className="service-testimonials__inner">
-      <div className="service-testimonials__heading"><p className="eyebrow">Testimonials</p><h2 id="service-testimonials-title">What our clients say</h2></div>
+      <div className="service-testimonials__heading"><h2 id="service-testimonials-title">What our clients say</h2></div>
       <div className="service-testimonials__controls" role="group" aria-label="Testimonial controls">
         <button type="button" aria-label="Previous testimonial" onClick={() => goTo(activeIndex - 1)} disabled={activeIndex === 0}><ArrowLeft size={20} aria-hidden="true" /></button>
         <button type="button" aria-label="Next testimonial" onClick={() => goTo(activeIndex + 1)} disabled={activeIndex === clientTestimonials.length - 1}><ArrowRight size={20} aria-hidden="true" /></button>

@@ -134,7 +134,7 @@ export function FincartStory() {
     </section>
 
     <section className="fincart-story__impact" aria-labelledby="fincart-impact-title">
-      <div className="fincart-story__impact-head"><p className="eyebrow">Project impact</p><h2 id="fincart-impact-title">A connected app for planning, investing, and tracking financial progress.</h2></div>
+      <div className="fincart-story__impact-head"><h2 id="fincart-impact-title">A connected app for planning, investing, and tracking financial progress.</h2></div>
       <div className="fincart-story__impact-grid">
         <div><FincartImpactNumber value={33000} suffix="+" /><span>Monthly Active Users</span></div>
         <div><FincartImpactNumber value={10} prefix="~" suffix="×" /><span>Faster Financial Plan Creation</span></div>

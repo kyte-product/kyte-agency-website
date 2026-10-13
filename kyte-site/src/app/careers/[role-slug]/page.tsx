@@ -39,7 +39,7 @@ export default async function CareerRolePage({params}: Props) {
         <div className="careers-page__inner">
           <Link className="careers-role__back" href="/careers"><ArrowLeft size={17} aria-hidden="true" /> All opportunities</Link>
           <div className="careers-role__intro">
-            <p className="eyebrow">Careers at Kyte{role.team ? ` / ${role.team}` : ''}</p>
+
             <h1 id="career-role-title">{role.title}</h1>
             <p>{role.summary}</p>
             <div className="careers-role__facts">{[role.location, role.workMode, role.employmentType].filter(Boolean).map(item => <span key={item}>{item}</span>)}</div>

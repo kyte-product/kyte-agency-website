@@ -56,7 +56,7 @@ export function DesignPhilosophy() {
   return (
     <section className="philosophy" aria-labelledby="philosophy-title" ref={sectionRef}>
       <div className="philosophy__inner">
-        <p className="eyebrow">Design Philosophy</p>
+
         <h2 id="philosophy-title" aria-label={philosophy}>
           {Array.from(philosophy).map((character, index) => (
             character === " " ? " " : <span className="philosophy__char" aria-hidden="true" key={`${character}-${index}`}>{character}</span>

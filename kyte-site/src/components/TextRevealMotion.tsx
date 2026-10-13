@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export function TextRevealMotion() {
+  const pathname = usePathname();
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window) || typeof Element.prototype.animate !== "function") {
       document.querySelectorAll<HTMLElement>("main [data-reveal-words]").forEach((target) => target.classList.add("is-revealed"));
       return;
     }
 
-    const targets = document.querySelectorAll<HTMLElement>("main [data-reveal-words]");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
@@ -40,9 +41,24 @@ export function TextRevealMotion() {
       });
     }, { threshold: .15, rootMargin: "0px 0px -8% 0px" });
 
-    targets.forEach((target) => observer.observe(target));
-    return () => observer.disconnect();
-  }, []);
+    const observeTargets = (root: ParentNode) => {
+      if (root instanceof HTMLElement && root.matches("[data-reveal-words]:not(.is-revealed)")) observer.observe(root);
+      root.querySelectorAll<HTMLElement>("[data-reveal-words]:not(.is-revealed)").forEach((target) => observer.observe(target));
+    };
+    const main = document.querySelector("main");
+    if (!main) return;
+    observeTargets(main);
+    const additions = new MutationObserver((records) => {
+      records.forEach((record) => record.addedNodes.forEach((node) => {
+        if (node instanceof HTMLElement) observeTargets(node);
+      }));
+    });
+    additions.observe(main, { childList: true, subtree: true });
+    return () => {
+      additions.disconnect();
+      observer.disconnect();
+    };
+  }, [pathname]);
 
   return null;
 }

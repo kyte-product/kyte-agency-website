@@ -19,7 +19,7 @@ export function ServiceDepth() {
   return <section className="service-depth" id="services-overview" aria-labelledby="service-depth-title">
     <div className="service-depth__inner">
       <div className="service-depth__intro">
-        <p className="service-depth__eyebrow">Services</p>
+
         <h2 id="service-depth-title">The right mix of skills for the next challenge</h2>
         <p className="service-depth__lede">We work across product experience, websites, brand and content. Start with the challenge you have, and we can shape the scope around it.</p>
         <Link className="service-depth__button kyte-button" href="/contact">Talk about your project <ArrowRight aria-hidden="true" size={16} /></Link>

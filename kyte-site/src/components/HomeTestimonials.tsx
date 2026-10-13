@@ -95,7 +95,7 @@ export function HomeTestimonials() {
     <div className="home-testimonials__inner">
       <div className="home-testimonials__heading">
         <div>
-          <p className="eyebrow" data-reveal-words><RevealWords text="Client perspectives" /></p>
+
           <h2 id="home-testimonials-title" data-reveal-words data-reveal-delay="70"><RevealWords text="Good work, in their words." /></h2>
         </div>
         <p data-reveal-words data-reveal-delay="120"><RevealWords text="A few words from people and teams we have worked with." /></p>

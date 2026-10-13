@@ -2,9 +2,9 @@
 .design-news__soft { position: relative; isolation: isolate; }
 .design-news__soft::before { position: absolute; z-index: -1; inset-block: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: var(--color-surface-secondary); content: ""; pointer-events: none; }
 .design-news__hero { display: grid; grid-template-columns: minmax(230px,1fr) minmax(0,2fr); gap: clamp(32px,5vw,76px); padding: clamp(64px,8vw,112px) var(--section-inset) 100px; }
-.design-news__intro h1 { margin: 16px 0 20px; font-size: clamp(46px,5.1vw,60px); font-weight: var(--heading-weight); line-height: var(--heading-line-height); letter-spacing: -.055em; }
+.design-news__intro h1 { margin: 16px 0 20px; font-size: var(--heading-page); font-weight: var(--heading-weight); line-height: 1.08; letter-spacing: var(--heading-letter-spacing); }
 .design-news__intro h1 span { color: var(--accent); }
-.design-news__intro > p:not(.eyebrow) { max-width: 450px; margin: 0 0 28px; color: var(--muted); font-size: var(--type-lead); line-height: 1.5; }
+.design-news__intro > p:not(.eyebrow) { max-width: 450px; margin: 0 0 28px; color: var(--muted); font-size: var(--type-lead); line-height: var(--lead-line-height); }
 .design-news__feature { position: relative; aspect-ratio: 16 / 10; min-width: 0; overflow: hidden; border-radius: var(--radius-large); background: var(--color-night); }
 .design-news__slide { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 30px; color: white; opacity: 0; visibility: hidden; transition: opacity .5s ease, visibility .5s ease; }
 .design-news__slide.is-active { opacity: 1; visibility: visible; }
@@ -24,6 +24,7 @@
 .design-news__arrows button:hover { background: var(--color-control-hover); }
 .design-news__listing { padding: 96px var(--section-inset) 120px; background: var(--color-white); }
 .design-news__listing-head :is(h1,h2) { margin: 0 0 36px; font-size: var(--heading-section); font-weight: var(--heading-weight); line-height: var(--heading-line-height); letter-spacing: -.04em; }
+.design-news__listing-head h1 { font-size: var(--heading-page); line-height: 1.08; letter-spacing: var(--heading-letter-spacing); }
 .design-news__filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
 .design-news__filters button { min-height: 42px; padding: 9px 15px; border: 1px solid var(--line); border-radius: var(--radius-small); color: var(--muted); background: white; font-size: var(--type-body); cursor: pointer; }
 .design-news__filters button:hover { color: var(--accent); background: var(--color-control-hover); }
@@ -74,3 +75,4 @@
 @media (max-width: 760px) { .design-news__row { grid-template-columns: minmax(0,1fr) 104px; column-gap: 16px; row-gap: 8px; } .design-news__row-date { grid-column: 1 / -1; grid-row: 1; padding-bottom: 8px; } .design-news__row-main { grid-column: 1; grid-row: 2; padding-right: 8px; } .design-news__row-image { grid-column: 2; grid-row: 2; aspect-ratio: 1; } }
 @media (max-width: 650px) { .design-news__hero { padding-top: 65px; padding-bottom: 75px; } .design-news__intro h1 { font-size: clamp(42px,11vw,60px); } .design-news__listing-head :is(h1,h2),.design-news__resources-head :is(h1,h2) { font-size: var(--heading-section-mobile); } .design-news__feature { aspect-ratio: 4 / 5; } .design-news__slide { padding: 20px; } .design-news__slide-copy { padding-right: 0; padding-bottom: 55px; } .design-news__arrows { right: 20px; bottom: 20px; } .design-news__listing,.design-news__resources { padding-top: 75px; padding-bottom: 85px; } .design-news__rows { gap: 36px; } .design-news__row-main strong { font-size: var(--type-lead); } .design-news__row-date,.design-news__row-topic,.design-news__row-main small,.design-news__filters button { font-size: 15px; } .design-news__resources-head { display: block; } .design-news__resources-link { margin-top: 24px; } .design-news__resource-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px 16px; } .design-news__resource strong { font-size: var(--type-body); } }
 @media (prefers-reduced-motion: reduce) { .design-news__slide,.design-news__slide > img,.design-news__row-image img,.design-news__resource-book { transition: none; } }
+@media (max-width: 650px) { .design-news__listing-head h1 { font-size: var(--heading-page-mobile); } }

@@ -17,7 +17,7 @@ export function Sustainability() {
     <section className="sustainability" id="sustainability" aria-labelledby="sustainability-title">
       <div className="sustainability__inner">
         <div className="sustainability__intro">
-          <p className="sustainability__eyebrow">Sustainability &amp; CSR</p>
+
           <h2 id="sustainability-title">Progress That Reaches Past the Factory Floor</h2>
           <p className="sustainability__lede">Guided by ESG principles, ANAND&apos;s businesses use resources more responsibly, while the SNS Foundation, our CSR arm since 1976, builds capabilities and protects wildlife in line with the UN SDGs.</p>
           <a className="sustainability__button" href="https://www.anandgroupindia.com/snsf/">Explore Sustainability &amp; CSR <ArrowRight aria-hidden="true" size={16} /></a>

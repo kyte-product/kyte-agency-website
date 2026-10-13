@@ -44,7 +44,7 @@ export function AboutPhilosophy() {
 export function AboutGlance() {
   return <section className="about-glance" aria-labelledby="about-glance-title">
     <div className="about-section-inner">
-      <div className="about-glance__heading"><p className="eyebrow">At a glance</p><h2 id="about-glance-title">One team, connected around the work.</h2><p>From first questions to a finished product, identity or campaign, different disciplines work from the same brief.</p></div>
+      <div className="about-glance__heading"><h2 id="about-glance-title">One team, connected around the work.</h2><p>From first questions to a finished product, identity or campaign, different disciplines work from the same brief.</p></div>
       <div className="about-glance__grid">
         <article className="about-glance__card about-glance__agency" data-about-reveal>
           <Image src="/kyte-agency-mark.png" alt="" width={38} height={38} className="about-glance__agency-mark" unoptimized />
@@ -58,7 +58,7 @@ export function AboutGlance() {
         <article className="about-glance__card about-glance__focus" data-about-reveal><h3>Our focus</h3><p>Find the real problem, make the work clear, and keep improving it as we learn.</p><AboutFocusFigure /></article>
         <article className="about-glance__card about-glance__clients" data-about-reveal><div className="about-glance__clients-number">50<span>+</span></div><div><h3>Clients across domains</h3><p>Work across technology, fintech, consumer brands and more.</p></div></article>
         <div className="about-glance__logos" aria-label="Selected clients"><div className="about-glance__logo-track">{[0, 1, 2].map((copy) => <div className="about-glance__logo-group" key={copy} aria-hidden={copy !== 0}>{clientMarks.map(([slug, name]) => { const asset = clientLogoAsset(slug); return <span className={`about-glance__logo-slot about-glance__logo-slot--${slug}`} key={`${slug}-${copy}`}><Image src={asset.src} alt={copy === 0 ? name : ""} width={asset.width} height={asset.height} /></span>; })}</div>)}</div></div>
-        <div className="about-glance__team" data-about-reveal><div className="about-glance__team-copy"><p className="eyebrow">Our team</p><h3>The people behind Kyte</h3></div><div className="about-glance__avatars" aria-label="Leadership: Varun, Pratham and Vedant, plus the rest of the team">{aboutTeams[0].people.map((person) => person.image ? <Image src={person.image} alt={person.name} width={42} height={42} key={person.name} /> : <span aria-label={person.name} key={person.name}>{person.name.slice(0, 1)}</span>)}<span aria-label={`${aboutTeams.reduce((total, group) => total + group.people.length, 0) - aboutTeams[0].people.length} more team members`}>+{aboutTeams.reduce((total, group) => total + group.people.length, 0) - aboutTeams[0].people.length}</span></div></div>
+        <div className="about-glance__team" data-about-reveal><div className="about-glance__team-copy"><h3>The people behind Kyte</h3></div><div className="about-glance__avatars" aria-label="Leadership: Varun, Pratham and Vedant, plus the rest of the team">{aboutTeams[0].people.map((person) => person.image ? <Image src={person.image} alt={person.name} width={42} height={42} key={person.name} /> : <span aria-label={person.name} key={person.name}>{person.name.slice(0, 1)}</span>)}<span aria-label={`${aboutTeams.reduce((total, group) => total + group.people.length, 0) - aboutTeams[0].people.length} more team members`}>+{aboutTeams.reduce((total, group) => total + group.people.length, 0) - aboutTeams[0].people.length}</span></div></div>
       </div>
     </div>
   </section>;
@@ -66,6 +66,6 @@ export function AboutGlance() {
 
 export function AboutImpact() {
   return <section className="about-impact" aria-labelledby="about-impact-title">
-    <div className="about-section-inner about-impact__layout"><div className="about-impact__intro"><p className="eyebrow">The work in numbers</p><h2 id="about-impact-title">Our impact, in numbers.</h2><p>Results across product, brand, website and content projects.</p></div><div className="about-impact__cards">{aboutImpact.map((item, index) => <article className="about-impact__card" data-about-reveal key={item.description} style={{ "--card-delay": `${index * 90}ms`, "--step": index } as CSSProperties}><FincartImpactNumber value={item.value} suffix={item.suffix} /><p>{item.description}</p></article>)}</div></div>
+    <div className="about-section-inner about-impact__layout"><div className="about-impact__intro"><h2 id="about-impact-title">Our impact, in numbers.</h2><p>Results across product, brand, website and content projects.</p></div><div className="about-impact__cards">{aboutImpact.map((item, index) => <article className="about-impact__card" data-about-reveal key={item.description} style={{ "--card-delay": `${index * 90}ms`, "--step": index } as CSSProperties}><FincartImpactNumber value={item.value} suffix={item.suffix} /><p>{item.description}</p></article>)}</div></div>
   </section>;
 }

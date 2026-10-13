@@ -58,10 +58,10 @@
 .fincart-story__ds-main .fincart-story__picture:last-child { grid-column: span 2; aspect-ratio: 3279/1018; }
 .fincart-story__ds-side .fincart-story__picture { min-height: 0; }
 .fincart-story__ds-grid .fincart-story__picture { background: #fafafa; border: 1px solid #ededed; }
-.fincart-story__illustrations { overflow-x: auto; margin: 0; padding: clamp(24px,4vw,48px); border-radius: var(--radius-large); background: #f5f5f5; scrollbar-width: thin; }
+.fincart-story__illustrations { overflow-x: auto; margin: 0; padding: clamp(24px,4vw,48px); border-radius: var(--radius-large); background: var(--color-control-hover); scrollbar-width: thin; }
 .fincart-story__illustrations:focus-visible { outline: 2px solid var(--color-blue); outline-offset: 3px; }
 .fincart-story__illustrations img { display: block; width: 100%; height: auto; }
-.fincart-story__store-carousel { display: flex; gap: 22px; overflow-x: auto; padding: 32px; border-radius: var(--radius-large); background: #f5f5f5; scroll-snap-type: x mandatory; scroll-padding-inline: 32px; scrollbar-width: thin; }
+.fincart-story__store-carousel { display: flex; gap: 22px; overflow-x: auto; padding: 32px; border-radius: var(--radius-large); background: var(--color-control-hover); scroll-snap-type: x mandatory; scroll-padding-inline: 32px; scrollbar-width: thin; }
 .fincart-story__store-carousel:focus-visible { outline: 2px solid var(--color-blue); outline-offset: 3px; }
 .fincart-story__store-carousel .fincart-story__picture { flex: 0 0 clamp(178px,18vw,224px); aspect-ratio: 393/852; border-radius: 14px; background: #0649a7; scroll-snap-align: start; }
 .fincart-story__store-carousel .fincart-story__picture img { object-fit: cover; }
@@ -73,7 +73,7 @@
 .case-study-rail__controls button { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--color-white); cursor: pointer; }
 .case-study-rail__controls button:hover { background: var(--color-surface-secondary); }
 .case-study-rail__controls button:focus-visible,.case-study-rail__track:focus-visible { outline: 2px solid var(--color-blue); outline-offset: 3px; }
-.case-study-rail__stage { overflow: hidden; border-radius: var(--radius-large); background: #f5f5f5; }
+.case-study-rail__stage { overflow: hidden; border-radius: var(--radius-large); background: var(--color-control-hover); }
 .case-study-rail__track { display: flex; gap: 20px; overflow-x: auto; padding: 36px; scroll-padding-inline: 36px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
 .case-study-rail__item { flex: 0 0 clamp(210px,23vw,280px); display: grid; place-items: center; min-width: 0; aspect-ratio: 906/1824; margin: 0; scroll-snap-align: start; container-type: size; }
 .case-study-rail__item .case-study-phone { width: 100cqw; }
@@ -95,7 +95,7 @@
 .fincart-story__impact-head { margin-bottom: 54px; }
 .fincart-story__impact-head .eyebrow { margin: 0 0 14px; color: #9f9f9f; font-size: 18px; font-weight: 400; letter-spacing: 0; line-height: 1.4; }
 .fincart-story__impact-head h2 { max-width: 760px; margin: 0; font-size: clamp(23px,2.2vw,32px); font-weight: 500; line-height: 1.32; letter-spacing: -.02em; }
-.fincart-story__impact-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(14px,2vw,26px); padding: clamp(18px,2.5vw,32px); border-radius: var(--radius-large); background: #f5f5f5; }
+.fincart-story__impact-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(14px,2vw,26px); padding: clamp(18px,2.5vw,32px); border-radius: var(--radius-large); background: var(--color-control-hover); }
 .fincart-story__impact-grid > div { display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; padding: 28px 24px 24px; border-radius: var(--radius-large); background: white; }
 .fincart-story__impact-grid strong { color: var(--color-blue); font-size: clamp(46px,5vw,70px); font-weight: 400; font-variant-numeric: tabular-nums; letter-spacing: -.065em; line-height: 1; }
 .fincart-story__impact-grid > div > span { max-width: 270px; font-size: clamp(19px,1.8vw,23px); font-weight: 500; line-height: 1.3; }

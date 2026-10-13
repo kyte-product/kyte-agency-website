@@ -8,7 +8,7 @@ export function ServicesIntro() {
   return (
     <section className="services-intro" id="services" aria-labelledby="services-intro-title">
       <div className="services-intro__inner">
-        <p className="eyebrow" data-reveal-words><RevealWords text="Our services" /></p>
+
         <div className="services-intro__row">
           <h2 id="services-intro-title" data-reveal-words data-reveal-delay="90"><RevealWords text="Two expert departments, covering all your design, development, and marketing needs." /></h2>
           <Link className="kyte-button services-intro__cta" href="/contact">
@@ -30,7 +30,7 @@ export function ServicesIntro() {
               <span className="services-intro__card-description">A clear brand and the creative work that carries it into the world.</span>
               <span className="services-intro__card-more">Explore Service <ChevronRight size={16} aria-hidden="true" /></span>
             </Link>
-            <ServiceCardFigure kind="riffle" href="/branding-marketing" />
+            <ServiceCardFigure kind="exploded" href="/branding-marketing" />
           </div>
         </div>
       </div>
