@@ -2092,3 +2092,10 @@ After each prompt, refresh the sections above and add a short entry here with th
 
 - The nine services rendered through `ServiceDetailTemplate` included word-reveal markup in the shared FAQ but did not mount its reveal controller, leaving the heading transparent. Mounted `TextRevealMotion` in the shared service template and made its observer restart on route changes. The special UX audit service already mounted the controller and remains covered.
 - Browser checked the FAQ heading on all ten services at 1280px and on UX audit, Mobile App Design, and Graphic Design at 390px. All titles revealed fully, with no horizontal overflow; visually reviewed the Mobile App Design FAQ. ESLint, TypeScript, production build, and `git diff --check` passed. The build used the existing Work and Design News fallback because local Sanity CDN DNS was unavailable. Local branch only; no commit, GitHub push, or Vercel deployment. Owner: Kyte website team.
+
+### 13 October 2026: Publish shared design and page updates
+
+- Merged [GitHub PR #48](https://github.com/kyte-product/kyte-agency-website/pull/48) into `main` as `c2a1f5dd39bdea258a318c70d0e0734d92fdcd5f`. The release includes the approved shared design updates, industry pages, refreshed imagery, forty distinct service process illustrations, service FAQ title fix, and design-system and Hairline documentation.
+- Verified `npm run lint`, `npx tsc --noEmit`, `npm run build`, and `git diff --check`. The local build completed; Sanity CDN DNS lookup failed during static generation, so Work and Design News used the existing fallback content. No Sanity content was changed in this release.
+- Vercel production deployment `dpl_3gU59zMidLzRF1QnKKk6ZyoLrrZW` for the merged main commit reached `READY` and has the canonical `https://kyte-agency.vercel.app/` alias, along with the project production aliases. The Vercel build completed successfully.
+- Owner: Kyte website team. Next: review the live production pages and update placeholder metrics and temporary photography when approved client assets and results are available.
