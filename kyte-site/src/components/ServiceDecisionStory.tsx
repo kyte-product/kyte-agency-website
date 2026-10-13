@@ -4,42 +4,39 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Gauge, Route, Search, Target, TrendingUp } from "lucide-react";
+import { getServicePhotography } from "@/data/pagePhotography";
 import "./ServiceDecisionStory.css";
 
+const auditPhotos = getServicePhotography("ui-ux-design-development/ux-research-design-audit").decisions;
 export const auditDecisions = [
   {
     title: "A focused research plan",
     body: "Align on the questions to answer, the people to learn from, and the methods that fit the product and project scope.",
-    image: "https://images.unsplash.com/photo-1587355760421-b9de3226a046?auto=format&fit=crop&w=1400&q=85",
-    alt: "Designer reviewing wireframes at a desk",
+    ...auditPhotos[0],
     Icon: Target,
   },
   {
     title: "Evidence from real users",
     body: "Bring interview notes, observed behaviors, and usability findings together to show where expectations and experience differ.",
-    image: "https://images.unsplash.com/photo-1766555766657-ea8f81a67934?auto=format&fit=crop&w=1400&q=85",
-    alt: "Laptop and planning notes on a design workspace",
+    ...auditPhotos[1],
     Icon: Search,
   },
   {
     title: "A clearer view of key journeys",
     body: "See how important tasks connect across screens, including the steps that cause friction, confusion, or drop-off.",
-    image: "https://images.unsplash.com/photo-1700887944225-f148dd124305?auto=format&fit=crop&w=1400&q=85",
-    alt: "Digital design work open on a computer screen",
+    ...auditPhotos[2],
     Icon: Route,
   },
   {
     title: "Prioritised next steps",
     body: "Turn the findings into a practical sequence of improvements, with context your team can use to plan and evaluate the work.",
-    image: "https://images.unsplash.com/photo-1573805672213-81b449b17e8a?auto=format&fit=crop&w=1400&q=85",
-    alt: "Responsive digital interface displayed on a laptop",
+    ...auditPhotos[3],
     Icon: TrendingUp,
   },
   {
     title: "A baseline for measuring progress",
     body: "Capture where the experience stands today and identify useful signals to revisit after improvements are made.",
-    image: "https://images.unsplash.com/photo-1587355760421-b9de3226a046?auto=format&fit=crop&w=1400&q=85",
-    alt: "Designer reviewing wireframes at a desk",
+    ...auditPhotos[4],
     Icon: Gauge,
   },
 ] as const;
@@ -49,14 +46,14 @@ export type Deliverable = { title: string; body: string };
 const decisionIcons = [Target, Search, Route, TrendingUp, Gauge];
 const fallbackImages = auditDecisions.map(({ image, alt }) => ({ image, alt }));
 
-export function ServiceDecisionStory({ items = auditDecisions, eyebrow = "Research to recommendations", heading = "A useful picture of what to improve.", intro = "Bring user evidence, interface reviews, and product context together. Leave with a shared understanding of the experience and a clear path for the next design decisions." }: { items?: readonly Decision[]; eyebrow?: string; heading?: string; intro?: string }) {
+export function ServiceDecisionStory({ items = auditDecisions, heading = "A useful picture of what to improve.", intro = "Bring user evidence, interface reviews, and product context together. Leave with a shared understanding of the experience and a clear path for the next design decisions." }: { items?: readonly Decision[]; eyebrow?: string; heading?: string; intro?: string }) {
   const [active, setActive] = useState(0);
 
   return <section className="service-decisions" aria-labelledby="service-decisions-title">
     <div className="service-decisions__inner">
       <div className="service-decisions__layout">
         <div className="service-decisions__feature">
-          <div className="service-decisions__heading"><p className="eyebrow">{eyebrow}</p><h2 id="service-decisions-title">{heading}</h2><p>{intro}</p>
+          <div className="service-decisions__heading"><h2 id="service-decisions-title">{heading}</h2><p>{intro}</p>
             <Link className="kyte-button" href="/contact">Discuss your product <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
           <figure className="service-decisions__visual-frame" aria-live="polite">
@@ -94,7 +91,7 @@ export function ServiceDeliverables({ items = auditDeliverables, heading = "Usef
   return <section className="service-deliverables" aria-labelledby="service-deliverables-title">
     <div className="service-deliverables__inner">
       <div className="service-deliverables__heading">
-        <p className="eyebrow">What you receive</p>
+
         <h2 id="service-deliverables-title">{heading}</h2>
       </div>
       <div className="service-deliverables__grid">

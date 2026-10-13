@@ -109,9 +109,8 @@ const questions = [
   { question: "What happens after the website launches?", answer: "We plan the handoff, documentation and any agreed launch support as part of the scope. Ongoing updates or new pages can be planned once the site is live and there is real feedback to work from." },
 ] as const;
 
-function SectionHeading({ id, label, title, description, centered = false }: { id: string; label?: string; title: string; description?: string; centered?: boolean }) {
+function SectionHeading({ id, title, description, centered = false }: { id: string; label?: string; title: string; description?: string; centered?: boolean }) {
   return <div className={`website-service__section-heading${centered ? " website-service__section-heading--center" : ""}`}>
-    {label && <p className="eyebrow">{label}</p>}
     <h2 id={id}>{title}</h2>
     {description && <p>{description}</p>}
   </div>;
@@ -172,7 +171,7 @@ export function WebsiteServicePage() {
 
   return <main className="website-service" id="main-content">
     <section className="website-service__hero" aria-labelledby="website-service-title">
-      <p className="eyebrow">Website design &amp; development</p>
+
       <h1 id="website-service-title"><span>Websites</span> that make the right things clear.</h1>
       <p>We bring the offer, brand, content and digital experience into one useful website, built for the people who need to understand and choose you.</p>
       <Link className="kyte-button" href="/contact">Let&apos;s build your website <ArrowUpRight size={18} aria-hidden="true" /></Link>
@@ -212,7 +211,7 @@ export function WebsiteServicePage() {
       </div>
     </section>
 
-    <section className="website-service__proof" aria-label="How Kyte approaches websites"><p className="eyebrow">Built for use</p><div><strong>Clear</strong><span>What you offer and who it helps.</span></div><div><strong>Flexible</strong><span>A system your team can keep using.</span></div><div><strong>Ready</strong><span>Reviewed across screens and journeys.</span></div></section>
+    <section className="website-service__proof" aria-label="How Kyte approaches websites"><div><strong>Clear</strong><span>What you offer and who it helps.</span></div><div><strong>Flexible</strong><span>A system your team can keep using.</span></div><div><strong>Ready</strong><span>Reviewed across screens and journeys.</span></div></section>
 
     <section className="website-service__section website-service__work" aria-labelledby="website-service-work-title">
       <SectionHeading id="website-service-work-title" label="Case studies" title="Selected website work" />
@@ -223,11 +222,11 @@ export function WebsiteServicePage() {
     </section>
 
     <section className="website-service__section website-service__priorities" aria-labelledby="website-service-priorities-title">
-      <div className="website-service__split-heading"><div><p className="eyebrow">Project priorities</p><h2 id="website-service-priorities-title">What the work is built around</h2></div><div className="website-service__arrows"><button type="button" onClick={() => setActivePriority((index) => Math.max(0, index - 1))} disabled={activePriority === 0} aria-label="Previous priority"><ArrowLeft size={18} aria-hidden="true" /></button><button type="button" onClick={() => setActivePriority((index) => Math.min(projectPriorities.length - 1, index + 1))} disabled={activePriority === projectPriorities.length - 1} aria-label="Next priority"><ArrowRight size={18} aria-hidden="true" /></button></div></div>
+      <div className="website-service__split-heading"><div><h2 id="website-service-priorities-title">What the work is built around</h2></div><div className="website-service__arrows"><button type="button" onClick={() => setActivePriority((index) => Math.max(0, index - 1))} disabled={activePriority === 0} aria-label="Previous priority"><ArrowLeft size={18} aria-hidden="true" /></button><button type="button" onClick={() => setActivePriority((index) => Math.min(projectPriorities.length - 1, index + 1))} disabled={activePriority === projectPriorities.length - 1} aria-label="Next priority"><ArrowRight size={18} aria-hidden="true" /></button></div></div>
       <div className="website-service__priority-panel" aria-live="polite"><span>{activePriority + 1} / {projectPriorities.length}</span><h3>{projectPriorities[activePriority].title}</h3><p>{projectPriorities[activePriority].body}</p><div><strong>{projectPriorities[activePriority].label}</strong></div></div>
     </section>
 
-    <section className="website-service__inline-cta"><div><p className="eyebrow">Start a project</p><h2>Let&apos;s make your next website useful from day one.</h2><p>Tell us what you&apos;re building. We&apos;ll help define the right starting point.</p><Link className="kyte-button" href="/contact">Start the conversation <ArrowUpRight size={18} aria-hidden="true" /></Link></div><div className="website-service__inline-cta-art" aria-hidden="true"><Image src="/kyte-agency-mark.png" alt="" width={512} height={512} unoptimized /></div></section>
+    <section className="website-service__inline-cta"><div><h2>Let&apos;s make your next website useful from day one.</h2><p>Tell us what you&apos;re building. We&apos;ll help define the right starting point.</p><Link className="kyte-button" href="/contact">Start the conversation <ArrowUpRight size={18} aria-hidden="true" /></Link></div><div className="website-service__inline-cta-art" aria-hidden="true"><Image src="/kyte-agency-mark.png" alt="" width={512} height={512} unoptimized /></div></section>
 
     <section className="website-service__section website-service__process" aria-labelledby="website-service-process-title">
       <SectionHeading id="website-service-process-title" label="Framework" title="How we take a website from brief to launch" description="We begin with the business, the audience and the job each page needs to do. Then design and development move together toward a useful site." centered />
@@ -244,7 +243,7 @@ export function WebsiteServicePage() {
 
     <section className="website-service__benefits" aria-labelledby="website-service-benefits-title"><div className="website-service__benefits-inner"><SectionHeading id="website-service-benefits-title" label="Benefits" title="What working with Kyte feels like" /><div>{benefits.map(({ title, description, icon: Icon }) => <article key={title}><span><Icon size={25} strokeWidth={1.5} aria-hidden="true" /></span><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>
 
-    <section className="website-service__section website-service__faq" aria-labelledby="website-service-faq-title"><div><p className="eyebrow">FAQ</p><h2 id="website-service-faq-title">Answers to common questions</h2><p>Every website starts with a different challenge. These answers cover how we shape the work.</p></div><div className="website-service__faq-list">{questions.map((item, index) => <article key={item.question} className={openFaq === index ? "is-open" : ""}><h3><button type="button" aria-expanded={openFaq === index} aria-controls={`website-faq-answer-${index}`} onClick={() => setOpenFaq(openFaq === index ? null : index)}>{item.question}<span>{openFaq === index ? <Minus size={20} strokeWidth={1.7} aria-hidden="true" /> : <Plus size={20} strokeWidth={1.7} aria-hidden="true" />}</span></button></h3><div id={`website-faq-answer-${index}`} hidden={openFaq !== index}><p>{item.answer}</p></div></article>)}</div></section>
+    <section className="website-service__section website-service__faq" aria-labelledby="website-service-faq-title"><div><h2 id="website-service-faq-title">Answers to common questions</h2><p>Every website starts with a different challenge. These answers cover how we shape the work.</p></div><div className="website-service__faq-list">{questions.map((item, index) => <article key={item.question} className={openFaq === index ? "is-open" : ""}><h3><button type="button" aria-expanded={openFaq === index} aria-controls={`website-faq-answer-${index}`} onClick={() => setOpenFaq(openFaq === index ? null : index)}>{item.question}<span>{openFaq === index ? <Minus size={20} strokeWidth={1.7} aria-hidden="true" /> : <Plus size={20} strokeWidth={1.7} aria-hidden="true" />}</span></button></h3><div id={`website-faq-answer-${index}`} hidden={openFaq !== index}><p>{item.answer}</p></div></article>)}</div></section>
 
     <nav className="website-service__breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><ArrowRight size={14} aria-hidden="true" /><Link href="/ui-ux-design-development">UI/UX design &amp; development</Link><ArrowRight size={14} aria-hidden="true" /><span>Website design &amp; development</span></nav>
   </main>;

@@ -35,14 +35,14 @@ function ApproachMark({ symbol, active }: { symbol: number; active: boolean }) {
     3: [336, 976, 112, 112],
   };
   const [x, y, width, height] = bounds[symbol];
-  const color = active ? "#ffffff" : "#0249d9";
   const filterId = `approach-mark-${symbol}-${active ? "white" : "blue"}`;
 
   return <svg className="service-approach__mark" viewBox={`${x} ${y} ${width} ${height}`} role="presentation" aria-hidden="true">
     <defs>
       <filter id={filterId} colorInterpolationFilters="sRGB">
-        <feColorMatrix type="matrix" values={`0 0 0 0 ${parseInt(color.slice(1, 3), 16) / 255} 0 0 0 0 ${parseInt(color.slice(3, 5), 16) / 255} 0 0 0 0 ${parseInt(color.slice(5, 7), 16) / 255} -0.2126 -0.7152 -0.0722 0 1`} />
-        <feComponentTransfer><feFuncA type="linear" slope="1.2" intercept="-0.05" /></feComponentTransfer>
+        <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.2126 -0.7152 -0.0722 0 1" result="symbolMask" />
+        <feFlood floodColor={active ? "var(--color-white)" : "var(--color-blue)"} result="themeColor" />
+        <feComposite in="themeColor" in2="symbolMask" operator="in" />
       </filter>
     </defs>
     <image href="/images/service-approach-symbols-v2.png" x="0" y="0" width="1200" height="1506" preserveAspectRatio="none" filter={`url(#${filterId})`} />
@@ -55,7 +55,7 @@ export function ServiceApproach({ items = auditInclusions, heading = "A clearer 
   return <section className="service-approach" aria-labelledby="service-approach-title">
     <div className="service-approach__inner">
       <div className="service-approach__heading">
-        <div><p className="eyebrow">What’s included</p><h2 id="service-approach-title">{heading}</h2></div>
+        <div><h2 id="service-approach-title">{heading}</h2></div>
         <p>{intro}</p>
       </div>
       <div className="service-approach__cards" aria-label="What this service includes">

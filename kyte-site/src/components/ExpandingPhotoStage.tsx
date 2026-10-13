@@ -2,18 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import type { PagePhoto } from "@/data/pagePhotography";
 import "./ExpandingPhotoStage.css";
-
-// Unsplash digital design photographs. Sources are recorded in public/ux-design-photos/README.md.
-const slides = [
-  { src: "https://images.unsplash.com/photo-1782898669223-ab17b600d486?auto=format&fit=crop&w=2400&q=85", alt: "Hands typing on a laptop displaying a web interface" },
-  { src: "https://images.unsplash.com/photo-1772272935464-2e90d8218987?auto=format&fit=crop&w=2400&q=85", alt: "Laptop screen displaying web interface design options" },
-  { src: "https://images.unsplash.com/photo-1700887944225-f148dd124305?auto=format&fit=crop&w=2400&q=85", alt: "Computer screen displaying a graphic design layout in editing software" },
-] as const;
 
 const clamp = (value: number) => Math.min(1, Math.max(0, value));
 
-export function ExpandingPhotoStage({ label = "Digital design showcase" }: { label?: string }) {
+export function ExpandingPhotoStage({ label = "Digital design showcase", slides }: { label?: string; slides: PagePhoto[] }) {
   const sectionRef = useRef<HTMLElement>(null);
   const frameRef = useRef<HTMLDivElement>(null);
 
@@ -101,8 +95,8 @@ export function ExpandingPhotoStage({ label = "Digital design showcase" }: { lab
 
   return <section ref={sectionRef} className="expanding-photo-stage" aria-label={label} data-site-reveal-ignore>
     <div className="expanding-photo-stage__frame-wrap"><div ref={frameRef} className="expanding-photo-stage__frame">
-      {slides.map((slide, index) => <div className="expanding-photo-stage__slide" key={slide.src} style={index ? { clipPath: "inset(0 100% 0 0)" } : undefined} aria-hidden="true">
-        <Image src={slide.src} alt={slide.alt} fill sizes="100vw" unoptimized />
+      {slides.map((slide, index) => <div className="expanding-photo-stage__slide" key={slide.image} style={index ? { clipPath: "inset(0 100% 0 0)" } : undefined} aria-hidden="true">
+        <Image src={slide.image} alt={slide.alt} fill sizes="100vw" unoptimized />
       </div>)}
       <div className="expanding-photo-stage__wipe" aria-hidden="true" />
     </div></div>

@@ -47,9 +47,10 @@ const projects = [
   },
 ] as const;
 
-export function WorkShowcase() {
+export function WorkShowcase({ projectNames, title = "Selected work" }: { projectNames?: string[]; title?: string } = {}) {
   const [view, setView] = useState<"grid" | "list">("grid");
   const [hasChangedView, setHasChangedView] = useState(false);
+  const visibleProjects = projectNames ? projects.filter((project) => projectNames.includes(project.name)) : projects;
 
   function changeView(nextView: "grid" | "list") {
     if (nextView === view) return;
@@ -62,26 +63,26 @@ export function WorkShowcase() {
       <div className="work-showcase__inner">
         <div className="work-showcase__heading">
           <div>
-            <p className="work-showcase__eyebrow" data-reveal-words><RevealWords text="Case studies" /></p>
-            <h2 id="work-title" data-reveal-words data-reveal-delay="90"><RevealWords text="Selected work" /></h2>
+
+            <h2 id="work-title" data-reveal-words data-reveal-delay="90"><RevealWords text={title} /></h2>
           </div>
-          <div className="work-showcase__view-toggle" role="group" aria-label="Project layout">
+          {!projectNames && <div className="work-showcase__view-toggle" role="group" aria-label="Project layout">
             <button type="button" aria-label="List view" aria-pressed={view === "list"} onClick={() => changeView("list")}>
               <List size={18} strokeWidth={1.8} aria-hidden="true" />
             </button>
             <button type="button" aria-label="Grid view" aria-pressed={view === "grid"} onClick={() => changeView("grid")}>
               <LayoutGrid size={18} strokeWidth={1.8} aria-hidden="true" />
             </button>
-          </div>
+          </div>}
         </div>
         <div key={view} className={`work-showcase__list work-showcase__list--${view}${hasChangedView ? " work-showcase__list--entering" : ""}`}>
-          {projects.map((project) => (
+          {visibleProjects.map((project) => (
             <article className="work-project" key={project.name}>
               <Link className="work-project__visual" href={project.href} aria-label={`Explore ${project.name} project`}>
                 <Image src={project.image} alt={project.alt} fill sizes="(max-width: 760px) 90vw, 47vw" unoptimized={project.image.startsWith("https://")} />
               </Link>
               <Link className="work-project__summary" href={project.href} aria-label={`View ${project.name} project`}><strong>{project.name}</strong> <span>{project.description}</span></Link>
-              <div className="work-project__details"><span className="work-project__period">{project.period || "\u00a0"}</span><span className="work-project__separator" aria-hidden="true">·</span><span className="work-project__category">{project.category}</span></div>
+              <div className="work-project__details">{!projectNames && <><span className="work-project__period">{project.period || "\u00a0"}</span><span className="work-project__separator" aria-hidden="true">·</span></>}<span className="work-project__category">{project.category}</span></div>
             </article>
           ))}
         </div>

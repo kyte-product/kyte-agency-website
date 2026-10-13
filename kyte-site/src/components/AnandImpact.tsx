@@ -39,7 +39,7 @@ export function AnandImpact() {
       <div className="anand-impact__content">
         <div className="anand-impact__about">
           <div>
-            <p className="anand-impact__eyebrow">About ANAND</p>
+
             <h2>Six Decades of Shaping How the World Moves</h2>
           </div>
           <div className="anand-impact__copy">

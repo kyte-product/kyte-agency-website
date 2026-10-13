@@ -60,15 +60,15 @@
   transition: flex-grow 650ms cubic-bezier(.2,.75,.2,1), border-color 250ms ease, box-shadow 250ms ease;
 }
 
-.service-process__step:hover { border-color: #d7d7d4; }
+.service-process__step:hover { border-color: var(--color-border-dim); }
 .service-process__step:focus-visible { outline: 2px solid var(--color-blue); outline-offset: 3px; }
-.service-process__step.is-active { flex-grow: 7; border-color: #dededb; box-shadow: 0 8px 28px rgb(20 20 20 / 4%); }
+.service-process__step.is-active { flex-grow: 7; border-color: var(--color-border-strong); box-shadow: 0 8px 28px rgb(20 20 20 / 4%); }
 
 .service-process__step-number {
   position: absolute;
   top: 28px;
   left: 22px;
-  color: #b7b7b4;
+  color: var(--color-muted-soft);
   font-size: clamp(32px, 3.2vw, 48px);
   font-weight: 400;
   line-height: 1;
@@ -136,13 +136,23 @@
   bottom: 24px;
   width: min(44%, 440px);
   height: min(72%, 380px);
+  border: 0;
+  background: #fff;
+}
+
+.service-process__figure--native {
+  height: auto;
   --hairline-plate: #fff;
   --hairline-hi: var(--color-blue);
-  --hairline-edge: var(--color-blue);
-  --hairline-mid: var(--color-blue);
-  --hairline-lo: var(--color-blue);
-  --hairline-stroke: 1.2;
+  --hairline-edge: color-mix(in srgb, var(--color-blue) 75%, #fff);
+  --hairline-mid: color-mix(in srgb, var(--color-blue) 48%, #fff);
+  --hairline-lo: color-mix(in srgb, var(--color-blue) 24%, #fff);
+  --hairline-stroke: 1.1;
 }
+
+.service-process__figure--custom { color: var(--ink); }
+.service-process__custom-line { stroke: currentColor; stroke-width: 1.2; }
+.service-process__custom-accent { stroke: var(--color-blue); stroke-width: 2; }
 
 @media (max-width: 780px) {
   .service-process__inner { padding-block: 68px 76px; }
@@ -153,7 +163,7 @@
   .service-process__step,
   .service-process__step.is-active { flex: none; width: 100%; min-height: 72px; padding: 18px 20px; }
   .service-process__step-number { top: 20px; left: 20px; font-size: 28px; }
-  .service-process__step.is-active .service-process__step-number { opacity: 1; color: #aaa; }
+  .service-process__step.is-active .service-process__step-number { opacity: 1; color: var(--color-muted-soft); }
   .service-process__step-name { top: 27px; right: 20px; bottom: auto; left: auto; font-size: 19px; font-weight: 600; writing-mode: horizontal-tb; transform: none; }
   .service-process__step.is-active .service-process__step-name { opacity: 0; }
   .service-process__active-number { top: 20px; right: 20px; font-size: 28px; }
@@ -167,7 +177,7 @@
 @media (max-width: 420px) {
   .service-process__intro > p:last-child { font-size: 16px; }
   .service-process__step.is-active { min-height: 380px; }
-  .service-process__figure { right: 5%; bottom: 164px; width: 48%; height: min(36%, 160px); }
+  .service-process__figure { right: 5%; bottom: 180px; width: min(60%, 205px); height: min(45%, 170px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

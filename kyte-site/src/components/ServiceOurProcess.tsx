@@ -1,8 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { Laptop } from "@lucasmarkes/hairline/react";
+import { useState, useSyncExternalStore } from "react";
+import { Basket, Branches, Cabinet, Dish, Drawer, Elevator, Exploded, Format, Hub, Keyboard, Lockers, Loupe, Padlock, Patch, Phone, Phosphor, Plot, Plug, Query, Rail, Rebuild, Relay, Riffle, Router, Settle, Sieve, Slow, Stack, Terminal, Terrain, Turntable, Vault } from "@lucasmarkes/hairline/react";
+import { getServiceProcessFigure } from "@/data/serviceProcessFigures";
+import { isCustomProcessFigure, ServiceProcessCustomFigure } from "./ServiceProcessCustomFigure";
 import "./ServiceOurProcess.css";
+
+const nativeFigures = { basket: Basket, branches: Branches, cabinet: Cabinet, dish: Dish, drawer: Drawer, elevator: Elevator, exploded: Exploded, format: Format, hub: Hub, keyboard: Keyboard, lockers: Lockers, loupe: Loupe, padlock: Padlock, patch: Patch, phone: Phone, phosphor: Phosphor, plot: Plot, plug: Plug, query: Query, rail: Rail, rebuild: Rebuild, relay: Relay, riffle: Riffle, router: Router, settle: Settle, sieve: Sieve, slow: Slow, stack: Stack, terminal: Terminal, terrain: Terrain, turntable: Turntable, vault: Vault };
 
 export const sharedSteps = [
   {
@@ -27,24 +31,42 @@ export const sharedSteps = [
   },
 ] as const;
 
-function ProcessFigure() {
-  return <Laptop
+function ProcessFigure({ servicePath, stepIndex }: { servicePath: string; stepIndex: number }) {
+  const { kind, label } = getServiceProcessFigure(servicePath, stepIndex);
+  const palette = useSyncExternalStore(
+    (callback) => {
+      window.addEventListener("kyte-palette-change", callback);
+      window.addEventListener("storage", callback);
+      return () => {
+        window.removeEventListener("kyte-palette-change", callback);
+        window.removeEventListener("storage", callback);
+      };
+    },
+    () => document.documentElement.dataset.palette === "kyte" ? "kyte" : "stripe",
+    () => "stripe",
+  );
+  if (isCustomProcessFigure(kind)) return <ServiceProcessCustomFigure kind={kind} />;
+  if (kind !== "workstack") {
+    const Figure = nativeFigures[kind];
+    return <Figure className="service-process__figure service-process__figure--native" data-figure={kind} theme="light" play label={label} aria-hidden="true" tabIndex={-1} />;
+  }
+  return <iframe
     className="service-process__figure"
-    theme="light"
-    play
-    label="Laptop illustration"
+    data-figure={kind}
+    src={`/hairline/workstack-embed.html?theme=light&play=1&palette=${palette}`}
+    title={label}
     aria-hidden="true"
     tabIndex={-1}
   />;
 }
 
-export function ServiceOurProcess({ steps = sharedSteps, intro = "As a digital agency working across product design, branding, content, and video, we run every project through the same four stages, so nothing gets lost between idea and launch." }: { steps?: readonly { name: string; title: string; description: string }[]; intro?: string }) {
+export function ServiceOurProcess({ servicePath, steps = sharedSteps, intro = "As a digital agency working across product design, branding, content, and video, we run every project through the same four stages, so nothing gets lost between idea and launch." }: { servicePath: string; steps?: readonly { name: string; title: string; description: string }[]; intro?: string }) {
   const [activeStep, setActiveStep] = useState(1);
 
   return <section className="service-process" aria-labelledby="service-process-title">
     <div className="service-process__inner">
       <div className="service-process__intro">
-        <p className="eyebrow">How we work</p>
+
         <h2 id="service-process-title">Our Process</h2>
         <p>{intro}</p>
       </div>
@@ -73,7 +95,7 @@ export function ServiceOurProcess({ steps = sharedSteps, intro = "As a digital a
                 <strong>{step.title}</strong>
                 <span>{step.description}</span>
               </span>
-              <ProcessFigure />
+              <ProcessFigure servicePath={servicePath} stepIndex={index} />
             </>}
           </button>;
         })}

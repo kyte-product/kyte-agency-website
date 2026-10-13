@@ -5,7 +5,7 @@ import "./LegalPlaceholder.css";
 
 export function LegalPlaceholder({ title, sections }: { title: string; sections: { heading: string; body: string }[] }) {
   return <><SiteHeader /><main className="legal-page"><div className="legal-page__inner">
-    <p className="eyebrow">KYTE AGENCY</p>
+
     <h1>{title}</h1>
     <p className="legal-page__notice">Draft placeholder. The final policy will be added after legal and operational review.</p>
     <div className="legal-page__sections">{sections.map((section) => <section key={section.heading}><h2>{section.heading}</h2><p>{section.body}</p></section>)}</div>

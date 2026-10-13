@@ -289,7 +289,7 @@ export function AnandGlance() {
   return <>
     <section className="anand-glance" id="anand-glance" aria-labelledby="ag-title" ref={sectionRef}>
       <div className="ag-wrap">
-        <div className="ag-head"><div className="ag-reveal"><p className="ag-eyebrow">ANAND at a glance</p><h2 id="ag-title">A Global Mobility Group, Built on Six Decades of Partnership</h2></div><p className="ag-lede ag-reveal">Seventeen automotive companies, 22,000+ people and world-class partners, working together to engineer the future of mobility.</p></div>
+        <div className="ag-head"><div className="ag-reveal"><h2 id="ag-title">A Global Mobility Group, Built on Six Decades of Partnership</h2></div><p className="ag-lede ag-reveal">Seventeen automotive companies, 22,000+ people and world-class partners, working together to engineer the future of mobility.</p></div>
         <div className="ag-grid">
           <Card id="global" title="A Global Footprint, Rooted in India" large onOpen={open} expanded={active === "global"}>
             <i className="ag-glow ag-glow--a" /><i className="ag-glow ag-glow--b" /><Globe />

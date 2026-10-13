@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { clientLogoAsset } from "@/data/clientLogoAssets";
 
-const clients = [
+export const clientBrands = [
   ["JioHotstar", "jio-hotstar"],
   ["District by Zomato", "district"],
   ["Daily Objects", "daily-objects"],
@@ -41,7 +41,7 @@ export function ClientLogos({ title = "Brands we have worked with", visibleTitle
           <div className="clients__ticker-track">
             {[false, true].map((duplicate) => (
               <ul className="clients__ticker-group" aria-hidden={duplicate || undefined} key={String(duplicate)}>
-                {clients.map(([name, file]) => {
+                {clientBrands.map(([name, file]) => {
                   const logo = clientLogoAsset(file);
                   return <li className={`clients__item${logo.colored ? " clients__item--color" : " clients__item--mono"}${compactMarks.has(file) ? " clients__item--compact" : ""}${file === "emergent" ? " clients__item--emergent" : ""}${file === "gully-labs" ? " clients__item--gully-labs" : ""}`} key={`${file}-${duplicate ? "duplicate" : "primary"}`}>
                     <Image src={logo.src} alt={duplicate ? "" : name} width={logo.width} height={logo.height} />

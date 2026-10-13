@@ -72,7 +72,7 @@ export function KyteCapabilities() {
   return <>
     <section className="kyte-capabilities" id="capabilities" aria-labelledby="capabilities-title">
       <div className="kyte-capabilities__inner">
-        <div className="kyte-capabilities__heading"><div><p className="kyte-capabilities__eyebrow">What we bring together</p><h2 id="capabilities-title">Different skills, connected around the same problem</h2></div><p>Some projects need a focused audit. Others need a product, brand and website to work together. We shape the team and scope around what will make the biggest difference.</p></div>
+        <div className="kyte-capabilities__heading"><div><h2 id="capabilities-title">Different skills, connected around the same problem</h2></div><p>Some projects need a focused audit. Others need a product, brand and website to work together. We shape the team and scope around what will make the biggest difference.</p></div>
         <div className="kyte-capabilities__grid">
           {capabilities.map((item, index) => <button className={`kyte-capability kyte-capability--${item.id}`} key={item.id} type="button" aria-haspopup="dialog" aria-label={`${item.title}, open details`} onClick={(event) => { opener.current = event.currentTarget; setActive(item); }}>
             <span className="kyte-capability__visual"><Image src={item.image} alt="" fill sizes={index === 0 ? "(max-width: 940px) 90vw, 60vw" : "(max-width: 940px) 45vw, 30vw"} /></span>
@@ -85,7 +85,7 @@ export function KyteCapabilities() {
     {active && <div className="kyte-capabilities__overlay" onMouseDown={(event) => { if (event.target === event.currentTarget) setActive(null); }}>
       <div className="kyte-capabilities__dialog" ref={dialog} role="dialog" aria-modal="true" aria-labelledby="capability-dialog-title" tabIndex={-1}>
         <button className="kyte-capabilities__close" type="button" aria-label="Close details" onClick={() => setActive(null)}><X size={20} /></button>
-        <p className="kyte-capabilities__eyebrow">{active.label}</p><h2 id="capability-dialog-title">{active.title}</h2><p>{active.description}</p><p>{active.detail}</p>
+        <h2 id="capability-dialog-title">{active.title}</h2><p>{active.description}</p><p>{active.detail}</p>
         <div className="kyte-capabilities__dialog-image"><Image src={active.image} alt={active.alt} fill sizes="(max-width: 700px) 90vw, 720px" /></div>
         <h3>What this can include</h3><ul>{active.deliverables.map((item) => <li key={item}>{item}</li>)}</ul>
         <Link href={active.href}>Explore this service <ArrowRight size={17} aria-hidden="true" /></Link>

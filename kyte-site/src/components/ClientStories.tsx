@@ -51,7 +51,7 @@ export function ClientStories({ articles }: { articles: DesignNewsArticle[] }) {
     <div className="client-stories__inner">
       <div className="client-stories__intro">
         <div>
-          <p className="eyebrow" data-reveal-words><RevealWords text="Design News" /></p>
+
           <h2 id="client-stories-title" data-reveal-words><RevealWords text="Ideas and observations from Design News." /></h2>
         </div>
         <div className="client-stories__intro-copy">

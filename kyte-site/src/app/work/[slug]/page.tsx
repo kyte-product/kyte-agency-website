@@ -57,7 +57,7 @@ export default async function WorkDetailPage({ params }: Props) {
     {slug === "fincart" ? <figure className="editorial-detail__work-cover" data-nav-theme="dark" data-fincart-image-reveal><video src="/fincart/fincart-showreel.mp4" poster={project.cover.url || undefined} autoPlay loop muted playsInline preload="metadata" aria-label="Fincart app screen showreel" /></figure> : project.cover.url && <figure className="editorial-detail__work-cover" data-nav-theme="dark"><Image src={project.cover.url} alt={project.cover.alt || ""} fill unoptimized sizes="(max-width: 700px) 100vw, 90vw" /></figure>}
     {slug === "fincart" ? <FincartStory /> : <>
       <div className="editorial-detail__work-body"><EditorialBody blocks={project.body} /></div>
-      {project.outcomes && project.outcomes.length > 0 && <section className="editorial-detail__outcomes"><p className="eyebrow">Project impact</p><div>{project.outcomes.map((item, index) => <div key={index}><strong>{item.value}</strong><p>{item.label}</p></div>)}</div></section>}
+      {project.outcomes && project.outcomes.length > 0 && <section className="editorial-detail__outcomes"><div>{project.outcomes.map((item, index) => <div key={index}><strong>{item.value}</strong><p>{item.label}</p></div>)}</div></section>}
       {gallery.length > 0 && <div className="editorial-detail__gallery">{gallery.map((image, index) => <figure key={`${image.url}-${index}`}><Image src={image.url} alt={image.alt || ""} fill unoptimized sizes={gallery.length % 2 === 1 && index === gallery.length - 1 ? "(max-width: 700px) 100vw, 90vw" : "(max-width: 700px) 100vw, 48vw"} /></figure>)}</div>}
     </>}
   </main><SiteFooter /></>;

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { clientLogoAsset } from "@/data/clientLogoAssets";
+import { ClientBrandTicker } from "@/components/ClientBrandTicker";
 import { getPublishedCareerRoles } from "@/lib/sanity";
 import { CareerOpportunities } from "./CareerOpportunities";
 import "./careers.css";
@@ -15,20 +14,6 @@ export const metadata: Metadata = {
 };
 export const instant = false;
 
-const featuredBrands = [
-  ["JioHotstar", "jio-hotstar"], ["District by Zomato", "district"],
-  ["Daily Objects", "daily-objects"], ["ITC Infotech", "itc-infotech"],
-  ["Decathlon", "decathlon"], ["Wispr Flow", "wispr-flow"],
-  ["Lovable", "lovable"], ["Emergent", "emergent"],
-  ["Gully Labs", "gully-labs"], ["Comet", "comet"],
-  ["Fincart", "fincart"], ["BTG", "btg"],
-  ["Agilitas", "agilitas"], ["Banza", "banza"],
-  ["MAD", "mad"], ["Smash Guys", "smash-guys"],
-  ["Red Rhino", "red-rhino"], ["Hot Ice", "hot-ice"],
-  ["Kiara", "kiara"], ["AMAIVI", "amaivi"],
-  ["Revenue Grid", "revenue-grid"], ["Papa Johns", "papa-johns"],
-  ["Crepdog Crew", "crepdog-crew"], ["Contractzy", "contractzy"],
-] as const;
 export default async function CareersPage() {
   let roles = [] as Awaited<ReturnType<typeof getPublishedCareerRoles>>;
   let rolesUnavailable = false;
@@ -50,12 +35,7 @@ export default async function CareersPage() {
               <a className="kyte-button careers-page__jump" href="#careers-openings-title">View opportunities</a>
             </div>
           </div>
-          <div className="careers-page__brands" aria-label="Brands Kyte has worked with">
-            <p>Work with these brands</p>
-            <div className="careers-page__brands-window"><div className="careers-page__brands-track">
-              {[false, true].map(duplicate => <ul key={String(duplicate)} aria-hidden={duplicate || undefined}>{featuredBrands.map(([name, file]) => { const logo = clientLogoAsset(file); return <li className={logo.colored ? "careers-page__brand--color" : "careers-page__brand--mono"} key={file}><Image src={logo.src} alt={duplicate ? "" : name} width={logo.width} height={logo.height} /></li>; })}</ul>)}
-            </div></div>
-          </div>
+          <ClientBrandTicker />
         </div>
       </section>
 

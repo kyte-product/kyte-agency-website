@@ -1,10 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Laptop, Riffle } from "@lucasmarkes/hairline/react";
+import { Exploded, Laptop } from "@lucasmarkes/hairline/react";
 
 type ServiceCardFigureProps = {
-  kind: "laptop" | "riffle";
+  kind: "laptop" | "exploded";
   href: "/ui-ux-design-development" | "/branding-marketing";
 };
 
@@ -16,7 +16,7 @@ export function ServiceCardFigure({ kind, href }: ServiceCardFigureProps) {
     return <Laptop className="services-intro__figure services-intro__laptop" theme="dark" play label="An interactive laptop opening and closing its lid." onClick={openService} />;
   }
 
-  return <Riffle className="services-intro__figure services-intro__riffle" theme="dark" play label="An interactive tray of eight cards. Use the arrow keys to explore them." onClick={openService} onKeyDown={(event) => {
+  return <Exploded className="services-intro__figure services-intro__riffle" theme="dark" play label="An interactive set of visual layers that open to show how a brand system comes together." onClick={openService} onKeyDown={(event) => {
     if (event.key === "Enter") {
       event.preventDefault();
       openService();
