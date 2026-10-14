@@ -1,6 +1,6 @@
 # Kyte website context and progress
 
-Last updated: 13 October 2026, Asia/Kolkata
+Last updated: 14 October 2026, Asia/Kolkata
 
 This is the handoff file for future Codex chats and team members. Read `AGENTS.md` first for the full working rules. Update this file after every completed prompt. Keep the current state at the top and a short dated log below. Write confirmed facts separately from ideas and open decisions.
 
@@ -16,6 +16,7 @@ This is the handoff file for future Codex chats and team members. Read `AGENTS.m
 - **Insights collections:** `/insights/design-news` is a dedicated published-story destination. Resources and Guides have sample layouts and standalone routes behind the server-side `SHOW_EDITORIAL_PLACEHOLDERS` flag, which defaults off. Their sample content needs original editorial work before it can be made public.
 - **Latest Insights release:** GitHub PRs #14 through #17 were merged to `main` on 10 October 2026. The final site code commit is `4c6230a`. Vercel production deployment `dpl_CnLoEex2yyNJ5iWwvDY9Nb8XuJpD` is Ready and assigned to `https://kyte-agency-website.vercel.app/`. The live Insights hero has a viewport-wide gray surface, and Design News list titles have no appended arrows. All eight approved Sanity articles are published; the sneaker article renders six H2 headings and topic links without Roman numerals. Resources, Guides, and their shortcut navigation remain hidden with the launch flag off.
 - **Work index:** Card names sit above summaries, service labels are chips, and service filters are included in the production release. Entries without `filterCategories` use their existing service and role text until editors categorize them.
+- **Fincart website and brand case:** An unpublished Sanity draft (`drafts.5c365af1-b363-4052-80ab-72e33acd57ad`) and local preview route `/work/fincart-website-branding` contain a near-accurate working narrative drawn from the supplied 2025 brand guide, the current Fincart website, the existing mobile case study, and recorded project context. Supplied motion, website, identity, signage, tote, campaign, and interface media are arranged once each. The route remains development-only and noindex. Client-approved results and final editorial approval are still required before publication.
 - **IA:** `Kyte_Website_IA.txt` is the current working route and navigation map. It has two service clusters and ten child services. It does not include a `/services` page.
 - **Homepage backups:** `/graveyard/landing-page-2` preserves the homepage active immediately before the team-preview transfer, with component and style snapshots. `/graveyard/landing-page` preserves the earlier 9 October version. Both are internal and noindex.
 - **Copy:** `Kyte_Website_SEO_Content_Playbook.md` is the current SEO and content guide, including agency examples, Ubersuggest research dated 8 October 2026, page briefs, and human writing rules. Its metrics are a snapshot and should be rechecked before publication.
@@ -37,6 +38,18 @@ This is the handoff file for future Codex chats and team members. Read `AGENTS.m
 - **Next CMS step:** All eight Design News articles now have the reviewed titles, H2 headings, and paragraph grouping published in the production Sanity dataset. Existing slugs were preserved. Find the source repository or deployment owner for the hosted Studio schema, then review content models and references. Work entries and launch settings remain separate tasks.
 
 ## Confirmed direction
+
+### 15 October 2026: Point the local browser at the updated Kyte site
+
+- The browser was initially served from the older `feat/goodface-hero-nav` checkout. Stopped that server and started the updated `main` preview checkout on `http://127.0.0.1:3001`.
+- Restored 56 missing tracked source files in the preview checkout that prevented the page from compiling. Installed the locked dependencies with the project's peer-dependency compatibility mode and copied the existing local `kyte-showreel.mp4` into the preview checkout so the homepage media loads.
+- Verified the homepage title, announcement bar, navigation, client ticker, and showreel in the local browser. No GitHub push or Vercel deployment. Next action: continue review from this local preview. Owner: Kyte website team.
+
+### 14 October 2026: Prepare a Fincart website and brand identity case study
+
+- Created the unpublished `workProject` draft `drafts.5c365af1-b363-4052-80ab-72e33acd57ad` in Sanity project `50pibtgs`, dataset `production`, with the new stable slug `fincart-website-branding`. No image assets were attached and the document was not published.
+- Added a local-only case page using the Fincart story styles, with blank gray image frames for the cover, brand, website, design system, and responsive screens. The existing Fincart mobile app case and Work listing are unchanged. The new route stays noindex and is not returned in production until published in Sanity.
+- Files: `kyte-site/src/app/work/[slug]/page.tsx`, `kyte-site/src/components/design-system/FincartBrandingStory.tsx`, `FincartStory.css`, `kyte-site/src/lib/editorial.ts`, `kyte-site/src/lib/fincart.ts`, and this handoff. ESLint, TypeScript, production build, and `git diff --check` passed. Sanity CDN DNS resolution failed during the build, so other CMS routes used their local fallbacks. A local browser server could not start in this environment (`listen EPERM`), so visual browser review remains outstanding. No GitHub push or Vercel deployment. Next action: populate the draft with approved project copy and images, then review the local route before any publication. Owner: Kyte website team.
 
 ### 13 October 2026: Audit local design consistency across active routes
 
@@ -2099,3 +2112,49 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Verified `npm run lint`, `npx tsc --noEmit`, `npm run build`, and `git diff --check`. The local build completed; Sanity CDN DNS lookup failed during static generation, so Work and Design News used the existing fallback content. No Sanity content was changed in this release.
 - Vercel production deployment `dpl_3gU59zMidLzRF1QnKKk6ZyoLrrZW` for the merged main commit reached `READY` and has the canonical `https://kyte-agency.vercel.app/` alias, along with the project production aliases. The Vercel build completed successfully.
 - Owner: Kyte website team. Next: review the live production pages and update placeholder metrics and temporary photography when approved client assets and results are available.
+
+### 15 October 2026: Add supplied Fincart website and brand media to local draft
+
+- Imported the three supplied MP4 animations and eight PNG visuals from `Case Study/Fincart Website/Final` into `kyte-site/public/fincart-branding` in the active local preview checkout. Converted the stills to resized JPEGs (about 2.2 MB total). Wired the hero animation, brand motion, website motion, and relevant stills into the local-only `/work/fincart-website-branding` draft. The two supporting videos use controls and `preload=none`; the hero loops muted inline. The CMS entry remains unpublished and the route stays noindex.
+- Verified the route in the local browser and confirmed all supplied image and video elements render in the accessibility tree. `npm run lint` and `npx tsc --noEmit` passed. Video files total about 26 MB and were retained at source quality after the local converter did not accept MP4 output for its presets. No Sanity, GitHub, or Vercel write. Owner: Kyte website team. Next: review the visual asset placement and replace any mockup artwork that is not approved for public use.
+
+### 15 October 2026: Refine Fincart branding case-study media layout
+
+- Set the supplied launch-event banner as the Fincart branding case-study cover. Adjusted image placement and ratios throughout the local draft: paired identity imagery, tighter section spacing, a side-by-side challenge image at desktop widths, and a more balanced system and responsive media grid. Updated alt descriptions to match the supplied visuals.
+- Checked the local case-study route in the browser. `npm run lint`, `npx tsc --noEmit`, and `git diff --check` passed. Draft remains unpublished and no Sanity, GitHub, or Vercel write was made. Owner: Kyte website team.
+
+### 15 October 2026: Correct the Fincart branding draft scope and add new motion files
+
+- Restored the sitewide light theme, shared header, and existing case-study typography after an earlier layout pass changed them outside the requested scope. Retained only the editorial media arrangement and kept the supplied launch-event artwork as the cover.
+- Added `Fincart Colors Animation.mp4` and `Fincart Glass Website Scroll.mp4` from the supplied Final folder. All five videos now autoplay, loop, remain muted, and play inline. Reworked the case-study media elements to use their intrinsic aspect ratios with contained rendering, responsive height, and no forced crop or stretch. The Lottie `Scene.json` animation remains included.
+- Browser review confirmed the corrected light page, original type scale, launch-event cover, and responsive media layout. `npm run lint`, `npx tsc --noEmit`, and `git diff --check` passed. The case study remains a local noindex draft; no Sanity, GitHub, or Vercel write was made. Owner: Kyte website team.
+
+### 15 October 2026: Reconcile the Fincart branding draft with the latest asset folder
+
+- Rechecked `Case Study/Fincart Website/Final` and removed the two deleted video copies from the local site. Hash comparison confirmed that each was an exact duplicate of one of the three remaining supplied MP4 files, so the case study still contains every unique video once.
+- Added the two new HTML experiences and their office-background asset. The palette motion runs as supplied with its replay control. The website promo retained its supplied glass-frame layout, but its live nested website was blocked from framing, so the local copy now presents the supplied website visual inside that frame without cropping or repeating it elsewhere.
+- Removed four obsolete duplicate and unused public image copies. The final public asset hash audit found no duplicate files, and the reference audit confirmed every remaining case-study asset is used once. HTML frames use responsive aspect ratios so their content is fully visible. The draft remains local and no Sanity, GitHub, or Vercel write was made. Owner: Kyte website team.
+
+### 15 October 2026: Restore the intended website screen in the Fincart HTML promo
+
+- Corrected the website promo after review showed that its glass frame contained an unrelated supplied app mockup. Captured the intended Fincart website home screen referenced by the original HTML and placed that screen inside the local promo frame. Restored the app and website mockup to its separate editorial image position, so the two visuals remain distinct and each appears once.
+- The local promo keeps the supplied glass frame and office background. Its screen uses contained rendering with no crop or stretch. The case study remains a local noindex draft; no Sanity, GitHub, or Vercel write was made. Owner: Kyte website team.
+
+### 15 October 2026: Restore scrolling motion inside the Fincart website promo
+
+- Replaced the single website viewport in the HTML promo with a tall stitched capture of the current Fincart site. Restored an automatic 15-second camera sequence that holds at the top, scrolls through the page, pauses at the lower section, and returns to the top. The animation recalculates its travel after resizing and respects reduced-motion preferences.
+- Kept the supplied glass frame and office background. The tall website capture is rendered at its natural ratio and moves inside the frame without stretching. The static intermediate viewport was removed. The case study remains a local noindex draft; no Sanity, GitHub, or Vercel write was made. Owner: Kyte website team.
+
+### 15 October 2026: Populate the Fincart website and brand case-study draft
+
+- Replaced the page's placeholder headings and summary with a near-accurate working narrative based on the supplied 2025 Fincart brand guide, the current Fincart website, the existing mobile case study, and recorded website project context. The story now covers the brief, identity rationale, brand system, website information flow, cross-channel applications, and a clearly labelled working outcome. No presentation-template metrics or unverified performance claims were used.
+- Made the opening Lottie composition full width, placed the logo construction and tote side by side, removed the selected website and mobile product still, and kept the campaign posters in one full-width position. Renamed the relevant public assets to clean descriptive URLs so old optimized-image cache entries cannot show the wrong visual.
+- Extended the website promo to the page rails and made its office background fill the complete frame. Updated the 16-second loop with separate acceleration and deceleration phases so the website begins slowly, moves faster through the middle, and settles at each end.
+- Checks: inspected the 14-page PDF brand guide and 23-slide presentation template, verified the current Fincart homepage copy, ran ESLint, TypeScript, and `git diff --check`, and reviewed the route at desktop and 390px. Desktop measurements confirmed the Lottie fills its section, the promo reaches both rails, and the page has no horizontal overflow. The browser showed distinct logo, tote, signage, campaign, website, and interface visuals. The draft remains local and noindex; no Sanity, GitHub, or Vercel write. Owner: Kyte website team. Next: client editorial review and verified outcomes before publication.
+
+### 15 October 2026: Align and prepare the Fincart website and brand case study for release
+
+- Rebuilt the case narrative with the established Fincart editorial pattern: 18px uppercase eyebrow labels followed by full-width 23–32px, 500-weight narrative copy. Removed split copy-and-image chapters, placed each narrative block above its media, kept paired visuals in explicit two-column grids, and made every unpaired image, video, palette, and HTML experience fill the shared content rail.
+- Placed the Mr. Tanvir Alam signboard beside the blue desktop mockup and moved the animated website motion into the full-width Identity chapter. Kept the person-with-phone video, live website animation, and three-poster image inside the page rails. Restored the actual `https://www.fincart.com/` page inside the supplied glass-frame HTML experience, reduced the internal screen scale to show more office background, and retained the slow-fast-slow camera movement.
+- Extended the existing Fincart text and image reveal system to all case-study copy and media. Lottie, MP4, and embedded HTML motion now starts when it enters view and pauses off screen; reduced-motion visitors receive a still state. Added the local fallback entry to production Work data so the noindex draft route and its Work card remain available when the Sanity entry is absent.
+- Checks: `npm run build` passed, with the existing Sanity CDN DNS failure using fallback Work and Design News data. Desktop browser measurements confirmed 18px eyebrows, 28px narrative text, full-width 1187px single media, and two equal columns for the Tanvir/desktop row. The live nested Fincart URL rendered in the frame, and a video changed from paused to playing only after entering view. Reviewed the page at 1280px and 390px with no forced image crop or stretch. Release to GitHub main and Vercel requested; deployment status is recorded in the final task report. Owner: Kyte website team.
