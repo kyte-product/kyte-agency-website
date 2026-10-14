@@ -4,10 +4,12 @@ import { FincartBrandingMotion } from "./FincartBrandingMotion";
 import "./FincartStory.css";
 
 function Statement({ label, children, body = [], className = "" }: { label: string; children: string; body?: string[]; className?: string }) {
+  const copy = [children, ...body].join(" ");
+
   return <div className={`fincart-brand-story__statement ${className}`}>
     <h2 className="fincart-brand-story__label" data-reveal-words><RevealWords text={label} /></h2>
     <div className="fincart-brand-story__copy">
-      {[children, ...body].map((paragraph, index) => <p key={paragraph} data-reveal-words data-reveal-delay={String(index * 70)}><RevealWords text={paragraph} /></p>)}
+      <p data-reveal-words><RevealWords text={copy} /></p>
     </div>
   </div>;
 }
@@ -48,7 +50,7 @@ export function FincartBrandingStory() {
     </section>
 
     <section className="fincart-brand-story__composition">
-      <div className="fincart-brand-story__lottie-frame" data-fincart-image-reveal><FincartBrandingMotion /></div>
+      <HtmlExperience title="Fincart color palette motion study" src="/fincart-branding/html/palette-motion.html" />
       <div className="fincart-brand-story__brand-pair">
         <Still label="Fincart logo construction and clear space" src="/fincart-branding/logo-clear-space.jpg" width={3840} height={2160} className="fincart-brand-story__logo-grid" sizes="(max-width: 760px) 100vw, 54vw" />
         <Still label="Fincart brand application tote mockup" src="/fincart-branding/brand-tote.jpg" width={2508} height={2508} className="fincart-brand-story__tote" sizes="(max-width: 760px) 100vw, 34vw" />
@@ -68,7 +70,7 @@ export function FincartBrandingStory() {
 
     <Motion label="Fincart brand motion study" src="/fincart-branding/brand-motion.mp4" className="fincart-brand-story__media--wide" />
 
-    <HtmlExperience title="Fincart color palette motion study" src="/fincart-branding/html/palette-motion.html" className="fincart-brand-story__motion--full" />
+    <div className="fincart-brand-story__lottie-frame fincart-brand-story__motion--full" data-fincart-image-reveal><FincartBrandingMotion /></div>
 
     <section className="fincart-brand-story__chapter">
       <Statement

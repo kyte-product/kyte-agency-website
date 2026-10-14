@@ -29,30 +29,6 @@
         width: min(1120px, 100%);
       }
 
-      .toolbar {
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 10px;
-      }
-
-      button {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        min-height: 40px;
-        padding: 0 14px;
-        border: 1px solid #dedede;
-        border-radius: 999px;
-        background: #fff;
-        color: #222;
-        font: inherit;
-        font-size: 13px;
-        cursor: pointer;
-      }
-
-      button:hover { border-color: #aaa; }
-      button:focus-visible { outline: 2px solid #026bf6; outline-offset: 3px; }
-
       .palette {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -103,7 +79,7 @@
       }
 
       .palette.is-playing .swatch {
-        animation: reveal-left .8s cubic-bezier(.22,.78,.2,1) both;
+        animation: reveal-left 1.35s cubic-bezier(.22,1,.36,1) both;
         animation-delay: var(--delay);
       }
 
@@ -112,8 +88,8 @@
       .palette.is-playing .swatch--white { animation-name: reveal-right; }
 
       .palette.is-playing .swatch__copy {
-        animation: copy-in .46s cubic-bezier(.2,.7,.2,1) both;
-        animation-delay: calc(var(--delay) + .48s);
+        animation: copy-in .7s cubic-bezier(.22,1,.36,1) both;
+        animation-delay: calc(var(--delay) + .75s);
       }
 
       @keyframes reveal-left {
@@ -142,10 +118,10 @@
       }
 
       .swatch--blue { --delay: 0ms; }
-      .swatch--yellow { --delay: 150ms; }
-      .swatch--mint { --delay: 300ms; }
-      .swatch--black { --delay: 460ms; }
-      .swatch--white { --delay: 610ms; }
+      .swatch--yellow { --delay: 240ms; }
+      .swatch--mint { --delay: 480ms; }
+      .swatch--black { --delay: 720ms; }
+      .swatch--white { --delay: 960ms; }
 
       @media (max-width: 680px) {
         body { padding: 20px 16px; }
@@ -171,12 +147,6 @@
   <body>
     <main>
       <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Fincart brand color palette</h1>
-      <div class="toolbar">
-        <button id="replay" type="button" aria-label="Replay color palette animation">
-          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13.25 5.5A5.5 5.5 0 1 0 13.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10.5 2.5h3v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Replay
-        </button>
-      </div>
       <section class="palette" id="palette" aria-label="Fincart brand color palette">
         <article class="swatch swatch--blue" aria-label="Brandeis Blue, hex 026BF6, RGB 2 107 246, CMYK 99 57 0 4">
           <div class="swatch__copy"><span class="swatch__name">Brandeis Blue</span><span class="swatch__value">HEX: #026BF6<br />RGB: 2, 107, 246<br />CMYK: 99, 57, 0, 4</span></div>
@@ -197,15 +167,27 @@
     </main>
     <script>
       const palette = document.querySelector("#palette");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const cycleDuration = 2310;
+      const replayDelay = 5000;
+      let visible = false;
+      let replayTimer;
+
       const play = () => {
+        window.clearTimeout(replayTimer);
+        if (!visible || reducedMotion) return;
         palette.classList.remove("is-playing");
         void palette.offsetWidth;
         palette.classList.add("is-playing");
+        replayTimer = window.setTimeout(play, cycleDuration + replayDelay);
       };
-      document.querySelector("#replay").addEventListener("click", play);
+
       window.addEventListener("message", event => {
         if (event.origin !== window.location.origin || event.data?.type !== "kyte-visibility") return;
-        if (event.data.visible) play();
+        visible = Boolean(event.data.visible);
+        window.clearTimeout(replayTimer);
+        if (visible) play();
+        else palette.classList.remove("is-playing");
       });
     </script>
   </body>
