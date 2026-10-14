@@ -46,20 +46,20 @@
         min-width: 0;
         padding: clamp(22px, 3vw, 38px);
         overflow: hidden;
-        clip-path: inset(0);
+        clip-path: inset(0 100% 0 0);
       }
 
       .swatch--blue { grid-column: span 2; background: #026bf6; color: #fff; }
-      .swatch--yellow { background: #fec727; color: #111; }
-      .swatch--mint { background: #04b283; color: #fff; }
+      .swatch--yellow { background: #fec727; color: #111; clip-path: inset(0 0 100% 0); }
+      .swatch--mint { background: #04b283; color: #fff; clip-path: inset(100% 0 0 0); }
       .swatch--black { grid-column: span 2; background: #222; color: #fff; }
-      .swatch--white { grid-column: span 2; background: #fff; color: #111; }
+      .swatch--white { grid-column: span 2; background: #fff; color: #111; clip-path: inset(0 0 0 100%); }
 
       .swatch__copy {
         position: relative;
         z-index: 1;
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 0;
+        transform: translateY(9px);
       }
 
       .swatch__name {

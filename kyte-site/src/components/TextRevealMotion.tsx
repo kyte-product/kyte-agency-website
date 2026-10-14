@@ -20,7 +20,8 @@ export function TextRevealMotion() {
         target.classList.add("is-revealed");
         const words = target.querySelectorAll<HTMLElement>(".reveal-word");
         const isHeading = /^H[1-6]$/.test(target.tagName);
-        const stagger = isHeading ? 42 : 24;
+        const isContinuous = target.hasAttribute("data-reveal-continuous");
+        const stagger = isHeading ? 42 : isContinuous ? 18 : 24;
         const start = Number(target.dataset.revealDelay ?? 0);
 
         words.forEach((word, index) => {
@@ -31,12 +32,17 @@ export function TextRevealMotion() {
             ],
             {
               duration: isHeading ? 620 : 480,
-              delay: start + Math.min(index * stagger, 620),
+              delay: start + (isContinuous ? index * stagger : Math.min(index * stagger, 620)),
               easing: "cubic-bezier(.22,1,.36,1)",
               fill: "both",
             },
           );
-          animation.onfinish = () => animation.cancel();
+          animation.onfinish = () => {
+            word.style.opacity = "1";
+            word.style.transform = "translateY(0)";
+            word.style.filter = "blur(0)";
+            animation.cancel();
+          };
         });
       });
     }, { threshold: .15, rootMargin: "0px 0px -8% 0px" });

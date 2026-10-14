@@ -2165,3 +2165,10 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Slowed the color reveal with smoother easing and wider timing offsets, removed its manual replay button, and added automatic replay five seconds after each completed sequence while the frame remains in view. Reduced-motion preferences still receive a static palette.
 - Combined the lead and supporting copy in every case-study chapter into one narrative paragraph and one word-reveal sequence. This prevents separate paragraphs from entering at different times while preserving the established eyebrow and narrative type styles.
 - Local browser checks confirmed the palette appears first, the word-mark composition is 4:3 and transparent at 1187px wide, all five narrative sections contain one paragraph, and the page has no desktop horizontal overflow. Release checks and production deployment status are recorded in the final task report. Owner: Kyte website team.
+
+### 15 October 2026: Remove Fincart reveal flashes and update logo artwork
+
+- Changed the long case-study narrative reveals to use an uncapped continuous word stagger. The final word state is now written before each Web Animation is cancelled, preventing the first line from transitioning smoothly and the remaining copy from appearing together or snapping at completion.
+- Set the color-palette swatches and labels to their concealed starting styles in the embedded document. The completed palette can no longer flash before the parent visibility controller starts the animation; the existing five-second replay delay and reduced-motion behavior remain intact.
+- Replaced the paired Fincart logo asset with the newly supplied 3840 by 2160 clear-space construction artwork under a new cache-safe public filename. It retains the shared case-study media corner radius and descriptive alt text.
+- Release checks, responsive browser review, GitHub merge, and production deployment are recorded in the final task report. Owner: Kyte website team.
