@@ -17,3 +17,20 @@ export const fincartProject: WorkProject = {
   projectUrl: "https://apps.apple.com/in/app/fincart-investment-app/id1540925421",
   cover: { url: "/fincart/fincart-phone-cover.png", alt: "FinCart app screen on an angled phone between metallic forms" },
 };
+
+export const fincartWebsiteBrandingProject: WorkProject = {
+  _id: "local-fincart-website-branding",
+  title: "Fincart Website and Brand Identity",
+  slug: "fincart-website-branding",
+  summary: "A clearer brand and website for financial planning built around life goals, guidance, and long-term progress.",
+  client: "Fincart",
+  role: "Website design and brand identity",
+  projectType: "Website and branding",
+  period: null,
+  cardService: "Website Design · Brand Identity",
+  filterCategories: ["Website Design", "Brand Identity"],
+  featured: false,
+  sortOrder: 100,
+  projectUrl: null,
+  cover: { url: "/fincart-branding/launch-event-cover.jpg", alt: "Fincart launch event banner in a dark auditorium" },
+};

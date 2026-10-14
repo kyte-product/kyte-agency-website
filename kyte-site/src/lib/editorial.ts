@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { fincartProject } from "./fincart";
+import { fincartProject, fincartWebsiteBrandingProject } from "./fincart";
 import {
   getPublishedDesignNews,
   getPublishedDesignNewsBySlug,
@@ -24,18 +24,23 @@ async function localPreview(): Promise<PreviewSnapshot | null> {
 
 export async function workEntries(): Promise<WorkProject[]> {
   const preview = await localPreview();
-  if (preview) return preview.work.some((entry) => entry.slug === fincartProject.slug) ? preview.work : [fincartProject, ...preview.work];
+  const withFallbacks = (projects: WorkProject[]) => {
+    const additions = [fincartProject, fincartWebsiteBrandingProject].filter((fallback) => !projects.some((entry) => entry.slug === fallback.slug));
+    return [...additions, ...projects];
+  };
+  if (preview) return withFallbacks(preview.work);
   try {
     const projects = await getPublishedWork();
-    return projects.some((entry) => entry.slug === fincartProject.slug) ? projects : [fincartProject, ...projects];
-  } catch (error) { console.error("Work content could not load", error); return [fincartProject]; }
+    return withFallbacks(projects);
+  } catch (error) { console.error("Work content could not load", error); return [fincartProject, fincartWebsiteBrandingProject]; }
 }
 
 export async function workEntry(slug: string): Promise<WorkProject | null> {
+  const localFallback = slug === fincartProject.slug ? fincartProject : slug === fincartWebsiteBrandingProject.slug ? fincartWebsiteBrandingProject : null;
   const preview = await localPreview();
-  if (preview) return preview.work.find((entry) => entry.slug === slug) ?? (slug === fincartProject.slug ? fincartProject : null);
-  try { return await getPublishedWorkBySlug(slug) ?? (slug === fincartProject.slug ? fincartProject : null); }
-  catch (error) { console.error("Work content could not load", error); return slug === fincartProject.slug ? fincartProject : null; }
+  if (preview) return preview.work.find((entry) => entry.slug === slug) ?? localFallback;
+  try { return await getPublishedWorkBySlug(slug) ?? localFallback; }
+  catch (error) { console.error("Work content could not load", error); return localFallback; }
 }
 
 export async function designNewsEntries(): Promise<DesignNewsArticle[]> {

@@ -1,8 +1,8 @@
-.fincart-story { overflow: hidden; padding-bottom: 96px; }
+.fincart-story { overflow: hidden; padding-bottom: 80px; }
 .fincart-story__intro,.fincart-story__section,.fincart-story__impact { padding-inline: var(--section-inset); }
-.fincart-story__intro { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(220px,.7fr); gap: clamp(48px,8vw,132px); padding-top: 108px; padding-bottom: 116px; }
-.fincart-story__section { padding-bottom: 116px; }
-.fincart-story__statement { max-width: 1020px; margin-bottom: 54px; }
+.fincart-story__intro { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(220px,.7fr); gap: clamp(48px,8vw,132px); padding-top: 88px; padding-bottom: 92px; }
+.fincart-story__section { padding-bottom: 88px; }
+.fincart-story__statement { max-width: 1020px; margin-bottom: 34px; }
 .fincart-story__statement h2,.fincart-story__intro-aside > p { margin: 0 0 20px; color: #9f9f9f; font-size: 18px; font-weight: 400; line-height: 1.4; text-transform: uppercase; }
 .fincart-story__statement p { margin: 0; color: var(--ink); font-size: clamp(23px,2.2vw,32px); font-weight: 500; line-height: 1.32; letter-spacing: -.02em; }
 .fincart-story__intro .fincart-story__statement { margin-bottom: 0; }
@@ -100,6 +100,42 @@
 .fincart-story__impact-grid strong { color: var(--color-blue); font-size: clamp(46px,5vw,70px); font-weight: 400; font-variant-numeric: tabular-nums; letter-spacing: -.065em; line-height: 1; }
 .fincart-story__impact-grid > div > span { max-width: 270px; font-size: clamp(19px,1.8vw,23px); font-weight: 500; line-height: 1.3; }
 .fincart-story__closing { padding-bottom: 0; }
+.fincart-brand-story { overflow: hidden; padding: clamp(76px,9vw,124px) var(--section-inset) clamp(90px,10vw,140px); color: var(--ink); background: var(--color-white); }
+.fincart-brand-story__opening { display: grid; gap: clamp(42px,6vw,82px); margin-bottom: clamp(88px,11vw,170px); }
+.fincart-brand-story__statement { max-width: 1020px; }
+.fincart-brand-story__label,.fincart-brand-story__scope > p { margin: 0 0 20px; color: #9f9f9f; font-size: 18px; font-weight: 400; line-height: 1.4; text-transform: uppercase; }
+.fincart-brand-story__statement--wide { max-width: 1080px; }
+.fincart-brand-story__copy { display: grid; gap: clamp(18px,2.2vw,30px); }
+.fincart-brand-story__copy p { max-width: 1020px; margin: 0; color: var(--ink); font-size: clamp(23px,2.2vw,32px); font-weight: 500; line-height: 1.32; letter-spacing: -.02em; }
+.fincart-brand-story__scope { max-width: 1020px; }
+.fincart-brand-story__scope ul { margin: 0; padding: 0; list-style: none; }
+.fincart-brand-story__scope ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: clamp(24px,5vw,80px); }
+.fincart-brand-story__scope li { padding: 15px 0; border-top: 1px solid var(--line); color: var(--ink); font-size: var(--type-body); line-height: 1.35; }
+.fincart-brand-story__media,.fincart-brand-story__lottie-frame { position: relative; overflow: hidden; margin: 0; border-radius: var(--radius-large); background: var(--color-surface-secondary); }
+.fincart-brand-story__media img,.fincart-brand-story__media video { display: block; width: 100%; height: auto; object-fit: contain; }
+.fincart-brand-story__html { aspect-ratio: 16/10; }
+.fincart-brand-story__html iframe { display: block; width: 100%; height: 100%; border: 0; background: #f4f4f4; }
+.fincart-brand-story__html.fincart-brand-story__motion--offset { aspect-ratio: 4/3; }
+.fincart-brand-story__composition { display: grid; gap: clamp(18px,2.4vw,36px); margin-bottom: clamp(110px,16vw,250px); }
+.fincart-brand-story__lottie-frame { width: 100%; aspect-ratio: 16/9; background: #f5f5f5; }
+.fincart-brand-story__lottie { width: 100%; height: 100%; }
+.fincart-brand-story__brand-pair { display: grid; grid-template-columns: minmax(0,1.35fr) minmax(260px,.65fr); gap: clamp(18px,2.4vw,36px); align-items: start; }
+.fincart-brand-story__logo-grid img { object-fit: contain; background: #fff; }
+.fincart-brand-story__tote { width: 100%; }
+.fincart-brand-story__tote img { object-fit: contain; }
+.fincart-brand-story__chapter { margin-bottom: clamp(72px,9vw,142px); }
+.fincart-brand-story__chapter--stacked { display: grid; gap: clamp(36px,6vw,90px); }
+.fincart-brand-story__media--wide { width: 100%; margin-bottom: clamp(88px,12vw,180px); }
+.fincart-brand-story__motion--full { width: 100%; margin: 0 0 clamp(110px,15vw,230px); }
+.fincart-brand-story__web-grid { display: grid; gap: clamp(18px,2.5vw,38px); align-items: start; margin-bottom: clamp(126px,17vw,270px); }
+.fincart-brand-story__web-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.fincart-brand-story__desktop { width: 100%; }
+.fincart-brand-story__final-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(24px,4vw,64px); align-items: start; }
+.fincart-brand-story__calculator img { object-fit: contain; }
+.fincart-brand-story__final-motion { margin-top: clamp(80px,12vw,180px); }
+.fincart-brand-story__closing-copy { margin-top: clamp(58px,8vw,120px); margin-bottom: 0; }
+.fincart-brand-story__cover { aspect-ratio: auto; background: var(--color-surface-secondary); }
+.fincart-brand-story__cover img { display: block; width: 100%; height: auto; object-fit: contain; }
 @media (prefers-reduced-motion: no-preference) {
   .editorial-detail--fincart [data-fincart-image-reveal] {
     opacity: 1;
@@ -127,8 +163,22 @@
   .fincart-story__feature-goals { grid-column: 1 / 3; grid-row: 8; }
 }
 @media(max-width:760px) {
-  .fincart-story__intro { grid-template-columns: 1fr; gap: 38px; padding-top: 68px; padding-bottom: 90px; }
-  .fincart-story__section { padding-bottom: 90px; }
+  .fincart-brand-story { padding-top: 64px; }
+  .fincart-brand-story__opening,.fincart-brand-story__web-grid,.fincart-brand-story__final-grid { grid-template-columns: 1fr; }
+  .fincart-brand-story__opening { gap: 42px; margin-bottom: 96px; }
+  .fincart-brand-story__label,.fincart-brand-story__scope > p { font-size: 15px; }
+  .fincart-brand-story__copy p { font-size: 22px; line-height: 1.35; }
+  .fincart-brand-story__scope ul { grid-template-columns: 1fr; }
+  .fincart-brand-story__composition { margin-bottom: 120px; }
+  .fincart-brand-story__lottie-frame { aspect-ratio: 4/3; }
+  .fincart-brand-story__brand-pair { grid-template-columns: 1fr; }
+  .fincart-brand-story__tote { width: 74%; justify-self: end; }
+  .fincart-brand-story__chapter--stacked { gap: 34px; }
+  .fincart-brand-story__web-grid { margin-bottom: 120px; }
+  .fincart-brand-story__desktop { width: 100%; margin-top: 20px; }
+  .fincart-brand-story__final-motion { margin-top: 0; }
+  .fincart-story__intro { grid-template-columns: 1fr; gap: 38px; padding-top: 68px; padding-bottom: 74px; }
+  .fincart-story__section { padding-bottom: 72px; }
   .fincart-story__research-notes { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .fincart-story__ds-grid { grid-template-columns: 1fr; }
   .fincart-story__ds-side { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: none; }

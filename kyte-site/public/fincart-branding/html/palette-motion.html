@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Fincart color palette motion study</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Geist, "DM Sans", Arial, sans-serif;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+        padding: clamp(20px, 5vw, 72px);
+        background: #f4f4f4;
+      }
+
+      main {
+        width: min(1120px, 100%);
+      }
+
+      .toolbar {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+      }
+
+      button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 40px;
+        padding: 0 14px;
+        border: 1px solid #dedede;
+        border-radius: 999px;
+        background: #fff;
+        color: #222;
+        font: inherit;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      button:hover { border-color: #aaa; }
+      button:focus-visible { outline: 2px solid #026bf6; outline-offset: 3px; }
+
+      .palette {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(250px, 1fr));
+        gap: 8px;
+        aspect-ratio: 1.78;
+        overflow: hidden;
+        background: #f4f4f4;
+      }
+
+      .swatch {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        min-width: 0;
+        padding: clamp(22px, 3vw, 38px);
+        overflow: hidden;
+        clip-path: inset(0);
+      }
+
+      .swatch--blue { grid-column: span 2; background: #026bf6; color: #fff; }
+      .swatch--yellow { background: #fec727; color: #111; }
+      .swatch--mint { background: #04b283; color: #fff; }
+      .swatch--black { grid-column: span 2; background: #222; color: #fff; }
+      .swatch--white { grid-column: span 2; background: #fff; color: #111; }
+
+      .swatch__copy {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .swatch__name {
+        display: block;
+        margin-bottom: 14px;
+        font-size: clamp(14px, 1.35vw, 18px);
+        font-weight: 500;
+        letter-spacing: -.02em;
+      }
+
+      .swatch__value {
+        display: block;
+        font-size: clamp(10px, .95vw, 12px);
+        font-weight: 400;
+        line-height: 1.35;
+        opacity: .88;
+      }
+
+      .palette.is-playing .swatch {
+        animation: reveal-left .8s cubic-bezier(.22,.78,.2,1) both;
+        animation-delay: var(--delay);
+      }
+
+      .palette.is-playing .swatch--yellow { animation-name: reveal-down; }
+      .palette.is-playing .swatch--mint { animation-name: reveal-up; }
+      .palette.is-playing .swatch--white { animation-name: reveal-right; }
+
+      .palette.is-playing .swatch__copy {
+        animation: copy-in .46s cubic-bezier(.2,.7,.2,1) both;
+        animation-delay: calc(var(--delay) + .48s);
+      }
+
+      @keyframes reveal-left {
+        from { clip-path: inset(0 100% 0 0); }
+        to { clip-path: inset(0); }
+      }
+
+      @keyframes reveal-down {
+        from { clip-path: inset(0 0 100% 0); }
+        to { clip-path: inset(0); }
+      }
+
+      @keyframes reveal-up {
+        from { clip-path: inset(100% 0 0 0); }
+        to { clip-path: inset(0); }
+      }
+
+      @keyframes reveal-right {
+        from { clip-path: inset(0 0 0 100%); }
+        to { clip-path: inset(0); }
+      }
+
+      @keyframes copy-in {
+        from { opacity: 0; transform: translateY(9px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .swatch--blue { --delay: 0ms; }
+      .swatch--yellow { --delay: 150ms; }
+      .swatch--mint { --delay: 300ms; }
+      .swatch--black { --delay: 460ms; }
+      .swatch--white { --delay: 610ms; }
+
+      @media (max-width: 680px) {
+        body { padding: 20px 16px; }
+        .palette {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-rows: repeat(3, minmax(170px, 1fr));
+          aspect-ratio: auto;
+        }
+        .swatch { padding: 20px; }
+        .swatch--blue { grid-column: span 2; }
+        .swatch--yellow, .swatch--mint, .swatch--black, .swatch--white { grid-column: span 1; }
+        .swatch__name { margin-bottom: 10px; font-size: 15px; }
+        .swatch__value { font-size: 10px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; }
+        .palette.is-playing .swatch, .palette.is-playing .swatch__copy { animation: none !important; }
+        .swatch, .swatch__copy { clip-path: none !important; opacity: 1 !important; transform: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Fincart brand color palette</h1>
+      <div class="toolbar">
+        <button id="replay" type="button" aria-label="Replay color palette animation">
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13.25 5.5A5.5 5.5 0 1 0 13.5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10.5 2.5h3v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Replay
+        </button>
+      </div>
+      <section class="palette" id="palette" aria-label="Fincart brand color palette">
+        <article class="swatch swatch--blue" aria-label="Brandeis Blue, hex 026BF6, RGB 2 107 246, CMYK 99 57 0 4">
+          <div class="swatch__copy"><span class="swatch__name">Brandeis Blue</span><span class="swatch__value">HEX: #026BF6<br />RGB: 2, 107, 246<br />CMYK: 99, 57, 0, 4</span></div>
+        </article>
+        <article class="swatch swatch--yellow" aria-label="Mikado Yellow, hex FEC727, RGB 254 199 39, CMYK 0 22 85 0">
+          <div class="swatch__copy"><span class="swatch__name">Mikado Yellow</span><span class="swatch__value">HEX: #FEC727<br />RGB: 254, 199, 39<br />CMYK: 0, 22, 85, 0</span></div>
+        </article>
+        <article class="swatch swatch--mint" aria-label="Mint, hex 04B283, RGB 4 178 131, CMYK 98 0 26 30">
+          <div class="swatch__copy"><span class="swatch__name">Mint</span><span class="swatch__value">HEX: #04B283<br />RGB: 4, 178, 131<br />CMYK: 98, 0, 26, 30</span></div>
+        </article>
+        <article class="swatch swatch--black" aria-label="Eerie Black, hex 222222, RGB 34 34 34, CMYK 0 0 0 87">
+          <div class="swatch__copy"><span class="swatch__name">Eerie Black</span><span class="swatch__value">HEX: #222222<br />RGB: 34, 34, 34<br />CMYK: 0, 0, 0, 87</span></div>
+        </article>
+        <article class="swatch swatch--white" aria-label="White, hex FFFFFF, RGB 255 255 255, CMYK 0 0 0 0">
+          <div class="swatch__copy"><span class="swatch__name">White</span><span class="swatch__value">HEX: #FFFFFF<br />RGB: 255, 255, 255<br />CMYK: 0, 0, 0, 0</span></div>
+        </article>
+      </section>
+    </main>
+    <script>
+      const palette = document.querySelector("#palette");
+      const play = () => {
+        palette.classList.remove("is-playing");
+        void palette.offsetWidth;
+        palette.classList.add("is-playing");
+      };
+      document.querySelector("#replay").addEventListener("click", play);
+      window.addEventListener("message", event => {
+        if (event.origin !== window.location.origin || event.data?.type !== "kyte-visibility") return;
+        if (event.data.visible) play();
+      });
+    </script>
+  </body>
+</html>

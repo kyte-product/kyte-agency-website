@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fincart | Website Promo</title>
+<style>
+:root{color-scheme:light;--blue:#026bf6;--ink:#222;--muted:#687180;--paper:#edf3f8}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:linear-gradient(112deg,rgba(255,255,255,.04),rgba(225,239,250,.12)),url("assets/fincart-office-background.png") center 52%/cover no-repeat;font-family:Geist,Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}
+main{width:min(900px,calc(100vw - 160px));padding:54px 0}
+.glass-frame{position:relative;padding:13px;border:1px solid rgba(255,255,255,.88);border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.76),rgba(221,237,249,.3) 18%,rgba(255,255,255,.48) 48%,rgba(196,220,238,.35) 78%,rgba(255,255,255,.72));box-shadow:0 30px 76px rgba(57,82,105,.22),0 8px 20px rgba(72,103,132,.1),inset 0 0 0 1px rgba(255,255,255,.86),inset 0 0 0 3px rgba(220,237,248,.36),inset 0 2px 7px rgba(255,255,255,.98),inset 0 -2px 5px rgba(114,151,183,.2);backdrop-filter:blur(9px) saturate(1.18);isolation:isolate}
+.glass-frame:before{content:"";position:absolute;inset:3px;border:1px solid rgba(255,255,255,.72);border-radius:28px;box-shadow:inset 0 0 0 1px rgba(174,202,224,.16);pointer-events:none;z-index:3}
+.glass-frame:after{content:"";position:absolute;inset:0;border-radius:32px;pointer-events:none;background:linear-gradient(112deg,rgba(255,255,255,.42),transparent 13%,transparent 54%,rgba(255,255,255,.12) 72%,rgba(255,255,255,.46)),linear-gradient(180deg,rgba(255,255,255,.22),transparent 9%,transparent 91%,rgba(116,153,182,.13));z-index:3}
+.stage{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border:1px solid rgba(219,231,241,.96);border-radius:20px;background:#fff;box-shadow:0 1px 3px rgba(41,70,96,.12),inset 0 0 0 1px rgba(255,255,255,.94);isolation:isolate}
+.stage:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.page-camera{position:absolute;left:50%;top:0;width:1440px;height:10000px;transform-origin:top center;will-change:transform}
+.page-camera iframe{display:block;width:1440px;height:10000px;border:0;background:#fff}
+@media(max-width:640px){main{width:calc(100vw - 40px);padding:20px 0}.glass-frame{padding:7px;border-radius:20px}.glass-frame:before{border-radius:17px}.glass-frame:after{border-radius:20px}.stage{border-radius:12px}}
+@media(prefers-reduced-motion:reduce){.page-camera{transform:translate(-50%,0) scale(.64)!important}}
+</style>
+</head>
+<body>
+<main aria-label="Fincart website animation preview">
+  <div class="glass-frame" aria-label="Glass desktop display frame">
+    <div class="stage" id="stage">
+      <div class="page-camera" id="pageCamera">
+        <iframe title="Live Fincart website" src="https://www.fincart.com/" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+(() => {
+  const camera = document.getElementById('pageCamera');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const duration = 14000;
+  const motion = [
+    {t:0,     s:.62, y:0},
+    {t:1800,  s:.70, y:0},
+    {t:2700,  s:.70, y:0},
+    {t:10800, s:.70, y:-2600},
+    {t:11900, s:.70, y:-2600},
+    {t:14000, s:.62, y:0}
+  ];
+  let active = false;
+  let started = performance.now();
+  let raf = 0;
+  const ease = t => t < .5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2;
+  function frame(now){
+    if (!active) return;
+    const elapsed=(now-started)%duration;
+    let a=motion[0],b=motion[1];
+    for(let i=1;i<motion.length;i++){ if(elapsed<=motion[i].t){a=motion[i-1];b=motion[i];break;} }
+    const u=ease(Math.max(0,Math.min(1,(elapsed-a.t)/(b.t-a.t))));
+    const s=a.s+(b.s-a.s)*u;
+    const y=a.y+(b.y-a.y)*u;
+    camera.style.transform=`translate(-50%, ${y}px) scale(${s})`;
+    raf=requestAnimationFrame(frame);
+  }
+  window.addEventListener('message', event => {
+    if (event.origin !== window.location.origin || event.data?.type !== 'kyte-visibility') return;
+    if (event.data.visible && !reduced) {
+      cancelAnimationFrame(raf);
+      started=performance.now();
+      active=true;
+      raf=requestAnimationFrame(frame);
+    } else {
+      active=false;
+      cancelAnimationFrame(raf);
+    }
+  });
+})();
+</script>
+</body>
+</html>
