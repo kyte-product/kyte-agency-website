@@ -18,13 +18,28 @@ const presentation = `<style id="product-experience-presentation">
   #stage svg path,#stage svg circle{vector-effect:non-scaling-stroke}
   #stage svg .experience-ground{opacity:.66}
   #stage svg .experience-dot{stroke:#dce3e5;stroke-width:.55}
+  #stage svg .experience-keyboard-base{fill:#f5f6f6;stroke:#cbd0d1;stroke-width:.95}
+  #stage svg .experience-keyboard-top{fill:#fff;stroke:#aeb5b7;stroke-width:1.05}
+  #stage svg .experience-cube-front{fill:#fff;stroke:none}
+  #stage svg .experience-cube-side{fill:#fafbfb;stroke:none}
+  #stage svg .experience-cube-top{fill:#fff;stroke:none}
+  #stage svg .experience-cube-outline{fill:none;stroke:#a9b0b2;stroke-width:1.05;stroke-linejoin:round}
+  #stage svg .experience-cube-seam{fill:none;stroke:#c5cbcd;stroke-width:.8;stroke-linecap:round;stroke-linejoin:round}
+  #stage svg .experience-wire-outer{fill:none;stroke:#d8dddf;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+  #stage svg .experience-wire-inner{fill:none;stroke:#f4f6f6;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+  #stage svg .experience-screen-back,#stage svg .experience-card-back{fill:#f7f8f8;stroke:#c5cbcd;stroke-width:.8}
+  #stage svg .experience-screen-face,#stage svg .experience-card-face{fill:#fff;stroke:#aeb5b7;stroke-width:1.05;stroke-linejoin:round}
+  #stage svg .experience-screen-rule,#stage svg .experience-detail{fill:none;stroke:#e1e5e6;stroke-width:.85;stroke-linecap:round}
+  #stage svg .experience-icon-fill{fill:#c6cbcd;stroke:none}
+  #stage svg .experience-icon-outline{fill:none;stroke:#c0c6c8;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+  #stage svg .experience-mail{fill:#fff;stroke:#fff;stroke-width:.8}
   #stage svg .experience-white{fill:#fff;stroke:#aeb4b8;stroke-width:1.2}
   #stage svg .experience-rear{fill:#f3f5f7;stroke:#c7ced0;stroke-width:1}
   #stage svg .experience-rim{stroke:#c6cbcc;stroke-width:1}
   #stage svg .experience-inner{stroke:#e2e5e7;stroke-width:1}
   #stage svg .experience-key{fill:#eef0f1;stroke:#fff;stroke-width:.85}
-  #stage svg .experience-sea{fill:url(#experience-sea);stroke:#d3e4dc;stroke-width:.7}
-  #stage svg .experience-sea-two{fill:url(#experience-sea-two);stroke:#d0e8da;stroke-width:.7}
+  #stage svg .experience-sea{fill:url(#experience-sea);stroke:#dcf0e9;stroke-width:.55}
+  #stage svg .experience-sea-two{fill:url(#experience-sea-two);stroke:#dcf0e9;stroke-width:.55}
   #stage svg .experience-warm{fill:url(#experience-warm);stroke:#f5d66f;stroke-width:.7}
   #stage svg .experience-pink{fill:url(#experience-pink);stroke:#f1b7d9;stroke-width:.7}
   #stage svg .experience-disc{fill:url(#experience-disc);stroke:none}
