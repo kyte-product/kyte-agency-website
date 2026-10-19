@@ -1,16 +1,12 @@
 "use client";
 
-import { Exploded, Hub, Keyboard, Plot, Relay } from "@lucasmarkes/hairline/react";
+import { Exploded, Hub, Plot, Relay } from "@lucasmarkes/hairline/react";
 
 const figures = { hub: Hub, relay: Relay, plot: Plot, exploded: Exploded };
 
 export function ProductDesignHeroArt() {
-  return <div className="product-landing__art" role="img" aria-label="Fine-line keyboard and layered product interface panels with colorful gradients">
-    <div className="product-landing__art-grid" />
-    <div className="product-landing__keyboard"><Keyboard theme="light" play intensity={0.25} label="Interactive keyboard illustration" /></div>
-    <div className="product-landing__art-panel product-landing__art-panel--back"><span className="product-landing__art-dots"><i /><i /><i /></span><div className="product-landing__art-gradient product-landing__art-gradient--mint" /><span className="product-landing__art-line" /><span className="product-landing__art-line short" /></div>
-    <div className="product-landing__art-panel product-landing__art-panel--front"><span className="product-landing__art-dots"><i /><i /><i /></span><div className="product-landing__art-chart"><span /><span /><span /><span /><span /></div><div className="product-landing__art-gradient product-landing__art-gradient--sun" /></div>
-    <div className="product-landing__art-orb product-landing__art-orb--one" /><div className="product-landing__art-orb product-landing__art-orb--two" />
+  return <div className="product-landing__art" role="img" aria-label="Isometric product workspace with a keyboard, layered interface panels, connected tools, and soft color gradients">
+    <iframe className="product-landing__art-embed" src="/hairline/product-experience-embed.html" title="Custom Hairline product experience illustration" loading="eager" tabIndex={-1} aria-hidden="true" />
   </div>;
 }
 
