@@ -18,8 +18,9 @@ const presentation = `<style id="product-experience-presentation">
   #stage svg path,#stage svg circle{vector-effect:non-scaling-stroke}
   #stage svg .experience-ground{opacity:.66}
   #stage svg .experience-dot{stroke:#dce3e5;stroke-width:.55}
-  #stage svg .experience-keyboard-base{fill:#f5f6f6;stroke:#cbd0d1;stroke-width:.95}
-  #stage svg .experience-keyboard-top{fill:#fff;stroke:#aeb5b7;stroke-width:1.05}
+  #stage svg .experience-keyboard-body{fill:#f4f6f6;stroke:#aeb5b7;stroke-width:1.05;stroke-linejoin:round}
+  #stage svg .experience-keyboard-top{fill:#fff;stroke:none}
+  #stage svg .experience-keyboard-crease{fill:none;stroke:#e2e6e7;stroke-width:.8}
   #stage svg .experience-cube-front{fill:#fff;stroke:none}
   #stage svg .experience-cube-side{fill:#fafbfb;stroke:none}
   #stage svg .experience-cube-top{fill:#fff;stroke:none}
@@ -27,8 +28,9 @@ const presentation = `<style id="product-experience-presentation">
   #stage svg .experience-cube-seam{fill:none;stroke:#c5cbcd;stroke-width:.8;stroke-linecap:round;stroke-linejoin:round}
   #stage svg .experience-wire-outer{fill:none;stroke:#d8dddf;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
   #stage svg .experience-wire-inner{fill:none;stroke:#f4f6f6;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
-  #stage svg .experience-screen-back,#stage svg .experience-card-back{fill:#f7f8f8;stroke:#c5cbcd;stroke-width:.8}
-  #stage svg .experience-screen-face,#stage svg .experience-card-face{fill:#fff;stroke:#aeb5b7;stroke-width:1.05;stroke-linejoin:round}
+  #stage svg .experience-slab{fill:#f5f6f6;stroke:#abb2b4;stroke-width:1.05;stroke-linejoin:round}
+  #stage svg .experience-screen-face,#stage svg .experience-panel-face{fill:#fff;stroke:#aeb5b7;stroke-width:1.05;stroke-linejoin:round}
+  #stage svg .experience-hole{fill:#fff;stroke:#fff;stroke-width:.5}
   #stage svg .experience-screen-rule,#stage svg .experience-detail{fill:none;stroke:#e1e5e6;stroke-width:.85;stroke-linecap:round}
   #stage svg .experience-icon-fill{fill:#c6cbcd;stroke:none}
   #stage svg .experience-icon-outline{fill:none;stroke:#c0c6c8;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}

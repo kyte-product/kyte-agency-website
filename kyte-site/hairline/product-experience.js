@@ -11,10 +11,10 @@ const round = (g, pts, cls, radius = 2) => path(g, fillet(pts, pts.map(() => rad
 function mount({ stage, svg, read }, value) {
   const bag = disposer();
   const C = Cam(45, 0.5, 1.34);
-  fit(C, [[-78, 108, 0], [246, -40, 170], [250, 104, 0], [-78, -40, 155]], 200, 163);
+  fit(C, [[-78, 108, 0], [298, -40, 170], [298, 115, 0], [-78, -40, 155]], 200, 163);
   const P = proj(C);
   const face = (x, y, z, w, h) => (u, v) => P(x + w * u, y, z + h * (1 - v));
-  const onFace = (g, F, a, b, c, d, cls, r = .025) => path(g, rrect(a, b, c, d, r, 6).map(q => F(q.u, q.v)), cls);
+  const onFace = (g, F, a, b, c, d, cls, r = .025) => path(g, rrect(a, b, c, d, r, 12).map(q => F(q.u, q.v)), cls);
   const faceLine = (g, F, pts, cls = "experience-detail") => stroke(g, pts.map(([u, v]) => F(u, v)), cls);
   const ellipse = (g, F, u, v, rx, ry, cls, steps = 36) => path(g, Array.from({ length: steps }, (_, i) => {
     const t = i * Math.PI * 2 / steps;
@@ -33,10 +33,11 @@ function mount({ stage, svg, read }, value) {
   // A real horizontal keyboard plane: all keys share the same two axes.
   const keyboard = mk("g", { class: "experience-keyboard" }, svg);
   const KB = (u, v, z = 2) => P(-71 + 145 * u, 36 + 69 * v, z);
-  const keyRing = rrect(0, 0, 1, 1, .075, 8);
-  path(keyboard, keyRing.map(q => KB(q.u, q.v, 0)), "experience-keyboard-base");
-  path(keyboard, keyRing.map(q => KB(q.u, q.v, 2)), "experience-keyboard-top");
-  stroke(keyboard, [KB(0, 1, 2), KB(0, 1, 0), KB(1, 1, 0), KB(1, 1, 2)], "experience-rim");
+  const keyRing = rrect(0, 0, 1, 1, .075, 14);
+  const keyBase = keyRing.map(q => KB(q.u, q.v, 0)), keyTop = keyRing.map(q => KB(q.u, q.v, 2));
+  path(keyboard, hull([...keyBase, ...keyTop]), "experience-keyboard-body");
+  path(keyboard, keyTop, "experience-keyboard-top");
+  stroke(keyboard, rrect(.018,.018,.982,.982,.058,14).map(q=>KB(q.u,q.v,2.05)), "experience-keyboard-crease");
   for (let row = 0; row < 6; row++) for (let col = 0; col < 11; col++) {
     const u = .044 + col * .083 + (row % 2) * .012, v = .09 + row * .132;
     path(keyboard, rrect(u, v, u + .069, v + .09, .012, 4).map(q => KB(q.u, q.v, 2.15)), "experience-key");
@@ -89,10 +90,9 @@ function mount({ stage, svg, read }, value) {
 
   // Main product window: front and thin back are the same rounded plane.
   const screen = mk("g", { class: "experience-screen" }, svg);
-  const SF = face(12, 17, 28, 157, 129), SB = face(12, 13, 29, 157, 129);
-  const bezel = rrect(0, 0, 1, 1, .027, 10);
-  path(screen, bezel.map(q => SB(q.u,q.v)), "experience-screen-back");
-  path(screen, bezel.map(q => SF(q.u,q.v)), "experience-screen-face");
+  const SF = face(12, 17, 28, 157, 129);
+  const bezel = rrect(0, 0, 1, 1, .033, 14);
+  path(screen,bezel.map(q=>SF(q.u,q.v)),"experience-screen-face");
   faceLine(screen,SF,[[.015,.12],[.985,.12]],"experience-screen-rule");
   [.035,.061,.087].forEach((u,i)=>ellipse(screen,SF,u,.057,.006,.008,`experience-window-dot experience-window-dot--${i}`,18));
   [[.045,.17,.26,.7,"experience-sea"],[.29,.17,.62,.46,"experience-sea-two"],
@@ -104,9 +104,9 @@ function mount({ stage, svg, read }, value) {
   const cards = [];
   function card(name, x, y, z, w, h) {
     const g = mk("g", { class: `experience-card experience-card--${name}` }, svg);
-    const F = face(x,y,z,w,h), R = face(x,y-2.5,z+.7,w,h);
-    path(g, bezel.map(q=>R(q.u,q.v)),"experience-card-back");
-    path(g, bezel.map(q=>F(q.u,q.v)),"experience-card-face");
+    const F = face(x,y,z,w,h);
+    const outline = rrect(0,0,1,1,Math.min(.16,3.4/Math.min(w,h)),14);
+    path(g,outline.map(q=>F(q.u,q.v)),"experience-panel-face");
     cards.push(g);
     return { g, F };
   }
@@ -127,7 +127,7 @@ function mount({ stage, svg, read }, value) {
   faceLine(media.g,media.F,[[.46,.55],[.46,.72],[.62,.64],[.46,.55]],"experience-glyph");
   const analytics = card("analytics", 94, 67, 13, 53, 72);
   ellipse(analytics.g,analytics.F,.5,.34,.19,.14,"experience-disc");
-  ellipse(analytics.g,analytics.F,.5,.34,.075,.055,"experience-card-face");
+  ellipse(analytics.g,analytics.F,.5,.34,.075,.055,"experience-hole");
   [0,1,2,3,4].forEach(i=>onFace(analytics.g,analytics.F,.13+i*.15,.69-(i%2)*.07,.19+i*.15,.87,"experience-chart",.01));
 
   const shifts = cards.map(() => tween(0));
