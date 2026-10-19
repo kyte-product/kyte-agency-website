@@ -21,7 +21,6 @@ import "../service-detail.css";
 
 const plannedPages: Record<string, string> = {
   work: "Work",
-  "ui-ux-design-development": "UI/UX Design & Development",
   "ui-ux-design-development/ux-research-design-audit": "UX Research & Design Audits",
   "ui-ux-design-development/mobile-app-design": "Mobile App Design",
   "ui-ux-design-development/saas-web-app-design": "SaaS & Web App Design",
