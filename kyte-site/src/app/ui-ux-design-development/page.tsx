@@ -7,6 +7,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { ProductDesignCardArt, ProductDesignHeroArt } from "@/components/ProductDesignIllustrations";
 import { ProductDesignCarousel } from "@/components/ProductDesignCarousel";
+import { ProductDesignFramework } from "@/components/ProductDesignFramework";
 import { ServiceTestimonials } from "@/components/ServiceTestimonials";
 import { HomeFaq } from "@/components/HomeFaq";
 import { clientLogoAsset } from "@/data/clientLogoAssets";
@@ -21,13 +22,6 @@ const clients = [
   ["Fincart", "fincart"], ["Revenue Grid", "revenue-grid"], ["Comet", "comet"],
   ["Emergent", "emergent"], ["Banza", "banza"], ["Contractzy", "contractzy"],
 ] as const;
-
-const framework = [
-  { number: "01", title: "Discover", body: "Understand the audience, the business context, and where the current experience causes friction.", items: "Research · Audit · Strategy" },
-  { number: "02", title: "Structure", body: "Shape useful journeys, information architecture, and prototypes before committing to polished screens.", items: "Flows · Content · Prototypes" },
-  { number: "03", title: "Design", body: "Create clear interfaces and reusable patterns that work across devices and states.", items: "UI · Design systems · Validation" },
-  { number: "04", title: "Bring it to life", body: "Prepare assets and decisions for development, with build support where it is part of the agreed scope.", items: "Handoff · Build · Refinement" },
-];
 
 const services = [
   { title: "UX research & design audits", body: "Find the friction and decide what deserves attention first.", href: "/ui-ux-design-development/ux-research-design-audit" },
@@ -78,7 +72,7 @@ export default function ProductDesignLandingPage() {
 
     <section className="product-landing__cta-wrap product-landing__section"><div className="product-landing__cta" aria-labelledby="product-cta-title"><div className="product-landing__cta-panel"><h2 id="product-cta-title">Let&apos;s make the next product decision clearer.</h2><p>Tell us what you are building, improving, or trying to understand.</p><Link className="kyte-button" href="/contact">Start a conversation <ArrowRight size={18} aria-hidden="true" /></Link></div><span className="product-landing__cta-orb" aria-hidden="true" /></div></section>
 
-    <section className="product-landing__framework product-landing__section" aria-labelledby="product-framework-title"><h2 id="product-framework-title">A framework that moves from evidence to experience.</h2><div className="product-landing__framework-body"><div className="product-landing__framework-steps">{framework.map((step) => <article key={step.number}><span className="product-landing__step-number">{step.number}</span><div><h3>{step.title}</h3><p>{step.body}</p><small>{step.items}</small></div></article>)}</div><div className="product-landing__framework-visual"><ProductDesignCardArt kind="hub" /><span className="product-landing__framework-floating product-landing__framework-floating--one" /><span className="product-landing__framework-floating product-landing__framework-floating--two" /></div></div></section>
+    <section className="product-landing__framework product-landing__section" aria-labelledby="product-framework-title"><h2 id="product-framework-title">A framework that moves from evidence to experience.</h2><ProductDesignFramework /></section>
 
     <section className="product-landing__process product-landing__section" aria-labelledby="product-process-title"><h2 id="product-process-title">How we work together.</h2><div className="product-landing__process-grid">{process.map(({ icon: Icon, title, body }) => <article key={title}><span className="product-landing__process-icon"><Icon size={27} strokeWidth={1.4} aria-hidden="true" /></span><h3>{title}</h3><p>{body}</p></article>)}</div></section>
 
