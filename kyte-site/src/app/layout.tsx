@@ -5,8 +5,9 @@ import { SiteRevealMotion } from "@/components/SiteRevealMotion";
 import { ContactModal } from "@/components/ContactExperience";
 import { CookieSettings } from "@/components/CookieSettings";
 import { SiteSmoothScroll } from "@/components/SiteSmoothScroll";
-import "lenis/dist/lenis.css";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./globals.css";
+import "./branding-theme.css";
 
 export const metadata: Metadata = {
   title: "Kyte | Product, website and brand design",
@@ -19,5 +20,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" data-palette="stripe" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: `(function(){try{var q=new URLSearchParams(location.search).get('palette');var p=q==='kyte'||q==='stripe'?q:localStorage.getItem('kyte-color-palette')||'stripe';if(q==='kyte'||q==='stripe')localStorage.setItem('kyte-color-palette',q);document.documentElement.dataset.palette=p}catch(e){document.documentElement.dataset.palette='stripe'}})();` }} /></head><body>{children}<SiteSmoothScroll /><SiteRevealMotion /><ContactModal /><CookieSettings /><PageTransition /></body></html>;
+  return <html lang="en" data-palette="kyte" suppressHydrationWarning><body>{children}<SiteSmoothScroll /><SiteRevealMotion /><ContactModal /><CookieSettings /><PageTransition /></body></html>;
 }

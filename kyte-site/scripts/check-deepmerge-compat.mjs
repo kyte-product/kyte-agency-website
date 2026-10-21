@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import { merge } from 'ts-deepmerge';
+const base = { theme: { ink: 'black', values: [1] } };
+assert.deepEqual(merge(base, { theme: { paper: 'white' } }), { theme: { ink: 'black', paper: 'white', values: [1] } });
+assert.deepEqual(merge.withOptions({ mergeArrays: false }, base, { theme: { values: [2] } }).theme.values, [2]);
+assert.deepEqual(base.theme.values, [1]);
+const guarded = merge({}, JSON.parse('{"__proto__":{"polluted":true},"constructor":{"prototype":{"polluted":true}},"safe":1}'));
+assert.equal(Object.prototype.polluted, undefined);
+assert.equal(guarded.safe, 1);
+assert.equal(Object.hasOwn(guarded, '__proto__'), false);
+assert.equal(Object.hasOwn(guarded, 'constructor'), false);
+console.log('Deep-merge compatibility and prototype-key checks passed.');

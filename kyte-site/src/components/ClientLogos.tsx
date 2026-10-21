@@ -44,7 +44,7 @@ export function ClientLogos({ title = "Brands we have worked with", visibleTitle
                 {clientBrands.map(([name, file]) => {
                   const logo = clientLogoAsset(file);
                   return <li className={`clients__item${logo.colored ? " clients__item--color" : " clients__item--mono"}${compactMarks.has(file) ? " clients__item--compact" : ""}${file === "emergent" ? " clients__item--emergent" : ""}${file === "gully-labs" ? " clients__item--gully-labs" : ""}`} key={`${file}-${duplicate ? "duplicate" : "primary"}`}>
-                    <Image src={logo.src} alt={duplicate ? "" : name} width={logo.width} height={logo.height} />
+                    <Image src={logo.src} alt={duplicate ? "" : name} width={logo.width} height={logo.height} style={{ color: "transparent", filter: logo.colored ? "grayscale(1)" : "brightness(0)", opacity: logo.colored ? 0.72 : 0.58 }} />
                   </li>;
                 })}
               </ul>

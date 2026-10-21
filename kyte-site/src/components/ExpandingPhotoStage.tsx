@@ -16,8 +16,6 @@ export function ExpandingPhotoStage({ label = "Digital design showcase", slides 
     const frame = frameRef.current;
     if (!section || !frame) return;
 
-    const layers = Array.from(frame.querySelectorAll<HTMLElement>(".expanding-photo-stage__slide"));
-    const wipe = frame.querySelector<HTMLElement>(".expanding-photo-stage__wipe");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let frameId = 0;
 
@@ -25,12 +23,6 @@ export function ExpandingPhotoStage({ label = "Digital design showcase", slides 
       frameId = 0;
       if (reducedMotion.matches) {
         frame.style.clipPath = "none";
-        layers.forEach((layer, index) => {
-          layer.style.transition = "none";
-          layer.style.opacity = index === 0 ? "1" : "0";
-          layer.style.clipPath = index === 0 ? "none" : "inset(0 100% 0 0)";
-        });
-        wipe?.getAnimations().forEach((animation) => animation.cancel());
         return;
       }
 
@@ -46,47 +38,12 @@ export function ExpandingPhotoStage({ label = "Digital design showcase", slides 
     };
 
     const schedule = () => { if (!frameId) frameId = requestAnimationFrame(render); };
-    let active = 0;
-    let busy = false;
-    let disposed = false;
-    const advance = async () => {
-      if (busy || reducedMotion.matches || document.hidden || !wipe) return;
-      busy = true;
-      const incomingIndex = (active + 1) % layers.length;
-      const incoming = layers[incomingIndex];
-      incoming.style.transition = "none";
-      const timing: KeyframeAnimationOptions = { duration: 600, easing: "cubic-bezier(.7, 0, 0, 1)", fill: "forwards" };
-      try {
-        const cover = wipe.animate([{ transform: "translateX(-101%)" }, { transform: "translateX(0)" }], timing);
-        await cover.finished;
-        wipe.style.transform = "translateX(0)";
-        cover.cancel();
-        if (disposed) return;
-        layers[active].style.opacity = "0";
-        incoming.style.clipPath = "none";
-        incoming.style.opacity = "1";
-        active = incomingIndex;
-        const reveal = wipe.animate([{ transform: "translateX(0)" }, { transform: "translateX(101%)" }], timing);
-        await reveal.finished;
-        wipe.style.transform = "translateX(-101%)";
-        reveal.cancel();
-      } catch {
-        wipe.style.transform = "translateX(-101%)";
-      } finally {
-        busy = false;
-      }
-    };
-
     render();
-    const intervalId = window.setInterval(advance, 4600);
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", schedule);
     reducedMotion.addEventListener("change", schedule);
     return () => {
-      disposed = true;
       cancelAnimationFrame(frameId);
-      window.clearInterval(intervalId);
-      wipe?.getAnimations().forEach((animation) => animation.cancel());
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", schedule);
       reducedMotion.removeEventListener("change", schedule);
@@ -95,10 +52,9 @@ export function ExpandingPhotoStage({ label = "Digital design showcase", slides 
 
   return <section ref={sectionRef} className="expanding-photo-stage" aria-label={label} data-site-reveal-ignore>
     <div className="expanding-photo-stage__frame-wrap"><div ref={frameRef} className="expanding-photo-stage__frame">
-      {slides.map((slide, index) => <div className="expanding-photo-stage__slide" key={slide.image} style={index ? { clipPath: "inset(0 100% 0 0)" } : undefined} aria-hidden="true">
+      {slides.slice(0, 1).map((slide) => <div className="expanding-photo-stage__slide" key={slide.image} aria-hidden="true">
         <Image src={slide.image} alt={slide.alt} fill sizes="100vw" unoptimized />
       </div>)}
-      <div className="expanding-photo-stage__wipe" aria-hidden="true" />
     </div></div>
   </section>;
 }

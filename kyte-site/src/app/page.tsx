@@ -16,5 +16,5 @@ export const instant = false;
 
 export default async function Home() {
   const articles = await designNewsEntries();
-  return <><SiteHeader /><main><TextRevealMotion /><Hero /><ServicesIntro /><ClientGrid /><WorkShowcase /><KyteApproach /><ClientStories articles={articles} /><HomeTestimonials /><HomeFaq /><SplitCtaBanner /></main><TeamPreviewFooter /></>;
+  return <><SiteHeader /><main><TextRevealMotion /><Hero /><ServicesIntro /><ClientGrid /><WorkShowcase /><KyteApproach /><ClientStories articles={articles} /><HomeTestimonials /><HomeFaq description={null} /><SplitCtaBanner /></main><TeamPreviewFooter /></>;
 }

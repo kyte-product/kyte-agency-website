@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { ServiceCardFigure } from "./ServiceCardFigure";
 import { RevealWords } from "./RevealWords";
 import "./ServicesIntro.css";
 
@@ -22,7 +21,6 @@ export function ServicesIntro() {
               <span className="services-intro__card-description">Digital products and websites designed around how people use them.</span>
               <span className="services-intro__card-more">Explore Service <ChevronRight size={16} aria-hidden="true" /></span>
             </Link>
-            <ServiceCardFigure kind="laptop" href="/ui-ux-design-development" />
           </div>
           <div className="services-intro__card services-intro__card--interactive">
             <Link className="services-intro__card-link" href="/branding-marketing">
@@ -30,7 +28,6 @@ export function ServicesIntro() {
               <span className="services-intro__card-description">A clear brand and the creative work that carries it into the world.</span>
               <span className="services-intro__card-more">Explore Service <ChevronRight size={16} aria-hidden="true" /></span>
             </Link>
-            <ServiceCardFigure kind="exploded" href="/branding-marketing" />
           </div>
         </div>
       </div>

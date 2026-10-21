@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
@@ -18,6 +19,15 @@ import "../app/service-detail.css";
 
 export function ServiceDetailTemplate({ service }: { service: ServicePageContent }) {
   const photography = getServicePhotography(service.path);
+  const heroArt = service.path === "ui-ux-design-development/website-design-development"
+    ? { name: "website", label: "Website design and development assembly" }
+    : service.path === "ui-ux-design-development/mobile-app-design"
+      ? { name: "mobile", label: "Mobile app experience assembly" }
+      : service.path === "ui-ux-design-development/saas-web-app-design"
+        ? { name: "saas", label: "SaaS workflow, automation and data assembly" }
+        : service.path === "ui-ux-design-development/ecommerce-shopify-websites"
+          ? { name: "commerce", label: "Storefront, checkout and fulfillment assembly" }
+          : null;
   const inclusions = service.inclusions ?? [
     { symbol: 0, title: "The right context", description: `We begin with the audience, goals, existing material, and constraints behind the ${service.name.toLowerCase()} brief.` },
     { symbol: 1, title: "A clear working scope", description: "We agree on the outputs, responsibilities, and review points before detailed work begins." },
@@ -25,7 +35,7 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
     { symbol: 3, title: "A usable handoff", description: "The agreed files, rationale, and next steps are organized for the people who will use the work." },
   ];
   const decisions = service.outcomes.map((item, index) => ({ ...item, ...photography.decisions[index] }));
-  return <><SiteHeader /><main className="service-detail">
+  return <><SiteHeader /><main className="service-detail" data-site-theme={service.path.startsWith("branding-marketing/") ? "branding-dark" : undefined}>
     <TextRevealMotion />
     <section className="service-detail__hero" aria-labelledby="service-detail-title">
       <div className="service-detail__hero-inner">
@@ -34,7 +44,9 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
         <div className="service-detail__hero-bottom"><p>{service.opening}</p><Link className="kyte-button" href="/contact">Discuss your project <ArrowRight size={18} aria-hidden="true" /></Link></div>
       </div>
     </section>
-    <ExpandingPhotoStage label={`Illustrative photography for ${service.name}`} slides={photography.stage} />
+    {heroArt ? <section className={`service-detail__${heroArt.name}-art`} aria-label={heroArt.label}>
+      <Image src={`/hairline/service-${heroArt.name}-hero.svg?v=1`} alt="" width={960} height={560} sizes="(max-width: 780px) 100vw, 1240px" unoptimized priority />
+    </section> : <ExpandingPhotoStage label={`Illustrative photography for ${service.name}`} slides={photography.stage} />}
     <ServiceOfferings items={service.offerings.map((item) => ({ title: item.title, description: item.body }))} serviceName={service.name} heading={service.offeringsHeading} intro={service.offeringsIntro} />
     <ServiceApproach items={inclusions} heading={service.includedHeading} intro={service.includedIntro} />
     <ServiceDecisionStory items={decisions} heading={service.outcomesHeading} intro={service.outcomesIntro} eyebrow="From scope to outcome" />

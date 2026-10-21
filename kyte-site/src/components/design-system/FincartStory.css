@@ -3,7 +3,8 @@
 .fincart-story__intro { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(220px,.7fr); gap: clamp(48px,8vw,132px); padding-top: 88px; padding-bottom: 92px; }
 .fincart-story__section { padding-bottom: 88px; }
 .fincart-story__statement { max-width: 1020px; margin-bottom: 34px; }
-.fincart-story__statement h2,.fincart-story__intro-aside > p { margin: 0 0 20px; color: #9f9f9f; font-size: 18px; font-weight: 400; line-height: 1.4; text-transform: uppercase; }
+.fincart-story__statement h2 { text-transform: capitalize; }
+.fincart-story__intro-aside > p { margin: 0 0 20px; color: #9f9f9f; font-size: 18px; font-weight: 400; line-height: 1.4; text-transform: uppercase; }
 .fincart-story__statement p { margin: 0; color: var(--ink); font-size: clamp(23px,2.2vw,32px); font-weight: 500; line-height: 1.32; letter-spacing: -.02em; }
 .fincart-story__intro .fincart-story__statement { margin-bottom: 0; }
 .fincart-story__intro-aside { padding-top: 2px; }
@@ -70,12 +71,10 @@
 .case-study-phone__screen img { object-fit: cover; }
 .case-study-phone__frame { z-index: 1; object-fit: contain; pointer-events: none; }
 .case-study-rail__controls { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 16px; }
-.case-study-rail__controls button { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--line); border-radius: var(--radius-small); background: var(--color-white); cursor: pointer; }
-.case-study-rail__controls button:hover { background: var(--color-surface-secondary); }
-.case-study-rail__controls button:focus-visible,.case-study-rail__track:focus-visible { outline: 2px solid var(--color-blue); outline-offset: 3px; }
+.case-study-rail__track:focus-visible { outline: 2px solid var(--color-blue); outline-offset: 3px; }
 .case-study-rail__stage { overflow: hidden; border-radius: var(--radius-large); background: var(--color-control-hover); }
-.case-study-rail__track { display: flex; gap: 20px; overflow-x: auto; padding: 36px; scroll-padding-inline: 36px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
-.case-study-rail__item { flex: 0 0 clamp(210px,23vw,280px); display: grid; place-items: center; min-width: 0; aspect-ratio: 906/1824; margin: 0; scroll-snap-align: start; container-type: size; }
+.case-study-rail__track { display: flex; gap: 20px; overflow-x: auto; padding: 36px; scroll-padding-inline: 0 36px; scroll-snap-type: none; scroll-behavior: smooth; scrollbar-width: thin; }
+.case-study-rail__item { flex: 0 0 clamp(210px,23vw,280px); display: grid; place-items: center; min-width: 0; aspect-ratio: 906/1824; margin: 0; scroll-snap-align: none; container-type: size; }
 .case-study-rail__item .case-study-phone { width: 100cqw; }
 .fincart-story__features-grid { display: grid; grid-template-columns: 683fr 832fr 579fr 747fr; grid-template-rows: 219fr 87fr 81fr 132fr; aspect-ratio: 930/568; gap: clamp(8px,1.4vw,20px); }
 .fincart-story__features-grid .fincart-story__picture { min-width: 0; min-height: 0; background: #fff; border: 1px solid #ededed; }

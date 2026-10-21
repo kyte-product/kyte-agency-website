@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, ChevronDown, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronRight, Download } from "lucide-react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 type Menu = "services" | "industries" | null;
 
@@ -68,6 +69,12 @@ const industries = [
 ] as const;
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  return <SiteHeaderContent key={pathname} pathname={pathname} />;
+}
+
+function SiteHeaderContent({ pathname }: { pathname: string }) {
+  const isBrandingLanding = pathname === "/branding-marketing";
   const [openMenu, setOpenMenu] = useState<Menu>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -85,6 +92,10 @@ export function SiteHeader() {
   const activeMenu = openMenu;
   const menuPanelRef = activeMenu === "services" ? servicesPanelRef : activeMenu === "industries" ? industriesPanelRef : null;
 
+  useLayoutEffect(() => {
+    if (headerRef.current) setDarkUnderNav(isDarkUnderNav(headerRef.current));
+  }, [pathname]);
+
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 12);
@@ -100,15 +111,18 @@ export function SiteHeader() {
       if (headerRef.current && !headerRef.current.contains(event.target as Node)) setOpenMenu(null);
     };
     const onDesktopWidth = (event: MediaQueryListEvent) => {
-      if (event.matches) { setMobileOpen(false); setOpenMenu(null); }
+      if (event.matches && window.location.pathname !== "/branding-marketing") { setMobileOpen(false); setOpenMenu(null); }
     };
     const onContactOpen = () => { setMobileOpen(false); setOpenMenu(null); };
+    const onHistoryReturn = () => { setMobileOpen(false); setOpenMenu(null); setPreviousMenu(null); };
     const desktop = window.matchMedia("(min-width: 1200px)");
     window.addEventListener("scroll", onScroll, { passive: true });
     document.addEventListener("keydown", onKey);
     document.addEventListener("pointerdown", onOutside);
     desktop.addEventListener("change", onDesktopWidth);
     window.addEventListener("kyte:contact-open", onContactOpen);
+    window.addEventListener("pageshow", onHistoryReturn);
+    window.addEventListener("popstate", onHistoryReturn);
     onScroll();
     return () => {
       window.removeEventListener("scroll", onScroll);
@@ -116,6 +130,8 @@ export function SiteHeader() {
       document.removeEventListener("pointerdown", onOutside);
       desktop.removeEventListener("change", onDesktopWidth);
       window.removeEventListener("kyte:contact-open", onContactOpen);
+      window.removeEventListener("pageshow", onHistoryReturn);
+      window.removeEventListener("popstate", onHistoryReturn);
     };
   }, []);
 
@@ -214,7 +230,7 @@ export function SiteHeader() {
   }, [mobileOpen]);
 
   return <>
-    <header ref={headerRef} className={`site-header${scrolled ? " is-scrolled" : ""}${darkUnderNav && !mobileOpen && !activeMenu ? " is-dark" : ""}${mobileOpen ? " is-mobile-open" : ""}${activeMenu && !mobileOpen ? " is-menu-open" : ""}`} style={{ backdropFilter: mobileOpen || activeMenu ? "none" : "blur(12px)", WebkitBackdropFilter: mobileOpen || activeMenu ? "none" : "blur(12px)" }} onMouseEnter={cancelMenuClose} onMouseLeave={scheduleMenuClose} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) closeDesktopMenu(); }}>
+    <header ref={headerRef} className={`site-header${isBrandingLanding ? " is-branding-editorial" : ""}${scrolled ? " is-scrolled" : ""}${darkUnderNav && !isBrandingLanding && !mobileOpen && !activeMenu ? " is-dark" : ""}${mobileOpen ? " is-mobile-open" : ""}${activeMenu && !mobileOpen ? " is-menu-open" : ""}`} style={{ backdropFilter: mobileOpen || activeMenu ? "none" : "blur(12px)", WebkitBackdropFilter: mobileOpen || activeMenu ? "none" : "blur(12px)" }} onMouseEnter={cancelMenuClose} onMouseLeave={scheduleMenuClose} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) closeDesktopMenu(); }}>
       <div className="announcement-bar">
         <p>Find your biggest digital opportunities in 30 minutes. <Link href="/contact">Book a consultation</Link></p>
       </div>
@@ -230,8 +246,8 @@ export function SiteHeader() {
             <Link className="nav-link" href="/careers" onMouseEnter={scheduleMenuClose}>Careers</Link>
           </nav>
           <div className="nav-actions">
-            <button className="brochure-button kyte-button kyte-button--outline" type="button" onMouseEnter={scheduleMenuClose}>Brochure <Download size={16} aria-hidden="true" /></button>
-            <Link className="contact-button kyte-button" href="/contact" onMouseEnter={scheduleMenuClose}>Contact Us <ChevronRight size={16} aria-hidden="true" /></Link>
+            <button className={`brochure-button kyte-button kyte-button--outline${isBrandingLanding ? " branding-nav-action" : ""}`} type="button" onMouseEnter={scheduleMenuClose}>Brochure <Download size={16} aria-hidden="true" /></button>
+            <Link className={`contact-button kyte-button${isBrandingLanding ? " branding-nav-action" : ""}`} href="/contact" onMouseEnter={scheduleMenuClose}>{isBrandingLanding ? "Contact us" : <>Contact Us <ChevronRight size={16} aria-hidden="true" /></>}</Link>
           </div>
           <div className="mobile-actions"><button className="mobile-toggle" type="button" aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-expanded={mobileOpen} aria-controls="mobile-menu" onClick={() => { setMobileOpen(!mobileOpen); setOpenMenu(null); }}><span /><span /></button></div>
         </div>
@@ -242,29 +258,43 @@ export function SiteHeader() {
               <h2>{group.title}</h2>
               <ul className="mega-menu__list">{group.items.map(([title, href]) => <li key={href}><Link href={href}><b>{title}</b><span>{serviceDescriptions[title]}</span></Link></li>)}</ul>
             </section>)}
-            <aside className="mega-menu__aside"><div className="mega-menu__feature"><div className="mega-menu__image-placeholder" aria-hidden="true" /><span className="mega-menu__eyebrow">Featured</span><strong>How we work</strong><p>See how Kyte connects research, design and delivery around each project.</p><Link className="mega-menu__more" href="/#approach">Explore our approach <ChevronRight size={15} aria-hidden="true" /></Link></div></aside>
-            <div className="mega-menu__foot"><Link className="mega-menu__more" href="/contact">Talk about your project <ChevronRight size={16} aria-hidden="true" /></Link></div>
+            <aside className="mega-menu__aside"><div className="mega-menu__feature"><div className="mega-menu__image-placeholder" aria-hidden="true" /><span className="mega-menu__eyebrow">Featured</span><strong>How we work</strong><p>See how Kyte connects research, design and delivery around each project.</p><Link className="mega-menu__more kyte-tertiary" href="/#approach">Explore our approach <ArrowRight size={16} aria-hidden="true" /></Link></div></aside>
+            <div className="mega-menu__foot"><Link className="mega-menu__more kyte-tertiary" href="/contact">Talk about your project <ArrowRight size={16} aria-hidden="true" /></Link></div>
           </div>
           </div>
           <div ref={industriesPanelRef} id="industries-menu" className={panelMotionClass("industries")} role="region" aria-label="Industries menu" aria-hidden={activeMenu !== "industries" || mobileOpen} inert={activeMenu !== "industries" || mobileOpen}>
           <div className="mega-menu__grid">
             <section className="mega-menu__column"><h2>Digital products</h2><ul className="mega-menu__list">{industries.slice(0, 2).map(industry => <li key={industry.href}><Link href={industry.href}><b>{industry.title}</b><span>{industry.description}</span></Link></li>)}</ul></section>
             <section className="mega-menu__column"><h2>Consumer experiences</h2><ul className="mega-menu__list">{industries.slice(2).map(industry => <li key={industry.href}><Link href={industry.href}><b>{industry.title}</b><span>{industry.description}</span></Link></li>)}</ul></section>
-            <aside className="mega-menu__aside"><div className="mega-menu__feature"><span className="mega-menu__eyebrow">Selected experience</span><strong>Work shaped by context</strong><p>Explore the sectors where Kyte has built products, websites and brands.</p><Link className="mega-menu__more" href="/work">View our work <ChevronRight size={15} aria-hidden="true" /></Link></div></aside>
-            <div className="mega-menu__foot"><Link className="mega-menu__more" href="/industries">Explore industries <ChevronRight size={16} aria-hidden="true" /></Link></div>
+            <aside className="mega-menu__aside"><div className="mega-menu__feature"><span className="mega-menu__eyebrow">Selected experience</span><strong>Work shaped by context</strong><p>Explore the sectors where Kyte has built products, websites and brands.</p><Link className="mega-menu__more kyte-tertiary" href="/work">View our work <ArrowRight size={16} aria-hidden="true" /></Link></div></aside>
+            <div className="mega-menu__foot"><Link className="mega-menu__more kyte-tertiary" href="/industries">Explore industries <ArrowRight size={16} aria-hidden="true" /></Link></div>
           </div>
           </div>
         </nav>
-        {mobileOpen && <nav className="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" onClick={(event) => { if ((event.target as HTMLElement).closest("a")) setMobileOpen(false); }}>
+        {mobileOpen && isBrandingLanding ? <nav className="branding-editorial-menu" id="mobile-menu" aria-label="Main navigation">
+          <div className="branding-editorial-menu__links">
+            {[["Home", "/"], ["About", "/about"], ["Services", "/branding-marketing"], ["Work", "/work"], ["Contact", "/contact"], ["Careers", "/careers"], ["Design news", "/insights"]].map(([label, href]) => <div className="branding-editorial-menu__item" key={label}>
+              <Link className={`${pathname === href ? "is-current" : ""}${label === "Services" ? " branding-editorial-menu__services" : ""}`} href={href} onClick={() => setMobileOpen(false)}><span>{label}</span></Link>
+              {label === "Services" && <div className="branding-editorial-menu__service-list" aria-label="Service areas">
+                <Link href="/ui-ux-design-development" onClick={() => setMobileOpen(false)}><span className="service-dot" aria-hidden="true">•</span>UI/UX Design &amp; Development</Link>
+                <Link href="/branding-marketing" onClick={() => setMobileOpen(false)}><span className="service-dot" aria-hidden="true">•</span>Branding &amp; Marketing</Link>
+              </div>}
+            </div>)}
+          </div>
+          <div className="branding-editorial-menu__actions">
+            <button className="branding-editorial-menu__brochure kyte-button kyte-button--outline" type="button"><Download size={16} aria-hidden="true" /> Brochure</button>
+            <Link className="branding-editorial-menu__contact kyte-button" href="/contact" onClick={() => setMobileOpen(false)}>Contact us</Link>
+          </div>
+        </nav> : mobileOpen && <nav className="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" onClick={(event) => { if ((event.target as HTMLElement).closest("a")) setMobileOpen(false); }}>
           <div className="mobile-menu__links">
             <Link className="mobile-menu__link" href="/work">Work</Link>
             <button className="mobile-menu__trigger" type="button" aria-expanded={openMenu === "services"} aria-controls="mobile-services" onClick={() => setOpenMenu(openMenu === "services" ? null : "services")}>Services <ChevronDown aria-hidden="true" /></button>
-            {openMenu === "services" && <div className="mobile-menu__sub" id="mobile-services">{services.map(group => <div className="mobile-menu__group" key={group.href}><h2>{group.title}</h2><ul>{group.items.map(([name, href]) => <li key={href}><Link href={href}><b>{name}</b><span>{serviceDescriptions[name]}</span></Link></li>)}</ul><Link className="mobile-menu__more" href={group.href}>Explore {group.title} <ChevronRight size={15} aria-hidden="true" /></Link></div>)}</div>}
+            {openMenu === "services" && <div className="mobile-menu__sub" id="mobile-services">{services.map(group => <div className="mobile-menu__group" key={group.href}><h2>{group.title}</h2><ul>{group.items.map(([name, href]) => <li key={href}><Link href={href}><b>{name}</b><span>{serviceDescriptions[name]}</span></Link></li>)}</ul><Link className="mobile-menu__more kyte-tertiary" href={group.href}>Explore {group.title} <ArrowRight size={16} aria-hidden="true" /></Link></div>)}</div>}
             <button className="mobile-menu__trigger" type="button" aria-expanded={openMenu === "industries"} aria-controls="mobile-industries" onClick={() => setOpenMenu(openMenu === "industries" ? null : "industries")}>Industries <ChevronDown aria-hidden="true" /></button>
-            {openMenu === "industries" && <div className="mobile-menu__sub" id="mobile-industries"><div className="mobile-menu__group"><h2>Selected experience</h2><ul>{industries.map(industry => <li key={industry.href}><Link href={industry.href}><b>{industry.title}</b><span>{industry.description}</span></Link></li>)}</ul><Link className="mobile-menu__more" href="/industries">Explore industries <ChevronRight size={15} aria-hidden="true" /></Link></div></div>}
+            {openMenu === "industries" && <div className="mobile-menu__sub" id="mobile-industries"><div className="mobile-menu__group"><h2>Selected experience</h2><ul>{industries.map(industry => <li key={industry.href}><Link href={industry.href}><b>{industry.title}</b><span>{industry.description}</span></Link></li>)}</ul><Link className="mobile-menu__more kyte-tertiary" href="/industries">Explore industries <ArrowRight size={16} aria-hidden="true" /></Link></div></div>}
             <Link className="mobile-menu__link" href="/insights">Insights</Link><Link className="mobile-menu__link" href="/about">About</Link><Link className="mobile-menu__link" href="/careers">Careers</Link>
           </div>
-          <div className="mobile-menu__contact"><Link className="kyte-button" href="/contact">Contact Us <ChevronRight size={16} aria-hidden="true" /></Link></div>
+          <div className="mobile-menu__contact"><Link className="kyte-button" href="/contact">Contact Us <ArrowRight size={16} aria-hidden="true" /></Link></div>
         </nav>}
       </div>
     </header>

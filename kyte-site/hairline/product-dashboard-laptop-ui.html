@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product dashboard laptop face</title>
+<style>
+*{box-sizing:border-box}
+.face{width:100%;height:100%;overflow:hidden;background:#fff}
+.face--laptop-screen{position:relative}
+.panel{position:absolute;overflow:hidden;border-radius:24px}
+.panel:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse 62% 62% at 0 0,rgba(255,255,255,.55),transparent 80%),radial-gradient(ellipse 62% 62% at 100% 0,rgba(255,255,255,.55),transparent 80%),radial-gradient(ellipse 62% 62% at 0 100%,rgba(255,255,255,.55),transparent 80%),radial-gradient(ellipse 62% 62% at 100% 100%,rgba(255,255,255,.55),transparent 80%),radial-gradient(ellipse 105% 110% at 50% 50%,transparent 56%,rgba(255,255,255,.18) 72%,rgba(255,255,255,.8) 100%);box-shadow:inset 0 0 46px 10px rgba(255,255,255,.55)}
+.analytics{left:8%;top:31%;width:43%;height:61%;padding:56px 42px 46px;background:var(--art-pinkViolet-pink);background-image:radial-gradient(ellipse 75% 68% at 18% 18%,var(--art-pinkViolet-rose) 0%,color-mix(in srgb,var(--art-pinkViolet-rose) 15%,transparent) 72%,transparent 100%),radial-gradient(ellipse 74% 76% at 92% 82%,var(--art-pinkViolet-violet) 0%,color-mix(in srgb,var(--art-pinkViolet-violet) 15%,transparent) 68%,transparent 100%),radial-gradient(ellipse 76% 75% at 31% 84%,var(--art-pinkViolet-pink) 0%,color-mix(in srgb,var(--art-pinkViolet-pink) 12%,transparent) 70%,transparent 100%)}
+.chart-card{left:55%;top:8%;width:40%;height:58%;padding:46px 38px 36px;background:#fff;box-shadow:7px 7px 0 #eff1f1,0 0 0 2px #c4c9ca}
+.mini-row{display:flex;gap:18px}.mini-row i{height:18px;display:block;border:2px solid rgba(255,255,255,.82);border-radius:4px}.mini-row i:first-child{width:58%}.mini-row i:last-child{width:30%}
+.bars{position:absolute;left:42px;right:42px;bottom:48px;height:230px;display:flex;align-items:flex-end;justify-content:space-between;gap:18px}.bars i{display:block;width:14%;border:3px solid rgba(255,255,255,.85);border-bottom:0;border-radius:5px 5px 0 0}.bars i:nth-child(1){height:48%}.bars i:nth-child(2){height:70%}.bars i:nth-child(3){height:54%}.bars i:nth-child(4){height:82%}.bars i:nth-child(5){height:96%}
+.chart-rule{height:17px;border-radius:4px;background:#eff1f1}.chart-rule--top{width:58%;margin-bottom:72px}.chart-rule--bottom{position:absolute;left:38px;bottom:31px;width:54%}
+.pie{position:relative;width:220px;height:220px;margin:0 auto;border-radius:50%;overflow:hidden;background:conic-gradient(from -90deg,var(--art-mintCyan-light) 0 31%,#fff 31% 33%,var(--art-mintCyan-teal) 33% 64%,#fff 64% 66%,var(--art-mintCyan-blue) 66% 98%,#fff 98%);box-shadow:inset 0 0 32px 8px rgba(255,255,255,.62)}
+.pie:after{content:"";position:absolute;inset:72px;border-radius:50%;background:#fff}
+.preview{width:720px;height:552px;margin:40px auto;background:#fff}.preview .face{box-shadow:0 0 0 1px #ddd}
+
+/* Palette tokens start */
+.face{--art-greenBlue-base:#3dbfcc;--art-greenBlue-mint:#79edc9;--art-greenBlue-blueLight:#4babf7;--art-greenBlue-green:#44d091;--art-greenBlue-greenDeep:#39c187;--art-greenBlue-blue:#2a94e2;--art-greenBlue-teal:#36b7bb;--art-amberGreen-base:#f0a91a;--art-amberGreen-amber:#fda30c;--art-amberGreen-gold:#f4b829;--art-amberGreen-lime:#cbc53b;--art-amberGreen-green:#0db340;--art-amberGreen-olive:#91ae36;--art-amberGreen-light:#d0cb30;--art-amberLime-base:#f7a70f;--art-amberLime-orange:#ff8f02;--art-amberLime-amber:#feaa15;--art-amberLime-lime:#accc1e;--art-amberLime-green:#65b446;--art-amberLime-gold:#bbb733;--art-amberLime-light:#dcc640;--art-pinkViolet-base:#fb8bbe;--art-pinkViolet-coral:#fd91af;--art-pinkViolet-pink:#fd73b7;--art-pinkViolet-violet:#c396fd;--art-pinkViolet-rose:#fc92b8;--art-pinkViolet-light:#fcaedd;--art-pinkViolet-deep:#c596ff;--art-coralViolet-base:#fd88ae;--art-coralViolet-coral:#fc8297;--art-coralViolet-pink:#fb6fc4;--art-coralViolet-violet:#c590fd;--art-coralViolet-rose:#fd92ae;--art-coralViolet-light:#fba6df;--art-coralViolet-deep:#ec91f9;--art-amberViolet-base:#f1994c;--art-amberViolet-light:#ebaaa5;--art-amberViolet-orange:#f3924f;--art-amberViolet-violet:#d5aaed;--art-amberViolet-amber:#f2bb63;--art-amberViolet-coral:#f3b173;--art-amberViolet-rose:#eeb99f;--art-mintCyan-base:#44ce88;--art-mintCyan-mint:#6be4af;--art-mintCyan-blue:#49c3d0;--art-mintCyan-teal:#3cbfb0;--art-mintCyan-green:#7cdbaa;--art-mintCyan-cyan:#75ccdb;--art-mintCyan-light:#57db9f;--art-signal-error:#fc8277;--art-signal-warning:#f2c85b;--art-signal-success:#7cd37b}
+/* Palette tokens end */
+
+/* Approved material start */
+.face .analytics{background:radial-gradient(ellipse 72% 70% at 13% 17%,var(--art-pinkViolet-coral) 8%,transparent 98%),radial-gradient(ellipse 67% 74% at 88% 87%,var(--art-pinkViolet-violet) 10%,transparent 98%),radial-gradient(ellipse 57% 67% at 48% 60%,var(--art-pinkViolet-pink) 8%,transparent 98%),var(--art-pinkViolet-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}.face .panel.analytics:after{background:none;box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}.face .pie{background:radial-gradient(circle at 22% 15%,#ffffff30,transparent 65%),conic-gradient(from -90deg,var(--art-mintCyan-mint) 0 31%,#fff 31% 33%,var(--art-mintCyan-teal) 33% 64%,#fff 64% 66%,var(--art-mintCyan-blue) 66% 98%,#fff 98%);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}
+/* Approved material end */
+</style>
+</head>
+<body>
+<main class="preview" data-preview></main>
+<template id="laptop-screen"><div class="face face--laptop-screen"><section class="panel analytics"><div class="mini-row"><i></i><i></i></div><div class="bars"><i></i><i></i><i></i><i></i><i></i></div></section><section class="panel chart-card"><div class="chart-rule chart-rule--top"></div><div class="pie"></div><div class="chart-rule chart-rule--bottom"></div></section></div></template>
+<script>document.querySelector('[data-preview]').replaceChildren(document.querySelector('template').content.firstElementChild.cloneNode(true))</script>
+</body>
+</html>

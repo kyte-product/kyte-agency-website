@@ -56,45 +56,69 @@
   #stage,#stage>svg{width:100%;height:100%;display:block}
   #stage>svg{overflow:visible}
   .controls,#means,#rules,#error,.tag{display:none!important}
+  #stage svg{--experience-contour:1.75px}
   #stage svg path,#stage svg circle{vector-effect:non-scaling-stroke}
-  #stage svg .experience-ground{opacity:.66}
-  #stage svg .experience-dot{stroke:#dce3e5;stroke-width:.55}
-  #stage svg .experience-keyboard-body{fill:#f4f6f6;stroke:#aeb5b7;stroke-width:1.05;stroke-linejoin:round}
+  #stage svg .experience-ground{opacity:.9;mask-image:radial-gradient(ellipse 55% 76% at 50% 50%,#000 58%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 55% 76% at 50% 50%,#000 58%,transparent 100%)}
+  #stage svg .experience-dot{fill:none;stroke:#d6dcde;stroke-width:.7;stroke-linecap:round}
+  #stage svg .experience-keyboard-body{fill:#f1f3f4;stroke:none}
   #stage svg .experience-keyboard-top{fill:#fff;stroke:none}
-  #stage svg .experience-keyboard-crease{fill:none;stroke:#e2e6e7;stroke-width:.8}
+  #stage svg .experience-keyboard-outline{fill:none;stroke:#aeb5b7;stroke-width:var(--experience-contour);stroke-linejoin:round}
   #stage svg .experience-cube-front{fill:#fff;stroke:none}
   #stage svg .experience-cube-side{fill:#fafbfb;stroke:none}
   #stage svg .experience-cube-top{fill:#fff;stroke:none}
-  #stage svg .experience-cube-outline{fill:none;stroke:#a9b0b2;stroke-width:1.05;stroke-linejoin:round}
-  #stage svg .experience-cube-seam{fill:none;stroke:#c5cbcd;stroke-width:.8;stroke-linecap:round;stroke-linejoin:round}
-  #stage svg .experience-wire-outer{fill:none;stroke:#d8dddf;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
-  #stage svg .experience-wire-inner{fill:none;stroke:#f4f6f6;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
-  #stage svg .experience-slab{fill:#f5f6f6;stroke:#abb2b4;stroke-width:1.05;stroke-linejoin:round}
-  #stage svg .experience-screen-face,#stage svg .experience-panel-face{fill:#fff;stroke:#aeb5b7;stroke-width:1.05;stroke-linejoin:round}
+  #stage svg .experience-cube-outline{fill:none;stroke:#a9b0b2;stroke-width:var(--experience-contour);stroke-linejoin:round}
+  #stage svg .experience-cube-seam{fill:none;stroke:#e0e4e5;stroke-width:.8;stroke-linecap:round;stroke-linejoin:round}
+  #stage svg .experience-tube-shadow{fill:#e7e9ea;stroke:none}
+  #stage svg .experience-tube-body{fill:#eef0f1;stroke:none}
+  #stage svg .experience-tube-cap{fill:#f5f6f6;stroke:none}
+  #stage svg .experience-tube-collar{fill:#ecefef;stroke:none;opacity:1}
+  #stage svg .experience-tube-collar-center{fill:#f5f6f6;stroke:none;opacity:1}
+  #stage svg .experience-slab{fill:#f5f6f6;stroke:#abb2b4;stroke-width:var(--experience-contour);stroke-linejoin:round}
+  #stage svg .experience-slab-body{fill:#f1f3f4;stroke:none}
+  #stage svg .experience-screen-face,#stage svg .experience-panel-face{fill:#fff;stroke:none}
+  #stage svg .experience-ui-header{fill:#fbfcfc;stroke:none}
+  #stage svg .experience-ui-feature{fill:#f7faf9;stroke:none}
+  #stage svg .experience-ui-tile{fill:#f8f9f9;stroke:none}
+  #stage svg .experience-ui-glass{fill:#ffffffb8;stroke:none}
+  #stage svg .experience-text-bar{fill:#e0e4e6;stroke:none}
+  #stage svg .experience-text-bar-light{fill:#e5e8e9;stroke:none}
+  #stage svg .experience-label{fill:#fff;stroke:none;font-family:Arial,sans-serif;font-weight:400;letter-spacing:.12px}
+  #stage svg .experience-ui-pill{fill:#e9ecee;stroke:none}
+  #stage svg .experience-ui-search{fill:url(#experience-pink);stroke:none}
+  #stage svg .experience-ui-chart-line{fill:none;stroke:#7cdbaa;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round}
+  #stage svg .experience-ui-hole{fill:#fff;stroke:none}
+  #stage svg .experience-icon-well{fill:#f3f6f7;stroke:#e4e9ea;stroke-width:.65}
+  #stage svg .experience-pack-glyph{fill:none;stroke:#bec5c7;stroke-width:2.6px;stroke-linecap:round;stroke-linejoin:round}
+  #stage svg .experience-pack-glyph-ui{stroke-width:1.65px}
+  #stage svg .experience-pack-glyph-light{stroke:#fff}
+  #stage svg .experience-framer-mark{fill:#000;stroke:none}
+  #stage svg .experience-slab-outline{fill:none;stroke:#aeb5b7;stroke-width:var(--experience-contour);stroke-linejoin:round}
   #stage svg .experience-hole{fill:#fff;stroke:#fff;stroke-width:.5}
-  #stage svg .experience-screen-rule,#stage svg .experience-detail{fill:none;stroke:#e1e5e6;stroke-width:.85;stroke-linecap:round}
+  #stage svg .experience-detail{fill:none;stroke:#e1e5e6;stroke-width:.85;stroke-linecap:round}
   #stage svg .experience-icon-fill{fill:#c6cbcd;stroke:none}
-  #stage svg .experience-icon-outline{fill:none;stroke:#c0c6c8;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
-  #stage svg .experience-mail{fill:#fff;stroke:#fff;stroke-width:.8}
+  #stage svg .experience-mail{fill:#fff;stroke:none}
   #stage svg .experience-white{fill:#fff;stroke:#aeb4b8;stroke-width:1.2}
   #stage svg .experience-rear{fill:#f3f5f7;stroke:#c7ced0;stroke-width:1}
   #stage svg .experience-rim{stroke:#c6cbcc;stroke-width:1}
   #stage svg .experience-inner{stroke:#e2e5e7;stroke-width:1}
-  #stage svg .experience-key{fill:#eef0f1;stroke:#fff;stroke-width:.85}
-  #stage svg .experience-sea{fill:url(#experience-sea);stroke:#dcf0e9;stroke-width:.55}
-  #stage svg .experience-sea-two{fill:url(#experience-sea-two);stroke:#dcf0e9;stroke-width:.55}
-  #stage svg .experience-warm{fill:url(#experience-warm);stroke:#f5d66f;stroke-width:.7}
-  #stage svg .experience-pink{fill:url(#experience-pink);stroke:#f1b7d9;stroke-width:.7}
+  #stage svg .experience-key{fill:#eef0f1;stroke:none}
+  #stage svg .experience-sea{fill:url(#experience-sea);stroke:none}
+  #stage svg .experience-sea-two{fill:url(#experience-sea-two);stroke:none}
+  #stage svg .experience-warm{fill:url(#experience-warm);stroke:none}
+  #stage svg .experience-pink{fill:url(#experience-pink);stroke:none}
   #stage svg .experience-disc{fill:url(#experience-disc);stroke:none}
   #stage svg .experience-chart{fill:url(#experience-chart);stroke:none}
+  #stage svg .experience-chart-segment{stroke:none}
+  #stage svg .experience-chart-segment--a{fill:url(#experience-pie-a)}
+  #stage svg .experience-chart-segment--b{fill:url(#experience-pie-b)}
+  #stage svg .experience-chart-segment--c{fill:url(#experience-pie-c)}
+  #stage svg .experience-color-layer{stroke:none;pointer-events:none}
   #stage svg .experience-soft{fill:#e9ecee;stroke:none}
   #stage svg .experience-glyph{fill:none;stroke:#fff;stroke-width:1.15}
   #stage svg .experience-window-dot{stroke:none}
-  #stage svg .experience-window-dot--0{fill:#ff756d}
-  #stage svg .experience-window-dot--1{fill:#f5c350}
-  #stage svg .experience-window-dot--2{fill:#8dd56f}
-  #stage svg .experience-wire{stroke:#d5d9d9;stroke-width:1.2}
-  #stage svg .experience-socket{fill:#f4f6f7;stroke:#d6dadd;stroke-width:.8}
+  #stage svg .experience-window-dot--0{fill:#fd91af}
+  #stage svg .experience-window-dot--1{fill:#dcc640}
+  #stage svg .experience-window-dot--2{fill:#7cdbaa}
   #stage svg .experience-icon{fill:none;stroke:#b9c0c3;stroke-width:2.1}
   #stage svg circle.experience-icon{fill:#c7cbcd;stroke:none}
   @media(prefers-reduced-motion:reduce){#stage svg .experience-card{transition:none}}
@@ -934,129 +958,159 @@ var HL = (() => {
 const { Cam, fit, proj, rrect, fillet, hull, poly, open, mk, tween, tset, tval, tdone, pointer, register, disposer } = HL;
 const path = (g, pts, cls = "experience-outline") => mk("path", { d: poly(pts), class: cls }, g);
 const stroke = (g, pts, cls = "experience-detail") => mk("path", { d: open(pts), class: cls }, g);
-const round = (g, pts, cls, radius = 2) => path(g, fillet(pts, pts.map(() => radius), 5), cls);
-
+const trimFromStart = (a, b, inset = 1.5) => { const length = Math.hypot(b[0] - a[0], b[1] - a[1]); const t = Math.min(.2, inset / length); return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t]; };
+const quadratic = (a, control, b, steps = 16) => Array.from({ length: steps + 1 }, (_, i) => { const t = i / steps, s = 1 - t; return [s * s * a[0] + 2 * s * t * control[0] + t * t * b[0], s * s * a[1] + 2 * s * t * control[1] + t * t * b[1]]; });
+const CORNER = 3.0;
+const CONTENT_CORNER = 1.45;
 function mount({ stage, svg, read }, value) {
   const bag = disposer();
   const C = Cam(45, 0.5, 1.34);
-  fit(C, [[-78, 108, 0], [298, -40, 170], [298, 115, 0], [-78, -40, 155]], 200, 163);
+  fit(C, [[-78, 108, 0], [298, -40, 170], [298, 115, 0], [-78, -40, 155]], 200, 175);
   const P = proj(C);
-  const face = (x, y, z, w, h) => (u, v) => P(x + w * u, y, z + h * (1 - v));
-  const onFace = (g, F, a, b, c, d, cls, r = .025) => path(g, rrect(a, b, c, d, r, 12).map(q => F(q.u, q.v)), cls);
+  const face = (x, y, z, w, h) => {
+    const F = (u, v) => P(x + w * u, y, z + h * (1 - v));
+    F.w = w; F.h = h;
+    return F;
+  };
+  const rightFace = (x, y, z, w, h) => {
+    const F = (u, v) => P(x, y + w * (1 - u), z + h * (1 - v));
+    F.w = w; F.h = h;
+    return F;
+  };
+  const onFace = (g, F, a, b, c, d, cls, r = CORNER) => path(g,
+    rrect(a * F.w, b * F.h, c * F.w, d * F.h, r, 14).map(q => F(q.u / F.w, q.v / F.h)), cls);
   const faceLine = (g, F, pts, cls = "experience-detail") => stroke(g, pts.map(([u, v]) => F(u, v)), cls);
+  const uiPlane = (g,F,id,w,h) => { const p=mk("path",{d:"",class:"experience-ui-plane-marker"},g); p.setAttribute("data-ui-frame",id); p.setAttribute("data-frame-width",w); p.setAttribute("data-frame-height",h); p.setAttribute("data-frame-corners",JSON.stringify([F(0,0),F(1,0),F(1,1),F(0,1)])); };
+  const textBar = (g,F,x1,y,x2,h=.026,cls="experience-text-bar") => onFace(g,F,x1,y-h/2,x2,y+h/2,cls,Math.min(.55,F.h*h/3));
   const ellipse = (g, F, u, v, rx, ry, cls, steps = 36) => path(g, Array.from({ length: steps }, (_, i) => {
     const t = i * Math.PI * 2 / steps;
-    return F(u + rx * Math.cos(t), v + ry * Math.sin(t));
+    return F(u + rx / F.w * Math.cos(t), v + ry / F.h * Math.sin(t));
   }), cls);
+  const wedge = (g,F,cx,cy,r,start,end,cls) => path(g,[F(cx,cy),...Array.from({length:17},(_,i)=>{const t=start+(end-start)*i/16;return F(cx+r*Math.cos(t)/F.w,cy+r*Math.sin(t)/F.h);}),F(cx,cy)],cls);
+  const packIcon = (g,F,name,x=.25,y=.25,w=.50,h=.50,light=false,ui=false) => {
+    const o=F(x,y),px=F(x+w/24,y),py=F(x,y+h/24),cls=(light?"experience-pack-glyph experience-pack-glyph-light":"experience-pack-glyph")+(ui?" experience-pack-glyph-ui":""),icon=mk("g",{class:"experience-pack-icon",transform:`matrix(${px[0]-o[0]} ${px[1]-o[1]} ${py[0]-o[0]} ${py[1]-o[1]} ${o[0]} ${o[1]})`},g);
+    if(name==="zap"){
+      mk("path",{d:"M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z",class:cls},icon);
+    }else if(name==="list"){
+      mk("path",{d:"M3 5h.01M3 12h.01M3 19h.01M8 5h13M8 12h13M8 19h13",class:cls},icon);
+    }else if(name==="search"){
+      mk("path",{d:"m21 21-4.34-4.34",class:cls},icon);
+      mk("circle",{cx:11,cy:11,r:8,class:cls},icon);
+    }else if(name==="workflow"){
+      // Lucide Workflow geometry, copied from the official icon definition.
+      mk("rect",{width:8,height:8,x:3,y:3,rx:2,class:cls},icon);
+      mk("path",{d:"M7 11v4a2 2 0 0 0 2 2h4",class:cls},icon);
+      mk("rect",{width:8,height:8,x:13,y:13,rx:2,class:cls},icon);
+    }else if(name==="play"){
+      mk("path",{d:"m6 3 14 9-14 9z",class:cls},icon);
+    }else if(name==="image"){
+      mk("rect",{width:18,height:18,x:3,y:3,rx:2,class:cls},icon); mk("circle",{cx:8.5,cy:8.5,r:1.5,class:cls},icon); mk("path",{d:"m21 15-5-5L5 21",class:cls},icon);
+    }else if(name==="user"){
+      mk("circle",{cx:12,cy:8,r:5,class:cls},icon); mk("path",{d:"M20 21a8 8 0 0 0-16 0",class:cls},icon);
+    }else{
+      mk("ellipse",{cx:12,cy:5,rx:9,ry:3,class:cls},icon);
+      mk("path",{d:"M3 5V19A9 3 0 0 0 21 19V5M3 12A9 3 0 0 0 21 12",class:cls},icon);
+    }
+  };
+  const brandMark = (g,F,name) => {
+    if(name==="chatgpt"||name==="figma"){const u=.28,v=.24,w=.44,h=.52,o=F(u,v),px=F(u+w,v),py=F(u,v+h),href=name==="figma"?"/tool-logos/figma-color.svg":"/ai-logos/chatgpt.png";mk("image",{x:0,y:0,width:1,height:1,preserveAspectRatio:"xMidYMid meet",href,transform:`matrix(${px[0]-o[0]} ${px[1]-o[1]} ${py[0]-o[0]} ${py[1]-o[1]} ${o[0]} ${o[1]})`},g);return;}
+    const figma=name==="figma", u=figma?.34:.26, v=.24, w=figma?.32:.48, h=.52, base=figma?16:24;
+    const o=F(u,v),px=F(u+w/base,v),py=F(u,v+h/24),mark=mk("g",{class:"experience-brand-mark",transform:`matrix(${px[0]-o[0]} ${px[1]-o[1]} ${py[0]-o[0]} ${py[1]-o[1]} ${o[0]} ${o[1]})`},g);
+    mk("path",{d:"M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z",class:"experience-framer-mark"},mark);
+  };
+  const slab = (g, x, y, z, w, h, depth, faceClass) => {
+    const ring = rrect(0, 0, w, h, CORNER, 14);
+    const front = ring.map(q => P(x + q.u, y, z + h - q.v));
+    const back = ring.map(q => P(x + q.u, y - depth, z + h - q.v));
+    const silhouette = hull([...front, ...back]);
+    path(g, silhouette, "experience-slab-body");
+    path(g, front, faceClass);
+    path(g, silhouette, "experience-slab-outline");
+  };
 
-  // Quiet projected ground crosses, all lying in the x/y plane.
+  // Cross arms follow the two diagonal ground axes, projected from x/y.
   const ground = mk("g", { class: "experience-ground" }, svg);
-  for (let x = -92; x <= 252; x += 11) for (let y = -48; y <= 115; y += 11) {
-    const c = P(x, y, -5);
-    if (c[0] < 20 || c[0] > 382 || c[1] < 10 || c[1] > 299) continue;
-    stroke(ground, [P(x - .5, y - .5, -5), P(x + .5, y + .5, -5)], "experience-dot");
-    stroke(ground, [P(x - .5, y + .5, -5), P(x + .5, y - .5, -5)], "experience-dot");
+  let groundMarks = "";
+  for (let x = -267; x <= 282; x += 11) for (let y = -343; y <= 206; y += 11) {
+    const a = P(x - .9, y, -5), b = P(x + .9, y, -5), c = P(x, y - .9, -5), d = P(x, y + .9, -5);
+    if ([a,b,c,d].some(([sx,sy]) => sx < 0 || sx > 400 || sy < 0 || sy > 320)) continue;
+    groundMarks += `M${a[0]},${a[1]}L${b[0]},${b[1]}M${c[0]},${c[1]}L${d[0]},${d[1]}`;
   }
+  mk("path", { d: groundMarks, class: "experience-dot" }, ground);
 
   // A real horizontal keyboard plane: all keys share the same two axes.
   const keyboard = mk("g", { class: "experience-keyboard" }, svg);
-  const KB = (u, v, z = 2) => P(-71 + 145 * u, 36 + 69 * v, z);
-  const keyRing = rrect(0, 0, 1, 1, .075, 14);
+  const KB = (x, y, z = 2) => P(x, y, z);
+  const keyRing = rrect(-71, 36, 74, 105, CORNER, 14);
   const keyBase = keyRing.map(q => KB(q.u, q.v, 0)), keyTop = keyRing.map(q => KB(q.u, q.v, 2));
-  path(keyboard, hull([...keyBase, ...keyTop]), "experience-keyboard-body");
+  const keyboardHull = hull([...keyBase, ...keyTop]);
+  path(keyboard, keyboardHull, "experience-keyboard-body");
   path(keyboard, keyTop, "experience-keyboard-top");
-  stroke(keyboard, rrect(.018,.018,.982,.982,.058,14).map(q=>KB(q.u,q.v,2.05)), "experience-keyboard-crease");
+  path(keyboard, keyboardHull, "experience-keyboard-outline");
   for (let row = 0; row < 6; row++) for (let col = 0; col < 11; col++) {
-    const u = .044 + col * .083 + (row % 2) * .012, v = .09 + row * .132;
-    path(keyboard, rrect(u, v, u + .069, v + .09, .012, 4).map(q => KB(q.u, q.v, 2.15)), "experience-key");
+    const x = -65 + col * 12.4 + (row % 2) * 1.5, y = 41 + row * 10.1;
+    path(keyboard, rrect(x, y, x + 9.6, y + 7.5, 1.25, 8).map(q => KB(q.u, q.v, 2.15)), "experience-key");
   }
-
-  // Five connected tools. Their faces are projections of actual cuboids.
+  // Six connected tools. Their faces are projections of actual cuboids.
   const modules = mk("g", { class: "experience-modules" }, svg);
-  const links = mk("g", { class: "experience-links" }, modules);
-  const modulePlaces = [[190,-17,136,28,0],[252,-29,153,29,1],[192,-25,65,29,2],[269,-20,105,29,3],[250,-4,39,29,4]];
-  modulePlaces.forEach(([x,y,z,size]) => {
-    const from = P(169, 16, z + size * .47);
-    const elbow = P(x - 12, 16, z + size * .47);
-    const to = P(x, y + size * .75, z + size * .47);
-    stroke(links,[from,elbow,to],"experience-wire-outer");
-    stroke(links,[from,elbow,to],"experience-wire-inner");
-    path(links,rrect(-1.2,-1.2,1.2,1.2,.7,6).map(q=>[to[0]+q.u,to[1]+q.v]),"experience-socket");
-  });
-  function cube(x, y, z, size, kind) {
+  const modulePlaces = [[164,-17,135,28,0,55],[247,-9,229,29,1,130],[164,-25,55,29,2,45],[257,0,169,29,3,130],[132,-17,185,28,5,78]];
+  function cube(x, y, z, size, kind, tubeLength) {
     const g = mk("g", { class: "experience-module" }, modules);
     const x1 = x + size, y1 = y + size, z1 = z + size;
     const A = P(x, y, z), B = P(x1, y, z), D = P(x, y1, z), E = P(x1, y1, z);
     const AT = P(x, y, z1), BT = P(x1, y, z1), DT = P(x, y1, z1), ET = P(x1, y1, z1);
-    path(g, [BT, ET, E, B], "experience-cube-side");
+    const sideCorner = quadratic(trimFromStart(ET, BT, 3.2), ET, trimFromStart(ET, E, 3.2));
+    path(g, [BT, ...sideCorner, E, B], "experience-cube-side");
     path(g, [DT, ET, E, D], "experience-cube-front");
     path(g, [AT, BT, ET, DT], "experience-cube-top");
+    const portX = x + size * .5, portZ = z + size * .51;
+    const portFace = face(x, y1, z, size, size);
     const outer = hull([A, B, D, E, AT, BT, DT, ET]);
-    path(g, fillet(outer,outer.map(()=>3.6),5), "experience-cube-outline");
-    stroke(g, [BT, ET, DT], "experience-cube-seam");
-    stroke(g, [ET, E], "experience-cube-seam");
-    const F = face(x, y1, z, size, size);
-    if (kind === 0) { // bolt, as a shallow relief on the front face
-      round(g, [[.48,.26],[.38,.52],[.49,.49],[.43,.74],[.65,.41],[.54,.43]].map(([u,v])=>F(u,v)), "experience-icon-fill", .9);
-    } else if (kind === 1) {
-      onFace(g,F,.35,.34,.7,.43,"experience-icon-fill",.018);
-      onFace(g,F,.35,.48,.7,.57,"experience-icon-fill",.018);
-    } else if (kind === 2) {
-      ellipse(g,F,.49,.43,.14,.14,"experience-icon-outline");
-      faceLine(g,F,[[.59,.55],[.69,.69]],"experience-icon-outline");
-    } else if (kind === 3) {
-      [[.33,.38],[.66,.38],[.5,.66]].forEach(([u,v])=>ellipse(g,F,u,v,.055,.055,"experience-icon-outline",18));
-      faceLine(g,F,[[.38,.41],[.61,.41]],"experience-icon-outline");
-      faceLine(g,F,[[.36,.44],[.47,.62]],"experience-icon-outline");
-      faceLine(g,F,[[.63,.44],[.53,.62]],"experience-icon-outline");
-    } else {
-      ellipse(g,F,.5,.49,.15,.13,"experience-icon-outline");
-      faceLine(g,F,[[.35,.55],[.65,.43]],"experience-icon-outline");
-    }
+    path(g, fillet(outer,outer.map(()=>CORNER),5), "experience-cube-outline");
+    // Keep the left seam joined to the curved fold, with the larger gap on
+    // the line that enters from the cube's right side.
+    const rightSideStart = trimFromStart(BT, ET, 2.2);
+    const leftSideStart = trimFromStart(DT, ET, 2.2);
+    const curveStart = trimFromStart(ET, DT, 3.2);
+    const rightCornerOut = trimFromStart(ET, E, 3.2);
+    const verticalSeamEnd = trimFromStart(E, ET, 2.2);
+    const transition = quadratic(curveStart, ET, rightCornerOut);
+    const rightFold = [leftSideStart, curveStart, ...transition.slice(1, -1), verticalSeamEnd];
+    const rightSideEnd = trimFromStart(ET, rightSideStart, .45);
+    stroke(g, [rightSideStart, rightSideEnd], "experience-cube-seam");
+    stroke(g, rightFold, "experience-cube-seam");
+    // A projected cylinder shares the socket's world-space center and plane.
+    ellipse(g, portFace, .5, .49, size * .29, size * .29, "experience-tube-collar");
+    ellipse(g, portFace, .5, .49, size * .22, size * .22, "experience-tube-collar-center");
+    const ring=(cy,r)=>Array.from({length:24},(_,i)=>{const a=i*Math.PI/12;return P(portX+r*Math.cos(a),cy,portZ+r*Math.sin(a));});
+    path(g,hull([...ring(y1,size*.215),...ring(y1+tubeLength,size*.215)]),"experience-tube-shadow");
+    path(g,hull([...ring(y1,size*.185),...ring(y1+tubeLength,size*.185)]),"experience-tube-body");
+    ellipse(g,portFace,.5,.49,size*.185,size*.185,"experience-tube-cap");
+    const F = rightFace(x1, y, z, size, size);
+    if(kind===0)brandMark(g,F,"figma");else if(kind===3)brandMark(g,F,"framer");else if(kind===5)brandMark(g,F,"chatgpt");else packIcon(g,F,["zap","list","search","workflow","database"][kind]);
   }
   modulePlaces.forEach(v => cube(...v));
 
-  // Main product window: front and thin back are the same rounded plane.
   const screen = mk("g", { class: "experience-screen" }, svg);
   const SF = face(12, 17, 28, 157, 129);
-  const bezel = rrect(0, 0, 1, 1, .033, 14);
-  path(screen,bezel.map(q=>SF(q.u,q.v)),"experience-screen-face");
-  faceLine(screen,SF,[[.015,.12],[.985,.12]],"experience-screen-rule");
-  [.035,.061,.087].forEach((u,i)=>ellipse(screen,SF,u,.057,.006,.008,`experience-window-dot experience-window-dot--${i}`,18));
-  [[.045,.17,.26,.7,"experience-sea"],[.29,.17,.62,.46,"experience-sea-two"],
-    [.29,.51,.62,.77,"experience-sea"],[.65,.17,.95,.84,"experience-sea-two"]]
-    .forEach(([a,b,c,d,cls])=>onFace(screen,SF,a,b,c,d,cls,.008));
-  faceLine(screen,SF,[[.06,.87],[.56,.87]],"experience-screen-rule");
-
-  // Floating cards. Each inset and pictogram is mapped onto its own plane.
+  slab(screen,12,17,28,157,129,3.2,"experience-screen-face");
+  uiPlane(screen,SF,"screen",1570,1290);
   const cards = [];
   function card(name, x, y, z, w, h) {
     const g = mk("g", { class: `experience-card experience-card--${name}` }, svg);
     const F = face(x,y,z,w,h);
-    const outline = rrect(0,0,1,1,Math.min(.16,3.4/Math.min(w,h)),14);
-    path(g,outline.map(q=>F(q.u,q.v)),"experience-panel-face");
+    slab(g,x,y,z,w,h,3.2,"experience-panel-face");
     cards.push(g);
     return { g, F };
   }
   const mail = card("mail", 0, 54, 75, 31, 72);
-  ellipse(mail.g,mail.F,.5,.33,.25,.13,"experience-disc");
-  onFace(mail.g,mail.F,.39,.27,.63,.38,"experience-mail",.014);
-  faceLine(mail.g,mail.F,[[.39,.27],[.51,.34],[.63,.27]],"experience-glyph");
-  [.58,.67,.76].forEach((v,i)=>faceLine(mail.g,mail.F,[[.17,v],[.83-i*.12,v]],"experience-screen-rule"));
-  const search = card("search", 48, 59, 88, 66, 21);
-  onFace(search.g,search.F,.05,.26,.95,.76,"experience-pink",.2);
-  ellipse(search.g,search.F,.17,.51,.055,.15,"experience-glyph",24);
-  faceLine(search.g,search.F,[[.205,.61],[.25,.7]],"experience-glyph");
+  uiPlane(mail.g,mail.F,"mail",310,720);
+  const search = card("search", 80, 59, 88, 66, 21);
+  uiPlane(search.g,search.F,"search",660,210);
   const media = card("media", 20, 63, 25, 57, 57);
-  ellipse(media.g,media.F,.18,.16,.048,.05,"experience-soft");
-  faceLine(media.g,media.F,[[.29,.15],[.8,.15]],"experience-screen-rule");
-  faceLine(media.g,media.F,[[.29,.24],[.64,.24]],"experience-screen-rule");
-  onFace(media.g,media.F,.08,.37,.93,.9,"experience-warm",.025);
-  faceLine(media.g,media.F,[[.46,.55],[.46,.72],[.62,.64],[.46,.55]],"experience-glyph");
+  uiPlane(media.g,media.F,"media",570,570);
   const analytics = card("analytics", 94, 67, 13, 53, 72);
-  ellipse(analytics.g,analytics.F,.5,.34,.19,.14,"experience-disc");
-  ellipse(analytics.g,analytics.F,.5,.34,.075,.055,"experience-hole");
-  [0,1,2,3,4].forEach(i=>onFace(analytics.g,analytics.F,.13+i*.15,.69-(i%2)*.07,.19+i*.15,.87,"experience-chart",.01));
+  uiPlane(analytics.g,analytics.F,"analytics",530,720);
 
   const shifts = cards.map(() => tween(0));
   const clock = register(stage, (_dt, now) => {
@@ -1096,16 +1150,71 @@ hairline({
   const svg = document.querySelector('#stage > svg');
   if (svg) {
     const ns = 'http://www.w3.org/2000/svg';
+    const xhtml = 'http://www.w3.org/1999/xhtml';
     const defs = document.createElementNS(ns, 'defs');
     defs.innerHTML = `
-      <linearGradient id="experience-sea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9e9f9"/><stop offset=".28" stop-color="#82dbd2"/><stop offset=".67" stop-color="#7ae5a7"/><stop offset="1" stop-color="#b7f7d6"/></linearGradient>
-      <linearGradient id="experience-sea-two" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#82d9f2"/><stop offset=".4" stop-color="#6bdbbd"/><stop offset="1" stop-color="#aaf0bf"/></linearGradient>
-      <linearGradient id="experience-warm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb62d"/><stop offset=".32" stop-color="#ffb83a"/><stop offset=".72" stop-color="#9edb52"/><stop offset="1" stop-color="#13bf7c"/></linearGradient>
-      <linearGradient id="experience-pink" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffcfeb"/><stop offset=".3" stop-color="#ff88bf"/><stop offset=".7" stop-color="#e74eab"/><stop offset="1" stop-color="#b949ed"/></linearGradient>
-      <linearGradient id="experience-disc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#aa9bfa"/><stop offset=".3" stop-color="#f99bce"/><stop offset=".65" stop-color="#ffc65d"/><stop offset="1" stop-color="#8ce9c9"/></linearGradient>
-      <linearGradient id="experience-chart" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a394f8"/><stop offset=".36" stop-color="#f5a7c7"/><stop offset=".7" stop-color="#ffca64"/><stop offset="1" stop-color="#99e6c8"/></linearGradient>
+      <radialGradient id="experience-sea" cx=".24" cy=".22" r=".95"><stop offset="0" stop-color="#6be4af"/><stop offset=".46" stop-color="#79edc9"/><stop offset="1" stop-color="#4babf7"/></radialGradient>
+      <radialGradient id="experience-sea-two" cx=".24" cy=".22" r=".95"><stop offset="0" stop-color="#75ccdb"/><stop offset=".48" stop-color="#36b7bb"/><stop offset="1" stop-color="#7cdbaa"/></radialGradient>
+      <radialGradient id="experience-warm" cx=".24" cy=".22" r=".95"><stop offset="0" stop-color="#feaa15"/><stop offset=".42" stop-color="#feaa15"/><stop offset=".72" stop-color="#accc1e"/><stop offset="1" stop-color="#39c187"/></radialGradient>
+      <radialGradient id="experience-pink" cx=".24" cy=".22" r=".95"><stop offset="0" stop-color="#fc92b8"/><stop offset=".42" stop-color="#fb8bbe"/><stop offset="1" stop-color="#c396fd"/></radialGradient>
+      <radialGradient id="experience-disc" cx=".24" cy=".22" r=".95"><stop offset="0" stop-color="#c396fd"/><stop offset=".36" stop-color="#fb8bbe"/><stop offset=".66" stop-color="#dcc640"/><stop offset="1" stop-color="#79edc9"/></radialGradient>
+      <radialGradient id="experience-chart" cx=".24" cy=".22" r=".95"><stop offset="0" stop-color="#c396fd"/><stop offset=".36" stop-color="#fc92b8"/><stop offset=".7" stop-color="#dcc640"/><stop offset="1" stop-color="#79edc9"/></radialGradient>
+      <radialGradient id="experience-pie-a" cx=".24" cy=".22" r=".95"><stop stop-color="#c396fd"/><stop offset=".55" stop-color="#fb8bbe"/><stop offset="1" stop-color="#fd91af"/></radialGradient>
+      <radialGradient id="experience-pie-b" cx=".24" cy=".22" r=".95"><stop stop-color="#dcc640"/><stop offset=".55" stop-color="#fd91af"/><stop offset="1" stop-color="#fd73b7"/></radialGradient>
+      <radialGradient id="experience-pie-c" cx=".24" cy=".22" r=".95"><stop stop-color="#79edc9"/><stop offset=".5" stop-color="#75ccdb"/><stop offset="1" stop-color="#c396fd"/></radialGradient>
+      <radialGradient id="experience-sea-a" cx=".13" cy=".12" r=".78"><stop stop-color="#75ccdb" stop-opacity=".82"/><stop offset=".38" stop-color="#75ccdb" stop-opacity=".37"/><stop offset="1" stop-color="#75ccdb" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-sea-b" cx=".85" cy=".72" r=".78"><stop stop-color="#57db9f" stop-opacity=".70"/><stop offset=".43" stop-color="#6be4af" stop-opacity=".34"/><stop offset="1" stop-color="#6be4af" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-sea-two-a" cx=".83" cy=".18" r=".75"><stop stop-color="#79edc9" stop-opacity=".80"/><stop offset=".42" stop-color="#75ccdb" stop-opacity=".32"/><stop offset="1" stop-color="#75ccdb" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-sea-two-b" cx=".20" cy=".80" r=".77"><stop stop-color="#57db9f" stop-opacity=".65"/><stop offset=".42" stop-color="#6be4af" stop-opacity=".28"/><stop offset="1" stop-color="#6be4af" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-warm-a" cx=".19" cy=".71" r=".76"><stop stop-color="#ff8f02" stop-opacity=".72"/><stop offset=".44" stop-color="#feaa15" stop-opacity=".24"/><stop offset="1" stop-color="#feaa15" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-warm-b" cx=".86" cy=".47" r=".73"><stop stop-color="#39c187" stop-opacity=".82"/><stop offset=".45" stop-color="#44ce88" stop-opacity=".27"/><stop offset="1" stop-color="#44ce88" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-pink-a" cx=".29" cy=".39" r=".70"><stop stop-color="#fd73b7" stop-opacity=".80"/><stop offset=".40" stop-color="#fd73b7" stop-opacity=".26"/><stop offset="1" stop-color="#fd73b7" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-pink-b" cx=".89" cy=".69" r=".76"><stop stop-color="#c396fd" stop-opacity=".72"/><stop offset=".45" stop-color="#c396fd" stop-opacity=".23"/><stop offset="1" stop-color="#c396fd" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-disc-a" cx=".18" cy=".15" r=".78"><stop stop-color="#c596ff" stop-opacity=".66"/><stop offset=".45" stop-color="#c596ff" stop-opacity=".08"/><stop offset="1" stop-color="#c596ff" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-disc-b" cx=".81" cy=".72" r=".80"><stop stop-color="#dcc640" stop-opacity=".50"/><stop offset=".42" stop-color="#dcc640" stop-opacity=".12"/><stop offset="1" stop-color="#dcc640" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-chart-a" cx=".18" cy=".20" r=".85"><stop stop-color="#c596ff" stop-opacity=".58"/><stop offset=".45" stop-color="#c596ff" stop-opacity=".10"/><stop offset="1" stop-color="#c596ff" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-chart-b" cx=".84" cy=".76" r=".79"><stop stop-color="#dcc640" stop-opacity=".48"/><stop offset=".46" stop-color="#dcc640" stop-opacity=".08"/><stop offset="1" stop-color="#dcc640" stop-opacity="0"/></radialGradient>
+      <radialGradient id="experience-edge" cx=".50" cy=".50" r=".72"><stop offset=".50" stop-color="#fff" stop-opacity="0"/><stop offset=".76" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity=".82"/></radialGradient>
     `;
     svg.prepend(defs);
+    const templates = {"screen":"<div class=\"face face--screen\"><div class=\"browser-head\"><i class=\"browser-dot browser-dot--red\"></i><i class=\"browser-dot browser-dot--yellow\"></i><i class=\"browser-dot browser-dot--green\"></i></div><div class=\"screen-panels\"><div class=\"screen-panel screen-panel--one\"></div><div class=\"screen-panel screen-panel--two\"></div><div class=\"screen-panel screen-panel--three\"></div><div class=\"screen-panel screen-panel--four\"></div></div></div>","mail":"<div class=\"face face--mail\"><div class=\"mail-disc\"><svg data-lucide-style=\"outline\" data-lucide-icon=\"image\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\"/><circle cx=\"9\" cy=\"9\" r=\"2\"/><path d=\"m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21\"/></svg></div><div class=\"mail-copy\"><div class=\"text-block text-block--long\"></div><div class=\"text-block text-block--medium\"></div><div class=\"text-block text-block--short\"></div></div><div class=\"mail-control\"></div></div>","search":"<div class=\"face face--search\"><div class=\"gradient-search\"><svg data-lucide-style=\"outline\" data-lucide-icon=\"search\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"/><circle cx=\"11\" cy=\"11\" r=\"8\"/></svg><span class=\"search-word\">Search</span></div></div>","media":"<div class=\"face face--media\"><div class=\"media-heading\"><div class=\"avatar\"><svg data-lucide-style=\"outline\" data-lucide-icon=\"user-round\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"8\" r=\"5\"/><path d=\"M20 21a8 8 0 0 0-16 0\"/></svg></div><div class=\"media-copy\"><div class=\"text-block text-block--long\"></div><div class=\"text-block\"></div></div></div><div class=\"gradient-media\"><div class=\"play-disc\"><svg data-lucide-style=\"outline\" data-lucide-icon=\"play\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z\"/></svg></div></div></div>","analytics":"<div class=\"face face--analytics\"><div class=\"analytics-head\"><div class=\"text-block\"></div><div class=\"text-block\"></div></div><div class=\"pie\"><svg class=\"pie-separators\" viewBox=\"0 0 132 132\" aria-hidden=\"true\"><line x1=\"66\" y1=\"66\" x2=\"66\" y2=\"0\"/><line x1=\"66\" y1=\"66\" x2=\"123.16\" y2=\"99\"/><line x1=\"66\" y1=\"66\" x2=\"8.84\" y2=\"99\"/><circle cx=\"66\" cy=\"66\" r=\"35\"/></svg></div><div class=\"chart-rule chart-rule--upper\"></div><div class=\"bar-chart\"><i class=\"chart-bar\"></i><i class=\"chart-bar\"></i><i class=\"chart-bar\"></i><i class=\"chart-bar\"></i><i class=\"chart-bar\"></i><i class=\"chart-bar\"></i></div><div class=\"chart-rule chart-rule--lower\"></div></div>"};
+    const interfaceStyle = "\n.experience-ui-root, .experience-ui-root *{box-sizing:border-box}\n.experience-ui-root, .experience-ui-root{margin:0;min-height:100%;font-family:Arial,sans-serif;color:#17212d;background:#f4f6f7}\n.experience-ui-root{--ui-icon-stroke:2.4;position:relative;width:100%;height:100%;overflow:hidden;background:#fff;border-radius:30px}\n.experience-ui-root .mail-disc svg, .experience-ui-root .gradient-search svg, .experience-ui-root .avatar svg, .experience-ui-root .play-disc svg{color:#fff;stroke:currentColor;stroke-width:var(--ui-icon-stroke);fill:none;stroke-linecap:round;stroke-linejoin:round}\n.experience-ui-root [data-lucide-style=\"outline\"] path, .experience-ui-root [data-lucide-style=\"outline\"] rect, .experience-ui-root [data-lucide-style=\"outline\"] circle{fill:none!important;stroke:#fff!important;stroke-width:var(--ui-icon-stroke)!important;stroke-linecap:round!important;stroke-linejoin:round!important}\n.experience-ui-root.face--screen{display:flex;flex-direction:column;padding:0 34px 34px}\n.experience-ui-root .browser-head{height:148px;flex:none;display:flex;align-items:center;gap:16px;padding-left:12px}\n.experience-ui-root .browser-dot{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px #ffffff80}\n.experience-ui-root .browser-dot--red{background:var(--art-signal-error)}\n.experience-ui-root .browser-dot--yellow{background:var(--art-signal-warning)}\n.experience-ui-root .browser-dot--green{background:var(--art-signal-success)}\n.experience-ui-root .screen-panels{display:grid;flex:1;min-height:0;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:20px}\n.experience-ui-root .screen-panel{position:relative;min-width:0;min-height:0;overflow:hidden;border-radius:18px;background-color:var(--art-greenBlue-mint)}\n.experience-ui-root .screen-panel:after, .experience-ui-root .gradient-media:after, .experience-ui-root .gradient-search:after{content:\"\";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse 55% 62% at 0% 0%,rgba(255,255,255,.30),transparent 88%),radial-gradient(ellipse 55% 62% at 100% 0%,rgba(255,255,255,.30),transparent 88%),radial-gradient(ellipse 55% 62% at 0% 100%,rgba(255,255,255,.30),transparent 88%),radial-gradient(ellipse 55% 62% at 100% 100%,rgba(255,255,255,.30),transparent 88%),radial-gradient(ellipse 103% 105% at 50% 50%,transparent 48%,rgba(255,255,255,.16) 67%,rgba(255,255,255,.63) 90%,rgba(255,255,255,.92) 100%);box-shadow:inset 0 0 36px 7px rgba(255,255,255,.55),inset 0 0 12px 3px rgba(255,255,255,.30)}\n.experience-ui-root .screen-panel--tall{grid-row:span 2}\n.experience-ui-root .screen-panel--one{grid-row:span 2;background-image:linear-gradient(128deg,var(--art-mintCyan-cyan) 0%,var(--art-mintCyan-mint) 46%,var(--art-greenBlue-mint) 100%)}\n.experience-ui-root .screen-panel--two{background-image:linear-gradient(132deg,var(--art-mintCyan-cyan) 0%,var(--art-greenBlue-mint) 44%,var(--art-mintCyan-mint) 100%)}\n.experience-ui-root .screen-panel--three{background-image:linear-gradient(141deg,var(--art-mintCyan-cyan) 0%,var(--art-greenBlue-mint) 55%,var(--art-mintCyan-green) 100%)}\n.experience-ui-root .screen-panel--four{grid-row:span 2;background-image:linear-gradient(134deg,var(--art-mintCyan-cyan) 0%,var(--art-greenBlue-mint) 45%,var(--art-mintCyan-green) 100%)}\n.experience-ui-root.face--mail{padding:56px 44px;display:flex;flex-direction:column;align-items:center}\n.experience-ui-root .mail-disc{width:132px;height:132px;flex:none;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle at 14% 8%,color-mix(in srgb,var(--art-pinkViolet-deep) 92%,transparent),transparent 54%),radial-gradient(circle at 85% 20%,color-mix(in srgb,var(--art-pinkViolet-coral) 78%,transparent),transparent 59%),radial-gradient(circle at 72% 89%,color-mix(in srgb,var(--art-amberLime-light) 96%,transparent),transparent 55%),radial-gradient(circle at 12% 80%,color-mix(in srgb,var(--art-pinkViolet-pink) 74%,transparent),transparent 54%),linear-gradient(133deg,var(--art-pinkViolet-violet) 0%,var(--art-pinkViolet-base) 55%,var(--art-amberLime-light) 100%);box-shadow:inset 0 0 26px 7px rgba(255,255,255,.55)}\n.experience-ui-root .mail-disc svg{width:48px;height:48px}\n.experience-ui-root .mail-copy{width:100%;display:grid;gap:18px;margin-top:50px}\n.experience-ui-root .text-block{height:18px;border-radius:4px;background:#e2e6e8}\n.experience-ui-root .text-block--long{width:88%}\n.experience-ui-root .text-block--medium{width:72%}\n.experience-ui-root .text-block--short{width:55%}\n.experience-ui-root .mail-control{width:54%;height:54px;border-radius:10px;background:#eef0f1;margin-top:auto;margin-bottom:16px}\n.experience-ui-root.face--search{padding:18px;display:flex;align-items:center}\n.experience-ui-root .gradient-search{position:relative;isolation:isolate;width:100%;height:100%;min-height:70px;display:flex;align-items:center;gap:30px;padding:0 38px;border-radius:22px;overflow:hidden;background:radial-gradient(ellipse 73% 130% at 10% 10%,color-mix(in srgb,var(--art-pinkViolet-light) 83%,transparent),transparent 70%),radial-gradient(ellipse 53% 160% at 40% 92%,color-mix(in srgb,var(--art-pinkViolet-pink) 86%,transparent),transparent 75%),radial-gradient(ellipse 55% 150% at 71% 4%,color-mix(in srgb,var(--art-pinkViolet-base) 69%,transparent),transparent 73%),radial-gradient(ellipse 59% 155% at 92% 82%,color-mix(in srgb,var(--art-pinkViolet-violet) 81%,transparent),transparent 71%),linear-gradient(100deg,var(--art-pinkViolet-light) 0%,var(--art-pinkViolet-pink) 43%,var(--art-pinkViolet-pink) 72%,var(--art-pinkViolet-violet) 100%)}\n.experience-ui-root .gradient-search svg{position:relative;z-index:1;width:42px;height:42px;flex:none}\n.experience-ui-root .search-word{position:relative;z-index:1;color:#fff;font-size:38px;font-weight:400;letter-spacing:.2px}\n.experience-ui-root.face--media{padding:32px;display:flex;flex-direction:column}\n.experience-ui-root .media-heading{height:108px;display:flex;align-items:center;gap:20px;flex:none}\n.experience-ui-root .avatar{width:64px;height:64px;display:grid;place-items:center;flex:none;border-radius:50%;background:#c4cbcf}\n.experience-ui-root .avatar svg{width:39px;height:39px}\n.experience-ui-root .media-copy{flex:1;display:grid;align-content:center;gap:12px}\n.experience-ui-root .media-copy .text-block{height:16px}\n.experience-ui-root .media-copy .text-block:last-child{width:63%}\n.experience-ui-root .gradient-media{position:relative;isolation:isolate;flex:1;min-height:0;overflow:hidden;border-radius:18px;background:radial-gradient(ellipse 66% 83% at 4% 80%,color-mix(in srgb,var(--art-amberLime-orange) 84%,transparent),transparent 77%),radial-gradient(ellipse 67% 85% at 47% 16%,color-mix(in srgb,var(--art-amberLime-light) 81%,transparent),transparent 73%),radial-gradient(ellipse 78% 75% at 96% 67%,color-mix(in srgb,var(--art-greenBlue-greenDeep) 90%,transparent),transparent 70%),radial-gradient(ellipse 58% 66% at 66% 93%,color-mix(in srgb,var(--art-amberLime-lime) 61%,transparent),transparent 72%),linear-gradient(100deg,var(--art-amberLime-base) 0%,var(--art-amberLime-amber) 37%,var(--art-amberLime-gold) 68%,var(--art-greenBlue-greenDeep) 100%)}\n.experience-ui-root .play-disc{position:absolute;left:50%;top:50%;width:90px;height:90px;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;background:#ffffff3b}\n.experience-ui-root .play-disc svg{width:36px;height:36px;margin-left:2px}\n.experience-ui-root.face--analytics{padding:38px 34px;display:flex;flex-direction:column;align-items:center}\n.experience-ui-root .analytics-head{width:100%;display:flex;align-items:center;gap:28px;margin:0 0 26px}\n.experience-ui-root .analytics-head .text-block{height:20px;background:#eff1f2}\n.experience-ui-root .analytics-head .text-block:first-child{width:54%}\n.experience-ui-root .analytics-head .text-block:last-child{width:34%}\n.experience-ui-root .pie{width:132px;height:132px;flex:none;overflow:hidden;border-radius:50%;background:radial-gradient(circle at 42% 34%,rgba(255,255,255,.24),transparent 72%),conic-gradient(from -90deg,var(--art-pinkViolet-violet) 0deg,var(--art-pinkViolet-base) 55deg,var(--art-amberLime-light) 120deg,var(--art-pinkViolet-violet) 120deg,var(--art-pinkViolet-base) 175deg,var(--art-amberLime-light) 240deg,var(--art-pinkViolet-violet) 240deg,var(--art-pinkViolet-base) 295deg,var(--art-amberLime-light) 360deg);box-shadow:inset 0 0 20px 5px rgba(255,255,255,.50)}\n.experience-ui-root .pie-separators{display:block;width:100%;height:100%}\n.experience-ui-root .pie-separators line{fill:none!important;stroke:#fff!important;stroke-width:8!important;stroke-linecap:butt!important;vector-effect:none!important}\n.experience-ui-root .pie-separators circle{fill:#fff!important;stroke:none!important}\n.experience-ui-root .chart-rule{flex:none;height:18px;border-radius:4px;background:#eff1f2}\n.experience-ui-root .chart-rule--upper{width:50%;align-self:flex-start;margin:29px 0 0 12px}\n.experience-ui-root .chart-rule--lower{width:91%;align-self:flex-start;margin:28px 0 0 8px}\n.experience-ui-root .bar-chart{position:relative;width:100%;height:235px;margin-top:25px;padding:0 12px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px}\n.experience-ui-root .chart-bar{width:12%;border-radius:6px 6px 3px 3px;background:radial-gradient(ellipse 130% 66% at 50% 95%,color-mix(in srgb,var(--art-amberLime-amber) 88%,transparent),transparent 76%),radial-gradient(ellipse 150% 80% at 50% 8%,color-mix(in srgb,var(--art-pinkViolet-violet) 76%,transparent),transparent 71%),linear-gradient(180deg,var(--art-pinkViolet-violet) 0%,var(--art-pinkViolet-base) 48%,var(--art-amberLime-light) 100%);box-shadow:inset 0 0 18px 4px rgba(255,255,255,.54)}\n.experience-ui-root .chart-bar:nth-child(1){height:45%}\n.experience-ui-root .chart-bar:nth-child(2){height:69%}\n.experience-ui-root .chart-bar:nth-child(3){height:87%}\n.experience-ui-root .chart-bar:nth-child(4){height:58%}\n.experience-ui-root .chart-bar:nth-child(5){height:76%}\n.experience-ui-root .chart-bar:nth-child(6){height:94%}\n.experience-ui-root{--art-greenBlue-base:#3dbfcc;--art-greenBlue-mint:#79edc9;--art-greenBlue-blueLight:#4babf7;--art-greenBlue-green:#44d091;--art-greenBlue-greenDeep:#39c187;--art-greenBlue-blue:#2a94e2;--art-greenBlue-teal:#36b7bb;--art-amberGreen-base:#f0a91a;--art-amberGreen-amber:#fda30c;--art-amberGreen-gold:#f4b829;--art-amberGreen-lime:#cbc53b;--art-amberGreen-green:#0db340;--art-amberGreen-olive:#91ae36;--art-amberGreen-light:#d0cb30;--art-amberLime-base:#f7a70f;--art-amberLime-orange:#ff8f02;--art-amberLime-amber:#feaa15;--art-amberLime-lime:#accc1e;--art-amberLime-green:#65b446;--art-amberLime-gold:#bbb733;--art-amberLime-light:#dcc640;--art-pinkViolet-base:#fb8bbe;--art-pinkViolet-coral:#fd91af;--art-pinkViolet-pink:#fd73b7;--art-pinkViolet-violet:#c396fd;--art-pinkViolet-rose:#fc92b8;--art-pinkViolet-light:#fcaedd;--art-pinkViolet-deep:#c596ff;--art-coralViolet-base:#fd88ae;--art-coralViolet-coral:#fc8297;--art-coralViolet-pink:#fb6fc4;--art-coralViolet-violet:#c590fd;--art-coralViolet-rose:#fd92ae;--art-coralViolet-light:#fba6df;--art-coralViolet-deep:#ec91f9;--art-amberViolet-base:#f1994c;--art-amberViolet-light:#ebaaa5;--art-amberViolet-orange:#f3924f;--art-amberViolet-violet:#d5aaed;--art-amberViolet-amber:#f2bb63;--art-amberViolet-coral:#f3b173;--art-amberViolet-rose:#eeb99f;--art-mintCyan-base:#44ce88;--art-mintCyan-mint:#6be4af;--art-mintCyan-blue:#49c3d0;--art-mintCyan-teal:#3cbfb0;--art-mintCyan-green:#7cdbaa;--art-mintCyan-cyan:#75ccdb;--art-mintCyan-light:#57db9f;--art-signal-error:#fc8277;--art-signal-warning:#f2c85b;--art-signal-success:#7cd37b}\n.experience-ui-root .screen-panel{background:radial-gradient(ellipse 48% 55% at 58% 20%,var(--art-greenBlue-blueLight) 12%,transparent 93%),radial-gradient(ellipse 48% 48% at 91% 44%,var(--art-greenBlue-blue) 8%,transparent 96%),radial-gradient(ellipse 55% 51% at 88% 99%,var(--art-greenBlue-teal) 10%,transparent 96%),radial-gradient(ellipse 45% 45% at 24% 100%,var(--art-greenBlue-greenDeep) 8%,transparent 96%),radial-gradient(ellipse 48% 73% at 8% 63%,var(--art-greenBlue-green) 12%,transparent 96%),var(--art-greenBlue-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}\n.experience-ui-root .gradient-media{background:radial-gradient(ellipse 72% 78% at 24% 38%,var(--art-amberLime-orange) 12%,transparent 95%),radial-gradient(ellipse 64% 70% at 91% 78%,var(--art-amberLime-green) 10%,transparent 98%),radial-gradient(ellipse 58% 61% at 58% 8%,var(--art-amberLime-amber) 8%,transparent 98%),var(--art-amberLime-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}\n.experience-ui-root .gradient-search{background:radial-gradient(ellipse 72% 70% at 13% 17%,var(--art-pinkViolet-coral) 8%,transparent 98%),radial-gradient(ellipse 67% 74% at 88% 87%,var(--art-pinkViolet-violet) 10%,transparent 98%),radial-gradient(ellipse 57% 67% at 48% 60%,var(--art-pinkViolet-pink) 8%,transparent 98%),var(--art-pinkViolet-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}\n.experience-ui-root .mail-disc{background:radial-gradient(ellipse 72% 70% at 13% 17%,var(--art-pinkViolet-coral) 8%,transparent 98%),radial-gradient(ellipse 67% 74% at 88% 87%,var(--art-pinkViolet-violet) 10%,transparent 98%),radial-gradient(ellipse 57% 67% at 48% 60%,var(--art-pinkViolet-pink) 8%,transparent 98%),var(--art-pinkViolet-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}\n.experience-ui-root .chart-bar{background:radial-gradient(ellipse 72% 70% at 13% 17%,var(--art-pinkViolet-coral) 8%,transparent 98%),radial-gradient(ellipse 67% 74% at 88% 87%,var(--art-pinkViolet-violet) 10%,transparent 98%),radial-gradient(ellipse 57% 67% at 48% 60%,var(--art-pinkViolet-pink) 8%,transparent 98%),var(--art-pinkViolet-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}\n.experience-ui-root .screen-panel:after, .experience-ui-root .gradient-media:after, .experience-ui-root .gradient-search:after{background:none;box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}\n.experience-ui-root .pie{background:radial-gradient(circle at 24% 15%,#ffffff24,transparent 60%),conic-gradient(from -90deg,var(--art-pinkViolet-violet) 0deg,var(--art-pinkViolet-pink) 55deg,var(--art-amberLime-orange) 120deg,var(--art-pinkViolet-violet) 120deg,var(--art-pinkViolet-pink) 175deg,var(--art-amberLime-orange) 240deg,var(--art-pinkViolet-violet) 240deg,var(--art-pinkViolet-pink) 295deg,var(--art-amberLime-orange) 360deg);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}\n\n";
+    svg.querySelectorAll('.experience-ui-plane-marker').forEach(marker => {
+      const corners = JSON.parse(marker.dataset.frameCorners);
+      const [p0,p1,,p3] = corners;
+      const width = Number(marker.dataset.frameWidth), height = Number(marker.dataset.frameHeight);
+      const a = (p1[0] - p0[0]) / width, b = (p1[1] - p0[1]) / width;
+      const c = (p3[0] - p0[0]) / height, d = (p3[1] - p0[1]) / height;
+      const frame = document.createElementNS(ns, 'foreignObject');
+      frame.setAttribute('x','0'); frame.setAttribute('y','0');
+      frame.setAttribute('width',String(width)); frame.setAttribute('height',String(height));
+      frame.setAttribute('transform','matrix(' + a + ' ' + b + ' ' + c + ' ' + d + ' ' + p0[0] + ' ' + p0[1] + ')');
+      frame.setAttribute('class','experience-ui-frame');
+      frame.setAttribute('pointer-events','none');
+      const id = marker.dataset.uiFrame;
+      const source = templates[id];
+      const root = document.createElementNS(xhtml,'div');
+      root.setAttribute('xmlns',xhtml);
+      root.setAttribute('class','experience-ui-root face face--' + id);
+      root.setAttribute('style','width:' + width + 'px;height:' + height + 'px');
+      const openingTagEnd = source?.indexOf('>') ?? -1;
+      const closingTagStart = source?.lastIndexOf('</div>') ?? -1;
+      if (openingTagEnd < 0 || closingTagStart < openingTagEnd) { marker.remove(); return; }
+      const style = document.createElementNS(xhtml,'style');
+      style.textContent = interfaceStyle;
+      root.append(style);
+      root.insertAdjacentHTML('beforeend',source.slice(openingTagEnd + 1,closingTagStart));
+      frame.append(root);
+      const outline = marker.parentNode.querySelector(':scope > .experience-slab-outline');
+      marker.parentNode.insertBefore(frame, outline || marker);
+      marker.remove();
+    });
+    const colors = ['sea','sea-two','warm','disc','chart'];
+    svg.querySelectorAll('.experience-sea,.experience-sea-two,.experience-warm,.experience-disc,.experience-chart,.experience-ui-search').forEach(shape => {
+      const palette = shape.classList.contains('experience-ui-search') ? 'pink' : colors.find(name => shape.classList.contains('experience-' + name));
+      const layer = fill => { const copy = shape.cloneNode(false); copy.setAttribute('class','experience-color-layer'); copy.style.fill = 'url(#experience-' + fill + ')'; return copy; };
+      shape.after(layer(palette + '-a'), layer(palette + '-b'), layer('edge'));
+    });
   }
 </script>
 </body>

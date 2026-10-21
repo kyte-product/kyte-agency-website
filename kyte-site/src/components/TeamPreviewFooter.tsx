@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, Mail, Phone } from "lucide-react";
+import { ArrowRight, Mail, Phone } from "lucide-react";
 import { AiQuestionLink, CookieSettingsButton } from "./FooterActions";
 import "./TeamPreviewFooter.css";
 
@@ -46,16 +46,16 @@ export function TeamPreviewFooter() {
             <Link className="site-footer__logo" href="/" aria-label="Kyte home"><Image src="/kyte-agency-logo.svg" alt="" width={1379} height={200} unoptimized /></Link>
             <p>Product, website and brand design for the next stage of your business.</p>
             <address>Bangalore, India</address>
-            <Link className="site-footer__more" href="/contact">Start a project <ChevronRight size={15} aria-hidden="true" /></Link>
+            <Link className="site-footer__more kyte-tertiary" href="/contact">Start a project <ArrowRight size={16} aria-hidden="true" /></Link>
           </div>
 
           <nav className="site-footer__column" aria-label="Product design services">
-            <h2><Link href="/ui-ux-design-development">Product design</Link></h2>
+            <h2><Link href="/ui-ux-design-development">Product Design <ArrowRight size={14} aria-hidden="true" /></Link></h2>
             <FooterLinks items={productServices} />
           </nav>
 
           <nav className="site-footer__column" aria-label="Brand and marketing services">
-            <h2><Link href="/branding-marketing">Brand &amp; marketing</Link></h2>
+            <h2><Link href="/branding-marketing">Brand &amp; Marketing <ArrowRight size={14} aria-hidden="true" /></Link></h2>
             <FooterLinks items={brandServices} />
           </nav>
 
@@ -73,31 +73,38 @@ export function TeamPreviewFooter() {
       <section className="site-footer__utility" aria-label="More ways to connect with Kyte">
         <div className="site-footer__utility-inner">
           <div className="site-footer__utility-grid">
-            <a className="site-footer__utility-cell site-footer__designrush" href="https://www.designrush.com/agency/profile/kyte-agency" target="_blank" rel="noopener noreferrer">
+            <div className="site-footer__utility-cell site-footer__designrush">
               <Image className="site-footer__designrush-badge" src="/designrush-verified-agency-2024.png" alt="DesignRush Verified Agency 2024" width={217} height={290} unoptimized />
-              <span><strong>On DesignRush</strong><small>View agency profile <ChevronRight size={13} strokeWidth={1.7} aria-hidden="true" /></small></span>
-            </a>
-            <div className="site-footer__utility-cell">
-              <p className="site-footer__utility-label">Ask AI about Kyte</p>
-              <div className="site-footer__ai-links">{aiTools.map(([name, icon]) => <AiQuestionLink className={`site-footer__ai-link site-footer__ai-link--${icon}`} provider={name} key={name}><Image className="site-footer__ai-icon" src={`/ai-logos/${icon}.png`} alt="" width={24} height={24} /></AiQuestionLink>)}</div>
+              <div className="site-footer__designrush-copy">
+                <p className="site-footer__utility-label">On DesignRush</p>
+                <div className="site-footer__utility-actions">
+                  <Link className="site-footer__utility-button site-footer__designrush-profile" href="https://www.designrush.com/agency/profile/kyte-agency" target="_blank" rel="noopener noreferrer">View Agency Profile <ArrowRight size={16} aria-hidden="true" /></Link>
+                </div>
+              </div>
             </div>
             <div className="site-footer__utility-cell">
-              <p className="site-footer__utility-label">Social media</p>
-              <div className="site-footer__social-links">
-                <a href="https://www.instagram.com/kyte.agency/" target="_blank" rel="noreferrer" aria-label="Kyte on Instagram"><Image className="site-footer__social-icon" src="/social-icons/instagram.png" alt="" width={20} height={20} /></a>
-                <a href="https://www.linkedin.com/company/kyte-agency/" target="_blank" rel="noreferrer" aria-label="Kyte on LinkedIn"><Image className="site-footer__social-icon" src="/social-icons/linkedin-exact.png" alt="" width={20} height={20} /></a>
+              <p className="site-footer__utility-label">Ask AI About Kyte</p>
+              <div className="site-footer__utility-actions site-footer__ai-links">{aiTools.map(([name, icon]) => <AiQuestionLink className={`site-footer__utility-button site-footer__ai-link site-footer__ai-link--${icon}`} provider={name} key={name}><Image className="site-footer__ai-icon" src={`/ai-logos/${icon}.png`} alt="" width={24} height={24} /></AiQuestionLink>)}</div>
+            </div>
+            <div className="site-footer__utility-cell">
+              <p className="site-footer__utility-label">Social Media</p>
+              <div className="site-footer__utility-actions site-footer__social-links">
+                <a className="site-footer__utility-button" href="https://www.instagram.com/kyte.agency/" target="_blank" rel="noreferrer" aria-label="Kyte on Instagram"><Image className="site-footer__social-icon" src="/social-icons/instagram.png" alt="" width={20} height={20} /></a>
+                <a className="site-footer__utility-button" href="https://www.linkedin.com/company/kyte-agency/" target="_blank" rel="noreferrer" aria-label="Kyte on LinkedIn"><Image className="site-footer__social-icon" src="/social-icons/linkedin-exact.png" alt="" width={20} height={20} /></a>
               </div>
             </div>
             <div className="site-footer__utility-cell site-footer__reach">
-              <p className="site-footer__utility-label">Reach out to us</p>
-              <a href="mailto:contact@kyte-agency.com"><Mail size={16} strokeWidth={1.75} aria-hidden="true" />contact@kyte-agency.com</a>
-              <a href="tel:+919876543210"><Phone size={16} strokeWidth={1.75} aria-hidden="true" />+91 9876543210</a>
+              <p className="site-footer__utility-label">Reach Out To Us</p>
+              <div className="site-footer__utility-actions site-footer__reach-actions">
+                <a className="site-footer__utility-button" href="mailto:contact@kyte-agency.com"><Mail size={16} strokeWidth={1.75} aria-hidden="true" />contact@kyte-agency.com</a>
+                <a className="site-footer__utility-button" href="tel:+919876543210"><Phone size={16} strokeWidth={1.75} aria-hidden="true" />+91 9876543210</a>
+              </div>
             </div>
           </div>
-          <div className="site-footer__bottom">
-            <span>© 2026 Kyte Agency</span>
-            <div><CookieSettingsButton /><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms">Terms and conditions</Link></div>
-          </div>
+        </div>
+        <div className="site-footer__bottom">
+          <span>© 2026 Kyte Agency</span>
+          <div><CookieSettingsButton /><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms">Terms and conditions</Link></div>
         </div>
       </section>
     </footer>

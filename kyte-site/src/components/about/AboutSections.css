@@ -42,7 +42,6 @@
 .about-glance__tool-group img { width: 27px; height: 27px; object-fit: contain; filter: grayscale(1) brightness(0); opacity: .65; }
 .about-glance__tool--adobe-creative-cloud img { filter: grayscale(1); opacity: .75; }
 .about-glance__tool-wordmark img { width: 122px; height: auto; max-height: 27px; }
-.about-glance__tool-window:hover .about-glance__tool-track { animation-play-state: paused; }
 .about-glance__focus { grid-column: 2; grid-row: 2; background: var(--color-surface-about); }
 .about-glance__focus h3,.about-glance__focus p { position: relative; z-index: 1; max-width: 65%; }
 .about-glance__focus-figure { position: absolute; right: -28px; bottom: -24px; width: 58%; --hairline-plate: var(--color-surface-about); --hairline-hi: var(--color-ink); --hairline-edge: var(--color-ink); --hairline-mid: var(--color-ink); --hairline-lo: var(--color-ink); --hairline-stroke: .7; }
@@ -60,7 +59,6 @@
 .about-glance__logo-slot img { width: auto; max-width: 112px; height: auto; max-height: 42px; object-fit: contain; filter: grayscale(1); opacity: .7; }
 .about-glance__logo-slot--red-rhino img { max-width: 64px; max-height: 60px; }
 .about-glance__logo-slot--lovable img { max-width: 120px; }
-.about-glance__logos:hover .about-glance__logo-track { animation-play-state: paused; }
 .about-glance__team { grid-column: 3; grid-row: 3; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; padding: 18px 20px; background: var(--color-surface-about); }
 .about-glance__team-copy { display: flex; flex-direction: column; min-width: 0; }
 .about-glance__team .eyebrow { margin: 0 0 7px; color: var(--color-blue); font-size: 11px; }

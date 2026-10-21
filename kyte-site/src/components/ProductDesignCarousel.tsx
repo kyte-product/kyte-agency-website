@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { moveCardCarousel } from "@/lib/card-carousel";
 import { ProductDesignCardArt } from "./ProductDesignIllustrations";
 
 const moments = [
@@ -13,9 +14,9 @@ const moments = [
 
 export function ProductDesignCarousel() {
   const track = useRef<HTMLDivElement>(null);
-  const move = (direction: number) => track.current?.scrollBy({ left: direction * (track.current?.clientWidth ?? 0) * .75, behavior: "smooth" });
+  const move = (direction: -1 | 1) => { if (track.current) moveCardCarousel(track.current, ".product-landing__moment", direction); };
   return <section className="product-landing__section product-landing__moments" aria-labelledby="product-moments-title">
-    <div className="product-landing__section-head"><div><h2 id="product-moments-title">Design for the moments that move a product forward.</h2></div><div className="product-landing__carousel-controls"><button type="button" onClick={() => move(-1)} aria-label="Previous product design moments"><ArrowLeft size={20} /></button><button type="button" onClick={() => move(1)} aria-label="Next product design moments"><ArrowRight size={20} /></button></div></div>
-    <div className="product-landing__carousel" ref={track}>{moments.map((moment) => <article className="product-landing__moment" key={moment.title}><ProductDesignCardArt kind={moment.kind} /><div className="product-landing__moment-copy"><h3>{moment.title}</h3><p>{moment.body}</p></div></article>)}</div>
+    <div className="product-landing__section-head"><div><h2 id="product-moments-title">Design for the moments that move a product forward.</h2></div><div className="product-landing__carousel-controls carousel-arrow-controls"><button type="button" onClick={() => move(-1)} aria-label="Previous product design moments"><ArrowLeft size={20} /></button><button type="button" onClick={() => move(1)} aria-label="Next product design moments"><ArrowRight size={20} /></button></div></div>
+    <div className="product-landing__carousel" ref={track}>{moments.map((moment, index) => <article className="product-landing__moment" key={moment.title}><ProductDesignCardArt kind={moment.kind} orbit={index === 0} dashboard={index === 1} complex={index === 2} evolution={index === 3} /><div className="product-landing__moment-copy"><h3>{moment.title}</h3><p>{moment.body}</p></div></article>)}</div>
   </section>;
 }

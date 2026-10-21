@@ -153,3 +153,17 @@ Order matters. Specific rules first, catch-all last.
   ux research agency                       30   14
   saas design agency                       30   16
   framer agency                            30   19
+
+21 October 2026 branding landing reset: /branding-marketing uses the standard shared header and footer with only the Branding & Marketing page title. Both landing experiments and /branding-marketing-v2 have been removed. All five child service routes remain unchanged. New landing content is pending a fresh direction.
+
+21 October 2026 branding hero direction: replace the title-only placeholder at /branding-marketing with oversized WE BUILD and animated image tiles forming BRANDS. Keep shared header/footer and child service routes. Temporary Pinterest visuals are for local review only; V2 remains removed.
+
+21 October 2026 final hero correction: user rejected the image-letter mosaic. /branding-marketing now uses the supplied editorial poster reference: Every brand has a story. We make yours unforgettable. in large type with simple pictures between words. This supersedes the mosaic direction above. Shared shell and child services remain.
+
+21 October 2026 hero image update: use the three images supplied by the user, set the headline in regular font weight, remove the caption below it, and place the Kyte mark beside the final line. Align “UNFORGETTABLE.” to the right like “HAS A STORY.”.
+
+21 October 2026 branding interaction sections: after the story hero, add an orbit playground with Flat, Tilt, Ring and Gallery views around the Kyte mark, followed by a mixed-typography service reveal with interactive stickers and existing service links. Shared CTA/footer follows. No new route or V2.
+
+21 October 2026 final section replacement: the user supplied DitherHelixCarousel and requested only the hero plus this section in the main content. Remove the orbit playground, mixed typography reveal, stickers and their Pinterest images. Use only the six image URLs supplied with the helix demo. Existing hero artwork, shared header and CTA/footer remain. This supersedes the interaction-section note above. The helix has no visible labels, counts, or arrows and rotates with page scroll. Pin its canvas under the fixed navigation for about three viewport lengths, then release to Selected Work.
+
+21 October 2026 branding work section: add the cobalt Selected Work project list after the supplied helix on /branding-marketing. Reuse existing work showcase content and assets; no route-map change. Hover and keyboard focus reveal each image with a short title scramble. Reduced motion omits animation. This updates the section order from the preceding helix note. The heading rule and row dividers span the viewport edge to edge; content remains aligned to the shared section inset. Use compact MetaLab-inspired row sizing and a text case-study action.

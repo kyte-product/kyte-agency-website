@@ -76,13 +76,13 @@ export function ProductDesignFramework() {
       </div>
       <div className="product-framework__visual" data-stage={active} aria-hidden="true">
         <div className="product-framework__visual-grid" />
-        <div className="product-framework__track" style={{ "--track-offset": `${-(active * 328 + 124)}px`, "--track-rise": `${-(active * 110 + 41)}px`, "--mobile-track-offset": `${-(active * 230 + 98)}px`, "--mobile-track-rise": `${-(active * 70 + 36)}px` } as CSSProperties}>
+        <div className="product-framework__track" style={{ "--track-offset": `${-(active * 328 + 136)}px`, "--track-rise": `${-(active * 110 + 41)}px`, "--mobile-track-offset": `${-(active * 230 + 95)}px`, "--mobile-track-rise": `${-(active * 70 + 36)}px` } as CSSProperties}>
           {stages.map((item, index) => {
             const Icon = item.icon;
             return <div className={`product-framework__node${index === active ? " is-active" : ""}`} key={item.title}>
               <span className="product-framework__node-icon"><Icon size={25} strokeWidth={1.5} /></span>
               <span>{item.title}</span>
-              {index < stages.length - 1 && <svg className="product-framework__connector" viewBox="0 0 56 110" fill="none" aria-hidden="true"><path d="M0 0 H14 Q26 0 26 12 V98 Q26 110 38 110 H56" stroke="currentColor" strokeWidth="1.5" /><rect x="18" y="-4" width="8" height="8" rx="1.5" fill="currentColor" /><rect x="26" y="102" width="8" height="8" rx="1.5" fill="currentColor" /></svg>}
+              {index < stages.length - 1 && <svg className="product-framework__connector" viewBox="0 0 56 110" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M0 0 H14 Q26 0 26 12 V98 Q26 110 38 110 H56" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg>}
             </div>;
           })}
         </div>

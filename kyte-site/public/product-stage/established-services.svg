@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 552" role="img" aria-labelledby="title desc">
+  <title id="title">Established services</title>
+  <desc id="desc">A rounded circular platform carries three ascending bars and two raised segments, with a softly colored sphere above.</desc>
+  <defs>
+    <style>
+      .contour { fill: none; stroke: #a8afb1; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+      .seam { fill: none; stroke: #e1e6e7; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <clipPath id="sphere-clip"><circle cx="349" cy="82" r="36.5"/></clipPath>
+    <clipPath id="wedge-clip"><path d="M425 191 C481 201 531 231 552 264 Q555 268 551 269 L374 297 Q369 299 372 295 Z"/></clipPath>
+    <filter id="soft-fields" x="-50%" y="-70%" width="200%" height="240%"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="edge-softness" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <!-- A continuous, opaque neutral band gives the foundation its width. -->
+  <path d="M172 334 C172 273 259 224 368 224 C477 224 564 273 564 334 L564 391 C564 456 477 507 368 507 C259 507 172 456 172 391 Z" fill="#edf0f1"/>
+  <path d="M172 334 C172 273 259 224 368 224 C477 224 564 273 564 334 C564 396 477 446 368 446 C259 446 172 396 172 334 Z" fill="#fff"/>
+
+  <!-- Back-left raised sector. Every face belongs to the same rounded silhouette. -->
+  <path d="M183 205 Q183 202 186 199 C239 151 312 128 401 129 Q404 129 404 133 L404 190 Q404 194 401 197 L387 224 L387 337 Q387 340 384 342 C350 358 307 358 277 341 Q274 340 274 337 L185 335 Q183 334 183 331 Z" fill="#fff"/>
+  <path d="M183 205 Q183 202 186 199 L274 222 L274 337 Q274 340 271 340 C238 337 207 330 185 335 Q183 334 183 331 Z" fill="#edf0f1"/>
+  <path d="M274 223 C305 192 344 181 384 184 Q387 184 387 188 L387 337 Q387 340 384 342 C350 358 307 358 277 341 Q274 340 274 337 Z" fill="#fff"/>
+  <path d="M183 205 Q183 202 186 199 C239 151 312 128 401 129 Q404 129 404 133 L387 185 C344 180 305 192 274 223 Z" fill="#fff"/>
+  <path class="seam" d="M188 206 L271 223 M278 226 C307 196 344 185 382 186 M275 229 L275 333 M386 190 L386 331"/>
+  <path d="M183 205 Q183 202 186 199 C239 151 312 128 401 129 Q404 129 404 133 L404 190 Q404 194 401 197 L387 224 L387 337 Q387 340 384 342 C350 358 307 358 277 341 Q274 340 274 337 L185 335 Q183 334 183 331 Z" class="contour"/>
+  <ellipse cx="349" cy="156" rx="25" ry="14" fill="#e8eced"/>
+
+  <!-- The right segment is a second solid with color contained inside its top face. -->
+  <path d="M425 191 C481 201 531 231 552 264 Q555 268 555 272 L555 339 C555 365 470 395 372 392 Q368 392 368 388 L368 299 Q368 296 372 295 Z" fill="#edf0f1"/>
+  <path d="M425 191 C481 201 531 231 552 264 Q555 268 551 269 L374 297 Q369 299 372 295 Z" fill="#c4f2e8"/>
+  <g clip-path="url(#wedge-clip)">
+    <path d="M423 189 L558 260 L375 303 Z" fill="#9de7df"/>
+    <g filter="url(#soft-fields)">
+      <ellipse cx="467" cy="214" rx="57" ry="32" fill="#74ceef" opacity=".76"/>
+      <ellipse cx="508" cy="258" rx="58" ry="34" fill="#56dfaf" opacity=".65"/>
+      <ellipse cx="400" cy="284" rx="42" ry="31" fill="#a0eacd" opacity=".7"/>
+    </g>
+    <path d="M425 191 C481 201 531 231 552 264 Q555 268 551 269 L374 297 Q369 299 372 295 Z" fill="none" stroke="#fff" stroke-width="11" stroke-linejoin="round" opacity=".74" filter="url(#edge-softness)"/>
+  </g>
+  <path class="seam" d="M374 302 L374 385 M379 296 L548 269"/>
+  <path d="M425 191 C481 201 531 231 552 264 Q555 268 555 272 L555 339 C555 365 470 395 372 392 Q368 392 368 388 L368 299 Q368 296 372 295 Z" class="contour"/>
+
+  <!-- The front of the platform crosses in front of both sectors. -->
+  <path d="M172 334 C175 396 261 446 368 446 C477 446 561 397 564 334 L469 334 Q466 334 465 338 C460 369 422 391 368 392 C282 392 216 371 199 337 Q198 334 195 334 Z" fill="#fff"/>
+  <path class="seam" d="M200 341 C224 372 286 391 368 391 C421 390 458 369 464 341"/>
+
+  <!-- Three ascending bars use one projection, neutral right faces, and rounded outer contours. -->
+  <path d="M197 326 Q197 324 200 322 L222 309 Q225 307 228 309 L243 318 Q246 320 246 323 L246 363 Q246 366 243 368 L219 382 Q216 384 213 382 L197 373 Q195 371 195 368 L195 330 Q195 327 197 326 Z" fill="#fff"/>
+  <path d="M216 337 L246 320 L246 363 Q246 366 243 368 L219 382 Q216 384 216 380 Z" fill="#edf0f1"/>
+  <path class="seam" d="M200 326 L216 336 L242 322 M216 341 L216 376"/>
+  <path d="M197 326 Q197 324 200 322 L222 309 Q225 307 228 309 L243 318 Q246 320 246 323 L246 363 Q246 366 243 368 L219 382 Q216 384 213 382 L197 373 Q195 371 195 368 L195 330 Q195 327 197 326 Z" class="contour"/>
+
+  <path d="M239 332 Q239 330 242 328 L264 315 Q267 313 270 315 L288 325 Q291 327 291 330 L291 391 Q291 394 288 396 L263 411 Q260 413 257 411 L239 401 Q237 399 237 396 L237 336 Q237 333 239 332 Z" fill="#fff"/>
+  <path d="M260 345 L291 327 L291 391 Q291 394 288 396 L263 411 Q260 413 260 409 Z" fill="#edf0f1"/>
+  <path class="seam" d="M242 332 L260 344 L287 329 M260 350 L260 405"/>
+  <path d="M239 332 Q239 330 242 328 L264 315 Q267 313 270 315 L288 325 Q291 327 291 330 L291 391 Q291 394 288 396 L263 411 Q260 413 257 411 L239 401 Q237 399 237 396 L237 336 Q237 333 239 332 Z" class="contour"/>
+
+  <path d="M296 295 Q296 293 299 291 L322 278 Q325 276 328 278 L353 292 Q356 294 356 297 L356 414 Q356 417 353 419 L327 434 Q324 436 321 434 L296 420 Q294 418 294 415 L294 299 Q294 296 296 295 Z" fill="#fff"/>
+  <path d="M324 312 L356 294 L356 414 Q356 417 353 419 L327 434 Q324 436 324 432 Z" fill="#edf0f1"/>
+  <path class="seam" d="M299 295 L324 311 L352 296 M324 317 L324 428"/>
+  <path d="M296 295 Q296 293 299 291 L322 278 Q325 276 328 278 L353 292 Q356 294 356 297 L356 414 Q356 417 353 419 L327 434 Q324 436 321 434 L296 420 Q294 418 294 415 L294 299 Q294 296 296 295 Z" class="contour"/>
+
+  <!-- One uninterrupted foundation contour; the top seam remains light and inset. -->
+  <path class="seam" d="M177 340 C184 400 267 442 368 442 C470 442 552 400 559 340"/>
+  <path d="M172 334 L172 391 C172 456 259 507 368 507 C477 507 564 456 564 391 L564 334" class="contour"/>
+
+  <!-- The floating sphere has local color fields and a restrained white inner edge. -->
+  <g clip-path="url(#sphere-clip)">
+    <circle cx="349" cy="82" r="37" fill="#66dcc9"/>
+    <g filter="url(#soft-fields)">
+      <ellipse cx="322" cy="96" rx="29" ry="35" fill="#46e4a8"/>
+      <ellipse cx="370" cy="60" rx="32" ry="31" fill="#55bbf3"/>
+      <ellipse cx="370" cy="97" rx="28" ry="30" fill="#83a6eb"/>
+      <ellipse cx="336" cy="52" rx="24" ry="17" fill="#d8ffea"/>
+    </g>
+    <circle cx="349" cy="82" r="34" fill="none" stroke="#fff" stroke-opacity=".44" stroke-width="6" filter="url(#edge-softness)"/>
+  </g>
+  <circle cx="349" cy="82" r="36.5" class="contour"/>
+</svg>

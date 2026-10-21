@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, ArrowUpRight, BarChart3, Blocks, Braces, Compass, FileSearch, Gauge, Layers3, LayoutTemplate, Megaphone, Minus, Monitor, MousePointerClick, PanelsTopLeft, PenTool, Plus, Search, ShieldCheck, ShoppingBag, Sparkles } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import "./WebsiteServicePage.css";
+import { moveCardCarousel } from "@/lib/card-carousel";
 
 const websiteTypes = [
   {
@@ -156,13 +157,7 @@ export function WebsiteServicePage() {
 
   function moveAreas(direction: -1 | 1) {
     const track = areaTrack.current;
-    const card = track?.querySelector<HTMLElement>(".website-service__area-card");
-    if (!track || !card) return;
-    const gap = Number.parseFloat(getComputedStyle(track).gap) || 16;
-    const step = card.offsetWidth + gap;
-    const maxScroll = track.scrollWidth - track.clientWidth;
-    const next = Math.max(0, Math.min(maxScroll, track.scrollLeft + direction * step));
-    track.scrollTo({ left: next, behavior: "smooth" });
+    if (track) moveCardCarousel(track, ".website-service__area-card", direction);
   }
 
   const selectedType = websiteTypes[activeType];
@@ -205,7 +200,7 @@ export function WebsiteServicePage() {
     </section>
 
     <section className="website-service__section website-service__jobs" aria-labelledby="website-service-jobs-title">
-      <div className="website-service__split-heading"><h2 id="website-service-jobs-title">What your website needs to do</h2><div className="website-service__arrows" aria-label="Website purpose cards"><button type="button" onClick={() => moveAreas(-1)} disabled={!areaControls.back} aria-label="Previous cards"><ArrowLeft size={18} aria-hidden="true" /></button><button type="button" onClick={() => moveAreas(1)} disabled={!areaControls.forward} aria-label="Next cards"><ArrowRight size={18} aria-hidden="true" /></button></div></div>
+      <div className="website-service__split-heading"><h2 id="website-service-jobs-title">What your website needs to do</h2><div className="website-service__arrows carousel-arrow-controls" aria-label="Website purpose cards"><button type="button" onClick={() => moveAreas(-1)} disabled={!areaControls.back} aria-label="Previous cards"><ArrowLeft size={18} aria-hidden="true" /></button><button type="button" onClick={() => moveAreas(1)} disabled={!areaControls.forward} aria-label="Next cards"><ArrowRight size={18} aria-hidden="true" /></button></div></div>
       <div className="website-service__area-track" ref={areaTrack} tabIndex={0} aria-label="Website purpose cards">
         {websiteJobs.map(({ title, description, icon: Icon }, index) => <article className="website-service__area-card" key={title}><div className={`website-service__area-art website-service__area-art--${index % 3}`}><span><Icon size={54} strokeWidth={1.2} aria-hidden="true" /></span></div><div className="website-service__area-copy"><h3>{title}</h3><p>{description}</p></div></article>)}
       </div>
@@ -218,11 +213,11 @@ export function WebsiteServicePage() {
       <div className="website-service__work-list">
         {work.slice(0, showAllWork ? work.length : 2).map((project) => <Link className="website-service__work-row" key={project.name} href={project.href}><span className="website-service__work-image"><Image src={project.image} alt={project.alt} fill sizes="(max-width: 760px) 90vw, 45vw" unoptimized={project.image.startsWith("https://")} /></span><span className="website-service__work-copy"><span className="website-service__work-name"><Image src={project.logo} alt="" width={44} height={44} /><span><strong>{project.name}.</strong> {project.description}</span></span><span className="website-service__work-meta">{project.category}</span></span></Link>)}
       </div>
-      <button className="website-service__more" type="button" aria-expanded={showAllWork} onClick={() => setShowAllWork((show) => !show)}>{showAllWork ? "Show fewer projects" : "Show more work"} <ArrowUpRight size={17} aria-hidden="true" /></button>
+      <button className="website-service__more kyte-tertiary" type="button" aria-expanded={showAllWork} onClick={() => setShowAllWork((show) => !show)}>{showAllWork ? "Show fewer projects" : "Show more work"} <ArrowRight size={16} aria-hidden="true" /></button>
     </section>
 
     <section className="website-service__section website-service__priorities" aria-labelledby="website-service-priorities-title">
-      <div className="website-service__split-heading"><div><h2 id="website-service-priorities-title">What the work is built around</h2></div><div className="website-service__arrows"><button type="button" onClick={() => setActivePriority((index) => Math.max(0, index - 1))} disabled={activePriority === 0} aria-label="Previous priority"><ArrowLeft size={18} aria-hidden="true" /></button><button type="button" onClick={() => setActivePriority((index) => Math.min(projectPriorities.length - 1, index + 1))} disabled={activePriority === projectPriorities.length - 1} aria-label="Next priority"><ArrowRight size={18} aria-hidden="true" /></button></div></div>
+      <div className="website-service__split-heading"><div><h2 id="website-service-priorities-title">What the work is built around</h2></div><div className="website-service__arrows carousel-arrow-controls"><button type="button" onClick={() => setActivePriority((index) => Math.max(0, index - 1))} disabled={activePriority === 0} aria-label="Previous priority"><ArrowLeft size={18} aria-hidden="true" /></button><button type="button" onClick={() => setActivePriority((index) => Math.min(projectPriorities.length - 1, index + 1))} disabled={activePriority === projectPriorities.length - 1} aria-label="Next priority"><ArrowRight size={18} aria-hidden="true" /></button></div></div>
       <div className="website-service__priority-panel" aria-live="polite"><span>{activePriority + 1} / {projectPriorities.length}</span><h3>{projectPriorities[activePriority].title}</h3><p>{projectPriorities[activePriority].body}</p><div><strong>{projectPriorities[activePriority].label}</strong></div></div>
     </section>
 

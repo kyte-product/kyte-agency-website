@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88" fill="none">
+  <defs>
+    <radialGradient id="pink-column" cx="0" cy="0" r="1" gradientTransform="matrix(45 26 -24 42 31 9)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8A2BE"/>
+      <stop offset=".58" stop-color="#F17CB9"/>
+      <stop offset="1" stop-color="#C47CE1"/>
+    </radialGradient>
+    <radialGradient id="pink-wall" cx="0" cy="0" r="1" gradientTransform="matrix(49 27 -18 33 44 52)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6A0C9"/>
+      <stop offset=".58" stop-color="#EF83C6"/>
+      <stop offset="1" stop-color="#C57DE4"/>
+    </radialGradient>
+    <radialGradient id="column-soft" cx="0" cy="0" r="1" gradientTransform="matrix(31 18 -17 29 39 19)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB6C7" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#FFB6C7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="wall-soft" cx="0" cy="0" r="1" gradientTransform="matrix(34 19 -13 24 55 68)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFA4CB" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#FFA4CB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="column-violet" cx="61" cy="42" r="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B777E7" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#B777E7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="wall-violet" cx="45" cy="83" r="21" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B777E7" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#B777E7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Low circular plinth: one clean outer contour and a soft top edge. -->
+  <path d="M3.7 44.3c0-10.4 18-18.8 40.3-18.8s40.3 8.4 40.3 18.8v18.1c0 13.4-18 24.2-40.3 24.2S3.7 75.8 3.7 62.4V44.3Z" fill="#fff"/>
+
+  <!-- Rear raised pink volume, partly hidden by the white forms. -->
+  <path d="M27.8 15.2c0-7.7 7.1-13.4 16.2-13.4h16.1c6.6 0 10.8 4.3 10.8 10.9v25.1c0 6.1-5.2 10.4-12 13.2L27.8 39.4V15.2Z" fill="url(#pink-column)"/>
+  <path d="M27.8 15.2c0-7.7 7.1-13.4 16.2-13.4h16.1c6.6 0 10.8 4.3 10.8 10.9v25.1c0 6.1-5.2 10.4-12 13.2L27.8 39.4V15.2Z" fill="url(#column-soft)"/>
+  <path d="M27.8 15.2c0-7.7 7.1-13.4 16.2-13.4h16.1c6.6 0 10.8 4.3 10.8 10.9v25.1c0 6.1-5.2 10.4-12 13.2L27.8 39.4V15.2Z" fill="url(#column-violet)"/>
+  <path d="M27.8 15.2c0-7.7 7.1-13.4 16.2-13.4h16.1c6.6 0 10.8 4.3 10.8 10.9v25.1" stroke="#E6E5E6" stroke-width=".65" stroke-linecap="round"/>
+
+  <!-- Left white cylinder with its quiet horizontal seam. -->
+  <path d="M3.8 26.1c0-6.5 8.7-11.5 18.5-11.5h5.5v29H3.8V26.1Z" fill="#fff" stroke="#ADB1B2" stroke-width=".62" stroke-linejoin="round"/>
+  <path d="M3.8 43.6h24" stroke="#E6E8E8" stroke-width=".55"/>
+  <path d="M27.8 14.8v28.8" stroke="#E4E7E7" stroke-width=".6"/>
+
+  <!-- Open, rounded return on the right side of the top surface. -->
+  <path d="M52.8 34.1c13.5 1.1 25.2 7.1 30.1 14.2 2.2 3.2 3.2 6.8 3.2 10.8v5.2c-7.4-6.2-18.8-10.3-31.1-11.7" fill="#fff"/>
+  <path d="M52.8 34.1c13.5 1.1 25.2 7.1 30.1 14.2 2.2 3.2 3.2 6.8 3.2 10.8" stroke="#ADB1B2" stroke-width=".62" stroke-linecap="round"/>
+  <path d="M55 51.2c10.9 1.2 21 5.1 28.1 10" stroke="#E7E9E9" stroke-width=".55" stroke-linecap="round"/>
+
+  <!-- Short central cylinder, sitting in front of the rear volumes. -->
+  <path d="M28.6 44c0-6.2 5.8-10.9 13.2-10.9S55 37.8 55 44v19.1c0 6.5-5.8 11.1-13.2 11.1s-13.2-4.6-13.2-11.1V44Z" fill="#fff" stroke="#ADB1B2" stroke-width=".62" stroke-linejoin="round"/>
+  <path d="M29.1 44c2.3-4.1 7.1-6.2 12.7-6.2s10.3 2.1 12.7 6.2" stroke="#E7E9E9" stroke-width=".55" stroke-linecap="round"/>
+
+  <!-- Foreground plinth segments. The neutral segment masks the pink volume at left. -->
+  <path d="M3.9 51c9.4 6.4 24.1 12.1 39.9 16.5v19C22.3 83.9 5.7 75 3.9 63.5V51Z" fill="#fff"/>
+  <path d="M43.8 58.3c14.6-2.2 26.7-7.5 35.5-13.8 2.8-2 5.7-.1 5.7 3.5v14.2c0 12.7-17.1 21.8-41.2 23.5V58.3Z" fill="url(#pink-wall)"/>
+  <path d="M43.8 58.3c14.6-2.2 26.7-7.5 35.5-13.8 2.8-2 5.7-.1 5.7 3.5v14.2c0 12.7-17.1 21.8-41.2 23.5V58.3Z" fill="url(#wall-soft)"/>
+  <path d="M43.8 58.3c14.6-2.2 26.7-7.5 35.5-13.8 2.8-2 5.7-.1 5.7 3.5v14.2c0 12.7-17.1 21.8-41.2 23.5V58.3Z" fill="url(#wall-violet)"/>
+  <path d="M4.7 52.5c9.7 6.1 23.7 11.3 37.8 15.1" stroke="#E4E7E7" stroke-width=".6" stroke-linecap="round"/>
+  <path d="M43.8 58.3v27.4" stroke="#E4E7E7" stroke-width=".6"/>
+  <path d="M3.9 51c9.4 6.4 24.1 12.1 39.9 16.5" stroke="#E7E9E9" stroke-width=".55" stroke-linecap="round"/>
+
+  <!-- Restore only the perimeter; no ellipse is drawn across the interior. -->
+  <path d="M3.7 44.3v18.1c0 13.4 18 24.2 40.3 24.2s40.3-10.8 40.3-24.2V44.3" stroke="#AEB2B3" stroke-width=".52" stroke-linecap="round"/>
+</svg>

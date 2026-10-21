@@ -1,27 +1,24 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Compass, Layers3, MoveUpRight, PanelsTopLeft, ScanSearch, Sparkles, Workflow } from "lucide-react";
+import { ArrowRight, Compass, Layers3, PanelsTopLeft, ScanSearch, Sparkles, Workflow } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { TextRevealMotion } from "@/components/TextRevealMotion";
-import { ProductDesignCardArt, ProductDesignHeroArt } from "@/components/ProductDesignIllustrations";
+import { ProductDesignCardArt, ProductDesignHeroArt, ProductStageIllustration, type ProductStageTitle } from "@/components/ProductDesignIllustrations";
 import { ProductDesignCarousel } from "@/components/ProductDesignCarousel";
 import { ProductDesignFramework } from "@/components/ProductDesignFramework";
 import { ServiceTestimonials } from "@/components/ServiceTestimonials";
 import { HomeFaq } from "@/components/HomeFaq";
-import { clientLogoAsset } from "@/data/clientLogoAssets";
+import { ClientBrandTicker } from "@/components/ClientBrandTicker";
+import { WorkShowcase } from "@/components/WorkShowcase";
+import { industryPages } from "@/data/industryPages";
+import "@/components/KyteApproach.css";
 import "./product-design.css";
 
 export const metadata: Metadata = {
   title: "UI/UX Design & Development | Kyte Agency",
   description: "Research, product design, and development support for useful digital products, websites, and customer journeys.",
 };
-
-const clients = [
-  ["Fincart", "fincart"], ["Revenue Grid", "revenue-grid"], ["Comet", "comet"],
-  ["Emergent", "emergent"], ["Banza", "banza"], ["Contractzy", "contractzy"],
-] as const;
 
 const services = [
   { title: "UX research & design audits", body: "Find the friction and decide what deserves attention first.", href: "/ui-ux-design-development/ux-research-design-audit" },
@@ -39,11 +36,12 @@ const questions = [
   { question: "Where do we start if the brief is still forming?", answer: "Start with the product, audience, and the decision you need to make next. A focused discovery or audit can help turn that into a practical scope." },
 ];
 
-const recentWork = [
-  { name: "Fincart", type: "Financial product experience", description: "A connected experience for planning, investing, and understanding progress.", image: "/fincart-branding/launch-event-cover.jpg", href: "/work/fincart-website-branding" },
-  { name: "Collectbee", type: "Digital product design", description: "A clearer way to bring complex information and everyday tasks together.", image: "/kyte-work/collectbee.png", href: "/work/collectbee" },
-  { name: "Revenue Grid", type: "Platform experience", description: "Interface work for a product with many moving parts and decisions.", image: "/kyte-work/revenue-grid.png", href: "/work" },
-];
+const featuredIndustries = [
+  { slug: "fintech", description: "Financial products and important money decisions." },
+  { slug: "saas-startups", description: "Software products, tools, and growing workflows." },
+  { slug: "d2c-ecommerce", description: "Shopping journeys from discovery to purchase." },
+  { slug: "hospitality-food-beverage", description: "Digital journeys around visits, bookings, and orders." },
+] as const;
 
 const process = [
   { icon: Compass, title: "Context", body: "Understand the product, audience, goals, and constraints that shape the work." },
@@ -57,37 +55,33 @@ const process = [
 export default function ProductDesignLandingPage() {
   return <><SiteHeader /><main className="product-landing"><TextRevealMotion />
     <section className="product-landing__hero" aria-labelledby="product-design-title">
-      <div className="product-landing__hero-copy"><h1 id="product-design-title">Digital products built around <span className="product-landing__highlight">human experience<span className="product-landing__highlight-spark" aria-hidden="true">✳</span></span></h1><p>We connect research, design, and development to make useful websites and products that people can understand and enjoy using.</p><Link className="kyte-button" href="/contact">Talk about your product <ArrowRight size={18} aria-hidden="true" /></Link></div>
+      <div className="product-landing__hero-copy"><h1 id="product-design-title">Digital products built around <span className="product-landing__highlight">human experience.</span></h1><p>We connect research, design, and development to make useful websites and products that people can understand and enjoy using.</p><Link className="kyte-button" href="/contact">Talk about your product <ArrowRight size={18} aria-hidden="true" /></Link></div>
       <ProductDesignHeroArt />
     </section>
 
-    <section className="product-landing__clients" aria-label="Selected product and digital experience clients"><p>Selected product and digital experience clients</p><ul>{clients.map(([name, slug]) => { const logo = clientLogoAsset(slug); return <li key={slug}><Image src={logo.src} alt={name} width={logo.width} height={logo.height} /></li>; })}</ul></section>
+    <div className="product-landing__client-rail"><ClientBrandTicker title={null} /></div>
 
     <ProductDesignCarousel />
 
-    <section className="product-landing__proof product-landing__section" aria-labelledby="product-proof-title"><h2 id="product-proof-title" className="product-landing__overline">Our background</h2><div className="product-landing__proof-grid"><div><strong>100+</strong><span>projects across Kyte</span></div><div className="product-landing__proof-icon"><span aria-hidden="true"><Compass /><Layers3 /><Sparkles /></span><small>Research, design, and development</small></div><div><strong>50+</strong><span>clients across Kyte</span></div><div className="product-landing__proof-icon"><span aria-hidden="true"><ScanSearch /><PanelsTopLeft /><Workflow /></span><small>Product, web, and brand experience</small></div></div></section>
+    <WorkShowcase fixedView="list" />
 
-    <section className="product-landing__work product-landing__section" aria-labelledby="product-work-title"><div className="product-landing__work-head"><h2 id="product-work-title">Recent work</h2><Link href="/work">Explore all work <ArrowRight size={18} aria-hidden="true" /></Link></div><div className="product-landing__work-list">{recentWork.map((work) => <article className="product-landing__work-row" key={work.name}><div className="product-landing__work-copy"><div><span className="product-landing__work-mark" aria-hidden="true">{work.name.slice(0,1)}</span><h3>{work.name}</h3><p>{work.description}</p></div><div className="product-landing__work-bottom"><small>{work.type}</small><Link href={work.href} aria-label={`Explore ${work.name} work`}>View work <MoveUpRight size={18} aria-hidden="true" /></Link></div></div><Link className="product-landing__work-image" href={work.href} aria-label={`Explore ${work.name} work`}><Image src={work.image} alt={`${work.name} project visual`} fill sizes="(max-width: 700px) 100vw, 50vw" /></Link></article>)}</div></section>
-    <ServiceTestimonials />
 
-    <section className="product-landing__cta-wrap product-landing__section"><div className="product-landing__cta" aria-labelledby="product-cta-title"><div className="product-landing__cta-panel"><h2 id="product-cta-title">Let&apos;s make the next product decision clearer.</h2><p>Tell us what you are building, improving, or trying to understand.</p><Link className="kyte-button" href="/contact">Start a conversation <ArrowRight size={18} aria-hidden="true" /></Link></div><span className="product-landing__cta-orb" aria-hidden="true" /></div></section>
+    <section className="product-landing__partners product-landing__section" aria-labelledby="product-partners-title"><div className="product-landing__section-head"><h2 id="product-partners-title">For products at different stages.</h2><p>We adapt the work to the team, the product, and the question that needs an answer.</p></div><div className="product-landing__partner-grid">{["New products", "Growing platforms", "Established services", "Complex internal tools", "Commerce journeys", "Web platforms", "Internal systems", "Connected brands"].map((item) => <div key={item}><ProductStageIllustration title={item as ProductStageTitle} /><h3>{item}</h3></div>)}</div></section>
 
-    <section className="product-landing__framework product-landing__section" aria-labelledby="product-framework-title"><h2 id="product-framework-title">A framework that moves from evidence to experience.</h2><ProductDesignFramework /></section>
+    <section className="product-landing__services product-landing__section" aria-labelledby="product-services-title"><h2 id="product-services-title">Explore Our UI/UX Services</h2><div className="product-landing__service-list">{services.map((service, index) => <article key={service.href}><ProductDesignCardArt kind={( ["hub", "relay", "exploded", "plot", "relay"] as const)[index]} research={index === 0} website={index === 1} mobile={index === 2} saas={index === 3} commerce={index === 4} /><div><strong>{service.title}</strong></div><small>{service.body}</small><Link className="product-landing__service-link kyte-tertiary" href={service.href}>View Service <ArrowRight size={17} aria-hidden="true" /></Link></article>)}</div></section>
+
+    <section className="product-landing__framework product-landing__section" aria-labelledby="product-framework-title"><h2 id="product-framework-title">A framework that moves from evidence to experience.</h2><div className="product-landing__framework-card"><ProductDesignFramework /></div></section>
 
     <section className="product-landing__process product-landing__section" aria-labelledby="product-process-title"><h2 id="product-process-title">How we work together.</h2><div className="product-landing__process-grid">{process.map(({ icon: Icon, title, body }) => <article key={title}><span className="product-landing__process-icon"><Icon size={27} strokeWidth={1.4} aria-hidden="true" /></span><h3>{title}</h3><p>{body}</p></article>)}</div></section>
 
-    <section className="product-landing__partners product-landing__section" aria-labelledby="product-partners-title"><div className="product-landing__section-head"><h2 id="product-partners-title">For products at different stages.</h2><p>We adapt the work to the team, the product, and the question that needs an answer.</p></div><div className="product-landing__partner-grid">{["New products", "Growing platforms", "Established services", "Complex internal tools", "Commerce journeys", "Web platforms", "Internal systems", "Connected brands"].map((item, index) => <div key={item}><span className={`product-landing__partner-symbol product-landing__partner-symbol--${index % 4}`} aria-hidden="true"><i /></span><h3>{item}</h3></div>)}</div></section>
 
-    <section className="product-landing__services product-landing__section" aria-labelledby="product-services-title"><h2 id="product-services-title">Explore our UI/UX services.</h2><div className="product-landing__service-list">{services.slice(0,3).map((service, index) => <Link href={service.href} key={service.href}><ProductDesignCardArt kind={(["hub", "relay", "exploded"] as const)[index]} /><div><strong>{service.title}</strong><MoveUpRight size={21} aria-hidden="true" /></div><small>{service.body}</small></Link>)}</div><div className="product-landing__service-more">{services.slice(3).map((service) => <Link href={service.href} key={service.href}>{service.title} <ArrowRight size={18} aria-hidden="true" /></Link>)}</div></section>
+    <section className="product-landing__outcomes product-landing__section" aria-labelledby="product-outcomes-title"><h2 id="product-outcomes-title">What We Design</h2><div className="product-landing__outcome-grid">{["Onboarding and activation", "Navigation and information architecture", "Dashboards and complex workflows", "Websites and content journeys", "Design systems and interface patterns", "Responsive product experiences"].map((item, index) => <article key={item}><ProductDesignCardArt kind={(["exploded", "relay", "plot", "hub"] as const)[index % 4]} onboarding={index === 0} navigation={index === 1} workflowHub={index === 2} contentJourney={index === 3} designPatterns={index === 4} responsiveExperience={index === 5} /><h3>{item}</h3></article>)}</div></section>
 
-    <section className="product-landing__explore product-landing__section" aria-labelledby="product-explore-title"><h2 id="product-explore-title">Thinking through your next move?</h2><div className="product-landing__explore-grid"><Link href="/work"><div className="product-landing__explore-visual product-landing__explore-visual--work"><PanelsTopLeft size={88} strokeWidth={.8} /></div><span>Projects</span><strong>See the work <ArrowRight size={18} /></strong></Link><Link href="/insights/design-news"><div className="product-landing__explore-visual product-landing__explore-visual--news"><Layers3 size={88} strokeWidth={.8} /></div><span>Design news</span><strong>Read our thinking <ArrowRight size={18} /></strong></Link><Link href="/about"><div className="product-landing__explore-visual product-landing__explore-visual--about"><Compass size={88} strokeWidth={.8} /></div><span>About Kyte</span><strong>Meet the team <ArrowRight size={18} /></strong></Link></div></section>
+    <section className="product-landing__industries product-landing__section" aria-labelledby="product-industries-title"><div className="product-landing__section-head"><h2 id="product-industries-title">Industries We Work With</h2><p>Product experiences shaped around the decisions and journeys in each field.</p></div><div className="product-landing__industry-grid">{featuredIndustries.map(({ slug, description }) => { const industry = industryPages[slug]; return <Link href={`/industries/${slug}`} key={slug}><div className="product-landing__industry-image" aria-hidden="true" /><h3>{industry.name}</h3><p>{description}</p><span className="kyte-tertiary">Explore Industry <ArrowRight size={17} aria-hidden="true" /></span></Link>; })}</div></section>
 
-    <section className="product-landing__outcomes product-landing__section" aria-labelledby="product-outcomes-title"><h2 id="product-outcomes-title">What we design.</h2><div className="product-landing__outcome-grid">{["Onboarding and activation", "Navigation and information architecture", "Dashboards and complex workflows", "Websites and content journeys", "Design systems and interface patterns", "Responsive product experiences"].map((item, index) => <article key={item}><ProductDesignCardArt kind={(["exploded", "relay", "plot", "hub"] as const)[index % 4]} /><h3>{item}</h3><ArrowRight size={20} aria-hidden="true" /></article>)}</div></section>
+    <ServiceTestimonials />
 
-    <section className="product-landing__benefits-wrap product-landing__section"><div className="product-landing__benefits" aria-labelledby="product-benefits-title"><h2 id="product-benefits-title">Why teams work with Kyte.</h2><div>{[{ title: "Clarity before polish", body: "We make the product problem and the audience's needs easier to see before refining the interface.", icon: ScanSearch }, { title: "Connected thinking", body: "Strategy, content, visual design, and usability inform one another.", icon: Layers3 }, { title: "Built for the handoff", body: "We make decisions and reusable patterns easier for the people building the product to carry forward.", icon: Workflow }, { title: "A scope that fits", body: "A focused engagement can answer one question or connect several parts of an experience.", icon: Compass }, { title: "Shared decisions", body: "Regular reviews keep the team close to the work as the product takes shape.", icon: PanelsTopLeft }, { title: "Useful detail", body: "The little moments receive the same attention as the big screens.", icon: Sparkles }].map(({ title, body, icon: Icon }) => <article key={title}><span><Icon size={24} strokeWidth={1.5} aria-hidden="true" /></span><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
 
-    <section className="product-landing__cta-wrap product-landing__section"><div className="product-landing__cta product-landing__cta--last"><div className="product-landing__cta-panel"><h2>What could a clearer experience unlock?</h2><p>Start with the challenge in front of your team and we can shape the right next step.</p><Link className="kyte-button" href="/contact">Talk to Kyte <ArrowRight size={18} aria-hidden="true" /></Link></div><span className="product-landing__cta-orb" aria-hidden="true" /></div></section>
-
-    <HomeFaq heading="Answers to common UI/UX questions." items={questions} allowMultiple />
+    <HomeFaq heading="Answers to Common UI/UX Questions" items={questions} allowMultiple description={null} />
   </main><SiteFooter /></>;
 }

@@ -71,7 +71,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
             <span className="design-news__slide-top"><span>Kyte Design News</span><span>{String(index + 1).padStart(2, "0")} / {String(featured.length).padStart(2, "0")}</span></span>
             <span className="design-news__slide-copy"><span className="design-news__slide-meta">{articleMeta(article)}</span><strong>{article.title}</strong><span className="design-news__slide-cta">Read story <ArrowUpRight size={17} aria-hidden="true" /></span></span>
           </Link>)}
-          {featured.length > 1 && <div className="design-news__arrows">
+          {featured.length > 1 && <div className="design-news__arrows carousel-arrow-controls">
             <button type="button" aria-label="Previous featured story" onClick={() => changeSlide(-1)}><ArrowLeft size={18} /></button>
             <button type="button" aria-label="Next featured story" onClick={() => changeSlide(1)}><ArrowRight size={18} /></button>
           </div>}

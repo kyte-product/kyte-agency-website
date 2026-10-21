@@ -43,6 +43,6 @@ export function ServiceDepth() {
 function TopicCard({ topic }: { topic: (typeof topics)[number] }) {
   return <Link className={`service-depth-card service-depth-card--${topic.tone}`} href={topic.href}>
     <span className="service-depth-card__content"><span className="service-depth-card__category">{topic.category}</span><span className="service-depth-card__title">{topic.title}</span></span>
-    <span className="service-depth-card__more">Explore service <ArrowRight aria-hidden="true" size={16} /></span>
+    <span className="service-depth-card__more kyte-tertiary">Explore service <ArrowRight aria-hidden="true" size={16} /></span>
   </Link>;
 }

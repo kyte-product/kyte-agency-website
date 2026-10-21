@@ -1,0 +1,784 @@
+{
+  "version": 1,
+  "date": "2026-10-20",
+  "source": "https://fintech.goodface.agency/services/fintech-ux-ui-design-agency",
+  "sampling": "Median RGB of a 3 by 3 interior patch in the original AVIF, not a screenshot. These are visible baked colors, not original shader inputs.",
+  "palettes": {
+    "greenBlue": {
+      "label": "Green / cyan / blue prism",
+      "source": "https://cdn.prod.website-files.com/6a3a8ae7bfc35ce0187d9cfc/6aab98be97182f0dc6fbf4c9_ui%20-%206.avif",
+      "sourceSize": [
+        824,
+        596
+      ],
+      "colors": {
+        "base": "#3dbfcc",
+        "mint": "#79edc9",
+        "blueLight": "#4babf7",
+        "green": "#44d091",
+        "greenDeep": "#39c187",
+        "blue": "#2a94e2",
+        "teal": "#36b7bb"
+      },
+      "samples": {
+        "base": {
+          "xy": [
+            415,
+            250
+          ],
+          "rgb": [
+            61,
+            191,
+            204
+          ]
+        },
+        "mint": {
+          "xy": [
+            355,
+            140
+          ],
+          "rgb": [
+            121,
+            237,
+            201
+          ]
+        },
+        "blueLight": {
+          "xy": [
+            451,
+            139
+          ],
+          "rgb": [
+            75,
+            171,
+            247
+          ]
+        },
+        "green": {
+          "xy": [
+            340,
+            270
+          ],
+          "rgb": [
+            68,
+            208,
+            145
+          ]
+        },
+        "greenDeep": {
+          "xy": [
+            370,
+            369
+          ],
+          "rgb": [
+            57,
+            193,
+            135
+          ]
+        },
+        "blue": {
+          "xy": [
+            480,
+            220
+          ],
+          "rgb": [
+            42,
+            148,
+            226
+          ]
+        },
+        "teal": {
+          "xy": [
+            448,
+            357
+          ],
+          "rgb": [
+            54,
+            183,
+            187
+          ]
+        }
+      },
+      "field": {
+        "terms": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "coefficients": [
+          [
+            173.78268825373686,
+            248.68797305778858,
+            204.73751381169578
+          ],
+          [
+            -347.6616858446469,
+            -65.34290621463737,
+            -85.30046504075413
+          ],
+          [
+            457.5983758935139,
+            -41.04884878542568,
+            -102.14186098559526
+          ],
+          [
+            -178.94193118976517,
+            47.40254507417273,
+            179.41149196320671
+          ],
+          [
+            -46.47675983228607,
+            102.47126992332721,
+            2.126173822481006
+          ],
+          [
+            -18.37444768919769,
+            -122.75824747901588,
+            -132.68356619921417
+          ],
+          [
+            -48.897956346564506,
+            148.2193761478789,
+            -186.35951021732438
+          ],
+          [
+            -171.75864216508774,
+            -469.35223888292484,
+            365.79242583682117
+          ],
+          [
+            152.5667664342594,
+            144.92820866409457,
+            318.2868495302369
+          ],
+          [
+            149.35863427942314,
+            277.9917673136753,
+            -360.0277195608521
+          ]
+        ]
+      }
+    },
+    "amberGreen": {
+      "label": "Amber / green decision cube",
+      "source": "https://cdn.prod.website-files.com/6a3a8ae7bfc35ce0187d9cfc/6aab98be55285918a1051d4a_ui%20-%205.avif",
+      "sourceSize": [
+        824,
+        596
+      ],
+      "colors": {
+        "base": "#f0a91a",
+        "amber": "#fda30c",
+        "gold": "#f4b829",
+        "lime": "#cbc53b",
+        "green": "#0db340",
+        "olive": "#91ae36",
+        "light": "#d0cb30"
+      },
+      "samples": {
+        "base": {
+          "xy": [
+            405,
+            235
+          ],
+          "rgb": [
+            240,
+            169,
+            26
+          ]
+        },
+        "amber": {
+          "xy": [
+            346,
+            240
+          ],
+          "rgb": [
+            253,
+            163,
+            12
+          ]
+        },
+        "gold": {
+          "xy": [
+            365,
+            179
+          ],
+          "rgb": [
+            244,
+            184,
+            41
+          ]
+        },
+        "lime": {
+          "xy": [
+            414,
+            133
+          ],
+          "rgb": [
+            203,
+            197,
+            59
+          ]
+        },
+        "green": {
+          "xy": [
+            492,
+            235
+          ],
+          "rgb": [
+            13,
+            179,
+            64
+          ]
+        },
+        "olive": {
+          "xy": [
+            459,
+            192
+          ],
+          "rgb": [
+            145,
+            174,
+            54
+          ]
+        },
+        "light": {
+          "xy": [
+            428,
+            300
+          ],
+          "rgb": [
+            208,
+            203,
+            48
+          ]
+        }
+      }
+    },
+    "amberLime": {
+      "label": "Orange / lime floating card",
+      "source": "https://cdn.prod.website-files.com/6a3a8ae7bfc35ce0187d9cfc/6aab98c083de71ccef643ec0_ui%20-%2013.avif",
+      "sourceSize": [
+        704,
+        480
+      ],
+      "colors": {
+        "base": "#f7a70f",
+        "orange": "#ff8f02",
+        "amber": "#feaa15",
+        "lime": "#accc1e",
+        "green": "#65b446",
+        "gold": "#bbb733",
+        "light": "#dcc640"
+      },
+      "samples": {
+        "base": {
+          "xy": [
+            332,
+            216
+          ],
+          "rgb": [
+            247,
+            167,
+            15
+          ]
+        },
+        "orange": {
+          "xy": [
+            323,
+            172
+          ],
+          "rgb": [
+            255,
+            143,
+            2
+          ]
+        },
+        "amber": {
+          "xy": [
+            390,
+            215
+          ],
+          "rgb": [
+            254,
+            170,
+            21
+          ]
+        },
+        "lime": {
+          "xy": [
+            219,
+            211
+          ],
+          "rgb": [
+            172,
+            204,
+            30
+          ]
+        },
+        "green": {
+          "xy": [
+            284,
+            262
+          ],
+          "rgb": [
+            101,
+            180,
+            70
+          ]
+        },
+        "gold": {
+          "xy": [
+            367,
+            270
+          ],
+          "rgb": [
+            187,
+            183,
+            51
+          ]
+        },
+        "light": {
+          "xy": [
+            420,
+            250
+          ],
+          "rgb": [
+            220,
+            198,
+            64
+          ]
+        }
+      }
+    },
+    "pinkViolet": {
+      "label": "Pink / violet interface panel",
+      "source": "https://cdn.prod.website-files.com/6a3a8ae7bfc35ce0187d9cfc/6aab98bfe5d8746c2e91a768_ui%20-%2015.avif",
+      "sourceSize": [
+        704,
+        480
+      ],
+      "colors": {
+        "base": "#fb8bbe",
+        "coral": "#fd91af",
+        "pink": "#fd73b7",
+        "violet": "#c396fd",
+        "rose": "#fc92b8",
+        "light": "#fcaedd",
+        "deep": "#c596ff"
+      },
+      "samples": {
+        "base": {
+          "xy": [
+            245,
+            260
+          ],
+          "rgb": [
+            251,
+            139,
+            190
+          ]
+        },
+        "coral": {
+          "xy": [
+            281,
+            180
+          ],
+          "rgb": [
+            253,
+            145,
+            175
+          ]
+        },
+        "pink": {
+          "xy": [
+            192,
+            243
+          ],
+          "rgb": [
+            253,
+            115,
+            183
+          ]
+        },
+        "violet": {
+          "xy": [
+            299,
+            294
+          ],
+          "rgb": [
+            195,
+            150,
+            253
+          ]
+        },
+        "rose": {
+          "xy": [
+            272,
+            221
+          ],
+          "rgb": [
+            252,
+            146,
+            184
+          ]
+        },
+        "light": {
+          "xy": [
+            189,
+            346
+          ],
+          "rgb": [
+            252,
+            174,
+            221
+          ]
+        },
+        "deep": {
+          "xy": [
+            279,
+            315
+          ],
+          "rgb": [
+            197,
+            150,
+            255
+          ]
+        }
+      }
+    },
+    "coralViolet": {
+      "label": "Coral / pink / violet sphere",
+      "source": "https://cdn.prod.website-files.com/6a3a8ae7bfc35ce0187d9cfc/6aab98be61e5bde4091a7a9e_ui%20-%207.avif",
+      "sourceSize": [
+        824,
+        596
+      ],
+      "colors": {
+        "base": "#fd88ae",
+        "coral": "#fc8297",
+        "pink": "#fb6fc4",
+        "violet": "#c590fd",
+        "rose": "#fd92ae",
+        "light": "#fba6df",
+        "deep": "#ec91f9"
+      },
+      "samples": {
+        "base": {
+          "xy": [
+            350,
+            277
+          ],
+          "rgb": [
+            253,
+            136,
+            174
+          ]
+        },
+        "coral": {
+          "xy": [
+            319,
+            226
+          ],
+          "rgb": [
+            252,
+            130,
+            151
+          ]
+        },
+        "pink": {
+          "xy": [
+            397,
+            278
+          ],
+          "rgb": [
+            251,
+            111,
+            196
+          ]
+        },
+        "violet": {
+          "xy": [
+            316,
+            326
+          ],
+          "rgb": [
+            197,
+            144,
+            253
+          ]
+        },
+        "rose": {
+          "xy": [
+            348,
+            238
+          ],
+          "rgb": [
+            253,
+            146,
+            174
+          ]
+        },
+        "light": {
+          "xy": [
+            380,
+            324
+          ],
+          "rgb": [
+            251,
+            166,
+            223
+          ]
+        },
+        "deep": {
+          "xy": [
+            313,
+            309
+          ],
+          "rgb": [
+            236,
+            145,
+            249
+          ]
+        }
+      }
+    },
+    "amberViolet": {
+      "label": "Amber / violet rounded pyramid",
+      "source": "https://cdn.prod.website-files.com/6a3a8ae7bfc35ce0187d9cfc/6aab98bf50959a21b838ece6_ui%20-%2016.avif",
+      "sourceSize": [
+        704,
+        480
+      ],
+      "colors": {
+        "base": "#f1994c",
+        "light": "#ebaaa5",
+        "orange": "#f3924f",
+        "violet": "#d5aaed",
+        "amber": "#f2bb63",
+        "coral": "#f3b173",
+        "rose": "#eeb99f"
+      },
+      "samples": {
+        "base": {
+          "xy": [
+            553,
+            116
+          ],
+          "rgb": [
+            241,
+            153,
+            76
+          ]
+        },
+        "light": {
+          "xy": [
+            550,
+            62
+          ],
+          "rgb": [
+            235,
+            170,
+            165
+          ]
+        },
+        "orange": {
+          "xy": [
+            579,
+            119
+          ],
+          "rgb": [
+            243,
+            146,
+            79
+          ]
+        },
+        "violet": {
+          "xy": [
+            503,
+            128
+          ],
+          "rgb": [
+            213,
+            170,
+            237
+          ]
+        },
+        "amber": {
+          "xy": [
+            551,
+            155
+          ],
+          "rgb": [
+            242,
+            187,
+            99
+          ]
+        },
+        "coral": {
+          "xy": [
+            590,
+            137
+          ],
+          "rgb": [
+            243,
+            177,
+            115
+          ]
+        },
+        "rose": {
+          "xy": [
+            525,
+            96
+          ],
+          "rgb": [
+            238,
+            185,
+            159
+          ]
+        }
+      }
+    },
+    "mintCyan": {
+      "label": "Mint / cyan chart ring",
+      "source": "https://cdn.prod.website-files.com/6a3a8ae7bfc35ce0187d9cfc/6aab98bfe5d8746c2e91a768_ui%20-%2015.avif",
+      "sourceSize": [
+        704,
+        480
+      ],
+      "colors": {
+        "base": "#44ce88",
+        "mint": "#6be4af",
+        "blue": "#49c3d0",
+        "teal": "#3cbfb0",
+        "green": "#7cdbaa",
+        "cyan": "#75ccdb",
+        "light": "#57db9f"
+      },
+      "samples": {
+        "base": {
+          "xy": [
+            440,
+            159
+          ],
+          "rgb": [
+            68,
+            206,
+            136
+          ]
+        },
+        "mint": {
+          "xy": [
+            424,
+            133
+          ],
+          "rgb": [
+            107,
+            228,
+            175
+          ]
+        },
+        "blue": {
+          "xy": [
+            387,
+            181
+          ],
+          "rgb": [
+            73,
+            195,
+            208
+          ]
+        },
+        "teal": {
+          "xy": [
+            402,
+            219
+          ],
+          "rgb": [
+            60,
+            191,
+            176
+          ]
+        },
+        "green": {
+          "xy": [
+            439,
+            190
+          ],
+          "rgb": [
+            124,
+            219,
+            170
+          ]
+        },
+        "cyan": {
+          "xy": [
+            385,
+            200
+          ],
+          "rgb": [
+            117,
+            204,
+            219
+          ]
+        },
+        "light": {
+          "xy": [
+            419,
+            142
+          ],
+          "rgb": [
+            87,
+            219,
+            159
+          ]
+        }
+      }
+    }
+  },
+  "uiSignals": {
+    "description": "Existing browser-control semantics, separate from decorative material palettes.",
+    "colors": {
+      "error": "#fc8277",
+      "warning": "#f2c85b",
+      "success": "#7cd37b"
+    }
+  }
+}

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Star } from "lucide-react";
 import { clientTestimonials } from "./HomeTestimonials";
+import { nearestCardCarouselIndex, scrollCardCarouselTo } from "@/lib/card-carousel";
 import "./ServiceTestimonials.css";
 
 // Stock placeholders from Unsplash, to be replaced with approved client portraits.
@@ -27,25 +28,21 @@ export function ServiceTestimonials() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   function goTo(index: number) {
-    const next = Math.max(0, Math.min(clientTestimonials.length - 1, index));
     const track = trackRef.current;
-    const card = track?.querySelectorAll<HTMLElement>(".service-testimonial")[next];
-    if (track && card) track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: "smooth" });
-    setActiveIndex(next);
+    if (!track) return;
+    setActiveIndex(scrollCardCarouselTo(track, ".service-testimonial", index));
   }
   return <section className="service-testimonials" aria-labelledby="service-testimonials-title">
     <div className="service-testimonials__inner">
       <div className="service-testimonials__heading"><h2 id="service-testimonials-title">What our clients say</h2></div>
-      <div className="service-testimonials__controls" role="group" aria-label="Testimonial controls">
+      <div className="service-testimonials__controls carousel-arrow-controls" role="group" aria-label="Testimonial controls">
         <button type="button" aria-label="Previous testimonial" onClick={() => goTo(activeIndex - 1)} disabled={activeIndex === 0}><ArrowLeft size={20} aria-hidden="true" /></button>
         <button type="button" aria-label="Next testimonial" onClick={() => goTo(activeIndex + 1)} disabled={activeIndex === clientTestimonials.length - 1}><ArrowRight size={20} aria-hidden="true" /></button>
       </div>
       <div className="service-testimonials__track" ref={trackRef} aria-label="Client testimonials" onScroll={() => {
         const track = trackRef.current;
         if (!track) return;
-        const cards = [...track.querySelectorAll<HTMLElement>(".service-testimonial")];
-        const nearest = cards.reduce((best, card, index) => Math.abs(card.offsetLeft - track.scrollLeft) < Math.abs(cards[best].offsetLeft - track.scrollLeft) ? index : best, 0);
-        setActiveIndex(nearest);
+        setActiveIndex(nearestCardCarouselIndex(track, ".service-testimonial"));
       }}>
         {clientTestimonials.map((testimonial, index) => {
           return <article className="service-testimonial" key={testimonial.name}>

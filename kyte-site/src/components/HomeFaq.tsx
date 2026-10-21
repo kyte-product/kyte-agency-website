@@ -28,7 +28,7 @@ const questions = [
   },
 ] as const;
 
-export function HomeFaq({ items = questions, heading = "A few things you may be wondering.", allowMultiple = false }: { items?: readonly { question: string; answer: string }[]; heading?: string; allowMultiple?: boolean }) {
+export function HomeFaq({ items = questions, heading = "A few things you may be wondering.", allowMultiple = false, description = "If your question is not here, tell us what you are working through." }: { items?: readonly { question: string; answer: string }[]; heading?: string; allowMultiple?: boolean; description?: string | null }) {
   const [openIndexes, setOpenIndexes] = useState<number[]>([0]);
   const id = useId();
   const toggle = (index: number) => setOpenIndexes((current) => current.includes(index) ? current.filter((item) => item !== index) : allowMultiple ? [...current, index] : [index]);
@@ -38,7 +38,7 @@ export function HomeFaq({ items = questions, heading = "A few things you may be 
       <div className="home-faq__intro">
 
         <h2 id={`${id}-title`} data-reveal-words data-reveal-delay="70"><RevealWords text={heading} /></h2>
-        <p data-reveal-words data-reveal-delay="120"><RevealWords text="If your question is not here, tell us what you are working through." /></p>
+        {description && <p data-reveal-words data-reveal-delay="120"><RevealWords text={description} /></p>}
       </div>
       <div className="home-faq__list">
         {items.map((item, index) => <article className={openIndexes.includes(index) ? "is-open" : ""} key={item.question}>

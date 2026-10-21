@@ -3,32 +3,11 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { RevealWords } from "./RevealWords";
+import { moveCardCarousel } from "@/lib/card-carousel";
 import "./HomeTestimonials.css";
 
-// Full testimonials already published on Kyte's Framer website.
-// Source: https://www.kyte-agency.com/ (Testimonials, checked 12 October 2026).
-export const clientTestimonials = [
-  {
-    quote: "Highly recommend kyte for outstanding design. Their expertise in digital design has been invaluable in creating a visually stunning social media and product packaging that perfectly represents our brand and products.",
-    name: "Vaishali Chitnis",
-    role: "Founder, Spicy Tango",
-  },
-  {
-    quote: "Professional, communicative, and efficient from the beginning to the end of the project. kyte has done an exceptional job on rebranding The Legal Capsule to Contractzy, creating brand guidelines, web design and marketing collaterals.",
-    name: "Gautami Raiker",
-    role: "Co-Founder, Contractzy",
-  },
-  {
-    quote: "kyte has consistently delivered high-quality work on time. The social media and google ad campaigns have been extremely effective and engaging, resulting in increased brand awareness and customer engagement. They captured the essence of our brand perfectly.",
-    name: "Vikram Shastry",
-    role: "CEO, Black Lotus",
-  },
-  {
-    quote: "kyte exceeded our expectations and delivered high-quality designs. kyte has been very instrumental in designing various collaterals for VNA Hospital. They created beautiful brochures, flyers and other marketing materials that were effective in conveying our message.",
-    name: "Dr. Pooja Malhotra",
-    role: "Cofounder, VNA Hospital",
-  },
-] as const;
+export { clientTestimonials } from "@/data/clientTestimonials";
+import { clientTestimonials } from "@/data/clientTestimonials";
 
 function ScrollRevealQuote({ quote }: { quote: string }) {
   const quoteRef = useRef<HTMLQuoteElement>(null);
@@ -85,10 +64,7 @@ export function HomeTestimonials() {
 
   function move(direction: -1 | 1) {
     const track = trackRef.current;
-    const card = track?.querySelector<HTMLElement>(".home-testimonial");
-    if (!track || !card) return;
-    const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 0;
-    track.scrollBy({ left: direction * (card.offsetWidth + gap), behavior: "smooth" });
+    if (track) moveCardCarousel(track, ".home-testimonial", direction);
   }
 
   return <section className="home-testimonials" aria-labelledby="home-testimonials-title">
@@ -101,7 +77,7 @@ export function HomeTestimonials() {
         <p data-reveal-words data-reveal-delay="120"><RevealWords text="A few words from people and teams we have worked with." /></p>
       </div>
 
-      <div className="home-testimonials__controls" aria-label="Testimonial carousel controls">
+      <div className="home-testimonials__controls carousel-arrow-controls" aria-label="Testimonial carousel controls">
         <button type="button" aria-label="Previous testimonial" disabled={!canGoBack} onClick={() => move(-1)}><ArrowLeft size={19} strokeWidth={1.7} aria-hidden="true" /></button>
         <button type="button" aria-label="Next testimonial" disabled={!canGoForward} onClick={() => move(1)}><ArrowRight size={19} strokeWidth={1.7} aria-hidden="true" /></button>
       </div>

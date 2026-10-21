@@ -20,8 +20,6 @@
 .design-news__slide-copy strong { font-size: clamp(27px,3vw,44px); font-weight: var(--heading-weight); line-height: var(--heading-line-height); letter-spacing: -.04em; }
 .design-news__slide-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: var(--type-body); }
 .design-news__arrows { position: absolute; z-index: 3; right: 30px; bottom: 30px; display: flex; gap: 8px; }
-.design-news__arrows button { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: var(--radius-small); color: var(--ink); background: white; cursor: pointer; }
-.design-news__arrows button:hover { background: var(--color-control-hover); }
 .design-news__listing { padding: 96px var(--section-inset) 120px; background: var(--color-white); }
 .design-news__listing-head :is(h1,h2) { margin: 0 0 36px; font-size: var(--heading-section); font-weight: var(--heading-weight); line-height: var(--heading-line-height); letter-spacing: -.04em; }
 .design-news__listing-head h1 { font-size: var(--heading-page); line-height: 1.08; letter-spacing: var(--heading-letter-spacing); }

@@ -7,7 +7,7 @@ import { useState } from "react";
 import { RevealWords } from "./RevealWords";
 import "./WorkShowcase.css";
 
-const projects = [
+export const workShowcaseProjects = [
   // Other project dates remain preview-only until their timelines are verified.
   {
     name: "Fincart.",
@@ -47,10 +47,22 @@ const projects = [
   },
 ] as const;
 
-export function WorkShowcase({ projectNames, title = "Selected work" }: { projectNames?: string[]; title?: string } = {}) {
+type WorkProject = {
+  name: string;
+  description: string;
+  period?: string;
+  category: string;
+  image: string;
+  alt: string;
+  href: string;
+};
+
+export function WorkShowcase({ projectNames, title = "Selected work", fixedView, items }: { projectNames?: string[]; title?: string; fixedView?: "grid" | "list"; items?: readonly WorkProject[] } = {}) {
   const [view, setView] = useState<"grid" | "list">("grid");
   const [hasChangedView, setHasChangedView] = useState(false);
-  const visibleProjects = projectNames ? projects.filter((project) => projectNames.includes(project.name)) : projects;
+  const sourceProjects: readonly WorkProject[] = items ?? workShowcaseProjects;
+  const visibleProjects = projectNames ? sourceProjects.filter((project) => projectNames.includes(project.name)) : sourceProjects;
+  const layout = fixedView ?? view;
 
   function changeView(nextView: "grid" | "list") {
     if (nextView === view) return;
@@ -66,7 +78,7 @@ export function WorkShowcase({ projectNames, title = "Selected work" }: { projec
 
             <h2 id="work-title" data-reveal-words data-reveal-delay="90"><RevealWords text={title} /></h2>
           </div>
-          {!projectNames && <div className="work-showcase__view-toggle" role="group" aria-label="Project layout">
+          {!projectNames && !fixedView && <div className="work-showcase__view-toggle" role="group" aria-label="Project layout">
             <button type="button" aria-label="List view" aria-pressed={view === "list"} onClick={() => changeView("list")}>
               <List size={18} strokeWidth={1.8} aria-hidden="true" />
             </button>
@@ -75,14 +87,14 @@ export function WorkShowcase({ projectNames, title = "Selected work" }: { projec
             </button>
           </div>}
         </div>
-        <div key={view} className={`work-showcase__list work-showcase__list--${view}${hasChangedView ? " work-showcase__list--entering" : ""}`}>
+        <div key={layout} className={`work-showcase__list work-showcase__list--${layout}${hasChangedView ? " work-showcase__list--entering" : ""}`}>
           {visibleProjects.map((project) => (
             <article className="work-project" key={project.name}>
               <Link className="work-project__visual" href={project.href} aria-label={`Explore ${project.name} project`}>
                 <Image src={project.image} alt={project.alt} fill sizes="(max-width: 760px) 90vw, 47vw" unoptimized={project.image.startsWith("https://")} />
               </Link>
               <Link className="work-project__summary" href={project.href} aria-label={`View ${project.name} project`}><strong>{project.name}</strong> <span>{project.description}</span></Link>
-              <div className="work-project__details">{!projectNames && <><span className="work-project__period">{project.period || "\u00a0"}</span><span className="work-project__separator" aria-hidden="true">·</span></>}<span className="work-project__category">{project.category}</span></div>
+              <div className="work-project__details">{!projectNames && project.period && <><span className="work-project__period">{project.period || "\u00a0"}</span><span className="work-project__separator" aria-hidden="true">·</span></>}<span className="work-project__category">{project.category}</span></div>
             </article>
           ))}
         </div>
