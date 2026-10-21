@@ -36,4 +36,15 @@ This remains the existing prelaunch site with noindex metadata. This audit did n
 
 ## Release execution
 
-Publication and live verification are recorded in WEBSITE_PROGRESS.md after deployment completes.
+- Release PR: https://github.com/kyte-product/kyte-agency-website/pull/52, merged.
+- Reviewed source: 55b8c5fbd9ed5608f1199d0c399339da9cc70404.
+- Main merge: a66f4eea0f501804692aab63e507a197d0477bd1.
+- Vercel preview: dpl_9TpaYHZubS9A59dhLbyorJJnZg6s, Ready.
+- Vercel production: dpl_GVxjpQmugv3FV2U2iEPvcoYu7UAp, Ready.
+- Live: https://kyte-agency.vercel.app/branding-marketing.
+- Immutable deployment: https://kyte-agency-website-k6m80o6xl-kyte-product.vercel.app.
+- Live crawl: 56 pages and 234 assets, all 200; one H1 per content page. See live-http-report.json.
+- Final production-build navigation test: Branding to About to browser Back returns with aria-expanded=false, zero menu overlays and body scrolling restored.
+- Live browser confirmed white section backing, 12px canvas clipping and hidden logo at the final pocket. See live-footer.png.
+
+This verification record is a documentation-only follow-up to the deployed source. No product code, CMS data or production settings changed during verification.
