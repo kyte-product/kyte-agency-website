@@ -1,0 +1,125 @@
+{
+  "product-experience": [
+    "greenBlue",
+    "pinkViolet",
+    "amberLime",
+    "mintCyan"
+  ],
+  "product-orbit": [
+    "greenBlue",
+    "mintCyan"
+  ],
+  "product-dashboard-laptop": [
+    "pinkViolet",
+    "mintCyan"
+  ],
+  "product-complex-system": [
+    "greenBlue"
+  ],
+  "product-evolving-experience": [
+    "coralViolet"
+  ],
+  "product-research-audit": [
+    "amberGreen"
+  ],
+  "product-website-design": [
+    "greenBlue"
+  ],
+  "product-mobile-app": [
+    "pinkViolet"
+  ],
+  "product-saas-web-app": [
+    "greenBlue"
+  ],
+  "product-commerce": [
+    "amberLime"
+  ],
+  "product-stage-new": [
+    "greenBlue"
+  ],
+  "product-stage-growth": [
+    "pinkViolet"
+  ],
+  "product-stage-established": [
+    "amberGreen"
+  ],
+  "product-stage-tools": [
+    "greenBlue"
+  ],
+  "product-stage-commerce": [
+    "amberLime"
+  ],
+  "product-stage-web": [
+    "coralViolet"
+  ],
+  "product-stage-systems": [
+    "pinkViolet"
+  ],
+  "product-stage-brands": [
+    "amberViolet"
+  ],
+  "product-onboarding": [
+    "greenBlue"
+  ],
+  "product-navigation": [
+    "greenBlue",
+    "amberLime"
+  ],
+  "product-workflow-hub": [
+    "greenBlue",
+    "pinkViolet",
+    "amberLime",
+    "mintCyan"
+  ],
+  "product-content-journey": [
+    "greenBlue",
+    "pinkViolet",
+    "amberLime"
+  ],
+  "product-design-patterns": [
+    "greenBlue",
+    "pinkViolet",
+    "amberLime"
+  ],
+  "product-responsive-experience": [
+    "greenBlue",
+    "pinkViolet"
+  ],
+  "service-research-hero": [
+    "greenBlue",
+    "pinkViolet",
+    "amberLime"
+  ],
+  "service-website-hero": [
+    "greenBlue",
+    "pinkViolet",
+    "amberLime"
+  ],
+  "service-mobile-hero": [
+    "greenBlue",
+    "pinkViolet",
+    "amberLime"
+  ],
+  "service-saas-hero": [
+    "greenBlue",
+    "pinkViolet",
+    "amberLime"
+  ],
+  "service-commerce-hero": [
+    "greenBlue",
+    "pinkViolet",
+    "amberLime"
+  ],
+  "process-discover": [
+    "mintCyan"
+  ],
+  "process-define": [
+    "pinkViolet"
+  ],
+  "process-develop": [
+    "amberLime"
+  ],
+  "process-deliver": [
+    "mintCyan"
+  ]
+}

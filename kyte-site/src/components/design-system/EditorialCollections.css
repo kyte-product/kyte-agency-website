@@ -25,15 +25,9 @@
 .editorial-guides__featured-copy h3 { margin:0 0 14px;font-size:clamp(28px,3vw,44px);font-weight:500;letter-spacing:-.03em;line-height:1.2 }
 .editorial-guides__featured-copy p { margin:0;color:rgba(255,255,255,.86);font-size:var(--type-body);line-height:1.5 }
 .editorial-guides__featured-controls { position:absolute;right:30px;bottom:30px;display:flex;gap:8px }
-.editorial-guides button { display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.5);border-radius:var(--radius-small);background:rgba(255,255,255,.12);color:white;cursor:pointer }
-.editorial-guides button:hover { background:white;color:var(--ink) }
-.editorial-guides__featured-controls button { border-color:var(--line);background:white;color:var(--ink) }
-.editorial-guides__featured-controls button:hover { background:var(--color-control-hover) }
 .editorial-guides__highlights-head { display:flex;align-items:end;justify-content:space-between;gap:20px;margin:90px 0 24px }
 .editorial-guides__highlights-head h3 { margin:0;font-size:var(--heading-section-mobile);font-weight:500;letter-spacing:-.04em }
 .editorial-guides__highlights-head > div { display:flex;gap:8px }
-.editorial-guides__highlights-head button { border-color:var(--line);background:white;color:var(--ink) }
-.editorial-guides__highlights-head button:hover { background:var(--accent);color:white }
 .editorial-guides__highlights { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px }
 .editorial-guides__highlight { display:flex;flex-direction:column;min-height:355px;padding:28px 24px 24px;border-radius:var(--radius-large);color:white;overflow:hidden }
 .editorial-guides__highlight h4 { margin:0;font-size:var(--type-subtitle);font-weight:500;line-height:1.3 }

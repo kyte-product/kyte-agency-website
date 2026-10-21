@@ -1,0 +1,20 @@
+import {assignedPalette} from './illustration-palettes.mjs';
+import {surface} from './illustration-materials.mjs';
+import {readFileSync,writeFileSync} from 'node:fs';
+import vm from 'node:vm';
+import {assemble} from '../../.agents/skills/hairline-create/build.mjs';
+import {__iconData as globe} from '../node_modules/lucide-react/dist/esm/icons/globe.mjs';
+const here=new URL('.',import.meta.url),out=new URL('../public/hairline/',here),source=readFileSync(new URL('product-stage-web.js',here),'utf8');
+const context=vm.createContext({hairline(){}});vm.runInContext(readFileSync(new URL('../../.agents/skills/hairline-create/kernel.js',here),'utf8')+'\n'+source,context);const s=vm.runInContext('makeWebScene(HL)',context);
+if(s.bounds.right-s.bounds.x>130||s.bounds.bottom-s.bounds.y>106)throw new Error('Web symbol exceeds its mini frame');
+const esc=v=>String(v).replaceAll('&','&amp;').replaceAll('"','&quot;'),path=(d,style,extra='')=>`<path d="${esc(d)}" style="${style}" ${extra}/>`;
+const matrix=(p0,p1,p3,size)=>[(p1[0]-p0[0])/size,(p1[1]-p0[1])/size,(p3[0]-p0[0])/size,(p3[1]-p0[1])/size,...p0];
+const contour=d=>path(d,'fill:none;stroke:#a9b0b2;stroke-width:.9;stroke-linejoin:round;stroke-linecap:round');
+const {center:[cx,cy],radius:r}=s.sphere;
+const defs=`<clipPath id="web-sphere">${path(s.sphere.face,'fill:white')}</clipPath><filter id="web-blend" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="${r*.22}"/></filter><filter id="web-wash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.1"/></filter><clipPath id="web-face">${path(s.panel.face,'fill:white')}</clipPath>`;
+const colors=surface({id:'web-orb',silhouette:s.sphere.face,face:s.sphere.face,plane:{p0:[cx-r,cy-r],p1:[cx+r,cy-r],p3:[cx-r,cy+r]},palette:assignedPalette('product-stage-web'),volume:true});
+const icon=`<g transform="matrix(${matrix(s.panel.icon.p0,s.panel.icon.p1,s.panel.icon.p3,24)})" fill="none" stroke="#cdd6d8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-icon="lucide-globe">${globe.node.map(([tag,attrs])=>`<${tag} ${Object.entries(attrs).filter(([k])=>k!=='key').map(([k,v])=>`${k}="${esc(v)}"`).join(' ')}/>`).join('')}</g>`;
+const header=s.dots.map(d=>`<circle r="1" transform="matrix(${matrix(d.center,d.p1,d.p3,1)})" fill="#dce3e3"/>`).join('')+path(s.address,'fill:#edf1f1;stroke:none');
+function svg(structure=false,mask=false){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 128"><defs>${defs}</defs>${mask?'<rect width="160" height="128" fill="black"/>':''}<g transform="translate(${s.offset})">${mask?path(s.sphere.face,'fill:white;stroke:none'):path(s.panel.silhouette,'fill:#f0f2f2;stroke:none')+path(s.panel.face,'fill:white;stroke:none')+(structure?'':`<g clip-path="url(#web-face)">${header+icon}</g>`)+contour(s.panel.silhouette)+(structure?path(s.sphere.face,'fill:white;stroke:#a9b0b2;stroke-width:.9'):colors)}</g></svg>`;}
+const html=(markup,bg='#f7f8fa')=>`<!doctype html><html lang="en"><meta charset="utf-8"><title>Web platforms illustration</title><style>html,body{margin:0;width:100%;height:100%;background:${bg}}body{display:grid;place-items:center}body>svg{width:480px;height:384px;max-width:100%}</style><body>${markup}</body></html>`;
+writeFileSync(new URL('product-stage-web.svg',out),svg());writeFileSync(new URL('product-stage-web-embed.html',out),html(svg()));writeFileSync(new URL('product-stage-web-structure.html',out),html(svg(true)));writeFileSync(new URL('product-stage-web-mask.html',here),html(svg(false,true),'black'));writeFileSync(new URL('hairline-product-stage-web.html',here),assemble(source));console.log(JSON.stringify({bounds:s.bounds,offset:s.offset}));

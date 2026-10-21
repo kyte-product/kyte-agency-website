@@ -185,3 +185,5 @@
   .service-process__step-number,
   .service-process__step-name { transition: none; }
 }
+
+:is(.service-process__figure--discover,.service-process__figure--define,.service-process__figure--develop,.service-process__figure--deliver) { object-fit: contain; background: transparent; }

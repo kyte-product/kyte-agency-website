@@ -200,3 +200,8 @@ Agency sites: pineapple.design, netbramha.com, metalab.com, goodface.agency, cla
 Google Search Central: people-first content, title links, snippets, URL structure, and FAQ rich-result guidance at developers.google.com/search/docs. Kyte inputs: `Kyte_Website_IA.txt` and `Kyte_SEO_Copy_Guidelines.md`.
 
 Keyword and domain metrics: connected Ubersuggest `keyword_overview`, `keyword_suggestions`, `match_keywords`, `domain_overview`, `domain_keywords`, and `serp_analysis` reports for India, English, queried 8 October 2026. Record date and location with every later export.
+
+
+### 20 October 2026: Branding hero review candidate
+
+The branding cluster landing page is reset to the standard shared shell with a title-only placeholder. The immersive and V2 landing experiments are removed. The five child service briefs and pages remain unchanged. Further landing copy and layout need a fresh review.

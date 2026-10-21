@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SaaS workflow illustration: flat interface faces</title><style>
+.saas-face,.saas-face *{box-sizing:border-box}
+.saas-face{width:100%;height:100%;background:#fff;overflow:hidden;font-family:Arial,Helvetica,sans-serif;--label:#e9eded}
+.saas-face i{display:block;font-style:normal}
+.saas-face .bar{height:17px;border-radius:4px;background:var(--label);width:74%}
+.saas-face .top{height:74px;padding:24px 32px;display:flex;align-items:center;gap:10px}
+.saas-face .dot{width:12px;height:12px;border-radius:50%;background:#dce1e1}
+.saas-face .address{width:400px;height:20px;border-radius:5px;background:#f2f4f4;margin:auto}
+.saas-face .avatar{width:25px;height:25px;border-radius:50%;background:#e8eded}
+.saas-face .app{display:grid;grid-template-columns:230px 1fr;height:806px}
+.saas-face .sidebar{padding:35px 28px;background:#fafbfb}
+.saas-face .brand{height:25px;width:130px;margin-bottom:57px;background:#dce3e3}
+.saas-face .nav{height:48px;margin-bottom:23px;display:flex;gap:16px;align-items:center;padding:12px}
+.saas-face .nav.active{background:#edf1f1;border-radius:7px}
+.saas-face .nav i:first-child{height:21px;width:21px;background:#e1e7e7;border-radius:5px;flex:none}
+.saas-face .nav .bar{height:15px;width:100px}
+.saas-face .content{padding:36px 38px}
+.saas-face .heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:27px}
+.saas-face .heading .bar{height:29px;width:266px}
+.saas-face .heading .bar:last-child{height:34px;width:110px;background:#e7eded}
+.saas-face .subhead{width:350px;height:15px;margin-bottom:34px}
+.saas-face .filters{display:flex;gap:18px;margin-bottom:32px}
+.saas-face .filters .bar{width:90px;height:15px}.saas-face .filters .bar:first-child{background:#d7dfdf}
+.saas-face .board{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.saas-face .column{padding:20px 16px 18px;background:#f7f9f9;border-radius:8px}
+.saas-face .column>.bar{width:63%;height:18px;margin-bottom:24px}
+.saas-face .task{padding:22px 20px;background:white;border-radius:7px;margin-bottom:18px}
+.saas-face .task .bar{height:14px;margin-bottom:12px;width:95%}.saas-face .task .bar.short{width:66%}
+.saas-face .task-foot{display:flex;align-items:center;justify-content:space-between;margin-top:22px}
+.saas-face .task-foot .bar{height:10px;width:68px;margin:0}
+.saas-face .task-foot .avatar{height:20px;width:20px}
+.saas-face .field{position:relative;isolation:isolate;overflow:hidden;background:var(--art-greenBlue-mint);border-radius:7px}
+.saas-face .colors{position:absolute;inset:-20%;filter:blur(30px)}
+.saas-face .blob{position:absolute;border-radius:50%;width:100%;height:110%;background:var(--art-greenBlue-mint);left:-20%;top:10%}
+.saas-face .blob:nth-child(2){width:100%;height:100%;background:var(--art-greenBlue-blueLight);left:45%;top:-25%}
+.saas-face .blob:nth-child(3){width:90%;height:60%;background:var(--art-greenBlue-mint);left:40%;top:70%}
+.saas-face .field:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 30px 12px #ffffffb0;pointer-events:none}
+.saas-face .column.field{position:relative}.saas-face .column.field>.bar,.saas-face .column.field>.task{position:relative;z-index:1}.saas-face .column.field>.bar{background:#ffffffbd}.saas-face .column.field>.task{background:#ffffffd9}.saas-face .task.field{height:146px}.saas-face .task.field>.bar,.saas-face .task.field>.task-foot{position:relative;z-index:1}.saas-face .task.field .bar{background:#ffffffa0}.saas-face .task.field .avatar{background:#ffffff9c}
+.saas-face .insights{padding:36px 34px}
+.saas-face .insights>.bar{height:22px;width:64%;margin-bottom:24px}
+.saas-face .insights .field{height:286px;margin-bottom:29px;display:grid;place-items:center;background:var(--art-greenBlue-mint)}
+.saas-face .insights .blob{background:var(--art-greenBlue-mint);left:-25%;top:-30%}
+.saas-face .insights .blob:nth-child(2){background:var(--art-greenBlue-mint);left:45%;top:0}
+.saas-face .insights .blob:nth-child(3){background:var(--art-greenBlue-blueLight);left:5%;top:65%}
+.saas-face .code{position:relative;z-index:1;color:white;width:128px;height:128px}
+.saas-face .metrics{display:flex;justify-content:space-between;gap:22px}
+.saas-face .metric{width:48%}.saas-face .metric>.bar:first-child{width:74%;height:30px;margin-bottom:14px}.saas-face .metric>.bar:last-child{width:95%;height:13px}
+.preview{display:flex;gap:50px;align-items:start;padding:40px;background:#f8f9f9;min-height:100vh}.preview-frame{width:750px;height:440px;flex:none}.preview-frame--insights{width:240px;height:280px}
+
+/* Palette tokens start */
+.saas-face{--art-greenBlue-base:#3dbfcc;--art-greenBlue-mint:#79edc9;--art-greenBlue-blueLight:#4babf7;--art-greenBlue-green:#44d091;--art-greenBlue-greenDeep:#39c187;--art-greenBlue-blue:#2a94e2;--art-greenBlue-teal:#36b7bb;--art-amberGreen-base:#f0a91a;--art-amberGreen-amber:#fda30c;--art-amberGreen-gold:#f4b829;--art-amberGreen-lime:#cbc53b;--art-amberGreen-green:#0db340;--art-amberGreen-olive:#91ae36;--art-amberGreen-light:#d0cb30;--art-amberLime-base:#f7a70f;--art-amberLime-orange:#ff8f02;--art-amberLime-amber:#feaa15;--art-amberLime-lime:#accc1e;--art-amberLime-green:#65b446;--art-amberLime-gold:#bbb733;--art-amberLime-light:#dcc640;--art-pinkViolet-base:#fb8bbe;--art-pinkViolet-coral:#fd91af;--art-pinkViolet-pink:#fd73b7;--art-pinkViolet-violet:#c396fd;--art-pinkViolet-rose:#fc92b8;--art-pinkViolet-light:#fcaedd;--art-pinkViolet-deep:#c596ff;--art-coralViolet-base:#fd88ae;--art-coralViolet-coral:#fc8297;--art-coralViolet-pink:#fb6fc4;--art-coralViolet-violet:#c590fd;--art-coralViolet-rose:#fd92ae;--art-coralViolet-light:#fba6df;--art-coralViolet-deep:#ec91f9;--art-amberViolet-base:#f1994c;--art-amberViolet-light:#ebaaa5;--art-amberViolet-orange:#f3924f;--art-amberViolet-violet:#d5aaed;--art-amberViolet-amber:#f2bb63;--art-amberViolet-coral:#f3b173;--art-amberViolet-rose:#eeb99f;--art-mintCyan-base:#44ce88;--art-mintCyan-mint:#6be4af;--art-mintCyan-blue:#49c3d0;--art-mintCyan-teal:#3cbfb0;--art-mintCyan-green:#7cdbaa;--art-mintCyan-cyan:#75ccdb;--art-mintCyan-light:#57db9f;--art-signal-error:#fc8277;--art-signal-warning:#f2c85b;--art-signal-success:#7cd37b}
+/* Palette tokens end */
+
+/* Approved material start */
+.saas-face .field:not(.brand-plane){background:radial-gradient(ellipse 48% 55% at 58% 20%,var(--art-greenBlue-blueLight) 12%,transparent 93%),radial-gradient(ellipse 48% 48% at 91% 44%,var(--art-greenBlue-blue) 8%,transparent 96%),radial-gradient(ellipse 55% 51% at 88% 99%,var(--art-greenBlue-teal) 10%,transparent 96%),radial-gradient(ellipse 45% 45% at 24% 100%,var(--art-greenBlue-greenDeep) 8%,transparent 96%),radial-gradient(ellipse 48% 73% at 8% 63%,var(--art-greenBlue-green) 12%,transparent 96%),var(--art-greenBlue-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}.saas-face .field.warm:not(.brand-plane){background:radial-gradient(ellipse 72% 78% at 24% 38%,var(--art-amberLime-orange) 12%,transparent 95%),radial-gradient(ellipse 64% 70% at 91% 78%,var(--art-amberLime-green) 10%,transparent 98%),radial-gradient(ellipse 58% 61% at 58% 8%,var(--art-amberLime-amber) 8%,transparent 98%),var(--art-amberLime-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}.saas-face .field.pink:not(.brand-plane){background:radial-gradient(ellipse 72% 70% at 13% 17%,var(--art-pinkViolet-coral) 8%,transparent 98%),radial-gradient(ellipse 67% 74% at 88% 87%,var(--art-pinkViolet-violet) 10%,transparent 98%),radial-gradient(ellipse 57% 67% at 48% 60%,var(--art-pinkViolet-pink) 8%,transparent 98%),var(--art-pinkViolet-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}.saas-face .field.violet:not(.brand-plane){background:radial-gradient(ellipse 48% 55% at 58% 20%,var(--art-pinkViolet-pink) 12%,transparent 93%),radial-gradient(ellipse 48% 48% at 91% 44%,var(--art-pinkViolet-rose) 8%,transparent 96%),radial-gradient(ellipse 55% 51% at 88% 99%,var(--art-pinkViolet-violet) 10%,transparent 96%),radial-gradient(ellipse 45% 45% at 24% 100%,var(--art-pinkViolet-light) 8%,transparent 96%),radial-gradient(ellipse 48% 73% at 8% 63%,var(--art-pinkViolet-coral) 12%,transparent 96%),var(--art-pinkViolet-base);box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}.saas-face .field:not(.brand-plane):before{display:none}.saas-face .field:not(.brand-plane)>.colors{display:none}.saas-face .field:not(.brand-plane):after{background:none;box-shadow:inset 0 0 18px 3px #ffffff66,inset 0 0 3px 1px #ffffff45}
+/* Approved material end */
+</style></head><body><main class="preview" id="preview"></main>
+<template id="workspace"><div class="saas-face"><div class="top"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="address"></i><i class="avatar"></i></div><div class="app"><aside class="sidebar"><i class="bar brand"></i><div class="nav active"><i></i><i class="bar"></i></div><div class="nav"><i></i><i class="bar"></i></div><div class="nav"><i></i><i class="bar"></i></div><div class="nav"><i></i><i class="bar"></i></div></aside><div class="content"><div class="heading"><i class="bar"></i><i class="bar"></i></div><i class="bar subhead"></i><div class="filters"><i class="bar"></i><i class="bar"></i><i class="bar"></i></div><div class="board">
+<div class="column field" data-color-zone=""><div class="colors"><i class="blob"></i><i class="blob"></i><i class="blob"></i></div><i class="bar"></i><div class="task"><i class="bar"></i><i class="bar short"></i><div class="task-foot"><i class="bar"></i><i class="avatar"></i></div></div><div class="task"><i class="bar"></i><i class="bar short"></i><div class="task-foot"><i class="bar"></i><i class="avatar"></i></div></div></div>
+<div class="column"><i class="bar"></i><div class="task"><i class="bar"></i><i class="bar short"></i><div class="task-foot"><i class="bar"></i><i class="avatar"></i></div></div><div class="task"><i class="bar"></i><i class="bar short"></i><div class="task-foot"><i class="bar"></i><i class="avatar"></i></div></div><div class="task"><i class="bar"></i><i class="bar short"></i></div></div>
+<div class="column"><i class="bar"></i><div class="task"><i class="bar"></i><i class="bar short"></i><div class="task-foot"><i class="bar"></i><i class="avatar"></i></div></div><div class="task"><i class="bar"></i><i class="bar short"></i><div class="task-foot"><i class="bar"></i><i class="avatar"></i></div></div></div>
+</div></div></div></div></template>
+<template id="insights"><div class="saas-face"><div class="insights"><i class="bar"></i><div class="field" data-color-zone=""><div class="colors"><i class="blob"></i><i class="blob"></i><i class="blob"></i></div>{{CHART_ICON}}</div><div class="metrics"><div class="metric"><i class="bar"></i><i class="bar"></i></div><div class="metric"><i class="bar"></i><i class="bar"></i></div></div></div></div></template>
+<script>for(const id of ['workspace','insights']){const frame=document.createElement('div');frame.className='preview-frame'+(id==='insights'?' preview-frame--insights':'');const face=document.getElementById(id).content.firstElementChild.cloneNode(true);face.style.width=(id==='workspace'?1500:480)+'px';face.style.height=(id==='workspace'?880:560)+'px';face.style.transform='scale(.5)';face.style.transformOrigin='top left';frame.append(face);document.getElementById('preview').append(frame)}</script>
+</body></html>

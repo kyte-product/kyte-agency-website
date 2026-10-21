@@ -29,7 +29,7 @@
 .industry-card__detail p { max-width: 420px; margin: 0; color: var(--ink); font-size: 15px; line-height: 1.5; }
 .industry-card ul { display: flex; flex-wrap: wrap; gap: 7px; margin: 20px 0 26px; padding: 0; list-style: none; }
 .industry-card li { padding: 6px 10px; border: 1px solid var(--line); border-radius: 3px; color: var(--muted); background: var(--color-white); font-size: 12px; line-height: 1.2; }
-.industry-card__link { display: inline-flex; align-items: center; gap: 9px; width: fit-content; margin-top: auto; color: var(--ink); font-size: 15px; font-weight: 500; text-decoration: none; }
+.industry-card__link { display: inline-flex; min-height: 44px; align-items: center; gap: 9px; width: fit-content; margin-top: auto; color: var(--color-blue); font-size: 16px; font-weight: 500; text-decoration: none; }
 .industry-card__link svg { color: var(--color-blue); transition: transform .22s ease; }
 .industry-card__link:hover svg, .industry-card__link:focus-visible svg { transform: translateX(4px); }
 

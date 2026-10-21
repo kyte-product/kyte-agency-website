@@ -4,9 +4,9 @@
 .sustainability__eyebrow{margin:0 0 14px;color:#00a8e8;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 .sustainability__intro h2{max-width:430px;margin:0;color:var(--ink);font-size:clamp(32px,3vw,40px);font-weight:500;letter-spacing:-.035em;line-height:1.08}
 .sustainability__lede{max-width:430px;margin:24px 0 20px;color:var(--muted);font-size:18px;line-height:1.6}
-.sustainability__button{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:4px;color:#fff;background:#00a8e8;font-size:15px;font-weight:500;text-decoration:none;transition:background .2s ease}
+.sustainability__button{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:var(--radius-small);color:#fff;background:#00a8e8;font-size:15px;font-weight:500;text-decoration:none;transition:background .2s ease}
 .sustainability__button:hover{background:var(--color-ink)}
-.sustainability__foundation{margin-top:auto;padding:20px 22px;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+.sustainability__foundation{margin-top:auto;padding:20px 22px;border:1px solid var(--line);border-radius:var(--radius-small);background:var(--surface)}
 .sustainability__foundation h3{margin:0;color:var(--ink);font-size:18px;font-weight:500}
 .sustainability__foundation p{margin:6px 0 16px;color:var(--muted);font-size:14px;line-height:1.5}
 .sustainability__foundation ul{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin:0;padding:16px 0 0;border-top:1px solid var(--line);list-style:none}
@@ -14,7 +14,7 @@
 .sustainability__foundation li svg{width:18px;height:18px;color:#00a8e8;stroke-width:1.7}
 .sustainability__column{grid-row:1;grid-column:4;display:flex;flex-direction:column;gap:24px}
 .sustainability__column--staggered{grid-column:3;padding-top:200px}
-.sustainability-card{--card-color:#00a8e8;--card-mark:#6acbf0;position:relative;aspect-ratio:254/356;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:22px 24px;border-radius:4px;color:#fff;background:var(--card-color);text-decoration:none;box-shadow:0 13px 27px -5px rgba(8,42,74,.18),0 8px 16px -8px rgba(0,0,0,.18);transition:transform .3s ease,box-shadow .3s ease}
+.sustainability-card{--card-color:#00a8e8;--card-mark:#6acbf0;position:relative;aspect-ratio:254/356;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:22px 24px;border-radius:var(--radius-small);color:#fff;background:var(--card-color);text-decoration:none;box-shadow:0 13px 27px -5px rgba(8,42,74,.18),0 8px 16px -8px rgba(0,0,0,.18);transition:transform .3s ease,box-shadow .3s ease}
 .sustainability-card::before,.sustainability-card::after{position:absolute;right:-10%;bottom:-10%;width:85%;height:58%;content:"";background:var(--card-mark);opacity:.48;clip-path:polygon(0 0,50% 0,100% 100%,50% 100%)}
 .sustainability-card::after{right:17%;opacity:.65}
 .sustainability-card--forest{--card-color:#3d7f1e;--card-mark:#78a94d}

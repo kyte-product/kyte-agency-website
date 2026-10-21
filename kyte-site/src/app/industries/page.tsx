@@ -60,7 +60,7 @@ export default function IndustriesPage() {
 
         <h1 id="industries-title" data-reveal-words data-reveal-delay="80"><RevealWords text="Design shaped around the work your industry does." /></h1>
         <p className="industries-hero__intro">Every market has its own users, decisions, and constraints. We bring product, web, and brand design together around the details that matter in yours.</p>
-        <Link className="industries-hero__link" href="#industry-directory">Explore industries <ArrowRight size={17} aria-hidden="true" /></Link>
+        <Link className="industries-hero__link kyte-tertiary" href="#industry-directory">Explore industries <ArrowRight size={17} aria-hidden="true" /></Link>
       </div>
     </section>
 
@@ -77,7 +77,7 @@ export default function IndustriesPage() {
             <p className="industry-card__summary">{summary}</p>
             <div className="industry-card__detail"><span>Design focus</span><p>{challenge}</p></div>
             <ul aria-label={`Relevant services for ${title}`}>{services.map(service => <li key={service}>{service}</li>)}</ul>
-            <Link className="industry-card__link" href={href}>Explore {title} <ArrowRight size={16} aria-hidden="true" /></Link>
+            <Link className="industry-card__link kyte-tertiary" href={href}>Explore {title} <ArrowRight size={16} aria-hidden="true" /></Link>
           </article>)}
         </div>
       </div>

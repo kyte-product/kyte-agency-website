@@ -1,0 +1,24 @@
+.brand-pixel-transition {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 25vw;
+  overflow: hidden;
+  background: #fff;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.brand-pixel-transition__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-pixel-transition { height: 25vw; }
+}
+
+.brand-pixel-transition--reverse { transform: rotate(180deg); margin-bottom: -1px; }
+
+.brand-pixel-transition--gray { height: clamp(80px,10vw,144px); }

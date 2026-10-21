@@ -4,7 +4,6 @@ import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { ExpandingPhotoStage } from "@/components/ExpandingPhotoStage";
 import { ServiceOurProcess } from "@/components/ServiceOurProcess";
 import { WorkShowcase } from "@/components/WorkShowcase";
 import { HomeFaq } from "@/components/HomeFaq";
@@ -21,7 +20,6 @@ import "../service-detail.css";
 
 const plannedPages: Record<string, string> = {
   work: "Work",
-  "ui-ux-design-development": "UI/UX Design & Development",
   "ui-ux-design-development/ux-research-design-audit": "UX Research & Design Audits",
   "ui-ux-design-development/mobile-app-design": "Mobile App Design",
   "ui-ux-design-development/saas-web-app-design": "SaaS & Web App Design",
@@ -75,7 +73,9 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </section>
-      <ExpandingPhotoStage label="Illustrative photography for UX research and design audits" slides={photography.stage} />
+      <section className="service-detail__research-art" aria-label="UX research and design audit workspace">
+        <Image src="/hairline/service-research-hero.svg?v=1" alt="" width={960} height={560} sizes="(max-width: 780px) 100vw, 1240px" unoptimized priority />
+      </section>
       <ServiceOfferings items={service?.offerings.length ? service.offerings.map(({ title, body }) => ({ title, description: body })) : undefined} serviceName={service?.name} heading={service?.offeringsHeading || "What we offer"} intro={service?.offeringsIntro} />
       <ServiceApproach items={service?.inclusions?.length ? service.inclusions : undefined} heading={service?.includedHeading} intro={service?.includedIntro} />
       <ServiceDecisionStory items={outcomeItems?.length ? outcomeItems : photography.decisions.map((photo, index) => ({ ...auditDecisions[index], ...photo }))} heading={service?.outcomesHeading} intro={service?.outcomesIntro} eyebrow="From scope to outcome" />
@@ -90,5 +90,5 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
   const service = await loadServicePageContent(path);
   if (service) return <ServiceDetailTemplate service={service} />;
 
-  return <><SiteHeader /><main className="planned-page"><Link className="planned-page__back" href="/"><ArrowLeft size={18} strokeWidth={1.7} aria-hidden="true" /> Home</Link><h1>{title}</h1><p>This page is being prepared for the new Kyte website.</p></main><SiteFooter /></>;
+  return <><SiteHeader /><main className="planned-page" data-site-theme={path === "branding-marketing" || path.startsWith("branding-marketing/") ? "branding-dark" : undefined}><Link className="planned-page__back" href="/"><ArrowLeft size={18} strokeWidth={1.7} aria-hidden="true" /> Home</Link><h1>{title}</h1><p>This page is being prepared for the new Kyte website.</p></main><SiteFooter /></>;
 }

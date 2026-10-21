@@ -1,5 +1,5 @@
 .service-detail { overflow: clip; }
-.service-detail__hero { padding: clamp(72px,8vw,104px) 0 clamp(12px,2vw,28px); background: var(--color-surface-secondary); text-align: center; }
+.service-detail__hero { padding: clamp(72px,8vw,104px) 0 clamp(12px,2vw,28px); background: #fff; text-align: center; }
 .service-detail__hero-inner { width: var(--page-width); margin: 0 auto; padding-inline: var(--section-inset); }
 .service-detail__hero h1 { max-width: 960px; margin: 22px auto 24px; font-size: var(--heading-page); font-weight: var(--heading-weight); line-height: 1.08; letter-spacing: var(--heading-letter-spacing); text-wrap: balance; }
 .service-detail__headline-line { display: block; }
@@ -14,4 +14,11 @@
   .service-detail__hero h1 { margin-bottom: 20px; font-size: var(--heading-page-mobile); }
   .service-detail__headline-portrait { width: .86em; }
   .service-detail__hero-bottom { gap: 20px; }
+}
+
+/* Shared contain frame for the five service hero illustrations. */
+:is(.service-detail__research-art,.service-detail__website-art,.service-detail__mobile-art,.service-detail__saas-art,.service-detail__commerce-art) { position: relative; z-index: 81; width: var(--page-width); margin: 32px auto 0; padding: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-medium); background: #f8f9f9; }
+:is(.service-detail__research-art,.service-detail__website-art,.service-detail__mobile-art,.service-detail__saas-art,.service-detail__commerce-art) img { display: block; width: 100%; height: auto; object-fit: contain; }
+@media (max-width: 580px) {
+  :is(.service-detail__research-art,.service-detail__website-art,.service-detail__mobile-art,.service-detail__saas-art,.service-detail__commerce-art) { margin-top: 28px; }
 }

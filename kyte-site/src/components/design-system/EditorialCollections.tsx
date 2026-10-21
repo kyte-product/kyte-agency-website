@@ -50,10 +50,10 @@ export function EditorialGuides({ standalone = false }: { standalone?: boolean }
       <div className="editorial-guides__featured" aria-live="polite">
         <Image className="editorial-guides__mark" src="/kyte-agency-mark.png" alt="" width={512} height={512} unoptimized />
         <div className="editorial-guides__featured-copy"><h3>{selected.title}</h3><p>{selected.summary}</p></div>
-        <div className="editorial-guides__featured-controls"><button type="button" onClick={() => moveFeatured(-1)} aria-label="Previous sample guide"><ArrowLeft size={18} /></button><button type="button" onClick={() => moveFeatured(1)} aria-label="Next sample guide"><ArrowRight size={18} /></button></div>
+        <div className="editorial-guides__featured-controls carousel-arrow-controls"><button type="button" onClick={() => moveFeatured(-1)} aria-label="Previous sample guide"><ArrowLeft size={18} /></button><button type="button" onClick={() => moveFeatured(1)} aria-label="Next sample guide"><ArrowRight size={18} /></button></div>
       </div>
     </div>
-    <div className="editorial-guides__highlights-head"><h3>Recent highlights</h3><div><button type="button" onClick={() => setOffset((value) => (value - 1 + guideSamples.length) % guideSamples.length)} aria-label="Previous guide highlights"><ArrowLeft size={18} /></button><button type="button" onClick={() => setOffset((value) => (value + 1) % guideSamples.length)} aria-label="Next guide highlights"><ArrowRight size={18} /></button></div></div>
+    <div className="editorial-guides__highlights-head"><h3>Recent highlights</h3><div className="carousel-arrow-controls"><button type="button" onClick={() => setOffset((value) => (value - 1 + guideSamples.length) % guideSamples.length)} aria-label="Previous guide highlights"><ArrowLeft size={18} /></button><button type="button" onClick={() => setOffset((value) => (value + 1) % guideSamples.length)} aria-label="Next guide highlights"><ArrowRight size={18} /></button></div></div>
     <div className="editorial-guides__highlights">{ordered.map((sample) => <article key={sample.title} className="editorial-guides__highlight" style={{ backgroundColor: sample.color }}><h4>{sample.title}</h4><p>{sample.preview}</p><Image src="/kyte-agency-mark.png" alt="" width={44} height={44} unoptimized /></article>)}</div>
   </section>;
 }

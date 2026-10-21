@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { DesignNewsArticle } from "@/lib/sanity";
 import { RevealWords } from "./RevealWords";
+import { moveCardCarousel } from "@/lib/card-carousel";
 
 export function ClientStories({ articles }: { articles: DesignNewsArticle[] }) {
   const stories = articles.filter((article) => article.slug && article.cover?.url).slice(0, 8);
@@ -37,14 +38,7 @@ export function ClientStories({ articles }: { articles: DesignNewsArticle[] }) {
   const move = (direction: -1 | 1) => {
     const track = trackRef.current;
     if (!track) return;
-    const cards = Array.from(track.querySelectorAll<HTMLElement>(".client-story"));
-    if (!cards.length) return;
-    const rail = track.getBoundingClientRect().left;
-    const positions = cards.map((card, index) => index === 0 ? 0 : card.getBoundingClientRect().left - rail + track.scrollLeft);
-    const current = positions.reduce((nearest, position, index) =>
-      Math.abs(position - track.scrollLeft) < Math.abs(positions[nearest] - track.scrollLeft) ? index : nearest, 0);
-    const next = Math.max(0, Math.min(cards.length - 1, current + direction));
-    track.scrollTo({ left: positions[next], behavior: "smooth" });
+    moveCardCarousel(track, ".client-story", direction);
   };
 
   return <section className="client-stories" aria-labelledby="client-stories-title">
@@ -56,11 +50,11 @@ export function ClientStories({ articles }: { articles: DesignNewsArticle[] }) {
         </div>
         <div className="client-stories__intro-copy">
           <p className="client-stories__description" data-reveal-words data-reveal-delay="150"><RevealWords text="Writing from the Kyte team on visual culture, branding and the ideas shaping how people experience products." /></p>
-          <Link className="client-stories__cta" href="/insights">Explore Design News <ChevronRight size={18} aria-hidden="true" /></Link>
+          <Link className="client-stories__cta kyte-tertiary" href="/insights">Explore Design News <ArrowRight size={16} aria-hidden="true" /></Link>
         </div>
       </div>
 
-      {stories.length > 0 && <div className="client-stories__controls" aria-label="Design News carousel controls">
+      {stories.length > 0 && <div className="client-stories__controls carousel-arrow-controls" aria-label="Design News carousel controls">
         <button type="button" aria-label="Show previous articles" disabled={!canGoBack} onClick={() => move(-1)}><ChevronLeft size={18} aria-hidden="true" /></button>
         <button type="button" aria-label="Show more articles" disabled={!canGoForward} onClick={() => move(1)}><ChevronRight size={18} aria-hidden="true" /></button>
       </div>}
@@ -73,7 +67,7 @@ export function ClientStories({ articles }: { articles: DesignNewsArticle[] }) {
               <span className="client-story__brandname">{story.category?.split(",").at(-1)?.trim() || "Design News"}</span>
             </div>
             <p>{story.title}</p>
-            <span className="client-story__action">Read story <ChevronRight size={15} aria-hidden="true" /></span>
+            <span className="client-story__action kyte-tertiary">Read story <ArrowRight size={16} aria-hidden="true" /></span>
           </Link>
         </article>)}
       </div>

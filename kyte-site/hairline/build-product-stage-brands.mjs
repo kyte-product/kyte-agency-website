@@ -1,0 +1,18 @@
+import {assignedPalette} from './illustration-palettes.mjs';
+import {surface} from './illustration-materials.mjs';
+import {readFileSync,writeFileSync} from 'node:fs';
+import vm from 'node:vm';
+import {assemble} from '../../.agents/skills/hairline-create/build.mjs';
+import {__iconData as link} from '../node_modules/lucide-react/dist/esm/icons/link-2.mjs';
+const here=new URL('.',import.meta.url),out=new URL('../public/hairline/',here),source=readFileSync(new URL('product-stage-brands.js',here),'utf8');
+const context=vm.createContext({hairline(){}});vm.runInContext(readFileSync(new URL('../../.agents/skills/hairline-create/kernel.js',here),'utf8')+'\n'+source,context);const s=vm.runInContext('makeBrandsScene(HL)',context);
+if(s.bounds.right-s.bounds.x>130||s.bounds.bottom-s.bounds.y>106)throw new Error('Brands symbol exceeds mini frame');
+const esc=v=>String(v).replaceAll('&','&amp;').replaceAll('"','&quot;'),path=(d,style,extra='')=>`<path d="${esc(d)}" style="${style}" ${extra}/>`;
+const matrix=(p0,p1,p3,size)=>[(p1[0]-p0[0])/size,(p1[1]-p0[1])/size,(p3[0]-p0[0])/size,(p3[1]-p0[1])/size,...p0];
+const contour=d=>path(d,'fill:none;stroke:#a9b0b2;stroke-width:.9;stroke-linejoin:round;stroke-linecap:round');
+const defs=`<clipPath id="brands-solid">${path(s.panel.silhouette,'fill:white')}</clipPath><clipPath id="brands-face">${path(s.panel.face,'fill:white')}</clipPath><filter id="brands-blend" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="13"/></filter><filter id="brands-wash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.2"/></filter>`;
+const colors=surface({id:'stage-brands',silhouette:s.panel.silhouette,face:s.panel.face,plane:s.panel,palette:assignedPalette('product-stage-brands')});
+const icon=`<g transform="matrix(${matrix(s.panel.icon.p0,s.panel.icon.p1,s.panel.icon.p3,24)})" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-icon="lucide-link-2">${link.node.map(([tag,attrs])=>`<${tag} ${Object.entries(attrs).filter(([k])=>k!=='key').map(([k,v])=>`${k}="${esc(v)}"`).join(' ')}/>`).join('')}</g>`;
+function svg(structure=false,mask=false){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 128"><defs>${defs}</defs>${mask?'<rect width="160" height="128" fill="black"/>':''}<g transform="translate(${s.offset})">${mask?path(s.panel.face,'fill:white;stroke:none'):path(s.base.silhouette,'fill:#f0f2f2;stroke:none')+path(s.base.face,'fill:white;stroke:none')+contour(s.base.silhouette)+path(s.middle.silhouette,'fill:#f0f2f2;stroke:none')+path(s.middle.face,'fill:white;stroke:none')+contour(s.middle.silhouette)+path(s.panel.silhouette,'fill:#f0f2f2;stroke:none')+path(s.panel.face,'fill:white;stroke:none')+(structure?'':colors+icon)+contour(s.panel.silhouette)}</g></svg>`;}
+const html=(markup,bg='#f7f8fa')=>`<!doctype html><html lang="en"><meta charset="utf-8"><title>Connected brands illustration</title><style>html,body{margin:0;width:100%;height:100%;background:${bg}}body{display:grid;place-items:center}body>svg{width:480px;height:384px;max-width:100%}</style><body>${markup}</body></html>`;
+writeFileSync(new URL('product-stage-brands.svg',out),svg());writeFileSync(new URL('product-stage-brands-embed.html',out),html(svg()));writeFileSync(new URL('product-stage-brands-structure.html',out),html(svg(true)));writeFileSync(new URL('product-stage-brands-mask.html',here),html(svg(false,true),'black'));writeFileSync(new URL('hairline-product-stage-brands.html',here),assemble(source));console.log(JSON.stringify({bounds:s.bounds,offset:s.offset}));

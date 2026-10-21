@@ -13,7 +13,7 @@ export function Hero() {
           <Link className="hero__explore-button" href="/branding-marketing">Branding &amp; Marketing <ChevronRight size={16} aria-hidden="true" /></Link>
         </nav>
       </div>
-      <h1 id="home-hero-title" data-reveal-words><RevealWords text="We design, build & market exceptional digital experiences." accentWord="exceptional" /></h1>
+      <h1 id="home-hero-title" data-reveal-words><RevealWords text="We Design, Build & Market Exceptional Digital Experiences." accentWord="Exceptional" /></h1>
     </div>
     <ClientLogos />
     <div className="hero__showreel" data-nav-theme="dark">

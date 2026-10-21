@@ -1,10 +1,319 @@
+- **Website release audit and final Branding corrections (22 October 2026):** User authorized the accumulated changes since the last push for GitHub, main merge and Vercel deployment. Fixed square gray pixels, substantially tighter hero lines, a rolling entrance for later sentence letters, a scroll-only rotating kite behind the text, both service-rule hover colors, a slightly faster 48s testimonial loop, extra legal-to-pocket spacing and white backing/clipping at the final page edge. Expanded Branding navigation is left aligned and vertically centered; removed hover translation and glyph clipping. Header state is keyed to the route and closes on browser history restoration. Reviewed shared changes against origin/main 0516908. Full lint, TypeScript, palette guard and production build pass. Production-build crawl: 56 pages, 234 asset URLs, no failures and one H1 per content page. Browser review covered desktop plus 390px/810px first folds. Removed unused generator declarations and isolated unused vendor studies outside public assets. Patched ts-deepmerge with a Blade default-export compatibility adapter and a merge/prototype guard check; production dependencies have zero audit findings. Five unpatched development lint-tool advisories are documented. No forms submitted, CMS writes or launch-setting changes. Audit and screenshots: kyte-site/docs/release/2026-10-22/. Source publication and live verification in progress; exact PR, merge and deployment will be recorded after completion. Owner: Kyte website team.
+
+- **Branding reel pacing, two-font system and supplied text motion (22 October 2026):** Extended the reel travel from 80vh to 125vh with smooth interpolation and a 245svh stage; enlarged its resting dimensions by 0.2% upward/rightward while retaining the bottom-left baseline. Replaced the Branding page's italic Editorial New text with upright Geist Mono, including navigation and action buttons, helix notes, reel topline and Be the brand tagline; DM Sans remains the other page font. Adapted the supplied StickyAnimatedText component with the screenshot's 300vh, 64px offsets, 12px bounce, 9/-3-degree rotation values, .5 spread and 300px horizontal lead-in, retaining the existing continuous logo/footer handoff and reduced-motion behavior. Added gray pixel transitions above/below testimonials and persistent lime/sky pixels on the final homepage triangle. Updated design-system and Branding notes. TypeScript, focused ESLint, production build and whitespace checks passed; existing Sanity DNS warnings remain. Desktop browser at 1089x764 confirmed only DM Sans/Geist Mono in sampled content/actions, zero italic text, keyframe direction/rotation/bounce, gray boundaries, persistent triangle colors, hidden end-state logo and no horizontal overflow. Mobile motion remains unverified. Local port 3001 only, no deployment. Owner: Kyte website team. Next: user review. Previews: /private/tmp/kyte-mono-colour-ending.png and /private/tmp/kyte-testimonial-gray-entrance.png.
+
+- **Branding supplied artwork, letter motion and compact homepage ending (22 October 2026):** Replaced the images before STORY and UNFORGETTABLE with the newest supplied square ArcMatrix and colourful fan assets, using contain to preserve their silhouettes. Added the first five supplied images to the service previews, restored normal-case list titles, renamed Video & Motion Graphics, extended 2px dividers edge to edge and added blue hover text. Rechecked DZINR's public scroll implementation: letters move from random vertical percentages and rotations while crossing from the right viewport edge to the left 15%. Replaced the early-settling viewport-height formula with letter-height displacement, viewport-based timing, smoother scroll interpolation and a small rebound. The rotating mark descends continuously, is hidden before the sentence ends, and cannot reappear under the separate homepage layer. Replaced the full-height pinned triangle with a shallow 180px desktop/170px mobile pixel surface directly against the footer. Caption uses Geist Mono; transparent blue-outlined ellipse matches Branding navigation typography and links to Home. Updated asset source manifest, design-system page and Branding design/interaction notes. TypeScript, focused ESLint and production build passed; existing Sanity DNS warnings remain. Fresh desktop browser review confirmed full hero artwork, visible letter displacement/rotation, a 180px ending, zero footer-to-triangle gap, transparent CTA, matching fonts, hidden logo and no horizontal overflow. Mobile and physical-device motion remain unverified. Local port 3001 only, no deployment. Owner: Kyte website team. Next: user review. Preview: /private/tmp/kyte-branding-compact-ending.png.
+
+- **Branding footer, inline service motion and later logo descent (21 October 2026):** Added a separate white spacer after the process pin. Changed the service heading to OUR CREATIVE SERVICES, removed its glyph, practice label and numbers, enlarged uppercase service names and set 2px dividers. Inspected Locomotive's live CSS: inline image opens from 0 to 1.5em, height 1em, 450ms entry/200ms exit with cubic-bezier(.23,1,.32,1). Adapted that structure and added a replaying pixel-to-clear canvas on hover/focus. Added the reversed existing pixel field before the horizontal text scene. Letters now have seeded varied heights/rotations, a damped overshoot and rebound, plus frame-independent scroll smoothing. Replaced the initial WebGL mesh with lazy-loaded Three.js physical chrome, rounded extruded blades, individually beveled mirror tiles merged into three meshes, studio reflection lighting, purple accents and glints. The user then asked for a later entrance with no center dwell: the mark now enters around halfway through the text pass and keeps descending behind the footer before the sentence fully exits. Built a Branding-only blue ruled footer; removed the proposed Explore Work image strip per the follow-up, retaining identity, navigation, contact and legal links. Shared footers remain unchanged. Updated design-system and design/interaction notes. TypeScript, focused ESLint, whitespace checks and production build passed; existing Sanity DNS warnings remain. Desktop browser confirmed uppercase rows, 2px dividers, equal image/text height, live pixel reveal, reflective tile rendering, late mark entry, footer occlusion and absence of the work gallery. New footer prerender Date warning was fixed. Mobile and physical-device performance remain unverified. Local preview on port 3001, no deployment. Owner: Kyte website team. Next: user review of motion and chrome finish.
+
+- **Branding closing sequence and shared action correction (21 October 2026):** Removed UI/UX entries from the Branding service directory and switched its type to DM Sans. Removed the old two-row autoplay marquee, paragraph and contact invitation. Studied DZINR's pinned single-sentence footer transition in the live browser, then built one scroll-bound right-to-left phrase with alternating per-letter vertical entrances. Added an original native WebGL Kyte mesh with rounded blade contours, beveled extrusion, reflective tiled shading and a purple tint, based on the supplied image. The mark rotates while visible, descends with scroll and disappears under the footer. Scroll motion reverses on return, rendering pauses offscreen, and reduced motion uses a static heading. Replaced the shared translucent Brochure fill with solid white and removed Branding styling from the shared footer tertiary action. Updated the design-system note. TypeScript, focused ESLint, whitespace checks and production build passed; build retains existing Sanity DNS warnings. Desktop browser review confirmed the five Branding links, DM Sans, sentence travel and stagger, rotating mark, footer handoff, and solid-white Brochure plus normal footer tertiary after navigation to Home. Mobile and physical-device performance remain unverified. Preview: /private/tmp/kyte-branding-flight-review.png. Local only, no deployment. Owner: Kyte website team. Next: user review of motion and model finish.
+
+- **Branding service directory and closing section (21 October 2026):** Added a white editorial directory for all ten UI/UX, development, brand, and marketing service routes on `/branding-marketing`. Rows reveal existing project images between split title halves on hover or keyboard focus. Added a full-bleed Kyte-blue closing section with two opposing continuous “Are you ready to fly with us?” marquees, Locomotive-inspired glyphs, and a short contact invitation; it flows straight into the footer. The shared split CTA banner is hidden on the Branding landing page. Used the Editorial New trial only in the private local preview; public font use remains blocked pending a web license. The 3D Kyte mark transition remains pending the additional reference the user plans to send. Local preview only, no deployment. Owner: Kyte website team. Next: user review.
+
+- **Shared navigation and page-top rhythm (21 October 2026):** Restored the regular Brochure button and Contact Us chevron on routes outside `/branding-marketing`, while preserving page-aware contrast for the outlined Brochure control. Scoped the editorial nav overrides directly to the Branding & Marketing header so they cannot affect other routes. Set the UI/UX hero and Work index to a shared responsive top-spacing token for desktop and mobile. Browser review at 1090px confirmed the usual rectangular nav buttons and aligned first-fold spacing on both routes. Focused ESLint, TypeScript, and `git diff --check` passed. Local preview only, no deployment. Owner: Kyte website team. Next: user review.
+
+- **Branding landing navigation correction (21 October 2026):** Standardized the landing-page Brochure and Contact buttons to the same oval dimensions and Editorial New face, retaining white and blue fills. Kept this treatment scoped to `/branding-marketing`, and fixed its logo variant while scrolling. Services now reveals two oval links in normal flow, pushing later items down; corrected the reveal to open from the top and tightened menu type and spacing so all links and actions fit one laptop viewport. Reset the menu button's native appearance to prevent a square control. Browser review at 1090×764 confirmed closed-on-entry after returning from `/work`, both header buttons, the two-line menu icon, submenu layout shift, and all navigation items fitting on screen. Focused ESLint, TypeScript, `git diff --check`, and `next build` passed. Build logs retain existing Sanity CDN DNS warnings. Local preview only, no deployment. Owner: Kyte website team. Next: user review.
+
+- **Branding landing visual refinements and menu motion (21 October 2026):** Matched landing CTAs and case-study actions to the oval editorial button treatment and local Editorial New trial face. Added a compact monochrome glyph set, including the brain and boxed/circled marks, to the Helix notes and showreel captions; removed the separate globe. Tightened story line spacing, narrowed testimonial columns, and added white breathing room after the sticky process section. Reworked the expanded menu with a blue panel reveal, staggered bottom-up link entrances, white current/hover states, and a Services hover/focus panel linking to UI/UX and Branding. Focused ESLint, TypeScript, `git diff --check`, and `next build` passed; browser preview confirmed the expanded menu and service links. Build retains existing Sanity CDN DNS warnings. Editorial New trial remains local preview only and is excluded from deployable font assets pending web licensing. No deployment. Owner: Kyte website team. Next: user review.
+
 # Kyte website context and progress
 
-Last updated: 14 October 2026, Asia/Kolkata
+- **Branding landing header, CTA and Helix notes (21 October 2026):** Removed the shared closing CTA banner from `/branding-marketing` while retaining the footer. Made the landing-page header compact with a white Brochure pill, blue Contact pill and menu toggle; links now appear in a cobalt full-screen menu based on the supplied DZINR interaction. Updated Helix annotations to mixed-case Editorial New trial text, arranged as horizontal blocks with monochrome custom glyphs and Kyte's own location/contact details. Focused ESLint, TypeScript, whitespace checks and production build passed. Browser review confirmed open/closed menu states, CTA removal and annotation rendering. Build logs retain the existing Sanity CDN DNS warnings. Local preview only; trial font is excluded from deployable assets and requires a web license before public use. No deployment. Owner: Kyte website team. Next: user review.
+
+- **Editorial New in Helix preview (21 October 2026):** Applied the trial Regular and Italic faces to the horizontal Helix corner notes and adjusted the type size for the editorial layout. Font binaries live in the local `kyte-site/public/fonts` folder and are excluded by the worktree’s Git info/exclude file; they are absent from deployable source. Browser preview at 1093px confirmed the serif rendering and retained the carousel layout. `next build` passed, with existing Sanity CDN DNS warnings during static page generation. No deployment. Owner: Kyte website team. Next: obtain a web license before any public use.
+
+- **Editorial New personal trial (21 October 2026):** The user supplied the email address, received the official personal-use font trial, and authorized acceptance of its terms for this personal website. The included May 2021 trial EULA permits personal use and development testing, but prohibits use on publicly available websites and public font distribution. Trial font binaries are available only in the local development preview, excluded through the local Git info/exclude file, and must not be deployed. Public embedding requires Pangram’s web license.
+
+- **Locomotive-inspired font review (21 October 2026):** Identified the reference typeface as Pangram Pangram’s Editorial New. Applying this personal trial in a public website is outside the trial EULA, so only the private local preview may load the font until a web license is obtained. Existing oval button styling remains unchanged.
+
+- **Carousel editorial glyphs refined (21 October 2026):** Restored Geist Mono and solid ink contrast for the two horizontal, underlined corner copy groups. Added restrained geometric/directional glyphs inline with the copy, retaining the wireframe globe and removing the separate arrow row. Updated the interaction and design-system notes. ESLint, TypeScript and diff checks passed; desktop preview confirmed the text groups remain clear of the image helix. Local only, no deployment. Next: user review.
+
+- **Editorial carousel copy refined (21 October 2026):** Removed the repeated Kyte mark, the top-left symbol row and the scroll/drag instructions. Rebuilt the notes as two horizontal pairs of underlined serif text blocks, with a typographic arrow between the upper blocks and the wireframe globe beside the lower pair. Increased type size and kept the copy focused on the studio and its work. Updated the design-system and interaction notes. Focused ESLint, TypeScript and whitespace checks passed; desktop review confirmed the text groups sit outside the image helix. Local only, no deployment. Next: user review.
+
+- **Editorial details on the image carousel (21 October 2026):** Added two quiet corner overlays over the helix: a Kyte mark and studio/location details at top left, plus exploration instructions, a sequence label and a wireframe globe at bottom right. Added a few typographic glyphs, using small uppercase Geist Mono throughout. The notes sit above the canvas without intercepting pointer input and compact on mobile. Focused ESLint, TypeScript and whitespace checks passed. Desktop browser review confirmed both clusters stay outside the central image cards. Local only, no deployment. Next: user review.
+
+- **Landing button shape (21 October 2026):** Changed the branding landing buttons from capsule corners to a true elliptical outline to match the supplied reference. Applied the shape across landing-page actions, header contact, closing CTA, footer contact and testimonial impact actions. ESLint, TypeScript and whitespace checks passed; browser review confirmed the header contact control now has a fully curved oval outline. Local only, no deployment. Next: user review.
+
+- **Testimonial width and process pacing (21 October 2026):** Narrowed testimonial columns at desktop and mobile while preserving content-driven card height and fitting the card actions. Process reveals now start in 0.16 progress intervals across 0.38 intervals, so each card begins while the previous one is still appearing; shortened the sticky section scroll span and added space above and below it. ESLint, TypeScript and whitespace checks passed. Browser review at 1093×818 confirmed the narrower testimonial columns and breathing room after the process section. Local only, no deployment. Next: user review.
+
+- **Glide-inspired client testimonials (21 October 2026):** Matched the reference's horizontal marquee of vertical columns, with two stacked cards in each column. Quote cards stay white and brand-blue cards carry verified impact numbers from Kyte's current public site (5M+ impressions, 100+ projects, 3M+ views, 50+ clients). Kept the uppercase single-line heading and varied quote highlights, with square corners and no eyebrow or pause control. Cards hug their own content; impact cards include the shared light primary “Start a project” button. Reduced motion switches autoplay to manual horizontal scrolling. Updated design-system and branding design notes. Focused ESLint, TypeScript, whitespace and local desktop/mobile card-bound checks passed. Local only, no deployment. Next: user review.
+
+- **Testimonial sizing and oval landing buttons (21 October 2026):** Removed minimum card heights so quote and impact tiles size to their own content. Added the shared primary action to each blue impact card and kept duplicate loop actions out of keyboard navigation. Matched landing-page actions, header contact, closing CTA and footer contact to the supplied thin oval reference, with italic serif labels, blue outlines on light surfaces and white outlines on blue or dark surfaces. Preserved square card corners and varied soft-color highlights. Focused ESLint, TypeScript, whitespace and desktop/mobile browser bounds checks passed. Local only, no deployment. Owner: Kyte website team. Next: user review.
+
+- **Selected Work transition removed and hero spacing tightened (21 October 2026):** Removed the scroll image transition so the blue work section starts directly with its heading and rows. Reduced vertical spacing between hero lines on desktop and mobile. Local only, no deployment. Next: user review.
+
+- **Branding hero height and showreel lower spacing (21 October 2026):** Set the story hero to fill the viewport below the announcement strip and fixed navigation, so the blue showreel does not enter the first viewport. Added 20svh of lower breathing room to the showreel stage after its scale animation. Updated branding and design-system documentation. Local only, no deployment. Next: user review.
+
+- **Showreel intro spacing and type refinement (21 October 2026):** Raised the video start slightly to reduce the space below the intro row, changed both intro labels to regular Geist Mono, removed the right-side arrow, and lightened the statement to regular weight. Local only, no deployment. Next: user review.
+- **DZ!NR-inspired showreel and full-width text reveal (21 October 2026):** Reworked the section after the branding hero with the supplied intro copy and exact long statement. The edge-to-edge section uses Kyte blue. The inset showreel stays left aligned and moves into the viewport center before it starts scaling down; the scale then eases across a matched 0.8-viewport scroll range. Its final tile sits slightly above the first text line so its lower edge meets the visible baseline. Only that first line indents beside the tile; later lines return to the left edge. The statement stays present, with normal page flow and no floating playback control. Reused the existing Kyte video and added a static reduced-motion layout. Focused ESLint, TypeScript, whitespace and local desktop scroll review passed, including the center threshold, final baseline alignment and natural release into the next section. Local only, no deployment. Next: user review.
+- **Brand story glyph clipping fix (21 October 2026):** Expanded the reveal mask with balanced vertical and horizontal breathing room so descenders and the final full stop remain visible without changing the staggered rise or row spacing. ESLint, TypeScript, whitespace and desktop browser checks passed. Local only, no deployment. Next: user review.
+- **Brand story hero sizing and staggered entrance (21 October 2026):** Reduced the regular-weight heading size, narrowed its centered measure, and tightened vertical spacing. Split each line into individual word/image reveal items so all visual parts rise from below in sequence; added reduced-motion behavior. Updated the branding design and interaction notes. Focused ESLint, TypeScript, whitespace and desktop browser checks passed. Local only, no deployment. Next: user review.
+- **Sticky helix scroll stage (21 October 2026):** Pinned the carousel below the fixed navigation for roughly three viewport lengths so several scroll gestures rotate the images before Selected Work enters. Verified the artwork continues changing while pinned and the next section appears when the stage releases. ESLint, TypeScript, and whitespace checks passed. Local only, no deployment. Next: user review.
+- **Brand helix controls removed and scroll-driven rotation (21 October 2026):** Removed visible Kyte/image labels, index count, helper copy and previous/next arrows from the supplied helix. Its image sequence now rotates in response to page scroll while the helix is in view, with scrolling continuing naturally into Selected Work. Existing drag and keyboard access remain. Focused ESLint, TypeScript, whitespace and browser checks passed. Local only, no deployment. Next: user review.
+- **Selected-work sizing and full-bleed refinement (21 October 2026):** Matched the MetaLab reference with a compact section label, reduced row and title sizing, five-column project metadata, and the shared tertiary actions without arrows. Extended the cobalt surface and dividers edge to edge while keeping row content aligned to the site inset. Preserved Locomotive-inspired title scramble and image reveal. Focused ESLint, TypeScript, whitespace checks, and desktop browser review passed. Local only, no deployment. Next: user review.
+- **Current branding landing (21 October 2026):** Main content is the regular-weight story hero, supplied DitherHelixCarousel and cobalt selected-work rows. The work section reuses four current showcase entries and adds hover/focus title scrambling plus image reveal; mobile images are inline. Shared header and CTA/footer remain. Local only. Next: user review.
+- **MetaLab / Locomotive inspired project section (21 October 2026):** Added a cobalt Selected Work section after the supplied helix, combining MetaLab-style metadata rows with a brief Locomotive-inspired scramble and image reveal on hover or keyboard focus. Reused four existing project entries and their existing links/assets; reduced motion skips the effects. Updated branding design/interaction notes and design-system documentation. ESLint, TypeScript, whitespace, production build and desktop/mobile browser review passed. Local only, no deployment. Next: user review.
+
+- **Superseded branding interaction exploration (21 October 2026):** The story hero now leads into a four-view orbit gallery around the Kyte mark, followed by a mixed-typography service reveal with interactive stickers and existing service links. Flat, Tilt, Ring and Gallery morph between layouts; mouse/keyboard controls change the viewing angle. Local exploration with temporary art. Next: user visual review.
+
+- **Current branding story hero (21 October 2026):** Replaced the image-letter mosaic with the user's editorial poster direction: Every brand has a story. We make yours unforgettable. The four lines use regular-weight DM Sans, three user-supplied visuals and the Kyte mark before the right-aligned final line. Removed the caption and previous temporary Pinterest images. Shared header, footer, child services and Locomotive Scroll retained. Local only. Next: user visual review.
+
+
+- **Locomotive Scroll installed (21 October 2026):** Installed locomotive-scroll 5.0.1 and replaced the shared standalone Lenis controller with Locomotive. One scroll loop owns wheel smoothing; shared route resets remain instant. Reduced motion uses native scrolling, with live preference handling. Existing page layouts remain unchanged. Local only. Next: user scroll review, then opt-in section effects if requested.
+
+
+- **Current branding landing reset (21 October 2026):** User discarded both landing experiments. `/branding-marketing` now uses the normal light Kyte header, title-only main content and shared CTA/footer. Removed `/branding-marketing-v2`, immersive and V2 components/styles, exclusive scene/gallery/Pinterest assets, V2 fonts and experimental design docs, plus unused Three.js dependencies. Removed landing-only navbar and scroll exceptions; retained child service pages and their dark service theme. This supersedes all earlier landing experiment decisions below. Local only. Next: fresh direction when requested.
+
+
+- **V2 scroll services, stacked Recent Work and black closing sections (21 October):** Inspected Odido's left-copy/right-pinned-media behavior and the user's supplied work-stack screenshot. Replaced V2 service grid with five scroll chapters, pinned/crossfading visual and existing service links; mobile uses inline media. Recent Work is now a full-width black sticky stage with four colored image frames clearing on scroll, project previews, count and pink View More Projects. Closing CTA and footer share black surfaces; logo turns white over dark areas. Unified section-heading/body/eyebrow sizes and optically aligned serif capitals. Updated design-system, IA and reference notes. ESLint, TypeScript, whitespace and production build passed; existing CMS DNS warnings remain. Browser confirmed work counter/transforms, changing service image with visual pinned at top, black CTA/footer, equal 92.16px desktop section titles and no overflow at 1280/810/390px. V1 unchanged, local only. Next: user visual review.
+
+- **V2 rebuilt in the Extrafazant direction (21 October):** Superseded the Baga concept only at /branding-marketing-v2. Studied home/about/work/services/contact/FAQ and the case-study template; rebuilt a light-only page with mixed condensed sans/serif titles, fixed white navigation, blue scribble links, original Kyte stickers, four staggered project cards, showreel, five service cards, existing branding-team portraits, FAQ and split contact/footer. V1 remains intact. Downloaded open-license Oswald and Instrument Serif from Google Fonts with OFL/provenance; reference proprietary fonts/artwork were not reused. Archived prior V2 source locally. Updated IA, design-system and docs/branding-v2/DESIGN.md. ESLint, TypeScript, whitespace and production build passed; existing Sanity DNS warnings remain. Desktop/tablet/mobile browser checks confirmed no overflow, font loading, project dialog focus/Escape, showreel playback/closure, FAQ and contact dialog. No form submitted, no deployment. Next: user visual review.
+
+- **Separate branding version two (21 October):** User explicitly retained version one and requested a separate reference-inspired concept. Created /branding-marketing-v2 with black/cream surfaces, original interactive dot wordmark, editorial typography, four existing project previews followed by View More Projects, five service links, four-stage process, existing testimonial and contact/footer. /branding-marketing remains intact. Studied Baga through fresh scrape and browser inspection; documented observed patterns and proposed adaptation in kyte-site/docs/branding-v2/DESIGN.md. Updated IA and design-system notes. ESLint, TypeScript, whitespace and production build passed. Browser checked desktop/tablet/mobile without horizontal overflow, project dialog keyboard/focus behavior and service links. Local only, no deployment. Next: user visual review of both alternatives.
+
+- **Instant fresh scroll position across routes (21 October):** Shared smooth-scroll setup now runs in a layout effect, clearing the previous Lenis instance and jumping to zero with instant behavior before a new route paints. Disabled browser scroll restoration and reset restored pages. PageTransition router pushes use scroll:false so the shared reset owns the change; same-page anchors remain untouched and initial deep links stay supported. Browser verified scrolled branding to Work at y=0, footer-link navigation to About at y=0, and Back to Work at y=0. Updated design-system notes. Focused ESLint, TypeScript and whitespace checks passed. Local only. Next: user review.
+
+- **Organic loop correction (21 October):** User rejected the near-circle as artificial. Loosened it to an asymmetric tilted oval closer to the earlier free-flow path, retaining placeholders and the overlapping crossover. Testimonial edges still activate only during slides and return to no mask afterward, verified in browser. Focused checks passed before this path-only adjustment; whitespace check rerun. Local only. Next: user visual review.
+
+- **Round placeholder loop and transition-only testimonial edges (21 October):** Made Creative Flow's open path rounder and allowed the entry/exit crossover to overlap. Replaced all project images in this section with mixed-ratio neutral SVG placeholders, and fitted the center heading to the smaller circular opening. Removed the resting testimonial mask; fade and 5px blur now occupy only outer gutters while cards slide, then clear on transition end. Browser verified no stream image elements, exact viewport edge, no idle mask and active transition blur. ESLint, TypeScript and whitespace checks passed. Local only. Next: user review.
+
+- **Final local polish before deferred redesign (21 October):** Tightened quote lines and straightened tiles; removed visible stack labels. Slowed and reduced reveal travel. Fixed wheel gesture accumulation for easier single-scroll paging. Creative Flow now enters at 8x timeline speed, eases to 0.65x, and uses DM Sans throughout. Testimonials use a real sliding track with faded edges and an accessible active-card announcement. Browser checked carousel movement, masked edges, one native scroll advance and 390px overflow; ESLint, TypeScript and whitespace checks passed. No duplicate or deployment created. User deferred broader redesign/duplication until later. Next: user review.
+
+- **Masked upward quote reveal (21 October):** Each of the four editorial lines now has an overflow-hidden container and an inner text/image wrapper. All content rises from below with a 0.95-second eased transform and 0.16-second line stagger, replacing blur fades. Replay, offscreen pause and reduced motion remain. Browser verified all four masks and animation transforms, including inline images; the preceding image stream refinement also exits fully right with opacity zero. Focused ESLint, TypeScript and whitespace checks passed. Local only. Next: user motion review.
+
+- **Sequential image-stream entrance and exit (21 October):** Creative Flow now resets empty on every arrival, feeds 44 mixed-ratio image cards from the left at 0.38-second spacing and uses paced path motion. Removed negative animation delays that prefilled the loop. Made its stage viewport-wide, keeping the stream visible to both screen edges. Forward scroll accelerates the path timeline and rapidly clears the ribbon right. Pause no longer restarts the sequence. Browser verified zero cards at entry and exact 0-to-1280px stage bounds. Focused ESLint, TypeScript and whitespace checks run. Local only. Next: user motion review.
+
+- **Editorial quote and creative image flow (21 October):** Reworked the quote with oversized DM Sans, serif Yours and compact fixed-proportion image tiles following the supplied references. User rejected the first expanding strips; replaced with cropped tiles and alternating alignment. Replaced the landing Industries frame with a 28-image open looping ribbon around central text, entering left and exiting right on scroll. Added pause control, offscreen/hidden pause and reduced-motion handling. Shared industry routes remain. Updated design-system and immersive notes. ESLint/TypeScript passed; desktop browser verified new navigation, rendered images and pause control; 390px checked for horizontal overflow. Local only. Next: visual review.
+
+- **Quote and interactive visuals refinement (21 October):** Added separate quote and image-stack snap frames before services, bringing the page to ten frames. Enlarged uppercase Geist Mono quote with subtle staggered blur/fade, preserving the landscape backdrop without a grid or scramble. Image cards animate on every entry, lift/fade out with scroll, follow pointer drags and cycle behind on release, click or keyboard activation. Replaced Ogale in this stack with Fincart signage. Brochure now uses borderless white glass at 10% opacity, 18% hover. Updated design-system and immersive-page notes. Focused ESLint and TypeScript passed; browser verified click/drag order, repeated entry and scroll exit, plus no horizontal overflow at desktop and 390px. Local only, no deployment or paid media. Next: user visual review.
+
+- **Current branding review (21 October):** Expanded frosted page complete locally. Fixed Kyte still with compact showreel card, ten section indicators, service bento, shared expanding process without illustrations, linked industries, existing quotes, studio placeholder, FAQs and spacious shared footer with Geist Mono accents. Brochure uses borderless translucent white glass sitewide. No deployment or new video generation.
+
+- **Current branding landing implementation (21 October):** Selected v4 still installed. Fixed hero with project previews and transparent navbar; scroll reveals a borderless frosted service bento as one snap frame, then contact. Side controls exit in opposite directions, scenery progressively blurs, and a right-side dot pill tracks sections. Gallery removed from rendering. Local review only.
+
+- **Current hero review (21 October):** Ring rejected and removed from motion study. New simplified ring-free wide/close v4 stills are proposed; reference colors and actual camera/rotation timing studied. Later video brief prepared. No additional Higgsfield video spend. Await visual review.
+
+- **First video rejected; corrected framed motion prepared (21 October):** User identified the missing camera introduction and visible logo animation. The original prompt explicitly locked the camera and constrained yaw to two degrees, which was the wrong motion brief. The completed 128-credit clip is saved locally as a rejected reference; it is not installed as the finished hero. Prepared a new framed keyframe using the built-in image tool and a local Three.js motion study showing a one-time camera push-in, a stationary outer circle, independent full inner Kyte rotation and a final hold. The motion study is geometry/timing only. Recorded the corrected sequence and intro/idle separation in `docs/branding-hero/CORRECTED-MOTION.md`. No second paid video job submitted. Next: user review before any further paid generation.
+
+- **Cinematic video generation approved and submitted (21 October):** User explicitly selected the original eight-second 1080p option for 128 Higgsfield credits. Uploaded the approved Kyte landscape successfully after the new explicit approval, confirmed the upload, rechecked the 128-credit quote and submitted exactly one Seedance 2.5 job (`871c11e7-5393-46b3-b3fd-b91f8752c701`). Used the same approved image at start and end, locked camera, slight rigid logo yaw, breeze/ripples and steady bright cool-blue daylight. Rendering is pending. Native video player and deferred gallery pass ESLint and TypeScript. Archived the superseded real-time source and 31 MB PBR assets locally and removed them from public delivery. No deployment. Next: inspect the completed result, encode desktop/mobile loops and verify locally.
+
+- **Video cost hold (21 October):** User requested a rendered cool-blue landscape loop instead of the real-time day/night scene. Automatic review rejected uploading the approved still to Higgsfield without explicit permission for that asset and destination. The user then declined the 128-credit eight-second 1080p quote and explicitly said not to generate yet, asking for cheaper options only. No upload succeeded and no video job was submitted or charged. Prepared the native video component and replaced the real-time opening with the approved poster while videoReady is false; gallery creation now defers until near the viewport. Work remains local and unpublished. Read-only quotes for four seconds: 1080p 64 credits, 720p 28 credits, 480p 12 credits. Prepared component ESLint and TypeScript checks passed. Current action: await the user’s decision.
+
+- **Real-time stone hero and day/night review (20 October):** Added `StoneHero.tsx` and `stoneScene.ts` before the branding gallery: true extruded stone Kyte geometry, terrain, rocks, instanced grass, flowers, reflective moving water, limited drag orbit and lighting across day/dusk/night. Added a manual time slider and automatic play/pause cycle, offscreen/hidden pause, reduced-motion support and the approved still fallback. Generated a limestone texture with the built-in image tool, saved optimized assets in `kyte-site/public/branding-scene/`, documented its prompt and implementation in `docs/branding-hero/STONE-SCENE.md`, and updated the design-system description. Desktop and 390 px browser checks covered lighting, advancing cycle, controls, orbit and gallery handoff; no captured console errors. ESLint, TypeScript, whitespace check and production build passed, with Sanity DNS fetch warnings. Saved day/night/mobile screenshots in the main workspace `exports/branding-hero/`. First interactive interpretation remains simpler than the approved rendered still; physical-device performance and OS reduced-motion behavior are unverified. Local only, unpublished. Next: user visual review and terrain/material refinement.
+
+- **Stone Kyte hero still, v1 (20 October):** Generated and visually reviewed the first landscape concept using the actual Kyte mark and user-supplied landscape reference. Rough matte limestone sculpture, rocks, blue grasses, water and daylight. Saved `exports/branding-hero/kyte-stone-landscape-v1.png` and its prompt specification in the main workspace. Built-in image generation used. This is a raster concept, not a 3D model; no motion, page integration or deployment. Next: user review of the still.
+
+- **Branding cinematic scene proposal (20 October):** Reviewed the user’s two Grappus homepage screenshots. Proposed a matte, weathered stone Kyte mark in a detailed rocky landscape, followed by the rotating gallery and a glass content overlay. This is a feasibility discussion only; no landscape asset or new section has been built. Recommended approving a still composition first, then rendered motion and scroll choreography. Next: user decision on the scene direction. Local only.
+
+- **Branding gallery reference study and hero (20 October):** Inspected the live Grappus experiments desktop and mobile interactions and documented observed camera, placement and control behavior in `kyte-site/docs/branding-hero/DESIGN.md`. Rebuilt the local hero with 56 upright billboard planes around a cylindrical ring, 18 optimized existing Kyte images, a smaller 3D mark, drag orbit, distance control, image previews and scroll pullback/fade. Mobile uses an angled swipeable fan. Added resource cleanup, idle/offscreen rendering controls, keyboard preview controls and reduced-motion behavior. Desktop and 390 px browser checks covered drag, swipe, preview, keyboard navigation and scroll. ESLint, TypeScript, whitespace checks and production build passed; build logged unavailable Sanity DNS fetches in this environment. Existing header, dark theme and typography retained. Local only, unpublished. The new rocky opening is proposed as a separate chapter before this gallery.
+
+- **DesignRush badge background (20 October):** Removed the white background applied to the badge in branding dark mode, preserving the transparent PNG against the footer card. Browser review and whitespace check passed. Local only, unpublished.
+
+- **Dark footer surface (20 October):** User clarified that footer was intended. Set the branding dark footer to the existing charcoal surface token (#111113), distinct from the black page, and its utility cards to the raised surface token (#18181b). Utility section remains transparent for one continuous footer surface. Browser color review and whitespace check passed. Local only, unpublished.
+
+- **Branding announcement strip (20 October):** Set the strip above the header to the shared brand action color with white text in branding dark mode. Applies to the branding landing page and all child services. Browser color check and whitespace check passed. Local only, unpublished.
+
+- **Branding service dark surfaces (20 October):** Fixed FAQ cards and expand controls to use dark neutral surfaces with light text, including hover. Raised the testimonial feedback panel from the main charcoal surface to the lighter surface token. Removed process-card borders and shadows in dark mode, and made inactive decision-story icons white. Changes are scoped to the shared branding dark theme across all five services. Desktop and 390 px mobile review plus computed styles confirmed the dark FAQ and feedback surfaces, borderless process cards and white inactive icons; whitespace check passed. Local only, unpublished. Next: review before branding landing page work.
+
+- **Footer aligned to homepage content (20 October):** Narrowed the three shared footer containers to the homepage sections' actual content width, subtracting the shared section inset once in the width calculation and keeping horizontal padding at zero. Desktop browser bounds match the impact and Design News introductions. Adjusted icon-button widths and card proportions to fit the narrower row while retaining 48 px button heights. Browser review and whitespace check passed. Local only, unpublished.
+
+- **Footer width and hover consistency (20 October):** Unified navigation, utility cards and legal row under one shared page-width rule with no horizontal container padding. Removed the card wrapper width deduction and replaced navigation cell padding with grid gaps. Browser measurements confirmed all three containers share identical left/right edges. Removed social icon lift and color-changing hover effects in light and dark modes; social controls now use the shared neutral button hover. Browser review and whitespace check passed. Local only, unpublished.
+
+- **Footer background continuity (20 October):** Removed the utility section background so the cards and legal row sit on the same background as the main footer. Whitespace check passed. Local only, unpublished.
+
+- **Footer legal row width (20 October):** Restored the copyright/legal row to the shared page max width with centered margins and zero horizontal padding. Increased top padding from 28 px to 40 px. Local browser measurements confirmed the width and padding; whitespace check passed. Local only, unpublished.
+
+- **Homepage review notes (20 October):** Applied all ten comments: larger hero service links, capitalized hero copy, slightly larger service-card descriptions and spacing, matching top-aligned section introduction columns based on the impact section, no homepage FAQ description, viewport-wide logo tickers, linked footer service headings with arrows, a smaller gap before footer utility cards, and a viewport-wide legal row with more top padding. Added shared column/gap tokens and design-system notes, including the related product and Website section patterns. Reviewed desktop plus 810 px and 390 px responsive previews; confirmed matching desktop column measurements and no horizontal overflow. Focused ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Footer card spacing and DesignRush layout (20 October):** Moved the DesignRush badge outside its profile button and placed it beside the title and button. Increased contact button side padding to match the other controls and set 6–8 px gaps across button groups. Cards retain content-driven height. Confirmed in localhost. ESLint, TypeScript and whitespace checks passed. Local only, unpublished.
+
+- **Footer utility controls (20 October):** Simplified the four cards to title plus a single row of 48 px white buttons. AI and social actions are icon-only; the DesignRush badge sits in its profile button; email and phone share one row. Card height now follows its contents. Kept dark-mode button surfaces neutral. Local browser review, ESLint, TypeScript and whitespace checks passed. Local only, unpublished.
+
+- **Footer card content layout (20 October):** Kept all four cards on one desktop row with a fixed 14 px gap. The DesignRush badge, title and tertiary profile link now sit side by side. The Reach Out title sits above the email and phone buttons, which share one row; that card receives the extra width. Confirmed in the localhost browser. ESLint, TypeScript and whitespace checks passed. Local only, unpublished.
+
+- **Footer card spacing (20 October):** Kept the content-hugging widths and changed desktop/tablet card gaps to a fixed 14 px instead of distributing leftover space. Confirmed the local footer layout. Whitespace check passed. Local only, unpublished.
+
+- **Footer cards hug content (20 October):** Switched the utility cards to content-sized columns with even distribution. The email and phone controls stay on one line; compact screens retain a stacked layout with a responsive contact size. Browser review confirmed the desktop arrangement. Focused ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Footer utility cards (20 October):** Replaced the footer utility strip with four separated white cards, even internal padding, larger cards and a larger DesignRush badge. Increased email and phone controls, kept the profile action tertiary, and preserved dark surfaces on branding pages. Reviewed the localhost desktop layout. Focused ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Footer utility layout refinement (20 October):** Replaced the experimental SVG underline treatment with a clean text underline and a matching underline beneath tertiary arrows. Enlarged and top-aligned utility labels, narrowed the content grid slightly while keeping divider rules edge to edge, shortened the row, and placed the DesignRush label/profile link beside the badge. Browser review, ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Tertiary footer CTA and arrow consistency (20 October):** Changed “View Agency Profile” from a filled button to a tertiary link, aligned tertiary action icons to a right arrow, and underlined both label and arrow on hover. Checked the footer layout in the browser. ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Homepage and shared interface polish (20 October):** Matched impact-stat dividers to the content height, increased their text inset, and aligned the purple accent with the labels. Applied capital case to section headings, removed decorative service-card illustrations, unified project metadata, refined footer labels and the DesignRush CTA, extended footer rules edge to edge, and standardized carousel arrows and tertiary control sizing, including mobile navigation and the design-system sample. Logo ticker assets render muted from first paint and continue moving on hover. Updated the design-system notes. ESLint, TypeScript, whitespace checks and production build passed; Sanity fetches logged DNS failures during build-time content generation. Local only, unpublished. Next: user review.
+
+- **Arrow-controlled card carousels (20 October):** Applied the reviewed edge alignment across horizontal card rails with previous/next controls: product moments, home and service testimonials, Design News story cards, Website service needs cards, and Fincart screen rails. A shared scroll helper keeps the initial inset, aligns each following card flush to the track edge, and leaves the final card inset at the natural end. Updated the design-system rule. Focused ESLint, TypeScript, whitespace, and production build passed. Desktop browser checks confirmed initial, advanced, and final alignment on product moments, plus advanced alignment on Fincart; homepage and service testimonials and Design News cards were also checked. Build-time Sanity fetches logged DNS failures in this network environment, while the build completed. Local only, unpublished. Next: user review.
+
+- **Branding dark-to-light route transition (20 October):** The branding theme now follows the active route through a root-level theme attribute, with a server-rendered fallback for first paint. The header also recalculates its contrast state on route changes. Tested light to dark to light navigation without refreshing. Local only, unpublished. Next: user review.
+
+- **Branding dark text color (20 October):** Brand purple is now reserved for buttons, icons, borders, and filled surfaces in dark mode. Text accents, labels, hover states, headings, and deliverable titles use white or gray. Updated the design-system notes. Local only, unpublished. Next: user review.
+
+
+Last updated: 20 October 2026, Asia/Kolkata
 
 This is the handoff file for future Codex chats and team members. Read `AGENTS.md` first for the full working rules. Update this file after every completed prompt. Keep the current state at the top and a short dated log below. Write confirmed facts separately from ideas and open decisions.
 
 ## Current state
+
+- **DesignRush badge background (20 October):** Removed the white background applied to the badge in branding dark mode, preserving the transparent PNG against the footer card. Browser review and whitespace check passed. Local only, unpublished.
+
+- **Dark footer surface (20 October):** User clarified that footer was intended. Set the branding dark footer to the existing charcoal surface token (#111113), distinct from the black page, and its utility cards to the raised surface token (#18181b). Utility section remains transparent for one continuous footer surface. Browser color review and whitespace check passed. Local only, unpublished.
+
+- **Branding announcement strip (20 October):** Set the strip above the header to the shared brand action color with white text in branding dark mode. Applies to the branding landing page and all child services. Browser color check and whitespace check passed. Local only, unpublished.
+
+- **Branding service dark surfaces (20 October):** Fixed FAQ cards and expand controls to use dark neutral surfaces with light text, including hover. Raised the testimonial feedback panel from the main charcoal surface to the lighter surface token. Removed process-card borders and shadows in dark mode, and made inactive decision-story icons white. Changes are scoped to the shared branding dark theme across all five services. Desktop and 390 px mobile review plus computed styles confirmed the dark FAQ and feedback surfaces, borderless process cards and white inactive icons; whitespace check passed. Local only, unpublished. Next: review before branding landing page work.
+
+- **Footer aligned to homepage content (20 October):** Narrowed the three shared footer containers to the homepage sections' actual content width, subtracting the shared section inset once in the width calculation and keeping horizontal padding at zero. Desktop browser bounds match the impact and Design News introductions. Adjusted icon-button widths and card proportions to fit the narrower row while retaining 48 px button heights. Browser review and whitespace check passed. Local only, unpublished.
+
+- **Footer width and hover consistency (20 October):** Unified navigation, utility cards and legal row under one shared page-width rule with no horizontal container padding. Removed the card wrapper width deduction and replaced navigation cell padding with grid gaps. Browser measurements confirmed all three containers share identical left/right edges. Removed social icon lift and color-changing hover effects in light and dark modes; social controls now use the shared neutral button hover. Browser review and whitespace check passed. Local only, unpublished.
+
+- **Footer background continuity (20 October):** Removed the utility section background so the cards and legal row sit on the same background as the main footer. Whitespace check passed. Local only, unpublished.
+
+- **Footer legal row width (20 October):** Restored the copyright/legal row to the shared page max width with centered margins and zero horizontal padding. Increased top padding from 28 px to 40 px. Local browser measurements confirmed the width and padding; whitespace check passed. Local only, unpublished.
+
+- **Homepage review refinements (20 October):** Hero typography, service-card copy spacing, full-width tickers and footer layout updated. Shared split introductions use equal columns with top alignment and a common responsive gap. Local only, unpublished.
+
+- **Footer utility controls (20 October):** The DesignRush logo sits outside its white profile button, beside the title. Contact buttons have more horizontal padding; AI, social and contact groups use 6–8 px gaps. Cards hug their title and control row. Local only, unpublished.
+
+- **Footer utility controls (20 October):** Four cards hug their title and 48 px button row. AI, social and DesignRush actions use white buttons in light mode; email and phone share one row. Branding dark mode retains dark button surfaces. Local only, unpublished.
+
+- **Footer cards (20 October):** Four cards fill one desktop row with a fixed 14 px gap. DesignRush content is horizontal, and contact actions share one row inside the wider final card. Responsive two-column and stacked layouts remain at smaller breakpoints. Local only, unpublished.
+
+- **Footer card spacing (20 October):** Content-sized cards use a fixed 14 px gap on desktop and tablet; compact breakpoints retain 12 px. Local only, unpublished.
+
+- **Footer cards (20 October):** Four spaced, content-sized cards; email and phone controls remain on a single line. Cards collapse to a stacked layout on smaller screens. Local only, unpublished.
+
+- **Footer utility cards (20 October):** Four spaced cards with consistent inset, black titles in light mode, enlarged DesignRush mark and contact controls. The DesignRush profile remains tertiary; cards follow the dark theme on branding pages. Local only, unpublished.
+
+- **Footer utility layout (20 October):** Larger top-aligned labels, narrower compact grid, DesignRush badge beside its tertiary link, and clean underlines for tertiary text and arrows. Local only, unpublished.
+
+- **Tertiary CTA treatment (20 October):** DesignRush profile is now a tertiary link; tertiary arrows use a right arrow with matching hover underline. Local only, unpublished.
+
+- **Homepage and shared interface polish (20 October):** Impact stats, section heading case, service card art removal, project metadata, footer styling, tertiary sizing, shared carousel arrows, and logo ticker first-paint/hover behavior updated. Local only, unpublished.
+
+- **Slightly tighter corners (20 October):** Reduced shared radii from 10/16/24 px to 8/12/18 px for controls, inset media and larger cards. Updated design-system values. Local only, unpublished.
+
+- **Branding hero gallery refinement (20 October):** Replaced the six tilted feature cards with 56 upright blank placeholders distributed on a draggable 3D sphere. Card position, scale and stacking change with depth; no individual card rotation. Removed visible hero copy, reduced the central 3D logo to a 220 px canvas (165 px mobile), and added a small zoom control. Shared design, dark mode and scroll pullback remain. Local only; review pending.
+
+- **3D branding hero and shared design refresh (20 October):** The branding landing has a review-only hero with a real beveled/tiled Three.js Kyte mark, draggable spatial card orbit, keyboard rotation, pause/reduced-motion handling and scroll rotation followed by pullback into a short next-section preview. Removed page rails sitewide, restored the original Kyte interface palette as the sole palette, aligned content containers and increased shared radii to 10/16/24 px. Existing shared dark service templates remain. Local only, unpublished; visual review pending.
+
+- **Branding redesign reverted (20 October):** User rejected the independent editorial direction. Restored all five branding services to the shared website template in dark mode and the branding landing route to its previous content. Removed the experimental layouts, generated artwork, display font and reference-specific notes. Existing dark theme, standard purple, neutral text, persistent rails and route theme reset remain. Local only, unpublished.
+
+
+- **Brand color use in dark mode (20 October):** Neutralized purple text accents across branding service dark mode while preserving purple controls, icons, borders and fills. Local only, unpublished. Next: user review.
+
+- **Active approach card brand color (20 October):** Changed the active service approach card in dark branding pages to the exact shared brand purple token (`#533AFD`), replacing the deeper violet fill. Local only, unpublished. Next: user review.
+
+- **Service hero motion and full-width dividers (20 October):** Removed timed image cycling and the black swipe wipe from service photo heroes, keeping one still photograph and its scroll expansion. Page rails remain visible outside the image; only the image frame overlaps them. All shared What We Offer dividers now reach rail to rail with inset copy. Desktop/390 px review, dark/light service geometry, focused ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Brand purple in dark mode (20 October):** Removed the lighter lavender overrides. Branding pages now inherit the same purple and hover colors as the light pages; buttons and text share the existing brand tokens. Updated the design-system notes. Whitespace check passed. Local only, unpublished. Next: user review.
+
+- **Branding service dark theme (20 October):** The Branding & Marketing landing route and all five child services now use black page backgrounds and gutters, dark rails, charcoal cards and menus, white logos and headings, gray body copy, and standard brand-purple accents. Shared footer, FAQ, buttons and dialogs are themed too. Desktop/390 px visual review, all five route checks and light-theme restoration passed. Focused ESLint, TypeScript and whitespace checks passed. The branding landing route retains its previous placeholder content. Local only, unpublished. Next: user review.
+
+- **UI/UX landing page cleanup (20 October):** Removed the Track Record impact section and the Phases label from the framework card. Replaced the Fintech, SaaS, D2C and Hospitality photos with white neutral placeholders, increasing the image inset from 6 px to 12 px. Focused ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Framework section spacing (20 October):** Matched the gap before Deliverables to the 32 px gap before Outcome by removing the flex-filled spacer. Reduced the desktop framework panel from 610 px to 560 px so the full card is shorter. Focused ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Framework labels, card edge and FAQ rail (20 October):** Reduced framework phase text to 21–28 px (21 px on mobile), removed the framework card's outer border, and removed the nested FAQ inline border that doubled the page rail. Focused ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Active framework label color (20 October):** The selected phase label now uses the brand color; inactive labels remain muted gray. Whitespace check passed. Local only, unpublished. Next: user review.
+
+- **Framework phase label (20 October):** Added a “Phases” label above the Discovery, UX Architecture, UI Design and Handoff controls, matching the Deliverables and Outcome labels. Focused ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Framework stage markers and surfaces (20 October):** Each stage label now has a normal-flow vertical marker that aligns with its label padding; inactive markers are gray and active marker purple. Outer framework card is neutral; right panel is white; stage cards are neutral and their icon tiles white. Focused checks passed. Local only, unpublished. Next: user review.
+
+- **Framework tab markers and neutral card palette (20 October):** All framework stages now have in-flow vertical markers, gray when inactive and purple when active. The full framework card uses a neutral surface, with a white right-side panel, neutral stage cards and white icon tiles. Focused ESLint, TypeScript, whitespace and browser checks passed. Local only, unpublished. Next: user review.
+
+- **Framework card spacing (20 October):** Reduced the outer card padding and removed most of the left-column's nested padding on desktop and mobile. Focused ESLint, TypeScript and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **UI/UX framework card refinement (20 October):** Kept the framework heading outside the card while the two-column interactive content stays inside. Framework stage labels now share a muted gray appearance; the active purple vertical marker and keyboard focus remain. Focused ESLint, TypeScript, whitespace and local browser checks passed. Local only, unpublished. Next: user review.
+
+- **UI/UX landing page section order and card update (20 October):** The stage cards now follow Selected Work, UI/UX Services precede the framework and process sections, and the page continues through How We Work, What We Design, Industries, then testimonials. The framework heading, copy and visual are inside one shared card. All four industry cards use inset 16:9 photography. Focused ESLint, TypeScript, whitespace and browser structure checks passed. Local only, unpublished. Next: user review.
+
+- **UI/UX landing page follow-up layout (20 October):** Made the hero art flush across the page rails, added a homepage-style title and description above the impact figures, moved testimonials after Industries, and contained the framework copy in a card. Product-stage and industry titles are black; the Fintech card now has a landscape Fincart image. Focused ESLint, TypeScript, whitespace and local browser structure checks passed. Local only, unpublished. Next: user review.
+
+- **UI/UX landing page review refinements (20 October):** Applied the 14 browser comments and tightened headings and section spacing. The work area now uses the shared homepage Selected Work component and its project list, fixed to list view. Testimonial feedback sits in a white panel with a neutral borderless case link. Framework alignment/active accents, process icon radius, stage label color/art scale, service tertiary links, and static design cards are refined. Replaced the benefits panel with four linked industry cards. The FAQ intro description is hidden on this page only. Desktop sections were reviewed in the local browser; focused ESLint, TypeScript, and whitespace checks passed. Local only, unpublished. Next: user review.
+
+- **Fixed illustration palette library (20 October):** Created seven named Goodface-derived families with49 measured color tokens and source-pixel provenance. All33 custom UI/UX illustrations now have explicit assignments; SVG builders, projected HTML/CSS and the inline orbit consume central tokens. Prism field data lives with its palette. Added an ad hoc-color guard, one rebuild command, a visual palette library and synchronized portable skill notes/packages. Build, XML, TypeScript, lint and token checks passed; desktop family and390px review completed. Local, unpublished. Next: user review of the library and consistent colors.
+
+- **Goodface implementation diagnosis and one material sample (20 October):** User rejected the balanced rollout as still synthetic. Inspected original AVIF pixels, live HTML and Webflow CSS. The key differences are whole-object color continuity, a softly lit colored silhouette without the neutral dark contour, and spatially varying light. Rebuilt only the complex-work prism material using measured original colors and a continuous vector field. Other illustrations retain the previous balanced state. Standalone, matched reference/before/after and actual card reviewed; XML, Hairline and rendered clipping passed. Next: review this sample before family-specific rollout. Details: exports/goodface-implementation-findings.md. Local, unpublished.
+
+- **Balanced gradient rollout (20 October):** User approved the Develop trial, then rejected applying its saturation to every illustration. Applied a middle ground across the UI/UX illustration set: softer original orange/coral/violet, modest mint/blue enrichment, shape-specific color geography and contained inner rim lighting. Reworked the complex-work prism, Growing platforms, research cube and commerce panel individually against live Goodface references. Updated SVG and imagegen skill notes and portable packages. 32 builders, 32 Hairline benches, 30 SVG XML files, TypeScript, focused lint and 29 rendered color masks passed. Local only, unpublished; next: user review of the balanced treatment.
+
+- **Gradient material audit and single sample (20 October):** Studied six live Goodface illustration assets and audited49 illustration sources plus22 host files. Refined only Develop's working layer with rich curved amber/lime/emerald fields and soft clipped inner rim lighting. Same geometry and layout. Desktop/390px review, XML, Hairline and rendered containment passed. Source audit and before/after in exports/gradient-material-audit.md. Historical trial checkpoint, superseded by the balanced rollout above.
+
+- **Generic process illustrations, Develop and Deliver (20 October):** Added the remaining pair sequentially. Develop uses an exploded component assembly with one warm color layer; Deliver uses a finished neutral handoff kit, organized documents and a mint/cyan completion seal. Both use the shared process component across service pages. Desktop and 390 px views, neutral/final, Hairline, XML, lint, TypeScript and color containment passed. Fixed layout-triggered hover stage switching. Local candidates; next: user review of this pair.
+
+- **Generic process illustration, Define (20 October):** Added an upright brief with one pink/violet decision field, connected to two neutral input tiles on a rounded hexagonal base. Shared process stage two now uses this SVG across service pages. Discover remains approved direction; Develop/Deliver pending. Neutral/final, desktop and 390 px layouts, XML, Hairline, lint, TypeScript and rendered containment passed. Local candidate; next: user review before Develop.
+
+- **Generic process illustrations, Discover first (20 October):** Built a reusable Discover SVG: a colored magnifying lens over two neutral research cards. Shared process component now uses it for step one across service pages. Define/Develop/Deliver remain pending user review of Discover. Desktop and 390 px process layouts, Hairline, XML, lint, TypeScript and rendered containment passed. Local only.
+
+- **Service hero framing (20 October):** Applied the Shopify page treatment across UX research, Website, Mobile and SaaS heroes: white text area and square image section at desktop and mobile sizes. Shared service CSS now owns these styles. Commerce retains the same treatment. Illustrations themselves are unchanged. Local; next: user review.
+
+- **Website hero top logo and UI refinement (20 October):** Webflow now maps onto the development cube's measured top face. Simplified the foreground Framer assembly to two text bars and a compact action, with explicit arrow/bar sizes fixing a CSS specificity defect. Final standalone and actual route reviewed; XML, Hairline and rendered color containment passed. Local only; next: user review.
+- **Service hero brand assets (20 October):** Commerce has colored Shopify; Website has Framer, Webflow, WordPress and Sanity; Mobile and SaaS have Figma and Claude, as clarified by the user. Native logo aspect ratios and fills remain in the projected HTML faces. Framer retains its official black mark. Four-hero visual review, XML, Hairline and rendered containment passed. Local only.
+
+- **Commerce stand and Shopify cube refinement (20 October):** Centered the display, single support and smaller foot on one world-space axis, with their surfaces touching. Extended connecting tracks into the revised foot. Replaced the lower-left package pictogram with the existing Shopify SVG asset. Neutral/final geometry, actual page, XML and Hairline validation checked. Local only; next: user review.
+
+- **Five service heroes reviewed together (20 October):** Balanced all five to approximately 460 SVG units of visible height. Simplified research UI and added occluded world-space connectors; spread commerce modules horizontally and extended their bridges. Shared contain framing, contours and neutral depth. Final/neutral family, all 15 actual-route desktop/tablet/phone views, geometry, XML, Hairline, TypeScript, whitespace and uniform rendered containment passed. Local only; next: user review of the family.
+
+- **eCommerce & Shopify Websites service hero rework (20 October):** Replaced the covered storefront with an upright catalogue, broad checkout surface, parcel cube and circular confirmation hub joined by raised tracks. White hero text area and square image frame apply only to this route. Desktop/810/390 px, flat UI sizing, Hairline, XML, lint, TypeScript and rendered color containment passed. Supersedes the previous commerce composition and its family-audit measurements. Local candidate; next: user review.
+
+- **SaaS & Web App Design service hero (20 October):** Only the SaaS hero now uses a tiered workflow table connected to a tall automation block, cylindrical data store and completed-task stack. Large workflow lanes with simple icons and bars. Updated SVG skill, Goodface modular-volume references and existing connected workspace construction informed it. Flat/neutral/final, desktop/810/390 px, Hairline, XML, lint, TypeScript and adjusted JPEG containment passed. Local candidate; next: user review.
+
+- **Mobile app design service hero (20 October):** Only the mobile hero now uses a diagonal handset, floating interaction tile, circular identity module, arched notification tower and rounded hexagonal completion module connected by raised tracks. Large simple UI, shared camera, neutral rounded depth, contained fields and fading floor. Live Goodface banking hero reviewed. Flat/neutral/final, desktop/810/390 px, Hairline, XML, lint, TypeScript and adjusted JPEG containment passed. Local candidate; next: user review.
+
+- **Website design & development service hero (20 October):** Only this service hero now uses a connected website assembly with large content/development blocks, tubes, a solid browser base, layered page module and round publishing hub. Larger interface regions replace dense miniature UI. Live Goodface website hero and approved Kyte hero reviewed. Flat/neutral/final, desktop/810/390 px, XML, Hairline, lint, TypeScript and adjusted JPEG containment passed. Local candidate; next: user review.
+
+- **UX research service hero (20 October):** The research and audit page now has a detailed original SVG workspace replacing its expanding photo stage. Evidence board, interview, usability review, journey map and priorities share one camera and five measured HTML faces. Desktop/tablet/phone, XML, Hairline, lint, TypeScript and adjusted JPEG containment passed. Only this service hero changed. Local candidate; next: user review before another service hero.
+
+- **Responsive product experiences illustration (20 October):** Only the sixth What we design card now uses a monitor on a stand, foreground tablet and upright phone. One interface reflows across three measured HTML faces. Shared camera, rounded neutral depth, contained mint/cyan and pink/violet fields and fading floor. Desktop/810/390 px, Hairline, XML, lint, TypeScript and default containment passed. Local review candidate; next: user review.
+
+- **Design systems and interface patterns illustration (20 October):** Only the fifth What we design card now has an exploded component assembly with foundation grid, reusable controls, an assembled pattern and a type/color specimen rail. Shared camera, neutral rounded depth, separately measured faces, clipped fields and fading floor. Desktop/810/390 px, Hairline, XML, lint, TypeScript and adjusted JPEG containment passed. Local candidate; next: user review.
+
+- **Websites and content journeys illustration (20 October):** Only the fourth What we design card now has a folded editorial spread connected to resource and next-action tiles. Separate sloped article/discovery faces, one rounded shared contour, neutral depth, contained fields and fading ground. Desktop/810/390 px, Hairline, XML, lint, TypeScript and default containment passed. Local candidate; next: user review.
+
+- **Dashboards and complex workflows illustration (20 October):** Only the third What we design card now uses a physical circular data console, three connected workflow modules and stacked task sheets, without upright screens. Detailed measured top faces, shared camera, neutral rounded depth, clipped fields and fading floor. Desktop/810/390 px, Hairline, XML, lint, TypeScript and adjusted JPEG containment passed. Local candidate; next: user review.
+
+- **Navigation and information architecture illustration (20 October):** The second What we design card now uses a detailed sitemap workspace, nested navigation menu and layered page previews. Four separately measured faces share one camera, neutral rounded depth, contained mint/cyan and pink/violet fields and a fading floor. Desktop/810/390 px, Hairline, XML, lint, TypeScript and default containment passed. Only this card changed. Local review candidate; next: user review.
+
+- **Onboarding and activation illustration (20 October):** The first What we design card now has a detailed four-panel setup workspace with a profile form, checklist, completion panel and milestone track. Shared camera, measured HTML faces, neutral rounded solids, clipped fields and fading floor. Desktop/810/390 px, Hairline, XML, lint, TypeScript and default color containment passed. Only this card changed. Local only; next: user review.
+
+- **Five services illustrations reviewed together (20 October):** Balanced source-camera scales, unified artwork sizing across narrow and wide cards, and matched neutral depth. All five are centered and complete at 1280/810/390 px. Neutral/final review, Hairline, SVG XML, TypeScript, whitespace and rendered color containment passed. Local only, unpublished; next: user review of the full set. See `exports/services-group-audit.md`.
+
+- **First three product-stage mini illustrations (20 October):** Rebuilt New products, Growing platforms and Established services sequentially after the user confirmed all three. They now use a lifted mint idea tile/circular foundation, three ascending platform forms with a pink-violet accent, and a warm service medallion/white hexagonal foundation. Only these three roles changed. Standalone and actual-page desktop/810/390 px review, geometry/code/XML and color containment passed. Local candidates; next: user review.
+
+- **Connected brands mini illustration (20 October):** Replaced only the final product-stage symbol with two white brand tiles joined by one warm pink-violet link. Shared perspective, neutral depth, original Lucide Link2 symbol, clipped color and transparent framing. Desktop, 810/390 px image framing, structural/code and default containment checks passed. Local candidate; next: user review.
+
+- **Internal systems mini illustration (20 October):** Replaced only the seventh product-stage symbol with three rounded layers: two white foundations and a blue-violet workflow tile. Shared perspective, neutral depth, original Lucide Workflow symbol, contained color and transparent full framing. Desktop, 810/390 px image framing, structural/code and adjusted JPEG containment checks passed. Local candidate; next: user review.
+
+- **Web platforms mini illustration (20 October):** Replaced only the sixth product-stage symbol with a neutral rounded browser panel, an original projected Lucide Globe icon and one pink-violet sphere. One camera, opaque neutral thickness, clipped sphere color and inner white softening, transparent canvas and full silhouettes. Desktop, 810/390 px image framing, neutral/final renders, code and default JPEG containment passed. Local candidate; next: user review.
+
+- **Commerce journeys mini illustration (20 October):** Replaced only the fifth product-stage symbol with a warm cart tile floating above a white checkout surface. Two rounded solids share one camera, original Lucide ShoppingCart glyph, neutral depth, clipped color fields and restrained inner white softening. Transparent canvas keeps complete silhouettes. Desktop, 810/390 px image framing, neutral/final renders, code and adjusted JPEG containment checks passed. Local candidate; next: user review.
+
+- **Complex internal tools mini illustration (20 October):** Replaced only the fourth product-stage symbol with a two-form SVG: white rounded hexagonal foundation and mint/cyan control panel with an unmodified Lucide SlidersHorizontal icon. One camera, neutral thickness, clipped color and inner white softening; transparent background with full silhouettes. Reviewed actual desktop and 810/390 px frames, neutral/final renders, code and adjusted JPEG containment. Local candidate; next: user review.
+
+- **eCommerce service illustration (20 October):** The fifth services card now uses a custom storefront and separate checkout SVG. Separate HTML faces share one camera, with warm orange/green product color, a mint checkout thumbnail, neutral rounded thickness, original Lucide ShoppingBag icons, and a fading floor. Checked desktop plus 810/390 px responsive frames, flat UI, and neutral geometry. Code and adjusted JPEG containment checks passed. Local candidate; next: user review.
+
+- **Mobile app service illustration (20 October):** The user requested only Mobile app design after reviewing the website card. Its third card now uses a custom static SVG adapted from Goodface UI 13: white shallow handset, a floating pink-violet interaction card with original Lucide Pointer glyph, and two neutral circular controls. Handset and interaction content are separately designed HTML faces mapped through one camera. Reviewed at 1280/810/390 px; lint, TypeScript, Hairline/XML validation, and one-pixel color containment passed. This third-card candidate awaits user review; the other service artwork is unchanged.
+
+- **Website service illustration (20 October):** Following review of the research card, the user requested only Website design & development next. Its second card now uses an original layered browser/component SVG with separately designed HTML faces projected through one camera, neutral rounded depth, clipped mint/cyan fields, original Lucide CodeXml icon, and a fading floor. Reviewed flat, neutral, and final views plus the actual card at 1280/810/390 px. Lint, TypeScript, Hairline validation, XML, and adjusted JPEG containment checks passed. The second card awaits review; other service artwork is unchanged.
+
+- **Research service illustration (19 October):** The user requested only UX research & design audits next. Its first service card now uses a custom static SVG adapted from Goodface’s floating Decision cube/platform reference, with one orange-green finding cube, an original Lucide Search glyph projected onto its right face, a rounded white foundation, clipped inner edge washes, and a fading floor. Editable geometry and presentation remain separate. Reviewed at 1280/810/390 px; lint, TypeScript, Hairline validation, and rendered color containment passed. This first-card candidate awaits user review; the other four service illustrations remain unchanged.
+
+- **UI/UX page refinement review (19 October):** Applied the thirteen browser comments. The orbit is vertically centered; portals are broader and derive their centers from the route. Impact metrics reuse the homepage layout with alternating number/icon panels. Recent work reuses `WorkShowcase` locked to list view, preserving this page’s three projects. Removed both bespoke mid-page CTAs and the explore section. Framework cards use website tokens, connected brand-colored routes, title-case labels, and a wider active-only tab indicator. Services now has three cards above two equal-width cards. Benefits has a restrained brand frame, neutral cards, consistent radii, and revised spacing. Desktop and 390 px review, focused lint, TypeScript, and Hairline validation passed. Existing dependencies were restored locally and the preview restarted on port 3001; package manifests are unchanged. Local only, pending user review.
+
+- **UI/UX hero heading (19 October):** Removed the animated gradient underline, shine, and star. “human experience.” now uses the shared brand-color token with a full stop. Local preview only.
+
+- **Product-moments review adjustments (19 October):** All four artwork slots now fill their card frames without parent padding or a copy divider, share one neutral background, and retain complete silhouettes with fading floor patterns. The laptop camera is fitted to its actual projected bounds in a 400 × 260 frame. Card headings are 23 px and arrow buttons use the shared small-radius control treatment. The hero client strip now reuses all 24 existing logos in the site’s left-to-right rail ticker, with no visible label. The evolving-experience scene adds three translucent, rounded portal frames from the supplied reference. Desktop and 390 px mobile review passed; this remains local and awaits user review.
+
+- **UI/UX illustration rollout plan (19 October):** `UI_UX_ILLUSTRATION_PLAN.md` inventories the page's editorial art and maps 20 new scenes, a four-state framework refinement, and review of the three existing stage SVGs to the Kyte isometric-art workflow and Goodface reference families. The hero and first two product-moments illustrations remain the quality benchmarks. Work is sequenced one scene at a time with a user review after each. The user reviewed the rebuilt third product-moments card and authorized proceeding to the fourth. “When the experience needs to evolve” now has its own curved-route and colored-sphere SVG and awaits review before another scene begins. The skill now includes a runnable solid-scene example, card framing guidance, and a rendered color-containment checker.
+- **Image-generation illustration skill (19 October):** Added a separate `kyte-imagegen-art` skill for raster artwork. Its cross-site Goodface atlas distinguishes the main agency site's editorial and client-specific imagery from the Fintech site's hero environments, conceptual scenes, small symbols, tracks, and product UI. The workflow starts with display size and reference geometry, then generates and compares one asset at a time. It remains a local skill and has not been used to replace any current page illustration.
+- **Product-moments cards (19 October):** The first card uses the approved orbit illustration. The second card uses a one-camera Hairline laptop scene with a separate flat dashboard face projected onto the measured screen plane. The third card now displays a rebuilt static SVG: one camera, a rounded white shell, shared-silhouette green-blue prism, grounded sphere and cone, and a softly fading floor. Its geometry, clipping, and contour are compiled from one source for the Kyte message “When the work gets complex.” The user reviewed the third card and authorized the next one. The fourth now uses a complete rounded white route with neutral depth, a clipped pink-violet sphere, and a fading projected floor. All remain local and unpublished; the fourth awaits user review.
+- **UI/UX hero illustration details (19 October):** The structural contours are 1.75 px. The five right-hand cubes now put their original Lucide glyphs on the right faces at 2.6 px, with neutral tubes and socket collars on their left faces. The tubes use different lengths so their far ends run behind the main screen. The four projected interface glyphs use original Lucide paths with consistent white 2.4 px outlines. The installed role-matched icons have no full native filled variants, so their geometry remains unchanged. Detailed UI lives in separate HTML face templates projected onto measured surfaces. The four blue-green desktop panels use smooth fills with white glow only near their edges and corners. Analytics labels are pale gray rectangles. This remains a local review draft pending visual confirmation of the revised tubes.
+- **UI/UX cluster landing draft (19 October):** `/ui-ux-design-development` now has a dedicated page in branch `codex/product-design-landing`. Its Goodface-inspired section sequence uses original Kyte copy and a custom Hairline hero scene with separately authored HTML interface faces projected onto its vector structures, selected client logos, four-figure carousel, agency-wide proof panel, recent work, testimonials, framework, process, service links, and shared FAQ. This is a local review draft. The agency figures and client-role selections need editorial confirmation; no new `8+ years` or award-count claim was made. Next: review the visual and content direction with the team, then approve proof and logos before any public release.
+- **Product-stage mini illustrations (19 October):** “New products” and “Growing platforms” use their editable SVG reconstructions. “Established services” now uses a refined editable SVG of the supplied segmented circle and bar chart: rounded solid silhouettes, white faces, opaque neutral depth, restrained pale seams, and clipped local color fields with an inner white perimeter wash. Its earlier image-generation PNG remains in the asset folder for comparison. The other five cards remain from the earlier small-illustration pass and are pending one-by-one review. This remains local and unpublished.
 
 - **Phase:** The active homepage at `/` follows the user-approved Kyte team preview source, with the previous homepage's client logo grid added between Services and Selected Work. Client perspectives and a FAQ sit between Design News and the dark split project CTA. The shared header uses 12px backdrop blur, switches between black and white wordmark assets over light and dark content, and preserves the purple brand mark in both states. All active route families use the same split CTA and light gray footer. The homepage ticker and Design News carousel reach the page rails. The Website Design page's mid-page CTA and controls follow the same tokens. The previous homepage is archived at `/graveyard/landing-page-2`. The shared color token is deep blue `#0249D9`, and `/design-system` documents this direction. The 12 October homepage, About, Careers, contact, footer, legal placeholder, and motion changes are live on Vercel. The site remains `noindex, nofollow` and still needs launch review.
 - **Local color preview:** The current local checkout defaults to a Stripe-inspired palette measured from Stripe Careers: violet `#533AFD`, navy `#061B31`, slate text `#50617A`, pale surface `#F8FAFD`, and divider `#E5EDF5`. The prior Kyte palette remains in the root CSS tokens and can be restored sitewide from `/design-system` or by adding `?palette=kyte` to any local URL. This selection persists in the current browser. The palette has not been pushed to GitHub or deployed to Vercel.
@@ -36,6 +345,14 @@ This is the handoff file for future Codex chats and team members. Read `AGENTS.m
 - **Fincart case study:** The public `/work/fincart` page opens with the animated screen showreel and links to the App Store. Its research cards, product pillars, phone galleries, design system, and illustration sheet use the approved Framer portfolio as their visual reference. The supplied 7500 × 4000 illustration sheet is in the neutral frame. Image sections ease in as they enter view; those already visible stay visible during hydration. Research-card hover keeps its original border and shadow. The client approved the public copy and all three impact figures on 10 October 2026. Sanity document `e638bad9-67eb-4b08-9c04-deaa715451a7` is published with the new 3840 × 2160 cover, copy, App Store URL, and approved figures. The same cover appears first in homepage Selected Work. The route remains `noindex, nofollow` until the site launch review.
 - **Shared Work template:** The case-study heading uses a shared roughly 60/40 title/facts grid, a left-column live-work action when a project URL exists, and consistent facts rows. Facts labels and section eyebrow text use 18px on desktop and 15px on mobile. These rules apply to all Work case studies, including Sanity entries; FinCart retains its story-specific media and impact layouts.
 - **Next CMS step:** All eight Design News articles now have the reviewed titles, H2 headings, and paragraph grouping published in the production Sanity dataset. Existing slugs were preserved. Find the source repository or deployment owner for the hosted Studio schema, then review content models and references. Work entries and launch settings remain separate tasks.
+
+## 19 October 2026: Start the sequential illustration rollout
+
+- Built the third product-moments illustration in `kyte-site/hairline/product-complex-system.js`, with generated monochrome and colored embeds from `build-product-complex-system.mjs`. Replaced only this card's generic `Plot` figure in the carousel.
+- Compared the live Goodface UI 6 scene with the local structure and final card. Saved review captures under `exports/complex-system-*`.
+- Refined the card after review: clipped the gradient to the prism's two intended vertical faces so both retain color without stray green strips, eased the scene scale to keep all forms inside the art area, expanded the floor grid, and softened the fade along every edge.
+- Checks: Hairline build and static validator passed; focused ESLint passed; `git diff --check` passed. The automated Hairline look sheet could not install its browser dependency because the package registry was unreachable, so the structure and in-page result were inspected manually in the local browser.
+- Next: collect user feedback on this card, refine it if needed, then move to the fourth card. Owner: Codex and Kyte review.
 
 ## Confirmed direction
 
@@ -764,6 +1081,11 @@ The project has one `production` dataset with public read access and a hosted St
 | `kyte-site/src/app/globals.css` | Shared color, layout, radius, and motion tokens used across the preview |
 
 ## Task log
+
+### 20 October 2026: Apply UI/UX landing page review comments
+
+- Applied the browser feedback across page headings, product moment title sizing, selected work, testimonial proof and case-study link, framework spacing and active state, process icon corners, stage art and labels, service actions, non-linking design cards, industry links, and FAQ intro. Reused the homepage `WorkShowcase` with its own projects in list mode. Replaced the benefits panel with four current industry routes and removed the FAQ description on this page only. Standardized heading capitalization and tightened section/card spacing.
+- Changed `kyte-site/src/app/ui-ux-design-development/page.tsx`, `product-design.css`, `kyte-site/src/components/HomeFaq.tsx`, and this handoff. Reviewed hero, moments, selected-work, testimonial, service-card, and stage-grid views in the local browser. Focused ESLint, TypeScript, and `git diff --check` passed. Live browser computed style resolved to `rgb(83, 58, 253)` (#533AFD). Local only, unpublished. Next: user review. Owner: Kyte website team.
 
 ### 9 October 2026: Match the transparent blurred reference navbar
 
@@ -2172,3 +2494,1114 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Set the color-palette swatches and labels to their concealed starting styles in the embedded document. The completed palette can no longer flash before the parent visibility controller starts the animation; the existing five-second replay delay and reduced-motion behavior remain intact.
 - Replaced the paired Fincart logo asset with the newly supplied 3840 by 2160 clear-space construction artwork under a new cache-safe public filename. It retains the shared case-study media corner radius and descriptive alt text.
 - Release checks, responsive browser review, GitHub merge, and production deployment are recorded in the final task report. Owner: Kyte website team.
+
+### 19 October 2026: Draft the UI/UX design and development landing page
+
+- Replaced the placeholder `/ui-ux-design-development` route with a dedicated landing page. The Goodface FinTech reference informed the centered hero, rail-wide illustration, client row, illustrated carousel, proof, recent work, framework, service links, and FAQ sequence. All copy and artwork are original to Kyte.
+- Built a pastel highlight effect around the hero phrase and an original full-width composition combining the licensed Hairline Keyboard figure with gradient interface panels. Four carousel cards use distinct Hairline Hub, Relay, Plot, and Exploded figures. Reduced-motion styling removes the decorative animations.
+- Reused existing Work, testimonial, and FAQ components and linked the five approved UI/UX child routes. The proof panel uses agency-wide figures already shown on Kyte's current site, plus its DesignRush profile. It does not claim unverified years, award totals, or product-specific results.
+- Updated `/design-system` with the new cluster pattern. Reviewed the page at desktop and 390px in a local browser. The mobile viewport had no horizontal overflow. ESLint, TypeScript, and a webpack production build passed. The build used local fallbacks where Sanity DNS was unavailable. Turbopack could not resolve the temporary worktree's symlinked dependencies, so the successful build used webpack.
+- Files: `kyte-site/src/app/ui-ux-design-development/`, `kyte-site/src/components/ProductDesignCarousel.tsx`, `kyte-site/src/components/ProductDesignIllustrations.tsx`, `kyte-site/src/app/[...slug]/page.tsx`, `kyte-site/src/app/design-system/page.tsx`, and this log. Local branch: `codex/product-design-landing`. No GitHub or Vercel write. Owner: Kyte website team. Next: editorial review of proof, client selection, and final images before release.
+
+### 19 October 2026: Align the UI/UX landing layout more closely with the reference
+
+- Compared the Goodface FinTech reference with the local UI/UX cluster page section by section. Reworked the missing visual structures: four open proof columns, three case-study rows with copy and a large image, a pastel CTA card, an illustrated two-column framework, six process cards, a horizontal audience strip, illustrated service and product grids, resource tiles, a framed benefits grid, and a second CTA. Kyte typography, colors, page rails, copy, and original Hairline artwork remain in use. No reference artwork or text was copied.
+- Updated `/design-system` to document these page patterns. Reviewed the local page at desktop and 390px; the mobile document has no horizontal overflow. ESLint, TypeScript, and the webpack production build passed. The build used local fallback content because the Sanity CDN hostname was unavailable in this environment.
+- Files: `kyte-site/src/app/ui-ux-design-development/page.tsx`, `product-design.css`, `kyte-site/src/app/design-system/page.tsx`, and this log. Branch: `codex/product-design-landing`. No GitHub or Vercel write. Owner: Kyte website team. Next: editorial check of agency figures, client selection, and project summaries before any public release.
+
+### 19 October 2026: Rebuild the UI/UX framework interaction
+
+- Compared the selected Goodface framework section in its default and selected states. Replaced Kyte's four static stage rows and generic Hairline panel with a single active stage at a time. Selecting Discovery, UX Architecture, UI Design, or Handoff & implementation now updates deliverable chips, outcome copy, active indicator, and the centered node in an original connected-stage graphic. The layout keeps Kyte's typography and brand styles.
+- Added accessible tabs with arrow, Home, and End keyboard navigation, plus reduced-motion handling. Checked selected-stage changes and keyboard navigation in the local browser. At 390px, the page has no horizontal overflow. ESLint, TypeScript, `git diff --check`, and the webpack production build passed; Sanity content used local fallbacks because its CDN hostname was unavailable. Updated `/design-system` to describe the interaction.
+- Files: `kyte-site/src/components/ProductDesignFramework.tsx`, `kyte-site/src/app/ui-ux-design-development/page.tsx`, `product-design.css`, `kyte-site/src/app/design-system/page.tsx`, and this log. Branch: `codex/product-design-landing`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Correct the framework illustration path
+
+- Adjusted the right-hand framework artwork from a level row into four nodes that descend like a staircase. Curved elbow connectors now link each step, and selecting a stage moves the stepped sequence horizontally and vertically so its card stays centered. The same arrangement scales down on mobile.
+- Checked the UI Design state visually at desktop and 390px. Mobile has no horizontal overflow. ESLint, TypeScript, and `git diff --check` passed. Updated `/design-system` to describe the stepped visual. Files: `kyte-site/src/components/ProductDesignFramework.tsx`, `kyte-site/src/app/ui-ux-design-development/product-design.css`, `kyte-site/src/app/design-system/page.tsx`, and this log. Branch: `codex/product-design-landing`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Replace the UI/UX hero composition with custom Hairline artwork
+
+- Rebuilt the supplied product workspace reference as a single original Hairline SVG scene, with a slanted keyboard, layered product window, four floating panels, five connected modules, fine linework, and soft multi-stop gradients applied to the vector shapes. Removed the earlier preset Keyboard and CSS panel stack from this hero. The figure responds when a floating panel is pointed at and respects reduced motion through Hairline's clock.
+- The standalone Hairline bench passed its static validator. Its automated visual sheet could not install Playwright because network DNS was unavailable, so the rendered site was reviewed manually in the local browser at desktop and 390px. The mobile document has no horizontal overflow. ESLint, TypeScript, and the webpack production build passed. The ordinary Turbopack build hit this worktree's dependency symlink resolution error; the webpack build used local fallback content because the Sanity CDN hostname was unavailable. Files: `kyte-site/hairline/product-experience.js`, `hairline-product-experience.html`, `build-product-experience.mjs`, `public/hairline/product-experience-embed.html`, `src/components/ProductDesignIllustrations.tsx`, `src/app/ui-ux-design-development/product-design.css`, `src/app/design-system/page.tsx`, `kyte-site/hairline/README.md`, and this log. Branch: `codex/product-design-landing`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Rebuild the UI/UX hero illustration on one isometric camera
+
+- Replaced hand-positioned screen polygons with one Hairline camera projection for the monitor, keyboard, cards, pictograms, charts, five cuboids, and their connecting stems. Rounded the shared contours, aligned each graphic to its host plane, separated the tool modules, and reduced line contrast so depth comes from coherent faces and seams.
+- Added `.agents/skills/kyte-isometric-art/SKILL.md` to document the camera, surface mapping, solid construction, colour layer, and visual review rules for future Kyte illustrations. Updated the Hairline README and design-system description; the homepage Product Design Laptop figure remains unchanged.
+- Regenerated the standalone bench and website embed. The Hairline static validator, manual desktop visual review in the local browser, browser error log check, ESLint, TypeScript, and `git diff --check` passed. The skill-creator validator could not start because its Python environment lacks PyYAML; its YAML frontmatter was parsed with Ruby. Per the user's direction, responsive breakpoints and unrelated page sections were not reviewed in this pass. Files: `kyte-site/hairline/product-experience.js`, `hairline-product-experience.html`, `build-product-experience.mjs`, `public/hairline/product-experience-embed.html`, `kyte-site/hairline/README.md`, `kyte-site/src/app/design-system/page.tsx`, `.agents/skills/kyte-isometric-art/SKILL.md`, and this log. Branch: `codex/product-design-landing`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Clean up the UI/UX hero drawing edges
+
+- Corrected the keyboard thickness so it reads as one rounded slab without the broken vertical corner stroke. Simplified the screen and floating UI panels to single consistent rounded outlines, increased curve sampling, and sized each card radius from its shorter dimension. Updated the reusable isometric-art skill with the distinction between flat UI panels and genuinely extruded objects.
+- Regenerated the Hairline bench and site embed. Static Hairline validation and a fresh desktop browser review passed. Responsive breakpoints were not checked, per the user's direction. Files: `kyte-site/hairline/product-experience.js`, generated Hairline HTML, embed builder and output, `.agents/skills/kyte-isometric-art/SKILL.md`, and this log. Branch: `codex/product-design-landing`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Refine UI/UX hero cube icons and corner treatment
+
+- Inset the cube pictograms from face contours, simplified their shapes, and tuned their strokes for a more even visual weight. Increased the small keyboard key radius slightly and aligned panel and tile rounding to the shared world-space radius.
+- Updated the reusable isometric-art rules and Hairline README with safe icon insets and radius guidance. Regenerated the standalone figure and site embed; static Hairline validation and desktop browser review passed. `git diff --check` passed. Responsive breakpoints were not checked, per the user's direction. Files: `kyte-site/hairline/product-experience.js`, `build-product-experience.mjs`, generated Hairline HTML, embed output, `.agents/skills/kyte-isometric-art/SKILL.md`, `kyte-site/hairline/README.md`, and this log. Branch: `codex/product-design-landing`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Add matching depth to the UI/UX hero screen and cards
+
+- Changed the large product screen and all floating cards into shallow rounded slabs with white fronts, neutral sides, and a gray outline around the outer silhouette. Increased the safe inset for cube pictograms so their lines remain separate from face contours.
+- Regenerated the Hairline bench and site embed. Static validation and desktop browser review passed; `git diff --check` passed. Updated the reusable art guidance and Hairline README. Responsive breakpoints were not checked, per the user's direction. Files: `kyte-site/hairline/product-experience.js`, `build-product-experience.mjs`, generated Hairline HTML, embed output, `.agents/skills/kyte-isometric-art/SKILL.md`, `kyte-site/hairline/README.md`, and this log. Branch: `codex/product-design-landing`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Align slab direction and contour widths
+
+- Reversed the screen and card depth offsets so the neutral bands read on their right side. Applied one shared contour width to the keyboard shell, cube silhouettes, slab edges, cube pictograms, keys, and rounded color panels; internal seams remain lighter.
+- Regenerated the Hairline bench and site embed. Static validation, local desktop visual review, and `git diff --check` passed. Updated the reusable illustration notes and this log. Files: `kyte-site/hairline/product-experience.js`, `build-product-experience.mjs`, generated Hairline HTML, embed output, `.agents/skills/kyte-isometric-art/SKILL.md`, `kyte-site/hairline/README.md`, and this log. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Match illustration contour weight to the keyboard edge
+
+- Increased the shared contour stroke to match the thicker lower keyboard edge in the supplied reference. The same width now applies to all object silhouettes, keys, cube pictograms, and color-panel boundaries; fine rules and connector cables retain their detail weights.
+- Regenerated and reviewed the standalone Hairline illustration at desktop size. Static validation passed. Updated Hairline guidance and this log. Files: `kyte-site/hairline/build-product-experience.mjs`, generated Hairline HTML, and embed output. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Keep the keyboard edge as the contour-width reference
+
+- Corrected the previous adjustment: the lower keyboard edge is the reference width, so it remains at its original 1.05px weight. Other object contours use that same 1.05px value; the keyboard edge itself is no longer enlarged.
+- Regenerated and visually reviewed the illustration. Hairline validation and `git diff --check` passed. Files: `kyte-site/hairline/build-product-experience.mjs`, generated Hairline HTML, embed output, and this log. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Keep the slab rim visible above its white face
+
+- Fixed the screen and card border alignment: their neutral shell and white face had been painted in a way that masked part of the front contour. Redrew the front rim after the fill so its full stroke remains visible and consistent with the outer shell line.
+- Regenerated the Hairline bench and site embed. Static validation, desktop browser review, and `git diff --check` passed. Updated the reusable isometric-art guide and Hairline README. Files: `kyte-site/hairline/product-experience.js`, `build-product-experience.mjs`, generated Hairline HTML, embed output, `.agents/skills/kyte-isometric-art/SKILL.md`, `kyte-site/hairline/README.md`, and this log. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Match front-rim and outer-contour colors
+
+- Matched the screen and card front-rim contour color to the outer shell contour. Interior rules and seams remain light, following the agreed line treatment.
+- Regenerated and visually reviewed the Hairline illustration. Static validation and `git diff --check` passed. Updated the reusable illustration guidance, Hairline README, and this log. Files: `kyte-site/hairline/build-product-experience.mjs`, generated Hairline HTML, embed output, `.agents/skills/kyte-isometric-art/SKILL.md`, `kyte-site/hairline/README.md`, and this log. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Lighten the inner depth edges on UI slabs
+
+- Kept the front rim and outer silhouette in the same darker contour color. Changed the inner top and right edges, plus their depth joins, to the lighter detail color so the slab thickness reads clearly. Applied this treatment through the shared screen/card drawing helper.
+- Regenerated and reviewed the Hairline illustration at desktop size. Static validation and `git diff --check` passed. Updated the reusable art rules, Hairline README, and this log. Files: `kyte-site/hairline/product-experience.js`, `build-product-experience.mjs`, generated Hairline HTML, embed output, `.agents/skills/kyte-isometric-art/SKILL.md`, `kyte-site/hairline/README.md`, and this log. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Remove inner lines from UI slabs
+
+- Removed the inner rim and separate depth strokes from the product screen and all floating cards. They retain one rounded outer contour and a neutral side band for thickness; internal interface details remain on the face.
+- Regenerated the standalone Hairline bench and site embed. Static validation and `git diff --check` passed. Updated the reusable art rules and Hairline README. Desktop review only, as requested. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Separate cube seams from outer contours
+
+- Shortened internal seams inside every cube so the lighter lines stop before the darker rounded silhouette. Kept each outer contour and the rounded face geometry intact. Added the gap rule to the reusable illustration guide and Hairline README.
+- Regenerated the standalone Hairline bench and site embed. Static validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Refine cube seam joins
+
+- Matched the supplied cube reference: light inner seams now sit inside the outer contour at side edges, meet at the central fold with rounded joins, and use a lighter gray. Updated the reusable Hairline guidance and README.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Match cube seams to the supplied close-up
+
+- Reshaped the light cube seams so the right diagonal flows through a curved center junction into the vertical edge, with the left diagonal joining that curve. Both outer endpoints remain inset from the rounded contour, and the seam color is lighter to match the reference. Updated the reusable art guidance and Hairline README.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Add a gap before the right cube seam curve
+
+- Added a small visible gap between the right incoming cube seam and the curved center transition, as requested. No other illustration styling changed.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Increase the cube junction gap
+
+- Increased the distance between the incoming right seam and the curved junction so the separation is clearly visible at the hero's rendered size.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Move the cube junction gap to the right branch
+
+- Moved the gap onto the diagonal entering from the cube's right side. The left diagonal stays connected to the curved center fold and vertical seam.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Tune cube junction spacing and side face corner
+
+- Reduced the right-branch seam gap slightly and rounded the neutral face at its upper-left corner to follow the center fold. Other contour styling is unchanged.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Match keyboard shell to the screen slab treatment
+
+- Reworked the keyboard base with one shared rounded outer contour and a quiet neutral thickness band beneath the white top surface. Removed its old inset crease; individual key tiles remain unchanged.
+- Updated the isometric illustration guidance and Hairline README so future keyboard shells follow the same treatment as screens and cards.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Match the projected floor lattice to the reference
+
+- Replaced the barely visible floor marks with a clearer repeated cross lattice, with every mark positioned on the scene's x/y ground plane and projected through the same isometric camera. Increased mark size and contrast while keeping it behind the illustrated objects.
+- Added the ground-plane projection rule to the reusable illustration skill and updated the Hairline page notes.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Align floor crosses to the illustration axes
+
+- Corrected the floor cross arms to follow the two projected world-plane axes, expanded the lattice over the full illustration viewport, and added a radial fade toward the corners to match the Goodface reference more closely.
+- Updated the reusable isometric-art rule and Hairline notes with the axis alignment and full-area fade requirements.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. Goodface page reviewed in-browser. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Extend the floor fade along the horizontal edges
+
+- Tightened only the horizontal radius of the ground-pattern mask so the lattice fades gradually at the left and right edges. The vertical fade remains as reviewed.
+- Rebuilt the site embed and verified the desktop preview. `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Clean up the electric bolt cube seam corner
+
+- Repositioned the incoming right seam endpoint relative to the cube's shared vertex instead of a sampled curve point, removing the uneven fragment at the corner while retaining the intentional seam gap.
+- Updated the reusable illustration guidance and Hairline notes.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Reduce the electric bolt cube seam gap
+
+- Reduced the incoming right seam offset from 3.0 to 0.45 projected pixels from the shared vertex, leaving a fine separation from the rounded fold. Increased the quadratic sampling to keep the folded seam smooth.
+- Regenerated the standalone bench and site embed. Hairline validation, desktop visual review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Refine the product illustration interior content
+
+- Built a layered product dashboard inside the existing screen shell, with a compact header, a featured gradient area, a small visual, and three supporting tiles. Redesigned the floating panel interiors and cube pictograms to read as coherent product UI while preserving all approved outer geometry.
+- Added the internal content hierarchy rule to the isometric artwork skill and documented the current illustration in the Hairline README. Updated `product-experience.js`, rebuilt the standalone bench and site embed, and checked the preview in the browser. Hairline static validation and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Rework the hero illustration's screen content to match the reference
+
+- Rechecked the Goodface hero artwork. Replaced the dashboard-like treatment with four large rounded gradient panels, white gutters, one foreground search strip, and minimal neutral cube icons. Kept the approved scene structures and seams unchanged. The previous inner layout did not match the reference and is superseded by this composition.
+- Updated the reusable illustration guidance and Hairline README. Regenerated the standalone figure and site embed. Browser preview, Hairline static validation, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Clarify the hero cube pictograms
+
+- Reworked the cube glyphs as a consistent set of centered symbols: a clean bolt, weighted list bars, larger magnifier, connected rounded flowchart modules, and a layered database. Kept their neutral treatment and the approved cube contours and seams.
+- Tightened the reusable icon rule to require recognizable shapes at the final render size. Regenerated the standalone figure and site embed. Browser review, Hairline static validation, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Improve isometric hero icon clarity
+
+- Increased the cube pictograms' optical size and contrast, refined the flowchart connector geometry so branches meet three clear rounded nodes, and made the list and database symbols read more distinctly at the embedded size. Kept the cube faces and outer contours unchanged.
+- Updated the isometric illustration guidance and Hairline README. Regenerated the standalone figure and site embed. Browser review, Hairline static validation, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Finish the remaining cube icons
+
+- Reworked the magnifier, flowchart, and database marks with larger, stronger outlines and clearer internal geometry to bring them in line with the refreshed bolt and list icons.
+- Regenerated the standalone figure and site embed. Browser review, Hairline static validation, and `git diff --check` passed. Owner: Kyte website team.
+
+### 19 October 2026: Use the existing Lucide icons on cube faces
+
+- Replaced the improvised magnifier, workflow, and database glyphs with the project's Lucide Search, Workflow, and Database icon paths. Applied a heavier stroke and mapped each icon through its cube face plane so it follows the isometric surface.
+- Updated the reusable icon rule and Hairline README. Regenerated the standalone figure and site embed; visual review, Hairline validation, and `git diff --check` completed. Owner: Kyte website team.
+
+### 19 October 2026: Standardize all cube pictograms on Lucide
+
+- Replaced the remaining bespoke bolt and list with Lucide Zap and List. Applied the same icon viewBox, projected face size, and shared stroke width to all five glyphs, with a small reduction to their size and line weight.
+- Updated the reusable rule and Hairline README. Regenerated the figure and embed; browser review, Hairline validation, and `git diff --check` passed. Owner: Kyte website team.
+
+### 19 October 2026: Strengthen structure contours and tighten radii
+
+- Increased the shared outer contour width from 1.05 to 1.28 pixels and reduced the common structural corner radius from 3.6 to 3.0 world units across the screen, cards, keyboard, and cubes.
+- Regenerated the figure and site embed. Browser review and Hairline validation completed. Owner: Kyte website team.
+
+### 19 October 2026: Add a final contour and icon contrast adjustment
+
+- Increased the shared outer contour from 1.28 to 1.45 pixels and lightened the Lucide icon strokes to `#aeb7ba` while preserving their consistent width.
+- Updated the Hairline README. Regenerated the figure and site embed; browser review, Hairline validation, and `git diff --check` passed. Owner: Kyte website team.
+
+### 19 October 2026: Final contour weight and icon consistency pass
+
+- Increased the shared outer contour from 1.45 to 1.58 pixels and set all Lucide icons to one lighter gray (`#bec5c7`) and shared 3.2 px stroke width.
+- Updated the Hairline README. Regenerated the figure and embed; browser review, Hairline validation, and `git diff --check` passed. Owner: Kyte website team.
+
+### 19 October 2026: Simplify text placeholders and remove inner borders
+
+- Changed faux text lines to light-gray filled rounded rectangles, removed decorative strokes from nested UI panels and gradient surfaces, and applied the shared corner radius to content blocks. Also aligned all five cube symbols to Lucide paths with one shared face transform.
+- Updated the isometric illustration rule and Hairline README. Regenerated the standalone figure and site embed; reference and browser review, Hairline validation, and `git diff --check` completed. Owner: Kyte website team.
+
+### 19 October 2026: Simplify interior UI strokes and text marks
+
+- Changed faux text lines to light-gray filled rounded blocks, removed decorative border strokes from nested UI panels and gradient surfaces, and applied the shared corner radius to content bars and chart blocks.
+- Updated the reusable illustration rule and Hairline README. Regenerated the figure and embed; reference and browser review, Hairline validation, and `git diff --check` completed. Owner: Kyte website team.
+
+### 19 October 2026: Correct remaining UI/UX hero icon and control details
+
+- Confirmed the connected-square mark against Lucide Workflow. Replaced the hand-drawn search and play marks with Lucide paths, changed the small blue button to a neutral surface, and moved the browser controls into a tight group at the left of the header.
+- Updated the illustration skill and README. Regenerated the standalone figure and site embed; Hairline validation, local browser review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Lighten the hero illustration icon strokes
+
+- Reduced the shared Lucide icon stroke width from 3.2 px to 2.8 px across cube and interface icons, preserving the same width and color for every mark.
+- Updated the Hairline README and regenerated the standalone figure and site embed. Hairline validation, local browser review, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Refine product illustration interface spacing and color
+
+- Compared the current hero illustration against the Goodface UX/UI and website-development references. Kept the approved outer structures and perspective. Tightened the main screen gutters and floating-card content spacing, removed extra gray UI tiles, and reduced interior corner radii while retaining the structural rounding.
+- Rebuilt the colored vector surfaces with base gradients, soft radial color blooms, and restrained pale edge light. Updated the reusable isometric-art guidance and Hairline README with the smaller interior radius and layered-gradient rules. Files: `kyte-site/hairline/product-experience.js`, `build-product-experience.mjs`, the generated standalone figure and site embed, `.agents/skills/kyte-isometric-art/SKILL.md`, `kyte-site/hairline/README.md`, and this log.
+- Checks: Hairline static validation, local desktop browser comparison, and `git diff --check` passed. The responsive layouts were outside this focused illustration pass. Next action: review the illustration on the UI/UX landing page before further page-level layout work. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Author the product illustration UI as separate HTML faces
+
+- Moved the detailed screen and floating-card interiors into reusable HTML/CSS templates in `kyte-site/hairline/product-experience-ui.html`. The Hairline figure now records each face's dimensions and four projected corners; the site builder calculates an affine transform and places the HTML template on that plane, leaving the approved structure and contours intact.
+- Updated `.agents/skills/kyte-isometric-art/SKILL.md` and `kyte-site/hairline/README.md` with the face-template workflow and the separate cube/UI icon treatments. Regenerated `kyte-site/public/hairline/product-experience-embed.html`.
+- Checks: Hairline static validation, local standalone embed review, local UI/UX landing page review, and `git diff --check` passed. The standalone HTML sheet is available for editing the UI layout independently. No GitHub or Vercel write. Owner: Kyte website team.
+
+
+### 19 October 2026: Refine projected UI gradients and chart details
+
+- Compared the local product illustration against the live Goodface FinTech UX/UI hero and the supplied close-up. Rebuilt the four main interface gradients, search field, media surface, and small color marks with several soft color blooms and pale light around the full perimeter. Kept the approved outer scene geometry.
+- Replaced the analytics graph's two border dividers with lighter filled rectangles. Used one 2 px Lucide outline treatment for the UI marks, with white Search, profile, Image, and Play strokes. Updated the isometric-art guide and Hairline README.
+- Checks: regenerated the site embed, visually reviewed the direct embed and the `/ui-ux-design-development` page, confirmed all four UI icons compute to white outlines with the same width and no fill, confirmed two chart rectangles and no graph border, and ran `git diff --check`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Correct the projected interface icons and chart sectors
+
+- Replaced the approximate gallery, search, profile, and play SVGs with the exact Image, Search, UserRound, and Play paths from the installed Lucide package. Enlarged and darkened the neutral profile disc enough to keep its white outline legible on the projected card. Removed the white inset border from the translucent play control.
+- Rebuilt the analytics pie with three equal 112-degree sectors and equal 8-degree white gaps. Matched its violet, pink, and orange stops to the bar chart below. Updated `kyte-site/hairline/product-experience-ui.html`, the generated site embed, and `kyte-site/hairline/README.md`; the approved outer scene was left in place.
+- Checks: regenerated the embed, reviewed the direct local preview, compared all four SVG paths with the installed Lucide definitions, confirmed the play control has no inset border, and ran `git diff --check`. Next action: review these icon and chart details in the UI/UX landing page at its intended display size. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Fix Hairline SVG overrides on Lucide UI icons
+
+- Found that Hairline's global SVG path rule was filling the gallery, profile, search-handle, and play paths white and stroking them gray, while their circle elements remained white outlines. Scoped the projected HTML face CSS to force each Lucide child path, circle, and rectangle to an unfilled white 2 px line. The icon geometry still comes from the installed Lucide package.
+- Replaced the pie's angular white gaps with three straight 8 px separators over three equal color sectors and a white center circle. Updated the reusable isometric-art skill and Hairline README with the line-only icon rule and the need to check computed child styles.
+- Checks: regenerated the site embed, verified every child of all four UI icons computes to `fill:none`, white stroke, and 2 px stroke width, verified all pie separators compute to the same 8 px width, reviewed the direct preview, refreshed the UI/UX page, and ran `git diff --check`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Soften gradient edges and increase illustration line weight
+
+- Kept the installed Lucide Image, Search, UserRound, and Play SVG paths unchanged. Increased their shared outline stroke from 2 to 2.25 px and the scene's shared structural contour from 1.58 to 1.75 px. No icon geometry was altered.
+- Strengthened the soft white wash around all four corners and the perimeter of the large screen panels, search field, and media gradient. Increased the edge light on the circular gallery gradient, pie chart, and chart bars. Updated the isometric-art skill to permit native filled Lucide icons while prohibiting custom edits that fill an outline icon.
+- Files: `kyte-site/hairline/product-experience-ui.html`, `build-product-experience.mjs`, generated site embed, `.agents/skills/kyte-isometric-art/SKILL.md`, `kyte-site/hairline/README.md`, and this log. Checks: regenerated the embed, visually reviewed the local illustration, confirmed all current icon children compute to white 2.25 px outlines and the contour variable to 1.75 px, and ran `git diff --check`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Keep the desktop gradient glow at its edges
+
+- Removed the interior radial color blooms from all four blue-green panels inside the main desktop illustration. Their smooth color blends remain, with the separate white light confined to the perimeter and corners. Kept the other card gradients and approved structural forms intact.
+- Updated the reusable illustration guidance and Hairline README. Regenerated `kyte-site/public/hairline/product-experience-embed.html`, visually reviewed the local preview, confirmed all four desktop panels compute to one linear color fill plus the separate edge-light layer, and ran `git diff --check`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Clarify Lucide's filled icon availability
+
+- Checked Lucide's current official React guide and the installed `lucide-react` 1.53.0 icon definitions. Lucide does not offer an officially supported filled icon set, though some shipped icons contain individual filled details. The installed Image and UserRound icons in this illustration are outlines. The current user preference is to use a filled icon only when Lucide ships that shape natively, without editing the SVG or forcing an outline icon to fill.
+- Corrected `.agents/skills/kyte-isometric-art/SKILL.md` and `kyte-site/hairline/README.md`. No icon or page visual changed in this research task. Source: https://lucide.dev/guide/react/advanced/filled-icons. Check: `git diff --check`. Owner: Kyte website team.
+
+### 19 October 2026: Rebalance illustration icon strokes
+
+- Increased the projected UI icon outlines slightly from 2.25 to 2.4 px and reduced the five right-hand cube icon strokes from 2.8 to 2.6 px. Kept the structural contour at 1.75 px and left all Lucide path geometry unchanged.
+- Checked the installed Lucide definitions for the relevant gallery, profile, search, play, and cube icons. None has a native full filled counterpart in the installed package, so no icon was artificially filled or replaced with a less relevant shape. Updated `product-experience-ui.html`, `build-product-experience.mjs`, the generated embed, the Hairline README, and the current-state summary.
+- Checks: regenerated the embed, reviewed the direct local preview, verified computed UI strokes are 2.4 px and cube strokes are 2.6 px, and ran `git diff --check`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Connect the right-side cubes with tubes
+
+- Moved the five Lucide cube icons onto their right-facing planes. Added short projected neutral tubes and soft socket collars at the centers of the cubes' left faces, joining their existing rear connector paths toward the main screen.
+- Updated `product-experience.js`, `build-product-experience.mjs`, the generated Hairline bench and site embed, `kyte-site/hairline/README.md`, and the reusable isometric-art guide. The page remains a local review draft.
+- Checks: Hairline static validation and `git diff --check` passed. Reviewed both the direct embed and the local UI/UX landing page in the browser at desktop width. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Rework the cube tubes against the close-up reference
+
+- Compared the supplied Goodface close-up with the local figure. Replaced the short wire-and-socket appearance with fuller neutral tubes, removed the exposed thin connector paths, and set each tube to run behind the main screen. Kept icons on the right cube faces and the previously approved cube spacing, with a small lift to the lower cubes where needed for the connections.
+- Regenerated the Hairline bench and site embed, and updated the Hairline README. Hairline static validation and `git diff --check` passed. I reviewed several intermediate versions in the direct embed, but the browser blocked the final page check with a security-policy error, so the final tube geometry still needs visual confirmation. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Join each cube tube to its socket
+
+- Fixed the visible break at each cube connection. Each tube now uses one continuous projected shaft drawn above the receiving face and collar, while the main screen hides the far end. Removed the separate short socket stub that could not meet the longer shaft.
+- Updated the Hairline construction guide and README, and regenerated the standalone bench and site embed. Hairline static validation and `git diff --check` passed. The browser security policy blocked a final visual page check, so the rendered appearance still needs confirmation. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Refine the cube pipe sockets
+
+- Added round, opaque connection surfaces at the five cube ports and drew them above the cube contours so the outlines cannot show through. Compared their proportions with the supplied Goodface crop, then reduced the initial socket size and softened the neutral fills after user review. The pipes, cube shapes, and icon placements remain in place.
+- Updated the illustration source, presentation styles, reusable guide, README, Hairline bench, and site embed. Hairline static validation and `git diff --check` passed. Final appearance was not browser verified because the browser security policy blocked the page check. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Layer pipes over sockets and spread the cube cluster
+
+- Moved the complete neutral pipe strokes above the opaque socket faces so each pipe reads as entering its connection. Repositioned the five cubes into a higher, more open staggered cluster and adjusted tube lengths to keep their far ends hidden behind the main screen. Kept their face treatment and Lucide icons intact.
+- Updated the illustration source, generated Hairline bench and site embed, reusable isometric guide, and Hairline README. Hairline static validation passed, and a geometry check confirmed all five pipe ends project inside the screen face. A final browser render check remains unavailable because the browser security policy blocked it. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Center cube tubes, open the cluster, and add tool marks
+
+- Replaced the screen-space tube strokes with projected solid cylinders. Each front cap and opaque socket now shares the same world-space center, removing the apparent off-center connection. Moved the five cubes farther apart and upward to match the supplied placement reference; the upper cube may crop at the top. A geometry check found no cube overlap, kept the right contours within the scene width, and confirmed all five tube ends sit behind the main screen.
+- Added the five-color Figma mark to one cube and a blue Framer mark to another, both projected onto the right-facing planes without background tiles. Used Framer's current brand blue; its official brand page says colored Framer logos should not be used, so the blue mark is a local visual draft pending brand-compliant review before publication. Sources: https://www.figma.com/using-the-figma-brand/ and https://www.framer.com/brand.
+- Updated the source, presentation CSS, generated Hairline bench and site embed, README, and reusable isometric guide. Hairline static validation and `git diff --check` passed. A rendered browser review remained unavailable due to the browser security-policy block. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Use the official Framer logo color
+
+- Changed the Framer logo on the cube from blue to its original black mark, with no background. Kept the colored Figma mark as requested. Regenerated the site embed and confirmed the generated Framer mark uses black fill. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Add a ChatGPT cube to the product illustration
+
+- Added a sixth cube in the open top-middle area of the isometric cluster. Projected the existing monochrome ChatGPT logo asset onto its right-facing surface without changing its colors or adding a tile. Kept the cube consistent with the established contour and connector treatment.
+- Follow-up visual adjustment: lowered the ChatGPT cube so more of it enters the canvas and lowered the three-line icon cube to separate it from the Figma-marked cube.
+- Updated `kyte-site/hairline/product-experience.js`, the generated Hairline bench and site embed, the Hairline README, this progress log, and `.agents/skills/kyte-isometric-art/SKILL.md` with the asset-preserving logo rule.
+- Checks: Hairline static validation and `git diff --check` passed. Computed cube bounds show the added cube clears the neighboring upper cubes. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Use the Figma SVG asset and reposition the ChatGPT cube
+
+- Replaced the hand-built Figma mark with the supplied `/tool-logos/figma.svg` asset, preserving its original monochrome artwork. Moved the ChatGPT cube left and down into the visible cluster. Repositioned the Figma, search, and database cubes to keep the two-column composition clear, while keeping the three-line icon lower than the Figma mark.
+- Updated the illustration source, presentation CSS, generated Hairline bench and site embed, Hairline README, and this handoff.
+- Checks: Hairline static validation and `git diff --check` passed. Projection bounds confirm the ChatGPT cube is within the canvas with only a narrow overlap at the screen edge. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Refine product illustration cube placement
+
+- Lowered the complete isometric scene, moved the ChatGPT cube left toward the display, raised the horizontal-line cube, and lengthened the database connector so its shaft continues behind the opaque screen. Kept all six cubes because the revised spacing and connector fit the illustration.
+- Replaced the monochrome Figma mark on its cube with a transparent brand-color SVG asset. Updated the reusable isometric-art guidance and Hairline README to preserve the chosen supplied logo variant.
+- Updated the Hairline source, standalone validation bench, generated site embed, and this handoff. Checks: Hairline validator, projection bounds, and `git diff --check`. Browser appearance remains unverified because the browser security policy blocked visual inspection. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Keep cube tubes behind the screen and simplify cluster
+
+- Shortened the Search cube tube so it ends within the screen's projected area and remains hidden behind the display. Removed the database cube, raised the Framer cube, and raised the Figma cube directly below ChatGPT. The cluster now has five cubes.
+- Updated the illustration source, generated Hairline bench and site embed, Hairline README, and this handoff. Checks: Hairline static validation and `git diff --check`; calculated that the Search tube endpoint remains inside the screen projection. Browser appearance remains unverified because the browser security policy blocked visual inspection. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Raise the upper List and Framer cubes
+
+- Raised the upper-right List cube and the Framer cube below it slightly, preserving the remaining cube positions and connector layout.
+- Regenerated the Hairline validation bench and site embed and updated this handoff. Checks: Hairline static validation and `git diff --check`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Package the approved isometric illustration as a reusable skill
+
+- Expanded `.agents/skills/kyte-isometric-art/` into a portable skill with the approved visual rules, construction method, editable source example, and a shareable ZIP. It supports three inputs: a written communication idea, a close reference in the approved style, and an idea translated from a reference with a different visual language. A same-style reference is treated as a detailed visual target; a different-style reference supplies the message and relationships while the output uses the Kyte illustration system.
+- Added the workflow to `AGENTS.md` and `/design-system`, and clarified the Hairline README. Checks: skill metadata and links, packaged asset comparison, ZIP integrity, targeted design-system lint, and `git diff --check`. The official skill validator could not run because PyYAML is unavailable, so metadata was parsed with Ruby instead. The skill documentation does not change the site illustration. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Replace the first product-moments card illustration
+
+- Rebuilt the supplied product-experience and sales reference as an editable SVG scene using the Kyte isometric-art rules: a neutral contoured platform, projected floor grid, soft colored orbit, gradient sphere, outlined secondary spheres, and labels. Replaced only the first illustration in the “Design for the moments that move a product forward” carousel; other uses of the Hairline Hub figure remain unchanged.
+- Files: `kyte-site/src/components/ProductDesignIllustrations.tsx`, `ProductDesignCarousel.tsx`, `src/app/ui-ux-design-development/product-design.css`, and this handoff. Checks: reviewed the rendered first card on the local desktop page; targeted ESLint, TypeScript, and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Refine the first card's contained gradients
+
+- Compared the Goodface product-experience orbit card on its live page with the local first card. Replaced the linear color stroke and blurred outer color glow with clipped colored blocks inside the orbit and sphere, then added a restrained inner white edge wash. Added a soft white fade to the lower arc around the Sales chip and removed the platform's external shadow. The other carousel cards remain in place.
+- Updated only `kyte-site/src/components/ProductDesignIllustrations.tsx` and this handoff. Reviewed the result on the local page at its displayed card size. Targeted ESLint, TypeScript, gradient-structure assertions, and `git diff --check` passed. The new gradient treatment is awaiting user review and has not been added to the reusable skill. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Approve orbit color treatment and add chip padding
+
+- Increased the insets of the Product experience and Sales labels in the first product-moments illustration. The user approved the contained color treatment, so the Kyte isometric-art skill now specifies clipped solid-color fields, softly blended transitions, an inner white perimeter wash, local fades where needed, and no exterior color glow or single linear color sweep.
+- Added a focused color-field guide and packaged the editable orbit SVG component as a reference. Updated the `/design-system` description and refreshed `exports/kyte-isometric-art-skill.zip`. Checks: local first-card review, targeted ESLint, TypeScript, skill package integrity, reference-source comparison, and `git diff --check`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Replace the second product-moments card illustration
+
+- Recreated the supplied isometric laptop reference as editable SVG artwork for the second card only. It includes the projected laptop base and keyboard, pink analytics panel, green three-part pie chart, and a softly fading diamond floor grid. The illustration uses clipped color fields and a contained white edge wash from the approved Kyte isometric-art rules. Other Hairline Relay uses remain unchanged.
+- Updated `kyte-site/src/components/ProductDesignIllustrations.tsx`, `ProductDesignCarousel.tsx`, the product-design stylesheet, and this handoff. Reviewed the card in the local browser at page scale and checked the keyboard stays within the laptop base. `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Correct the second card against the laptop reference
+
+- The first pass did not match the reference closely enough. Reworked the laptop silhouette and deck proportions, enlarged the projected keyboard to fill the base, aligned the two dashboard panels to the reference's angle and relative size, and clarified the separated three-part chart. Removed the soft color blur that was muddying the chart and panel edges.
+- Updated `kyte-site/src/components/ProductDesignIllustrations.tsx` and this handoff. Reviewed the second card in the local browser against the supplied 704×480 reference. Checks: targeted ESLint and `git diff --check`. The visual is a closer editable reconstruction, not a pixel-perfect copy. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Review the illustration skill workflow
+
+- The user asked which model to use and why the new skill did not produce a sufficiently faithful second-card reconstruction. Reviewed the skill and its reference/construction guides. They ask for measurement and visual comparison, but the first implementation did not enforce a geometry-first approval gate or a concrete overlay-based comparison. Recommended trying the strongest reasoning model available and strengthening those execution gates before relying on the skill for close matches. This is a proposal only; the skill was not changed in this turn.
+- Updated this handoff only. No code, deployment, or external system changed. Owner: Kyte website team.
+
+### 19 October 2026: Rebuild the laptop and harden the isometric skill
+
+- Audited all 16 current illustration assets on the live Goodface Fintech UX/UI service page and recorded the shared camera, contour, thickness, radius, floor, interface, and color-field rules in the Kyte isometric-art reference library. Third-party source pixels remain outside the portable skill package.
+- Rebuilt the second product-moments laptop around one Hairline camera. The screen, deck, keyboard, trackpad, floor grid, thickness bands, and contours now derive from the same world projection. Moved the dashboard into a separate HTML/CSS face document and mapped it to the measured screen corners in the build step, matching the approved desktop workflow.
+- Strengthened the skill with a mandatory measured-reconstruction gate, camera-axis sign checks, structure-only review, flat-face preview, CSS-isolation checks, same-size overlay/difference comparison, a troubleshooting order, and a portable comparison bench. Added a laptop workflow note describing the three-file scene, face, and builder split.
+- Files: Kyte isometric-art skill and package, the new laptop scene, face template, builder and generated embed, product illustration integration, product-design stylesheet, and this handoff. Checks: Hairline validator, targeted ESLint, TypeScript, YAML parse, local standalone render, local carousel render, and `git diff --check`. The skill validator could not run because its optional Python YAML dependency is unavailable; the skill YAML parsed successfully with the system Ruby YAML parser. No GitHub, Vercel, or other external write. Owner: Kyte website team.
+
+### 19 October 2026: Serve the latest UI/UX page preview
+
+- Located the refined UI/UX page in the `codex/product-design-landing` checkout. Port 3001 had been pointed at older source trees, so restarted it from this latest checkout, preserving the interactive framework, Goodface-inspired page structure, and current custom illustrations already present there.
+- Checks: `/ui-ux-design-development` returned HTTP 200 with the current hero, product-moments carousel, and framework stages; no placeholder text. The latest checkout shares dependencies through a symlink that Turbopack could not resolve, so the local preview runs in Webpack mode. No page source changed in this turn; no GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Detach the latest preview from the stale checkout
+
+- Repointed the `codex/product-design-landing` checkout's ignored `node_modules` symlink to the main workspace dependency directory, so it no longer depends on `/private/tmp/kyte-fincart-clean`.
+- Verified the latest `/ui-ux-design-development` page still returns HTTP 200 on `127.0.0.1:3001` and includes the current hero and product-moments section. The stale checkout remains registered because automatic safety review rejected its removal while `WEBSITE_PROGRESS.md` had an uncommitted recovery note. No source code, GitHub, or Vercel changes. Owner: Kyte website team.
+### 19 October 2026: Refine the product-stage illustrations one at a time
+
+- Corrected the process after an all-at-once illustration pass. Refined only the “New products” scene, placing its colored interface panel on the neutral cube base and keeping the complete object within its card. Left the other seven scene drawings at their previous draft state for sequential review. Kept the responsive four-by-two card layout so the card artwork is not clipped at the row edge.
+- Updated `kyte-site/src/components/ProductDesignIllustrations.tsx`, `kyte-site/src/app/ui-ux-design-development/product-design.css`, and this handoff. Reviewed the first card and full section in the local browser at desktop size. Targeted ESLint and `git diff --check` passed. Full TypeScript checking still reports missing `lottie-web` and `lenis` packages and a dependent implicit-any error in `SiteSmoothScroll.tsx`. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Redraw all product-stage mini illustrations
+
+- Revisited the supplied Goodface small-card references and replaced all eight draft scenes, card by card, with sparse centered vignettes: a new-product screen, growing-platform blocks, a service sphere, internal-tool blocks, a commerce tile, a web laptop, paired system blocks, and a brand pyramid. Each composition uses at most two main forms, one neutral and one colored, with consistent isometric faces and room around the full object. Kept the four-by-two desktop card grid and responsive layout.
+- Updated `kyte-site/src/components/ProductDesignIllustrations.tsx` and this handoff. Targeted ESLint and `git diff --check` passed. The revised full section was visually inspected in the local desktop browser. A sandboxed HTTP probe could not reach the local server, while the app browser loaded the page; the server was confirmed bound to port 3001 when checked with the approved local process launch. No GitHub or Vercel write. Owner: Kyte website team.
+
+
+### 19 October 2026: Match the New products card to the supplied reference
+
+- Rebuilt the first stage-card illustration as editable SVG using the supplied 176 × 176 reference. Matched the stacked rounded white forms, mint circular platform, clipped soft color fields, and light seams. Removed an extra vertical seam after comparing the artwork at native size.
+- Updated `kyte-site/src/components/ProductDesignIllustrations.tsx`, `kyte-site/src/app/ui-ux-design-development/product-design.css`, and this handoff. Compared the reference and recreation side by side at 176 × 176, then reviewed the card in the local page. Targeted ESLint and `git diff --check` passed. The remaining seven mini illustrations are unchanged. No GitHub or Vercel write. Owner: Kyte website team.
+
+
+### 19 October 2026: Refine the New products illustration against the reference
+
+- Corrected the central and right-face vertical seams, moved the right-side fold to the reference junction, and rebuilt the platform from symmetric elliptical arcs so its circular form reads cleanly in isometric perspective. Adjusted the visible front arc and softened the mint color fields to better match the supplied gradient.
+- Updated `kyte-site/src/components/ProductDesignIllustrations.tsx` and this handoff. Compared the recreation with the supplied image side by side at 176 × 176 and reviewed the product-stage section in the local browser. Targeted ESLint and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+
+### 19 October 2026: Finish the New products illustration junctions
+
+- Extended the right-face vertical seam down to the bottom vertex, carried the curved divider to the outer edge, and reshaped the outer right contour to keep a straight side before its rounded lower turn.
+- Updated `kyte-site/src/components/ProductDesignIllustrations.tsx` and this handoff. Reviewed the updated stage card in the local browser. Targeted ESLint and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Rebuild the Growing platforms illustration
+
+- A hand-drawn SVG reconstruction created overlapping forms in the card. Replaced it with the supplied transparent reference asset at its native 88 × 88 size and confirmed the image matches the supplied file byte for byte. Reviewed it in the live local card grid.
+- Updated `kyte-site/src/components/ProductDesignIllustrations.tsx`, added `kyte-site/public/product-stage/growing-platforms.png`, and updated this handoff. Targeted ESLint and `git diff --check` passed. The other six stage cards remain unchanged. No GitHub or Vercel write. Owner: Kyte website team.
+
+
+### 19 October 2026: Rebuild Growing platforms as editable illustration geometry
+
+- Replaced the direct raster placement with an editable 88 × 88 SVG built from the measured reference: layered rounded white forms, a circular plinth, subtle seams, and clipped radial color fields. Removed the extra full ellipse and softened the front segment and contour after side-by-side comparison.
+- Updated `kyte-site/src/components/ProductDesignIllustrations.tsx`, added `kyte-site/public/product-stage/growing-platforms.svg`, removed the raster from site assets, and updated this handoff. Compared the SVG and supplied reference side by side, with an aligned overlay and difference view, then reviewed the rendered card in the local browser. Targeted ESLint and `git diff --check` passed. Other mini illustrations remain unchanged. No GitHub or Vercel write. Owner: Kyte website team.
+### 19 October 2026: Create a cross-site image-generation illustration skill
+
+- Studied the Goodface main-site presentation and Goodface Fintech homepage, five service routes, three solution routes, and representative work imagery. Classified the distinct illustration families and recorded their roles, composition scale, perspective, material, contour, and color treatment. The prior 16-asset UX/UI page study remains the detailed source for that service page. The main-site child sitemap failed to load, so individual article and case images are not claimed as exhaustively catalogued.
+- Added `.agents/skills/kyte-imagegen-art/` with a portable cross-site atlas, prompts for reference matching and idea translation, and review gates at final display size. Packaged it under `exports/`. This creates guidance only; no site asset was generated or replaced. Validated frontmatter with Ruby YAML, package paths, and `git diff --check`. The skill creator's Python validator could not run because PyYAML is unavailable. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Generate the Established services stage illustration
+
+- Used the `kyte-imagegen-art` skill with the user's monochrome image as a geometry and composition reference. Preserved the circular plinth, two split upper sectors, three ascending bars, top inset, and floating sphere. Generated a transparent raster, then refined the first output to reduce metallic shading and dark contours. Color is concentrated in the mint, cyan, and violet sphere with a faint tint on the right sector.
+- Added `kyte-site/public/product-stage/established-services.png` and placed it in the “Established services” card via `ProductDesignIllustrations.tsx`. The asset is a visual adaptation, not a measured 1:1 reconstruction. Reviewed it at full size and in the 176 × 128 card slot on the local page. ESLint passed after removing the unused prior sphere helper; `git diff --check` passed. TypeScript checking still reports existing missing `lottie-web` and `lenis` modules and an implicit type in `SiteSmoothScroll.tsx`, with no new error in the edited component. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Rebuild Established services with the SVG skill
+
+- Used the `kyte-isometric-art` measured-reconstruction and visual-system rules to create `kyte-site/public/product-stage/established-services.svg`. Its 736 × 552 viewBox follows the supplied image's major anchors: circular foundation, raised rear-left arc, separate right wedge, three ascending bars, top inset, and floating sphere. White front faces, pale neutral thickness, shared gray contours, light seams, and clipped local color fields replace the monochrome material.
+- Switched the “Established services” card to the editable SVG and preserved the generated PNG for direct comparison. Reviewed the SVG standalone and at the card's display size in the local browser. SVG XML validation, focused ESLint, and `git diff --check` passed. TypeScript still reports the same existing missing `lottie-web` and `lenis` modules and an implicit parameter type in `SiteSmoothScroll.tsx`; there is no new error in the edited component. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Refine the Established services SVG geometry and color
+
+- Rebuilt the SVG's raised sectors and three bars as rounded solid silhouettes with white front faces and one opaque neutral depth shade. Moved light seams inside the shapes, kept them clear of the shared outer contour, and removed the foundation's linear neutral gradient.
+- Replaced the wedge's simple color treatment with clipped local cyan and mint fields and a soft white wash around the full inside perimeter. Kept the floating sphere's color and edge softness inside its circular clip. No raster generation was used for this pass.
+- Updated `kyte-site/public/product-stage/established-services.svg` and this handoff. SVG XML validation and `git diff --check` passed. Reviewed the standalone illustration and the 176 × 128 card rendering in the local browser. This remains a local review draft; no GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Plan the page-wide illustration upgrade
+
+- Audited every editorial illustration instance on `/ui-ux-design-development` against the current components and local browser rendering. Revisited the live Goodface Fintech hero and product-moments examples and mapped the page's remaining scenes to the skill's 16-asset Goodface study.
+- Added `UI_UX_ILLUSTRATION_PLAN.md` with a one-by-one scene queue, reference and communication brief for each, measured geometry and face-template workflow, same-size comparison requirements, and a user review gate between scenes. The first build target is the third product-moments card. No new artwork or page component changed in this planning turn.
+- Checks: reviewed the live Goodface page and local Kyte page in the browser; `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Refine the complex-work prism color fields
+
+- Reduced the inner white perimeter wash on the prism and added a localized cyan-to-blue field to its top face. Kept the color layers clipped inside inset face paths so the soft fields do not bleed beyond the contour.
+- Updated `kyte-site/hairline/build-product-complex-system.mjs` and regenerated `kyte-site/public/hairline/product-complex-system-embed.html`. Reviewed the centered third product-moments card in the local browser. Hairline static validation and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Remove the green fringe from the complex-work prism
+
+- Traced the mint edge fringe to the base face fill showing around inset gradient clips. Restored white base faces, clipped each colored layer to its exact face path, and reduced the white perimeter highlight to a faint edge softness.
+- Updated `kyte-site/hairline/build-product-complex-system.mjs` and regenerated `kyte-site/public/hairline/product-complex-system-embed.html`. Reloaded and reviewed the centered card in the local browser. Hairline static validation and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+### 19 October 2026: Clip complex-work colors to the prism contour
+
+- Confirmed the color-face polygons extend beyond the rounded prism silhouette. Added a shared user-space clip from the prism silhouette to every base and gradient face layer. Replaced filtered edge effects with shape-bound radial fills so no blur can paint outside the outline.
+- Updated `kyte-site/hairline/build-product-complex-system.mjs`, regenerated `kyte-site/public/hairline/product-complex-system-embed.html`, and versioned the iframe URL in `ProductDesignIllustrations.tsx` to bypass cached artwork. Reviewed the standalone illustration at full size and zoomed edges. Hairline static validation and `git diff --check` passed. No GitHub or Vercel write. Owner: Kyte website team.
+
+
+### 19 October 2026: Rebuild the complex-work scene and strengthen the illustration skill
+
+- Replaced the prior runtime recoloring pipeline with one pure geometry model shared by the neutral Hairline bench and final static SVG. Rounded body, material clip, and final contour use the same silhouette; visible faces and their blurred fields are additionally clipped to their actual planes. The previous patch passes are superseded by this rebuild.
+- Reframed the complete scene directly in a 400 × 260 card frame, removed the CSS zoom, widened the core, moved the sphere down to the foreground, and reduced the cone's overlap. Color fields now use local face coordinates. The host displays the generated SVG through Next Image with its full silhouette visible.
+- Updated the Kyte isometric-art skill with a solid construction guide, explicit scene-role and framing guidance, a portable runnable source/builder example, and a rendered color-containment checker. Rebuilt the portable ZIP. Detailed projected HTML faces remain required for interface scenes. Added the diagnosis in `exports/complex-system-rebuild-audit.md`.
+- Checks: neutral Hairline validation, JS syntax, focused component ESLint, SVG XML and shared-clip assertions, actual card and standalone browser review, and `git diff --check` passed. The 1280 × 720 color render had zero tinted pixels beyond its silhouette after a one-pixel antialiasing allowance; a deliberately misplaced pixel failed the checker. The portable example produced byte-identical SVG. The skill creator's Python validator lacked PyYAML, so Ruby YAML and ZIP integrity checks were used. Broad breakpoint testing was omitted under the user's illustration-only scope.
+- Status: local review candidate, not user-approved. Review this third card before moving to the next scene. No GitHub or Vercel write. Owner: Kyte website team.
+
+
+### 19 October 2026: Build the evolving-experience card
+
+- The user reviewed the rebuilt complex-work card and asked for only the next card. Used the updated Kyte isometric-art workflow and the Goodface curved-route family (UI 7, with UI 11 as conceptual context) to create one continuous white route changing direction around a pink-violet sphere. The entire route remains visible in this adaptation.
+- Added `product-evolving-experience.js` and its static SVG builder. One shared camera supplies the rounded route, opaque neutral extrusion, sphere, and fading floor. The nonconvex route silhouette is the union of its top and bottom surfaces; no convex hull fills the bends. The sphere uses clipped local color fields and an inner white wash. Added the new SVG only to the fourth carousel card through `ProductDesignIllustrations.tsx` and `ProductDesignCarousel.tsx`, with the matching artwork selector in the page CSS.
+- Checks: Hairline structural validation, JS syntax, focused ESLint on the two edited components, SVG XML/shared-clip checks, standalone and actual-card browser review, and `git diff --check` passed. The rendered 1280 × 720 check found 24,137 tinted pixels and zero escaped pixels with a one-pixel antialiasing allowance. React review confirmed decorative alt text, stable existing keys, no new hooks, and no new animation loop. No broad breakpoint sweep was performed.
+- Reference evidence: inspected the live Goodface service page and its image metadata alongside the saved Goodface card capture. Direct CDN observation was blocked by the browser's site policy; no bypass or source-asset reuse was attempted. Source/reference brief and review images are under `exports/`.
+- Status: fourth-card local review candidate. No other illustration was changed, and the next scene remains pending this review. No GitHub or Vercel write. Owner: Kyte website team.
+
+
+### 19 October 2026: Card framing, client rail, and evolution portals
+
+- Applied the six browser comments: removed artwork inset padding and copy dividers, unified the four moment-card surfaces, reduced headings from 25 to 23 px, and aligned arrows with the existing rectangular small-radius website controls. Refit the laptop from actual projected object bounds so its complete deck stays visible; removed the embedded bench’s body padding and added a floor fade on every edge. Other illustration content remains as reviewed.
+- Replaced the six-logo labeled row with the existing `ClientBrandTicker` and all 24 shared client brands. Added an optional null title so this instance has no visible label; the ticker spans both page rails, runs left to right, and retains the existing reduced-motion behavior.
+- Studied the attached portal reference and updated only the evolving-experience geometry with three rounded translucent white U frames, quiet neutral depth, and one shared route camera. Its source, SVG builder, static artwork, neutral structural bench, and review wrappers were regenerated. Complete projected bounds are about 186 × 227 in a 400 × 260 frame.
+- Checks: focused ESLint, Hairline structural validator, desktop and 390 px mobile browser reviews, and `git diff --check` passed. Rendered color containment found 15,019 tinted pixels with zero escaped pixels at a one-pixel antialiasing allowance. `npx tsc --noEmit` remains blocked by missing `lottie-web` and `lenis` modules and the associated existing smooth-scroll callback type error. Review screenshots are under `exports/`.
+- Status: local review update, no GitHub or Vercel write. Next: user review of the four-card framing and expanded fourth illustration before continuing the page illustration plan. Owner: Kyte website team.
+
+
+### 19 October 2026: Simplify the UI/UX hero heading
+
+- Applied the browser comment: removed the decorative underline, shine animation, star, and unused keyframes; colored “human experience.” with `--color-blue` and added the full stop in the heading markup. Changed the route page and its stylesheet only, plus this log.
+- Checks: focused ESLint and `git diff --check`; local browser visual review. No deployment. Owner: Kyte website team.
+
+
+### 19 October 2026: Apply thirteen UI/UX browser refinements
+
+- Artwork: centered the orbit’s complete object bounds vertically without moving its fading floor. Portal openings now sit on the exact route centerline; the frame width increased from 54 to 66 world units, legs from 9 to 14 units, and beams from 10 to 12 units. Depth is symmetric around the route cross-section. Regenerated the editable scene, static SVG, and review bench; the page uses asset version 3.
+- Homepage parity: the impact row uses the actual homepage `KyteApproach` metric classes with number, icon group, number, icon group. `WorkShowcase` now accepts optional items and a fixed layout, and this page uses its list view without a view switch. Existing homepage defaults remain grid with the switch available; the route retains its Fincart, Collectbee, and Revenue Grid content.
+- Framework: removed card scaling that broke connector attachment; retained one shared node and connector layout at each breakpoint. Removed connector squares, used brand strokes and neutral surfaces, standardized small-radius card/icon treatments, centered the active stage, removed the full-height tab border, and gave the active item a 4 px brand indicator. Deliverables and Outcome are title case, brand colored, and semibold. Keyboard navigation still selects the matching content and visual.
+- Sections: removed both requested bespoke CTAs and the explore block. Converted the last two service links into matching cards, with three cards above two half-width cards on desktop. Benefits uses a subtle brand frame, white interior, neutral cards, consistent radii and padding, and reduced surrounding mobile gaps. The shared footer CTA remains part of the existing footer.
+- Checks: focused ESLint, `npx tsc --noEmit`, Hairline validator, JS syntax, and `git diff --check` passed. Browser review at 1280 px and 390 px confirmed no mobile page overflow, five service cards, no removed sections in the DOM, and list-only work. Desktop service widths were 379/379/379 and 574/574 px; mobile cards were all 292 px. Reviewed the live Goodface benefits layout for spacing and framing, without copying content or artwork. The browser JPEG capture had one fringe pixel outside a one-pixel allowance; the two-pixel antialias/compression allowance passed with 14,935 colored pixels and zero escaped pixels. Geometry still clips the sphere to its exact shared silhouette.
+- Local runtime: restored the dependencies already declared by the project with `npm install --ignore-scripts --no-audit --no-fund`, replacing the incomplete node_modules symlink. Restarted the local development server on port 3001 after its cached missing-lottie error. Package and lock files did not change. Screenshots are under `exports/`, including desktop/mobile framework and benefits reviews.
+- Status: local review update only. No GitHub or Vercel write. Next: user review before continuing the illustration rollout. Owner: Kyte website team.
+
+
+### 19 October 2026: First services illustration, UX research and audits
+
+- Used the updated Kyte isometric-art skill and inspected Goodface’s live Decision cube/platform reference (UI 5). Adapted the two-form composition to a finding brought into focus by research, with an unmodified white line Lucide Search glyph on the colored cube’s measured right face.
+- Added `product-research-audit.js` and its deterministic SVG presentation builder, neutral bench, static SVG, and standalone/structure review wrappers. One camera generates the platform, hovering cube, face/icon anchors, footprint, floor, and bounds. Color fields and white edge wash are clipped to the same rounded silhouette used by the final contour. No exterior glow, source raster, inner slab rim, or runtime SVG repainting.
+- Enabled the new asset only for index zero of the services list through `ProductDesignIllustrations.tsx` and the route page. Its scoped CSS fits the existing artwork slot. The other four cards retain their prior art. Updated the rollout inventory and saved the concept/reference/check brief under `exports/research-audit-brief.md`.
+- Checks: Hairline structural validation, focused ESLint, `npx tsc --noEmit`, `git diff --check`, structure/material browser review, and actual-card review at 1280, 810, and 390 px passed. Rendered containment found 77,875 colored pixels and zero escaped pixels with a one-pixel antialiasing allowance. Review screenshots are under `exports/research-audit-*`.
+- Status: local first-card review candidate, pending the user’s response before the next illustration. No GitHub or Vercel write. Owner: Kyte website team.
+
+
+### 20 October 2026: Website design & development service illustration
+
+- Used the updated Kyte isometric-art workflow and inspected the live Goodface UI 12 layered-surface and UI 15 projected-interface references. Built a browser website face with a smaller coded-component face overlapping it. The user requested only this second card; the research asset and other services retain their artwork.
+- Added `product-website-design.js`, `product-website-design-ui.html`, and the presentation builder. Flat HTML layouts are 1300 × 880 and 520 × 580, mapped into exact projected rounded planes. The final static SVG includes scoped inline HTML/CSS through foreignObject, neutral thickness, one outer contour per slab, filled gray placeholders, clipped blurred mint/cyan fields, inner perimeter softening, a projected unmodified Lucide CodeXml glyph, and a fading ground. No runtime repainting or external resources.
+- Generated the neutral bench, static SVG, flat face preview, structure/final wrappers, and source mask. Connected only index one through the `website` option in `ProductDesignCardArt`, with scoped card CSS. Updated the rollout inventory, source README, and `exports/website-design-brief.md`.
+- Checks: Hairline validator, focused ESLint, `npx tsc --noEmit`, SVG XML parsing, and `git diff --check` passed. Reviewed flat faces, neutral geometry, final material, SVG-as-image rendering, and actual service card at desktop 1280 px, tablet 810 px, and phone 390 px. Complete slabs remain visible. JPEG containment passed with 37,437 colored pixels, zero escaped pixels, one-pixel boundary allowance, and chroma threshold 24. The default threshold counted four low-chroma JPEG artifacts around tiny browser dots; their location and settings are recorded in the brief rather than treated as material spill.
+- Status: local second-card review candidate. No GitHub or Vercel write. Next: user review before starting mobile app design or any other illustration. Owner: Kyte website team.
+
+
+### 20 October 2026: Mobile app design service illustration
+
+- Used the updated Kyte isometric-art workflow and inspected Goodface UI 13 on the live Fintech service page. Adapted its shallow phone, raised interaction surface, and circular-control composition to an original pink-violet mobile interaction, preserving the approved perspective, contour, neutral depth, and fade treatment.
+- Added `product-mobile-app.js`, separate `product-mobile-app-ui.html` face layouts, and the SVG presentation builder. Rounded top/bottom rings define the handset and floating card. Circular controls use exact elliptical cross-sections with straight tangent sides. The 760 × 1300 handset and 680 × 480 interaction UI are projected through measured planes, with filled pale placeholders, no screen rim, clipped blended color fields, an inner white perimeter wash, and the unmodified white Lucide Pointer line icon.
+- Generated the editable neutral bench, static SVG, flat preview, structure/final review wrappers, and source mask. Enabled only the third services card through the `mobile` option and scoped artwork CSS. Research, website, and the other service assets remain unchanged. Updated the rollout inventory, source README, and `exports/mobile-app-brief.md`.
+- Checks: Hairline validator, focused ESLint, `npx tsc --noEmit`, SVG XML parsing, and `git diff --check` passed. Reviewed flat/neutral/final views and actual-card desktop 1280 px, tablet 810 px, and phone 390 px. Complete silhouettes remain visible. Rendered containment found 27,119 colored pixels and zero escaped pixels with a one-pixel antialiasing allowance at the default chroma threshold. Screenshots are under `exports/mobile-app-*`.
+- Status: local third-card review candidate. No GitHub or Vercel write. Next: user review before another illustration. Owner: Kyte website team.
+
+### 20 October 2026: SaaS and web app design service illustration
+
+- Built only the fourth service illustration using the updated Kyte isometric-art skill. Studied Goodface’s live Fintech web apps & SaaS card for shared perspective, white structural contours, bounded saturated fields, neutral depth, and floor fade. The original Kyte composition is a sidebar workflow board with three task columns and a floating analytics panel.
+- Added pure `product-saas-web-app.js` geometry, separate 1500 × 880 and 480 × 560 HTML/CSS face templates, the SVG builder, neutral bench, static SVG, flat preview, and structure/final wrappers. Original Lucide ChartNoAxesCombined node data is projected unchanged. Enabled only service index three through the `saas` option and scoped CSS.
+- Checked flat UI, neutral and final geometry, actual SVG-as-image card rendering at 1280 px, and actual route inside 810/390 px same-origin iframe viewports. The browser viewport override did not apply, so responsive verification used those fixed-width frames instead. All silhouettes remain complete. Focused ESLint, TypeScript, Hairline validation, SVG XML parsing, and diff whitespace checks passed. Default rendered containment: 23,353 colored pixels, zero escaped, one-pixel allowance. An injected 16 × 16 colored negative control correctly failed with 256 escaped pixels.
+- Evidence and construction notes: `exports/saas-web-app-*`. Local only, unpublished. Next: user review of this card before proceeding. Owner: Kyte website team.
+
+### 20 October 2026: eCommerce and Shopify websites illustration
+
+- Created only the fifth services illustration after the user requested it. Revisited Goodface’s live illustration grid and the skill’s interface/solid references. Adapted its white structures, neutral depth, bounded color and fading floor into an original product storefront with a separate horizontal checkout surface. No reference artwork pixels or Shopify logo were copied.
+- Added `product-commerce.js`, separate `product-commerce-ui.html` faces, SVG builder, neutral Hairline bench, generated SVG, flat preview and structure/final wrappers. Main interface is 1450 × 780, checkout is 1100 × 450, mapped to measured planes from one camera. Used unmodified Lucide ShoppingBag data at 1.9 UI stroke, filled gray placeholders, warm orange/green and mint color fields, and restrained inner white washes. Enabled only service index four through the `commerce` flag and scoped CSS.
+- Verified flat layouts, neutral solids, final material, actual desktop SVG image card at 1280 px, and complete silhouettes in the actual route at 810/390 px same-origin iframe widths. Hairline validation, focused ESLint, TypeScript, SVG XML parsing and diff whitespace passed. JPEG screenshot containment passed at chroma 24 with 22,285 colored pixels, zero escaped and a one-pixel allowance. Default chroma 18 counted eight pale JPEG edge artifacts (RGB spreads 18–21); recorded in the brief. A 16 × 16 negative-control patch correctly failed with 256 escaped pixels.
+- Updated rollout inventory, source README, and `exports/commerce-brief.md`. Local only, no publication. Next: user review of this illustration. Owner: Kyte website team.
+
+### 20 October 2026: Complex internal tools product-stage mini illustration
+
+- Revisited Goodface’s live Partnering with FinTech mini illustrations. Used two complete forms, one white foundation and one colored panel, with a new hexagonal support to suit the small product-stage role. Did not reuse a large detailed interface scene.
+- Added pure `product-stage-tools.js` geometry and `build-product-stage-tools.mjs`, neutral bench, final SVG and structure/final wrappers. Frame 160 × 128; one camera at 45 degrees, elevation .5, scale 1.18. Rounded hexagonal base and shallow rounded control panel use shared neutral contours and opaque depth. Color fields and inner edge wash are clipped to the exact rounded panel. Original Lucide SlidersHorizontal icon is projected through the face anchors. No detailed UI or HTML face template is required for this single pictogram.
+- Changed only the tools branch of `StageScene` and its scoped size rule, removing that branch’s old block pair. All other illustrations are unchanged. Transparent canvas has no rectangular background or cropped floor.
+- Checks: Hairline validator, focused ESLint, TypeScript, SVG XML and diff whitespace passed. Reviewed neutral/final views, actual desktop card beside its neighbors, and actual route in 810/390 px iframe viewports. Full symbol remains visible. JPEG containment passed at chroma 24 with 15,824 colored pixels, zero escaped, one-pixel allowance. Default chroma 18 counted one pale edge artifact at (675,267), RGB (232,247,250). A 16 × 16 negative control failed with 256 escaped pixels. Evidence under `exports/stage-tools-*`.
+- Updated the illustration rollout plan and source README. Local only, no publication. Next: user review of this one symbol. Owner: Kyte website team.
+
+### 20 October 2026: Commerce journeys product-stage mini illustration
+
+- Revisited the live Goodface Partnering with FinTech small symbols, particularly the floating card above the EMI payment surface. Adapted that two-form relationship into an original cart-to-checkout symbol with orange/yellow/green color. No dense interface, copied artwork pixels, or cropped floor.
+- Added `product-stage-commerce.js` and its presentation builder, neutral Hairline bench, transparent SVG and structure/final wrappers. Shared 45-degree/.5/1 camera, rounded white 64 × 82 checkout slab and a raised 56 × 38 cart tile. Original Lucide ShoppingCart node data is projected into the colored face. Three sparse gray checkout placeholders use local plane coordinates. All colored fields and white wash stay clipped inside the rounded face and solid.
+- Replaced only the product-stage commerce branch, removed its now-unused StageTile helper and added a scoped 160 × 128 framing rule. Other illustrations are unchanged. Updated source README, rollout plan and `exports/stage-commerce-brief.md`.
+- Checks passed: neutral Hairline validator, focused ESLint, TypeScript, SVG XML and diff whitespace. Visually reviewed neutral/final renders, actual desktop card and complete image framing in 810/390 px same-origin iframe viewports. JPEG containment at chroma 24: 8,865 colored pixels, zero escaped with one-pixel allowance. Default chroma 18 counted three pale JPEG edge artifacts; exact locations and RGB are in the brief. A deliberately added 16 × 16 external pink patch failed with 256 escaped pixels.
+- Status: local one-card review candidate, no publication. Next: user review before another stage illustration. Owner: Kyte website team.
+
+### 20 October 2026: Web platforms product-stage mini illustration
+
+- Revisited Goodface’s live Partnering with FinTech mini illustrations, particularly the white structures and colored sphere relationship in WealthTech & financial data. Adapted that small-symbol treatment to an original neutral browser and a pink-violet sphere, keeping two main forms and avoiding a dense large interface.
+- Added `product-stage-web.js`, its presentation builder, neutral Hairline bench, transparent SVG and structure/final wrappers. Shared 45-degree/.5/1.2 camera, 80 × 46 rounded browser with neutral 3-unit thickness, sparse projected header placeholders and original Lucide Globe node data. Sphere center and radius derive from world geometry, with blurred local color fields and white softening clipped to its circular silhouette.
+- Replaced only the stage web branch, removed the now-unused StagePanel helper and added scoped 160 × 128 artwork sizing. Existing other illustrations and section layout remain unchanged. Updated source README, rollout plan and `exports/stage-web-brief.md`.
+- Checks passed: Hairline validator, focused ESLint, TypeScript, SVG XML and diff whitespace. Reviewed neutral/final renders, actual desktop card and complete artwork in 810/390 px same-origin iframe viewports. Default chroma 18 containment: 11,777 colored pixels, zero escaped, one-pixel allowance. A deliberately added 16 × 16 external pink patch failed with 256 escaped pixels. Evidence under `exports/stage-web-*`.
+- Status: local one-card review candidate, unpublished. Next: user review before another stage illustration. Owner: Kyte website team.
+
+### 20 October 2026: Internal systems product-stage mini illustration
+
+- Used the updated isometric-art skill and revisited Goodface’s layered Product redesign reference. Adapted its shared-camera layering and restrained neutral/color relationship into three compact horizontal system layers. Two white foundations support one cyan/blue/violet workflow tile; no dense interface or background rectangle.
+- Added `product-stage-systems.js`, the SVG presentation builder, neutral Hairline bench and final/structure review assets. Three 58 × 58 rounded slabs share radius 4, depth 6 and a 45-degree/.5/1.18 camera. Original Lucide Workflow node data maps into the top plane, with clipped blended fields and inner white softening. Frame 160 × 128, complete visible bounds 92.88 × 85.27.
+- Changed only the stage systems branch and its scoped sizing. All other artwork is unchanged. Updated rollout notes, source README and `exports/stage-systems-brief.md`.
+- Passed Hairline validation, focused ESLint, TypeScript, SVG XML and diff whitespace. Inspected neutral/final renders, actual desktop card and full artwork in 810/390 px actual-route iframe viewports. JPEG containment at chroma 24: 19,784 colored pixels, zero escaped, one-pixel allowance. Default threshold counted one pale edge pixel at (536,324), RGB (236,245,254). A 16 × 16 external negative control correctly failed with 256 escaped pixels.
+- Local only, unpublished. Next: user review of Internal systems before another illustration. Owner: Kyte website team.
+
+### 20 October 2026: Connected brands product-stage mini illustration
+
+- Used the updated SVG skill and revisited Goodface’s live small illustrations, including its neutral-block/colored-capsule relationship. Created three forms: two rounded white touchpoint tiles and a warm colored physical bridge resting on both. The original Lucide Link2 glyph explains the connection; no logos or copied reference pixels.
+- Added `product-stage-brands.js`, presentation builder, neutral bench and final/structure SVG review assets. Shared camera 45 degrees/.5/1.12, frame 160 × 128, complete visible bounds 110.33 × 60.99. Two 42 × 42 tiles have depth 6, top height 7 and radius 4. A 52 × 22 rounded connector at height 11 has depth 4, meeting both tile tops. Blended orange/pink/violet color and inner wash share the rounded face and solid clips.
+- Changed only the brands branch and scoped artwork size. Removed the old brands-only StageBlock helper and obsolete fallback SVG now that all stage roles have dedicated art. Other artwork is unchanged. Updated source README, rollout plan and `exports/stage-brands-brief.md`.
+- Passed Hairline validation, focused ESLint, TypeScript, SVG XML and diff whitespace. Reviewed neutral/final renders, actual desktop card and complete artwork at 810/390 px in actual-route iframe viewports. Default chroma 18 containment: 5,545 colored pixels, zero escaped, one-pixel allowance. An external 16 × 16 negative-control patch correctly failed with 256 escaped pixels.
+- Local only, unpublished. Next: user review of Connected brands. Owner: Kyte website team.
+
+### 20 October 2026: New products, Growing platforms and Established services
+
+- The user confirmed all three should be revised one at a time. Revisited Goodface’s live Partnering with FinTech small symbols. Built and reviewed New products before Growing platforms, then Established services, keeping each at two or three complete forms with transparent backgrounds.
+- New products: rounded white cylindrical foundation with an elevated mint/cyan idea tile and unmodified Lucide Sparkles glyph. Growing platforms: three ascending rounded pillars, two neutral and the tallest pink/violet, with light inset seams. Established services: white hexagonal foundation and a warm green/orange confirmation medallion with original Lucide Check glyph. Every structure, face and icon uses its scene’s shared camera; material fields and white washes are clipped to rounded faces and silhouettes.
+- Added `product-stage-new/growth/established.js`, their presentation builders, neutral benches, generated SVGs and structure/final wrappers. Replaced only the first three stage-role branches and removed their obsolete component functions; prior source SVG assets remain for history. Added scoped 160 × 128 sizing, aligned with the later mini figures. No other page illustrations changed.
+- Checks: all three Hairline validators, focused ESLint, TypeScript, SVG XML and diff whitespace passed. Reviewed individual neutral/final renders and the actual page at desktop 1280 px, plus actual route in 810/390 px iframe viewports. Complete silhouettes remain visible. Containment: New products passed at chroma 24 with 10,511 colored pixels; default chroma 18 found one pale JPEG edge artifact at (707,324), RGB (234,249,254). Growing platforms and Established services passed default threshold with 17,700 and 12,652 colored pixels respectively. All had zero escaped pixels at one-pixel allowance. External 16 × 16 negative controls failed with 256 escaped pixels each.
+- Preview recovery: restarted the stopped Next server on port 3001 (exec session 81224). Browser policy blocked observing the stale data-URL error tab; requested a refresh. After the user supplied the HTTP route again, opened that URL successfully and completed actual-page and responsive review. No security settings changed.
+- Updated rollout plan, source README and `exports/first-three-stages-brief.md`. Review evidence includes standalone, neutral, masks, desktop and responsive captures plus `first-three-stages-review.png`. Local only, unpublished. Next: user review of these three. Owner: Kyte website team.
+
+
+### 20 October 2026: Eight product-stage illustrations reviewed together
+
+- Balanced optical scale across all eight stage symbols using their source cameras, retaining centered 160 × 128 frames, fixed 0.9 px neutral contours, rounded geometry and clipped gradient fields. Increased the first two, reduced the tall Web platforms symbol, and adjusted the remaining forms to sit together consistently. Web sphere radius now follows the camera scale variable.
+- Consolidated duplicate stage sizing rules. Found and fixed the later mobile 210 px minimum card width that exceeded the two-column grid and clipped long labels. Complete artwork and labels now fit at 390 px; reviewed both halves at 810 px too, plus the full eight-card desktop section at 1280 px.
+- Rebuilt all eight SVGs, neutral benches, structure/final wrappers and source masks. All Hairline validators, SVG XML parsing, TypeScript and diff whitespace passed. Rendered group containment passed at chroma 24 with 47,577 colored pixels and zero escapes at one-pixel allowance. Default chroma 18 counted 25 pale JPEG edge artifacts (RGB inspected); a 256-pixel external negative control correctly failed.
+- Evidence and scale table: exports/stage-group-audit.md, desktop, enlarged material review, containment mask/result and responsive top/bottom screenshots. Updated illustration plan and source README. Local only, unpublished. Next: user review of the complete eight-card set. Owner: Kyte website team.
+
+
+### 20 October 2026: Complete services illustration set review
+
+- Reviewed all five services illustrations together using the updated Kyte SVG skill. Adjusted Research, Website and Mobile cameras slightly for optical balance; retained concepts, UI layouts and palettes. Research thickness now matches the shared neutral #f0f2f2. Contours remain 1 px #a9b0b2 with rounded joins and restrained internal detail.
+- Replaced five duplicate image sizing rules with a shared contain frame derived from the narrow grid column using container units. This keeps the two wider desktop cards and last tablet card at the same artwork scale. All five measure 350/326/268 px wide at 1280/810/390 px; horizontal center error below 0.004 px. Complete object bounds retain at least 32.19 px vertical and 70.68 px horizontal SVG clearance. All objects and fading floors are visible.
+- Rebuilt five final/structure assets and neutral benches. Reviewed every service card on phone, both desktop rows, tablet, and side-by-side neutral/final artwork. All Hairline validators, SVG XML, TypeScript and diff whitespace passed. Rendered mask test passed at chroma 24: 28,989 colored pixels, zero escapes, one-pixel antialias allowance. Default threshold found 19 pale JPEG artifacts, inspected individually. External 256-pixel negative control failed correctly.
+- Updated source README and illustration plan, with detailed evidence in `exports/services-group-audit.md`. Local preview only; no publishing. Next: user review of the five services illustrations together. Owner: Kyte website team.
+
+
+### 20 October 2026: Onboarding and activation outcome illustration
+
+- Used the updated SVG skill, live Goodface service-page study and its recorded hero/onboarding construction references to create a richer original scene for only the first What we design card. Four interface panels show setup, profile details, task completion and activation above a rounded three-milestone track. Existing five outcome illustrations are unchanged.
+- Added product-onboarding.js, separate measured HTML faces, presentation builder, unchanged-kernel neutral bench, and compiled SVG/final/structure/flat/mask artifacts. One shared -45/.5/1.54 camera; centered 400 × 280 frame; complete bounds 249.86 × 231.43. Neutral thickness, one rounded contour, native Lucide glyphs, contained color fields and four-edge fading floor.
+- Integrated one optional component branch and first-card flag, with scoped CSS. Inspected flat, neutral and final renders plus actual desktop, tablet 810 and phone 390 layouts. All foreground forms and track milestones remain visible. Hairline validation, SVG XML, focused ESLint, TypeScript and whitespace checks passed. Default rendered color containment: 26,553 colored pixels, zero escapes with one-pixel allowance. Negative control failed correctly with 256 escaped pixels.
+- Live Goodface page was accessible; direct CDN navigation was rejected by browser site-safety policy, with no workaround. No third-party pixels copied. Detailed brief/evidence: exports/onboarding-brief.md. Updated illustration plan and source README. Local only, unpublished. Next: user review of Onboarding and activation before any other outcome card. Owner: Kyte website team.
+
+
+### 20 October 2026: Navigation and information architecture outcome illustration
+
+- Revisited Goodface's live What we design family and the updated SVG skill's hero/layered-interface construction study. Created an original detailed three-level sitemap with one root, three page groups and six leaves, supported by a nested menu with an active category, a selected-page preview and a layered rear page. Changed only the second outcome card; onboarding and other artwork remain unchanged.
+- Added product-navigation.js, a measured four-face HTML template, presentation builder, unchanged-kernel neutral bench and generated final/neutral/flat/mask assets. One -45/.5/1.44 camera, centered 400 × 280 frame, complete bounds 224.22 × 235.17. Root/category/leaf connectors share measured flat coordinates and project with the parent surface. Rounded neutral solids, native Lucide icons, clipped fields and fading floor follow the skill.
+- Reviewed flat, neutral, final, desktop 1280 px and actual-route tablet/phone 810/390 px. No clipping. Hairline, SVG XML, focused ESLint, TypeScript and whitespace checks passed. Default color containment passed: 13,421 colored pixels, zero escapes, one-pixel allowance. Negative control failed correctly with 256 escaped pixels.
+- Restarted the stopped local preview on port 3001 from this checkout (exec session 91610), then verified a fresh working desktop tab. Updated README, rollout plan and exports/navigation-brief.md. Local only, unpublished. Next: user review of Navigation and information architecture before another illustration. Owner: Kyte website team.
+
+
+### 20 October 2026: Dashboards and complex workflows outcome illustration
+
+- Used the updated SVG skill and Goodface volume/hub/orbit construction references to make a distinctly lower, wider physical composition. Circular two-tier dashboard with donut/bar data connects through raised paths to intake, routing and completion modules, with a foreground task stack. Only the third outcome card changed; no upright screen panels added.
+- Added product-workflow-hub.js, separate top-face HTML layouts, presentation builder, neutral bench and generated vector/final/flat/structure/mask assets. Shared 45/.5/1.38 camera, centered 400 × 280 frame, complete bounds 276.46 × 156.88. White faces, neutral depth, one rounded contour, native Lucide glyphs, clipped fields and fading floor.
+- Reviewed flat/neutral/final renders plus actual desktop and 810/390 px card layouts. Complete silhouettes and supporting paths remain visible. Hairline, SVG XML, focused ESLint, TypeScript and whitespace checks passed. Rendered containment passed at chroma 24/two screenshot-pixel allowance with 16,724 colored pixels and zero escapes; inspected the faint JPEG edge samples at stricter settings. Negative control failed correctly with 256 escaped pixels. Detailed evidence: exports/workflow-hub-brief.md.
+- Updated source README and illustration plan. Local only, unpublished. Next: user review of Dashboards and complex workflows before another illustration. Owner: Kyte website team.
+
+
+### 20 October 2026: Websites and content journeys outcome illustration
+
+- Used the updated SVG skill and Goodface path/volume references for a new folded editorial-spread composition. Discovery and article leaves connect to a resource/search tile and a next-action tile by raised paths. Rich face layouts contain image areas, editorial hierarchy, byline, copy, pull quote, related stories and a call to action. Changed only the fourth outcome illustration.
+- Added product-content-journey.js, four separately measured HTML faces, presentation builder, neutral bench and generated final/flat/structure/mask vector assets. One 45/.5/1.45 camera; centered 400 × 280 frame; complete bounds 289.38 × 186.70. Both sloped leaves share the fold and are clipped to the rounded combined solid. One neutral outer contour, lighter inset seam, contained color fields and fading floor.
+- Reviewed flat/neutral/final renders and actual desktop/810/390 px layouts. No clipping. Hairline, SVG XML, focused ESLint, TypeScript and whitespace passed. Default rendered containment passed: 29,593 colored pixels, zero escapes, one-pixel allowance. External 256-pixel negative control failed correctly.
+- Updated source README, rollout plan and exports/content-journey-brief.md with evidence. Local only, unpublished. Next: user review of Websites and content journeys before another card. Owner: Kyte website team.
+
+
+### 20 October 2026: Design systems and interface patterns outcome illustration
+
+- Used the updated SVG skill and revisited Goodface's live layered/design-system volume references. Built an original exploded component assembly: foundation grid, controls library and assembled interface pattern, with a separate Aa/type/palette specimen rail. The controls include a button, toggle, input, checkbox and chips, then reappear in the final pattern. Changed only the fifth outcome card.
+- Added product-design-patterns.js, four measured HTML templates, presentation builder, unchanged-kernel neutral bench and generated vector/final/flat/structure/mask artifacts. Shared 45/.5/1.52 camera; centered 400 × 280 frame; complete bounds 248.80 × 180.12. Rounded white solids, neutral thickness, one contour per solid, original Lucide glyphs, clipped fields and four-edge fading floor.
+- Reviewed flat, neutral, final, actual desktop and 810/390 px layouts. Fixed the toggle knob display during flat review. Complete layers and specimen rail remain visible. Hairline, SVG XML, focused ESLint, TypeScript and whitespace passed. Containment passed at chroma 24/one-pixel allowance: 19,591 colored pixels, zero escapes. Default threshold counted five pale JPEG samples, inspected by RGB/position. Negative control failed correctly with 256 escaped pixels.
+- Updated source README, illustration plan and exports/design-patterns-brief.md with evidence. Local only, unpublished. Next: user review of Design systems and interface patterns before another card. Owner: Kyte website team.
+
+
+### 20 October 2026: Responsive product experiences outcome illustration
+
+- Used the updated SVG skill and revisited Goodface’s live hero workspace reference. Created a new device-family composition: desktop monitor and stand, flat foreground tablet, upright phone. One product layout visibly changes from split desktop content and three cards to compact tablet content and two cards, then stacked mobile content and one card. Changed only the sixth outcome card.
+- Added product-responsive-experience.js, three measured HTML faces, presentation builder, unchanged-kernel neutral bench and generated SVG/final/flat/structure/mask artifacts. One -45/.5/1.39 camera; centered 400 × 280 frame; complete bounds 208.57 × 236.67. Neutral thickness, rounded outer contours, native Lucide icons, clipped fields and four-edge fading floor.
+- Reviewed flat, neutral and final views plus actual desktop/810/390 px card layouts. All devices fit completely. Flat UI scroll dimensions equal their exact frame dimensions. Hairline, SVG XML, focused ESLint, TypeScript and whitespace passed. Default rendered containment passed: 21,754 colored pixels, zero escapes with one-pixel allowance. External negative control failed correctly with 256 escaped pixels.
+- Updated source README, illustration plan and exports/responsive-experience-brief.md. Local only, unpublished. Next: user review of Responsive product experiences. Owner: Kyte website team.
+
+
+### 20 October 2026: UX research and design audit service hero
+
+- Started the service hero series with only UX research and design audits, as requested. Used the updated Kyte SVG skill and direct visual study of the live Goodface service-page hero workspace. Built an original evidence-to-priorities research composition with affinity clusters, an interview waveform and notes, usability findings, four-step journey and prioritised recommendations. No third-party artwork copied.
+- Added service-research-hero.js, five separate measured HTML templates, presentation builder, unchanged-kernel neutral bench and generated final/flat/neutral/mask artifacts. Frame 960 × 560, camera 45/.5/2.4, complete bounds 575.71 × 463.48, centered at (480,280). Neutral rounded depth, 1.25 px outer contour, original Lucide glyphs, contained color fields and four-edge fading floor.
+- Replaced the research route’s expanding photography stage with a static contain-fit illustration, scoped styling and decorative empty alt. Other service routes and cluster illustrations were not changed. Corrected boolean HTML data attributes for SVG XML compatibility and isolated injected face CSS from flat-preview body styles before verifying the actual image loads.
+- Reviewed every flat layout, neutral and colored views, actual desktop 1093 px page plus actual-route 810/390 px frames. Complete silhouettes visible. Hairline, SVG XML, focused ESLint, TypeScript and whitespace passed. Rendered containment passed at chroma 24/two screenshot-pixel allowance: 16,614 colored pixels, zero escapes. Inspected 15 faint JPEG edge samples at default threshold. Negative control correctly failed with 256 external colored pixels.
+- Updated illustration plan, source README and exports/research-hero-brief.md. Local only, unpublished. Next: user review of the research hero before another service. Owner: Kyte website team.
+
+
+### 20 October 2026: Website design and development service hero
+
+- Used the updated Kyte SVG skill, direct visual study of Goodface’s website development hero and the approved Kyte UI/UX hero. Followed the user’s new composition direction: multiple large connected solids, simpler and larger interface elements, fewer small details. Original content block, development tower, large browser on a solid base, layered foreground page and circular publishing hub. Physical cylindrical tubes and a raised publishing path connect the assembly.
+- Added service-website-hero.js, five measured HTML faces, presentation builder, unchanged-kernel neutral bench and generated final/flat/neutral/mask artifacts. Shared 45/.5/2.5 camera; 960 × 560 frame; complete bounds 681.02 × 453.33 centered at (480,280). Shared rounded outer silhouettes clip cube faces, one 1.25 px neutral contour, quiet seams, neutral thickness and four-edge fading floor. Native Lucide icons stay unmodified and project with their faces.
+- Moved the content block out from behind the browser and repositioned its tube along the X axis. Put the development graphic above the port so it remains visible. Scoped conditional integration in ServiceDetailTemplate affects only website-design-development; the research hero and other routes are unchanged.
+- Reviewed all flat faces, neutral and final views, actual 1280 px desktop page and actual-route 810/390 px frames. All structures fully visible. Face scroll dimensions equal exact frames. Hairline, XML, focused ESLint, TypeScript and whitespace passed. Containment passed at chroma 24/one screenshot-pixel allowance: 46,156 colored pixels, zero escapes. Inspected 38 faint JPEG edge samples at default threshold. Negative control correctly failed with 256 external colored pixels.
+- Updated source README, illustration plan and exports/website-hero-brief.md. Local only, unpublished. Next: user review before another service hero. Owner: Kyte website team.
+
+
+### 20 October 2026: Mobile app design service hero
+
+- Used the updated SVG skill and directly reviewed Goodface’s live banking design hero, focusing on its low handset, oversized floating interaction layer and connected physical system. Built an original diagonal handset composition with circular identity pedestal, arched notification tower, rounded hexagonal completion pad and three raised connecting tracks. Large content field, icons and bars keep UI simpler than the research scene.
+- Added service-mobile-hero.js, five measured HTML faces, presentation builder, unchanged-kernel neutral bench and generated final/flat/neutral/mask artifacts. One 45/.5/3.1 camera; 960 × 560 frame; complete bounds 624.51 × 452.40 centered at (480,280). Neutral rounded depth, 1.25 px outer contour, true projected circular and hexagonal tops, curved arch with straight sides, contained blended fields and fading floor.
+- Moved the floating interaction tile toward the foreground to reveal the phone’s main colored content. Added only mobile-app-design to the service template’s illustration selection; website asset and other service routes remain unchanged. Scoped mobile artwork sizing, static decorative SVG and empty alt.
+- Reviewed all five flat layouts, neutral and final renders, actual 1280 px page and actual-route 810/390 px frames. Complete structures and connecting tracks visible. All flat scroll dimensions match their frames. Hairline, SVG XML, focused ESLint, TypeScript and whitespace passed. Containment at chroma 24/one screenshot-pixel allowance: 54,674 colored pixels, zero escapes. Inspected 26 pale JPEG samples at default threshold. Negative control correctly failed with 256 external colored pixels.
+- Updated source README, illustration plan and exports/mobile-hero-brief.md. Local only, unpublished. Next: user review before another service hero. Owner: Kyte website team.
+
+
+### 20 October 2026: SaaS and web app design service hero
+
+- Used the updated SVG skill, the previously reviewed Goodface connected workspace construction and a fresh live review of its Scale page’s modular-volume artwork. Original composition centres a stepped workflow table, with an automation block, cylindrical shared-data store and completed-task stack joined by raised bridges. Three broad workflow lanes use large native glyphs, restrained bars and contained color fields.
+- Added service-saas-hero.js, four measured HTML faces, presentation builder, unchanged-kernel neutral bench and generated final/flat/neutral/mask artifacts. Shared 45/.5/2.45 camera; frame 960 × 560; complete bounds 600.03 × 484.66 centered at (480,280). White faces, neutral rounded depth, one 1.25 px outer contour, lighter cylinder band seams inset from the silhouette, clipped fields and four-edge fading floor.
+- Spread automation and data structures apart to expose the connecting bridges. Added only saas-web-app-design to the service template’s existing illustration selection, with scoped contain sizing. Other service artwork remains unchanged.
+- Reviewed all flat layouts, neutral/final renders, actual 1280 px page and actual-route 810/390 px frames. Complete silhouettes visible. Flat scroll dimensions match exact frames. Hairline, SVG XML, focused ESLint, TypeScript and whitespace passed. Rendered containment passed at chroma 24/two screenshot-pixel allowance: 29,248 colored pixels, zero escapes. Inspected 86 faint JPEG edge samples at default threshold, including seven remaining at chroma 24/one pixel. Negative control correctly failed with 256 external pixels.
+- Updated source README, illustration plan and exports/saas-hero-brief.md. Local only, unpublished. Next: user review before another service hero. Owner: Kyte website team.
+
+
+### 20 October 2026: eCommerce and Shopify Websites service hero
+
+- Used the updated SVG skill and directly revisited Goodface’s live website development hero for white structural depth, connected paths and broad colored content. Original composition uses a covered storefront with a projecting striped canopy, separate checkout terminal on a plinth, neutral parcel module and foreground order-confirmation tile. Raised tracks connect purchase and fulfillment stages.
+- Added service-commerce-hero.js, five measured HTML faces, presentation builder, unchanged-kernel neutral bench and generated final/flat/neutral/mask artifacts. Shared -45/.5/2.4 camera; 960 × 560 frame; complete bounds 488.17 × 487.69 centered at (480,280). Rounded white solids, #f0f2f2 depth, 1.25 px outer contours, faint inset parcel seam, native Lucide glyphs, clipped blended fields and fading floor.
+- Shifted the product imagery down beneath the canopy so the bag and package icons remain visible. Added only ecommerce-shopify-websites to the service template’s hero selection, with scoped contain sizing and a decorative empty-alt SVG. No other illustration changed.
+- Reviewed all flat layouts, neutral/final, actual 1280 px page and actual-route 810/390 px frames. Full structures remain visible; flat scroll dimensions equal exact frames. Hairline, SVG XML, focused ESLint, TypeScript and whitespace passed. Containment at chroma 24/two screenshot-pixel allowance: 49,090 colored pixels, zero escapes. Inspected 42 faint JPEG edge samples at default threshold, including two at chroma 24/one pixel. Negative control correctly failed with 256 external pixels.
+- Updated source README, illustration plan and exports/commerce-hero-brief.md. Local only, unpublished. Next: user review before further illustration changes. Owner: Kyte website team.
+
+
+### 20 October 2026: Group review of all five service heroes
+
+- Compared all five at equal frame size using the updated SVG skill. Main differences were dense/tiny research UI, narrower commerce framing and modest scene-height drift. Balanced cameras to research 2.38, website 2.53, mobile 3.15, SaaS 2.33 and commerce 2.265; visible heights now range 458.77–460.93 in the same 960 × 560 frame.
+- Simplified research themes/interview/priorities, enlarged native glyphs and matched its palette. Added three world-space tubes rendered behind receiving panels. Expanded commerce checkout/parcel placement along constant projected-height lines, with bridges extended into receiving bases. Preserved all five concepts.
+- Unified duplicate service artwork CSS into a shared contain frame with matching background, margins and radius. Rebuilt all five final, neutral, flat and mask assets. Source README and illustration plan updated; detailed measurements and screenshots in exports/service-heroes-group-audit.md.
+- Visually reviewed final/neutral family plus every actual route at 1280/810/390 px, 15 layouts total. Complete silhouettes visible; no clipping found. All geometry retains over 49 px vertical and 135 px horizontal clearance. All Hairline and XML checks, TypeScript and whitespace passed. Uniform rendered containment: 200,108 colored pixels, zero escapes at chroma 24/two screenshot-pixel allowance. Negative control correctly failed with 256 external pixels.
+- Temporary public review/mask pages removed. Local only, unpublished. Next: user review of all five service hero illustrations together. Owner: Kyte website team.
+
+
+### 20 October 2026: Commerce hero composition rework and neutral framing
+
+- User rejected the previous commerce composition and requested a white hero text area and no corner radius on its image section. Rebuilt only this hero with a supported upright catalogue, broad checkout plane, parcel cube and circular confirmation hub connected by low raised tracks. Large original glyphs and broad gradient fields keep the interior readable.
+- Changed service-commerce-hero.js, its measured HTML faces, builder label and regenerated assets. Shared 45/.5/2.32 camera; 960 × 560 canvas; complete object bounds 558.84 × 460.04 centered at (480,280). Scoped service template modifier and CSS set the eCommerce hero background to white and frame radius to zero.
+- Verified actual page at 1280, 810 and 390 px with complete silhouettes; computed background rgb(255,255,255) and radius 0px. Flat face client/scroll dimensions match. Hairline validator, SVG XML, focused ESLint and TypeScript passed. Rendered containment: 36,319 colored pixels, zero escapes at chroma 24/tolerance 2; negative control correctly detected 256 escapes.
+- Updated source README, illustration plan and exports/commerce-rework-brief.md. Review screenshot: exports/commerce-rework-page-review.png. Local only, unpublished. Next: user review of this revision. Owner: Kyte website team.
+
+
+### 20 October 2026: Commerce display support and Shopify logo
+
+- Replaced the two off-center display legs with one central support. Display, support and compact foot share world center (-15,-22.25); the support overlaps the display bottom by one world unit and meets the foot top. Updated both receiving tracks to overlap the smaller foot.
+- Replaced only the package symbol on the lower-left cube with the existing public/tool-logos/shopify.svg, embedded as its original black SVG with its natural aspect ratio. Changed geometry source, face template, builder label and regenerated the final/flat/structure/bench assets.
+- Hairline static validator and SVG XML parsing passed. Inspected the final standalone render and actual commerce page, including support contact, logo perspective and connections. Overall bounds and camera remain unchanged from the rework. No gradient or page-layout changes. Evidence: exports/commerce-stand-shopify-review.png.
+- Updated source README and rework brief. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Color brand logos across four service heroes
+
+- User requested original colored logos in the current commerce, website, mobile and SaaS hero illustrations. Clarified that “Cloud” means Claude. Embedded Shopify green bag, Webflow blue, WordPress blue, Sanity red, multicolor Figma and terracotta Claude. Kept Framer's authentic black mark. Logos use measured HTML faces, source aspect ratios and the scene camera; local logo fields are white for contrast.
+- Added scoped color SVG assets and source notes; updated four face templates/builders and regenerated final/flat/neutral/bench artifacts. Reviewed the four-hero family and website/mobile/SaaS actual routes. XML and Hairline validators passed. Group containment passed at chroma 28/tolerance 2: 21,670 colored pixels, zero escapes. At chroma 24, two pale JPEG-fringe pixels appeared; these were inspected and excluded with the recorded chroma threshold. Negative control correctly rejected 192 escaped injected pixels (the other 64 lay inside the permitted heading region).
+- Evidence: exports/service-hero-brand-logos-review.png and containment/mask images. No production publication.
+
+### 20 October 2026: Webflow cube top and Framer UI follow-up
+
+- User requested Webflow on the top rather than side of its cube and simpler, proportionate UI beside Framer. Added a measured 480 × 480 top plane and separate top-face clip in the website geometry/builder, rendered inside the shared rounded solid boundary. Moved Webflow there and replaced the old side logo with quiet placeholders.
+- Simplified the Framer page-copy to two bars and one compact action. Fixed the broad .page-layout .icon rule overriding action icon sizing; arrow is now 30 × 30, button bar 90 × 10 within its 190 × 64 action. Source face templates, builder and generated final/flat/neutral/bench assets updated.
+- Flat Webflow top-face and simplified Framer UI layouts, final standalone and actual website route visually reviewed. XML, Hairline and whitespace checks passed. Latest rendered containment at chroma 28/tolerance 2: 23,379 colored pixels, zero escapes. Bounds/camera unchanged. Evidence: exports/website-webflow-top-framer-review.png and matching mask/containment images. Updated source README. Local only; next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Consistent white, square service hero framing
+
+- Applied the existing eCommerce treatment to all other service detail heroes, including UX research: text area background is white; image section corners are square at desktop and mobile sizes. Shared service-detail CSS now provides this styling. Removed eCommerce-only modifier rules because the whole service family shares the treatment.
+- Updated ServiceDetailTemplate and service-detail.css. Hero illustrations are unchanged. Local only, unpublished. Owner: Kyte website team.
+
+
+### 20 October 2026: Reusable process Discover illustration
+
+- User requested a reusable Discover/Define/Develop/Deliver family with simpler general metaphors and refined SVG construction, one at a time for review. Started only Discover: a magnifying lens over two staggered research cards. Uses one 45/.5/2.15 camera, rounded neutral thickness, restrained 1.1 px contours, mint/cyan contained fields and a fading floor. Concept applies across product, branding, content and other services.
+- Added process-discover.js, its presentation builder, neutral Hairline bench and generated transparent SVG/standalone/structure/mask assets. Frame 400 × 320; visible bounds 252.84 × 238.31, centered at (200,160). Shared ServiceOurProcess displays it for step index zero with decorative empty-alt image and contain sizing.
+- Used the updated Kyte SVG skill and its Goodface visual library, including small-form neutral/colored balance and contained color fields, plus supplied screenshots. Current Goodface discovery page was read for conceptual context; Fintech service URL was unavailable through the web reader. No Goodface artwork copied into the site.
+- Reviewed final standalone, actual Website process card at desktop and actual route inside a 390 px iframe. No clipping or copy overlap. Hairline, SVG XML, focused ESLint, TypeScript and whitespace checks passed. Rendered containment: 8,949 colored pixels, zero escapes at chroma 24/tolerance 2. Negative control correctly rejected 256 escaped pixels. Evidence: exports/process-discover-review.png, process-discover-page-review.png, process-discover-mobile-review.png and matching mask/containment.
+- Local only, unpublished. Next: user review of Discover, then Define. Owner: Kyte website team.
+
+
+### 20 October 2026: Reusable Define process illustration
+
+- User requested only Define next, generic and as refined as Discover with a different composition. Built an upright focused brief, two connected input tiles and a low rounded hexagonal foundation. One pink/violet decision field and original Lucide check glyph carry the focal point; remaining forms are neutral with sparse gray detail. Reused the updated SVG skill and studied Goodface small-object visual direction.
+- Added process-define.js, presentation builder, neutral bench and generated final/neutral/mask assets. Shared 45/.5/2.1 camera, 400 × 320 frame, visible bounds 217.75 × 241.48 centered at (200,160). Complete outer silhouettes and shared rounded clips contain all color. ServiceOurProcess uses it for step index one, with the same contain framing as Discover.
+- Reviewed standalone and neutral construction, actual desktop card and actual route in a 390 px iframe. Full silhouette, connected tracks and no copy overlap. Hairline validator, SVG XML, focused ESLint, TypeScript and whitespace checks passed. Rendered color containment: 7,969 colored pixels, zero escapes at chroma 24/tolerance 2. Evidence: exports/process-define-review.png, process-define-page-review.png, process-define-mobile-review.png, process-define-structure.png and mask/containment images.
+- Updated source README, rollout plan and exports/process-define-brief.md. Local only, unpublished. Next: user review of Define before Develop. Owner: Kyte website team.
+
+
+### 20 October 2026: Reusable Develop and Deliver process illustrations
+
+- User requested both remaining illustrations with generic concepts, refined like Discover/Define and different compositions. Completed Develop first as three aligned assembly layers with broad component placeholders and a warm orange/green working layer. Completed Deliver next as a white handoff kit, organized documents and a circular mint/cyan check seal. Both use the updated SVG skill and studied Goodface visual library for shared projection, neutral materials, rounded contours, contained fields and gradually fading floors.
+- Added editable process-develop.js and process-deliver.js, individual build entrypoints and a shared presentation compiler build-process-stage.mjs. Generated neutral benches, transparent SVGs, final/structure wrappers and local masks. All face fills/details clip to each rounded solid silhouette; color additionally clips to its own surface. Original Lucide check remains unmodified and projected onto the Deliver seal.
+- Develop: 45/.5/2.28 camera; visible bounds 266.52 × 237.95. Deliver: 45/.5/2.71 camera; visible bounds 245.28 × 237.64. Each is centered at (200,160) in a 400 × 320 frame, matching the earlier pair's approximate visible height and 1.1px contours.
+- Integrated steps two and three in ServiceOurProcess with matching contain framing and decorative empty-alt images. During visual review, moving card boundaries triggered onMouseEnter beneath a stationary pointer and overrode keyboard selection. Changed hover activation to onMouseMove; selection now stays stable as cards expand, while pointer movement and keyboard focus still activate stages.
+- Reviewed final pair together, neutral geometry, actual desktop cards and actual 390px route in an iframe. Complete silhouettes and no text overlap. Hairline, SVG XML, focused ESLint, TypeScript and whitespace checks passed. Rendered containment at chroma24/tolerance2: Develop 23,889 colored pixels, Deliver 5,377, zero escapes for either. Negative control rejected all 256 injected magenta pixels. Evidence in exports/process-develop-deliver-review.png, individual page/mobile/structure renders, masks and containment images.
+- Updated source README, rollout plan and exports/process-develop-deliver-brief.md. Local only, unpublished. Next: user review of Develop and Deliver. Owner: Kyte website team.
+
+
+### 20 October 2026: Goodface gradient study and Develop-only trial
+
+- User requested a proper gradient audit, one sample first, wider rollout only after approval, then skill-note updates. Reviewed live Goodface UI5/6/7/13/15/16 in the browser. Observed concentrated saturation, curved color pockets, shape-specific volume, subtle inward white edge falloff and neutral contrast. Original renderer is not exposed by the raster assets.
+- Source inventory covers49 illustration files and22 additional host files, seven archived. Only two illustration sources contain literal linear ramps; most flatness comes from pale oversized blurred fields and hard perimeter strokes. Wrote full inventory, findings and proposed rollout in exports/gradient-material-audit.md.
+- Added process-develop-gradient-trial.mjs and an optional material adapter in build-process-stage.mjs. Enabled only in the Develop entrypoint; regenerated only Develop. New rich amber/lime/emerald local fields and two clipped blurred rim passes preserve vivid centers and soft borders. No geometry change. Skill notes are unchanged pending approval.
+- Same-mask screenshot median saturation29.4% before versus61.5% after. Reviewed matched before/after and actual desktop/390px cards. Hairline and XML passed; rendered containment at chroma28/tolerance2 passed with24,299 colored pixels and zero escapes. Five low-chroma blue JPEG fringe pixels at chroma24 were inspected and excluded with the documented threshold. Negative control rejected256 injected pixels.
+- Evidence: exports/gradient-trial-before-after.png, standalone/page/mobile, mask and containment. Source README and illustration plan updated. Local only, unpublished. Next: user review of Develop gradient sample before any rollout or skill update. Owner: Kyte website team.
+
+
+### 20 October 2026: Gradient rollout and user-directed color balance
+
+- User approved the Develop sample and authorized the illustration rollout. Added a shared clipped SVG surface renderer and a scoped HTML material generator; regenerated 32 entrypoints covering main/service heroes, moments, eight mini product stages, five service cards, six design scenes and four shared process stages. The inline orbit material was also adjusted. Geometry, official logos and neutral floor fades remain unchanged. Fixed main hero/laptop CSS scoping so material selectors reach their projected UI roots.
+- During review the user rejected the initial blanket saturation, specifically naming the complex-work prism, Growing platforms, research cube and commerce card. Reopened six live Goodface source assets and restored their separate color geography. Complex uses a green front/blue right face; Growing retains soft coral/violet; research uses amber front/green side/yellow-green top; commerce uses a broad amber/lime/green field. Shared orange and purple palettes are softened; mint/blue receives a smaller lift. The previously approved Develop sample remains unchanged as a specific example.
+- Updated both illustration skills to explicitly reject universal saturation and repeated rainbow faces. Added portable balanced SVG material reference, an imagegen material guide, and refreshed both skill ZIP packages. Source recipes: kyte-site/hairline/illustration-materials.mjs and update-material-css.mjs.
+- Checks: 32 builders succeeded; all 32 neutral Hairline benches passed; all 30 exported SVGs parsed; focused ESLint and TypeScript passed. Final rendered masks cover 29 assets at chroma28 with two-pixel antialiasing tolerance: zero escaped colored pixels in five batches. A negative control correctly rejected all256 injected magenta pixels. Initial exaggerated version had eight low-chroma JPEG fringe pixels; final balanced material passes the original chroma28 threshold. Reviewed the four corrected illustrations together, actual landing-page moments and a 390px service card. No geometry or layout clipping change.
+- Evidence: exports/gradient-balanced-review.png, gradient-balanced-moments-page.png, gradient-balanced-mobile.png, gradient-balanced-containment.json and final/mask pairs. Detailed reference sources and initial audit remain in exports/gradient-material-audit.md and gradient-reference-assets.json. Local only, unpublished. Next: user review of the balanced color treatment. Owner: Kyte website team.
+
+
+### 20 October 2026: Goodface implementation diagnosis, continuous prism sample
+
+- User said the previous result still did not match and requested a proper implementation analysis. Read live Goodface page source and stylesheet, downloaded six original AVIFs for local pixel analysis, and verified that the visual finish is baked into normal opaque image assets. Public evidence does not identify the original authoring tool or shader. Local third-party captures are ignored and excluded from skill packages.
+- Identified separate-face color resets, a dark contour applied to the colored object, and insufficiently spatial lighting as concrete mismatches. Measured seven original interior colors. Rebuilt only the complex-work prism using a smooth continuous vector field with softly lit edges, no dark perimeter and translucent white fold lines. Scene geometry and all other illustrations remain unchanged.
+- Added prism-continuous-material.mjs, prism-field-data.mjs, a local comparison page, final/mask fixtures and implementation findings. Simplified the complex builder's dead former material branch. No global palette change or skill-package rollout.
+- Hairline, XML and whitespace passed. Rendered containment at chroma28/tolerance2:27,938 colored pixels, zero escapes. Negative control rejected256 pixels. Reviewed reference/before/after at matched gallery size and the actual desktop card. Proof in exports/prism-material-comparison.png and prism-material-page.png.
+- Local only, unpublished. Next: user review of this one material before repeating analysis on each other reference family. Owner: Kyte website team.
+
+
+### 20 October 2026: Fixed Goodface palette library and full assignment
+
+- User requested matching Goodface colors through a predefined library instead of random local values. Sampled seven material families directly from original AVIF pixels: greenBlue, amberGreen, amberLime, pinkViolet, coralViolet, amberViolet and mintCyan. Each of49 tokens records median3 × 3 RGB, source coordinates, asset URL and original dimensions. These are measured visible colors, not claims about original shader inputs.
+- Canonical data: kyte-site/src/design-tokens/illustration-palettes.json. Explicit33-illustration mapping: illustration-palette-assignments.json. Added shared accessors/variables, moved measured prism field coefficients into the library, tokenized scattered material colors in builders and17 UI source templates, and connected the inline orbit to the same JSON. Neutral structure, actual logos and named browser-control signal colors stay separate.
+- Added hairline/PALETTES.md, a visual palette library, a guard rejecting inline accent hex/RGB and undefined tokens, and a rebuild runner. Commands: npm run check:illustration-palettes and npm run build:illustrations. Rebuild regenerates the library gallery and synchronizes both portable skill palette references. Both skill notes and ZIP packages now require fixed library colors and reference-specific material continuity. Historical trial recipes are superseded.
+- Verification:32 illustration entrypoints plus palette gallery built; SVG XML, focused ESLint, TypeScript and whitespace passed. Palette guard covers56 sources, seven palettes and33 assignments, with no ad hoc accent literals. It correctly rejected a deliberate #ff00fe probe, which was removed. Reviewed desktop families and the actual390px service card. Final/mask renders cover29 assets: zero escapes at chroma36/tolerance2, with256 injected negative-control pixels rejected. Eight low-chroma JPEG fringe pixels at chroma28 were inspected and documented, not treated as geometry spill.
+- Proof: exports/illustration-palette-library.png, palette-mobile.png, palette-build-results.json, palette-containment.json and palette-guard-negative.txt. Original reference captures remain ignored. Local only, unpublished. Next: user review of the fixed palette library. Owner: Kyte website team.
+
+
+### 20 October 2026: UI/UX landing page layout follow-up
+
+- User requested a rail-to-rail hero illustration, homepage-style impact introduction, testimonials after industries, a card around the framework copy, black titles for product stages and industries, and a landscape image above Fintech.
+- Updated `kyte-site/src/app/ui-ux-design-development/page.tsx` and `product-design.css`. Used the existing Fincart banner asset for the Fintech card.
+- Focused ESLint, TypeScript, and `git diff --check` passed. Reloaded the local page and verified section order and image accessibility text in the browser tree. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: UI/UX section order and shared framework card
+
+- User clarified that the full framework section, including its title, interactive content and visual, belongs inside one card. All four industry cards need inset landscape imagery, not only Fintech. Move Product Stages directly after Selected Work; place Services before How We Work, then What We Design, Industries and testimonials.
+- Wrapped the complete framework section content in a single card. Added the existing industry-specific photography to all four industry cards with six-pixel insets. Reordered sections as requested.
+- Focused ESLint, TypeScript and `git diff --check` passed. Local browser accessibility tree confirms stage cards immediately follow Selected Work, services precede How We Work, all four industry images have descriptive alt text, and testimonials follow Industries. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Framework title and stage label refinement
+
+- User clarified that the framework title stays outside the card, while the left and right interactive content remain inside. All stage labels should read as muted gray, while the active stage retains its purple vertical marker.
+- Moved the title outside the card and applied the muted label color to all framework tabs. Preserved the selected state marker and visible keyboard focus.
+- Focused ESLint, TypeScript and `git diff --check` passed. Reloaded the local page and verified the updated heading and tab structure in the browser. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Framework section spacing
+
+- User requested equal spacing between Phases, Deliverables and Outcome, with a shorter overall card.
+- Removed the flexible spacer before Deliverables, set a fixed 32 px gap to match the Deliverables-to-Outcome gap, and reduced the desktop framework layout height from 610 px to 560 px.
+- Focused ESLint, TypeScript and `git diff --check` passed. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: UI/UX landing page cleanup
+
+- User requested removal of the Track Record section and Phases label, plus neutral placeholders with more inset for the four industry images.
+- Removed the section and label, removed unused photo imports, replaced industry photos with white neutral placeholders, and increased the image inset to 12 px on desktop and mobile.
+- Focused ESLint, TypeScript and `git diff --check` passed. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Framework card spacing
+
+- User requested less padding inside the framework card.
+- Reduced the outer card padding from a responsive 24–56 px range to 18–28 px and reduced nested copy padding to 8 px. Mobile card padding is now16 px with no additional copy padding.
+- Focused ESLint, TypeScript and `git diff --check` passed. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Framework tab markers and neutral surfaces
+
+- User requested gray in-flow vertical markers on inactive framework stages while retaining the purple active marker, then asked for a neutral framework card, white right visual, neutral stage tiles and white icon tiles.
+- Added a marker to every framework tab using normal flex layout, not absolute positioning. Applied the requested neutral and white surfaces.
+- Focused ESLint, TypeScript and `git diff --check` passed. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: In-flow framework markers and card colors
+
+- User requested gray vertical markers beside all inactive framework stages, normal layout flow for marker alignment, and neutral/white surfaces across the framework card.
+- Markers now use flex layout rather than absolute positioning. Gray is used for inactive labels, purple for the active marker. Outer card and stage tiles use neutral surfaces, the right panel and icon tiles use white.
+- Focused ESLint, TypeScript and `git diff --check` passed. Reloaded local browser. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Framework phase label
+
+- User requested a “Phases” title above the Discovery, UX Architecture, UI Design and Handoff items, matching the Deliverables and Outcome headings.
+- Added the label above the framework tab list using the existing framework label styling.
+- Focused ESLint, TypeScript and `git diff --check` passed. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Active framework label color
+
+- User noted that the selected phase text also needs to use the brand color.
+- Updated active and active-hover text to the brand color. Inactive text remains gray.
+- `git diff --check` passed. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Framework sizing and FAQ rail cleanup
+
+- User requested smaller framework stage labels, no outer framework card border, and investigation of the odd FAQ-side border.
+- Reduced phase labels to a 21–28 px responsive range and 21 px on mobile. Removed the framework card border. Traced the FAQ line to the shared `.home-faq__inner` inline border, which duplicated the landing page rail; disabled that border on this page only.
+- Focused ESLint, TypeScript and `git diff --check` passed. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Branding service dark theme
+
+- User requested full black pages for Branding & Marketing and all branding service routes, including side rails and gutters.
+- Added a shared route-scoped dark palette in `branding-theme.css`, activated by a server-rendered marker on the existing landing fallback and service template. Black section backgrounds, dark borders, raised charcoal surfaces, white logos, readable text and dark menus/footer/dialogs now share the theme. Updated the design-system notes.
+- Verified all five service routes, desktop and 390 px rendering, active inclusion cards, desktop dropdown and mobile menu, and restoration of the light theme when navigating to UI/UX. Focused ESLint, TypeScript and whitespace checks passed. Screenshot: `exports/branding-dark-theme-review.png`.
+- The branding landing page remains its existing placeholder content. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Standard brand purple in dark mode
+
+- User requested the same purple on dark and light pages.
+- Removed the branding theme's lighter accent overrides and linked action colors to the shared brand tokens. Updated design-system notes.
+- Whitespace check passed. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Service hero swipe and rail refinement
+
+- User requested no image swipe in service heroes, persistent rails behind the images, and rail-to-rail What We Offer dividers across service pages.
+- Simplified `ExpandingPhotoStage` to one still photograph, removing its cycling timer, wipe layer and transition code while keeping scroll expansion. Moved its elevated stacking layer from the full section to the clipped image frame. Service illustration frames also overlap the rails. Extended shared offering list borders to the page rails and kept row copy inset. Updated design-system notes.
+- Verified one image and no wipe layer in the live DOM, the image/frame layering, exact divider edges at 16 px and viewport minus 16 px on desktop and 390 px, no horizontal overflow, and shared dark/light rendering. Focused ESLint, TypeScript and whitespace checks passed. Screenshot: `exports/service-offer-rails-review.png`.
+- Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Active approach card brand color
+
+- User requested the active service approach card use the full brand purple instead of a darker variant.
+- Set the dark branding theme active card fill to the shared brand action token, which resolves to `#533AFD`.
+- Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Neutral dark-mode text accents
+
+- User requested no brand-colored text on dark pages; purple remains for buttons, icons, and surfaces.
+- Scoped neutral text colors to the shared branding dark theme for headings, eyebrow labels, deliverable titles, process numbering, navigation hovers, and menu labels. Updated the design-system notes.
+- Checked CSS selectors against the branding service components and the active page in the local browser. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Immediate branding theme reset on navigation
+
+- User reported the light page theme stayed dark until refresh after navigating away from a branding page.
+- Added a root `data-app-theme` state updated synchronously from the current pathname. Dark CSS uses the server page marker only until the root state is initialized, so a retained route subtree cannot keep dark mode active. Recomputed the header's underlay contrast state in a layout effect whenever the pathname changes.
+- Navigated from the light homepage to the dark Branding & Marketing route and back without reloading; the homepage header, rails, and sections returned to the light theme. Restored the browser to the original Brand Strategy & Identity page. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 20 October 2026: Independent Branding & Marketing landing and service family (reverted)
+
+- User requested a complete branding design language separate from Product/UIUX, using OWLED Social and HOOC as references for the main landing and branding service pages. Inspected both references in browser and through Firecrawl, recording observed layouts, palette and reported fonts in `docs/branding/DESIGN.md`.
+- Built `BrandingLanding`, `BrandingServicePage` and shared branding sections/styles. Added the explicit landing route and connected all five existing branding service records to the new template. Retained existing client evidence, the published Contractzy testimonial excerpt and Fincart case-study assets/link. New landing copy is a review draft.
+- Generated six original artwork assets, optimized to approximately 608 KB of WebP total. Added self-hosted Anton from official Google Fonts with its SIL Open Font License. Reference-site artwork and proprietary fonts are not shipped. Updated design-system, IA and SEO playbook notes.
+- TypeScript, focused ESLint and production build passed. Build reported local Sanity DNS warnings, so live CMS retrieval was not verified. Desktop 1280 px and mobile 390 px checks passed for all five service headings, images and horizontal containment. Landing and service layouts visually reviewed; contact dialog entry and native FAQs checked without submitting a form. Dark-to-light navigation restored white backgrounds without refresh. Screenshots: `exports/branding-landing-desktop.png` and `exports/branding-landing-mobile.png`, plus service review captures.
+- Local only, unpublished. User visual and editorial review remains next. Owner: Kyte website team.
+
+### 20 October 2026: Reverted experimental branding redesign
+
+- User rejected the independent reference-led visual language and requested the shared site design in dark mode.
+- Removed the experimental branding landing route, template components, scoped CSS, data, six generated assets and Anton font. Restored the branding service branch to `ServiceDetailTemplate`; the landing resolves to its previous planned-page content. Removed the superseded visual direction from the IA, playbook and design-system notes. The earlier black theme, neutral text, standard purple, rails and navigation theme-reset fixes remain.
+- Regenerated Next.js route types after removing the explicit route. TypeScript, focused ESLint and whitespace checks passed. Browser checks confirmed the landing and all five services resolve, the services use the shared dark template, and mobile has no horizontal overflow. Screenshot: `exports/branding-restored-shared-dark.png`.
+- Local only, unpublished. Branding landing content remains to be designed using the shared website system. Owner: Kyte website team.
+
+### 20 October 2026: Branding hero feasibility review
+
+- User supplied Grappus Experiments and a mirrored-tile Kyte mark, asking whether a dark branding hero with a centered 3D mark and scroll transition is possible.
+- Inspected the live reference in-browser. It presents a spatial field of floating media cards with drag/swipe navigation, tap-to-enlarge and wheel-controlled zoom. Its current behavior is an interactive canvas; the requested transition into a normal next section would be a Kyte adaptation.
+- Proposed, not implemented: a black hero with a silver tiled Kyte mark, restrained purple reflections, surrounding creative tiles and a scroll-controlled pullback that clears into the next section. A real 3D model supports genuine rotation/reflections; a rendered image supports a lighter parallax treatment. Preserve shared site typography/navigation and dark mode. Mobile and reduced-motion alternatives should be included in implementation.
+- No website or image assets changed. Next: agree the hero direction before implementation. Local only. Owner: Kyte website team.
+
+### 20 October 2026: Real 3D branding hero prototype
+
+- User approved building only the branding landing hero using the supplied mirrored Kyte reference and Grappus spatial-card concept, retaining shared typography and dark mode. Added an explicit `/branding-marketing` page with a brief next-section preview to demonstrate the transition. The five child services retain the shared dark template.
+- Added Three.js and its type definitions. The Kyte mark is authored as four rounded, beveled extrusions with individually tessellated reflective tiles, studio environment lighting and a brand-colored reflection. Tiles are batched by material to reduce draw calls. No generated bitmap is substituted for the 3D model.
+- Added a draggable spatial card orbit, pointer response, keyboard rotation controls, pause control, vertical touch scrolling, and a scroll sequence that rotates first, then pulls back and fades into the preview. Existing Fincart assets and generic type/material studies serve as temporary card content. Included a static mark fallback, reduced-motion layout, visibility pause and geometry/material/context disposal. Rendering stops once the hero has faded.
+- Reviewed desktop and 390 px mobile rendering; dragged the card scene, exercised rotation/pause controls, checked the completed scroll transition, and corrected a clipped-container focus scroll issue. Captures: `exports/branding-3d-hero-desktop.png` and `exports/branding-3d-hero-mobile.png`. Updated IA, playbook and design-system notes. The hero copy, card imagery and 3D finish await user review. Local only, unpublished.
+
+### 20 October 2026: Rail-free layout, softer corners and original Kyte palette
+
+- User requested removal of sitewide rails, consistent section maximum widths with intentional full-bleed sections, increased corner radii, and removal of the Stripe-inspired palette preview.
+- Removed fixed body rails and nested outer rails on UI/UX, FAQ, testimonial, news and careers wrappers. Standard content uses the shared 1344 px maximum container with 16 px outer gutters and 20–32 px content insets. Corrected the UI/UX work container mismatch. Product hero art and industry hero media can bleed edge to edge; service-offering dividers span the viewport while their copy stays aligned.
+- Changed shared corner tokens from 4/6/8 px to 10/16/24 px, migrating fixed UI corners onto those tokens. Removed the Stripe token overrides, palette boot script and selector UI. The original Kyte cobalt (`#0249d9`), charcoal and neutral tokens now drive the interface, including the new hero's accent. Source client artwork retains its own colors. Simplified the remaining process embed palette selection and updated design-system guidance.
+- Desktop checks confirmed matching 1344 px wrappers at 1440 px and full-width 1440 px offering rules. Checked eight representative page families at desktop, tablet 810 px and mobile 390 px: no horizontal page overflow and no generated body rails. Corrected a small mobile Careers heading overrun. TypeScript, focused ESLint, whitespace checks and the production build passed. The build logged existing Sanity DNS warnings; live CMS reads were not verified by that build.
+- Local only, unpublished. Next: user review of the hero and the 10/16/24 px corner treatment. Owner: Kyte website team.
+
+
+### 20 October 2026: Upright 56-card spherical branding gallery
+
+- User found the six tilted cards and large hero copy too heavy. Re-inspected Grappus Experiments in the browser, including dragging its image field. The reference keeps image planes upright while positions, depth, scale and overlap change.
+- Replaced the six-card orbit with 56 deterministic placeholder planes distributed on a sphere. Dragging rotates yaw and pitch with short inertia; all cards remain camera-facing and have no individual tilt or rotation. Projection determines their apparent size and stacking. Placeholder formats, sizes and neutral fills vary; prior photographs, type specimens and material art are removed.
+- Removed visible hero copy and decorative grid/sparkle elements. Retained an accessible H1. Reduced the central real 3D mark canvas from up to 530 px to 220 px desktop and 165 px mobile. Added a compact desktop zoom slider, retained keyboard rotation, and kept scroll rotation followed by pullback into the next-section preview. Motion now settles after interaction instead of looping continuously.
+- Browser checks confirmed 56 placeholders on desktop and mobile, all upright, varied scales and depth order, working horizontal/vertical drag and zoom slider, no clipped-container scrolling or horizontal page overflow, and completed mobile scroll transition. TypeScript, focused ESLint and production build passed; the build still logs existing Sanity DNS warnings. Captures: `exports/branding-sphere-desktop.png` and `exports/branding-sphere-mobile.png`. Updated design-system and playbook notes.
+- Local only, unpublished. Next: user review of the spatial arrangement before replacing placeholders. Owner: Kyte website team.
+
+### 20 October 2026: Separate local-only exploration handoff
+
+- User requested a detailed prompt and Markdown brief for a separate Grappus reconstruction study using Kyte content and the existing IA. Prepared the handoff and an isolated local source/media duplicate outside this repository. No redesign implementation was performed in the duplicate.
+- Re-inspected the reference homepage, open glass navigation and initial contact panel. Recorded observations separately from extractor-reported tokens and uninspected states. The handoff requires a complete browser audit, content snapshot, route mapping, milestones and fidelity checks.
+- Verified the duplicate has no Git metadata, Vercel link, CI workflows, copied environment files, installed dependencies or build caches. All 563 public asset paths match the source and the showreel hash matches. The duplicate's contact endpoint is disabled and its preview command binds only to localhost on a separate port.
+- No GitHub publication, deployment or external content write was performed. Current website code was not changed by this handoff. Next: user opens the separate folder in a new Codex chat and supplies its starter prompt.
+
+
+### 20 October 2026: Slightly reduced shared corner radii
+
+- User requested a small reduction after reviewing the UI/UX page. Changed the shared small/medium/large radius tokens to 8/12/18 px, updating the design-system documentation. The separate local exploration copy is unchanged.
+- Whitespace check and browser review of the UI/UX service cards and button corners completed. Local only, unpublished. Next: user review.
+
+### 20 October 2026: Service hero image corners
+
+- Clarified that the radius request was for the UI/UX service page hero illustration. Applied the shared 12 px medium radius to the illustration frame across all five UI/UX service pages, including the SaaS & Web App Design page shown in the browser.
+- Local only, unpublished. No visual browser check run in this turn. Next: user review. Owner: Kyte website team.
+
+### 20 October 2026: FAQ card styling
+
+- Updated the shared FAQ list to use separate white rounded cards, removing the top and row divider lines. The plus/minus controls now use a neutral surface fill so they remain visible against the white cards. Applied across pages using the shared FAQ component.
+- Local only, unpublished. Whitespace check completed. Next: user review. Owner: Kyte website team.
+
+### 20 October 2026: Shared testimonial card styling
+
+- Matched service testimonial cards across service pages to the UI/UX landing page: the feedback and rating area sits in a white inset card, without the left divider, and the case-study link uses a neutral surface. Mobile keeps the same inset card treatment. Dark branding service pages use their dark neutral surface for the proof card.
+- Moved the treatment into the shared service testimonial stylesheet and removed the UI/UX-only overrides. Local only, unpublished. Whitespace check completed. Next: user review. Owner: Kyte website team.
+
+### 20 October 2026: Carousel and ticker edge alignment
+
+- Set page-level horizontal carousels to keep equal section insets before the first card and after the last card, while the rail itself extends to the viewport edge. As cards advance, they use the rail width; the first card scrolls out naturally, and the final card stops at the matching right inset. Applied to product moments, home testimonials, service testimonials, client stories, and Website service purpose/audience rows. Kept the mobile process-step strip at the viewport edge.
+- Extended home client logo and shared brand ticker windows to the viewport edge with matching insets at both window edges. Internal framed galleries and modal-contained logo rows keep their own padding.
+- At 390 px, verified the product moments rail starts at x=36 px, spans through x=390 px, and the last card ends at x=370 px, leaving the same 20 px section inset as the first card. At 1093 px, verified the same equal start/end section inset behavior. Local only, unpublished. `git diff --check` passed. Next: user review. Owner: Kyte website team.
+- Follow-up: clarified that the left inset applies only to the first card at the initial position. Expanded the product moments rail to the outer page gutter and made the first advance include the leading inset, so the incoming card aligns flush with the rail’s left edge and the previous card is fully clipped away. Later advances move one card plus its gap. Kept the final card at the right section inset. Verified at 390 px and 1093 px; the first advanced card begins at x=16 px, and at 390 px the last card ends at x=370 px with a 20 px right inset. Preview left on the first advanced state. `git diff --check` passed. Local only, unpublished. Next: user review. Owner: Kyte website team.
+- Further correction after review: the product moments rail now extends to x=0, the initial first-card inset remains 42.2 px at the 1093 px desktop viewport, and the first advance rounds outward to avoid a fractional-pixel hairline. Disabled scroll snapping on the intermediate cards because it was pulling the smooth advance toward the final-card snap point. Verified the first advanced card begins at x=-0.4 px (flush with a subpixel overlap); the last card still ends 26.1 px before the right edge. Preview left on the first advanced state. Local only, unpublished. Next: user review. Owner: Kyte website team.
+
+
+### 21 October 2026: Ring removed and landscape simplified
+
+- User rejected the circular stone frame and then the overly detailed ring-free landscape. Removed the ring from the local motion study. Generated two revised static v4 review frames using the built-in image tool: a wide opening and a closer resting pose, with simpler stone, broad boulders, plain blue sky, cool shadows and calmer water. Saved both and `RING-FREE-MOTION-BRIEF.md` in `exports/branding-hero/` in the main workspace.
+- Visually verified the actual Grappus stone video (`legacy-7026af969ac3`), separating it from cycling project clips, and inspected ten temporal frames. Recorded approximate camera/rotation timing, color/light observations, limitations of generated frame continuity, and proposed intro/idle prompts in `docs/branding-hero/CORRECTED-MOTION.md` in the active local checkout.
+- No new paid video job, external upload, deployment or replacement of the website poster. Stills are proposed for user review. Next: approve the simpler art direction and continuity before a quoted video render. Owner: Kyte website team.
+
+
+### 21 October 2026: Fixed landscape, layered bento and scroll navigation
+
+- Installed the user-selected ring-free simplified v4 image as an optimized 200 KB WebP. Removed the rotating Three.js gallery from the rendered page. Added existing project thumbnails with native-dialog previews and a Selected Work link. Scoped a transparent 12px-blurred navbar to the branding landing route.
+- Refined the scroll structure after user clarification: three snap frames (hero, one title-plus-five-services bento, contact), with a labelled current-section dot pill on the right. Hero image and controls stay in the viewport; controls slide left/right and fade while a higher content layer enters over progressively darkened/blurred scenery. Shared Lenis is disabled on this route so snap paging owns the gesture.
+- Inspected Grappus homepage scroll overlay and computed styles. Applied 42px background blur, 25px card frost and 7% white fill, removing card borders and numeric labels per user instruction. Updated design-system and `docs/branding-hero/IMMERSIVE-LANDING.md`.
+- Focused ESLint, TypeScript and whitespace checks passed. Browser checks at 1280px, 810px and 390px verified three viewport-height frames, all five cards fitting, no page-width overflow, correct current dot, stationary background and hero controls, directional exit transforms, 0px service-card borders and computed blur. Desktop wheel advance reached services at scrollY=720 and reverse paging worked. Native project preview opened, Escape closed it and focus returned to its trigger; no captured browser console errors. Local still-only implementation; physical-device touch momentum remains unverified. No deployment or further media generation. Next: user review. Owner: Kyte website team.
+
+
+### 21 October 2026: Expanded frosted branding landing and final hero/footer refinements
+
+- Refined borderless project thumbnails with image/title/category/description previews; moved Explore Branding & Marketing into a frosted pill and removed Selected Work. Service cards now place the image above title and description, use shared 24px/16px type, remove arrows, and give chips 8px by 12px padding.
+- Added process, linked industries, published client quotes, a reserved Studio placeholder, FAQs and the shared footer as scroll frames with right-side indicators. After user correction, process reuses the existing four expanding cards with its hover/focus transition, and disables its illustrations through an optional prop that defaults to true elsewhere. Quote and process text sources moved into data modules with compatible re-exports. No fabricated ratings, client portraits or results added.
+- Briefly implemented the requested five-second full-background showreel, then superseded it per the next user decision: chosen landscape stays fixed and the same homepage showreel now plays only in a bottom-right hero card, opening a larger controlled native-dialog player. Preview waits five visible seconds and pauses offscreen/hidden or while the player is open. No video generation or new credit spend.
+- Increased the scroll overlay to 78% dark tint for legibility. Reused TeamPreviewFooter in the last frame with frosted surfaces, roomier spacing and natural height. Added locally served Geist Mono for selected footer labels, location, contact details and legal text, preserving its open-font license. Brochure button fill is transparent across themes and hover states.
+- Focused ESLint, TypeScript, whitespace and production build passed (43 routes, existing Sanity DNS warnings). Browser verified service-card layout/type/chip padding, keyboard process selection then shared-card expansion, zero process illustrations, linked industry URLs, next testimonial, single-open FAQ behavior, correct section indicators, loaded Geist font and desktop footer width. Verified compact showreel uses the existing film, backdrop has no video, preview pauses during modal playback, and brochure computed fill is transparent. Responsive checks covered 1280px and 390px; compact frames expose scrolling instead of hiding copy. Local only, unpublished. Next: visual review; studio creative direction stays on hold. Owner: Kyte website team.
+
+### 21 October 2026: Branding landing experiments removed at user request
+
+- Replaced the canonical branding landing with the standard shared page shell and only the Branding & Marketing title. Deleted both experimental implementations, the V2 route, exclusive runtime assets/fonts and reference docs. Removed unused Three.js packages. Kept original generated artwork outside the website and historical progress records.
+- Removed immersive header styling and landing scroll exception. Canonical landing returns to light theme; individual service pages keep their existing content/template and dark theme. Updated IA, SEO playbook and design-system guidance to reflect the reset. No shared service, footer or header redesign.
+- Focused ESLint, regenerated TypeScript, whitespace and production build passed. Initial TypeScript check saw stale Next route types after V2 deletion; production build regenerated them and the repeat passed. Existing Sanity DNS warnings remain. Desktop browser verified the title-only main, normal navigation, light theme and no overflow at 1280px; removed V2 displays 404. Responsive override did not change the browser's reported 1280px viewport, so a new mobile visual check is unverified. Proof: exports/branding-reset-desktop.png.
+- Local checkout: /private/tmp/kyte-product-design-landing. No publication or external writes. Owner: Kyte website team. Next: fresh branding landing direction when requested.
+
+### 21 October 2026: Locomotive Scroll integration
+
+- User requested installation and use of https://scroll.locomotive.ca/. Checked official v5 docs and installed npm locomotive-scroll 5.0.1 (MIT), whose dependency is Lenis 1.3.17. Removed the redundant direct Lenis dependency and imported Locomotive CSS in the root layout.
+- SiteSmoothScroll lazy-loads Locomotive on the client, owns one RAF loop, destroys route instances, preserves native touch, nested scrolling, dialog exclusions, anchors and instant route-top resets. Reduced motion bypasses the library and reacts to preference changes. Handles the library's deferred observer initialization before destruction. Branding title opts into in-view detection without changing its layout or adding parallax. Updated design-system motion guidance.
+- Focused ESLint, TypeScript, production build and whitespace checks passed. Browser confirmed locomotive engine marker, vertical orientation and in-view title class; wheel scroll moved from y=0 to 613; About navigation then landed at y=0 with Locomotive active. Contact dialog opened and closed normally. No captured browser errors. Reduced-motion branch and physical touch behavior implemented but not manually exercised. Existing Sanity DNS warnings persist during build. Proof: exports/branding-locomotive-scroll.png.
+- Local only, no deployment or external content writes. Owner: Kyte website team. Next: user review of scrolling.
+
+### 21 October 2026: Editorial story hero replaces image mosaic
+
+- Initially explored the user's Pinterest/Hexagon 404 image-letter idea as WE BUILD BRANDS with 232 changing image tiles. User then explicitly rejected that direction and supplied a new editorial poster reference. Removed the mosaic component, CSS, 15 poster assets and corresponding design notes.
+- Installed BrandStoryHero with the exact requested sentence over four bold lines, simple pop-art radio, yellow record player and retro television between words, plus a flat green burst. Downloaded three public Pinterest images for temporary local review and recorded exact URLs and replacement requirement in public/branding-story/SOURCES.json. Kept the standard shared shell and Locomotive scrolling.
+- Updated design-system guidance, IA and docs/branding-story/DESIGN.md. Focused ESLint, TypeScript, production build and whitespace checks passed. Final CSS burst refinement also passed lint/TypeScript. Browser at 1280, 810 and 390px confirmed all three images load, correct title and no horizontal overflow; mobile keeps all four lines within the content width. Saved exports/branding-story-desktop.png and branding-story-mobile.png. Existing Sanity DNS warnings remain in build output.
+- Local checkout /private/tmp/kyte-product-design-landing. No deployment or external publication. Owner: Kyte website team. Next: user visual review.
+
+
+### 21 October 2026: User-supplied artwork and headline refinements
+
+- Replaced the three temporary Pinterest photos with the user-supplied design-book collage, chair scene and yellow symbol, optimized as WebP files. Replaced the green burst with the existing Kyte logo mark, set headline weight to regular, aligned the final line to the right and removed the caption underneath. Updated the design notes and source inventory; deleted unused image files.
+- Focused ESLint, TypeScript and whitespace checks passed. Browser review at 1093px and 390px confirmed all supplied images and the Kyte mark load, regular 400 font weight, removed caption, right-aligned final line, and no horizontal overflow. Screenshots: exports/branding-story-supplied-assets-desktop.png and exports/branding-story-supplied-assets-mobile.png. Local only, unpublished. Owner: Kyte website team. Next: user visual review.
+
+### 21 October 2026: Mixed typography reveal and interactive orbit playground
+
+- Added the requested service-text exploration after the hero using shared DM Sans, open-license Oswald and Instrument Serif, outline and dimensional word styles, progressive scroll reveal, service links, hover/focus hints, pointer-reactive stickers and click/keyboard spins. Selected a Pinterest flower and made a transparent cutout with built-in imagegen; added an original orange SVG sculpture and lime paper note. Added source/license records. Working copy remains for review.
+- User then requested a gallery between hero and typography. Inspected the public Pinterest pin and its visible card ring/controls; login obscured part of its video. Built a lightweight CSS 3D playground with ten images orbiting the existing Kyte mark, Flat/Tilt/Ring/Gallery morphs, mouse camera dragging, arrow-key camera adjustment, pause and reset. Touch preserves vertical page scrolling. Rotation stops offscreen and in hidden tabs; reduced motion disables automatic rotation. No new rendering dependency. Temporary sourced artwork is local exploration only.
+- Superseded by the user before final review. Both experimental sections and their runtime assets were removed in the following helix replacement. No deployment or external publication.
+
+### 21 October 2026: Supplied dither helix replaces both experimental sections
+
+- User supplied the full React/WebGL2 component and explicitly requested its six demo images only. Integrated it under components/ui with native site CSS and no new runtime dependency. Preserved the shader pipeline, curved helix, grain/blur transitions, entry, hover focus, snap and click tween. Copied exactly the six supplied images locally and corrected mismatched demo captions to describe their contents.
+- Removed BrandOrbitGallery, BrandDisciplines, all associated Pinterest/sticker assets and the two display fonts. Main content now contains only the existing story hero and supplied helix. Added offscreen/hidden pause, focused wheel handling with Escape release, keyboard/arrow buttons, horizontal touch drag, mobile card sizing, unique accessible option IDs and resource cleanup/failure fallback.
+- Focused ESLint, TypeScript, whitespace checks and the final production build passed. Existing Sanity CDN DNS warnings remain unrelated. Browser at 1280px and 390px verified the two-section main, rendered WebGL/grain treatment, no horizontal overflow, keyboard advance, vertical mouse drag, focused wheel advance and Escape releasing normal page scrolling. Fresh reloads had no captured browser errors; a transient development hot-refresh hook warning cleared on reload. Mobile uses a narrower cylinder and card ratio. Saved exports/branding-helix-desktop.png and branding-helix-mobile.png. WebGL failure fallback and physical-device touch were not forced/tested. Local checkout: /private/tmp/kyte-product-design-landing. No deployment or external publication. Owner: Kyte website team. Next: user visual review.
+
+### 21 October 2026: Fine pixel dissolve at blue-to-white boundaries
+
+- Added a reusable, fine-grained pixel dissolve at the showreel-to-helix and selected-work-to-CTA transitions, using mostly white tiles with sparse Kyte-blue accents. The seeded tile layout animates into the white section once as each boundary enters view, with a denser edge nearest the boundary; reduced-motion preferences hide the animation. No new assets or dependencies.
+- Updated the branding design and interaction notes. Focused ESLint, TypeScript, production build and diff whitespace checks passed. The branding route rendered in the local browser at 1093px; the dissolve's in-progress frame and mobile appearance were not directly reviewed. Build emitted the existing Sanity CDN DNS warnings while generating content-backed routes. Local only, unpublished. Owner: Kyte website team. Next: user visual review, including mobile.
+
+### 21 October 2026: Scroll-driven pixel field and process double diamond
+
+- Re-studied the pixel reference against the supplied screenshot and prior live-DOM observation: the treatment is a 20-column by 5-row square-tile field with a stepped edge. Replaced the one-time IntersectionObserver/fade with a canvas whose tile colors follow current scroll progress, reverse on upward scrolling and replay naturally on later passes. The edge stays uneven at rest; the moving edge uses blue, sky, lime and white, while the endpoint palette reduces to Kyte blue and white.
+- Added the requested four-stage process after Selected Work, using brand-blue cards for Discover, Define, Develop and Deliver and one continuous double-diamond SVG outline across the cards. The diagram has no internal labels; the card copy remains separate. On mobile, the cards become a two-by-two grid with one diamond per row so the lines clear the stage text.
+- Updated the branding interaction/design notes. Focused ESLint, TypeScript, production build and whitespace checks passed. Browser review at 1280x720 and 390x844 confirmed the scroll-dependent color field, the two responsive diagram layouts and no horizontal overflow. The active Transform9 site has since changed its visible page; visual comparison used the user's supplied reference screenshot and the previously measured 20-by-5 live grid. Build completed while the existing Sanity CDN hostname was unavailable, so work and Design News content could not load during static generation; the route still built successfully. Local only, unpublished. Owner: Kyte website team. Next: user review.
+
+### 21 October 2026: Finer pixels and staged editorial process
+
+- Increased the pixel field to 64 columns by 16 rows and added stronger seeded variation between columns so the stepped edge rises and dips rather than forming a level band. Added inner top and bottom breathing room to the pinned image carousel.
+- Changed the process section into a scroll-pinned sequence. All four panels start closed; Discover, Define, Develop and Deliver open in order, with each diamond outline drawing alongside its related stage. Removed the extra grid guides, matched outline tint to the one-pixel card dividers, and made both diamonds taller. Enlarged Selected Work and Our Process to oversized uppercase editorial headings.
+- Updated branding design and interaction notes. Focused ESLint, TypeScript, whitespace checks and production build passed. Build reported the existing Sanity CDN DNS failure for work and Design News content while still generating all 43 routes. Browser review at the local 1093x817 viewport confirmed the initial closed process, progressive panel reveal, complete double diamond, large heading and carousel spacing; mobile visual review remains unverified. Local only, unpublished. Owner: Kyte website team. Next: user review, including mobile.
+- Moved “Our Process” out of the sticky viewport so the heading scrolls away before the four panels pin, giving the process cards more vertical room. Moved each double-diamond segment into its card so it reveals with that card's clip instead of animating independently; adjusted scroll progress for the new heading position and extended the pinned sequence. Updated the branding design and interaction notes. Focused ESLint, TypeScript and whitespace checks passed. Desktop browser review confirmed the heading scrolls away and the cards reveal in sequence; mobile visual review remains unverified. Local only, unpublished. Owner: Kyte website team. Next: user review, including mobile.
+- Added matching top and bottom breathing room around the pinned process cards, while keeping them sticky below the site header. Updated scroll progress to read the sticky element's actual top and height, including the new inset. Updated the branding design and interaction notes. Focused ESLint, TypeScript and whitespace checks passed. Desktop browser review at 1093x818 confirmed the cards have visible top and bottom gaps and all four stages remain in the pinned area; mobile visual review remains unverified. Local only, unpublished. Owner: Kyte website team. Next: user review, including mobile.
+- **Service section scope corrected (21 October 2026):** Kept the new ten-service directory and blue “Are you ready to fly with us?” closing section on `/branding-marketing` only. Restored the existing five-card UI/UX services section and its original shared footer banner on `/ui-ux-design-development`. Updated the design-system note to match. Focused ESLint, TypeScript and whitespace checks passed; production build passed with the existing Sanity CDN DNS warnings. Browser preview confirmed the UI/UX route again uses its normal section and footer, while the Branding route retains the new directory and CTA. No deployment. Owner: Kyte website team. Next: user review.

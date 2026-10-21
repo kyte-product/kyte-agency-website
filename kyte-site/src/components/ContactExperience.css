@@ -19,7 +19,6 @@
 .contact-experience__clients ul { display: flex; flex: none; align-items: center; gap: 24px; margin: 0; padding: 0 24px 0 0; list-style: none; }
 .contact-experience__clients li { display: grid; flex: none; place-items: center; width: 105px; height: 34px; }
 .contact-experience__clients img { display: block; width: auto; max-width: 100%; height: auto; max-height: 30px; object-fit: contain; filter: brightness(0) invert(1); opacity: .62; }
-.contact-experience__clients-window:hover .contact-experience__clients-track { animation-play-state: paused; }
 @keyframes contact-clients-scroll { to { transform: translateX(-50%); } }
 .contact-experience__form-panel { padding: 42px 44px 34px; }
 .contact-experience__form-heading { margin: 0 36px 26px 0; font-size: 22px; font-weight: 500; letter-spacing: -.025em; }

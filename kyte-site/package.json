@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:illustration-palettes": "node hairline/check-illustration-palettes.mjs",
+    "build:illustrations": "node hairline/rebuild-illustrations.mjs"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.3.0",
@@ -15,20 +17,25 @@
     "@razorpay/i18nify-js": "1.12.3",
     "@razorpay/i18nify-react": "4.0.12",
     "framer-motion": "^14.0.0",
-    "lenis": "^1.3.26",
+    "locomotive-scroll": "^5.0.1",
     "lottie-web": "^5.13.0",
     "lucide-react": "^1.53.0",
     "next": "16.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "styled-components": "5.3.11"
+    "styled-components": "5.3.11",
+    "three": "^0.186.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.186.0",
     "eslint": "^9",
     "eslint-config-next": "16.4.0",
     "typescript": "^5"
+  },
+  "overrides": {
+    "ts-deepmerge": "8.0.0"
   }
 }

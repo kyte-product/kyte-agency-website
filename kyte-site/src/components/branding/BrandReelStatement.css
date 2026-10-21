@@ -1,0 +1,187 @@
+.brand-reel-stage {
+  --brand-reel-mono: "Geist Mono", "DM Mono", monospace;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/geist-mono/geist-mono-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.brand-reel-stage {
+  position: relative;
+  height: 245svh;
+  overflow: clip;
+  background: var(--color-blue, #0249d9);
+  color: #f7f7f5;
+}
+
+.brand-reel-stage__canvas {
+  position: relative;
+  height: 100%;
+}
+
+.brand-reel-stage__topline {
+  position: absolute;
+  top: 16vh;
+  left: 2.2vw;
+  right: 2.2vw;
+  display: grid;
+  grid-template-columns: minmax(150px, .8fr) minmax(200px, 1fr);
+  align-items: start;
+  gap: 24px;
+  font-family: "Geist Mono", monospace;
+  font-size: clamp(18px, 1.5vw, 25px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.brand-reel-stage__topline p {
+  margin: 0;
+}
+
+.brand-reel-stage__topline .brand-helix-notes__glyph {
+  width: .9em;
+  height: .9em;
+  vertical-align: -.08em;
+}
+
+.brand-reel-stage__frame {
+  position: absolute;
+  z-index: 1;
+  top: var(--reel-y, 34vh);
+  left: var(--reel-x, 2.2vw);
+  width: var(--reel-base-width, 95.6vw);
+  height: var(--reel-base-height, 78vh);
+  transform: scale(var(--reel-scale, 1));
+  transform-origin: top left;
+  overflow: hidden;
+  background: #151515;
+  will-change: transform, top;
+}
+
+.brand-reel-stage__frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.brand-reel-stage__intro {
+  position: absolute;
+  top: var(--reel-final-y, 1.17vh);
+  left: calc(var(--reel-x, 2.2vw) + var(--final-width, 430px) + 3vw);
+  right: 2.2vw;
+  color: rgba(255, 255, 255, .76);
+  font-family: "Geist Mono", monospace;
+  font-size: clamp(14px, 1.25vw, 22px);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.brand-reel-stage__intro p {
+  margin: 0;
+}
+
+.brand-reel-stage__statement {
+  position: absolute;
+  top: calc(var(--final-y, 94vh) + var(--final-height, 242px) - 1.15em);
+  left: 2.2vw;
+  right: 2.2vw;
+  margin: 0;
+  color: #f7f7f5;
+  font-size: clamp(34px, 4.25vw, 82px);
+  font-weight: 400;
+  letter-spacing: -.055em;
+  line-height: 1.15;
+  text-indent: calc(var(--final-width, 430px) + 3vw);
+}
+
+.brand-reel-stage__statement span {
+  color: inherit;
+}
+
+@media (max-width: 760px) {
+  .brand-reel-stage {
+    height: 245svh;
+  }
+
+  .brand-reel-stage__topline {
+    top: 10vh;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 14px;
+    font-size: 15px;
+  }
+
+  .brand-reel-stage__frame {
+    top: var(--reel-y, 34vh);
+    width: var(--reel-base-width, 95.6vw);
+    height: var(--reel-base-height, 78vh);
+  }
+
+  .brand-reel-stage__intro {
+    top: var(--reel-final-y, 1.17vh);
+    left: calc(var(--reel-x, 5vw) + var(--final-width, 220px) + 3vw);
+    right: 5vw;
+    font-size: 12px;
+  }
+
+  .brand-reel-stage__statement {
+    top: calc(var(--final-y, 94vh) + var(--final-height, 124px) - 1.12em);
+    left: 5vw;
+    right: 5vw;
+    font-size: clamp(27px, 7.2vw, 48px);
+    line-height: 1.12;
+  }
+
+  .brand-reel-stage__statement {
+    text-indent: calc(var(--final-width, 220px) + 3vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-reel-stage {
+    height: auto;
+    min-height: 100svh;
+    padding: 42px 0 54px;
+    overflow: visible;
+  }
+
+  .brand-reel-stage__canvas {
+    height: auto;
+  }
+
+  .brand-reel-stage__topline {
+    position: relative;
+    inset: auto;
+    display: grid;
+    margin: 0 2.2vw 28px;
+  }
+
+  .brand-reel-stage__frame {
+    position: relative;
+    inset: auto;
+    width: 95.6vw;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .brand-reel-stage__intro {
+    position: relative;
+    inset: auto;
+    margin: 24px 2.2vw 12px;
+  }
+
+  .brand-reel-stage__statement {
+    position: relative;
+    inset: auto;
+    margin: 0 2.2vw;
+  }
+
+}

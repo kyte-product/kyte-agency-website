@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 type Phase = "idle" | "covering" | "revealing";
 
@@ -18,6 +18,14 @@ export function PageTransition() {
   const coverTimer = useRef<number | null>(null);
   const fallbackTimer = useRef<number | null>(null);
   const revealTimer = useRef<number | null>(null);
+
+  useLayoutEffect(() => {
+    if (pathname.startsWith("/branding-marketing/")) {
+      document.documentElement.dataset.appTheme = "branding-dark";
+    } else {
+      document.documentElement.dataset.appTheme = "light";
+    }
+  }, [pathname]);
 
   const changePhase = (next: Phase) => {
     phaseRef.current = next;
@@ -53,13 +61,13 @@ export function PageTransition() {
 
       const href = `${destination.pathname}${destination.search}${destination.hash}`;
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        router.push(href);
+        router.push(href, { scroll: false });
         return;
       }
 
       changePhase("covering");
       coverTimer.current = window.setTimeout(() => {
-        router.push(href);
+        router.push(href, { scroll: false });
         fallbackTimer.current = window.setTimeout(() => changePhase("revealing"), NAVIGATION_TIMEOUT);
       }, COVER_DURATION + COVER_HOLD);
     };
