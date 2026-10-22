@@ -1,30 +1,26 @@
 "use client";
 
 import { useState, type CSSProperties, type KeyboardEvent } from "react";
-import { Code2, LayoutTemplate, Palette, Search } from "lucide-react";
+import { DotPattern } from "./ui/DotPattern";
 
 const stages = [
   {
     title: "Discovery",
-    icon: Search,
     deliverables: ["Stakeholder conversations", "Experience audit", "User research", "Product goals", "Scope & priorities"],
     outcome: "A shared view of the product, its audience, and the decisions that matter most.",
   },
   {
     title: "UX Architecture",
-    icon: LayoutTemplate,
     deliverables: ["User flows", "Content structure", "Wireframes", "Interaction patterns", "Prototype"],
     outcome: "The main journeys and structure are clear enough to review before visual design begins.",
   },
   {
     title: "UI Design",
-    icon: Palette,
     deliverables: ["Visual direction", "Responsive screens", "Interface states", "Components", "Design system"],
     outcome: "The approved experience becomes a coherent interface across screens and states.",
   },
   {
     title: "Handoff & implementation",
-    icon: Code2,
     deliverables: ["Design files", "Component guidance", "Assets", "Build reviews", "Refinement"],
     outcome: "The people building the product have the details and context to carry the design through.",
   },
@@ -76,11 +72,10 @@ export function ProductDesignFramework() {
       </div>
       <div className="product-framework__visual" data-stage={active} aria-hidden="true">
         <div className="product-framework__visual-grid" />
-        <div className="product-framework__track" style={{ "--track-offset": `${-(active * 328 + 136)}px`, "--track-rise": `${-(active * 110 + 41)}px`, "--mobile-track-offset": `${-(active * 230 + 95)}px`, "--mobile-track-rise": `${-(active * 70 + 36)}px` } as CSSProperties}>
+        <div className="product-framework__track" style={{ "--track-offset": `${-(active * 328 + 136)}px`, "--track-rise": `${-(active * 110 + 52)}px`, "--mobile-track-offset": `${-(active * 230 + 95)}px`, "--mobile-track-rise": `${-(active * 70 + 44)}px` } as CSSProperties}>
           {stages.map((item, index) => {
-            const Icon = item.icon;
             return <div className={`product-framework__node${index === active ? " is-active" : ""}`} key={item.title}>
-              <span className="product-framework__node-icon"><Icon size={25} strokeWidth={1.5} /></span>
+              <span className="product-framework__node-pattern"><DotPattern seed={`product:framework:${item.title}`} motifSlot={index} /></span>
               <span>{item.title}</span>
               {index < stages.length - 1 && <svg className="product-framework__connector" viewBox="0 0 56 110" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M0 0 H14 Q26 0 26 12 V98 Q26 110 38 110 H56" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg>}
             </div>;
