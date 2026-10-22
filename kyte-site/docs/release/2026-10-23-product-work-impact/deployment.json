@@ -1,0 +1,18 @@
+{
+  "id": "dpl_Bri3qAAhJxHgprgANSRQCTmyfgCq",
+  "url": "kyte-agency-website-kkiyzn5wp-kyte-product.vercel.app",
+  "readyState": "READY",
+  "target": "production",
+  "aliases": [
+    "kyte-agency.vercel.app",
+    "kyte-agency-website.vercel.app",
+    "kyte-agency-website-kyte-product.vercel.app",
+    "kyte-agency-website-git-main-kyte-product.vercel.app"
+  ],
+  "githubCommitSha": "c02965ccc8c4f9c5da718230739c979c64d883c8",
+  "pullRequest": "https://github.com/kyte-product/kyte-agency-website/pull/66",
+  "rollback": {
+    "id": "dpl_7oSCqTyeXuuAEHoXdd9sv9p7rkyW",
+    "url": "https://kyte-agency-website-i84l84omj-kyte-product.vercel.app"
+  }
+}

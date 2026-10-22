@@ -1,6 +1,6 @@
 # Product work, impact and dot-mark follow-up
 
-23 October 2026. Owner: Kyte website team. Status: verified locally, user-authorized GitHub/Vercel release pending.
+23 October 2026. Owner: Kyte website team. Status: merged and verified Ready in production.
 
 ## Scope
 
@@ -22,4 +22,13 @@ Working-principle evidence: [six dot grids](../audits/2026-10-23-product-followu
 
 Branch: `codex/product-work-impact-followup`. Existing Vercel team/project: `kyte-product/kyte-agency-website`. Public alias: https://kyte-agency.vercel.app. No CMS writes, new result claims, form submissions or launch setting changes.
 
-Verified previous Ready rollback: `dpl_7oSCqTyeXuuAEHoXdd9sv9p7rkyW`, https://kyte-agency-website-i84l84omj-kyte-product.vercel.app. Exact new PR, merge revision and Ready deployment will be added after publication.
+Verified previous Ready rollback: `dpl_7oSCqTyeXuuAEHoXdd9sv9p7rkyW`, https://kyte-agency-website-i84l84omj-kyte-product.vercel.app. 
+
+- Application PR: [#66](https://github.com/kyte-product/kyte-agency-website/pull/66), merged after successful preview checks on head `e61e068cb72cecdd2f1737debab55eb2df44b850`.
+- Merge revision: `c02965ccc8c4f9c5da718230739c979c64d883c8`.
+- Ready production deployment: `dpl_Bri3qAAhJxHgprgANSRQCTmyfgCq`, https://kyte-agency-website-kkiyzn5wp-kyte-product.vercel.app, assigned to https://kyte-agency.vercel.app.
+- [Deployment and rollback evidence](2026-10-23-product-work-impact/deployment.json).
+- [Live browser checks](2026-10-23-product-work-impact/live-checks.json) passed: grid default, list switch and 30px desktop text, all four Kyte values, four framework and six working-principle dot fields, framework selection, no page overflow or browser exceptions.
+- [Live impact cards](2026-10-23-product-work-impact/live-impact.png).
+
+This final publication record is a documentation-only follow-up; its merge may trigger another deployment of the same verified application code.

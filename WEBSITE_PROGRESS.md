@@ -4,11 +4,16 @@ Updated 23 October 2026. Owner: Kyte website team.
 
 ## Current status
 
-The three design systems and additive default brand-blue illustration variants are complete locally on `codex/design-systems-content-ready`. The original color artwork is retained and checksummed. Homepage Selected Work now uses the final supplied covers 6–10. Shared service/dot/sidebar refinements, tablet process copy fitting, reduced-motion project heading spacing, archival cleanup and the Next 16.4.2 security patch are included. Verification passed: 58 pages / 367 assets, 232 breakpoint cases, 307 focused interaction checks and 12 final cover/navigation checks. Production dependency audit reports zero advisories. PR #64 is merged at `4df4bed6d6c69397f02a7ab5a1bbcd36f3c178e1`; Vercel production deployment `dpl_G7ZHxLgVB3dp85GLLaFESciJQNPi` is verified Ready at https://kyte-agency.vercel.app. The live crawl passed all 58 pages and 367 assets, and browser review confirmed the palette toggle/default and final homepage covers/black heading. Sanity is unchanged.
+The latest Product landing follow-up is merged through PR #66 at `c02965ccc8c4f9c5da718230739c979c64d883c8`. Vercel production `dpl_Bri3qAAhJxHgprgANSRQCTmyfgCq` is verified Ready at https://kyte-agency.vercel.app. Selected Work now offers list/grid controls with grid as default and larger Product list text. Four existing Kyte impact totals use the shared industry-style card row. Framework and working-principle icons are shared breathing dot grids. Build, lint, TypeScript, source/design-system guards, 33 targeted four-breakpoint checks, four shared-impact regressions and a live browser smoke check passed. Sanity and launch settings remain unchanged.
 
-Canonical systems: `kyte-site/docs/design-systems/README.md`. Content editors start at `kyte-site/docs/content-population.md`. Current audit: `kyte-site/docs/audits/2026-10-23-content-ready.md`. Exact publication state and rollback: `kyte-site/docs/release/2026-10-23-design-systems.md`. Next action: populate final approved content using the content guide. Local review remains on port 3001.
+The three design systems, preserved original/default brand-blue illustration versions, homepage final covers 6–10 and prior full-site audit remain in place. Their foundation release is recorded separately in `kyte-site/docs/release/2026-10-23-design-systems.md`.
+
+Canonical systems: `kyte-site/docs/design-systems/README.md`. Content editors start at `kyte-site/docs/content-population.md`. Full-site audit: `kyte-site/docs/audits/2026-10-23-content-ready.md`. Latest follow-up checks and release: `kyte-site/docs/release/2026-10-23-product-work-impact.md`. Exact publication state and rollback: `kyte-site/docs/release/2026-10-23-design-systems.md`. Next action: populate final approved content using the content guide. Local review remains on port 3001.
 
 ## Template decisions
+
+- Product Selected Work defaults to grid with an accessible list/grid switch and larger Product-only list type. Agency impact figures are shared with Home through `src/data/kyteImpact.ts`, separate from industry sources.
+- Product framework and six How We Work Together marks use shared breathing dot grids with keyboard and reduced-motion behavior intact.
 
 - Homepage Selected Work uses final supplied cover files 6–10 in full 3:4 composition, distinct image URLs and a shared ink/black heading.
 - Four cascading service-process cards alternate blue/black. Hover/focus expands without moving other bars; measured copy height prevents clipping. Outcomes precede Deliverables, then Approach.
@@ -114,3 +119,7 @@ Implemented on `codex/product-work-impact-followup`: restore the existing list/g
 ### 23 October 2026: Product framework and working-principle dot grids
 
 Added the user’s follow-up to the same release: replace four framework stage icons and six How We Work Together icons with the shared breathing dot grid. Sized the marks without scaling their dot geometry, preserved visible names/outcomes, and adjusted framework node centering for the larger marks. Included in the pending focused checks and deployment. Owner: Kyte website team.
+
+## 23 October 2026: Product follow-up published and verified
+
+PR #66 merged at `c02965ccc8c4f9c5da718230739c979c64d883c8`; production `dpl_Bri3qAAhJxHgprgANSRQCTmyfgCq` is Ready. The live Product page confirms grid default/list switching with larger type, four existing Kyte totals, all ten dot fields and functioning framework selection, without overflow or uncaught errors. Final deployment, rollback and browser evidence are in `kyte-site/docs/release/2026-10-23-product-work-impact.md`. All relevant system, template, content and IA notes were updated. Documentation-only publication record follows the application release. Owner: Kyte website team. Next: content population.
