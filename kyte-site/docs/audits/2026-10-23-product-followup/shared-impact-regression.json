@@ -1,0 +1,46 @@
+[
+  {
+    "width": 393,
+    "route": "/",
+    "metrics": [
+      "100+",
+      "50+",
+      "3M+",
+      "200M+"
+    ],
+    "pass": true
+  },
+  {
+    "width": 393,
+    "route": "/industries/fintech",
+    "metrics": [
+      "90%",
+      "42%",
+      "40%",
+      "1.3B"
+    ],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "metrics": [
+      "100+",
+      "50+",
+      "3M+",
+      "200M+"
+    ],
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "route": "/industries/fintech",
+    "metrics": [
+      "90%",
+      "42%",
+      "40%",
+      "1.3B"
+    ],
+    "pass": true
+  }
+]

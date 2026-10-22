@@ -6,7 +6,7 @@ Current: 23 October 2026. Browser reference: `/design-system/product`. Live rout
 
 The UI uses Website's DM Sans, semantic colors/type, compact corners, content insets, standard actions, header/footer, Work and FAQ patterns. Product-specific extensions are authored isometric art, the four-moment carousel, eight product-stage scenes, five illustrated service cards, the four-stage framework and six What We Design scenes.
 
-Landing order: workspace hero → client ticker → product moments → Work → shared approach introduction → product stages → ProductServices → framework → working principles → What We Design → industry cards → testimonials → FAQ → shared footer. Current route source owns this order. `ProductServices` is reused on industries while the surrounding page remains Website.
+Landing order: workspace hero → client ticker → product moments → Work (grid by default, optional list) → shared approach introduction and Kyte impact cards → product stages → ProductServices → framework → working principles → What We Design → industry cards → testimonials → FAQ → shared footer. Current route source owns this order. `ProductServices` is reused on industries while the surrounding page remains Website.
 
 ## Illustration layers
 
@@ -47,7 +47,7 @@ The asset variants also include matching review embeds, service hero and preserv
 - Product moments use real previous/next buttons and the shared carousel movement helper. Keep first and final item content insets. Do not require dragging to read copy.
 - `ProductStageIllustration` displays the appropriate compact scene for each of the eight labels. Scale the scene within the slot without changing contour construction.
 - `ProductServices` keeps its five source illustrations and adjacent inline arrow links without divider rules.
-- `ProductDesignFramework` uses a vertical tablist with Arrow/Home/End navigation and associated panel IDs; the diagram follows the selected stage. Decorative motion cannot replace the text outcome.
+- `ProductDesignFramework` uses a vertical tablist with Arrow/Home/End navigation and associated panel IDs; the diagram follows the selected stage. Its four right-hand stage marks use shared breathing DotPattern grids instead of line icons. Decorative motion cannot replace the text outcome.
 - Test all artwork at 320/393/810/1440px, including complete focal forms, no page overflow and no accidental secondary scrollbar. Product layouts include 650px reflow rules. Preserve neutral surfaces, accessible surrounding headings and fixed aspect ratios.
 
 ## Rebuild and verification
@@ -62,3 +62,11 @@ npm run check:design-systems
 ```
 
 For new or edited original geometry, run `npm run build:illustrations`, which builds originals first, generates the additive variant last, then checks preservation. Review both versions visually before publication. The variant guard checks original hashes, generated hashes and identical non-color markup; it does not certify composition quality. Existing contour/mask geometry remains unchanged by the color-only process.
+
+## Selected Work and Kyte impact, 23 October follow-up
+
+The Product landing uses the existing WorkShowcase grid/list toggle with grid as the fresh-load default. Only this landing enlarges list descriptions to 24–30px desktop and 22px mobile; metadata is 18px desktop and 16px mobile. The tablet list keeps metadata under its text, separate from the image. Grid typography stays inherited.
+
+KyteApproach includes the same ImpactCards row used on industry pages, with white/blue/charcoal/white surfaces and breathing dot fields. Its accessible label is “Kyte impact numbers.” Four cards reuse the existing homepage figures: 100+ projects, 50+ clients, 3M+ views in one year and 200M+ impressions. `src/data/kyteImpact.ts` owns these figures for both Home and Product. These are Kyte totals, not industry statistics; their existing editorial proof status is unchanged. At smaller widths the shared rail scrolls without widening the page.
+
+The framework stage marks use 80 × 72px dot fields (64px square on phones), with nodes sized to contain them and centered on the selected stage. “How We Work Together” uses six 96px square dot fields. Both use stable group seeds and unique motif slots, the shared gray/blue tone, fixed 7px grid geometry, offscreen pause and reduced-motion behavior. Stage names and written outcomes remain visible and keyboard accessible.

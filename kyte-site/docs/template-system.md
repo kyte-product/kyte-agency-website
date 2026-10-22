@@ -49,3 +49,9 @@ Replace placeholders only with verified client, team, outcome, testimonial and e
 ## Design-system authorities
 
 See [the three-system index](design-systems/README.md) and [the content guide](content-population.md). Website is the shared foundation; only the exact Branding and Product landing routes apply extensions. The root active design-system marker follows the route. Product art defaults to the additive blue version; original assets remain unchanged and accessible through the shared DS toggle. [Product preservation and rebuild rules](design-systems/product.md) cover both versions.
+
+## Product landing work and impact follow-up, 23 October 2026
+
+Selected Work exposes its existing list/grid switch, defaults to grid and uses larger, Product-scoped list typography. KyteApproach restores four Kyte impact cards through the same ImpactCards row used on industries. `src/data/kyteImpact.ts` supplies the existing homepage totals to both consumers; industry pages continue using their separate sourced sector datasets.
+
+Product framework stage marks and the six working-principle cards now use the shared breathing DotPattern component in place of Lucide line icons. The framework’s existing tab/keyboard and diagram movement behavior is retained.

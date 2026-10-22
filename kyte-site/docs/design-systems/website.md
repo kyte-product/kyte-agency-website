@@ -80,3 +80,5 @@ The resting background grid uses one SVG pattern and rectangle per field, with u
 The five supplied 900 × 1200 PNGs from `Case Study/Covers/6.png` through `10.png` are displayed in numeric order: Fincart product, Maya launch, Fincart website, Smash Guys and Dr. Prashant Katkol. WebP derivatives live in `public/images/work/home-covers/`; `manifest.json` records source checksums. Preserve the full 3:4 artwork with contain sizing, useful alt text and lazy responsive images. Source files remain untouched. These supplied images include authored outcome text; this change does not establish independent verification of those claims.
 
 Cover derivative filenames include their source number (6–10), so replacing older artwork cannot reuse stale optimized image URLs. The homepage Selected Work heading uses `--ink`, following the final user direction.
+
+The shared ImpactCards row accepts a group label. Industry usage defaults to “Industry statistics”; Product uses “Kyte impact numbers.” Existing Kyte homepage/Product figures share `src/data/kyteImpact.ts`. See the Product contract for its list typography and grid-default WorkShowcase configuration.

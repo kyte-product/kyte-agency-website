@@ -106,3 +106,11 @@ Returned Selected Work to shared ink/black at the user’s request, superseding 
 ## 23 October 2026: verified GitHub and Vercel release
 
 PR #64 merged as `4df4bed6d6c69397f02a7ab5a1bbcd36f3c178e1`. Production `dpl_G7ZHxLgVB3dp85GLLaFESciJQNPi` is Ready and aliased to https://kyte-agency.vercel.app. All 58 production pages and 367 assets passed the crawl. Browser review confirmed retained original colors, the blue default after reload, live Product navigation, revised homepage covers and final black title. Current checks and content handoff are consolidated above; exact deployment, rollback and evidence are in `kyte-site/docs/release/2026-10-23-design-systems.md`. Final records are published in a documentation-only follow-up. Next: content population and separate final launch checks. Owner: Kyte website team.
+
+## 23 October 2026: Product work layouts and Kyte impact follow-up
+
+Implemented on `codex/product-work-impact-followup`: restore the existing list/grid toggle on /ui-ux-design-development, grid by default; enlarge Product list copy and correct its tablet metadata placement. Restore four Kyte impact cards using the shared industry row. Existing homepage totals now come from `src/data/kyteImpact.ts`; industry datasets and their sources stay separate. Product browser design system, Website/Product contracts, template notes, IA and content edit guide are updated. Production build, lint, TypeScript and 33 focused four-breakpoint checks passed. Next: GitHub merge and verified Vercel production deployment; release record: `kyte-site/docs/release/2026-10-23-product-work-impact.md`. Owner: Kyte website team.
+
+### 23 October 2026: Product framework and working-principle dot grids
+
+Added the user’s follow-up to the same release: replace four framework stage icons and six How We Work Together icons with the shared breathing dot grid. Sized the marks without scaling their dot geometry, preserved visible names/outcomes, and adjusted framework node centering for the larger marks. Included in the pending focused checks and deployment. Owner: Kyte website team.

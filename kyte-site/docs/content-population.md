@@ -36,3 +36,5 @@ Work imagery and featured projects, service/industry hero placeholders, stock im
 ### Specific cover-copy correction for the content owner
 
 The supplied Fincart product cover says “Reducing Financial Plan Creation Time by 200%.” A time reduction cannot exceed 100%. Confirm the underlying before/after measurement and rewrite the artwork with the correct percentage or speed comparison. The supplied image is preserved exactly in this release; its claim is not independently verified. The other cover metrics also need source sign-off before final launch.
+
+Kyte impact figures shared by Home and the Product landing are maintained in `src/data/kyteImpact.ts`. Edit them there to keep both pages aligned; preserve the views period. Industry metrics remain in `src/data/industrySnapshots.ts` with their source/context and must not be substituted for Kyte figures.

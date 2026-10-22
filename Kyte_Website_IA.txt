@@ -183,3 +183,5 @@ DESIGN DOCUMENTATION ROUTES (internal, noindex)
 /design-system/branding: exact Branding landing extension
 /design-system/product: Product landing extension and both illustration versions
 Route ownership: kyte-site/src/data/designSystems.ts. Child services inherit Website.
+
+23 October 2026 Product follow-up: Selected Work restores the existing list/grid control with grid as default. KyteApproach again includes the four Kyte impact totals, using the shared industry-style impact-card row. No routes change.

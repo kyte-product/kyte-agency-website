@@ -1,0 +1,263 @@
+[
+  {
+    "name": "Initial grid, metrics and dot marks 320",
+    "pass": true,
+    "width": 320,
+    "grid": "true",
+    "items": 4,
+    "metrics": [
+      "100+",
+      "50+",
+      "3M+",
+      "200M+"
+    ],
+    "framework": 4,
+    "principles": 6,
+    "oldIcons": 0
+  },
+  {
+    "name": "Larger list and tablet metadata 320",
+    "pass": true,
+    "list": "true",
+    "font": 22,
+    "detailsFont": 16,
+    "width": 320,
+    "tabletSeparated": true
+  },
+  {
+    "name": "Return to grid 320",
+    "pass": true,
+    "grid": "true"
+  },
+  {
+    "name": "Framework stage 320 / 0",
+    "pass": true,
+    "selected": "true",
+    "dots": 18,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 320 / 1",
+    "pass": true,
+    "selected": "true",
+    "dots": 26,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 320 / 2",
+    "pass": true,
+    "selected": "true",
+    "dots": 36,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 320 / 3",
+    "pass": true,
+    "selected": "true",
+    "dots": 18,
+    "contained": true
+  },
+  {
+    "name": "Framework keyboard 320",
+    "pass": true,
+    "selected": "true",
+    "focus": "product-framework-tab-1"
+  },
+  {
+    "name": "Initial grid, metrics and dot marks 393",
+    "pass": true,
+    "width": 393,
+    "grid": "true",
+    "items": 4,
+    "metrics": [
+      "100+",
+      "50+",
+      "3M+",
+      "200M+"
+    ],
+    "framework": 4,
+    "principles": 6,
+    "oldIcons": 0
+  },
+  {
+    "name": "Larger list and tablet metadata 393",
+    "pass": true,
+    "list": "true",
+    "font": 22,
+    "detailsFont": 16,
+    "width": 393,
+    "tabletSeparated": true
+  },
+  {
+    "name": "Return to grid 393",
+    "pass": true,
+    "grid": "true"
+  },
+  {
+    "name": "Framework stage 393 / 0",
+    "pass": true,
+    "selected": "true",
+    "dots": 18,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 393 / 1",
+    "pass": true,
+    "selected": "true",
+    "dots": 26,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 393 / 2",
+    "pass": true,
+    "selected": "true",
+    "dots": 36,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 393 / 3",
+    "pass": true,
+    "selected": "true",
+    "dots": 18,
+    "contained": true
+  },
+  {
+    "name": "Framework keyboard 393",
+    "pass": true,
+    "selected": "true",
+    "focus": "product-framework-tab-1"
+  },
+  {
+    "name": "Initial grid, metrics and dot marks 810",
+    "pass": true,
+    "width": 810,
+    "grid": "true",
+    "items": 4,
+    "metrics": [
+      "100+",
+      "50+",
+      "3M+",
+      "200M+"
+    ],
+    "framework": 4,
+    "principles": 6,
+    "oldIcons": 0
+  },
+  {
+    "name": "Larger list and tablet metadata 810",
+    "pass": true,
+    "list": "true",
+    "font": 24,
+    "detailsFont": 18,
+    "width": 810,
+    "tabletSeparated": true
+  },
+  {
+    "name": "Return to grid 810",
+    "pass": true,
+    "grid": "true"
+  },
+  {
+    "name": "Framework stage 810 / 0",
+    "pass": true,
+    "selected": "true",
+    "dots": 27,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 810 / 1",
+    "pass": true,
+    "selected": "true",
+    "dots": 29,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 810 / 2",
+    "pass": true,
+    "selected": "true",
+    "dots": 38,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 810 / 3",
+    "pass": true,
+    "selected": "true",
+    "dots": 27,
+    "contained": true
+  },
+  {
+    "name": "Framework keyboard 810",
+    "pass": true,
+    "selected": "true",
+    "focus": "product-framework-tab-1"
+  },
+  {
+    "name": "Initial grid, metrics and dot marks 1440",
+    "pass": true,
+    "width": 1440,
+    "grid": "true",
+    "items": 4,
+    "metrics": [
+      "100+",
+      "50+",
+      "3M+",
+      "200M+"
+    ],
+    "framework": 4,
+    "principles": 6,
+    "oldIcons": 0
+  },
+  {
+    "name": "Larger list and tablet metadata 1440",
+    "pass": true,
+    "list": "true",
+    "font": 30,
+    "detailsFont": 18,
+    "width": 1440,
+    "tabletSeparated": true
+  },
+  {
+    "name": "Return to grid 1440",
+    "pass": true,
+    "grid": "true"
+  },
+  {
+    "name": "Framework stage 1440 / 0",
+    "pass": true,
+    "selected": "true",
+    "dots": 27,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 1440 / 1",
+    "pass": true,
+    "selected": "true",
+    "dots": 29,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 1440 / 2",
+    "pass": true,
+    "selected": "true",
+    "dots": 38,
+    "contained": true
+  },
+  {
+    "name": "Framework stage 1440 / 3",
+    "pass": true,
+    "selected": "true",
+    "dots": 27,
+    "contained": true
+  },
+  {
+    "name": "Framework keyboard 1440",
+    "pass": true,
+    "selected": "true",
+    "focus": "product-framework-tab-1"
+  },
+  {
+    "name": "Browser exceptions",
+    "pass": true,
+    "errors": []
+  }
+]

@@ -2,7 +2,7 @@ import { ProductServices } from "@/components/ProductServices";
 import { KyteApproach } from "@/components/KyteApproach";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Compass, Layers3, PanelsTopLeft, ScanSearch, Sparkles, Workflow } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { TextRevealMotion } from "@/components/TextRevealMotion";
@@ -12,6 +12,7 @@ import { ProductDesignFramework } from "@/components/ProductDesignFramework";
 import { ServiceTestimonials } from "@/components/ServiceTestimonials";
 import { HomeFaq } from "@/components/HomeFaq";
 import { ClientBrandTicker } from "@/components/ClientBrandTicker";
+import { DotPattern } from "@/components/ui/DotPattern";
 import { WorkShowcase } from "@/components/WorkShowcase";
 import { industryPages } from "@/data/industryPages";
 import "@/components/KyteApproach.css";
@@ -38,12 +39,12 @@ const featuredIndustries = [
 ] as const;
 
 const process = [
-  { icon: Compass, title: "Context", body: "Understand the product, audience, goals, and constraints that shape the work." },
-  { icon: ScanSearch, title: "Research", body: "Look at existing evidence and learn where people need more clarity." },
-  { icon: Workflow, title: "Experience architecture", body: "Map journeys, navigation, and the steps people need to complete." },
-  { icon: PanelsTopLeft, title: "Interface design", body: "Turn the agreed structure into responsive screens and reusable patterns." },
-  { icon: Sparkles, title: "Validation", body: "Review prototypes and test the decisions that matter with the right people." },
-  { icon: Layers3, title: "Handoff", body: "Carry the details into implementation with clear files and shared decisions." },
+  { title: "Context", body: "Understand the product, audience, goals, and constraints that shape the work." },
+  { title: "Research", body: "Look at existing evidence and learn where people need more clarity." },
+  { title: "Experience architecture", body: "Map journeys, navigation, and the steps people need to complete." },
+  { title: "Interface design", body: "Turn the agreed structure into responsive screens and reusable patterns." },
+  { title: "Validation", body: "Review prototypes and test the decisions that matter with the right people." },
+  { title: "Handoff", body: "Carry the details into implementation with clear files and shared decisions." },
 ];
 
 export default function ProductDesignLandingPage() {
@@ -57,7 +58,7 @@ export default function ProductDesignLandingPage() {
 
     <ProductDesignCarousel />
 
-    <WorkShowcase fixedView="list" />
+    <WorkShowcase />
     <KyteApproach />
 
 
@@ -67,7 +68,7 @@ export default function ProductDesignLandingPage() {
 
     <section className="product-landing__framework product-landing__section" aria-labelledby="product-framework-title"><h2 id="product-framework-title">A framework that moves from evidence to experience.</h2><div className="product-landing__framework-card"><ProductDesignFramework /></div></section>
 
-    <section className="product-landing__process product-landing__section" aria-labelledby="product-process-title"><h2 id="product-process-title">How we work together.</h2><div className="product-landing__process-grid">{process.map(({ icon: Icon, title, body }) => <article key={title}><span className="product-landing__process-icon"><Icon size={27} strokeWidth={1.4} aria-hidden="true" /></span><h3>{title}</h3><p>{body}</p></article>)}</div></section>
+    <section className="product-landing__process product-landing__section" aria-labelledby="product-process-title"><h2 id="product-process-title">How we work together.</h2><div className="product-landing__process-grid">{process.map(({ title, body }, index) => <article key={title}><span className="product-landing__process-pattern"><DotPattern seed={`product:working-principles:${title}`} motifSlot={index} /></span><h3>{title}</h3><p>{body}</p></article>)}</div></section>
 
 
     <section className="product-landing__outcomes product-landing__section" aria-labelledby="product-outcomes-title"><h2 id="product-outcomes-title">What We Design</h2><div className="product-landing__outcome-grid">{["Onboarding and activation", "Navigation and information architecture", "Dashboards and complex workflows", "Websites and content journeys", "Design systems and interface patterns", "Responsive product experiences"].map((item, index) => <article key={item}><ProductDesignCardArt scene={(["onboarding", "navigation", "workflowHub", "contentJourney", "designPatterns", "responsiveExperience"] as const)[index]} /><h3>{item}</h3></article>)}</div></section>
