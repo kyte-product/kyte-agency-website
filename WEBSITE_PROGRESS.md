@@ -3721,3 +3721,9 @@ After each prompt, refresh the sections above and add a short entry here with th
 ### 22 October 2026: Stair transition dividers
 
 - Restored visible 1px pale dividers between the five brand-blue stair columns; the final column has no outer divider. Updated page-transition.css. CSS and whitespace reviewed. Local preview on port 3001; no push or deployment. Original transition backup unchanged. Owner: Kyte website team.
+
+### 22 October 2026: Navbar entry tone and solid stair dividers
+
+- Excluded the new data-page-transition overlay from navbar background sampling so cobalt stair columns cannot select the dark navbar on a light destination page. Kept background-aware contrast over actual page sections. Changed the column rules from translucent white to a solid pale white/blue blend (#80a4ec), retaining 1px width and an opaque blue card surface beneath. Local only, no push or deployment; original transition backup unchanged. Verification follows. Owner: Kyte website team.
+
+- Verification: reproduced dark navigation on Home after returning through the blue transition; after the fix, Branding and Home arrivals both reported light navigation. Scrolling the header over a real charcoal service card still selected dark-background contrast, and returning to the white page top restored light mode. Browser confirmed opaque rgb(128,164,236) dividers and blue column fills. Focused ESLint, TypeScript and whitespace checks passed.

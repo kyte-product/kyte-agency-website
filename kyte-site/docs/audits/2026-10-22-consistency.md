@@ -46,3 +46,5 @@ The user requested the original transition after reviewing both pixel experiment
 ## Current supplied transition
 
 The later user-supplied double-stairs component supersedes the restoration decision above. Five columns now use the shared Kyte-blue token with the supplied 800ms easing and 50ms stagger. The controller waits for cover completion before navigating and keeps the component mounted through exit. The original controller and exact CSS remain in `backups/page-transition-original` with restoration instructions. Existing Framer Motion and TypeScript support were reused; utility classes were translated to the project's CSS conventions without adding Tailwind.
+
+Follow-up: navbar sampling now excludes the supplied transition wrapper as well as the original swipe. This prevents the brand-blue curtain from selecting dark navigation on a light destination. Stair dividers use a solid pale white/blue blend rather than an alpha border; all column surfaces remain opaque.
