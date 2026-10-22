@@ -21,7 +21,7 @@ Reviewed the source import graph, shared route effects, animation cleanup, servi
 | Inactive process buttons referenced nonexistent panels | Only expose the panel relationship while its content exists. Use pointer entry instead of every mouse movement for selection. |
 | Testimonial data imported a whole homepage client component | Import the shared data module directly. |
 | Retired service renderers and a dark stylesheet were unreachable | Removed seven unused service files plus the retired dark stylesheet. Kept archived pages and editable artwork. Updated the Hairline README. |
-| Requested page transition refinement | Keep the previous weighted swipe timing. Pixelated edges grow briefly, then condense to a flat surface before arrival. Solid cobalt shades, no opacity gradient, native canvas edge rendering, reduced-motion bypass. |
+| Supplied page transition | User rejected the pixel experiment and supplied double-stairs. The five columns now use Kyte blue; the original two-layer swipe is saved in backups/page-transition-original. Audit navigation and reduced-motion fixes remain. |
 | Design-system documentation retained old dark-theme, corner and transition rules | Updated the live design-system page, route notes and AGENTS.md. |
 
 ## Verification
@@ -38,3 +38,11 @@ Cross-route navigation placed the approach target approximately 112px from the t
 - Other unreferenced exploration components remain candidates for a separate archive cleanup. An import-only scan also flags CSS imported through CSS, configuration aliases and declaration files, so it is insufficient evidence to delete those files. Historical routes and builder inputs were retained.
 - Existing prelaunch work placeholders, temporary stock photography, sample testimonial rating blocks, brochure/phone placeholders and final editorial approvals remain documented launch tasks. This audit does not validate those claims or replace them with invented content.
 - No form was sent to a real receiver. Successful lead delivery, CMS write permissions, physical-device frame pacing and throttled-network performance remain unverified. Local builds can use content fallbacks when the Sanity CDN DNS lookup fails.
+
+## Superseding transition decision
+
+The user requested the original transition after reviewing both pixel experiments. The pixel results above are historical checks of the rejected experiment. Current implementation restores the original CSS swipe from cfa5d0b, with no pixel canvas. Shared audit fixes remain.
+
+## Current supplied transition
+
+The later user-supplied double-stairs component supersedes the restoration decision above. Five columns now use the shared Kyte-blue token with the supplied 800ms easing and 50ms stagger. The controller waits for cover completion before navigating and keeps the component mounted through exit. The original controller and exact CSS remain in `backups/page-transition-original` with restoration instructions. Existing Framer Motion and TypeScript support were reused; utility classes were translated to the project's CSS conventions without adding Tailwind.
