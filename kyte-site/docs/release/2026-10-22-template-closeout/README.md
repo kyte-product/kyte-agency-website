@@ -11,3 +11,5 @@ PR #59: https://github.com/kyte-product/kyte-agency-website/pull/59. Application
 Results and remaining findings: ../../audits/2026-10-22-template-closeout.md. JSON evidence in this folder covers the route/asset crawl, 168 responsive cases, targeted layouts, navbar/loading checks and production dependencies. Original code is preserved in backups outside the runtime and build checks.
 
 The production URL is https://kyte-agency.vercel.app. The alias and immutable deployment were inspected with the authenticated Vercel CLI. Final live route checks follow the industry update.
+
+The subsequent industry and shared dot-panel production release is recorded in ../2026-10-22-industry-followup/README.md.
