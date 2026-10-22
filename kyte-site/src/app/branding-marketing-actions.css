@@ -50,8 +50,7 @@
 }
 
 .site-header.is-branding-editorial .contact-button,
-.site-header.is-branding-editorial .mobile-menu__contact .kyte-button,
-body:has(.branding-marketing-page) .split-cta__content .kyte-button {
+.site-header.is-branding-editorial .mobile-menu__contact .kyte-button {
   min-height: 0;
   gap: 0;
   padding: 9px 20px 11px;
@@ -73,17 +72,11 @@ body:has(.branding-marketing-page) .split-cta__content .kyte-button {
   background: transparent;
 }
 
-body:has(.branding-marketing-page) :is(.site-header .mobile-menu__contact .kyte-button, .split-cta__content .kyte-button) { color: #fff; background: transparent; }
+.site-header.is-branding-editorial .mobile-menu__contact .kyte-button { color: #fff; background: transparent; }
 
-body:has(.branding-marketing-page) :is(.site-header .contact-button):hover {
+.site-header.is-branding-editorial .contact-button:hover {
   color: #fff;
   background: var(--color-blue);
-  transform: translateY(-1px);
-}
-
-body:has(.branding-marketing-page) .split-cta__content .kyte-button:hover {
-  color: var(--color-blue);
-  background: #fff;
   transform: translateY(-1px);
 }
 
@@ -93,8 +86,7 @@ body:has(.branding-marketing-page) .split-cta__content .kyte-button:hover {
   transform: translateY(-1px);
 }
 
-.site-header.is-branding-editorial :is(.contact-button, .mobile-menu__contact .kyte-button) svg,
-body:has(.branding-marketing-page) :is(.split-cta__content .kyte-button) svg {
+.site-header.is-branding-editorial :is(.contact-button, .mobile-menu__contact .kyte-button) svg {
   display: none;
 }
 
@@ -104,8 +96,8 @@ body:has(.branding-marketing-page) :is(.split-cta__content .kyte-button) svg {
 }
 
 /* The landing page uses a compact editorial header and a full-screen menu. */
-html:has(.branding-marketing-page) { scroll-padding-top: 58px; }
-body:has(.branding-marketing-page) { padding-top: 58px; }
+html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-marketing-page)) { scroll-padding-top: 58px; }
+html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-marketing-page)) body { padding-top: 58px; }
 .site-header.is-branding-editorial.is-branding-editorial {
   top: 0;
   height: 58px;
