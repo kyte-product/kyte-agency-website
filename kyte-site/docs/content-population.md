@@ -32,3 +32,7 @@ Studio entry: [Kyte Content Studio](https://kyte-website-content.sanity.studio/)
 ## Known editorial work before public launch
 
 Work imagery and featured projects, service/industry hero placeholders, stock images, testimonial rating blocks, brochure/phone destinations, final role listings, source approvals and legal copy require content owners. The release audit distinguishes intentional placeholders from broken assets. No lead is sent by the audit, and contact validation alone does not verify delivery. Analytics, redirects, performance on physical devices and final public indexing need their own verified checks.
+
+### Specific cover-copy correction for the content owner
+
+The supplied Fincart product cover says “Reducing Financial Plan Creation Time by 200%.” A time reduction cannot exceed 100%. Confirm the underlying before/after measurement and rewrite the artwork with the correct percentage or speed comparison. The supplied image is preserved exactly in this release; its claim is not independently verified. The other cover metrics also need source sign-off before final launch.

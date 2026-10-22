@@ -37,7 +37,7 @@ Current evidence: `kyte-site/docs/audits/2026-10-23-content-ready.md` and its JS
 
 ## Content phase and launch prerequisites
 
-The next work is content curation within the documented templates. Homepage supplied cover claims, stock imagery, sample testimonial rating blocks, brochure/phone placeholders, approved client outcomes and final editorial/legal copy still need owners and approval. Confirm redirects, analytics and actual contact delivery before public launch. No real lead was sent during template checks. Physical-device frame pacing remains a separate check; emulated browser results do not certify every laptop or phone. Robots remain noindex until a deliberate launch decision.
+The next work is content curation within the documented templates. Homepage supplied cover claims (especially cover 6’s invalid “200% time reduction” wording), stock imagery, sample testimonial rating blocks, brochure/phone placeholders, approved client outcomes and final editorial/legal copy still need owners and approval. Confirm redirects, analytics and actual contact delivery before public launch. No real lead was sent during template checks. Physical-device frame pacing remains a separate check; emulated browser results do not certify every laptop or phone. Robots remain noindex until a deliberate launch decision.
 
 Sanity project `50pibtgs`, production dataset, is preserved. No CMS writes, form deliveries or production configuration changes are part of this release.
 
