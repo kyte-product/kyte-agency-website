@@ -1,0 +1,17 @@
+{
+  "grid": "true",
+  "metrics": [
+    "100+",
+    "50+",
+    "3M+",
+    "200M+"
+  ],
+  "frameworkDots": 4,
+  "workingDots": 6,
+  "width": 1440,
+  "list": "true",
+  "listFont": 30,
+  "frameworkSelected": "true",
+  "errors": [],
+  "pass": true
+}
