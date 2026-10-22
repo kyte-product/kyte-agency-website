@@ -93,3 +93,7 @@ Documented Website, Branding landing and Product landing systems with explicit i
 ### 23 October 2026: final cover cache and title corrections
 
 The user reported the active preview still displayed the earlier covers. Assigned distinct source-numbered image URLs to files 6–10, refreshed and visually verified the actual port-3001 tab. Changed the homepage Selected Work heading to shared brand blue as requested. These corrections are included before the pending release merge and deployment. Owner: Kyte website team.
+
+### 23 October 2026: final homepage heading direction
+
+Returned Selected Work to shared ink/black at the user’s request, superseding the brief blue title treatment. Covers remain the final files 6–10 with distinct cache-safe URLs. Continue the complete design-system/audit release and update the deployment record after live checks. Owner: Kyte website team.

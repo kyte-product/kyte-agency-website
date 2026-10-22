@@ -3,11 +3,11 @@
     "name": "Supplied covers 320",
     "pass": true,
     "pageWidth": 320,
-    "titleColor": "rgb(2, 73, 217)",
+    "titleColor": "rgb(26, 26, 22)",
     "covers": [
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=384&q=75",
         "alt": "Fincart financial planning product on a phone",
         "loaded": true,
         "ratio": 0.7500223313979455,
@@ -15,7 +15,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=384&q=75",
         "alt": "Maya launch campaign on a desktop display",
         "loaded": true,
         "ratio": 0.7500223313979455,
@@ -23,7 +23,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=384&q=75",
         "alt": "Fincart website on a tablet",
         "loaded": true,
         "ratio": 0.7500223313979455,
@@ -31,7 +31,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=384&q=75",
         "alt": "Smash Guys campaign with branded packaging",
         "loaded": true,
         "ratio": 0.7500223313979455,
@@ -39,7 +39,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=384&q=75",
         "alt": "Dr. Prashant Katkol social campaign portrait",
         "loaded": true,
         "ratio": 0.7500223313979455,
@@ -51,11 +51,11 @@
     "name": "Supplied covers 393",
     "pass": true,
     "pageWidth": 393,
-    "titleColor": "rgb(2, 73, 217)",
+    "titleColor": "rgb(26, 26, 22)",
     "covers": [
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=384&q=75",
         "alt": "Fincart financial planning product on a phone",
         "loaded": true,
         "ratio": 0.7500181831405921,
@@ -63,7 +63,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=384&q=75",
         "alt": "Maya launch campaign on a desktop display",
         "loaded": true,
         "ratio": 0.7500181831405921,
@@ -71,7 +71,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=384&q=75",
         "alt": "Fincart website on a tablet",
         "loaded": true,
         "ratio": 0.7500181831405921,
@@ -79,7 +79,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=384&q=75",
         "alt": "Smash Guys campaign with branded packaging",
         "loaded": true,
         "ratio": 0.7500181831405921,
@@ -87,7 +87,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=384&q=75",
         "alt": "Dr. Prashant Katkol social campaign portrait",
         "loaded": true,
         "ratio": 0.7500181831405921,
@@ -99,11 +99,11 @@
     "name": "Supplied covers 810",
     "pass": true,
     "pageWidth": 810,
-    "titleColor": "rgb(2, 73, 217)",
+    "titleColor": "rgb(26, 26, 22)",
     "covers": [
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=384&q=75",
         "alt": "Fincart financial planning product on a phone",
         "loaded": true,
         "ratio": 0.7500086120775776,
@@ -111,7 +111,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=384&q=75",
         "alt": "Maya launch campaign on a desktop display",
         "loaded": true,
         "ratio": 0.7500086120775776,
@@ -119,7 +119,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=384&q=75",
         "alt": "Fincart website on a tablet",
         "loaded": true,
         "ratio": 0.7500086120775776,
@@ -127,7 +127,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=384&q=75",
         "alt": "Smash Guys campaign with branded packaging",
         "loaded": true,
         "ratio": 0.7500086120775776,
@@ -135,7 +135,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=384&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=384&q=75",
         "alt": "Dr. Prashant Katkol social campaign portrait",
         "loaded": true,
         "ratio": 0.7500086120775776,
@@ -147,11 +147,11 @@
     "name": "Supplied covers 1440",
     "pass": true,
     "pageWidth": 1440,
-    "titleColor": "rgb(2, 73, 217)",
+    "titleColor": "rgb(26, 26, 22)",
     "covers": [
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=640&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F6-fincart-product.webp&w=640&q=75",
         "alt": "Fincart financial planning product on a phone",
         "loaded": true,
         "ratio": 0.75,
@@ -159,7 +159,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=640&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F7-maya-launch.webp&w=640&q=75",
         "alt": "Maya launch campaign on a desktop display",
         "loaded": true,
         "ratio": 0.75,
@@ -167,7 +167,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=640&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F8-fincart-website.webp&w=640&q=75",
         "alt": "Fincart website on a tablet",
         "loaded": true,
         "ratio": 0.75,
@@ -175,7 +175,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=640&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F9-smash-guys.webp&w=640&q=75",
         "alt": "Smash Guys campaign with branded packaging",
         "loaded": true,
         "ratio": 0.75,
@@ -183,7 +183,7 @@
       },
       {
         "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=3840&q=75",
-        "currentSrc": "http://127.0.0.1:3008/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=640&q=75",
+        "currentSrc": "http://127.0.0.1:3001/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2F10-dr-prashant-katkol.webp&w=640&q=75",
         "alt": "Dr. Prashant Katkol social campaign portrait",
         "loaded": true,
         "ratio": 0.75,
