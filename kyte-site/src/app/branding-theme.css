@@ -76,8 +76,9 @@ html[data-app-theme="branding-dark"] body {
   & .work-showcase__view-toggle button[aria-pressed="true"],
   & .site-footer__reach a { color: var(--ink); background: var(--color-surface); }
   & .service-process__figure { background: transparent; }
-  & .service-process__figure--native { --hairline-plate: #18181b; }
   & .service-process__step { border: 0; box-shadow: none; }
+  & .service-process__step.is-active { color: #fff; background: var(--color-blue); }
+  & .service-process__step.is-active .service-process__active-number { color: #fff; }
   & .home-faq__list article { color: var(--ink); background: var(--color-surface); }
   & .home-faq__list button > span { color: var(--ink); background: var(--color-surface-raised); }
   & .home-faq__list button:hover > span { color: var(--ink); background: var(--color-control-hover); }

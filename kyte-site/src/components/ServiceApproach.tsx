@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
+import { DotPattern } from "./ui/DotPattern";
 import "./ServiceApproach.css";
 
 export const auditInclusions = [
@@ -28,25 +29,8 @@ export const auditInclusions = [
 ] as const;
 
 function ApproachMark({ symbol, active }: { symbol: number; active: boolean }) {
-  const bounds: Record<number, [number, number, number, number]> = {
-    0: [756, 139, 112, 112],
-    1: [616, 0, 112, 112],
-    2: [476, 558, 112, 112],
-    3: [336, 976, 112, 112],
-  };
-  const [x, y, width, height] = bounds[symbol];
-  const filterId = `approach-mark-${symbol}-${active ? "white" : "blue"}`;
-
-  return <svg className="service-approach__mark" viewBox={`${x} ${y} ${width} ${height}`} role="presentation" aria-hidden="true">
-    <defs>
-      <filter id={filterId} colorInterpolationFilters="sRGB">
-        <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.2126 -0.7152 -0.0722 0 1" result="symbolMask" />
-        <feFlood floodColor={active ? "var(--color-white)" : "var(--color-blue)"} result="themeColor" />
-        <feComposite in="themeColor" in2="symbolMask" operator="in" />
-      </filter>
-    </defs>
-    <image href="/images/service-approach-symbols-v2.png" x="0" y="0" width="1200" height="1506" preserveAspectRatio="none" filter={`url(#${filterId})`} />
-  </svg>;
+  const shapes = ["checker", "pinwheel", "quarters", "diamond"] as const;
+  return <DotPattern shape={shapes[symbol % shapes.length]} tone={active ? "white" : "brand"} className="service-approach__mark" />;
 }
 
 export function ServiceApproach({ items = auditInclusions, heading = "A clearer view of what to improve.", intro = "A focused research and audit engagement connects evidence to action, giving your team a clear view of what users need, where they struggle, and which improvements to take forward." }: { items?: readonly { symbol: number; title: string; description: string }[]; heading?: string; intro?: string }) {

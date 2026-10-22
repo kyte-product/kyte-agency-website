@@ -25,6 +25,7 @@ export function PageTransition() {
     } else {
       document.documentElement.dataset.appTheme = "light";
     }
+    document.documentElement.dataset.cornerScope = pathname === "/branding-marketing" ? "branding" : "compact";
   }, [pathname]);
 
   const changePhase = (next: Phase) => {

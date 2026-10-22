@@ -28,7 +28,7 @@ const questions = [
   },
 ] as const;
 
-export function HomeFaq({ items = questions, heading = "A few things you may be wondering.", allowMultiple = false, description = "If your question is not here, tell us what you are working through." }: { items?: readonly { question: string; answer: string }[]; heading?: string; allowMultiple?: boolean; description?: string | null }) {
+export function HomeFaq({ items = questions, heading = "A few things you may be wondering.", allowMultiple = false, description = null }: { items?: readonly { question: string; answer: string }[]; heading?: string; allowMultiple?: boolean; description?: string | null }) {
   const [openIndexes, setOpenIndexes] = useState<number[]>([0]);
   const id = useId();
   const toggle = (index: number) => setOpenIndexes((current) => current.includes(index) ? current.filter((item) => item !== index) : allowMultiple ? [...current, index] : [index]);

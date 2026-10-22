@@ -12,6 +12,8 @@ This file guides Codex and everyone working on the upcoming Kyte website in this
 
 For new Kyte website banners or Design News artwork, read `skills/kyte-editorial-art/SKILL.md` before generating an image. It records the visual direction and crop checks from the user's 9 October references.
 
+For new custom isometric illustrations, use `.agents/skills/kyte-isometric-art/SKILL.md` and the relevant reference guide. It supports a written idea, a close visual reference in the same style, or a reference whose idea must be translated from another style. The approved UI/UX Design & Development hero is the construction example. Use its shared perspective, contours, neutral thickness, projected face layouts, and gradient treatment while choosing objects and content for the new page. Keep the skill, illustration source, generated embed, design-system notes, and progress log aligned as the pattern evolves.
+
 The IA and playbook are working plans. When a new user decision changes either, update the source file and record the decision in `WEBSITE_PROGRESS.md`. The older imported Kyte notes and any reference site are background, not permission to reuse claims, copy, designs, or old technical choices. Check current evidence before using them.
 
 ## How we will design and build
@@ -26,6 +28,12 @@ The IA and playbook are working plans. When a new user decision changes either, 
 Do not build all pages from an unapproved first concept. If a later page needs a new pattern, add it to the design system and update existing uses when needed.
 
 ## Content and copy
+
+### Shared dot fields and supporting descriptions
+
+- Use `kyte-site/src/components/ui/DotPattern.tsx` for every decorative dot field. The website-wide geometry is a 2px dot diameter on a 7px grid in CSS pixels. Fill the entire assigned area by changing the number of rows and columns. Do not scale the SVG, dot radius or spacing between cards or breakpoints. Only solid fill colors may switch during breathing; position, size and opacity stay fixed. Use gray/blue on charcoal, blue/white on cobalt, and gray/blue on white. Respect reduced motion. The Kite variant uses the approved mark silhouette.
+- Cards with copy beside a dot field use equal 50% columns. Keep all copy in the left half and the field in the right half, filling its full width and height. The Views metric is the explicit stacked exception: copy sits above a slightly shorter field, separated by a 24px gutter. The shared CTA grid is inset 24px on all four sides of its blue half. Service inclusion cards use a fixed 96px square mark at the top left, with no hover-dependent resizing; active service process cards use a brand-blue surface and white dot highlights. Maintain equal outer insets for impact cards and align a multiline description's last baseline with its metric when they share a row.
+- Supporting descriptions use the shared `--description-color`, `--description-on-dark` and `--description-on-brand` colors, 16px body type, 425 weight and 1.5 line height. Hero and editorial lead summaries use the separate 18px lead role. Document any new role in the design system before introducing another description size.
 
 - Follow the current IA exactly unless the user changes it. The two service cluster pages are `/ui-ux-design-development` and `/branding-marketing`. There is no `/services` page. The ten child service routes, work, insights, industries, careers, contact, and location pages are listed in the IA.
 - Use `Kyte_Website_SEO_Content_Playbook.md` for the brief and keyword intent of each URL. Its Ubersuggest figures are a dated research snapshot, not guaranteed current demand or rankings. Verify search data and the live results before final copy.

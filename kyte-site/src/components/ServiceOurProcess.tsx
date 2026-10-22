@@ -1,43 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { Basket, Branches, Cabinet, Dish, Drawer, Elevator, Exploded, Format, Hub, Keyboard, Lockers, Loupe, Padlock, Patch, Phone, Phosphor, Plot, Plug, Query, Rail, Rebuild, Relay, Riffle, Router, Settle, Sieve, Slow, Stack, Terminal, Terrain, Turntable, Vault } from "@lucasmarkes/hairline/react";
-import { getServiceProcessFigure } from "@/data/serviceProcessFigures";
-import { isCustomProcessFigure, ServiceProcessCustomFigure } from "./ServiceProcessCustomFigure";
+import { DotPattern } from "./ui/DotPattern";
 import "./ServiceOurProcess.css";
-
-const nativeFigures = { basket: Basket, branches: Branches, cabinet: Cabinet, dish: Dish, drawer: Drawer, elevator: Elevator, exploded: Exploded, format: Format, hub: Hub, keyboard: Keyboard, lockers: Lockers, loupe: Loupe, padlock: Padlock, patch: Patch, phone: Phone, phosphor: Phosphor, plot: Plot, plug: Plug, query: Query, rail: Rail, rebuild: Rebuild, relay: Relay, riffle: Riffle, router: Router, settle: Settle, sieve: Sieve, slow: Slow, stack: Stack, terminal: Terminal, terrain: Terrain, turntable: Turntable, vault: Vault };
 
 export { sharedSteps } from "@/data/processSteps";
 import { sharedSteps } from "@/data/processSteps";
 
-function ProcessFigure({ servicePath, stepIndex }: { servicePath: string; stepIndex: number }) {
-  const { kind, label } = getServiceProcessFigure(servicePath, stepIndex);
-  const palette = "kyte";
-  if (stepIndex === 0) return <Image className="service-process__figure service-process__figure--discover" src="/hairline/process-discover.svg" width={400} height={320} sizes="(max-width: 780px) 205px, 440px" alt="" unoptimized />;
-  if (stepIndex === 1) return <Image className="service-process__figure service-process__figure--define" src="/hairline/process-define.svg" width={400} height={320} sizes="(max-width: 780px) 205px, 440px" alt="" unoptimized />;
-  if (stepIndex === 2) return <Image className="service-process__figure service-process__figure--develop" src="/hairline/process-develop.svg" width={400} height={320} sizes="(max-width: 780px) 205px, 440px" alt="" unoptimized />;
-  if (stepIndex === 3) return <Image className="service-process__figure service-process__figure--deliver" src="/hairline/process-deliver.svg" width={400} height={320} sizes="(max-width: 780px) 205px, 440px" alt="" unoptimized />;
-  if (isCustomProcessFigure(kind)) return <ServiceProcessCustomFigure kind={kind} />;
-  if (kind !== "workstack") {
-    const Figure = nativeFigures[kind];
-    return <Figure className="service-process__figure service-process__figure--native" data-figure={kind} theme="light" play label={label} aria-hidden="true" tabIndex={-1} />;
-  }
-  return <iframe
-    className="service-process__figure"
-    data-figure={kind}
-    src={`/hairline/workstack-embed.html?theme=light&play=1&palette=${palette}`}
-    title={label}
-    aria-hidden="true"
-    tabIndex={-1}
-  />;
+function ProcessFigure({ stepIndex }: { stepIndex: number }) {
+  const shapes = ["discover", "define", "develop", "deliver"] as const;
+  return <DotPattern shape={shapes[stepIndex % shapes.length]} tone="white" className="service-process__figure service-process__figure--dots" />;
 }
 
 export function ServiceOurProcess({ servicePath, steps = sharedSteps, showFigures = true, intro = "As a digital agency working across product design, branding, content, and video, we run every project through the same four stages, so nothing gets lost between idea and launch." }: { servicePath: string; steps?: readonly { name: string; title: string; description: string }[]; showFigures?: boolean; intro?: string }) {
   const [activeStep, setActiveStep] = useState(1);
 
-  return <section className={`service-process${showFigures ? "" : " service-process--text-only"}`} aria-labelledby="service-process-title">
+  return <section className={`service-process${showFigures ? "" : " service-process--text-only"}`} aria-labelledby="service-process-title" data-service={servicePath}>
     <div className="service-process__inner">
       <div className="service-process__intro">
 
@@ -69,7 +47,7 @@ export function ServiceOurProcess({ servicePath, steps = sharedSteps, showFigure
                 <strong>{step.title}</strong>
                 <span>{step.description}</span>
               </span>
-              {showFigures && <ProcessFigure servicePath={servicePath} stepIndex={index} />}
+              {showFigures && <ProcessFigure stepIndex={index} />}
             </>}
           </button>;
         })}

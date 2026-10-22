@@ -125,7 +125,7 @@ The routes below reproduce the proposed IA. Suggested query themes need validati
 
 | Route | Distinct buyer question | Suggested query theme and proof |
 |---|---|---|
-| `/branding-marketing` | How can Kyte help a brand become clear, recognisable, and consistent across channels? | Branding and marketing agency; map five services, collaboration model, relevant work. |
+| `/branding-marketing` | How can Kyte help a brand become clear, recognisable, and consistent across channels? | Branding and marketing agency; map five services, collaboration model, and relevant work. |
 | `/branding-marketing/brand-strategy-identity` | What is the brand's position and how should it look and sound? | Brand strategy and identity; show research, positioning, visual and verbal systems, guidelines, rollout. |
 | `/branding-marketing/graphic-design` | Can Kyte make consistent assets for repeated use? | Graphic design agency; specify deliverables such as decks, campaign assets, packaging only if genuinely offered. |
 | `/branding-marketing/video-production-motion-graphics` | What video or motion format will explain or promote this offer? | Video production and motion graphics; show format, script/storyboard, production method, versions, usage rights. |
@@ -205,3 +205,7 @@ Keyword and domain metrics: connected Ubersuggest `keyword_overview`, `keyword_s
 ### 20 October 2026: Branding hero review candidate
 
 The branding cluster landing page is reset to the standard shared shell with a title-only placeholder. The immersive and V2 landing experiments are removed. The five child service briefs and pages remain unchanged. Further landing copy and layout need a fresh review.
+
+## 22 October 2026 landing-page content placement
+
+Local implementation for review: Home uses five portrait project links plus a sixth impact card in a scroll-driven rail. Keep project names and existing service categories inside the cards, with descriptive image alt text and accessible links. Reuse existing metrics without adding new outcome claims. The approach introduction belongs to the Product Design landing page, after Selected Work. General FAQs and the existing CMS-backed Design News carousel belong to Branding, after the service directory and before the closing scroll sequence. Product keeps its specialist FAQ. These section moves do not change route ownership, page metadata or service keyword assignments.

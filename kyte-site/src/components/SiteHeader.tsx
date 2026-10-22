@@ -258,7 +258,7 @@ function SiteHeaderContent({ pathname }: { pathname: string }) {
               <h2>{group.title}</h2>
               <ul className="mega-menu__list">{group.items.map(([title, href]) => <li key={href}><Link href={href}><b>{title}</b><span>{serviceDescriptions[title]}</span></Link></li>)}</ul>
             </section>)}
-            <aside className="mega-menu__aside"><div className="mega-menu__feature"><div className="mega-menu__image-placeholder" aria-hidden="true" /><span className="mega-menu__eyebrow">Featured</span><strong>How we work</strong><p>See how Kyte connects research, design and delivery around each project.</p><Link className="mega-menu__more kyte-tertiary" href="/#approach">Explore our approach <ArrowRight size={16} aria-hidden="true" /></Link></div></aside>
+            <aside className="mega-menu__aside"><div className="mega-menu__feature"><div className="mega-menu__image-placeholder" aria-hidden="true" /><span className="mega-menu__eyebrow">Featured</span><strong>How we work</strong><p>See how Kyte connects research, design and delivery around each project.</p><Link className="mega-menu__more kyte-tertiary" href="/ui-ux-design-development#approach">Explore our approach <ArrowRight size={16} aria-hidden="true" /></Link></div></aside>
             <div className="mega-menu__foot"><Link className="mega-menu__more kyte-tertiary" href="/contact">Talk about your project <ArrowRight size={16} aria-hidden="true" /></Link></div>
           </div>
           </div>

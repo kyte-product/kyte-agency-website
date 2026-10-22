@@ -1,0 +1,11 @@
+.dot-pattern { display:block;width:100%;height:100%;overflow:hidden;pointer-events:none;--dot-rest:#dce0e8;--dot-highlight:var(--color-blue); }
+.dot-pattern--white { --dot-rest:#3260d3;--dot-highlight:#fff; }
+.dot-pattern--charcoal { --dot-rest:#373a40;--dot-highlight:var(--color-blue); }
+.dot-pattern__dot { fill:var(--dot-rest); }
+.dot-pattern__dot--on { fill:var(--dot-highlight); }
+.dot-pattern__dot--a { fill:var(--dot-highlight);animation:dot-pattern-color 5s step-end infinite; }
+.dot-pattern__dot--b { animation:dot-pattern-color-inverse 5s step-end infinite; }
+.dot-pattern__delay-1 { animation-delay:-.35s; }.dot-pattern__delay-2 { animation-delay:-.7s; }.dot-pattern__delay-3 { animation-delay:-1.05s; }.dot-pattern__delay-4 { animation-delay:-1.4s; }.dot-pattern__delay-5 { animation-delay:-1.75s; }.dot-pattern__delay-6 { animation-delay:-2.1s; }.dot-pattern__delay-7 { animation-delay:-2.45s; }
+@keyframes dot-pattern-color { 0%,100% { fill:var(--dot-highlight); } 50% { fill:var(--dot-rest); } }
+@keyframes dot-pattern-color-inverse { 0%,100% { fill:var(--dot-rest); } 50% { fill:var(--dot-highlight); } }
+@media(prefers-reduced-motion:reduce){.dot-pattern__dot{animation:none}}

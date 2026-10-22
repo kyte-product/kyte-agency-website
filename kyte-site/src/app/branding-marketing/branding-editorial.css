@@ -1,0 +1,38 @@
+/* Editorial sections share the Branding page's two-font system. */
+.branding-marketing-page .client-stories__inner{width:100%;padding:100px 3vw 110px}
+.branding-marketing-page .client-stories__intro{grid-template-columns:1.5fr 1fr;gap:6vw;align-items:end}
+.branding-marketing-page .client-stories__description{max-width:460px}
+.branding-marketing-page .client-stories__cta{padding:12px 20px;border:1px solid currentColor;border-radius:50%;font-family:"Geist Mono",monospace;font-size:15px}
+.branding-marketing-page .client-stories__controls{margin-top:35px}
+.branding-marketing-page .client-stories__track{width:100%;margin:0;padding:0 0 12px;grid-auto-columns:clamp(260px,28vw,420px)}
+.branding-marketing-page .client-story__visual{height:auto;aspect-ratio:3/4;border-radius:0}
+.branding-marketing-page .client-story__action{font-family:"Geist Mono",monospace;font-size:14px}
+.branding-marketing-page .client-stories--branding{background:#f3f4f7}
+.branding-marketing-page .client-stories--branding .client-stories__inner{width:100%;max-width:1600px;padding:clamp(76px,9vw,132px) 3vw clamp(88px,10vw,144px)}
+.branding-marketing-page .client-stories__editorial-head{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:7vw;align-items:center}
+.branding-marketing-page .client-stories__editorial-head h2{margin:0;color:var(--ink);font-family:"DM Sans Variable","DM Sans",sans-serif;font-size:clamp(42px,6vw,76px);font-weight:450;line-height:.95;letter-spacing:-.065em;text-transform:uppercase;white-space:nowrap}
+.branding-marketing-page .client-stories__editorial-link{display:inline-flex;width:max-content;min-height:42px;align-items:center;justify-content:center;gap:6px;padding:8px 21px 10px;border:1px solid var(--color-blue);border-radius:50%;color:var(--color-blue);background:#fff;box-shadow:inset 0 0 0 .75px var(--color-blue);font-family:"Geist Mono",monospace;font-size:18px;font-style:normal;font-weight:400;line-height:1;text-decoration:none;transition:transform .22s ease}
+.branding-marketing-page .client-stories__editorial-link:hover{color:var(--color-blue);background:#fff;transform:translateY(-1px)}
+.branding-marketing-page .client-stories__editorial-list{position:relative;margin-top:clamp(38px,5vw,66px)}
+.branding-marketing-page .client-stories__editorial-list{position:relative;margin-top:clamp(38px,5vw,66px);padding-bottom:2px}
+.branding-marketing-page .client-stories__editorial-list::after{position:absolute;bottom:0;left:calc((100vw - 100%)/-2);width:100vw;height:2px;background:#171717;content:""}
+.branding-marketing-page .client-stories__editorial-row{position:relative;transition:border-color .22s ease}
+.branding-marketing-page .client-stories__editorial-row::before{position:absolute;top:0;left:calc((100vw - 100%)/-2);width:100vw;height:2px;background:#171717;content:"";transition:background-color .22s ease}
+.branding-marketing-page .client-stories__editorial-row[data-active="true"]::before{background:var(--color-blue)}
+.branding-marketing-page .client-stories__editorial-row[data-active="true"] + .client-stories__editorial-row::before{background:var(--color-blue)}
+.branding-marketing-page .client-stories__editorial-list[data-active-last="true"]::after{background:var(--color-blue)}
+.branding-marketing-page .client-stories__editorial-link-row{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,58%) minmax(140px,18%) minmax(160px,18%);justify-content:space-between;align-items:center;gap:0;min-height:clamp(76px,7.2vw,100px);padding:12px 0;color:inherit;text-decoration:none}
+.branding-marketing-page .client-stories__editorial-title{max-width:100%;overflow:hidden;color:var(--ink);font-family:"DM Sans Variable","DM Sans",sans-serif;font-size:clamp(18px,1.8vw,24px);font-weight:400;line-height:1.15;letter-spacing:-.035em;text-overflow:ellipsis;white-space:nowrap;transition:color .22s ease}
+.branding-marketing-page .client-stories__editorial-date,.branding-marketing-page .client-stories__editorial-category{overflow:hidden;color:var(--muted);font-family:"Geist Mono",monospace;font-size:clamp(14px,1.2vw,16px);line-height:1.4;text-overflow:ellipsis;white-space:nowrap}
+.branding-marketing-page .client-stories__editorial-category{text-align:right;color:var(--color-blue)}
+.branding-marketing-page .client-stories__editorial-row[data-active="true"] .client-stories__editorial-title{color:var(--color-blue)}
+.branding-marketing-page .client-stories__editorial-hover-rule{position:absolute;z-index:3;top:var(--pointer-line-y,0px);left:calc((100vw - 100%)/-2);width:100vw;height:2px;background:var(--color-blue);opacity:0;pointer-events:none;transition:opacity .18s ease}
+.branding-marketing-page .client-stories__editorial-list[data-active="true"] .client-stories__editorial-hover-rule{opacity:1}
+.branding-marketing-page .client-stories__editorial-preview{position:absolute;z-index:4;top:0;right:auto;left:75%;width:clamp(150px,14vw,200px);aspect-ratio:3/2;overflow:hidden;border-radius:var(--site-corner-radius,2px);background:var(--color-surface-raised);opacity:0;pointer-events:none;transform:translate3d(-50%,calc(var(--pointer-line-y,0px) - 50%),0) scale(.97);transition:opacity .24s ease,transform .36s cubic-bezier(.2,.75,.25,1)}
+.branding-marketing-page .client-stories__editorial-preview.is-visible{opacity:1;transform:translate3d(-50%,calc(var(--pointer-line-y,0px) - 50%),0) scale(1)}
+.branding-marketing-page .client-stories__editorial-preview img{object-fit:cover}
+.branding-marketing-page .client-stories__editorial-empty{margin:46px 0 0;padding:24px 0;border-block:1px solid color-mix(in srgb,var(--color-blue) 38%,transparent);color:var(--muted);font-family:"Geist Mono",monospace}
+@media(max-width:700px){.branding-marketing-page .client-stories__intro{grid-template-columns:1fr;gap:28px}.branding-marketing-page .client-stories__inner{padding:70px 24px}}
+@media(max-width:700px){.branding-marketing-page .client-stories--branding .client-stories__inner{padding:72px 24px 88px}.branding-marketing-page .client-stories__editorial-head{grid-template-columns:1fr;justify-items:start;gap:20px}.branding-marketing-page .client-stories__editorial-head h2{font-size:clamp(38px,10vw,58px)}.branding-marketing-page .client-stories__editorial-link{font-size:15px}.branding-marketing-page .client-stories__editorial-list{margin-top:42px}.branding-marketing-page .client-stories__editorial-preview{display:none}.branding-marketing-page .client-stories__editorial-link-row{grid-template-columns:minmax(0,1fr) minmax(82px,.32fr);gap:8px 12px;min-height:0;padding:17px 0}.branding-marketing-page .client-stories__editorial-title{grid-column:1/-1;max-width:100%;font-size:clamp(17px,4.7vw,22px)}.branding-marketing-page .client-stories__editorial-date,.branding-marketing-page .client-stories__editorial-category{font-size:12px}.branding-marketing-page .client-stories__editorial-category{text-align:right}}
+
+.branding-news-loading{min-height:900px;background:#fff}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { DotPattern } from "./ui/DotPattern";
 import { ChevronRight } from "lucide-react";
 import "./SplitCtaBanner.css";
 
@@ -15,7 +15,7 @@ export function SplitCtaBanner() {
           </div>
         </div>
         <div className="split-cta__art">
-          <Image className="split-cta__motion-mark" src="/kyte-agency-mark.png" alt="" width={512} height={512} unoptimized />
+          <DotPattern shape="kite" tone="white" />
         </div>
       </div>
     </div>

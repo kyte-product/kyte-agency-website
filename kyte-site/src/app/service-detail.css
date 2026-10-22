@@ -3,7 +3,7 @@
 .service-detail__hero-inner { width: var(--page-width); margin: 0 auto; padding-inline: var(--section-inset); }
 .service-detail__hero h1 { max-width: 960px; margin: 22px auto 24px; font-size: var(--heading-page); font-weight: var(--heading-weight); line-height: 1.08; letter-spacing: var(--heading-letter-spacing); text-wrap: balance; }
 .service-detail__headline-line { display: block; }
-.service-detail__headline-portrait { position: relative; display: inline-block; width: .98em; height: 1.1em; margin: 0 .07em; overflow: hidden; border-radius: 3px; vertical-align: -.23em; background: var(--color-placeholder); }
+.service-detail__headline-portrait { position: relative; display: inline-block; width: .98em; height: 1.1em; margin: 0 .07em; overflow: hidden; border-radius: var(--site-corner-radius, 3px); vertical-align: -.23em; background: var(--color-placeholder); }
 .service-detail__headline-portrait img { object-fit: cover; object-position: center 34%; }
 .service-detail__headline-accent { color: var(--color-blue); }
 .service-detail__hero-bottom { display: flex; flex-direction: column; align-items: center; gap: 22px; }

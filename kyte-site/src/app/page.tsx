@@ -1,20 +1,15 @@
-import { KyteApproach } from "@/components/KyteApproach";
 import { Hero } from "@/components/Hero";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ServicesIntro } from "@/components/ServicesIntro";
-import { ClientStories } from "@/components/ClientStories";
-import { WorkShowcase } from "@/components/WorkShowcase";
+import { HomeProjectScroll } from "@/components/HomeProjectScroll";
 import { TeamPreviewFooter } from "@/components/TeamPreviewFooter";
 import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { ClientGrid } from "@/components/ClientGrid";
 import { SplitCtaBanner } from "@/components/SplitCtaBanner";
 import { HomeTestimonials } from "@/components/HomeTestimonials";
-import { HomeFaq } from "@/components/HomeFaq";
-import { designNewsEntries } from "@/lib/editorial";
 
 export const instant = false;
 
-export default async function Home() {
-  const articles = await designNewsEntries();
-  return <><SiteHeader /><main><TextRevealMotion /><Hero /><ServicesIntro /><ClientGrid /><WorkShowcase /><KyteApproach /><ClientStories articles={articles} /><HomeTestimonials /><HomeFaq description={null} /><SplitCtaBanner /></main><TeamPreviewFooter /></>;
+export default function Home() {
+  return <><SiteHeader /><main className="home-page"><TextRevealMotion /><Hero /><ServicesIntro /><ClientGrid /><HomeProjectScroll /><HomeTestimonials /><SplitCtaBanner /></main><TeamPreviewFooter /></>;
 }

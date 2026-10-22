@@ -8,7 +8,60 @@ import type { DesignNewsArticle } from "@/lib/sanity";
 import { RevealWords } from "./RevealWords";
 import { moveCardCarousel } from "@/lib/card-carousel";
 
-export function ClientStories({ articles }: { articles: DesignNewsArticle[] }) {
+export function ClientStories({ articles, variant = "carousel" }: { articles: DesignNewsArticle[]; variant?: "carousel" | "branding" }) {
+  if (variant === "branding") return <BrandingDesignNews articles={articles} />;
+  return <ClientStoriesCarousel articles={articles} />;
+}
+
+function BrandingDesignNews({ articles }: { articles: DesignNewsArticle[] }) {
+  const stories = articles.filter((article) => article.slug && article.cover?.url).slice(0, 10);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+  const activeStory = activeIndex === null ? null : stories[activeIndex];
+  const activateRow = (row: HTMLElement, index: number) => {
+    const list = listRef.current;
+    if (list) {
+      const rowBounds = row.getBoundingClientRect();
+      const listBounds = list.getBoundingClientRect();
+      list.style.setProperty("--pointer-line-y", `${rowBounds.top - listBounds.top + rowBounds.height / 2}px`);
+    }
+    setActiveIndex(index);
+  };
+
+  return <section className="client-stories client-stories--branding" aria-labelledby="branding-news-title">
+    <div className="client-stories__inner">
+      <div className="client-stories__editorial-head">
+        <h2 id="branding-news-title" data-reveal-words><RevealWords text="Design News" /></h2>
+        <Link href="/insights" className="client-stories__editorial-link branding-nav-action">Explore all stories <ArrowRight size={16} aria-hidden="true" /></Link>
+      </div>
+
+      {stories.length > 0 ? <div className="client-stories__editorial-list" ref={listRef} data-active={activeIndex !== null} data-active-last={activeIndex === stories.length - 1} onMouseLeave={() => setActiveIndex(null)} onMouseMove={(event) => { const list = listRef.current; if (list) list.style.setProperty("--pointer-line-y", `${event.clientY - list.getBoundingClientRect().top}px`); }}>
+        {stories.map((story, index) => <article className="client-stories__editorial-row" key={story._id} data-active={activeIndex === index} onMouseEnter={(event) => activateRow(event.currentTarget, index)}>
+          <Link className="client-stories__editorial-link-row" href={`/insights/${encodeURIComponent(story.slug)}`} onFocus={(event) => { const row = event.currentTarget.closest<HTMLElement>(".client-stories__editorial-row"); if (row) activateRow(row, index); }} onBlur={(event) => { if (!event.currentTarget.closest(".client-stories__editorial-list")?.contains(event.relatedTarget as Node | null)) setActiveIndex(null); }}>
+            <span className="client-stories__editorial-title">{story.title}</span>
+            <time className="client-stories__editorial-date" dateTime={story.publishedAt || story.updatedAt || undefined} title={story.publishedAt ? "Published date" : "Last updated"}>
+              {formatEditorialDate(story.publishedAt || story.updatedAt)}
+            </time>
+            <span className="client-stories__editorial-category">{story.category?.split(",").at(-1)?.trim() || "Design News"}</span>
+          </Link>
+        </article>)}
+        <div className="client-stories__editorial-hover-rule" aria-hidden="true" />
+        <div className={`client-stories__editorial-preview${activeStory ? " is-visible" : ""}`} aria-hidden="true">
+          {activeStory && <Image key={activeStory._id} src={activeStory.cover.url!} alt="" fill unoptimized sizes="(max-width: 700px) 40vw, 18vw" />}
+        </div>
+      </div> : <p className="client-stories__editorial-empty">New stories are on the way.</p>}
+    </div>
+  </section>;
+}
+
+function formatEditorialDate(value: string | null | undefined) {
+  if (!value) return "Date pending";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "Date pending";
+  return new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).format(date);
+}
+
+function ClientStoriesCarousel({ articles }: { articles: DesignNewsArticle[] }) {
   const stories = articles.filter((article) => article.slug && article.cover?.url).slice(0, 8);
   const trackRef = useRef<HTMLDivElement>(null);
   const [canGoBack, setCanGoBack] = useState(false);

@@ -34,7 +34,7 @@ export function ExpandingPhotoStage({ label = "Digital design showcase", slides 
       const insetX = Math.max(0, (frame.clientWidth - smallSide) / 2) * (1 - eased);
       const insetY = Math.max(0, (frame.clientHeight - smallSide) / 2) * (1 - eased);
       const lift = Math.min(frame.clientWidth < 700 ? 200 : 120, insetY * .75) * (1 - eased);
-      frame.style.clipPath = `inset(${insetY - lift}px ${insetX}px ${insetY + lift}px ${insetX}px round ${8 * (1 - eased)}px)`;
+      frame.style.clipPath = `inset(${insetY - lift}px ${insetX}px ${insetY + lift}px ${insetX}px round calc(var(--site-corner-radius, 8px) * ${1 - eased}))`;
     };
 
     const schedule = () => { if (!frameId) frameId = requestAnimationFrame(render); };

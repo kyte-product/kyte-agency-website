@@ -4,7 +4,7 @@
 .about-page__hero h1 { max-width: 960px; margin: 22px auto 24px; font-size: var(--heading-page); font-weight: var(--heading-weight); line-height: 1.08; letter-spacing: var(--heading-letter-spacing); text-wrap: balance; }
 .about-page__headline-line { display: block; }
 .about-page__hero h1 .about-page__headline-accent { color: var(--color-blue); }
-.about-page__headline-portrait { position: relative; display: inline-block; width: .98em; height: 1.1em; margin: 0 .07em; overflow: hidden; border-radius: 3px; vertical-align: -.23em; background: var(--color-placeholder); }
+.about-page__headline-portrait { position: relative; display: inline-block; width: .98em; height: 1.1em; margin: 0 .07em; overflow: hidden; border-radius: var(--site-corner-radius, 3px); vertical-align: -.23em; background: var(--color-placeholder); }
 .about-page__headline-portrait img { object-fit: cover; object-position: center 34%; }
 .about-page__hero-bottom { display: flex; flex-direction: column; align-items: center; gap: 22px; }
 .about-page__hero-bottom p { max-width: 660px; margin: 0; color: var(--muted); font-size: var(--type-lead); line-height: var(--lead-line-height); text-wrap: balance; }
@@ -16,7 +16,7 @@
 .about-page__team-group { padding-top: 0; }
 .about-page__team-group + .about-page__team-group { margin-top: 62px; }
 .about-page__team-group-heading { display: block; margin-bottom: 22px; }
-.about-page__team-group-heading h3 { margin: 0; color: var(--color-blue); font-size: clamp(17px,1.65vw,20px); font-weight: 500; letter-spacing: -.015em; line-height: 1.45; }
+.about-page__team-group-heading h3 { margin: 0; color: var(--color-blue); font-size: clamp(17px,1.65vw,20px); font-weight: 450; letter-spacing: -.015em; line-height: 1.45; }
 .about-page__people { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 44px 20px; }
 .about-page__person { position: relative; display: flex; flex-direction: column; min-width: 0; }
 .about-page__portrait { position: relative; display: grid; place-items: center; width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: var(--radius-small); background: var(--color-surface-raised); transition: filter 200ms ease; }
@@ -25,7 +25,7 @@
 .about-page__portrait span { color: var(--color-blue); font-size: clamp(40px,5vw,70px); font-weight: 400; letter-spacing: -.06em; }
 .about-page__person-copy { position: relative; min-width: 0; margin-top: 36px; padding-left: 16px; }
 .about-page__person-copy::before { position: absolute; top: 2px; bottom: 2px; left: 0; width: 3px; background: var(--color-blue); content: ""; }
-.about-page__person-copy h4 { margin: 0 0 7px; font-size: 16px; font-weight: 600; line-height: 1.35; }
+.about-page__person-copy h4 { margin: 0 0 7px; font-size: 16px; font-weight: 550; line-height: 1.35; }
 .about-page__person-copy p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
 .about-page__service-extra { position: relative; display: flex; flex-direction: column; justify-content: flex-end; grid-column: span 2; min-height: 300px; padding: 26px; border: 1px solid var(--color-blue); border-radius: var(--radius-small); background: var(--color-blue); color: #fff; }
 .about-page__service-mark { position: absolute; top: 26px; right: 26px; width: 42px; height: 42px; object-fit: contain; filter: brightness(0) invert(1); }
