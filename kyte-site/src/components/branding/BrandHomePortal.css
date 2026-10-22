@@ -9,4 +9,5 @@
 .brand-home-portal__content a.kyte-button:focus-visible { outline: 2px solid #0249d9; outline-offset: 5px; }
 @media(max-width:700px) { .brand-home-portal { height: 170px; } .brand-home-portal__content p { font-size: 11px; } }
 
-html:has(.branding-marketing-page), body:has(.branding-marketing-page) { background-color: #fff; }
+html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-marketing-page)),
+html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-marketing-page)) body { background-color: #fff; }
