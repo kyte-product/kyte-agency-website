@@ -25,3 +25,11 @@ No form submissions, CMS mutations or deployment-setting changes were performed.
 ## Rollback
 
 Previous Ready production deployment: `dpl_8iXurMaDcUyvrYFRYkhvHVEwHNJU`, main commit `2e36baf5e840461a3019deb55756fbe15f9e8c15`, immutable URL https://kyte-agency-website-bp0pya4v0-kyte-product.vercel.app. Restore that deployment through Vercel if rollback is required.
+
+## CTA navigation follow-up
+
+PR #57 (https://github.com/kyte-product/kyte-agency-website/pull/57), main application commit `2da30fb44d685d24087c267df3339693f6dacb7f`, removes obsolete Branding overrides from the shared split CTA. Global Branding padding and background now use the active route marker so hidden cached page DOM cannot leak styles. The design system and AGENTS.md record this rule.
+
+Production deployment `dpl_G34JjnvCRNGrpM4poUwPfZ6Ccv3q` is Ready at https://kyte-agency.vercel.app; immutable URL https://kyte-agency-website-q4kvmcywm-kyte-product.vercel.app. Full lint, TypeScript, 43-route build and whitespace checks passed. Local and production browser regressions passed at 1089px and 393px: Home to Branding to Home, browser Back, and onward to Product Design retained the exact primary CTA styles without a reload, even with cached Branding DOM present.
+
+For a rollback limited to this follow-up, the preceding Ready deployment is `dpl_Dmhdaz9PHQfrcxMxzamjFPt763xB`, main `372c949e1839c0d1a39158f40b544ccae8a768d7`, https://kyte-agency-website-k27x0meio-kyte-product.vercel.app.
