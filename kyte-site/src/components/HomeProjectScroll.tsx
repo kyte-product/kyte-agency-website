@@ -6,11 +6,11 @@ import { ImpactCards } from "./ImpactCards";
 import "./HomeProjectScroll.css";
 
 const projectCovers = [
-  ["fincart-product", "Fincart financial planning product on a phone"],
-  ["maya-launch", "Maya launch campaign on a desktop display"],
-  ["fincart-website", "Fincart website on a tablet"],
-  ["smash-guys", "Smash Guys campaign with branded packaging"],
-  ["dr-prashant-katkol", "Dr. Prashant Katkol social campaign portrait"],
+  ["6-fincart-product", "Fincart financial planning product on a phone"],
+  ["7-maya-launch", "Maya launch campaign on a desktop display"],
+  ["8-fincart-website", "Fincart website on a tablet"],
+  ["9-smash-guys", "Smash Guys campaign with branded packaging"],
+  ["10-dr-prashant-katkol", "Dr. Prashant Katkol social campaign portrait"],
 ] as const;
 
 export function HomeProjectScroll() {

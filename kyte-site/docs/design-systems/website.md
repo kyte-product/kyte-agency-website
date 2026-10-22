@@ -31,7 +31,7 @@ Covers/backgrounds and designated hero artwork can span the viewport. Reading te
 | --- | --- | --- |
 | Header / menu | Shared links, desktop disclosure, mobile/touch menu, destination-aware contrast and focus management | `SiteHeader.tsx` |
 | Actions | Blue primary; inline tertiary arrow; clear hover and focus. Landing-only editorial oval actions stay scoped | `globals.css`, `branding-marketing-actions.css` |
-| Home project rail | Five supplied 3:4 covers and wider four-card impact panel; normal scroll drives horizontal progress, native rail for reduced motion | `HomeProjectScroll`, `ImpactCards` |
+| Home project rail | Brand-blue section title; five supplied 3:4 covers and wider four-card impact panel; normal scroll drives horizontal progress, native rail for reduced motion | `HomeProjectScroll`, `ImpactCards` |
 | Home department cards | Restored original sparse field treatment and 2px base dots | `ServicesIntro` |
 | Service outcomes | Five-item accordion with one mounted SVG; dots travel between motifs when the selection changes | `ServiceDecisionStory` |
 | Service approach | Compact inclusion accordions with visible active copy and shared controls | `ServiceApproach` |
@@ -78,3 +78,5 @@ The resting background grid uses one SVG pattern and rectangle per field, with u
 ## Homepage cover assets
 
 The five supplied 900 × 1200 PNGs from `Case Study/Covers/6.png` through `10.png` are displayed in numeric order: Fincart product, Maya launch, Fincart website, Smash Guys and Dr. Prashant Katkol. WebP derivatives live in `public/images/work/home-covers/`; `manifest.json` records source checksums. Preserve the full 3:4 artwork with contain sizing, useful alt text and lazy responsive images. Source files remain untouched. These supplied images include authored outcome text; this change does not establish independent verification of those claims.
+
+Cover derivative filenames include their source number (6–10), so replacing older artwork cannot reuse stale optimized image URLs. The homepage Selected Work heading uses `--color-blue`.

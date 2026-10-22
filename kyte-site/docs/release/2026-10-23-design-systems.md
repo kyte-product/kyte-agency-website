@@ -2,6 +2,7 @@
 
 Status: verified locally; GitHub and Vercel publication in progress. Owner: Kyte website team.
 
+- Pull request: [#64](https://github.com/kyte-product/kyte-agency-website/pull/64)
 - Branch: `codex/design-systems-content-ready`
 - GitHub: `kyte-product/kyte-agency-website`
 - Vercel: team `kyte-product`, existing project `kyte-agency-website`, root `kyte-site`

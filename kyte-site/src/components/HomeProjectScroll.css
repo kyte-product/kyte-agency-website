@@ -1,6 +1,6 @@
 .home-project-scroll{position:relative;background:#f3f4f7}
 .home-project-scroll__stage{position:sticky;top:0;display:flex;align-items:center;height:100svh;min-height:540px;overflow:clip}
-.home-project-scroll__heading{position:absolute;z-index:1;top:clamp(96px,13svh,126px);left:calc(var(--page-edge) + var(--section-inset));margin:0;color:var(--ink);font-size:var(--heading-section);font-weight:var(--heading-weight);letter-spacing:var(--heading-letter-spacing);line-height:var(--heading-line-height);white-space:nowrap}
+.home-project-scroll__heading{position:absolute;z-index:1;top:clamp(96px,13svh,126px);left:calc(var(--page-edge) + var(--section-inset));margin:0;color:var(--color-blue);font-size:var(--heading-section);font-weight:var(--heading-weight);letter-spacing:var(--heading-letter-spacing);line-height:var(--heading-line-height);white-space:nowrap}
 .home-project-scroll__track{display:flex;align-items:center;gap:24px;width:max-content;padding:136px calc(var(--page-edge) + var(--section-inset)) 24px;will-change:transform}
 .home-project-scroll__card{position:relative;box-sizing:border-box;flex:none;display:block;width:min(calc((100svh - 240px)*.75),42vw);aspect-ratio:3/4;border-radius:var(--site-corner-radius,2px);background:#d5d6d9}
 .home-project-scroll__impact{position:relative;flex:none;display:grid;width:min(1100px,calc(var(--page-width) - var(--section-inset)*2));height:calc(100svh - 240px);min-height:500px;aspect-ratio:auto;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:14px;color:var(--ink)}

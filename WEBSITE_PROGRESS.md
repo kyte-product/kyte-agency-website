@@ -89,3 +89,7 @@ Live interaction checks also passed all five selections on four industry routes 
 ## 23 October 2026: design systems, content audit and final covers
 
 Documented Website, Branding landing and Product landing systems with explicit inheritance and source ownership. Added preserved original/default brand-blue illustration comparison and generation guards. Fixed tablet process copy clipping and mapped CMS process data, optimized resting dots, archived six unused files and consolidated font declarations. Patched Next to 16.4.2. Installed the user-supplied homepage cover files 6–10, replacing the earlier selection before publication. Build, lint, TypeScript, source, palette and compatibility gates passed; whole-site and focused browser checks passed. GitHub/Vercel publication is in progress, with the previous Ready deployment recorded for rollback. Editorial approvals, real form delivery, analytics and final launch checks remain with content owners. Owner: Kyte website team.
+
+### 23 October 2026: final cover cache and title corrections
+
+The user reported the active preview still displayed the earlier covers. Assigned distinct source-numbered image URLs to files 6–10, refreshed and visually verified the actual port-3001 tab. Changed the homepage Selected Work heading to shared brand blue as requested. These corrections are included before the pending release merge and deployment. Owner: Kyte website team.
