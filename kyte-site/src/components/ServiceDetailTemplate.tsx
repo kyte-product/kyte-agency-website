@@ -46,7 +46,9 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
     </section>
     {heroArt ? <section className={`service-detail__${heroArt.name}-art`} aria-label={heroArt.label}>
       <Image src={`/hairline/service-${heroArt.name}-hero.svg?v=1`} alt="" width={960} height={560} sizes="(max-width: 780px) 100vw, 1240px" unoptimized priority />
-    </section> : <ServiceHeroPhoto label={`Illustrative photography for ${service.name}`} slides={photography.stage} />}
+    </section> : service.path.startsWith("branding-marketing/")
+      ? <div className="service-hero-photo service-hero-photo--placeholder" aria-hidden="true" />
+      : <ServiceHeroPhoto label={`Illustrative photography for ${service.name}`} slides={photography.stage} />}
     <ServiceOfferings items={service.offerings.map((item) => ({ title: item.title, description: item.body }))} serviceName={service.name} heading={service.offeringsHeading} intro={service.offeringsIntro} />
     <ServiceApproach items={inclusions} heading={service.includedHeading} intro={service.includedIntro} />
     <ServiceDecisionStory items={decisions} heading={service.outcomesHeading} intro={service.outcomesIntro} eyebrow="From scope to outcome" />

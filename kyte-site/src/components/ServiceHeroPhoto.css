@@ -1,3 +1,4 @@
 .service-hero-photo { position:relative;width:100%;height:min(100svh,860px);margin-top:32px;overflow:hidden;background:var(--color-surface-secondary); }
 .service-hero-photo img { object-fit:cover;object-position:center; }
+.service-hero-photo--placeholder { background:var(--color-placeholder); }
 @media(max-width:700px){.service-hero-photo{height:70svh;margin-top:28px}}

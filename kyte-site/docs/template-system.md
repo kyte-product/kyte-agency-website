@@ -21,7 +21,8 @@ Template implementation is being closed for a content pass. New layouts require 
 ## Shared rules
 
 - DM Sans, shared heading/body roles and Kyte blue. Standard controls and cards use 2px corners. Branding landing retains its approved editorial typography and oval actions.
-- All ten child services use the light template. Service titles have no inline photos. UI/UX hero illustrations and Branding service photographs are static full-width panels.
+- All ten child services use the light template. Service titles have no inline photos. UI/UX hero illustrations remain full-width panels. Branding & Marketing child-service hero areas use the standard gray placeholder while final imagery is pending.
+- Branding & Marketing child-service hero areas use full-width gray placeholders with the existing media height and spacing while final hero imagery is pending. Product and UI/UX hero media keep their current approved art.
 - Dots use `ui/DotPattern`: fixed 2px dots, 7px spacing, solid state colors. No opacity/size/position animation. Pause offscreen, in background tabs and for reduced motion.
 - Branding hero fills the viewport beneath its 58px header. Corner text matches Helix labels, including glyphs and underline. Design News shows three image cards with dark title text over pastel highlights. The closing horizontal text section uses Kyte blue.
 - Article and Work covers reach the viewport edges. Work breadcrumb says Work. Fact labels use sentence case and medium weight. Work section gaps are compact; Fincart branding composition motion also reaches both edges.

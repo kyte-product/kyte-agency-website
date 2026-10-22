@@ -10,7 +10,7 @@ Local review remains on port 3001. PR #59 delivered the template closeout and PR
 
 ## Template decisions
 
-- All ten child services share the light design. Service titles have no inline photos; UI/UX art and Branding photography are full-width, already expanded media.
+- All ten child services share the light design. Service titles have no inline photos; UI/UX art remains full-width and already expanded. Branding & Marketing service hero areas now use gray placeholders pending final imagery.
 - Branding landing retains the editorial design. Hero height uses its actual 58px header. Bottom corner annotations match Helix glyphs/type/underline. Design News shows three image cards, dark title text with pastel background highlights and an All stories action.
 - The closing horizontal sentence uses Kyte blue, following the latest user direction. The final pixel pocket has white backing and an outlined oval homepage action matching Brochure.
 - Work and article covers reach both viewport edges. Work naming and sentence-case fact labels are consistent; case-study gaps are tighter. Fincart branding composition motion is full width.
@@ -60,4 +60,8 @@ Sanity project `50pibtgs`, production dataset, is preserved. No CMS writes, form
 
 22 October 2026, production follow-up: PR #60 merged at 75af9736fa1c40ac77e7e99406266eb912190b42; Vercel production dpl_HVNeVpAvU48r2Fu9KwDbKzyQw2WN is Ready and owns the public alias. Live crawl passed 56 pages, 239 local assets and one H1 per content page. Client navigation Home → Branding → Home, browser Back and Product preserved the original primary CTA styles without a refresh. Release record and source-backed industry metrics are documented. No CMS writes or launch setting changes. Next: content curation, remaining launch checks and physical-device motion review.
 
+22 October 2026, Branding service hero placeholders: Replaced the Unsplash hero media on Branding & Marketing child service pages with the shared gray placeholder surface, keeping the established responsive media dimensions and spacing. Preserved UI/UX hero art. Updated the template rules. Next: build and deploy through the approved GitHub/Vercel release flow.
+
 Live interaction checks also passed all five selections on four industry routes plus representative Product and Branding service routes. The SVG stays mounted, contains dots throughout selection changes, and maintains one expanded region. All four industry pages show placeholders, four industry statistics and no Design News.
+
+22 October 2026, Branding service hero placeholders: Replaced Unsplash media on all five Branding & Marketing child-service heroes with the shared gray placeholder while preserving responsive dimensions and spacing. Product/UI/UX art remains unchanged; source photography is preserved. Updated the template contract and added audit/release notes. Focused ESLint and production build passed. Ten route/viewport checks (393px and 1440px) showed the expected placeholder color, no hero images and no overflow; UI/UX website-design art remained present. GitHub/Vercel release follows.
