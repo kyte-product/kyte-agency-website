@@ -3727,3 +3727,9 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Excluded the new data-page-transition overlay from navbar background sampling so cobalt stair columns cannot select the dark navbar on a light destination page. Kept background-aware contrast over actual page sections. Changed the column rules from translucent white to a solid pale white/blue blend (#80a4ec), retaining 1px width and an opaque blue card surface beneath. Local only, no push or deployment; original transition backup unchanged. Verification follows. Owner: Kyte website team.
 
 - Verification: reproduced dark navigation on Home after returning through the blue transition; after the fix, Branding and Home arrivals both reported light navigation. Scrolling the header over a real charcoal service card still selected dark-background contrast, and returning to the white page top restored light mode. Browser confirmed opaque rgb(128,164,236) dividers and blue column fills. Focused ESLint, TypeScript and whitespace checks passed.
+
+### 22 October 2026: Seal staircase column seams
+
+- User still saw page content through the transition on a laptop. Replaced border-based separators with opaque inset rules and extended each blue column paint 2px across its neighbor to cover fractional-pixel compositor seams. Explicitly exempted curtain surfaces from the global 2px corner rule so their edges stay square. Preserved the visible dividers, animation timing and original backup. Local only, no push or deployment. Browser verification follows. Owner: Kyte website team.
+
+- Verified at 1366px/1x, 1440px/1.25x and 1512px/2x. All five columns have 0px corner radii, opaque blue fills and a 2px paint overlap; the four inset dividers remain visible. Reviewed the 2x screenshot. Whitespace check passed.
