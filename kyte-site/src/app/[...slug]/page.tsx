@@ -90,5 +90,5 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
   const service = await loadServicePageContent(path);
   if (service) return <ServiceDetailTemplate service={service} />;
 
-  return <><SiteHeader /><main className="planned-page" data-site-theme={path === "branding-marketing" || path.startsWith("branding-marketing/") ? "branding-dark" : undefined}><Link className="planned-page__back" href="/"><ArrowLeft size={18} strokeWidth={1.7} aria-hidden="true" /> Home</Link><h1>{title}</h1><p>This page is being prepared for the new Kyte website.</p></main><SiteFooter /></>;
+  return <><SiteHeader /><main className="planned-page"><Link className="planned-page__back" href="/"><ArrowLeft size={18} strokeWidth={1.7} aria-hidden="true" /> Home</Link><h1>{title}</h1><p>This page is being prepared for the new Kyte website.</p></main><SiteFooter /></>;
 }

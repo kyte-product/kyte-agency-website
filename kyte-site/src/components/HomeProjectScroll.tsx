@@ -19,19 +19,21 @@ export function HomeProjectScroll() {
     const track = trackRef.current;
     if (!section || !stage || !track) return;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const compactHeight = window.matchMedia("(max-height: 700px)");
+    const nativeRail = () => motion.matches || compactHeight.matches;
     let frame = 0;
     let travel = 0;
     const paint = () => {
       frame = 0;
       const distance = Math.max(0, Math.min(travel, -section.getBoundingClientRect().top));
-      track.style.transform = motion.matches ? "none" : `translate3d(${-distance}px,0,0)`;
+      track.style.transform = nativeRail() ? "none" : `translate3d(${-distance}px,0,0)`;
     };
     const update = () => {
       if (!frame) frame = requestAnimationFrame(paint);
     };
     const measure = () => {
       travel = Math.max(0, track.scrollWidth - stage.clientWidth);
-      section.style.height = motion.matches ? "auto" : `${stage.offsetHeight + travel}px`;
+      section.style.height = nativeRail() ? "auto" : `${stage.offsetHeight + travel}px`;
       update();
     };
     const resize = new ResizeObserver(measure);
@@ -39,11 +41,13 @@ export function HomeProjectScroll() {
     resize.observe(track);
     window.addEventListener("scroll", update, { passive: true });
     motion.addEventListener("change", measure);
+    compactHeight.addEventListener("change", measure);
     measure();
     return () => {
       resize.disconnect();
       window.removeEventListener("scroll", update);
       motion.removeEventListener("change", measure);
+      compactHeight.removeEventListener("change", measure);
       cancelAnimationFrame(frame);
     };
   }, []);

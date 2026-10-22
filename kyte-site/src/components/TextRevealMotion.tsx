@@ -11,6 +11,7 @@ export function TextRevealMotion() {
       return;
     }
 
+    const animations = new Set<Animation>();
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
@@ -37,11 +38,10 @@ export function TextRevealMotion() {
               fill: "both",
             },
           );
+          animations.add(animation);
           animation.onfinish = () => {
-            word.style.opacity = "1";
-            word.style.transform = "translateY(0)";
-            word.style.filter = "blur(0)";
             animation.cancel();
+            animations.delete(animation);
           };
         });
       });
@@ -51,7 +51,7 @@ export function TextRevealMotion() {
       if (root instanceof HTMLElement && root.matches("[data-reveal-words]:not(.is-revealed)")) observer.observe(root);
       root.querySelectorAll<HTMLElement>("[data-reveal-words]:not(.is-revealed)").forEach((target) => observer.observe(target));
     };
-    const main = document.querySelector("main");
+    const main = Array.from(document.querySelectorAll("main")).find((element) => element.getClientRects().length > 0);
     if (!main) return;
     observeTargets(main);
     const additions = new MutationObserver((records) => {
@@ -63,6 +63,7 @@ export function TextRevealMotion() {
     return () => {
       additions.disconnect();
       observer.disconnect();
+      animations.forEach((animation) => animation.cancel());
     };
   }, [pathname]);
 

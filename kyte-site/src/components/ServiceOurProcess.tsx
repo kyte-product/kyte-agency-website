@@ -31,12 +31,12 @@ export function ServiceOurProcess({ servicePath, steps = sharedSteps, showFigure
             type="button"
             id={`service-process-tab-${index}`}
             aria-expanded={isActive}
-            aria-controls={`service-process-panel-${index}`}
+            aria-controls={isActive ? `service-process-panel-${index}` : undefined}
             aria-label={`${number} ${step.name}`}
             aria-describedby={isActive ? `service-process-panel-${index}` : undefined}
             key={step.name}
             onClick={() => setActiveStep(index)}
-            onMouseMove={() => setActiveStep(index)}
+            onMouseEnter={() => setActiveStep(index)}
             onFocus={() => setActiveStep(index)}
           >
             <span className="service-process__step-number">{number}</span>

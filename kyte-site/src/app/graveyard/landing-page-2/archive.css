@@ -3,4 +3,4 @@
   --color-cobalt: #4f65e8;
   --gradient-brand: linear-gradient(120deg,#354ac7,#4f65e8,#8194f2);
 }
-body:has(.landing-page-2-archive) { padding-top: 0; }
+html:is([data-page="/graveyard/landing-page-2"],:not([data-page]):has(.landing-page-2-archive)) body { padding-top: 0; }

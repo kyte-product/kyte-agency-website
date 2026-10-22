@@ -21,6 +21,36 @@ export function SiteSmoothScroll() {
     };
   }, []);
 
+  // Cross-route links opt out of Next's scrolling during the curtain. Restore
+  // their destination anchor after commit, including content streamed later.
+  useLayoutEffect(() => {
+    if (!window.location.hash) return;
+    let id: string;
+    try { id = decodeURIComponent(window.location.hash.slice(1)); }
+    catch { return; }
+    let frame = 0;
+    let observer: MutationObserver | undefined;
+    const align = () => {
+      const target = Array.from(document.querySelectorAll<HTMLElement>("[id]"))
+        .find((element) => element.id === id && element.getClientRects().length > 0);
+      if (!target) return false;
+      target.scrollIntoView({ behavior: "instant", block: "start" });
+      observer?.disconnect();
+      return true;
+    };
+    frame = requestAnimationFrame(() => {
+      if (align()) return;
+      observer = new MutationObserver(() => { align(); });
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+    const timeout = window.setTimeout(() => observer?.disconnect(), 10000);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.clearTimeout(timeout);
+      observer?.disconnect();
+    };
+  }, [pathname]);
+
   useLayoutEffect(() => {
     const root = document.documentElement;
     const changed = previousPath.current !== pathname;

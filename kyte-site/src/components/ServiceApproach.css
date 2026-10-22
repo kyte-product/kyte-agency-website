@@ -18,8 +18,8 @@
 .service-approach__card.is-active .service-approach__icon { border-color: rgba(255,255,255,.25); color: #fff; background: rgba(255,255,255,.08); }
 .service-approach__copy { padding: 16px 46px 0 0; animation: service-approach-enter 380ms cubic-bezier(.22,1,.36,1) both; }
 .service-approach__copy[hidden] { display: none; }
-.service-approach__copy p { max-width: 450px; margin: 0; color: var(--muted); font-size: var(--type-body); line-height: 1.55; transition: color 420ms ease; }
-.service-approach__card.is-active .service-approach__copy p { color: rgba(255,255,255,.88); }
+.service-approach__copy p { max-width: 450px; margin: 0; color: var(--muted); font-size: var(--type-body); line-height: var(--body-line-height); transition: color 420ms ease; }
+.service-approach__card.is-active .service-approach__copy p { color: var(--description-on-brand); }
 @keyframes service-approach-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 850px) {
@@ -48,4 +48,5 @@
   .service-approach__copy { animation: none; }
 }
 
-.service-detail[data-site-theme="branding-dark"] .service-approach__card:not(.is-active) .dot-pattern{--dot-rest:#373a40}
+@media(max-width:360px){.service-approach__card,.service-approach__card.is-active{height:auto;min-height:440px}}
+.service-approach__card.is-active .service-approach__toggle:focus-visible{outline-color:#fff}

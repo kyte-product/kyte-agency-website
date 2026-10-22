@@ -9,3 +9,6 @@
 @keyframes dot-pattern-color { 0%,100% { fill:var(--dot-highlight); } 50% { fill:var(--dot-rest); } }
 @keyframes dot-pattern-color-inverse { 0%,100% { fill:var(--dot-rest); } 50% { fill:var(--dot-highlight); } }
 @media(prefers-reduced-motion:reduce){.dot-pattern__dot{animation:none}}
+
+/* Keep the fixed dot grid idle offscreen and in background tabs. */
+.dot-pattern[data-animating="false"] .dot-pattern__dot { animation-play-state:paused; }

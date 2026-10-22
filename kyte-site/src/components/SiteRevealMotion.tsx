@@ -12,7 +12,7 @@ export function SiteRevealMotion() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const main = document.querySelector("main");
+    const main = Array.from(document.querySelectorAll("main")).find((element) => element.getClientRects().length > 0);
     if (!main || window.matchMedia("(prefers-reduced-motion: reduce)").matches || !('IntersectionObserver' in window) || typeof Element.prototype.animate !== "function") return;
 
     const seen = new WeakSet<Element>();

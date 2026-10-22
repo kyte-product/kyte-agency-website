@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Star } from "lucide-react";
-import { clientTestimonials } from "./HomeTestimonials";
+import { clientTestimonials } from "@/data/clientTestimonials";
 import { nearestCardCarouselIndex, scrollCardCarouselTo } from "@/lib/card-carousel";
 import "./ServiceTestimonials.css";
 

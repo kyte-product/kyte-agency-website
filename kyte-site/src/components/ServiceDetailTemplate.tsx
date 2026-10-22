@@ -35,7 +35,7 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
     { symbol: 3, title: "A usable handoff", description: "The agreed files, rationale, and next steps are organized for the people who will use the work." },
   ];
   const decisions = service.outcomes.map((item, index) => ({ ...item, ...photography.decisions[index] }));
-  return <><SiteHeader /><main className="service-detail" data-site-theme={service.path.startsWith("branding-marketing/") ? "branding-dark" : undefined}>
+  return <><SiteHeader /><main className="service-detail">
     <TextRevealMotion />
     <section className="service-detail__hero" aria-labelledby="service-detail-title">
       <div className="service-detail__hero-inner">

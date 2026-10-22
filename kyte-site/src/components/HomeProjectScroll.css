@@ -28,5 +28,12 @@
 .home-project-scroll__impact-link{align-self:flex-start;margin-top:18px}
 @media(max-width:900px){.home-project-scroll__impact{width:max(760px,calc(var(--page-width) - var(--section-inset)*2));gap:12px}.home-project-scroll__stat{--stat-pad:24px}.home-project-scroll__stat strong{font-size:clamp(40px,6vw,62px)}.home-project-scroll__stat-metric-row{gap:12px}.home-project-scroll__stat--views p{max-width:none}}
 @media(max-width:600px){.home-project-scroll__heading{top:96px;right:24px;font-size:var(--heading-section-mobile)}.home-project-scroll__card{width:min(82vw,calc((100svh - 240px)*.75))}.home-project-scroll__track{gap:16px;padding-top:128px}.home-project-scroll__impact{width:max(760px,185vw);gap:10px}.home-project-scroll__stat{--stat-pad:18px}.home-project-scroll__stat h3{font-size:15px;margin-bottom:9px}.home-project-scroll__stat strong{font-size:48px}.home-project-scroll__stat p{font-size:var(--type-body)}.home-project-scroll__impact-link{margin-top:12px}.home-project-scroll__stat--views p{max-width:none}.home-project-scroll__stat-note{font-size:11px}}
-@media(max-height:700px){.home-project-scroll__stat{--stat-pad:20px}.home-project-scroll__stat strong{font-size:46px}.home-project-scroll__stat h3{font-size:15px;margin-bottom:6px}.home-project-scroll__stat p{margin-top:8px;font-size:var(--type-body)}.home-project-scroll__impact-link{margin-top:12px;min-height:32px}.home-project-scroll__stat-note{display:none}}
+@media(max-height:700px){.home-project-scroll__stat{--stat-pad:20px}.home-project-scroll__stat strong{font-size:46px}.home-project-scroll__stat h3{font-size:15px;margin-bottom:6px}.home-project-scroll__stat p{margin-top:8px;font-size:var(--type-body)}.home-project-scroll__impact-link{margin-top:12px}.home-project-scroll__stat-note{display:none}}
 @media(prefers-reduced-motion:reduce){.home-project-scroll__stage{position:relative;height:auto;min-height:0;overflow-x:auto}.home-project-scroll__track{will-change:auto}}
+
+/* Short viewports keep the full-height cards readable in a native rail. */
+@media(max-height:700px){
+ .home-project-scroll__stage{position:relative;display:block;height:auto;min-height:0;overflow-x:auto;padding-top:64px}
+ .home-project-scroll__heading{position:static;margin:0 calc(var(--page-edge) + var(--section-inset)) 32px}
+ .home-project-scroll__track{padding-top:0;padding-bottom:40px;will-change:auto}
+}

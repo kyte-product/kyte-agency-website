@@ -94,10 +94,25 @@ export function DotPattern({ shape = "ribbon", tone = "brand", className = "" }:
       setSize(previous => previous.width === width && previous.height === height ? previous : { width, height });
     });
     observer.observe(svg);
-    return () => observer.disconnect();
+    let visible = false;
+    const updatePlayback = () => {
+      svg.dataset.animating = String(visible && !document.hidden);
+    };
+    const visibility = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      updatePlayback();
+    }, { rootMargin: "120px" });
+    visibility.observe(svg);
+    document.addEventListener("visibilitychange", updatePlayback);
+    return () => {
+      observer.disconnect();
+      visibility.disconnect();
+      document.removeEventListener("visibilitychange", updatePlayback);
+      svg.dataset.animating = "false";
+    };
   }, []);
   const dots = useMemo(() => createDots(shape, size.width, size.height), [shape, size.width, size.height]);
-  return <svg ref={ref} className={`dot-pattern dot-pattern--${shape} dot-pattern--${tone} ${className}`} aria-hidden="true" focusable="false">
+  return <svg ref={ref} className={`dot-pattern dot-pattern--${shape} dot-pattern--${tone} ${className}`} aria-hidden="true" focusable="false" data-animating="false">
     {dots.map(({ x, y, state, delay }, index) => <circle className={`dot-pattern__dot dot-pattern__dot--${state} dot-pattern__delay-${delay}`} key={index} cx={x} cy={y} r={DOT_RADIUS} />)}
   </svg>;
 }

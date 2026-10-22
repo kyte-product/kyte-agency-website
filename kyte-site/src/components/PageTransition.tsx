@@ -3,6 +3,8 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
+import { PixelCurtain } from "./ui/PixelCurtain";
+
 type Phase = "idle" | "covering" | "revealing";
 
 const COVER_DURATION = 950;
@@ -20,11 +22,7 @@ export function PageTransition() {
   const revealTimer = useRef<number | null>(null);
 
   useLayoutEffect(() => {
-    if (pathname.startsWith("/branding-marketing/")) {
-      document.documentElement.dataset.appTheme = "branding-dark";
-    } else {
-      document.documentElement.dataset.appTheme = "light";
-    }
+    document.documentElement.dataset.page = pathname;
     document.documentElement.dataset.cornerScope = pathname === "/branding-marketing" ? "branding" : "compact";
   }, [pathname]);
 
@@ -44,6 +42,15 @@ export function PageTransition() {
   }, [pathname]);
 
   useEffect(() => {
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onMotionChange = () => {
+      if (motion.matches && phaseRef.current === "revealing") {
+        if (revealTimer.current !== null) window.clearTimeout(revealTimer.current);
+        if (fallbackTimer.current !== null) window.clearTimeout(fallbackTimer.current);
+        changePhase("idle");
+      }
+    };
+    motion.addEventListener("change", onMotionChange);
     const handleLinkClick = (event: MouseEvent) => {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const target = event.target;
@@ -61,7 +68,7 @@ export function PageTransition() {
       event.stopPropagation();
 
       const href = `${destination.pathname}${destination.search}${destination.hash}`;
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      if (motion.matches) {
         router.push(href, { scroll: false });
         return;
       }
@@ -69,6 +76,7 @@ export function PageTransition() {
       changePhase("covering");
       coverTimer.current = window.setTimeout(() => {
         router.push(href, { scroll: false });
+        if (motion.matches) { changePhase("idle"); return; }
         fallbackTimer.current = window.setTimeout(() => changePhase("revealing"), NAVIGATION_TIMEOUT);
       }, COVER_DURATION + COVER_HOLD);
     };
@@ -76,6 +84,7 @@ export function PageTransition() {
     document.addEventListener("click", handleLinkClick, true);
     return () => {
       document.removeEventListener("click", handleLinkClick, true);
+      motion.removeEventListener("change", onMotionChange);
       if (coverTimer.current !== null) window.clearTimeout(coverTimer.current);
       if (fallbackTimer.current !== null) window.clearTimeout(fallbackTimer.current);
       if (revealTimer.current !== null) window.clearTimeout(revealTimer.current);
@@ -83,7 +92,7 @@ export function PageTransition() {
   }, [router]);
 
   return <div aria-hidden="true" className={`page-transition page-transition--${phase}`}>
-    <span className="page-transition__outer" onAnimationEnd={() => { if (phaseRef.current === "revealing") changePhase("idle"); }} />
-    <span className="page-transition__blue" />
+    <span className="page-transition__outer" onAnimationEnd={() => { if (phaseRef.current === "revealing") changePhase("idle"); }}><PixelCurtain phase={phase} dark /></span>
+    <span className="page-transition__blue"><PixelCurtain phase={phase} /></span>
   </div>;
 }
