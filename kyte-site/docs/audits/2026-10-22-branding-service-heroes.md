@@ -13,4 +13,6 @@ All five Branding & Marketing child service pages now show a solid gray placehol
 
 ## Release
 
-GitHub PR and production deployment details will be added after publication. No CMS writes or content data changed.
+## Publication
+
+PR #62 merged to main at `424253dda568eb667f788987d07c1c4188843776`. Vercel production `dpl_2eizvNcMJezozw6YcHjxuAwcm7aV` is Ready at https://kyte-agency.vercel.app. The immutable release is https://kyte-agency-website-qbdonhirs-kyte-product.vercel.app. Rollback is the preceding application deployment `dpl_HmTYphmR7mqztcivboXgEJMkUnyo`. The same five Branding routes plus UI/UX artwork were checked against the live alias at 393px and 1440px. No CMS writes or content data changed.
