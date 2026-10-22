@@ -280,7 +280,7 @@
 .product-landing__service-list>article>div:nth-child(2){padding:22px 12px 0}
 .product-landing__service-list>article>div:nth-child(2) strong{font-size:20px;line-height:1.25}
 .product-landing__service-list>article>small{padding:8px 12px 0;margin:0;font-size:15px;line-height:1.5}
-.product-landing .product-landing__service-list .product-landing__service-link{display:inline-flex;min-height:44px;align-items:center;align-self:flex-start;gap:8px;margin:18px 12px 0;padding:8px 0;border:0;color:var(--color-blue);font-size:16px;font-weight:450;text-decoration:none}
+.product-landing__service-list .product-landing__service-link{justify-content:flex-start;display:inline-flex;min-height:44px;align-items:center;align-self:flex-start;gap:8px;margin:18px 12px 0;padding:8px 0;border:0;color:var(--color-blue);font-size:16px;font-weight:450;text-decoration:none}
 .product-landing__service-link svg{transition:transform .2s ease}
 .product-landing__service-link:hover svg{transform:translateX(3px)}
 .product-landing__service-list>article:nth-child(n){grid-column:span 2}

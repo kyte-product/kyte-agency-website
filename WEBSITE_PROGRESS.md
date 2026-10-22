@@ -4,15 +4,15 @@ Updated 22 October 2026. Owner: Kyte website team.
 
 ## Current status
 
-The shared website template is in the final audit and release pass on `codex/site-consistency-audit`. The user authorized GitHub publication, main merge and Vercel production deployment after the checks. The application runs in `kyte-site/` using Next.js 16.4, React 19.3, TypeScript and the existing Sanity production dataset.
+The shared website template closeout is deployed, with an industry follow-up in verification on `codex/site-consistency-audit`. The user authorized GitHub publication, main merge and Vercel production deployment after the checks. The application runs in `kyte-site/` using Next.js 16.4, React 19.3, TypeScript and the existing Sanity production dataset.
 
-Local review remains on port 3001. A separate production build on port 3002 was used for checks. Release has not yet completed; the verified previous production deployment is `dpl_G34JjnvCRNGrpM4poUwPfZ6Ccv3q` at https://kyte-agency.vercel.app, application revision `2da30fb44d685d24087c267df3339693f6dacb7f`.
+Local review remains on port 3001. A separate production build on port 3002 was used for checks. PR #59 was merged and deployed Ready as `dpl_GStvAgA8gPFAe3QvXadahsGzHgra` at https://kyte-agency.vercel.app, application revision `1d98ecf781984f737bda3bb7870a499a738ca1e8`. This is the rollback target for the industry follow-up.
 
 ## Template decisions
 
 - All ten child services share the light design. Service titles have no inline photos; UI/UX art and Branding photography are full-width, already expanded media.
 - Branding landing retains the editorial design. Hero height uses its actual 58px header. Bottom corner annotations match Helix glyphs/type/underline. Design News shows three image cards, dark title text with pastel background highlights and an All stories action.
-- The closing sentence continues the gray news surface. The final pixel pocket has white backing and an outlined oval homepage action matching Brochure.
+- The closing horizontal sentence uses Kyte blue, following the latest user direction. The final pixel pocket has white backing and an outlined oval homepage action matching Brochure.
 - Work and article covers reach both viewport edges. Work naming and sentence-case fact labels are consistent; case-study gaps are tighter. Fincart branding composition motion is full width.
 - About has a larger display headline. Article sidebar CTA uses the shared dot component, one description and primary action.
 - Shared dots retain fixed 2px geometry on a 7px grid. Logo tickers are excluded from generic reveals to prevent opacity/color flashes.
@@ -48,3 +48,11 @@ Sanity project `50pibtgs`, production dataset, is preserved. No CMS writes, form
 ## Dated log
 
 22 October 2026: Applied the user's template closeout comments, completed source/import and breakpoint audits, preserved retired code in dated backups, added a short template contract and repeatable audit/release process, indexed skills/exports, and archived the accumulated historical notes. GitHub/Vercel release is in progress. Next: finish release verification, then start approved content replacement.
+
+22 October 2026, industry follow-up: Extracted shared ProductServices and ImpactCards, made the industry black/blue dot cards informative with page-specific text, restored the prior approach photo section, removed Design News and its CMS fetch, fixed service link styling outside Product landing, and added sourced sector statistics with explicit date/geography/forecast context. Added hero top spacing and gray hero placeholders on all four industry pages. Preserved the earlier industry layout in a dated backup. ESLint, TypeScript and production build passed; responsive verification and publication pending.
+
+22 October 2026, subsequent direction: Reinstated the five-item approach accordion on every industry page, replacing photography with changing dot motifs on blue, charcoal and white panels. Applied this shared panel treatment to all ten service outcome sections. Preserved the previous photo implementation under the industry-followup backup. Industry hero placeholders and added top space remain. Checks and publication continue for the combined update.
+
+22 October 2026, follow-up verification: ESLint, TypeScript, production build and diff checks passed. All four industry routes passed 320/393/810/1440px checks (16 cases); all ten services passed all five outcome selections at 393/810/1440px (150 states). Home/Product shared-component regressions passed at 393/1440px. No page overflow or clipped industry statistics. Source notes and visual evidence are documented. Next: push, merge and verify the production follow-up.
+
+22 October 2026, interaction refinement: Kept the same dot SVG mounted while switching selections, so measured dimensions and visibility observers are preserved and motifs do not briefly reset to an empty panel.

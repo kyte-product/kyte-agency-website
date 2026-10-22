@@ -5,7 +5,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { IndustryEditorialExperience } from "@/components/IndustryEditorialExperience";
 import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { industryPages } from "@/data/industryPages";
-import { designNewsEntries } from "@/lib/editorial";
 
 type IndustryParams = { slug: string };
 
@@ -26,10 +25,9 @@ export default async function IndustryDetailPage({ params }: { params: Promise<I
   const { slug } = await params;
   const industry = industryPages[slug];
   if (!industry) notFound();
-  const designNews = await designNewsEntries();
 
   return <><SiteHeader /><main className="industry-detail">
     <TextRevealMotion />
-    <IndustryEditorialExperience industry={industry} designNews={designNews} />
+    <IndustryEditorialExperience industry={industry} />
   </main><SiteFooter /></>;
 }

@@ -50,3 +50,9 @@
 .services-intro__card-more{position:static;margin-top:auto;padding-top:24px}
 .services-intro__card .services-intro__pattern{position:absolute;left:50%;right:0;top:0;bottom:0;width:50%;height:100%}
 @media(max-width:760px){.services-intro__card{min-height:380px;padding:0}.services-intro__card-link{padding:20px}.services-intro__card-heading{font-size:22px}.services-intro__card-description{font-size:var(--type-body)}}
+
+/* Informative industry cards retain the department palette without a link affordance. */
+.services-intro__card--informative { cursor:default; }
+.services-intro__card-copy { display:flex;flex-direction:column;min-width:0;padding:clamp(24px,2.8vw,36px); }
+.services-intro__card--informative .services-intro__card-heading { overflow-wrap:anywhere; }
+@media(max-width:760px){.services-intro__card-copy{padding:20px}.services-intro__card--informative{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}.services-intro__card--informative .services-intro__pattern{left:60%;width:40%}}

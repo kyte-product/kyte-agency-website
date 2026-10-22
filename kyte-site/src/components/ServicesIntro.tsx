@@ -15,25 +15,26 @@ export function ServicesIntro() {
             Request a consultation <ChevronRight size={16} aria-hidden="true" />
           </Link>
         </div>
-        <div className="services-intro__cards" data-site-reveal-ignore>
-          <div className="services-intro__card services-intro__card--interactive services-intro__card--product">
-            <Link className="services-intro__card-link" href="/ui-ux-design-development">
-              <span className="services-intro__card-heading">UI/UX Design &amp; Development</span>
-              <span className="services-intro__card-description">Digital products and websites designed around how people use them.</span>
-              <span className="services-intro__card-more">Explore Service <ChevronRight size={16} aria-hidden="true" /></span>
-            </Link>
-            <DotPattern shape="field" tone="charcoal" className="services-intro__pattern" />
-          </div>
-          <div className="services-intro__card services-intro__card--interactive services-intro__card--branding">
-            <Link className="services-intro__card-link" href="/branding-marketing">
-              <span className="services-intro__card-heading">Branding &amp; Marketing</span>
-              <span className="services-intro__card-description">A clear brand and the creative work that carries it into the world.</span>
-              <span className="services-intro__card-more">Explore Service <ChevronRight size={16} aria-hidden="true" /></span>
-            </Link>
-            <DotPattern shape="field" tone="white" className="services-intro__pattern" />
-          </div>
-        </div>
+        <DepartmentCards />
       </div>
     </section>
   );
+}
+
+type DepartmentCard = { title: string; description: string; href?: string };
+const departments: DepartmentCard[] = [
+  { title: "UI/UX Design & Development", description: "Digital products and websites designed around how people use them.", href: "/ui-ux-design-development" },
+  { title: "Branding & Marketing", description: "A clear brand and the creative work that carries it into the world.", href: "/branding-marketing" },
+];
+
+export function DepartmentCards({ cards = departments }: { cards?: DepartmentCard[] }) {
+  return <div className="services-intro__cards" data-site-reveal-ignore>
+    {cards.map((card, index) => {
+      const copy = <><span className="services-intro__card-heading">{card.title}</span><span className="services-intro__card-description">{card.description}</span></>;
+      return <article key={card.title} className={`services-intro__card services-intro__card--${index === 0 ? "product" : "branding"} ${card.href ? "services-intro__card--interactive" : "services-intro__card--informative"}`}>
+        {card.href ? <Link className="services-intro__card-link" href={card.href}>{copy}<span className="services-intro__card-more">Explore Service <ChevronRight size={16} aria-hidden="true" /></span></Link> : <div className="services-intro__card-copy">{copy}</div>}
+        <DotPattern shape="field" tone={index === 0 ? "charcoal" : "white"} className="services-intro__pattern" />
+      </article>;
+    })}
+  </div>;
 }
