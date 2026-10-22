@@ -10,12 +10,13 @@ export function FincartBrandingMotion() {
     if (!container) return;
 
     let cancelled = false;
+    const controller = new AbortController();
     let destroy: (() => void) | undefined;
 
     async function mountAnimation() {
       const [{ default: lottie }, response] = await Promise.all([
         import("lottie-web"),
-        fetch("/fincart-branding/scene.json"),
+        fetch("/fincart-branding/scene.json", { signal: controller.signal }),
       ]);
       if (!response.ok || cancelled || !container) return;
       const animationData = await response.json();
@@ -49,9 +50,19 @@ export function FincartBrandingMotion() {
       };
     }
 
-    void mountAnimation();
+    const start = () => { void mountAnimation().catch(() => {
+      if (!cancelled) container.dataset.motionState = "unavailable";
+    }); };
+    const loadObserver = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      loadObserver.disconnect();
+      start();
+    }, { rootMargin: "600px" });
+    loadObserver.observe(container);
     return () => {
       cancelled = true;
+      controller.abort();
+      loadObserver.disconnect();
       destroy?.();
     };
   }, []);

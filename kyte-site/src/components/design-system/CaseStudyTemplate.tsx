@@ -54,7 +54,7 @@ export function CaseStudyTemplate({ data }: { data: CaseStudyData }) {
     <main className="case-template">
       <header className="case-template__hero">
         <Link className="case-template__back" href="/work"><ArrowLeft size={18} strokeWidth={1.7} aria-hidden="true" /> All work</Link>
-        <p className="case-template__label">CASE STUDY / {data.client.toUpperCase()}</p>
+        <p className="case-template__label">Work / {data.client}</p>
         <div className="case-template__hero-grid">
           <div><h1>{data.title}</h1><p className="case-template__summary">{data.summary}</p></div>
           <dl className="case-template__details">{data.details.map(({ label, value }) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>

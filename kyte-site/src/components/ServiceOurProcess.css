@@ -33,7 +33,7 @@
   margin: 0;
   color: var(--muted);
   font-size: var(--type-lead);
-  line-height: 1.55;
+  line-height: var(--body-line-height);
 }
 
 .service-process__steps {
@@ -84,7 +84,7 @@
   left: 50%;
   color: var(--ink);
   font-size: clamp(21px, 2vw, 27px);
-  font-weight: 550;
+  font-weight: var(--heading-weight);
   line-height: 1;
   white-space: nowrap;
   writing-mode: vertical-rl;
@@ -127,7 +127,7 @@
 .service-process__active-copy > span {
   color: var(--muted);
   font-size: var(--type-body);
-  line-height: 1.55;
+  line-height: var(--body-line-height);
 }
 
 .service-process__figure {
@@ -144,19 +144,19 @@
   .service-process__inner { padding-block: 68px 76px; }
   .service-process__intro { margin-bottom: 34px; }
   .service-process__intro h2 { font-size: var(--heading-section-mobile); }
-  .service-process__intro > p:last-child { font-size: 17px; }
+  .service-process__intro > p:last-child { font-size: var(--type-body); }
   .service-process__steps { flex-direction: column; gap: 9px; min-height: 0; }
   .service-process__step,
   .service-process__step.is-active { flex: none; width: 100%; min-height: 72px; padding: 18px 20px; }
   .service-process__step-number { top: 20px; left: 20px; font-size: 28px; }
   .service-process__step.is-active .service-process__step-number { opacity: 1; color: var(--color-muted-soft); }
-  .service-process__step-name { top: 27px; right: 20px; bottom: auto; left: auto; font-size: 19px; font-weight: 550; writing-mode: horizontal-tb; transform: none; }
+  .service-process__step-name { top: 27px; right: 20px; bottom: auto; left: auto; font-size: 19px; font-weight: var(--heading-weight); writing-mode: horizontal-tb; transform: none; }
   .service-process__step.is-active .service-process__step-name { opacity: 0; }
   .service-process__active-number { top: 20px; right: 20px; font-size: 28px; }
   .service-process__step.is-active { min-height: 400px; }
   .service-process__active-copy { right: 22px; bottom: 22px; left: 22px; gap: 10px; width: auto; }
   .service-process__active-copy strong { max-width: 440px; font-size: 22px; }
-  .service-process__active-copy > span { max-width: 560px; font-size: 15px; }
+  .service-process__active-copy > span { max-width: 560px; font-size: var(--type-body); }
   .service-process__figure { right: 6%; bottom: 168px; width: min(48%, 260px); height: min(38%, 180px); }
 }
 
@@ -183,3 +183,13 @@
 .service-process .service-process__step.is-active{border-color:var(--color-blue);background:var(--color-blue);color:#fff;box-shadow:none}
 .service-process .service-process__step.is-active :is(.service-process__active-number,.service-process__active-copy strong,.service-process__step-number){color:#fff}
 .service-process .service-process__step.is-active .service-process__active-copy > span{color:var(--description-on-brand)}
+
+/* Content determines mobile card height, so long process copy cannot meet the artwork. */
+@media(max-width:780px){
+ .service-process__step.is-active{display:grid;grid-template-rows:28px 130px auto;gap:24px;padding:22px;align-content:start}
+ .service-process__step.is-active .service-process__step-number{opacity:0}
+ .service-process .service-process__figure--dots{position:static;grid-row:2;width:100%;height:130px}
+ .service-process__active-copy{position:static;grid-row:3;width:auto}
+ .service-process--text-only .service-process__step.is-active{grid-template-rows:28px auto}
+ .service-process--text-only .service-process__active-copy{grid-row:2}
+}

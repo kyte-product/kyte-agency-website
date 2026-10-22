@@ -1,36 +1,7 @@
 import Image from "next/image";
 import { clientLogoAsset } from "@/data/clientLogoAssets";
 
-export const clientBrands = [
-  ["JioHotstar", "jio-hotstar"],
-  ["District by Zomato", "district"],
-  ["Daily Objects", "daily-objects"],
-  ["ITC Infotech", "itc-infotech"],
-  ["Decathlon", "decathlon"],
-  ["Wispr Flow", "wispr-flow"],
-  ["Lovable", "lovable"],
-  ["Emergent", "emergent"],
-  ["Gully Labs", "gully-labs"],
-  ["Comet", "comet"],
-  ["Fincart", "fincart"],
-  ["BTG", "btg"],
-  ["Agilitas", "agilitas"],
-  ["Banza", "banza"],
-  ["MAD", "mad"],
-  ["Smash Guys", "smash-guys"],
-  ["Red Rhino", "red-rhino"],
-  ["Hot Ice", "hot-ice"],
-  ["Kiara", "kiara"],
-  ["AMAIVI", "amaivi"],
-  ["Revenue Grid", "revenue-grid"],
-  ["Papa Johns", "papa-johns"],
-  ["Crepdog Crew", "crepdog-crew"],
-  ["Contractzy", "contractzy"],
-] as const;
-
-const compactMarks = new Set([
-  "itc-infotech", "btg", "smash-guys", "red-rhino", "hot-ice", "kiara", "papa-johns", "crepdog-crew",
-]);
+import { clientBrands, compactMarks } from "@/data/clientBrands";
 
 export function ClientLogos({ title = "Brands we have worked with", visibleTitle = false }: { title?: string; visibleTitle?: boolean } = {}) {
   return (

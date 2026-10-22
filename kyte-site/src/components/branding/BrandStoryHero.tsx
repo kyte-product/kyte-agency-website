@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
+import { EditorialGlyph } from "./EditorialGlyph";
 import "./BrandStoryHero.css";
 
 function Picture({ name, className = "", width, height, index }: { name: string; className?: string; width: number; height: number; index: number }) {
@@ -19,6 +20,10 @@ export function BrandStoryHero() {
         <span className="brand-story__line brand-story__line--three" aria-hidden="true"><Word index={6}>WE</Word><Picture index={7} name="yellow-symbol" className="brand-story__picture--symbol" width={1080} height={1080} /><Word index={8}>MAKE YOURS</Word></span>
         <span className="brand-story__line brand-story__line--four" aria-hidden="true"><Picture index={9} name="supplied:colour-fan-hero" className="brand-story__picture--flower" width={1080} height={1434} /><Word index={10}>UNFORGETTABLE.</Word></span>
       </h1>
+    </div>
+    <div className="brand-story__corner-notes" aria-hidden="true">
+      <p><EditorialGlyph name="seal" /> Independent branding studio<br />Bengaluru, India <EditorialGlyph name="flower" /></p>
+      <p>Strategy <EditorialGlyph name="arrows" /> identity<br />Digital <EditorialGlyph name="squareQ" /> culture <EditorialGlyph name="brain" /></p>
     </div>
   </section>;
 }

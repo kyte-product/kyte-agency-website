@@ -1,0 +1,213 @@
+[
+  {
+    "width": 393,
+    "route": "branding",
+    "heroTop": 58,
+    "heroBottom": 827,
+    "viewport": 827,
+    "notesFont": "12px",
+    "helixFont": "12px",
+    "newsCards": 3,
+    "titleStyles": [
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(201, 226, 255)"
+      },
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(200, 240, 216)"
+      },
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(255, 201, 193)"
+      }
+    ],
+    "headerDark": false,
+    "headerBlur": "blur(12px)"
+  },
+  {
+    "width": 393,
+    "portal": {
+      "width": 393,
+      "button": "50%",
+      "font": "\"Geist Mono\", monospace",
+      "bg": "rgb(255, 255, 255)",
+      "closingBg": "rgb(243, 244, 247)"
+    }
+  },
+  {
+    "width": 810,
+    "route": "branding",
+    "heroTop": 58,
+    "heroBottom": 827,
+    "viewport": 827,
+    "notesFont": "16px",
+    "helixFont": "16px",
+    "newsCards": 3,
+    "titleStyles": [
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(201, 226, 255)"
+      },
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(200, 240, 216)"
+      },
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(255, 201, 193)"
+      }
+    ],
+    "headerDark": false,
+    "headerBlur": "blur(12px)"
+  },
+  {
+    "width": 810,
+    "portal": {
+      "width": 810,
+      "button": "50%",
+      "font": "\"Geist Mono\", monospace",
+      "bg": "rgb(255, 255, 255)",
+      "closingBg": "rgb(243, 244, 247)"
+    }
+  },
+  {
+    "width": 1089,
+    "route": "branding",
+    "heroTop": 58,
+    "heroBottom": 827,
+    "viewport": 827,
+    "notesFont": "16px",
+    "helixFont": "16px",
+    "newsCards": 3,
+    "titleStyles": [
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(201, 226, 255)"
+      },
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(200, 240, 216)"
+      },
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(255, 201, 193)"
+      }
+    ],
+    "headerDark": false,
+    "headerBlur": "blur(12px)"
+  },
+  {
+    "width": 1089,
+    "portal": {
+      "width": 1089,
+      "button": "50%",
+      "font": "\"Geist Mono\", monospace",
+      "bg": "rgb(255, 255, 255)",
+      "closingBg": "rgb(243, 244, 247)"
+    }
+  },
+  {
+    "width": 1440,
+    "route": "branding",
+    "heroTop": 58,
+    "heroBottom": 827,
+    "viewport": 827,
+    "notesFont": "18px",
+    "helixFont": "18px",
+    "newsCards": 3,
+    "titleStyles": [
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(201, 226, 255)"
+      },
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(200, 240, 216)"
+      },
+      {
+        "color": "rgb(26, 26, 22)",
+        "background": "rgb(255, 201, 193)"
+      }
+    ],
+    "headerDark": false,
+    "headerBlur": "blur(12px)"
+  },
+  {
+    "width": 1440,
+    "portal": {
+      "width": 1440,
+      "button": "50%",
+      "font": "\"Geist Mono\", monospace",
+      "bg": "rgb(255, 255, 255)",
+      "closingBg": "rgb(243, 244, 247)"
+    }
+  },
+  {
+    "route": "/work/fincart-website-branding",
+    "details": {
+      "left": 0,
+      "width": 1089,
+      "viewport": 1089,
+      "headline": "54.45px",
+      "portraits": 0,
+      "clip": "none",
+      "lottie": 1089
+    }
+  },
+  {
+    "route": "/work/collectbee",
+    "details": {
+      "left": 0,
+      "width": 1089,
+      "viewport": 1089,
+      "headline": "57.717px",
+      "portraits": 0,
+      "clip": "none"
+    }
+  },
+  {
+    "route": "/insights/how-dior-redefined-luxury-in-india-by-embracing-its-visual-language",
+    "details": {
+      "left": 0,
+      "width": 1089,
+      "viewport": 1089,
+      "headline": "47.916px",
+      "portraits": 0,
+      "clip": "none"
+    }
+  },
+  {
+    "route": "/ui-ux-design-development/ux-research-design-audit",
+    "details": {
+      "left": 0,
+      "width": 1089,
+      "viewport": 1089,
+      "headline": "57.717px",
+      "portraits": 0,
+      "clip": "none"
+    }
+  },
+  {
+    "route": "/branding-marketing/graphic-design",
+    "details": {
+      "left": 0,
+      "width": 1089,
+      "viewport": 1089,
+      "headline": "57.717px",
+      "portraits": 0,
+      "clip": "none"
+    }
+  },
+  {
+    "route": "/about",
+    "details": {
+      "left": 0,
+      "width": 1089,
+      "viewport": 1089,
+      "headline": "74.052px",
+      "portraits": 0,
+      "clip": "none"
+    }
+  }
+]

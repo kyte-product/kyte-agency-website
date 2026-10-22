@@ -1,0 +1,585 @@
+[
+  {
+    "route": "/",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/about",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/branding-marketing",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.94)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/branding-marketing/brand-strategy-identity",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/branding-marketing/graphic-design",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/branding-marketing/seo-ai-search-optimisation",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/branding-marketing/social-media-marketing",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/branding-marketing/video-production-motion-graphics",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/careers",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/contact",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/design-system",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/industries",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/industries/d2c-ecommerce",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/industries/fintech",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/industries/hospitality-food-beverage",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/industries/saas-startups",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights/design-news",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights/how-dior-redefined-luxury-in-india-by-embracing-its-visual-language",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights/sole-identity-how-sneaker-culture-cracked-the-code-on-branding-before-brands-did",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights/the-menu-is-the-message",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights/the-wrap-is-the-campaign-what-car-camouflage-teaches-us-about-building-desire",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights/what-3-years-of-studying-marketing-really-taught-me-about-people",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights/what-your-playlist-says-about-you-(and-why-brands-should-be-listening)",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights/when-advertising-was-unhinged-why-early-2000s-tech-marketing-still-hits-different",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/insights/why-sensory-branding-is-the-next-big-thing-in-2026",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/privacy-policy",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/terms",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/ui-ux-design-development",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/ui-ux-design-development/ecommerce-shopify-websites",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/ui-ux-design-development/mobile-app-design",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/ui-ux-design-development/saas-web-app-design",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/ui-ux-design-development/ux-research-design-audit",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/ui-ux-design-development/website-design-development",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/accountify-website",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/arka-inventory-website",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/banza-social-content-production",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/collectbee-website",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/doodle-dept.-website",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/fincart",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/fincart-website-branding",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/make-a-difference-social-media",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/maya-explainer-video",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/mirai-brand-identity",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/msr-assets",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/ogale-machines-design-development",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/revenue-grid-explainer-videos",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/sapani-website",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/smash-guys",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/spicy-tango",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/spicybayer-restaurant-website",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/sproutova-brand-identity",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/staunch-fit-organic-growth",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/strength-socials",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/work/wynter-s-dreams-website-and-app",
+    "headerDark": false,
+    "blur": "blur(12px)",
+    "surface": "rgba(255, 255, 255, 0.13)",
+    "menuOpen": false,
+    "overflow": false
+  },
+  {
+    "route": "/",
+    "width": 320,
+    "menu": {
+      "width": 320,
+      "viewport": 320,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/branding-marketing",
+    "width": 320,
+    "menu": {
+      "width": 320,
+      "viewport": 320,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/about",
+    "width": 320,
+    "menu": {
+      "width": 320,
+      "viewport": 320,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/",
+    "width": 393,
+    "menu": {
+      "width": 393,
+      "viewport": 393,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/branding-marketing",
+    "width": 393,
+    "menu": {
+      "width": 393,
+      "viewport": 393,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/about",
+    "width": 393,
+    "menu": {
+      "width": 393,
+      "viewport": 393,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/",
+    "width": 810,
+    "menu": {
+      "width": 810,
+      "viewport": 810,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/branding-marketing",
+    "width": 810,
+    "menu": {
+      "width": 810,
+      "viewport": 810,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/about",
+    "width": 810,
+    "menu": {
+      "width": 810,
+      "viewport": 810,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/",
+    "width": 1089,
+    "menu": {
+      "width": 1089,
+      "viewport": 1089,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/branding-marketing",
+    "width": 1089,
+    "menu": {
+      "width": 1089,
+      "viewport": 1089,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/about",
+    "width": 1089,
+    "menu": {
+      "width": 1089,
+      "viewport": 1089,
+      "menu": true,
+      "controls": true
+    }
+  },
+  {
+    "route": "/",
+    "throttledMsToHeading": 832,
+    "heading": "We Design, Build & Market Exceptional Digital Experiences."
+  },
+  {
+    "route": "/branding-marketing",
+    "throttledMsToHeading": 839,
+    "heading": "EVERYBRANDHAS ASTORY.WEMAKE YOURSUNFORGETTABLE."
+  },
+  {
+    "route": "/ui-ux-design-development/ux-research-design-audit",
+    "throttledMsToHeading": 840,
+    "heading": "Find the frictionKnow what to improve."
+  }
+]

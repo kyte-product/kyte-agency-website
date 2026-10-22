@@ -66,7 +66,7 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
       <section className="service-detail__hero" aria-labelledby="ux-audit-title">
         <div className="service-detail__hero-inner">
 
-          <h1 id="ux-audit-title"><span className="service-detail__headline-line">{inline?.lineOneLead || "Find the"} <span className="service-detail__headline-portrait"><Image src={photography.stage[0].image} alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span> {inline?.lineOneFocus || "friction"}</span><span className="service-detail__headline-line">{inline?.lineTwoLead || "Know what to"} <span className="service-detail__headline-portrait"><Image src={photography.stage[1].image} alt="" fill sizes="(max-width: 580px) 44px, 96px" unoptimized /></span> <span className="service-detail__headline-accent">{inline?.lineTwoFocus || "improve."}</span></span></h1>
+          <h1 id="ux-audit-title"><span className="service-detail__headline-line">{inline?.lineOneLead || "Find the"} {inline?.lineOneFocus || "friction"}</span><span className="service-detail__headline-line">{inline?.lineTwoLead || "Know what to"} <span className="service-detail__headline-accent">{inline?.lineTwoFocus || "improve."}</span></span></h1>
           <div className="service-detail__hero-bottom">
             <p>{service?.opening || "We look at how people use your product, where friction appears, and which changes can make the experience clearer."}</p>
             <Link className="kyte-button" href="/contact">Talk through an audit <ArrowRight size={18} aria-hidden="true" /></Link>
@@ -90,5 +90,5 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
   const service = await loadServicePageContent(path);
   if (service) return <ServiceDetailTemplate service={service} />;
 
-  return <><SiteHeader /><main className="planned-page" data-site-theme={path === "branding-marketing" || path.startsWith("branding-marketing/") ? "branding-dark" : undefined}><Link className="planned-page__back" href="/"><ArrowLeft size={18} strokeWidth={1.7} aria-hidden="true" /> Home</Link><h1>{title}</h1><p>This page is being prepared for the new Kyte website.</p></main><SiteFooter /></>;
+  return <><SiteHeader /><main className="planned-page"><Link className="planned-page__back" href="/"><ArrowLeft size={18} strokeWidth={1.7} aria-hidden="true" /> Home</Link><h1>{title}</h1><p>This page is being prepared for the new Kyte website.</p></main><SiteFooter /></>;
 }

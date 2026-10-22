@@ -1,4 +1,4 @@
-body:has(.careers-page) { background: var(--color-surface-secondary); }
+html:is([data-page="/careers"],:not([data-page]):has(.careers-page)) body { background: var(--color-surface-secondary); }
 
 .careers-page { color: var(--color-deep); background: var(--color-surface-secondary); }
 .careers-page__stage { background: var(--color-surface-secondary); }

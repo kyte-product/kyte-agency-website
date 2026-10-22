@@ -4,7 +4,6 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { FlightKite } from "./branding/FlightKite";
 import { ServicePixelImage } from "./branding/ServicePixelImage";
-import { BrandPixelTransition } from "./branding/BrandPixelTransition";
 import { BrandingFooter } from "./branding/BrandingFooter";
 import { BrandHomePortal } from "./branding/BrandHomePortal";
 import "./ServiceEditorialClose.css";
@@ -121,7 +120,6 @@ export function ServiceFlightCta() {
     return () => { cancelAnimationFrame(frame); window.removeEventListener("scroll", request); window.removeEventListener("resize", resize); reduced.removeEventListener("change", request); };
   }, []);
   return <><div ref={closingRef} className="brand-closing" data-site-reveal-ignore>
-    <BrandPixelTransition reverse />
     <section ref={sectionRef} className="service-flight" aria-labelledby="service-flight-title">
       <h2 id="service-flight-title" className="service-flight__sr-only">{flightPhrase}</h2>
       <div className="service-flight__sticky"><div className="service-flight__track" aria-hidden="true">{Array.from(flightPhrase).map((letter, i) => <span key={i}>{letter === " " ? "\u00a0" : letter}</span>)}</div></div>

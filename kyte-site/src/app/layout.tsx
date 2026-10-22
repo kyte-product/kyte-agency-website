@@ -7,7 +7,6 @@ import { CookieSettings } from "@/components/CookieSettings";
 import { SiteSmoothScroll } from "@/components/SiteSmoothScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./globals.css";
-import "./branding-theme.css";
 
 export const metadata: Metadata = {
   title: "Kyte | Product, website and brand design",

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
-import { ExpandingPhotoStage } from "./ExpandingPhotoStage";
+import { ServiceHeroPhoto } from "./ServiceHeroPhoto";
 import { ServiceOfferings } from "./ServiceOfferings";
 import { ServiceApproach } from "./ServiceApproach";
 import { ServiceDecisionStory } from "./ServiceDecisionStory";
@@ -35,7 +35,7 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
     { symbol: 3, title: "A usable handoff", description: "The agreed files, rationale, and next steps are organized for the people who will use the work." },
   ];
   const decisions = service.outcomes.map((item, index) => ({ ...item, ...photography.decisions[index] }));
-  return <><SiteHeader /><main className="service-detail" data-site-theme={service.path.startsWith("branding-marketing/") ? "branding-dark" : undefined}>
+  return <><SiteHeader /><main className="service-detail">
     <TextRevealMotion />
     <section className="service-detail__hero" aria-labelledby="service-detail-title">
       <div className="service-detail__hero-inner">
@@ -46,7 +46,7 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
     </section>
     {heroArt ? <section className={`service-detail__${heroArt.name}-art`} aria-label={heroArt.label}>
       <Image src={`/hairline/service-${heroArt.name}-hero.svg?v=1`} alt="" width={960} height={560} sizes="(max-width: 780px) 100vw, 1240px" unoptimized priority />
-    </section> : <ExpandingPhotoStage label={`Illustrative photography for ${service.name}`} slides={photography.stage} />}
+    </section> : <ServiceHeroPhoto label={`Illustrative photography for ${service.name}`} slides={photography.stage} />}
     <ServiceOfferings items={service.offerings.map((item) => ({ title: item.title, description: item.body }))} serviceName={service.name} heading={service.offeringsHeading} intro={service.offeringsIntro} />
     <ServiceApproach items={inclusions} heading={service.includedHeading} intro={service.includedIntro} />
     <ServiceDecisionStory items={decisions} heading={service.outcomesHeading} intro={service.outcomesIntro} eyebrow="From scope to outcome" />

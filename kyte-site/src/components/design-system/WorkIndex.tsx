@@ -49,7 +49,7 @@ export function WorkIndex({ projects }: { projects: WorkProject[] }) {
     <div className="work-showcase__list work-showcase__list--grid work-index__projects">{visibleProjects.map((project) => {
       const href = `/work/${encodeURIComponent(project.slug)}`;
       const name = project.client || project.title;
-      const detail = project.cardService || project.role || project.projectType || "Case study";
+      const detail = project.cardService || project.role || project.projectType || "Work";
       const period = project.period || "Date pending";
       return <article className="work-project" key={project._id}>
         <Link className="work-project__visual" href={href} aria-label={`Explore ${name} project`} data-nav-theme="dark">

@@ -3,8 +3,6 @@
 .service-detail__hero-inner { width: var(--page-width); margin: 0 auto; padding-inline: var(--section-inset); }
 .service-detail__hero h1 { max-width: 960px; margin: 22px auto 24px; font-size: var(--heading-page); font-weight: var(--heading-weight); line-height: 1.08; letter-spacing: var(--heading-letter-spacing); text-wrap: balance; }
 .service-detail__headline-line { display: block; }
-.service-detail__headline-portrait { position: relative; display: inline-block; width: .98em; height: 1.1em; margin: 0 .07em; overflow: hidden; border-radius: var(--site-corner-radius, 3px); vertical-align: -.23em; background: var(--color-placeholder); }
-.service-detail__headline-portrait img { object-fit: cover; object-position: center 34%; }
 .service-detail__headline-accent { color: var(--color-blue); }
 .service-detail__hero-bottom { display: flex; flex-direction: column; align-items: center; gap: 22px; }
 .service-detail__hero-bottom p { max-width: 660px; margin: 0; color: var(--muted); font-size: var(--type-lead); line-height: var(--lead-line-height); text-wrap: balance; }
@@ -12,12 +10,11 @@
 @media (max-width: 580px) {
   .service-detail__hero { padding-block: 60px 10px; }
   .service-detail__hero h1 { margin-bottom: 20px; font-size: var(--heading-page-mobile); }
-  .service-detail__headline-portrait { width: .86em; }
   .service-detail__hero-bottom { gap: 20px; }
 }
 
 /* Shared contain frame for the five service hero illustrations. */
-:is(.service-detail__research-art,.service-detail__website-art,.service-detail__mobile-art,.service-detail__saas-art,.service-detail__commerce-art) { position: relative; z-index: 81; width: var(--page-width); margin: 32px auto 0; padding: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-medium); background: #f8f9f9; }
+:is(.service-detail__research-art,.service-detail__website-art,.service-detail__mobile-art,.service-detail__saas-art,.service-detail__commerce-art) { position: relative; width: 100%; margin: 32px 0 0; padding: 0; overflow: hidden; border: 0; border-radius: 0; background: #f8f9f9; }
 :is(.service-detail__research-art,.service-detail__website-art,.service-detail__mobile-art,.service-detail__saas-art,.service-detail__commerce-art) img { display: block; width: 100%; height: auto; object-fit: contain; }
 @media (max-width: 580px) {
   :is(.service-detail__research-art,.service-detail__website-art,.service-detail__mobile-art,.service-detail__saas-art,.service-detail__commerce-art) { margin-top: 28px; }

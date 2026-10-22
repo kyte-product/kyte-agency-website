@@ -12,7 +12,7 @@ export function SiteRevealMotion() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const main = document.querySelector("main");
+    const main = Array.from(document.querySelectorAll("main")).find((element) => element.getClientRects().length > 0);
     if (!main || window.matchMedia("(prefers-reduced-motion: reduce)").matches || !('IntersectionObserver' in window) || typeof Element.prototype.animate !== "function") return;
 
     const seen = new WeakSet<Element>();
@@ -39,7 +39,7 @@ export function SiteRevealMotion() {
     const register = (root: ParentNode) => {
       const targets = root instanceof HTMLElement && root.matches(selector) ? [root, ...root.querySelectorAll<HTMLElement>(selector)] : root.querySelectorAll<HTMLElement>(selector);
       for (const target of targets) {
-        if (seen.has(target) || target.closest(customMotion) || target.closest(".about-glance__tool-window, .about-glance__logos, .client-logos, .client-grid")) continue;
+        if (seen.has(target) || target.closest(customMotion) || target.closest(".about-glance__tool-window, .about-glance__logos, .client-logos, .client-grid, .clients__ticker, .client-brand-ticker__window")) continue;
         if (target.matches("li") && target.querySelector("img, video, h1, h2, h3, h4, h5, h6, p, blockquote")) continue;
         if (target.matches("a") && (target.closest(textParent) || target.querySelector("img, video, h1, h2, h3, h4, h5, h6, p"))) continue;
         if (target.matches("img, video") && target.closest(".careers-page__brands-track")) continue;
