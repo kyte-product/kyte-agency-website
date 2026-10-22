@@ -1,6 +1,6 @@
 # Design systems and content preparation audit
 
-23 October 2026. Owner: Kyte website team. Source branch: `codex/design-systems-content-ready`. Publication was explicitly requested by the user; the release record documents its eventual verified state.
+23 October 2026. Owner: Kyte website team. Source branch: `codex/design-systems-content-ready`. Publication was explicitly requested by the user; PR #64 is merged and the application is verified Ready in production. The release record contains exact deployment and rollback evidence.
 
 ## Delivered
 
@@ -36,8 +36,12 @@ Local Chrome laboratory samples include 12 templates and reduced motion. The fin
 
 ## Remaining content and integration work
 
-The templates and content guide are ready for population. This release does not certify every editorial claim as approved. Supplied covers contain authored outcome text; the audit does not independently prove those figures. Service/industry hero placeholders, stock imagery, testimonials/rating blocks, careers listings, brochure/phone destinations, legal copy and final client proofs remain editorial responsibilities. No CMS documents were rewritten or deleted. No actual lead was submitted. Form delivery, analytics, redirects and public indexing require their own verified launch checks.
+The templates and content guide are ready for population. This release does not certify every editorial claim as approved. Supplied covers contain authored outcome text; the audit does not independently prove those figures. Specifically, cover 6 says time is reduced by 200%, which is not a valid reduction percentage. The content owner must confirm the underlying before/after values and correct the artwork’s wording before final launch; the supplied artwork is preserved as requested. Service/industry hero placeholders, stock imagery, testimonials/rating blocks, careers listings, brochure/phone destinations, legal copy and final client proofs remain editorial responsibilities. No CMS documents were rewritten or deleted. No actual lead was submitted. Form delivery, analytics, redirects and public indexing require their own verified launch checks.
 
 Five development-only lint-tool advisories remain through the Next lint dependency chain. The proposed automatic fix downgrades the lint configuration to an incompatible major; no unsafe downgrade was applied. Runtime production dependencies have zero advisories.
 
 Unrelated local exports, untracked reference/skill packages and the pre-existing isometric skill edits are excluded from this release. No credentials or private browser data are included. See [content population](../content-population.md) for edit locations and [release record](../release/2026-10-23-design-systems.md) for GitHub, deployment and rollback identities.
+
+## Production closeout
+
+The final production crawl passed the same 58 pages and 367 assets. Browser checks confirmed original/blue palette selection, original selection following Product navigation, blue reset on reload, revised homepage covers and the final black Selected Work heading. See the [release record](../release/2026-10-23-design-systems.md).

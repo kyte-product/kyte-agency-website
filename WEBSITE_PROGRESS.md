@@ -4,11 +4,14 @@ Updated 23 October 2026. Owner: Kyte website team.
 
 ## Current status
 
-The three design systems and additive default brand-blue illustration variants are complete locally on `codex/design-systems-content-ready`. The original color artwork is retained and checksummed. Homepage Selected Work now uses the final supplied covers 6–10. Shared service/dot/sidebar refinements, tablet process copy fitting, reduced-motion project heading spacing, archival cleanup and the Next 16.4.2 security patch are included. Verification passed: 58 pages / 367 assets, 232 breakpoint cases, 307 focused interaction checks and 12 final cover/navigation checks. Production dependency audit reports zero advisories. The user-authorized GitHub merge and Vercel publication are in progress. Sanity is unchanged.
+The three design systems and additive default brand-blue illustration variants are complete locally on `codex/design-systems-content-ready`. The original color artwork is retained and checksummed. Homepage Selected Work now uses the final supplied covers 6–10. Shared service/dot/sidebar refinements, tablet process copy fitting, reduced-motion project heading spacing, archival cleanup and the Next 16.4.2 security patch are included. Verification passed: 58 pages / 367 assets, 232 breakpoint cases, 307 focused interaction checks and 12 final cover/navigation checks. Production dependency audit reports zero advisories. PR #64 is merged at `4df4bed6d6c69397f02a7ab5a1bbcd36f3c178e1`; Vercel production deployment `dpl_G7ZHxLgVB3dp85GLLaFESciJQNPi` is verified Ready at https://kyte-agency.vercel.app. The live crawl passed all 58 pages and 367 assets, and browser review confirmed the palette toggle/default and final homepage covers/black heading. Sanity is unchanged.
 
-Canonical systems: `kyte-site/docs/design-systems/README.md`. Content editors start at `kyte-site/docs/content-population.md`. Current audit: `kyte-site/docs/audits/2026-10-23-content-ready.md`. Exact publication state and rollback: `kyte-site/docs/release/2026-10-23-design-systems.md`. Next action: verify GitHub/Vercel publication, then populate final approved content. Local review remains on port 3001.
+Canonical systems: `kyte-site/docs/design-systems/README.md`. Content editors start at `kyte-site/docs/content-population.md`. Current audit: `kyte-site/docs/audits/2026-10-23-content-ready.md`. Exact publication state and rollback: `kyte-site/docs/release/2026-10-23-design-systems.md`. Next action: populate final approved content using the content guide. Local review remains on port 3001.
 
 ## Template decisions
+
+- Homepage Selected Work uses final supplied cover files 6–10 in full 3:4 composition, distinct image URLs and a shared ink/black heading.
+- Four cascading service-process cards alternate blue/black. Hover/focus expands without moving other bars; measured copy height prevents clipping. Outcomes precede Deliverables, then Approach.
 
 - All ten child services share the light design. Service titles have no inline photos; UI/UX art remains full-width and already expanded. Branding & Marketing service hero areas now use gray placeholders pending final imagery.
 - Branding landing retains the editorial design. Hero height uses its actual 58px header. Bottom corner annotations match Helix glyphs/type/underline. Design News shows three image cards, dark title text with pastel background highlights and an All stories action.
@@ -21,24 +24,26 @@ Canonical systems: `kyte-site/docs/design-systems/README.md`. Content editors st
 
 ## Checks and findings
 
-Detailed results: `kyte-site/docs/audits/2026-10-22-template-closeout.md` and release evidence under `kyte-site/docs/release/2026-10-22-template-closeout/`.
+Current evidence: `kyte-site/docs/audits/2026-10-23-content-ready.md` and its JSON/screenshot folder. The 22 October template-closeout report is historical evidence for the earlier release.
 
-- ESLint, TypeScript and production build passed. The build with CMS network access had no content lookup errors.
-- 56 linked pages and 238 rendered local assets returned 200; every content page had one H1.
-- 56 routes at 393, 810 and 1440px: 168 checks with no horizontal page overflow or uncaught exceptions. The 1px accessible hidden logo label is intentional.
-- Navbar arrival contrast and blur passed on 56 routes. Dark/light section switching, responsive menus and Branding/Home/Product client navigation plus browser Back passed without refresh.
-- Targeted measurements confirmed full viewport covers and Fincart motion, exactly three news cards, correct highlights, matching corner-label typography and no service photo clipping.
-- Production dependency audit has zero advisories. Five existing development lint-tool advisories remain; the proposed automatic fix downgrades the Next lint config to an incompatible older major. No unsafe dependency downgrade was applied.
+- ESLint, TypeScript and production build with published CMS access passed.
+- Three design-system entries/docs, 62 original/brand checksums and geometry pairs, measured palettes, source graph and deep-merge guards passed.
+- 58 linked pages and 367 local assets passed HTTP, H1, metadata and basic content checks.
+- 232 route/width cases at 320, 393, 810 and 1440px passed without page overflow, clipping flags, unlabeled visible buttons or uncaught exceptions.
+- All 307 focused interaction checks passed, including ten services, five-item selections, four process states, longer CMS text fit, matched rail insets, illustration palette toggles/client navigation/reset, article topic scrolling and contact validation.
+- Twelve final cover/menu/transition/Back checks passed. The actual port-3001 tab was refreshed and visually checked after assigning distinct URLs to covers 6–10. Final Selected Work heading is ink/black.
+- Dot-background rendering reduces sampled Home/industry DOM counts by about 76–78%. Local timings are documented with their limits; final content media and physical-device performance remain a separate pass.
+- Production dependency audit reports zero advisories. Five development-only lint-tool advisories remain; the proposed automatic fix downgrades to an incompatible major, so no unsafe downgrade was applied.
 
 ## Content phase and launch prerequisites
 
-The next work is content curation within the documented templates. Homepage supplied cover claims, stock imagery, sample testimonial rating blocks, brochure/phone placeholders, approved client outcomes and final editorial/legal copy still need owners and approval. Confirm redirects, analytics and actual contact delivery before public launch. No real lead was sent during template checks. Physical-device frame pacing remains a separate check; emulated browser results do not certify every laptop or phone. Robots remain noindex until a deliberate launch decision.
+The next work is content curation within the documented templates. Homepage supplied cover claims (especially cover 6’s invalid “200% time reduction” wording), stock imagery, sample testimonial rating blocks, brochure/phone placeholders, approved client outcomes and final editorial/legal copy still need owners and approval. Confirm redirects, analytics and actual contact delivery before public launch. No real lead was sent during template checks. Physical-device frame pacing remains a separate check; emulated browser results do not certify every laptop or phone. Robots remain noindex until a deliberate launch decision.
 
 Sanity project `50pibtgs`, production dataset, is preserved. No CMS writes, form deliveries or production configuration changes are part of this release.
 
 ## Documentation and preservation
 
-- Current templates: `kyte-site/docs/template-system.md` and `/design-system`.
+- Current templates: `kyte-site/docs/template-system.md`; three systems and source ownership: `kyte-site/docs/design-systems/README.md`.
 - Repeatable checks, archival rules and release: `kyte-site/docs/audit-and-release.md`.
 - Documentation index: `kyte-site/docs/README.md`.
 - Art skill packages: `.agents/skills/README.md`; existing local reference additions are preserved without mixing them into this release.
@@ -97,3 +102,7 @@ The user reported the active preview still displayed the earlier covers. Assigne
 ### 23 October 2026: final homepage heading direction
 
 Returned Selected Work to shared ink/black at the user’s request, superseding the brief blue title treatment. Covers remain the final files 6–10 with distinct cache-safe URLs. Continue the complete design-system/audit release and update the deployment record after live checks. Owner: Kyte website team.
+
+## 23 October 2026: verified GitHub and Vercel release
+
+PR #64 merged as `4df4bed6d6c69397f02a7ab5a1bbcd36f3c178e1`. Production `dpl_G7ZHxLgVB3dp85GLLaFESciJQNPi` is Ready and aliased to https://kyte-agency.vercel.app. All 58 production pages and 367 assets passed the crawl. Browser review confirmed retained original colors, the blue default after reload, live Product navigation, revised homepage covers and final black title. Current checks and content handoff are consolidated above; exact deployment, rollback and evidence are in `kyte-site/docs/release/2026-10-23-design-systems.md`. Final records are published in a documentation-only follow-up. Next: content population and separate final launch checks. Owner: Kyte website team.
