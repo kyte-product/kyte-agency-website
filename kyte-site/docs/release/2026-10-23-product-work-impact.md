@@ -22,7 +22,7 @@ Working-principle evidence: [six dot grids](../audits/2026-10-23-product-followu
 
 Branch: `codex/product-work-impact-followup`. Existing Vercel team/project: `kyte-product/kyte-agency-website`. Public alias: https://kyte-agency.vercel.app. No CMS writes, new result claims, form submissions or launch setting changes.
 
-Verified previous Ready rollback: `dpl_7oSCqTyeXuuAEHoXdd9sv9p7rkyW`, https://kyte-agency-website-i84l84omj-kyte-product.vercel.app. 
+Verified previous Ready rollback: `dpl_7oSCqTyeXuuAEHoXdd9sv9p7rkyW`, https://kyte-agency-website-i84l84omj-kyte-product.vercel.app.
 
 - Application PR: [#66](https://github.com/kyte-product/kyte-agency-website/pull/66), merged after successful preview checks on head `e61e068cb72cecdd2f1737debab55eb2df44b850`.
 - Merge revision: `c02965ccc8c4f9c5da718230739c979c64d883c8`.
