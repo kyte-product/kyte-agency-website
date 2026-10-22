@@ -51,7 +51,7 @@ export function ServiceDecisionStory({ items = auditDecisions, ctaLabel = "Discu
             <Link className="kyte-button" href="/contact">{ctaLabel} <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
           <div className={`service-decisions__visual-frame service-decisions__visual-frame--${decisionSurfaces[active % decisionSurfaces.length]}`} aria-hidden="true" data-pattern={decisionPatterns[active % decisionPatterns.length]}>
-            <DotPattern key={active} shape={decisionPatterns[active % decisionPatterns.length]} tone={decisionSurfaces[active % decisionSurfaces.length] === "blue" ? "white" : decisionSurfaces[active % decisionSurfaces.length] === "black" ? "charcoal" : "brand"} className="service-decisions__dot-pattern" />
+            <DotPattern shape={decisionPatterns[active % decisionPatterns.length]} tone={decisionSurfaces[active % decisionSurfaces.length] === "blue" ? "white" : decisionSurfaces[active % decisionSurfaces.length] === "black" ? "charcoal" : "brand"} className="service-decisions__dot-pattern" />
           </div>
         </div>
         <div className="service-decisions__steps" aria-label={itemsLabel}>
