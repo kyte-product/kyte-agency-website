@@ -1,3 +1,4 @@
+import { KyteApproach } from "@/components/KyteApproach";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Compass, Layers3, PanelsTopLeft, ScanSearch, Sparkles, Workflow } from "lucide-react";
@@ -64,6 +65,7 @@ export default function ProductDesignLandingPage() {
     <ProductDesignCarousel />
 
     <WorkShowcase fixedView="list" />
+    <KyteApproach />
 
 
     <section className="product-landing__partners product-landing__section" aria-labelledby="product-partners-title"><div className="product-landing__section-head"><h2 id="product-partners-title">For products at different stages.</h2><p>We adapt the work to the team, the product, and the question that needs an answer.</p></div><div className="product-landing__partner-grid">{["New products", "Growing platforms", "Established services", "Complex internal tools", "Commerce journeys", "Web platforms", "Internal systems", "Connected brands"].map((item) => <div key={item}><ProductStageIllustration title={item as ProductStageTitle} /><h3>{item}</h3></div>)}</div></section>

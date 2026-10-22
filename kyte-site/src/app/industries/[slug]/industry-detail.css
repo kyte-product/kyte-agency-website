@@ -31,7 +31,7 @@
 .industry-detail__service:nth-child(odd) { margin-right: 28px; }
 .industry-detail__service:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--line); }
 .industry-detail__service > span { display: grid; gap: 9px; max-width: 500px; }
-.industry-detail__service strong { font-size: clamp(19px,1.7vw,22px); font-weight: 500; line-height: 1.3; letter-spacing: -.025em; }
+.industry-detail__service strong { font-size: clamp(19px,1.7vw,22px); font-weight: 450; line-height: 1.3; letter-spacing: -.025em; }
 .industry-detail__service > span > span { color: var(--muted); font-size: 15px; line-height: 1.5; }
 .industry-detail__service svg { flex: none; margin-top: 3px; color: var(--color-blue); transition: transform .22s ease; }
 .industry-detail__service:hover svg, .industry-detail__service:focus-visible svg { transform: translateX(4px); }

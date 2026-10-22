@@ -1,7 +1,7 @@
 .work-showcase { overflow: clip; padding: 84px 0 112px; background: var(--color-surface-secondary); }
 .work-showcase__inner { width: var(--page-width); margin: 0 auto; padding-inline: var(--section-inset); }
 .work-showcase__heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
-.work-showcase__eyebrow { margin: 0 0 18px; color: var(--muted); font-size: var(--type-label); font-weight: 500; letter-spacing: .09em; line-height: 1.3; text-transform: uppercase; }
+.work-showcase__eyebrow { margin: 0 0 18px; color: var(--muted); font-size: var(--type-label); font-weight: 450; letter-spacing: .09em; line-height: 1.3; text-transform: uppercase; }
 .work-showcase h2 { margin: 0; font-size: var(--heading-section); font-weight: var(--heading-weight); letter-spacing: -.065em; line-height: var(--heading-line-height); }
 .work-showcase__view-toggle { display: inline-flex; flex: none; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: var(--radius-large); background: var(--surface); }
 .work-showcase__view-toggle button { display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 0; border-radius: 6px; color: var(--muted); background: transparent; cursor: pointer; transition: color .2s ease, background .2s ease, box-shadow .2s ease; }

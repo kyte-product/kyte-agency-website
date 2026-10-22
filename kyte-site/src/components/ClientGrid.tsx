@@ -36,7 +36,7 @@ const compactMarks = new Set([
 export function ClientGrid() {
   return <section className="client-grid" aria-labelledby="client-grid-title">
     <div className="client-grid__inner">
-      <h2 id="client-grid-title">Brands we have worked with</h2>
+      <h2 id="client-grid-title">Brands We Have Worked With</h2>
       <ul className="client-grid__logos">
         {clients.map(([name, file]) => {
           const logo = clientLogoAsset(file);

@@ -1,5 +1,5 @@
 .client-brand-ticker { padding-bottom: clamp(28px,4vw,48px); text-align: center; }
-.client-brand-ticker__title { margin: 0 0 16px; color: var(--color-muted-mid); font-size: var(--type-body); font-weight: 500; }
+.client-brand-ticker__title { margin: 0 0 16px; color: var(--color-muted-mid); font-size: var(--type-body); font-weight: 450; }
 .client-brand-ticker__window { width: 100vw; margin-inline: calc(50% - 50vw); padding-inline: 0; overflow: hidden; }
 .client-brand-ticker__track { display: flex; width: max-content; animation: client-brand-ticker-scroll 100s linear infinite; }
 .client-brand-ticker__track ul { display: flex; flex: none; align-items: center; gap: 68px; margin: 0; padding: 0 68px 0 0; list-style: none; }
