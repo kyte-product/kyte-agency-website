@@ -26,3 +26,7 @@ ESLint, TypeScript, production build and whitespace checks passed. Four industry
 Home and Product were checked at 393 and 1440px after shared extraction: Home retains four agency cards and two department links; Product retains five illustrated services. Branding closing background is verified blue. Additional service selection checks and live publication status follow below.
 
 All ten service routes at 393, 810 and 1440px passed all five selections, 150 states total: exactly one expanded region, a defined dot motif, zero images in the panel and no horizontal page overflow. Industry results and screenshots are preserved under docs/release/2026-10-22-industry-followup/.
+
+## Publication
+
+PR #60 merged at 75af9736fa1c40ac77e7e99406266eb912190b42. Production dpl_HVNeVpAvU48r2Fu9KwDbKzyQw2WN is Ready. Live crawl passed 56 pages/239 assets; no-refresh CTA regression passed Home/Branding/Home/Back/Product. Live dot-panel checks passed all five states on all four industry routes and representative Product/Branding services, retaining the same nonempty SVG. Exact release and rollback details are in ../release/2026-10-22-industry-followup/README.md.

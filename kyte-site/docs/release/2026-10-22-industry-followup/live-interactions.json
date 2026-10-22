@@ -1,0 +1,47 @@
+{
+  "ctaPassed": true,
+  "livePanels": [
+    {
+      "route": "/industries/fintech",
+      "overflow": false,
+      "placeholder": true,
+      "news": false,
+      "stats": 4
+    },
+    {
+      "route": "/industries/saas-startups",
+      "overflow": false,
+      "placeholder": true,
+      "news": false,
+      "stats": 4
+    },
+    {
+      "route": "/industries/d2c-ecommerce",
+      "overflow": false,
+      "placeholder": true,
+      "news": false,
+      "stats": 4
+    },
+    {
+      "route": "/industries/hospitality-food-beverage",
+      "overflow": false,
+      "placeholder": true,
+      "news": false,
+      "stats": 4
+    },
+    {
+      "route": "/ui-ux-design-development/ux-research-design-audit",
+      "overflow": false,
+      "placeholder": false,
+      "news": false,
+      "stats": 0
+    },
+    {
+      "route": "/branding-marketing/graphic-design",
+      "overflow": false,
+      "placeholder": false,
+      "news": false,
+      "stats": 0
+    }
+  ]
+}

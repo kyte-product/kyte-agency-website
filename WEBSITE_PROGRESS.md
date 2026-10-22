@@ -4,9 +4,9 @@ Updated 22 October 2026. Owner: Kyte website team.
 
 ## Current status
 
-The shared website template closeout is deployed, with an industry follow-up in verification on `codex/site-consistency-audit`. The user authorized GitHub publication, main merge and Vercel production deployment after the checks. The application runs in `kyte-site/` using Next.js 16.4, React 19.3, TypeScript and the existing Sanity production dataset.
+The shared website template closeout and industry follow-up are deployed. The next phase is content curation within the agreed templates. The user authorized GitHub publication, main merge and Vercel production deployment after the checks. The application runs in `kyte-site/` using Next.js 16.4, React 19.3, TypeScript and the existing Sanity production dataset.
 
-Local review remains on port 3001. A separate production build on port 3002 was used for checks. PR #59 was merged and deployed Ready as `dpl_GStvAgA8gPFAe3QvXadahsGzHgra` at https://kyte-agency.vercel.app, application revision `1d98ecf781984f737bda3bb7870a499a738ca1e8`. This is the rollback target for the industry follow-up.
+Local review remains on port 3001. PR #59 delivered the template closeout and PR #60 delivered the industry/service follow-up. Application release revision: `75af9736fa1c40ac77e7e99406266eb912190b42`. Verified Ready application release: `dpl_HVNeVpAvU48r2Fu9KwDbKzyQw2WN`, https://kyte-agency.vercel.app, immutable deployment https://kyte-agency-website-1j084f8mw-kyte-product.vercel.app. Rollback: PR #59 deployment `dpl_GStvAgA8gPFAe3QvXadahsGzHgra`.
 
 ## Template decisions
 
@@ -15,6 +15,7 @@ Local review remains on port 3001. A separate production build on port 3002 was 
 - The closing horizontal sentence uses Kyte blue, following the latest user direction. The final pixel pocket has white backing and an outlined oval homepage action matching Brochure.
 - Work and article covers reach both viewport edges. Work naming and sentence-case fact labels are consistent; case-study gaps are tighter. Fincart branding composition motion is full width.
 - About has a larger display headline. Article sidebar CTA uses the shared dot component, one description and primary action.
+- Industry pages use extra hero top space and gray hero placeholders, informative black/blue dot cards, five-item dot-panel approach accordions, sourced sector statistics in one horizontal row, and the shared illustrated Product service cards. Design News is removed. All ten service outcome sections share blue/charcoal/white dot panels.
 - Shared dots retain fixed 2px geometry on a 7px grid. Logo tickers are excluded from generic reveals to prevent opacity/color flashes.
 - Page transitions use the supplied blue staircase with subtle dividers, opaque overlap and weighted motion. Original swipe is preserved in backups.
 
@@ -47,7 +48,7 @@ Sanity project `50pibtgs`, production dataset, is preserved. No CMS writes, form
 
 ## Dated log
 
-22 October 2026: Applied the user's template closeout comments, completed source/import and breakpoint audits, preserved retired code in dated backups, added a short template contract and repeatable audit/release process, indexed skills/exports, and archived the accumulated historical notes. GitHub/Vercel release is in progress. Next: finish release verification, then start approved content replacement.
+22 October 2026: Applied the user's template closeout comments, completed source/import and breakpoint audits, preserved retired code in dated backups, added a short template contract and repeatable audit/release process, indexed skills/exports, and archived the accumulated historical notes. Released through PR #59; followed by the industry changes in PR #60. The next task is approved content replacement.
 
 22 October 2026, industry follow-up: Extracted shared ProductServices and ImpactCards, made the industry black/blue dot cards informative with page-specific text, restored the prior approach photo section, removed Design News and its CMS fetch, fixed service link styling outside Product landing, and added sourced sector statistics with explicit date/geography/forecast context. Added hero top spacing and gray hero placeholders on all four industry pages. Preserved the earlier industry layout in a dated backup. ESLint, TypeScript and production build passed; responsive verification and publication pending.
 
@@ -56,3 +57,7 @@ Sanity project `50pibtgs`, production dataset, is preserved. No CMS writes, form
 22 October 2026, follow-up verification: ESLint, TypeScript, production build and diff checks passed. All four industry routes passed 320/393/810/1440px checks (16 cases); all ten services passed all five outcome selections at 393/810/1440px (150 states). Home/Product shared-component regressions passed at 393/1440px. No page overflow or clipped industry statistics. Source notes and visual evidence are documented. Next: push, merge and verify the production follow-up.
 
 22 October 2026, interaction refinement: Kept the same dot SVG mounted while switching selections, so measured dimensions and visibility observers are preserved and motifs do not briefly reset to an empty panel.
+
+22 October 2026, production follow-up: PR #60 merged at 75af9736fa1c40ac77e7e99406266eb912190b42; Vercel production dpl_HVNeVpAvU48r2Fu9KwDbKzyQw2WN is Ready and owns the public alias. Live crawl passed 56 pages, 239 local assets and one H1 per content page. Client navigation Home → Branding → Home, browser Back and Product preserved the original primary CTA styles without a refresh. Release record and source-backed industry metrics are documented. No CMS writes or launch setting changes. Next: content curation, remaining launch checks and physical-device motion review.
+
+Live interaction checks also passed all five selections on four industry routes plus representative Product and Branding service routes. The SVG stays mounted, contains dots throughout selection changes, and maintains one expanded region. All four industry pages show placeholders, four industry statistics and no Design News.
