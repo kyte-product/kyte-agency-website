@@ -1,0 +1,441 @@
+{
+  "version": 1,
+  "defaultMode": "brand",
+  "anchor": "#0249d9",
+  "files": [
+    {
+      "file": "process-define-embed.html",
+      "originalSha256": "0bae43353051e8960922129aa7767b04808373f4ba8ef697c8b828dfa2806efb",
+      "brandSha256": "1ea152465e47811ca5ba41d27c2a676dbd35257fff4fdf487c1b4bf6e49ee7f6",
+      "original": "/hairline/process-define-embed.html",
+      "brand": "/hairline/brand/process-define-embed.html"
+    },
+    {
+      "file": "process-define.svg",
+      "originalSha256": "8908bc96bedf2e0dec8c18e77442442eb5389a004a33605905466fada5713760",
+      "brandSha256": "9c10b979c72b21236a9d713a69aed81b52af869a1ab935cf2de060b67aa05c8e",
+      "original": "/hairline/process-define.svg",
+      "brand": "/hairline/brand/process-define.svg"
+    },
+    {
+      "file": "process-deliver-embed.html",
+      "originalSha256": "edffe12a83b154cd80a74ea4bbddcb1e4dc77c385f7e4fbb625ec22d0c99b063",
+      "brandSha256": "a8d103a9c23fbd7bb3832172c7b059bedb1a66e8a19264e08225effcbfc3874c",
+      "original": "/hairline/process-deliver-embed.html",
+      "brand": "/hairline/brand/process-deliver-embed.html"
+    },
+    {
+      "file": "process-deliver.svg",
+      "originalSha256": "1d4e825b62338590aee146e27039c275438b7435d44567015779fb081ed7aecb",
+      "brandSha256": "9caded435aff4c81862e63e3dbfa3f91c2a6c3a044025a23087d3bd32599b5b3",
+      "original": "/hairline/process-deliver.svg",
+      "brand": "/hairline/brand/process-deliver.svg"
+    },
+    {
+      "file": "process-develop-embed.html",
+      "originalSha256": "37389f52b462f873f2f029db65f50550e649d0e6051ff39f8764ee8191369cf5",
+      "brandSha256": "4c38e9248c0e34a77583689fceb4fcbdc889a6e940af6087ad00a8cda110c9fd",
+      "original": "/hairline/process-develop-embed.html",
+      "brand": "/hairline/brand/process-develop-embed.html"
+    },
+    {
+      "file": "process-develop.svg",
+      "originalSha256": "7ac756364176fff8b4535210f5e0e2bba1ed6abbe5cab164397f1bdd0391bb02",
+      "brandSha256": "e2d3f6ddc0a6ef3a238574169ad0ff073856baf31c17646f86b7273e9d19d9cb",
+      "original": "/hairline/process-develop.svg",
+      "brand": "/hairline/brand/process-develop.svg"
+    },
+    {
+      "file": "process-discover-embed.html",
+      "originalSha256": "16768b69ceb6d7d59ff982bf8662e4fc5ef9319e869051f32119fd099236814e",
+      "brandSha256": "d71aec95dfeb59a68ccff00d9d21ddb7c9a083c199f90fa7641ace01d4d47f21",
+      "original": "/hairline/process-discover-embed.html",
+      "brand": "/hairline/brand/process-discover-embed.html"
+    },
+    {
+      "file": "process-discover.svg",
+      "originalSha256": "79ff56237a8db4b6711c7bf5101dd2a58c1afefd77069e4345689f128c403dd6",
+      "brandSha256": "fb025bb444e4ccd1d90f680a528ee4360ccd1acb492bad42d48e36984329a47a",
+      "original": "/hairline/process-discover.svg",
+      "brand": "/hairline/brand/process-discover.svg"
+    },
+    {
+      "file": "product-commerce-embed.html",
+      "originalSha256": "205bfaa5f9aeaf36e3b4edd61098d95577c795d4ebd97720d97a1779e6b72d95",
+      "brandSha256": "6a189604b730ca27ac77889865814d0f9c39f7972164c31b667d59a638baf2fc",
+      "original": "/hairline/product-commerce-embed.html",
+      "brand": "/hairline/brand/product-commerce-embed.html"
+    },
+    {
+      "file": "product-commerce.svg",
+      "originalSha256": "cd97e3158204dec2cc026c386f766b72066c412854a174109e05c69f7eb3b295",
+      "brandSha256": "01b7c20f133af3c9a5191d88a4f5e52ced9b28883a22aeed344e24276736b5d3",
+      "original": "/hairline/product-commerce.svg",
+      "brand": "/hairline/brand/product-commerce.svg"
+    },
+    {
+      "file": "product-complex-system-embed.html",
+      "originalSha256": "ff465ea03668f80d426384ef6d06c5bdc1935ab61db0f3cda1a167e332b32d4e",
+      "brandSha256": "f524dca151cadd318de5714e4bc1758c37cd7b66ae011dcf0b9f0d389039b88f",
+      "original": "/hairline/product-complex-system-embed.html",
+      "brand": "/hairline/brand/product-complex-system-embed.html"
+    },
+    {
+      "file": "product-complex-system.svg",
+      "originalSha256": "72574847688ecd24366fcc5e3f040827b15f96b6452afbb11bea6d6dc58cbea5",
+      "brandSha256": "822fe196aab9f7e61722dd84e73c48f83520dee359aa0b7dac841d573fe555d8",
+      "original": "/hairline/product-complex-system.svg",
+      "brand": "/hairline/brand/product-complex-system.svg"
+    },
+    {
+      "file": "product-content-journey-embed.html",
+      "originalSha256": "b11104454c532c52f177422109678a57feb5a612a5991d6b62b13fe2a3247e26",
+      "brandSha256": "5736fa4633801d593b9eccd9e1cfbc414666fe6d5384889f8ef11e8c85338fa6",
+      "original": "/hairline/product-content-journey-embed.html",
+      "brand": "/hairline/brand/product-content-journey-embed.html"
+    },
+    {
+      "file": "product-content-journey.svg",
+      "originalSha256": "e17cd610d4649d62a30fe661d085f6e19ca1545bf8977433ec0362b9af9415aa",
+      "brandSha256": "02c2ef35956b6e887345bc75d75f2697924145140ec01abc2f27ba58750398e6",
+      "original": "/hairline/product-content-journey.svg",
+      "brand": "/hairline/brand/product-content-journey.svg"
+    },
+    {
+      "file": "product-dashboard-laptop-embed.html",
+      "originalSha256": "7bcb8e19798446d6350f6154c7372365e932c52584f37cbd14bda9b4b5a16bfb",
+      "brandSha256": "535367d3473993481fb3fc0721878adb85cd0dda466d706cf4486d3c1cbf1a20",
+      "original": "/hairline/product-dashboard-laptop-embed.html",
+      "brand": "/hairline/brand/product-dashboard-laptop-embed.html"
+    },
+    {
+      "file": "product-design-patterns-embed.html",
+      "originalSha256": "d785f4ee8258dc3430d1d5c7f2cd3ead58bb59240fae04c765eded186b6f4c66",
+      "brandSha256": "b395dcc331db8cf582408bf99762adf84c63ffed8fc9c4d78a39fe035195bb90",
+      "original": "/hairline/product-design-patterns-embed.html",
+      "brand": "/hairline/brand/product-design-patterns-embed.html"
+    },
+    {
+      "file": "product-design-patterns.svg",
+      "originalSha256": "3e0c7883849d722303a96696a82fb4489850280c8d5848e360439016bcd16556",
+      "brandSha256": "49f37627fb93ca4a87d29b083bbf2fd9839850c6d44c3773f56634877153d66c",
+      "original": "/hairline/product-design-patterns.svg",
+      "brand": "/hairline/brand/product-design-patterns.svg"
+    },
+    {
+      "file": "product-evolving-experience-embed.html",
+      "originalSha256": "4bf32a7419649eda06b491c76ec758163aef30d33507db893810273181c354e8",
+      "brandSha256": "7258b0ea9c388970e45d658b80a9b043a9a10daf94634d403b2661074231a840",
+      "original": "/hairline/product-evolving-experience-embed.html",
+      "brand": "/hairline/brand/product-evolving-experience-embed.html"
+    },
+    {
+      "file": "product-evolving-experience.svg",
+      "originalSha256": "754a73eb8f7f7539bbbddeb1a200de1c91f8bf6e65555574275647de02f94899",
+      "brandSha256": "dd1ecbb783675ed73ecff2b2e9928730264a4339583a06ac7e44dcd7847ba412",
+      "original": "/hairline/product-evolving-experience.svg",
+      "brand": "/hairline/brand/product-evolving-experience.svg"
+    },
+    {
+      "file": "product-experience-embed.html",
+      "originalSha256": "eadcbc879611a460394aae2ca6e6a7dd9ccf3caf42c95af72d448f09b4f9c6bf",
+      "brandSha256": "99d58a74a34826bdc12409f5467ee0f63985084ce406159463e05360cffa80df",
+      "original": "/hairline/product-experience-embed.html",
+      "brand": "/hairline/brand/product-experience-embed.html"
+    },
+    {
+      "file": "product-mobile-app-embed.html",
+      "originalSha256": "ea3e908d6bdcab48dbb647d0d58a9369e04311f972e8997a2a426e00b2f5f852",
+      "brandSha256": "9f3f30b578050018c8b92dfe5746be75c5223dce0b7c3fc807b449e9cea14fef",
+      "original": "/hairline/product-mobile-app-embed.html",
+      "brand": "/hairline/brand/product-mobile-app-embed.html"
+    },
+    {
+      "file": "product-mobile-app.svg",
+      "originalSha256": "4ca794baa7dfa621ef17fc315fba3953045fc35737b397b200b082116e6310ed",
+      "brandSha256": "6a14a4a7fe3c777106db69e3815777115b4a3240c23272afad567eec5f96e2a8",
+      "original": "/hairline/product-mobile-app.svg",
+      "brand": "/hairline/brand/product-mobile-app.svg"
+    },
+    {
+      "file": "product-navigation-embed.html",
+      "originalSha256": "d1c50f408f0ecc828a9658a7912f986cf5ea5778b5335994dcc7cb50193c621a",
+      "brandSha256": "f17ba5d5909afb564e6bd724ee063b9963d196a0388ac80e6ef3992ec06d707b",
+      "original": "/hairline/product-navigation-embed.html",
+      "brand": "/hairline/brand/product-navigation-embed.html"
+    },
+    {
+      "file": "product-navigation.svg",
+      "originalSha256": "3c6889f84337da617724c6ca277bfaee36f3c33ae86c77d1a9314f3f928c843d",
+      "brandSha256": "62b198fa700dddb39d14dcf538641ad5fab405038b13002c49f7f5d5aabd5433",
+      "original": "/hairline/product-navigation.svg",
+      "brand": "/hairline/brand/product-navigation.svg"
+    },
+    {
+      "file": "product-onboarding-embed.html",
+      "originalSha256": "098bacde1300bec48313d7e4b7d186f23f03b231b90432db11c008a2b6742789",
+      "brandSha256": "d6008f86d060cf660cf5f521103e189b8f31957cf94d2e572d6f289d9e2ffe22",
+      "original": "/hairline/product-onboarding-embed.html",
+      "brand": "/hairline/brand/product-onboarding-embed.html"
+    },
+    {
+      "file": "product-onboarding.svg",
+      "originalSha256": "398db5cb83a56c0e2c671570a4905c6e751f53d8c205235b5c27b4c0bb1bb643",
+      "brandSha256": "fcc82eb053ef571b32f6b45f831550aa06bb14428a20fcd3a40bbc50091d77ce",
+      "original": "/hairline/product-onboarding.svg",
+      "brand": "/hairline/brand/product-onboarding.svg"
+    },
+    {
+      "file": "product-research-audit-embed.html",
+      "originalSha256": "e48a65c168763cca73889d3c4fa7b891be0365905252a1a4a59ec7831769e775",
+      "brandSha256": "20b301302ae7dc854f5dc6017ce7f63c4cf3efe5407d1c3cf0ea9f2136ee19d9",
+      "original": "/hairline/product-research-audit-embed.html",
+      "brand": "/hairline/brand/product-research-audit-embed.html"
+    },
+    {
+      "file": "product-research-audit.svg",
+      "originalSha256": "bab72a230a78afe1ae349fc863e2de485204ede0716d1dfe0376b16bc3ef97d1",
+      "brandSha256": "1837ec80806e78f360a68e9ce956dfd23fcc3bf547d68579d757c28887ef5670",
+      "original": "/hairline/product-research-audit.svg",
+      "brand": "/hairline/brand/product-research-audit.svg"
+    },
+    {
+      "file": "product-responsive-experience-embed.html",
+      "originalSha256": "74c02ac7b3265ba31b78b5c98a1656462bbeb453663cd8d9249cef425ba78dfc",
+      "brandSha256": "aacdcb246c5bf294b5fa80e2ee8027791711004ba945411bcf85059d4a6dba2e",
+      "original": "/hairline/product-responsive-experience-embed.html",
+      "brand": "/hairline/brand/product-responsive-experience-embed.html"
+    },
+    {
+      "file": "product-responsive-experience.svg",
+      "originalSha256": "62b5fa7a3726bc826863f3ac4af32dc132a947a05e32a570dfe466a8de14546b",
+      "brandSha256": "00db49d0686d7f3d9ecedaf51388a85bbeee088577da9acd8e3d611c134a032d",
+      "original": "/hairline/product-responsive-experience.svg",
+      "brand": "/hairline/brand/product-responsive-experience.svg"
+    },
+    {
+      "file": "product-saas-web-app-embed.html",
+      "originalSha256": "5186ba86a0e514c17e1e2d16330c504f7d7d895a3fde42eaa2fe2e255f4cae0f",
+      "brandSha256": "2cecc23bf566708ffb3df6e4bf1d8a74e68abcd85396da378b07db2cdf456316",
+      "original": "/hairline/product-saas-web-app-embed.html",
+      "brand": "/hairline/brand/product-saas-web-app-embed.html"
+    },
+    {
+      "file": "product-saas-web-app.svg",
+      "originalSha256": "6fbb2b81d5c39ccc65314f6d7f6435a870e63b7b79c3044d9627964f96044692",
+      "brandSha256": "fbb8abd4516c1b422e5686f5a1e36ad14c2331f99591a8ad7c468a00e51867cd",
+      "original": "/hairline/product-saas-web-app.svg",
+      "brand": "/hairline/brand/product-saas-web-app.svg"
+    },
+    {
+      "file": "product-stage-brands-embed.html",
+      "originalSha256": "c769793dfce2079b9d6211a323b932b57f33629d2b84d128be03680b7d48f662",
+      "brandSha256": "05050e5cdd934184d9d053ddc70f24e7e8a116e68d1fee2e72a4cdf624be0f1d",
+      "original": "/hairline/product-stage-brands-embed.html",
+      "brand": "/hairline/brand/product-stage-brands-embed.html"
+    },
+    {
+      "file": "product-stage-brands.svg",
+      "originalSha256": "82003321545db53fd9bf82ff029b637236abd77617ae3862379fd75b5c2cc0f4",
+      "brandSha256": "7e16fc97af3a4f9d1ca1403cfaf0f91368d0f9dcb5ccb8cc9eca687879796ca7",
+      "original": "/hairline/product-stage-brands.svg",
+      "brand": "/hairline/brand/product-stage-brands.svg"
+    },
+    {
+      "file": "product-stage-commerce-embed.html",
+      "originalSha256": "a6186f98b5b1a9ce988c2e166f71c7bd8f2d4193b0a791415ea7c60a2fdeb916",
+      "brandSha256": "7b5646bb53cc6138424e8ed6652ff17f9d24612f3e6b066ea19f22e667baad12",
+      "original": "/hairline/product-stage-commerce-embed.html",
+      "brand": "/hairline/brand/product-stage-commerce-embed.html"
+    },
+    {
+      "file": "product-stage-commerce.svg",
+      "originalSha256": "e6c1235d677738e99ae793086e9048868c5bc33d0b11f4c3ecb14d0ef91bcc1c",
+      "brandSha256": "28fe38123ffcca88220c496d7cc07d319e42176441d41875d6c776f1d6f87b78",
+      "original": "/hairline/product-stage-commerce.svg",
+      "brand": "/hairline/brand/product-stage-commerce.svg"
+    },
+    {
+      "file": "product-stage-established-embed.html",
+      "originalSha256": "3efab2fedceea4d8f3b8bd1bbab5aababe2c63fc206a85a8e95b3b328d5fb58c",
+      "brandSha256": "138bfd93d81678d7a9abb96efb072bd3cfdb071fd66ffada9b67ea387f3f9d7d",
+      "original": "/hairline/product-stage-established-embed.html",
+      "brand": "/hairline/brand/product-stage-established-embed.html"
+    },
+    {
+      "file": "product-stage-established.svg",
+      "originalSha256": "005ba121acb49c8ab2977244de1f0df909576098afb2d7bae0a6c6f4bb37582f",
+      "brandSha256": "5f51f0b40a8b6d8df640a0b27285b2a04e1eaae0e752092da782b13194cdd1ce",
+      "original": "/hairline/product-stage-established.svg",
+      "brand": "/hairline/brand/product-stage-established.svg"
+    },
+    {
+      "file": "product-stage-growth-embed.html",
+      "originalSha256": "d2e5b487fa84fcf0d0783a137877eb52b866a462893df826b7ca193a10770bad",
+      "brandSha256": "c4ce473320117ccd6414205296ee8b81444f42097ed6333cd484b85920c08dfa",
+      "original": "/hairline/product-stage-growth-embed.html",
+      "brand": "/hairline/brand/product-stage-growth-embed.html"
+    },
+    {
+      "file": "product-stage-growth.svg",
+      "originalSha256": "a5c98d9c9140f9b4877def55756643d4a889bc4c4ab789d09555ef04491d86c2",
+      "brandSha256": "0f84540cbfc5c08a12a45e9a3f64c9817dc561a9366a0b7ff1ded37a0c9a6375",
+      "original": "/hairline/product-stage-growth.svg",
+      "brand": "/hairline/brand/product-stage-growth.svg"
+    },
+    {
+      "file": "product-stage-new-embed.html",
+      "originalSha256": "f564cad7e02d0e1a30126ec739e58c1ddb509cf09ca1edf6d85f3941ca74f06e",
+      "brandSha256": "2731ecfabf77ad6138e2235165dbfc8f28968c1d0a128cdf2d1ebdf53c1e43cd",
+      "original": "/hairline/product-stage-new-embed.html",
+      "brand": "/hairline/brand/product-stage-new-embed.html"
+    },
+    {
+      "file": "product-stage-new.svg",
+      "originalSha256": "9eb3d711820210992a3bb1135a635f9096572703494f29da3f6b9d54191453f9",
+      "brandSha256": "4f0bde98910de466a4017c535061908565bac43fc3d95e0b3128870d529c785b",
+      "original": "/hairline/product-stage-new.svg",
+      "brand": "/hairline/brand/product-stage-new.svg"
+    },
+    {
+      "file": "product-stage-systems-embed.html",
+      "originalSha256": "ccf9df6d4f51037473f271d3bc3b430926762050547c2b80a5bae249f3709d99",
+      "brandSha256": "ab641143c273c715dbc37946c028682916d1e6cfcb905d58db7ebe7e6b6466af",
+      "original": "/hairline/product-stage-systems-embed.html",
+      "brand": "/hairline/brand/product-stage-systems-embed.html"
+    },
+    {
+      "file": "product-stage-systems.svg",
+      "originalSha256": "bf48bd64a5f1eb793591d820ebdd2bb9e0ad8d3c532fa3beaad0e41e52079b42",
+      "brandSha256": "27ef2f16c59b7bbee84ac972a61deb8909cb9b6c0bf9b50f95e02f6d301d1a48",
+      "original": "/hairline/product-stage-systems.svg",
+      "brand": "/hairline/brand/product-stage-systems.svg"
+    },
+    {
+      "file": "product-stage-tools-embed.html",
+      "originalSha256": "1bd8f5dde20ff944c3574953be6dce864fb16ab8471f05184bba09afdf848585",
+      "brandSha256": "329a928746c1905e91811a284d18977595b59d1262650cbd1ae1abe55f1b9f2f",
+      "original": "/hairline/product-stage-tools-embed.html",
+      "brand": "/hairline/brand/product-stage-tools-embed.html"
+    },
+    {
+      "file": "product-stage-tools.svg",
+      "originalSha256": "493b25b28897f2820a2d847060d260adde0e934b644c026c1877a798889cf6d1",
+      "brandSha256": "e2844e5be2a8ca539512985fe78fc7e8744e2af88702ea9b094a9ddfd1f886e1",
+      "original": "/hairline/product-stage-tools.svg",
+      "brand": "/hairline/brand/product-stage-tools.svg"
+    },
+    {
+      "file": "product-stage-web-embed.html",
+      "originalSha256": "cf8091df663c12ce4afd45d1bc9ad1a3ffa447dcf1e5a5c2a9e67bd8c0608429",
+      "brandSha256": "9835499d3e9c23e04b8466ddf81a61af806f22c5adea9d1a61f82acabba81617",
+      "original": "/hairline/product-stage-web-embed.html",
+      "brand": "/hairline/brand/product-stage-web-embed.html"
+    },
+    {
+      "file": "product-stage-web.svg",
+      "originalSha256": "ca41599ffae86a95fbdcbcfddd21a9fc7fd39cb3bcdf5821260c1b2eacf0f0d9",
+      "brandSha256": "5f7a0e24c1f80b75be4d84f02a5acb83b4b29ec1f2576ce6ea3bda066dc317dc",
+      "original": "/hairline/product-stage-web.svg",
+      "brand": "/hairline/brand/product-stage-web.svg"
+    },
+    {
+      "file": "product-website-design-embed.html",
+      "originalSha256": "159c621228bd821d410b598cb9f7135697698a1f21124c76ee274035fcd18b01",
+      "brandSha256": "d6e9e7f6859360d3650da0a7878fd564d835d18dad649dfd42100683aa380ac8",
+      "original": "/hairline/product-website-design-embed.html",
+      "brand": "/hairline/brand/product-website-design-embed.html"
+    },
+    {
+      "file": "product-website-design.svg",
+      "originalSha256": "07f2b5d2dd35e2db28118940df9fab4eea163914c77b54afbc6b2a2d69f137ca",
+      "brandSha256": "c615a1c710ebe9965a8e19e6b4c9eb16dbedab426357a6cd42c730fb9c30564b",
+      "original": "/hairline/product-website-design.svg",
+      "brand": "/hairline/brand/product-website-design.svg"
+    },
+    {
+      "file": "product-workflow-hub-embed.html",
+      "originalSha256": "b2404d6f4f88263f76b866cb22b305ecc0e326c30635f98cb0566a7498ad1ff9",
+      "brandSha256": "82dcf44bf43bcf4b335e0ae19f2d0d7b208aead2a5e4192abb6dad360debed5f",
+      "original": "/hairline/product-workflow-hub-embed.html",
+      "brand": "/hairline/brand/product-workflow-hub-embed.html"
+    },
+    {
+      "file": "product-workflow-hub.svg",
+      "originalSha256": "b1edfd67ecafefc0763e14810bc03c40a82a1bc1f76e07e3f9eb897244faf52f",
+      "brandSha256": "b6189b705e96e78608e2fe3aaf3d9b71eaaaf22325ae05d6b38a5fb87f0a38c0",
+      "original": "/hairline/product-workflow-hub.svg",
+      "brand": "/hairline/brand/product-workflow-hub.svg"
+    },
+    {
+      "file": "service-commerce-hero-embed.html",
+      "originalSha256": "28e55bf7eea529a50942f4620ac35f537e574e28c4df9b939dd85f51ebb57a96",
+      "brandSha256": "ff517dd2543cdb5c613f208fba73d80a354b34772f8fe47ad2af61e3654945bd",
+      "original": "/hairline/service-commerce-hero-embed.html",
+      "brand": "/hairline/brand/service-commerce-hero-embed.html"
+    },
+    {
+      "file": "service-commerce-hero.svg",
+      "originalSha256": "f8519178266aa65604439ec6d362dff19517f4443a7885f312a2504c83dfb706",
+      "brandSha256": "1e58805ee6c71e809e67352808b78c282e2d9073501083ae8b41cd1a220b768c",
+      "original": "/hairline/service-commerce-hero.svg",
+      "brand": "/hairline/brand/service-commerce-hero.svg"
+    },
+    {
+      "file": "service-mobile-hero-embed.html",
+      "originalSha256": "365e3a56717367facfa859aa94ff816933c9adf8c1e88523c8c93c2cd81c2a2f",
+      "brandSha256": "c56315055db7c245adcdfffa3d1b787962ad67f125767db9dbad3622d68c0403",
+      "original": "/hairline/service-mobile-hero-embed.html",
+      "brand": "/hairline/brand/service-mobile-hero-embed.html"
+    },
+    {
+      "file": "service-mobile-hero.svg",
+      "originalSha256": "aa2eafb568a41f9d1c3392e2ebec8541f9e0350486bd556db0473837d098c772",
+      "brandSha256": "7acdc7c5070733f42df8ce5b3aeab3a5c56db4df5b6cab34634b65144811cd0e",
+      "original": "/hairline/service-mobile-hero.svg",
+      "brand": "/hairline/brand/service-mobile-hero.svg"
+    },
+    {
+      "file": "service-research-hero-embed.html",
+      "originalSha256": "da2c0b0272efa40dc10e60a25873c4569b56c9651cee1fce3dfdf3a07faab4fd",
+      "brandSha256": "bdb9d988152be19d969559968202c9c184c6f0ed24120c19e1698cbe7a97a227",
+      "original": "/hairline/service-research-hero-embed.html",
+      "brand": "/hairline/brand/service-research-hero-embed.html"
+    },
+    {
+      "file": "service-research-hero.svg",
+      "originalSha256": "461839c39e5d298eafb35574ae31e3f3115780e2ad3d9b8593301144d19afbb0",
+      "brandSha256": "bd912113bf0ea123d698cff0dbe86a561d369812cd1c392476ac99bf42ebfd58",
+      "original": "/hairline/service-research-hero.svg",
+      "brand": "/hairline/brand/service-research-hero.svg"
+    },
+    {
+      "file": "service-saas-hero-embed.html",
+      "originalSha256": "0a6fa7caa2a58637e3fc899e42e35081287b1bb149b2414b17afe6a30549b3c5",
+      "brandSha256": "3f85664a3bae3e84e94598a8e0a73abd0a69f998d969d7f48cf4d402d404929f",
+      "original": "/hairline/service-saas-hero-embed.html",
+      "brand": "/hairline/brand/service-saas-hero-embed.html"
+    },
+    {
+      "file": "service-saas-hero.svg",
+      "originalSha256": "de96498234eb18bf7f25efc9fbc99950f2ab90dbe09adc5876f8bcaa42b8501e",
+      "brandSha256": "d08c07c6008d5af96c4876d3775738236af6907cc7d76cff1bb4f26497e36137",
+      "original": "/hairline/service-saas-hero.svg",
+      "brand": "/hairline/brand/service-saas-hero.svg"
+    },
+    {
+      "file": "service-website-hero-embed.html",
+      "originalSha256": "3218028e1f1f1276527f44f82dc855deac8af59cd3f83219206a41284429db05",
+      "brandSha256": "cfdee978f3ac3d739dd9ceb2cbf648c5856fb0ed94e82429e839563b9c0e26c6",
+      "original": "/hairline/service-website-hero-embed.html",
+      "brand": "/hairline/brand/service-website-hero-embed.html"
+    },
+    {
+      "file": "service-website-hero.svg",
+      "originalSha256": "646d0bcec979d2244d3d453f7da809a989c4b2df9e4af94b93b036fcdb959245",
+      "brandSha256": "c28629c1f1ff3784456b51370e8e30bc8e22805491e0b2e744f194dc1f3444d4",
+      "original": "/hairline/service-website-hero.svg",
+      "brand": "/hairline/brand/service-website-hero.svg"
+    }
+  ]
+}

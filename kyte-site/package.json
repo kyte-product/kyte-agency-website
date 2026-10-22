@@ -8,7 +8,12 @@
     "start": "next start",
     "lint": "eslint",
     "check:illustration-palettes": "node hairline/check-illustration-palettes.mjs",
-    "build:illustrations": "node hairline/rebuild-illustrations.mjs"
+    "build:illustrations": "node hairline/rebuild-illustrations.mjs",
+    "build:illustration-variants": "node hairline/build-brand-variants.mjs",
+    "check:illustration-variants": "node hairline/check-illustration-variants.mjs",
+    "check:design-systems": "node scripts/check-design-systems.mjs",
+    "prebuild": "npm run check:design-systems && npm run check:illustration-palettes && npm run check:illustration-variants",
+    "audit:source": "python3 scripts/audit-source.py"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.3.0",
@@ -20,7 +25,7 @@
     "locomotive-scroll": "^5.0.1",
     "lottie-web": "^5.13.0",
     "lucide-react": "^1.53.0",
-    "next": "16.4.0",
+    "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "styled-components": "5.3.11",
@@ -32,7 +37,7 @@
     "@types/react-dom": "^19",
     "@types/three": "^0.186.0",
     "eslint": "^9",
-    "eslint-config-next": "16.4.0",
+    "eslint-config-next": "16.4.2",
     "typescript": "^5"
   },
   "overrides": {

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
+import { IllustrationImage as Image } from "@/components/design-system/IllustrationPalette";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -77,10 +77,10 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
         <Image src="/hairline/service-research-hero.svg?v=1" alt="" width={960} height={560} sizes="(max-width: 780px) 100vw, 1240px" unoptimized priority />
       </section>
       <ServiceOfferings items={service?.offerings.length ? service.offerings.map(({ title, body }) => ({ title, description: body })) : undefined} serviceName={service?.name} heading={service?.offeringsHeading || "What we offer"} intro={service?.offeringsIntro} />
-      <ServiceApproach items={service?.inclusions?.length ? service.inclusions : undefined} heading={service?.includedHeading} intro={service?.includedIntro} />
-      <ServiceDecisionStory items={outcomeItems?.length ? outcomeItems : photography.decisions.map((photo, index) => ({ ...auditDecisions[index], ...photo }))} heading={service?.outcomesHeading} intro={service?.outcomesIntro} eyebrow="From scope to outcome" />
+      <ServiceDecisionStory items={outcomeItems?.length ? outcomeItems : photography.decisions.map((photo, index) => ({ ...auditDecisions[index], ...photo }))} heading={service?.outcomesHeading} intro={service?.outcomesIntro} eyebrow="From scope to outcome" patternSeed={`${path}:outcomes`} />
       <ServiceDeliverables items={deliverableItems?.length ? deliverableItems : undefined} heading={service?.deliverablesHeading || "Useful outputs for the next decision."} />
-      <ServiceOurProcess servicePath="ui-ux-design-development/ux-research-design-audit" intro={service?.processIntro} steps={service?.processSteps} />
+      <ServiceApproach items={service?.inclusions?.length ? service.inclusions : undefined} heading={service?.includedHeading} intro={service?.includedIntro} patternSeed={path} />
+      <ServiceOurProcess servicePath={path} steps={service?.processSteps} intro={service?.processIntro} />
       <WorkShowcase />
       <ServiceTestimonials />
       <HomeFaq items={faqItems?.length ? faqItems : undefined} heading={service?.faqHeading || "A few things you may be wondering."} />

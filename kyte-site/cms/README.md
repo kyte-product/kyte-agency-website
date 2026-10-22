@@ -20,3 +20,7 @@ Six role entries are intentionally marked **Placeholder listing**. Their titles,
 `src/lib/sanity.ts` reads the published perspective with five-minute revalidation. Keep drafts and write credentials on the server. Do not put Sanity write credentials in browser code or `NEXT_PUBLIC_*` variables. Verify client claims, outcome figures, image descriptions and service scope before publishing editorial content.
 
 To build or deploy the Studio, set `SANITY_STUDIO_PROJECT_ID=50pibtgs` and `SANITY_STUDIO_DATASET=production` in the deployment environment and run the scripts in `cms/studio/package.json`. Review any schema change against existing drafts and published documents before deploying. The pre-Careers content export is stored outside the repository at `/private/tmp/kyte-sanity-pre-careers-2026-10-11.tar.gz`.
+
+## Content pass and visual systems, 22 October 2026
+
+Use [content population](../docs/content-population.md) for edit locations and [the design-system index](../docs/design-systems/README.md) for template inheritance. The shared four-card process uses mapped processIntroduction/process stage content (the code fields are `processIntro` and `processSteps`) with fallback values. Product illustrations default to the separate blue variant; the original color version is preserved and selectable in all three browser design systems. Palette selection is a preview control, not a CMS content field. Existing published records and slugs are unchanged.

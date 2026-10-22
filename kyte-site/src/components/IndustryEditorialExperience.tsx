@@ -33,17 +33,17 @@ export function IndustryEditorialExperience({ industry }: { industry: IndustryPa
 
     <section className="industry-editorial__section industry-editorial__shell" id="opportunity" aria-labelledby="opportunity-title">
       <div className="industry-editorial__intro"><h2 id="opportunity-title" data-reveal-words><RevealWords text={editorial.opportunityHeading} /></h2><p>{industry.opening}</p></div>
-      <DepartmentCards cards={snapshot.cards} />
+      <DepartmentCards cards={snapshot.cards} patternSeed={industry.slug} />
       <div className="industry-editorial__three">{industry.focus.slice(0, 3).map((item) => <article key={item.title}><h3 data-reveal-words><RevealWords text={item.title} /></h3><p>{item.body}</p></article>)}</div>
     </section>
 
-    <div id="approach"><ServiceDecisionStory heading={industry.focusHeading} intro={industry.focusIntro} items={industry.focus.slice(0, 5)} ctaLabel="Discuss your project" itemsLabel="Industry focus areas" /></div>
+    <div id="approach"><ServiceDecisionStory heading={industry.focusHeading} intro={industry.focusIntro} items={industry.focus.slice(0, 5)} ctaLabel="Discuss your project" itemsLabel="Industry focus areas" patternSeed={`${industry.slug}:focus`} blueOnly animatePattern /></div>
 
     <section className="industry-editorial__statement industry-editorial__shell" aria-label="Brands we have worked with"><ClientBrandTicker title="Brands we have worked with" /></section>
 
     <section className="industry-editorial__section industry-editorial__impact industry-editorial__shell" id="impact" aria-labelledby="impact-title">
       <div className="industry-editorial__impact-story"><h2 id="impact-title" data-reveal-words><RevealWords text={editorial.impactHeading} /></h2><div className="industry-editorial__impact-copy">{editorial.impactCopy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></div>
-      <ImpactCards items={snapshot.metrics} />
+      <ImpactCards items={snapshot.metrics} patternSeed={`${industry.slug}:impact`} />
       <p className="industry-editorial__source">{snapshot.context} Source: <a href={snapshot.sourceUrl} target="_blank" rel="noreferrer">{snapshot.source}</a>.</p>
     </section>
 

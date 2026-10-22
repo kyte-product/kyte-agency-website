@@ -31,9 +31,13 @@
 @media(max-height:700px){.home-project-scroll__stat{--stat-pad:20px}.home-project-scroll__stat strong{font-size:46px}.home-project-scroll__stat h3{font-size:15px;margin-bottom:6px}.home-project-scroll__stat p{margin-top:8px;font-size:var(--type-body)}.home-project-scroll__impact-link{margin-top:12px}.home-project-scroll__stat-note{display:none}}
 @media(prefers-reduced-motion:reduce){.home-project-scroll__stage{position:relative;height:auto;min-height:0;overflow-x:auto}.home-project-scroll__track{will-change:auto}}
 
-/* Short viewports keep the full-height cards readable in a native rail. */
-@media(max-height:700px){
+/* Short viewports and reduced motion use an in-flow heading above the native rail. */
+@media(max-height:700px),(prefers-reduced-motion:reduce){
  .home-project-scroll__stage{position:relative;display:block;height:auto;min-height:0;overflow-x:auto;padding-top:64px}
  .home-project-scroll__heading{position:static;margin:0 calc(var(--page-edge) + var(--section-inset)) 32px}
  .home-project-scroll__track{padding-top:0;padding-bottom:40px;will-change:auto}
 }
+
+/* Supplied 900 × 1200 artwork keeps its full authored 3:4 composition. */
+.home-project-scroll__card{overflow:hidden}
+.home-project-scroll__card img{object-fit:contain}

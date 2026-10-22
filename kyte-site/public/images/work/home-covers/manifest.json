@@ -1,0 +1,42 @@
+[
+  {
+    "source": "6.png",
+    "sha256": "c626f38c2cf91032ea35dfeef7ffea56cf8949a2acad067ee8fdfd80f138f04c",
+    "asset": "/images/work/home-covers/fincart-product.webp",
+    "width": 900,
+    "height": 1200,
+    "bytes": 54448
+  },
+  {
+    "source": "7.png",
+    "sha256": "421e1765bd9517e97a9509f2d9553eacf741f360bb50687d130a5a635cdf218c",
+    "asset": "/images/work/home-covers/maya-launch.webp",
+    "width": 900,
+    "height": 1200,
+    "bytes": 70520
+  },
+  {
+    "source": "8.png",
+    "sha256": "ba10f39f904d1b1507ef569bafafa04df668b66e21ae157995b38306829a5e6e",
+    "asset": "/images/work/home-covers/fincart-website.webp",
+    "width": 900,
+    "height": 1200,
+    "bytes": 77448
+  },
+  {
+    "source": "9.png",
+    "sha256": "e53a351c49ec8320d4f1eab6bd6f980ec0abcd444c70a0a42df2a4ffd7ff3d09",
+    "asset": "/images/work/home-covers/smash-guys.webp",
+    "width": 900,
+    "height": 1200,
+    "bytes": 85300
+  },
+  {
+    "source": "10.png",
+    "sha256": "931c1f9505975bdf45bf52ac639ba6636fd1242dc67be18bd56ca020cd9b030f",
+    "asset": "/images/work/home-covers/dr-prashant-katkol.webp",
+    "width": 900,
+    "height": 1200,
+    "bytes": 73920
+  }
+]

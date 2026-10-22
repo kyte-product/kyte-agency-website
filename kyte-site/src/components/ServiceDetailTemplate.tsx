@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { IllustrationImage as Image } from "./design-system/IllustrationPalette";
 import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
@@ -50,10 +50,10 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
       ? <div className="service-hero-photo service-hero-photo--placeholder" aria-hidden="true" />
       : <ServiceHeroPhoto label={`Illustrative photography for ${service.name}`} slides={photography.stage} />}
     <ServiceOfferings items={service.offerings.map((item) => ({ title: item.title, description: item.body }))} serviceName={service.name} heading={service.offeringsHeading} intro={service.offeringsIntro} />
-    <ServiceApproach items={inclusions} heading={service.includedHeading} intro={service.includedIntro} />
-    <ServiceDecisionStory items={decisions} heading={service.outcomesHeading} intro={service.outcomesIntro} eyebrow="From scope to outcome" />
+    <ServiceDecisionStory items={decisions} heading={service.outcomesHeading} intro={service.outcomesIntro} eyebrow="From scope to outcome" patternSeed={`${service.path}:outcomes`} />
     <ServiceDeliverables items={service.deliverables} heading={service.deliverablesHeading || "Useful outputs for the next decision."} />
-    <ServiceOurProcess servicePath={service.path} intro={service.processIntro || `We shape each ${service.name.toLowerCase()} engagement around the brief, then move through discovery, definition, development, and delivery with clear reviews along the way.`} steps={service.processSteps} />
+    <ServiceApproach items={inclusions} heading={service.includedHeading} intro={service.includedIntro} patternSeed={service.path} />
+    <ServiceOurProcess servicePath={service.path} steps={service.processSteps} intro={service.processIntro} />
     <WorkShowcase />
     <ServiceTestimonials />
     <HomeFaq items={service.faqs.map((item) => ({ question: item.title, answer: item.body }))} heading={service.faqHeading || `Questions about ${service.name.toLowerCase()}.`} />

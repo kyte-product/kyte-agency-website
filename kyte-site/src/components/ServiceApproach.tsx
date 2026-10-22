@@ -28,12 +28,12 @@ export const auditInclusions = [
   },
 ] as const;
 
-function ApproachMark({ symbol, active }: { symbol: number; active: boolean }) {
+function ApproachMark({ symbol, active, seed }: { symbol: number; active: boolean; seed: string }) {
   const shapes = ["checker", "pinwheel", "quarters", "diamond"] as const;
-  return <DotPattern shape={shapes[symbol % shapes.length]} tone={active ? "white" : "brand"} className="service-approach__mark" />;
+  return <DotPattern shape={shapes[symbol % shapes.length]} tone={active ? "white" : "brand"} seed={seed} className="service-approach__mark" motifSlot={symbol} />;
 }
 
-export function ServiceApproach({ items = auditInclusions, heading = "A clearer view of what to improve.", intro = "A focused research and audit engagement connects evidence to action, giving your team a clear view of what users need, where they struggle, and which improvements to take forward." }: { items?: readonly { symbol: number; title: string; description: string }[]; heading?: string; intro?: string }) {
+export function ServiceApproach({ items = auditInclusions, heading = "A clearer view of what to improve.", intro = "A focused research and audit engagement connects evidence to action, giving your team a clear view of what users need, where they struggle, and which improvements to take forward.", patternSeed = "service-approach" }: { items?: readonly { symbol: number; title: string; description: string }[]; heading?: string; intro?: string; patternSeed?: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return <section className="service-approach" aria-labelledby="service-approach-title">
@@ -47,7 +47,7 @@ export function ServiceApproach({ items = auditInclusions, heading = "A clearer 
           const isActive = activeIndex === index;
           return <article className={`service-approach__card${isActive ? " is-active" : ""}`} key={inclusion.title} onMouseEnter={() => setActiveIndex(index)}>
             <div className="service-approach__illustration">
-              <ApproachMark symbol={inclusion.symbol} active={isActive} />
+              <ApproachMark symbol={inclusion.symbol} active={isActive} seed={`${patternSeed}:${inclusion.title}`} />
             </div>
             <div className="service-approach__card-content">
               <button className="service-approach__toggle" type="button" aria-expanded={isActive} aria-controls={`service-approach-copy-${index}`} onClick={() => setActiveIndex(index)} onFocus={() => setActiveIndex(index)}>

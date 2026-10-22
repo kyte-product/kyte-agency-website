@@ -1,0 +1,3133 @@
+{
+  "checks": [
+    {
+      "name": "DS default 393 /design-system",
+      "pass": true,
+      "h1": 1,
+      "tabs": 3,
+      "pressed": "Brand blue",
+      "art": [
+        "/hairline/brand/product-complex-system.svg",
+        "/hairline/brand/product-stage-commerce.svg",
+        "/hairline/brand/product-mobile-app.svg"
+      ],
+      "pageWidth": 393,
+      "figures": 3
+    },
+    {
+      "name": "DS original 393 /design-system",
+      "pass": true,
+      "pressed": "Original color",
+      "original": true
+    },
+    {
+      "name": "DS default 393 /design-system/branding",
+      "pass": true,
+      "h1": 1,
+      "tabs": 3,
+      "pressed": "Brand blue",
+      "art": [
+        "/hairline/brand/product-complex-system.svg",
+        "/hairline/brand/product-stage-commerce.svg",
+        "/hairline/brand/product-mobile-app.svg"
+      ],
+      "pageWidth": 393,
+      "figures": 3
+    },
+    {
+      "name": "DS original 393 /design-system/branding",
+      "pass": true,
+      "pressed": "Original color",
+      "original": true
+    },
+    {
+      "name": "DS default 393 /design-system/product",
+      "pass": true,
+      "h1": 1,
+      "tabs": 3,
+      "pressed": "Brand blue",
+      "art": [
+        "/hairline/brand/product-experience-embed.html",
+        "/hairline/brand/product-dashboard-laptop-embed.html",
+        "/hairline/brand/product-complex-system.svg",
+        "/hairline/brand/product-evolving-experience.svg",
+        "/hairline/brand/product-stage-new.svg",
+        "/hairline/brand/product-stage-growth.svg",
+        "/hairline/brand/product-stage-established.svg",
+        "/hairline/brand/product-stage-tools.svg",
+        "/hairline/brand/product-stage-commerce.svg",
+        "/hairline/brand/product-stage-web.svg",
+        "/hairline/brand/product-stage-systems.svg",
+        "/hairline/brand/product-stage-brands.svg",
+        "/hairline/brand/product-research-audit.svg",
+        "/hairline/brand/product-website-design.svg",
+        "/hairline/brand/product-mobile-app.svg",
+        "/hairline/brand/product-saas-web-app.svg",
+        "/hairline/brand/product-commerce.svg",
+        "/hairline/brand/product-onboarding.svg",
+        "/hairline/brand/product-navigation.svg",
+        "/hairline/brand/product-workflow-hub.svg",
+        "/hairline/brand/product-content-journey.svg",
+        "/hairline/brand/product-design-patterns.svg",
+        "/hairline/brand/product-responsive-experience.svg"
+      ],
+      "pageWidth": 393,
+      "figures": 24
+    },
+    {
+      "name": "DS original 393 /design-system/product",
+      "pass": true,
+      "pressed": "Original color",
+      "original": true
+    },
+    {
+      "name": "DS default 1440 /design-system",
+      "pass": true,
+      "h1": 1,
+      "tabs": 3,
+      "pressed": "Brand blue",
+      "art": [
+        "/hairline/brand/product-complex-system.svg",
+        "/hairline/brand/product-stage-commerce.svg",
+        "/hairline/brand/product-mobile-app.svg"
+      ],
+      "pageWidth": 1440,
+      "figures": 3
+    },
+    {
+      "name": "DS original 1440 /design-system",
+      "pass": true,
+      "pressed": "Original color",
+      "original": true
+    },
+    {
+      "name": "DS default 1440 /design-system/branding",
+      "pass": true,
+      "h1": 1,
+      "tabs": 3,
+      "pressed": "Brand blue",
+      "art": [
+        "/hairline/brand/product-complex-system.svg",
+        "/hairline/brand/product-stage-commerce.svg",
+        "/hairline/brand/product-mobile-app.svg"
+      ],
+      "pageWidth": 1440,
+      "figures": 3
+    },
+    {
+      "name": "DS original 1440 /design-system/branding",
+      "pass": true,
+      "pressed": "Original color",
+      "original": true
+    },
+    {
+      "name": "DS default 1440 /design-system/product",
+      "pass": true,
+      "h1": 1,
+      "tabs": 3,
+      "pressed": "Brand blue",
+      "art": [
+        "/hairline/brand/product-experience-embed.html",
+        "/hairline/brand/product-dashboard-laptop-embed.html",
+        "/hairline/brand/product-complex-system.svg",
+        "/hairline/brand/product-evolving-experience.svg",
+        "/hairline/brand/product-stage-new.svg",
+        "/hairline/brand/product-stage-growth.svg",
+        "/hairline/brand/product-stage-established.svg",
+        "/hairline/brand/product-stage-tools.svg",
+        "/hairline/brand/product-stage-commerce.svg",
+        "/hairline/brand/product-stage-web.svg",
+        "/hairline/brand/product-stage-systems.svg",
+        "/hairline/brand/product-stage-brands.svg",
+        "/hairline/brand/product-research-audit.svg",
+        "/hairline/brand/product-website-design.svg",
+        "/hairline/brand/product-mobile-app.svg",
+        "/hairline/brand/product-saas-web-app.svg",
+        "/hairline/brand/product-commerce.svg",
+        "/hairline/brand/product-onboarding.svg",
+        "/hairline/brand/product-navigation.svg",
+        "/hairline/brand/product-workflow-hub.svg",
+        "/hairline/brand/product-content-journey.svg",
+        "/hairline/brand/product-design-patterns.svg",
+        "/hairline/brand/product-responsive-experience.svg"
+      ],
+      "pageWidth": 1440,
+      "figures": 24
+    },
+    {
+      "name": "DS original 1440 /design-system/product",
+      "pass": true,
+      "pressed": "Original color",
+      "original": true
+    },
+    {
+      "name": "Palette follows client navigation",
+      "pass": true,
+      "route": "/ui-ux-design-development",
+      "system": "product",
+      "hero": "/hairline/product-experience-embed.html"
+    },
+    {
+      "name": "Full reload defaults to brand",
+      "pass": true,
+      "hero": "/hairline/brand/product-experience-embed.html"
+    },
+    {
+      "name": "Service structure 393 /branding-marketing/brand-strategy-identity",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/brand-strategy-identity 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/brand-strategy-identity 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/brand-strategy-identity 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/brand-strategy-identity 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/brand-strategy-identity 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /branding-marketing/brand-strategy-identity",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 393 /branding-marketing/graphic-design",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/graphic-design 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/graphic-design 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/graphic-design 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/graphic-design 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/graphic-design 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /branding-marketing/graphic-design",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 393 /branding-marketing/seo-ai-search-optimisation",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/seo-ai-search-optimisation 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/seo-ai-search-optimisation 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/seo-ai-search-optimisation 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/seo-ai-search-optimisation 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/seo-ai-search-optimisation 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /branding-marketing/seo-ai-search-optimisation",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 393 /branding-marketing/social-media-marketing",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/social-media-marketing 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/social-media-marketing 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/social-media-marketing 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/social-media-marketing 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/social-media-marketing 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /branding-marketing/social-media-marketing",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 393 /branding-marketing/video-production-motion-graphics",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/video-production-motion-graphics 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/video-production-motion-graphics 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/video-production-motion-graphics 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/video-production-motion-graphics 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /branding-marketing/video-production-motion-graphics 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /branding-marketing/video-production-motion-graphics",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 393 /ui-ux-design-development/ecommerce-shopify-websites",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ecommerce-shopify-websites 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ecommerce-shopify-websites 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ecommerce-shopify-websites 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ecommerce-shopify-websites 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ecommerce-shopify-websites 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /ui-ux-design-development/ecommerce-shopify-websites",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 393 /ui-ux-design-development/mobile-app-design",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/mobile-app-design 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/mobile-app-design 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/mobile-app-design 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/mobile-app-design 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/mobile-app-design 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /ui-ux-design-development/mobile-app-design",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 393 /ui-ux-design-development/saas-web-app-design",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/saas-web-app-design 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/saas-web-app-design 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/saas-web-app-design 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/saas-web-app-design 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/saas-web-app-design 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /ui-ux-design-development/saas-web-app-design",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 393 /ui-ux-design-development/ux-research-design-audit",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ux-research-design-audit 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ux-research-design-audit 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ux-research-design-audit 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ux-research-design-audit 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/ux-research-design-audit 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /ui-ux-design-development/ux-research-design-audit",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 393 /ui-ux-design-development/website-design-development",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 393,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 393,
+      "scrollWidth": 393
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/website-design-development 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/website-design-development 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/website-design-development 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/website-design-development 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 393 /ui-ux-design-development/website-design-development 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Mobile process /ui-ux-design-development/website-design-development",
+      "pass": true,
+      "active": 1,
+      "height": 588,
+      "scrollHeight": 588,
+      "overflow": "visible"
+    },
+    {
+      "name": "Service structure 810 /branding-marketing/brand-strategy-identity",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/brand-strategy-identity 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/brand-strategy-identity 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/brand-strategy-identity 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/brand-strategy-identity 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/brand-strategy-identity 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/brand-strategy-identity 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/brand-strategy-identity 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/brand-strategy-identity 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/brand-strategy-identity 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/brand-strategy-identity",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 810 /branding-marketing/graphic-design",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/graphic-design 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/graphic-design 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/graphic-design 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/graphic-design 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/graphic-design 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/graphic-design 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 588,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/graphic-design 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 588,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/graphic-design 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 588,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/graphic-design 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 588,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/graphic-design",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 810 /branding-marketing/seo-ai-search-optimisation",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/seo-ai-search-optimisation 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/seo-ai-search-optimisation 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/seo-ai-search-optimisation 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/seo-ai-search-optimisation 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/seo-ai-search-optimisation 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/seo-ai-search-optimisation 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/seo-ai-search-optimisation 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/seo-ai-search-optimisation 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/seo-ai-search-optimisation 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/seo-ai-search-optimisation",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 810 /branding-marketing/social-media-marketing",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/social-media-marketing 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/social-media-marketing 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/social-media-marketing 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/social-media-marketing 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/social-media-marketing 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/social-media-marketing 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/social-media-marketing 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/social-media-marketing 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/social-media-marketing 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/social-media-marketing",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 810 /branding-marketing/video-production-motion-graphics",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/video-production-motion-graphics 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/video-production-motion-graphics 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/video-production-motion-graphics 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/video-production-motion-graphics 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /branding-marketing/video-production-motion-graphics 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/video-production-motion-graphics 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/video-production-motion-graphics 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/video-production-motion-graphics 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/video-production-motion-graphics 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/video-production-motion-graphics",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 810 /ui-ux-design-development/ecommerce-shopify-websites",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ecommerce-shopify-websites 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ecommerce-shopify-websites 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ecommerce-shopify-websites 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ecommerce-shopify-websites 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ecommerce-shopify-websites 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ecommerce-shopify-websites 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ecommerce-shopify-websites 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ecommerce-shopify-websites 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ecommerce-shopify-websites 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/ecommerce-shopify-websites",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 810 /ui-ux-design-development/mobile-app-design",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/mobile-app-design 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/mobile-app-design 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/mobile-app-design 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/mobile-app-design 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/mobile-app-design 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/mobile-app-design 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 588,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/mobile-app-design 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 588,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/mobile-app-design 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 588,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/mobile-app-design 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 588,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/mobile-app-design",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 810 /ui-ux-design-development/saas-web-app-design",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/saas-web-app-design 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/saas-web-app-design 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/saas-web-app-design 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/saas-web-app-design 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/saas-web-app-design 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/saas-web-app-design 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/saas-web-app-design 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/saas-web-app-design 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/saas-web-app-design 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/saas-web-app-design",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 810 /ui-ux-design-development/ux-research-design-audit",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ux-research-design-audit 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ux-research-design-audit 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ux-research-design-audit 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ux-research-design-audit 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/ux-research-design-audit 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ux-research-design-audit 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ux-research-design-audit 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ux-research-design-audit 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ux-research-design-audit 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/ux-research-design-audit",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 810 /ui-ux-design-development/website-design-development",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 810,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 810,
+      "scrollWidth": 993
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/website-design-development 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/website-design-development 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/website-design-development 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/website-design-development 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 810 /ui-ux-design-development/website-design-development 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/website-design-development 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 425,
+      "railHeight": 425,
+      "scrollHeight": 425,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/website-design-development 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 398,
+      "railHeight": 480,
+      "scrollHeight": 480,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/website-design-development 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 374,
+      "railHeight": 538,
+      "scrollHeight": 538,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/website-design-development 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 374,
+      "railHeight": 620,
+      "scrollHeight": 620,
+      "scroll": 0,
+      "width": 993,
+      "sectionHeight": 615,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/website-design-development",
+      "pass": true,
+      "firstInset": 36,
+      "headingInset": 36,
+      "lastInset": 35.671875,
+      "gaps": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "Service structure 1440 /branding-marketing/brand-strategy-identity",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/brand-strategy-identity 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/brand-strategy-identity 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/brand-strategy-identity 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/brand-strategy-identity 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/brand-strategy-identity 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/brand-strategy-identity 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/brand-strategy-identity 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/brand-strategy-identity 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/brand-strategy-identity 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/brand-strategy-identity",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Service structure 1440 /branding-marketing/graphic-design",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/graphic-design 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/graphic-design 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/graphic-design 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/graphic-design 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/graphic-design 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/graphic-design 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/graphic-design 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/graphic-design 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/graphic-design 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/graphic-design",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Service structure 1440 /branding-marketing/seo-ai-search-optimisation",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/seo-ai-search-optimisation 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/seo-ai-search-optimisation 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/seo-ai-search-optimisation 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/seo-ai-search-optimisation 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/seo-ai-search-optimisation 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/seo-ai-search-optimisation 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/seo-ai-search-optimisation 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/seo-ai-search-optimisation 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/seo-ai-search-optimisation 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/seo-ai-search-optimisation",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Service structure 1440 /branding-marketing/social-media-marketing",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/social-media-marketing 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/social-media-marketing 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/social-media-marketing 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/social-media-marketing 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/social-media-marketing 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/social-media-marketing 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/social-media-marketing 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/social-media-marketing 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/social-media-marketing 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/social-media-marketing",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Service structure 1440 /branding-marketing/video-production-motion-graphics",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/video-production-motion-graphics 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/video-production-motion-graphics 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/video-production-motion-graphics 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/video-production-motion-graphics 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /branding-marketing/video-production-motion-graphics 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /branding-marketing/video-production-motion-graphics 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/video-production-motion-graphics 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/video-production-motion-graphics 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /branding-marketing/video-production-motion-graphics 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /branding-marketing/video-production-motion-graphics",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Service structure 1440 /ui-ux-design-development/ecommerce-shopify-websites",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ecommerce-shopify-websites 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ecommerce-shopify-websites 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ecommerce-shopify-websites 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ecommerce-shopify-websites 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ecommerce-shopify-websites 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ecommerce-shopify-websites 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ecommerce-shopify-websites 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ecommerce-shopify-websites 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ecommerce-shopify-websites 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/ecommerce-shopify-websites",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Service structure 1440 /ui-ux-design-development/mobile-app-design",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/mobile-app-design 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/mobile-app-design 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/mobile-app-design 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/mobile-app-design 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/mobile-app-design 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/mobile-app-design 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/mobile-app-design 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/mobile-app-design 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/mobile-app-design 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/mobile-app-design",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Service structure 1440 /ui-ux-design-development/saas-web-app-design",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/saas-web-app-design 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/saas-web-app-design 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/saas-web-app-design 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/saas-web-app-design 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/saas-web-app-design 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/saas-web-app-design 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/saas-web-app-design 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/saas-web-app-design 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/saas-web-app-design 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/saas-web-app-design",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Service structure 1440 /ui-ux-design-development/ux-research-design-audit",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ux-research-design-audit 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ux-research-design-audit 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ux-research-design-audit 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ux-research-design-audit 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/ux-research-design-audit 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ux-research-design-audit 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ux-research-design-audit 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ux-research-design-audit 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/ux-research-design-audit 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/ux-research-design-audit",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Service structure 1440 /ui-ux-design-development/website-design-development",
+      "pass": true,
+      "count": 4,
+      "pageWidth": 1440,
+      "labels": [
+        "Discover",
+        "Define",
+        "Develop",
+        "Deliver"
+      ],
+      "palette": [
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)",
+        "rgb(2, 73, 217)",
+        "rgb(5, 5, 5)"
+      ],
+      "railWidth": 1440,
+      "scrollWidth": 1676
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/website-design-development 0",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/website-design-development 1",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/website-design-development 2",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/website-design-development 3",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Outcome 1440 /ui-ux-design-development/website-design-development 4",
+      "pass": true,
+      "selected": "true"
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/website-design-development 0",
+      "pass": true,
+      "index": "0",
+      "active": true,
+      "height": 360,
+      "railHeight": 360,
+      "scrollHeight": 360,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/website-design-development 1",
+      "pass": true,
+      "index": "1",
+      "active": true,
+      "height": 360,
+      "railHeight": 446,
+      "scrollHeight": 446,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/website-design-development 2",
+      "pass": true,
+      "index": "2",
+      "active": true,
+      "height": 360,
+      "railHeight": 533,
+      "scrollHeight": 533,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.796875,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--white service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process hover /ui-ux-design-development/website-design-development 3",
+      "pass": true,
+      "index": "3",
+      "active": true,
+      "height": 360,
+      "railHeight": 619,
+      "scrollHeight": 619,
+      "scroll": 0,
+      "width": 1676,
+      "sectionHeight": 694.78125,
+      "pattern": "dot-pattern dot-pattern--kite dot-pattern--charcoal service-process__step-pattern",
+      "copyFits": true
+    },
+    {
+      "name": "Process rail insets /ui-ux-design-development/website-design-development",
+      "pass": true,
+      "firstInset": 80,
+      "headingInset": 80,
+      "lastInset": 79.703125,
+      "gaps": [
+        8.390625,
+        8.40625,
+        8.390625
+      ]
+    },
+    {
+      "name": "Article topics scroll and mark",
+      "pass": true,
+      "asideOverflow": "visible",
+      "navOverflow": "visible",
+      "listOverflow": "auto",
+      "mark": true,
+      "pageWidth": 1440
+    },
+    {
+      "name": "Contact empty validation and labels",
+      "pass": true,
+      "valid": false,
+      "fields": [
+        {
+          "name": "name",
+          "label": true
+        },
+        {
+          "name": "email",
+          "label": true
+        },
+        {
+          "name": "company",
+          "label": true
+        },
+        {
+          "name": "service",
+          "label": true
+        },
+        {
+          "name": "timeline",
+          "label": true
+        },
+        {
+          "name": "project",
+          "label": true
+        }
+      ]
+    },
+    {
+      "name": "Uncaught browser exceptions",
+      "pass": true,
+      "errors": []
+    }
+  ],
+  "performance": [
+    {
+      "route": "/",
+      "lcp": 44,
+      "cls": 0.004497540509259259,
+      "longTasks": 0,
+      "dom": 3262,
+      "bytes": 979281,
+      "jsBytes": 318033,
+      "domContentLoaded": 48.199999928474426
+    },
+    {
+      "route": "/branding-marketing",
+      "lcp": 60,
+      "cls": 0.014019095045385373,
+      "longTasks": 0,
+      "dom": 757,
+      "bytes": 2206868,
+      "jsBytes": 249722,
+      "domContentLoaded": 34.200000047683716
+    },
+    {
+      "route": "/ui-ux-design-development",
+      "lcp": 432,
+      "cls": 0,
+      "longTasks": 0,
+      "dom": 2172,
+      "bytes": 816050,
+      "jsBytes": 289512,
+      "domContentLoaded": 402.39999997615814
+    },
+    {
+      "route": "/branding-marketing/social-media-marketing",
+      "lcp": 48,
+      "cls": 0.0020649169921874997,
+      "longTasks": 0,
+      "dom": 3073,
+      "bytes": 536373,
+      "jsBytes": 286544,
+      "domContentLoaded": 45.299999952316284
+    },
+    {
+      "route": "/industries/saas-startups",
+      "lcp": 60,
+      "cls": 0,
+      "longTasks": 0,
+      "dom": 4197,
+      "bytes": 544853,
+      "jsBytes": 291842,
+      "domContentLoaded": 35.700000047683716
+    },
+    {
+      "route": "/work",
+      "lcp": 356,
+      "cls": 0,
+      "longTasks": 0,
+      "dom": 1547,
+      "bytes": 891285,
+      "jsBytes": 276590,
+      "domContentLoaded": 20.299999952316284
+    },
+    {
+      "route": "/work/fincart",
+      "lcp": 140,
+      "cls": 0.0020755398722833076,
+      "longTasks": 0,
+      "dom": 2683,
+      "bytes": 7372609,
+      "jsBytes": 281024,
+      "domContentLoaded": 61.10000002384186
+    },
+    {
+      "route": "/insights",
+      "lcp": 564,
+      "cls": 0.001859354102366255,
+      "longTasks": 0,
+      "dom": 1465,
+      "bytes": 514440,
+      "jsBytes": 276590,
+      "domContentLoaded": 17.700000047683716
+    },
+    {
+      "route": "/about",
+      "lcp": 80,
+      "cls": 0,
+      "longTasks": 0,
+      "dom": 1534,
+      "bytes": 4176040,
+      "jsBytes": 276590,
+      "domContentLoaded": 29
+    },
+    {
+      "route": "/careers",
+      "lcp": 36,
+      "cls": 0.02097788450976295,
+      "longTasks": 0,
+      "dom": 1504,
+      "bytes": 779234,
+      "jsBytes": 276590,
+      "domContentLoaded": 28.800000071525574
+    },
+    {
+      "route": "/contact",
+      "lcp": 88,
+      "cls": 0.0034176008310828187,
+      "longTasks": 0,
+      "dom": 1501,
+      "bytes": 613664,
+      "jsBytes": 276590,
+      "domContentLoaded": 28.59999990463257
+    },
+    {
+      "route": "/design-system/product",
+      "lcp": 40,
+      "cls": 0.005818202860430597,
+      "longTasks": 0,
+      "dom": 732,
+      "bytes": 593017,
+      "jsBytes": 307746,
+      "domContentLoaded": 12.900000095367432
+    }
+  ]
+}

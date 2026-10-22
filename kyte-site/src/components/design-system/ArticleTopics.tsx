@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DotPattern } from "../ui/DotPattern";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { DotPattern } from "../ui/DotPattern";
 
 type Section = { id: string; title: string };
 
@@ -36,7 +36,7 @@ export function ArticleTopics({ sections }: { sections: Section[] }) {
 
   return <aside className="editorial-detail__topics"><nav aria-label="Article topics">
     <div className="editorial-detail__topics-cta">
-      <div className="editorial-detail__topics-cta-content"><div className="editorial-detail__topics-cta-dots"><DotPattern shape="discover" tone="charcoal" /></div><strong>Have a project in mind?</strong><p>Let’s shape the next step for your product or brand.</p><Link className="kyte-button" href="/contact">Contact Us <ChevronRight size={16} aria-hidden="true" /></Link></div>
+      <div className="editorial-detail__topics-cta-content"><div className="editorial-detail__topics-cta-mark"><DotPattern shape="kite" tone="charcoal" /></div><strong>Have a project in mind?</strong><p>Let’s shape the next step for your product or brand.</p><Link className="kyte-button" href="/contact">Contact Us <ChevronRight size={16} aria-hidden="true" /></Link></div>
     </div>
     <ol>{sections.map((section) => <li key={section.id}><a href={`#${section.id}`} aria-current={activeId === section.id ? "location" : undefined}>{section.title}</a></li>)}</ol>
   </nav></aside>;

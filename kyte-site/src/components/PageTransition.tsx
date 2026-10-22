@@ -4,6 +4,8 @@ import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { PageTransition as TransitionSurface } from "./ui/page-transition";
 
+import { designSystemForRoute } from "@/data/designSystems";
+
 type Phase = "idle" | "covering" | "revealing";
 const NAVIGATION_TIMEOUT = 10000;
 
@@ -19,6 +21,7 @@ export function PageTransition() {
 
   useLayoutEffect(() => {
     document.documentElement.dataset.page = pathname;
+    document.documentElement.dataset.designSystem = designSystemForRoute(pathname);
     document.documentElement.dataset.cornerScope = pathname === "/branding-marketing" ? "branding" : "compact";
   }, [pathname]);
 

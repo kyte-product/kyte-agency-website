@@ -1,0 +1,229 @@
+[
+  {
+    "name": "Supplied covers 320",
+    "pass": true,
+    "pageWidth": 320,
+    "covers": [
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Ffincart-product.webp&w=3840&q=75",
+        "alt": "Fincart financial planning product on a phone",
+        "loaded": true,
+        "ratio": 0.7500223313979455,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fmaya-launch.webp&w=3840&q=75",
+        "alt": "Maya launch campaign on a desktop display",
+        "loaded": true,
+        "ratio": 0.7500223313979455,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Ffincart-website.webp&w=3840&q=75",
+        "alt": "Fincart website on a tablet",
+        "loaded": true,
+        "ratio": 0.7500223313979455,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fsmash-guys.webp&w=3840&q=75",
+        "alt": "Smash Guys campaign with branded packaging",
+        "loaded": true,
+        "ratio": 0.7500223313979455,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fdr-prashant-katkol.webp&w=3840&q=75",
+        "alt": "Dr. Prashant Katkol social campaign portrait",
+        "loaded": true,
+        "ratio": 0.7500223313979455,
+        "fit": "contain"
+      }
+    ]
+  },
+  {
+    "name": "Supplied covers 393",
+    "pass": true,
+    "pageWidth": 393,
+    "covers": [
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Ffincart-product.webp&w=3840&q=75",
+        "alt": "Fincart financial planning product on a phone",
+        "loaded": true,
+        "ratio": 0.7500181831405921,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fmaya-launch.webp&w=3840&q=75",
+        "alt": "Maya launch campaign on a desktop display",
+        "loaded": true,
+        "ratio": 0.7500181831405921,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Ffincart-website.webp&w=3840&q=75",
+        "alt": "Fincart website on a tablet",
+        "loaded": true,
+        "ratio": 0.7500181831405921,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fsmash-guys.webp&w=3840&q=75",
+        "alt": "Smash Guys campaign with branded packaging",
+        "loaded": true,
+        "ratio": 0.7500181831405921,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fdr-prashant-katkol.webp&w=3840&q=75",
+        "alt": "Dr. Prashant Katkol social campaign portrait",
+        "loaded": true,
+        "ratio": 0.7500181831405921,
+        "fit": "contain"
+      }
+    ]
+  },
+  {
+    "name": "Supplied covers 810",
+    "pass": true,
+    "pageWidth": 810,
+    "covers": [
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Ffincart-product.webp&w=3840&q=75",
+        "alt": "Fincart financial planning product on a phone",
+        "loaded": true,
+        "ratio": 0.7500086120775776,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fmaya-launch.webp&w=3840&q=75",
+        "alt": "Maya launch campaign on a desktop display",
+        "loaded": true,
+        "ratio": 0.7500086120775776,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Ffincart-website.webp&w=3840&q=75",
+        "alt": "Fincart website on a tablet",
+        "loaded": true,
+        "ratio": 0.7500086120775776,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fsmash-guys.webp&w=3840&q=75",
+        "alt": "Smash Guys campaign with branded packaging",
+        "loaded": true,
+        "ratio": 0.7500086120775776,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fdr-prashant-katkol.webp&w=3840&q=75",
+        "alt": "Dr. Prashant Katkol social campaign portrait",
+        "loaded": true,
+        "ratio": 0.7500086120775776,
+        "fit": "contain"
+      }
+    ]
+  },
+  {
+    "name": "Supplied covers 1440",
+    "pass": true,
+    "pageWidth": 1440,
+    "covers": [
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Ffincart-product.webp&w=3840&q=75",
+        "alt": "Fincart financial planning product on a phone",
+        "loaded": true,
+        "ratio": 0.75,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fmaya-launch.webp&w=3840&q=75",
+        "alt": "Maya launch campaign on a desktop display",
+        "loaded": true,
+        "ratio": 0.75,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Ffincart-website.webp&w=3840&q=75",
+        "alt": "Fincart website on a tablet",
+        "loaded": true,
+        "ratio": 0.75,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fsmash-guys.webp&w=3840&q=75",
+        "alt": "Smash Guys campaign with branded packaging",
+        "loaded": true,
+        "ratio": 0.75,
+        "fit": "contain"
+      },
+      {
+        "src": "/_next/image?url=%2Fimages%2Fwork%2Fhome-covers%2Fdr-prashant-katkol.webp&w=3840&q=75",
+        "alt": "Dr. Prashant Katkol social campaign portrait",
+        "loaded": true,
+        "ratio": 0.75,
+        "fit": "contain"
+      }
+    ]
+  },
+  {
+    "name": "Mobile menu opens",
+    "pass": true,
+    "open": true,
+    "expanded": "true"
+  },
+  {
+    "name": "Mobile menu Escape",
+    "pass": true,
+    "open": false
+  },
+  {
+    "name": "Animated client navigation /branding-marketing",
+    "pass": true,
+    "path": "/branding-marketing",
+    "system": "branding",
+    "transition": false,
+    "width": 1440,
+    "bodyOverflow": "visible"
+  },
+  {
+    "name": "Animated client navigation /ui-ux-design-development",
+    "pass": true,
+    "path": "/ui-ux-design-development",
+    "system": "product",
+    "transition": false,
+    "width": 1440,
+    "bodyOverflow": "visible"
+  },
+  {
+    "name": "Animated client navigation /branding-marketing/social-media-marketing",
+    "pass": true,
+    "path": "/branding-marketing/social-media-marketing",
+    "system": "website",
+    "transition": false,
+    "width": 1440,
+    "bodyOverflow": "visible"
+  },
+  {
+    "name": "Animated client navigation /",
+    "pass": true,
+    "path": "/",
+    "system": "website",
+    "transition": false,
+    "width": 1440,
+    "bodyOverflow": "visible"
+  },
+  {
+    "name": "Browser Back restores service system",
+    "pass": true,
+    "path": "/branding-marketing/social-media-marketing",
+    "system": "website",
+    "transition": false
+  },
+  {
+    "name": "Uncaught exceptions",
+    "pass": true,
+    "errors": []
+  }
+]
