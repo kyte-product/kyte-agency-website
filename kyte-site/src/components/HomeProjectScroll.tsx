@@ -1,10 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { ImpactCards } from "./ImpactCards";
 import "./HomeProjectScroll.css";
 
-const projectPlaceholderCount = 5;
+const projectCovers = [
+  ["6-fincart-product", "Fincart financial planning product on a phone"],
+  ["7-maya-launch", "Maya launch campaign on a desktop display"],
+  ["8-fincart-website", "Fincart website on a tablet"],
+  ["9-smash-guys", "Smash Guys campaign with branded packaging"],
+  ["10-dr-prashant-katkol", "Dr. Prashant Katkol social campaign portrait"],
+] as const;
 
 export function HomeProjectScroll() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -54,7 +61,9 @@ export function HomeProjectScroll() {
     <div className="home-project-scroll__stage" ref={stageRef} data-site-reveal-ignore>
       <h2 className="home-project-scroll__heading" id="home-project-scroll-title">Selected Work</h2>
       <div className="home-project-scroll__track" ref={trackRef}>
-        {Array.from({ length: projectPlaceholderCount }, (_, index) => <div className="home-project-scroll__card" key={index} aria-hidden="true" />)}
+        {projectCovers.map(([name, alt]) => <div className="home-project-scroll__card" key={name}>
+          <Image src={`/images/work/home-covers/${name}.webp`} alt={alt} fill sizes="(max-width: 600px) 82vw, (max-width: 1100px) 42vw, 540px" />
+        </div>)}
         <div className="home-project-scroll__impact" role="group" aria-label="Kyte by the numbers">
           <ImpactCards />
         </div>

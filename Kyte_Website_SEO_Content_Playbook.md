@@ -209,3 +209,8 @@ The branding cluster landing page is reset to the standard shared shell with a t
 ## 22 October 2026 landing-page content placement
 
 Local implementation for review: Home uses five portrait project links plus a sixth impact card in a scroll-driven rail. Keep project names and existing service categories inside the cards, with descriptive image alt text and accessible links. Reuse existing metrics without adding new outcome claims. The approach introduction belongs to the Product Design landing page, after Selected Work. General FAQs and the existing CMS-backed Design News carousel belong to Branding, after the service directory and before the closing scroll sequence. Product keeps its specialist FAQ. These section moves do not change route ownership, page metadata or service keyword assignments.
+
+
+## Current implementation and content entry, 22 October 2026
+
+Use `kyte-site/docs/content-population.md` for CMS fields and source locations. Three noindex internal documentation routes are `/design-system`, `/design-system/branding` and `/design-system/product`; these have no new public search intent. Their written contracts live in `kyte-site/docs/design-systems/`. Keep existing content URLs and slugs stable. Template verification and preview publication do not replace final editorial, proof or public indexing approval.

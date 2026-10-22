@@ -5,11 +5,11 @@ import { DotPattern } from "./ui/DotPattern";
 import "./HomeProjectScroll.css";
 import "./ImpactCards.css";
 
-export function ImpactCards({ items }: { items?: IndustryMetric[] }) {
+export function ImpactCards({ items, patternSeed = "impact-cards" }: { items?: IndustryMetric[]; patternSeed?: string }) {
   if (items) return <div className="impact-cards-row" role="group" aria-label="Industry statistics" tabIndex={0}>
     {items.map((item, index) => <article key={item.label} className={`home-project-scroll__stat home-project-scroll__stat--${["projects", "clients", "views", "impressions"][index % 4]}`}>
       <div className="home-project-scroll__stat-copy"><h3>{item.label}</h3><strong>{item.value}</strong><p>{item.description}</p></div>
-      <DotPattern shape={(["ribbon", "orbit", "field", "graph"] as const)[index % 4]} tone={index === 1 ? "white" : index === 2 ? "charcoal" : "brand"} className="home-project-scroll__pattern" />
+      <DotPattern shape={(["ribbon", "orbit", "field", "graph"] as const)[index % 4]} tone={index === 1 ? "white" : index === 2 ? "charcoal" : "brand"} seed={`${patternSeed}:${item.label}`} className="home-project-scroll__pattern" motifSlot={index} />
     </article>)}
   </div>;
   const cards = <>

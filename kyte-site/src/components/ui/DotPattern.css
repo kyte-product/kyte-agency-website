@@ -5,6 +5,7 @@
 .dot-pattern__dot--on { fill:var(--dot-highlight); }
 .dot-pattern__dot--a { fill:var(--dot-highlight);animation:dot-pattern-color 5s step-end infinite; }
 .dot-pattern__dot--b { animation:dot-pattern-color-inverse 5s step-end infinite; }
+.dot-pattern__motion-dot { fill:var(--dot-highlight);transition:transform .58s cubic-bezier(.2,.65,.25,1),opacity .32s ease; }
 .dot-pattern__delay-1 { animation-delay:-.35s; }.dot-pattern__delay-2 { animation-delay:-.7s; }.dot-pattern__delay-3 { animation-delay:-1.05s; }.dot-pattern__delay-4 { animation-delay:-1.4s; }.dot-pattern__delay-5 { animation-delay:-1.75s; }.dot-pattern__delay-6 { animation-delay:-2.1s; }.dot-pattern__delay-7 { animation-delay:-2.45s; }
 @keyframes dot-pattern-color { 0%,100% { fill:var(--dot-highlight); } 50% { fill:var(--dot-rest); } }
 @keyframes dot-pattern-color-inverse { 0%,100% { fill:var(--dot-rest); } 50% { fill:var(--dot-highlight); } }
@@ -12,3 +13,5 @@
 
 /* Keep the fixed dot grid idle offscreen and in background tabs. */
 .dot-pattern[data-animating="false"] .dot-pattern__dot { animation-play-state:paused; }
+.dot-pattern[data-rearranging="true"] .dot-pattern__dot { transition:fill .24s ease; }
+@media(prefers-reduced-motion:reduce){.dot-pattern[data-rearranging="true"] .dot-pattern__dot,.dot-pattern__motion-dot{transition:none}}

@@ -1,3 +1,7 @@
+# Design systems and content workflow
+
+See [the three-system index](docs/design-systems/README.md), [content population](docs/content-population.md), and [audit/release](docs/audit-and-release.md). Browser references: `/design-system`, `/design-system/branding`, `/design-system/product`.
+
 # Kyte website preview
 
 This is the Next.js preview of the upcoming Kyte website. It includes the homepage, a working design system, a Collectbee case study preview, and Work and Design News pages backed by the existing Sanity content model. Local development can show a private snapshot of drafts; production reads published entries only. Pages remain `noindex` while the content and launch review continue.
@@ -29,8 +33,8 @@ To review the sample layouts locally, start the site with `SHOW_EDITORIAL_PLACEH
 - `src/lib/sanity.ts`: published Work, Services, and Design News queries.
 - `src/lib/editorial.ts`: local draft preview in development and published CMS reads in production.
 - `src/app/work/` and `src/app/insights/`: CMS listing and detail routes.
-- `src/lib/sanity-routes.ts`: fixed public paths for the ten child services.
+- `src/data/servicePages.ts` and `src/lib/service-content.ts`: stable service route fallback and published content mapping.
 - `src/lib/sanity.ts` and `src/lib/service-content.ts`: published Sanity content and the mapper used by all ten child service routes. `src/data/servicePages.ts` supplies the local fallback. `src/components/ServiceDetailTemplate.tsx` renders the shared layout; UX Research & Design Audits keeps its bespoke hero while reading the rest of its page copy from Sanity. Work remains unfiltered until case-to-service relationships are approved.
 - `../AGENTS.md` and `../WEBSITE_PROGRESS.md`: project rules and current handoff state.
 
-The first landing page remains under review. Keep Sanity write credentials out of this app. Verify provisional content before any production launch.
+The current templates are ready for the documented content pass after release verification. Keep Sanity write credentials out of this app. Verify provisional content before any production launch.

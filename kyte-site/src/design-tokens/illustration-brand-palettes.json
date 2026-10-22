@@ -1,0 +1,65 @@
+{
+  "greenBlue": {
+    "base": "#3979ee",
+    "mint": "#8cb2f7",
+    "blueLight": "#2b6de9",
+    "green": "#4b86f0",
+    "greenDeep": "#3475ed",
+    "blue": "#1055de",
+    "teal": "#2d6fea"
+  },
+  "amberGreen": {
+    "base": "#4683ef",
+    "amber": "#4783ef",
+    "gold": "#5b91f1",
+    "lime": "#5990f1",
+    "green": "#1e62e4",
+    "olive": "#296be8",
+    "light": "#6397f2"
+  },
+  "amberLime": {
+    "base": "#4884ef",
+    "orange": "#3475ed",
+    "amber": "#4f89f0",
+    "lime": "#568ef1",
+    "green": "#276ae8",
+    "gold": "#3f7eef",
+    "light": "#6296f1"
+  },
+  "pinkViolet": {
+    "base": "#3979ee",
+    "coral": "#3e7def",
+    "pink": "#296be8",
+    "violet": "#3374ec",
+    "rose": "#3f7eef",
+    "light": "#6397f2",
+    "deep": "#3475ed"
+  },
+  "coralViolet": {
+    "base": "#3677ee",
+    "coral": "#2f71eb",
+    "pink": "#276ae8",
+    "violet": "#2f71eb",
+    "rose": "#3f7def",
+    "light": "#5990f1",
+    "deep": "#407eef"
+  },
+  "amberViolet": {
+    "base": "#3778ee",
+    "light": "#4d87f0",
+    "orange": "#3274ec",
+    "violet": "#4d87f0",
+    "amber": "#6095f1",
+    "coral": "#558df0",
+    "rose": "#6095f1"
+  },
+  "mintCyan": {
+    "base": "#4783ef",
+    "mint": "#74a2f3",
+    "blue": "#407eef",
+    "teal": "#3576ed",
+    "green": "#689af2",
+    "cyan": "#568ef1",
+    "light": "#6094f1"
+  }
+}

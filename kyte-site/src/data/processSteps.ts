@@ -1,22 +1,22 @@
 export const sharedSteps = [
   {
     name: "Discover",
-    title: "Understand the problem, not the assumption.",
-    description: "We start divergent with user research, stakeholder interviews, and market and competitor analysis, so we solve the real problem rather than the first idea pitched.",
+    title: "Start with the context.",
+    description: "We align on the people, goals, existing work, and constraints that shape the brief, then surface the questions the project needs to answer.",
   },
   {
     name: "Define",
-    title: "Turn insight into direction.",
-    description: "Research becomes a clear brief with a defined scope, so every track, whether design, branding, content, or video, solves the same problem from the same point of view.",
+    title: "Give the work a clear direction.",
+    description: "We agree on priorities, scope, deliverables, and review points so everyone understands what the work needs to achieve.",
   },
   {
-    name: "Develop",
-    title: "Build, test, refine.",
-    description: "We work in tight loops and test early, so nothing goes to final until it is proven, whether that is a prototype, a brand system, a content plan, or a rough cut.",
+    name: "Create",
+    title: "Shape the first useful version.",
+    description: "We develop the agreed direction, share it early, then use your feedback and practical checks to resolve the details into a coherent result.",
   },
   {
     name: "Deliver",
-    title: "Ship something that holds up.",
-    description: "You get a finished, documented handoff, ready to launch, whether that is a live product, a brand guideline, a content calendar, or a finished film.",
+    title: "Make the next step clear.",
+    description: "We organize the agreed work and explain how to use it, so your team can take the next decision, launch, or phase with useful context.",
   },
 ] as const;

@@ -177,3 +177,9 @@ Order matters. Specific rules first, catch-all last.
 22 October 2026 transition restoration: user rejected the pixel page-transition experiment. Restore the original two-layer weighted swipe and its original CSS timing and curve keyframes. Keep the consistency audit, light service templates and navigation fixes. This supersedes the pixel-curtain direction above.
 
 22 October 2026 supplied transition: use the supplied double-stairs React component for route changes, with all five columns in Kyte blue. Preserve the original weighted swipe in kyte-site/backups/page-transition-original. This supersedes the immediate restoration note above.
+
+DESIGN DOCUMENTATION ROUTES (internal, noindex)
+/design-system: shared Website foundation
+/design-system/branding: exact Branding landing extension
+/design-system/product: Product landing extension and both illustration versions
+Route ownership: kyte-site/src/data/designSystems.ts. Child services inherit Website.

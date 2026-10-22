@@ -40,8 +40,9 @@ const decisionIcons = [Target, Search, Route, TrendingUp, Gauge];
 const decisionPatterns = ["discover", "define", "develop", "deliver", "orbit"] as const;
 const decisionSurfaces = ["blue", "black", "white", "blue", "black"] as const;
 
-export function ServiceDecisionStory({ items = auditDecisions, ctaLabel = "Discuss your product", itemsLabel = "Service outcomes", heading = "A useful picture of what to improve.", intro = "Bring user evidence, interface reviews, and product context together. Leave with a shared understanding of the experience and a clear path for the next design decisions." }: { items?: readonly Decision[]; eyebrow?: string; heading?: string; intro?: string; ctaLabel?: string; itemsLabel?: string }) {
+export function ServiceDecisionStory({ items = auditDecisions, ctaLabel = "Discuss your product", itemsLabel = "Service outcomes", heading = "A useful picture of what to improve.", intro = "Bring user evidence, interface reviews, and product context together. Leave with a shared understanding of the experience and a clear path for the next design decisions.", patternSeed = "service-decisions", blueOnly = false, animatePattern = true }: { items?: readonly Decision[]; eyebrow?: string; heading?: string; intro?: string; ctaLabel?: string; itemsLabel?: string; patternSeed?: string; blueOnly?: boolean; animatePattern?: boolean }) {
   const [active, setActive] = useState(0);
+  const surface = blueOnly ? "blue" : decisionSurfaces[active % decisionSurfaces.length];
 
   return <section className="service-decisions" aria-labelledby="service-decisions-title">
     <div className="service-decisions__inner">
@@ -50,8 +51,8 @@ export function ServiceDecisionStory({ items = auditDecisions, ctaLabel = "Discu
           <div className="service-decisions__heading"><h2 id="service-decisions-title">{heading}</h2><p>{intro}</p>
             <Link className="kyte-button" href="/contact">{ctaLabel} <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
-          <div className={`service-decisions__visual-frame service-decisions__visual-frame--${decisionSurfaces[active % decisionSurfaces.length]}`} aria-hidden="true" data-pattern={decisionPatterns[active % decisionPatterns.length]}>
-            <DotPattern shape={decisionPatterns[active % decisionPatterns.length]} tone={decisionSurfaces[active % decisionSurfaces.length] === "blue" ? "white" : decisionSurfaces[active % decisionSurfaces.length] === "black" ? "charcoal" : "brand"} className="service-decisions__dot-pattern" />
+          <div className={`service-decisions__visual-frame service-decisions__visual-frame--${surface}`} aria-hidden="true" data-pattern={decisionPatterns[active % decisionPatterns.length]}>
+            <DotPattern shape={decisionPatterns[active % decisionPatterns.length]} tone={surface === "blue" ? "white" : surface === "black" ? "charcoal" : "brand"} seed={`${patternSeed}:${items[active]?.title ?? active}`} className="service-decisions__dot-pattern" animateOnChange={animatePattern} motifSlot={active} />
           </div>
         </div>
         <div className="service-decisions__steps" aria-label={itemsLabel}>

@@ -7,6 +7,7 @@ import { CookieSettings } from "@/components/CookieSettings";
 import { SiteSmoothScroll } from "@/components/SiteSmoothScroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./globals.css";
+import { IllustrationPaletteProvider } from "@/components/design-system/IllustrationPalette";
 
 export const metadata: Metadata = {
   title: "Kyte | Product, website and brand design",
@@ -19,5 +20,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" data-palette="kyte" suppressHydrationWarning><body>{children}<SiteSmoothScroll /><SiteRevealMotion /><ContactModal /><CookieSettings /><PageTransition /></body></html>;
+  return <html lang="en" data-palette="kyte" suppressHydrationWarning><body><IllustrationPaletteProvider>{children}<SiteSmoothScroll /><SiteRevealMotion /><ContactModal /><CookieSettings /><PageTransition /></IllustrationPaletteProvider></body></html>;
 }

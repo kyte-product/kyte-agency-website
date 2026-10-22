@@ -27,13 +27,13 @@ const departments: DepartmentCard[] = [
   { title: "Branding & Marketing", description: "A clear brand and the creative work that carries it into the world.", href: "/branding-marketing" },
 ];
 
-export function DepartmentCards({ cards = departments }: { cards?: DepartmentCard[] }) {
+export function DepartmentCards({ cards = departments, patternSeed }: { cards?: DepartmentCard[]; patternSeed?: string }) {
   return <div className="services-intro__cards" data-site-reveal-ignore>
     {cards.map((card, index) => {
       const copy = <><span className="services-intro__card-heading">{card.title}</span><span className="services-intro__card-description">{card.description}</span></>;
       return <article key={card.title} className={`services-intro__card services-intro__card--${index === 0 ? "product" : "branding"} ${card.href ? "services-intro__card--interactive" : "services-intro__card--informative"}`}>
         {card.href ? <Link className="services-intro__card-link" href={card.href}>{copy}<span className="services-intro__card-more">Explore Service <ChevronRight size={16} aria-hidden="true" /></span></Link> : <div className="services-intro__card-copy">{copy}</div>}
-        <DotPattern shape="field" tone={index === 0 ? "charcoal" : "white"} className="services-intro__pattern" />
+        <DotPattern shape="field" tone={index === 0 ? "charcoal" : "white"} {...(patternSeed ? { seed: `${patternSeed}:${card.title}`, motifSlot: index } : { dotRadius: 1 })} className="services-intro__pattern" />
       </article>;
     })}
   </div>;

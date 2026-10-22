@@ -1,3 +1,7 @@
+# Current palette versions
+
+Brand blue is the default; originals are preserved. Read [the Product system](../docs/design-systems/product.md) for the shared toggle, separate asset paths, manifest and rebuild/check commands. Do not overwrite original assets to make a variant.
+
 # Hairline artwork
 
 The UI/UX cluster hero uses a custom Hairline scene rather than a preset figure. `product-experience.js` draws the keyboard, slabs, connecting stems, and five rounded cubes through one isometric camera. The UI faces are authored separately in `product-experience-ui.html` with ordinary HTML and CSS layouts. Each face template has a known design width and height; the figure records its four projected corners, and `build-product-experience.mjs` calculates the affine transform and places the template into an SVG `foreignObject`. Edit spacing, grid and flex placement, gradients, and UI icons in the standalone template sheet instead of guessing positions in the projected scene. The five templates are the main screen, message card, search control, media card, and analytics card. The same builder output is used by the site embed at `public/hairline/product-experience-embed.html`.

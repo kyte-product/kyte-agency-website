@@ -1,3 +1,7 @@
+# Additional brand-blue variant
+
+The seven original measured palettes below are preserved. The user requested an additive brand-blue version on 22 October 2026. Its tokens are `src/design-tokens/illustration-brand.json`; generated files are stored separately under `public/hairline/brand/`. See [the Product system](../docs/design-systems/product.md).
+
 # Illustration palette library
 
 The canonical data is `kyte-site/src/design-tokens/illustration-palettes.json`. Update that data, then run the palette builder, material CSS generator and illustration builders. Do not edit generated swatches. Values are measured median 3 × 3 pixel samples of visible baked AVIF material, not recovered shader inputs.

@@ -18,7 +18,7 @@ try {
 
  const routes=JSON.parse(await readFile(routeReport,'utf8')).routes.map(r=>r.path).filter(p=>!p.startsWith('/graveyard'));
  const results=[];const errors=[];const old=ws.onmessage;ws.onmessage=e=>{old(e);const m=JSON.parse(e.data);if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.text+': '+(m.params.exceptionDetails.exception?.description||''));};
- for(const width of [393,810,1440]){
+ for(const width of [320,393,810,1440]){
   await send('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<600});
   for(const route of routes){
    errors.length=0;await send('Page.navigate',{url:baseUrl+route});await sleep(850);

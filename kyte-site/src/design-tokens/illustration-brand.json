@@ -1,0 +1,9 @@
+{
+  "name": "Kyte brand blue",
+  "anchor": "#0249d9",
+  "defaultMode": "brand",
+  "tones": ["#01349c", "#0249d9", "#3778ee", "#75a3f3", "#b8cfff", "#edf3ff"],
+  "tonePositions": [0, 0.22, 0.42, 0.62, 0.82, 1],
+  "preserveNeutralThreshold": 28,
+  "description": "Additive blue material variant approved 22 October 2026. Original measured palettes and geometry are retained."
+}
