@@ -1,6 +1,6 @@
 # Design systems and content preparation audit
 
-23 October 2026. Owner: Kyte website team. Source branch: `codex/design-systems-content-ready`. Publication was explicitly requested by the user; the release record documents its eventual verified state.
+23 October 2026. Owner: Kyte website team. Source branch: `codex/design-systems-content-ready`. Publication was explicitly requested by the user; PR #64 is merged and the application is verified Ready in production. The release record contains exact deployment and rollback evidence.
 
 ## Delivered
 
@@ -41,3 +41,7 @@ The templates and content guide are ready for population. This release does not 
 Five development-only lint-tool advisories remain through the Next lint dependency chain. The proposed automatic fix downgrades the lint configuration to an incompatible major; no unsafe downgrade was applied. Runtime production dependencies have zero advisories.
 
 Unrelated local exports, untracked reference/skill packages and the pre-existing isometric skill edits are excluded from this release. No credentials or private browser data are included. See [content population](../content-population.md) for edit locations and [release record](../release/2026-10-23-design-systems.md) for GitHub, deployment and rollback identities.
+
+## Production closeout
+
+The final production crawl passed the same 58 pages and 367 assets. Browser checks confirmed original/blue palette selection, original selection following Product navigation, blue reset on reload, revised homepage covers and the final black Selected Work heading. See the [release record](../release/2026-10-23-design-systems.md).

@@ -1,0 +1,20 @@
+{
+  "id": "dpl_G7ZHxLgVB3dp85GLLaFESciJQNPi",
+  "url": "kyte-agency-website-q1sxx7378-kyte-product.vercel.app",
+  "target": "production",
+  "readyState": "READY",
+  "createdAt": 1792695263650,
+  "aliases": [
+    "kyte-agency.vercel.app",
+    "kyte-agency-website.vercel.app",
+    "kyte-agency-website-kyte-product.vercel.app",
+    "kyte-agency-website-git-main-kyte-product.vercel.app"
+  ],
+  "githubCommitSha": "4df4bed6d6c69397f02a7ab5a1bbcd36f3c178e1",
+  "pullRequest": "https://github.com/kyte-product/kyte-agency-website/pull/64",
+  "commitEvidence": "Git integration deployment list matched this URL to this merge SHA; inspect confirmed Ready and aliases.",
+  "rollback": {
+    "id": "dpl_GSfwd6vzZBsVWW6Fbv6QhBt4RoyP",
+    "url": "https://kyte-agency-website-ea3mcrpbt-kyte-product.vercel.app"
+  }
+}
