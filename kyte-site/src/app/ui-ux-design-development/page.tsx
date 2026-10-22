@@ -1,3 +1,4 @@
+import { ProductServices } from "@/components/ProductServices";
 import { KyteApproach } from "@/components/KyteApproach";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -20,14 +21,6 @@ export const metadata: Metadata = {
   title: "UI/UX Design & Development | Kyte Agency",
   description: "Research, product design, and development support for useful digital products, websites, and customer journeys.",
 };
-
-const services = [
-  { title: "UX research & design audits", body: "Find the friction and decide what deserves attention first.", href: "/ui-ux-design-development/ux-research-design-audit" },
-  { title: "Website design & development", body: "Make a website clearer, more useful, and easier to maintain.", href: "/ui-ux-design-development/website-design-development" },
-  { title: "Mobile app design", body: "Shape focused journeys for the screen people use every day.", href: "/ui-ux-design-development/mobile-app-design" },
-  { title: "SaaS & web app design", body: "Make complex tools and workflows easier to navigate.", href: "/ui-ux-design-development/saas-web-app-design" },
-  { title: "eCommerce & Shopify websites", body: "Connect discovery, product decisions, and checkout.", href: "/ui-ux-design-development/ecommerce-shopify-websites" },
-];
 
 const questions = [
   { question: "What does a UI/UX design project include?", answer: "The scope depends on the challenge. It can include research, an experience audit, information architecture, user flows, prototypes, visual interface design, a design system, testing, and a handoff to development." },
@@ -70,7 +63,7 @@ export default function ProductDesignLandingPage() {
 
     <section className="product-landing__partners product-landing__section" aria-labelledby="product-partners-title"><div className="product-landing__section-head"><h2 id="product-partners-title">For products at different stages.</h2><p>We adapt the work to the team, the product, and the question that needs an answer.</p></div><div className="product-landing__partner-grid">{["New products", "Growing platforms", "Established services", "Complex internal tools", "Commerce journeys", "Web platforms", "Internal systems", "Connected brands"].map((item) => <div key={item}><ProductStageIllustration title={item as ProductStageTitle} /><h3>{item}</h3></div>)}</div></section>
 
-    <section className="product-landing__services product-landing__section" aria-labelledby="product-services-title"><h2 id="product-services-title">Explore Our UI/UX Services</h2><div className="product-landing__service-list">{services.map((service, index) => <article key={service.href}><ProductDesignCardArt kind={( ["hub", "relay", "exploded", "plot", "relay"] as const)[index]} research={index === 0} website={index === 1} mobile={index === 2} saas={index === 3} commerce={index === 4} /><div><strong>{service.title}</strong></div><small>{service.body}</small><Link className="product-landing__service-link kyte-tertiary" href={service.href}>View Service <ArrowRight size={17} aria-hidden="true" /></Link></article>)}</div></section>
+    <ProductServices />
 
     <section className="product-landing__framework product-landing__section" aria-labelledby="product-framework-title"><h2 id="product-framework-title">A framework that moves from evidence to experience.</h2><div className="product-landing__framework-card"><ProductDesignFramework /></div></section>
 

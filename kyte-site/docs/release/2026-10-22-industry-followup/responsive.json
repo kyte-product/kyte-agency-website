@@ -1,0 +1,1186 @@
+[
+  {
+    "width": 320,
+    "slug": "fintech",
+    "pageWidth": 320,
+    "viewport": 320,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 109,
+        "sw": 109
+      },
+      {
+        "w": 109,
+        "sw": 109
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 220,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "slug": "saas-startups",
+    "pageWidth": 320,
+    "viewport": 320,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 109,
+        "sw": 109
+      },
+      {
+        "w": 109,
+        "sw": 109
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 220,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "slug": "d2c-ecommerce",
+    "pageWidth": 320,
+    "viewport": 320,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 109,
+        "sw": 109
+      },
+      {
+        "w": 109,
+        "sw": 109
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 220,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "slug": "hospitality-food-beverage",
+    "pageWidth": 320,
+    "viewport": 320,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 109,
+        "sw": 109
+      },
+      {
+        "w": 109,
+        "sw": 109
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 220,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 393,
+    "slug": "fintech",
+    "pageWidth": 393,
+    "viewport": 393,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 153,
+        "sw": 153
+      },
+      {
+        "w": 153,
+        "sw": 153
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 220,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 393,
+    "slug": "saas-startups",
+    "pageWidth": 393,
+    "viewport": 393,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 153,
+        "sw": 153
+      },
+      {
+        "w": 153,
+        "sw": 153
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 220,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 393,
+    "slug": "d2c-ecommerce",
+    "pageWidth": 393,
+    "viewport": 393,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 153,
+        "sw": 153
+      },
+      {
+        "w": 153,
+        "sw": 153
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 220,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 393,
+    "slug": "hospitality-food-beverage",
+    "pageWidth": 393,
+    "viewport": 393,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 153,
+        "sw": 153
+      },
+      {
+        "w": 153,
+        "sw": 153
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 220,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 810,
+    "slug": "fintech",
+    "pageWidth": 810,
+    "viewport": 810,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 321,
+        "sw": 321
+      },
+      {
+        "w": 321,
+        "sw": 321
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 224,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 810,
+    "slug": "saas-startups",
+    "pageWidth": 810,
+    "viewport": 810,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 321,
+        "sw": 321
+      },
+      {
+        "w": 321,
+        "sw": 321
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 224,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 810,
+    "slug": "d2c-ecommerce",
+    "pageWidth": 810,
+    "viewport": 810,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 321,
+        "sw": 321
+      },
+      {
+        "w": 321,
+        "sw": 321
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 224,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 810,
+    "slug": "hospitality-food-beverage",
+    "pageWidth": 810,
+    "viewport": 810,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 321,
+        "sw": 321
+      },
+      {
+        "w": 321,
+        "sw": 321
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 224,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "slug": "fintech",
+    "pageWidth": 1440,
+    "viewport": 1440,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 242,
+        "sw": 242
+      },
+      {
+        "w": 242,
+        "sw": 242
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 224,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "slug": "saas-startups",
+    "pageWidth": 1440,
+    "viewport": 1440,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 242,
+        "sw": 242
+      },
+      {
+        "w": 242,
+        "sw": 242
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 224,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "slug": "d2c-ecommerce",
+    "pageWidth": 1440,
+    "viewport": 1440,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 242,
+        "sw": 242
+      },
+      {
+        "w": 242,
+        "sw": 242
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 224,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "slug": "hospitality-food-beverage",
+    "pageWidth": 1440,
+    "viewport": 1440,
+    "serviceCards": 5,
+    "serviceImages": [
+      "/hairline/product-research-audit.svg?v=1",
+      "/hairline/product-website-design.svg?v=1",
+      "/hairline/product-mobile-app.svg?v=1",
+      "/hairline/product-saas-web-app.svg?v=1",
+      "/hairline/product-commerce.svg?v=1"
+    ],
+    "departmentCards": 2,
+    "headings": [
+      {
+        "w": 242,
+        "sw": 242
+      },
+      {
+        "w": 242,
+        "sw": 242
+      }
+    ],
+    "impactCards": 4,
+    "sameRow": true,
+    "textThenArt": true,
+    "dotRadii": [
+      "1"
+    ],
+    "inlinePhotos": 0,
+    "informative": true,
+    "approachDot": true,
+    "accordion": true,
+    "news": false,
+    "placeholder": true,
+    "statCopyOverflow": [],
+    "serviceBorder": "0px",
+    "arrowInset": 0,
+    "industryStats": "Industry statistics",
+    "heroTop": 224,
+    "patterns": [
+      {
+        "pattern": "discover",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "define",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "develop",
+        "color": "rgb(23, 23, 23)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "deliver",
+        "color": "rgb(255, 255, 255)",
+        "images": 0,
+        "active": 1
+      },
+      {
+        "pattern": "orbit",
+        "color": "rgb(2, 73, 217)",
+        "images": 0,
+        "active": 1
+      }
+    ]
+  }
+]

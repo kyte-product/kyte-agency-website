@@ -1,42 +1,35 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Gauge, Route, Search, Target, TrendingUp } from "lucide-react";
-import { getServicePhotography } from "@/data/pagePhotography";
+import { DotPattern } from "./ui/DotPattern";
 import "./ServiceDecisionStory.css";
 
-const auditPhotos = getServicePhotography("ui-ux-design-development/ux-research-design-audit").decisions;
 export const auditDecisions = [
   {
     title: "A focused research plan",
     body: "Align on the questions to answer, the people to learn from, and the methods that fit the product and project scope.",
-    ...auditPhotos[0],
     Icon: Target,
   },
   {
     title: "Evidence from real users",
     body: "Bring interview notes, observed behaviors, and usability findings together to show where expectations and experience differ.",
-    ...auditPhotos[1],
     Icon: Search,
   },
   {
     title: "A clearer view of key journeys",
     body: "See how important tasks connect across screens, including the steps that cause friction, confusion, or drop-off.",
-    ...auditPhotos[2],
     Icon: Route,
   },
   {
     title: "Prioritised next steps",
     body: "Turn the findings into a practical sequence of improvements, with context your team can use to plan and evaluate the work.",
-    ...auditPhotos[3],
     Icon: TrendingUp,
   },
   {
     title: "A baseline for measuring progress",
     body: "Capture where the experience stands today and identify useful signals to revisit after improvements are made.",
-    ...auditPhotos[4],
     Icon: Gauge,
   },
 ] as const;
@@ -44,9 +37,10 @@ export const auditDecisions = [
 export type Decision = { title: string; body: string; image?: string; alt?: string };
 export type Deliverable = { title: string; body: string };
 const decisionIcons = [Target, Search, Route, TrendingUp, Gauge];
-const fallbackImages = auditDecisions.map(({ image, alt }) => ({ image, alt }));
+const decisionPatterns = ["discover", "define", "develop", "deliver", "orbit"] as const;
+const decisionSurfaces = ["blue", "black", "white", "blue", "black"] as const;
 
-export function ServiceDecisionStory({ items = auditDecisions, heading = "A useful picture of what to improve.", intro = "Bring user evidence, interface reviews, and product context together. Leave with a shared understanding of the experience and a clear path for the next design decisions." }: { items?: readonly Decision[]; eyebrow?: string; heading?: string; intro?: string }) {
+export function ServiceDecisionStory({ items = auditDecisions, ctaLabel = "Discuss your product", itemsLabel = "Service outcomes", heading = "A useful picture of what to improve.", intro = "Bring user evidence, interface reviews, and product context together. Leave with a shared understanding of the experience and a clear path for the next design decisions." }: { items?: readonly Decision[]; eyebrow?: string; heading?: string; intro?: string; ctaLabel?: string; itemsLabel?: string }) {
   const [active, setActive] = useState(0);
 
   return <section className="service-decisions" aria-labelledby="service-decisions-title">
@@ -54,14 +48,14 @@ export function ServiceDecisionStory({ items = auditDecisions, heading = "A usef
       <div className="service-decisions__layout">
         <div className="service-decisions__feature">
           <div className="service-decisions__heading"><h2 id="service-decisions-title">{heading}</h2><p>{intro}</p>
-            <Link className="kyte-button" href="/contact">Discuss your product <ArrowRight size={18} aria-hidden="true" /></Link>
+            <Link className="kyte-button" href="/contact">{ctaLabel} <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
-          <figure className="service-decisions__visual-frame" aria-live="polite">
-            <Image key={items[active].image ?? fallbackImages[active].image} src={items[active].image ?? fallbackImages[active].image} alt={items[active].alt ?? fallbackImages[active].alt} fill unoptimized sizes="(max-width: 800px) 100vw, 48vw" />
-          </figure>
+          <div className={`service-decisions__visual-frame service-decisions__visual-frame--${decisionSurfaces[active % decisionSurfaces.length]}`} aria-hidden="true" data-pattern={decisionPatterns[active % decisionPatterns.length]}>
+            <DotPattern key={active} shape={decisionPatterns[active % decisionPatterns.length]} tone={decisionSurfaces[active % decisionSurfaces.length] === "blue" ? "white" : decisionSurfaces[active % decisionSurfaces.length] === "black" ? "charcoal" : "brand"} className="service-decisions__dot-pattern" />
+          </div>
         </div>
-        <div className="service-decisions__steps" aria-label="Service outcomes">
-          {items.map((decision, index) => { const Icon = decisionIcons[index]; return <article className={`service-decisions__step${active === index ? " is-active" : ""}`} key={decision.title}>
+        <div className="service-decisions__steps" aria-label={itemsLabel}>
+          {items.map((decision, index) => { const Icon = decisionIcons[index % decisionIcons.length]; return <article className={`service-decisions__step${active === index ? " is-active" : ""}`} key={decision.title}>
             <button id={`service-decision-tab-${index}`} className="service-decisions__toggle" type="button" aria-expanded={active === index} aria-controls={`service-decision-panel-${index}`} onClick={() => setActive(index)}>
               <span className="service-decisions__icon" aria-hidden="true"><Icon size={19} strokeWidth={1.8} /></span><span>{decision.title}</span>
             </button>
