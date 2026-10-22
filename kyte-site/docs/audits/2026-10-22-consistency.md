@@ -1,3 +1,5 @@
+> Historical earlier audit. Current template closeout and release results are in `2026-10-22-template-closeout.md`. Retired files described as removed below have since been recovered into dated backups.
+
 # Code and visual consistency audit, 22 October 2026
 
 ## Scope

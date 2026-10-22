@@ -47,7 +47,7 @@ export default async function WorkDetailPage({ params }: Props) {
     {(isFincart || isFincartBranding) && <><TextRevealMotion /><FincartImageReveal /></>}
     <header className="editorial-detail__heading">
       <nav className="editorial-detail__breadcrumbs" aria-label="Breadcrumb">
-        <Link className="editorial-detail__breadcrumb-link" href="/work"><ChevronLeft size={18} strokeWidth={1.8} aria-hidden="true" /> Case study</Link>
+        <Link className="editorial-detail__breadcrumb-link" href="/work"><ChevronLeft size={18} strokeWidth={1.8} aria-hidden="true" /> Work</Link>
         <span className="editorial-detail__breadcrumb-separator" aria-hidden="true">/</span>
         <span aria-current="page">{project.client || project.title}</span>
       </nav>
@@ -58,7 +58,7 @@ export default async function WorkDetailPage({ params }: Props) {
         </div>
       </div>
     </header>
-    {isFincart ? <figure className="editorial-detail__work-cover" data-nav-theme="dark" data-fincart-image-reveal><video src="/fincart/fincart-showreel.mp4" poster={project.cover.url || undefined} autoPlay loop muted playsInline preload="metadata" aria-label="Fincart app screen showreel" /></figure> : isFincartBranding ? <figure className="editorial-detail__work-cover fincart-brand-story__cover" data-nav-theme="dark" data-fincart-image-reveal><Image src="/fincart-branding/launch-event-cover.jpg" alt="Fincart launch event banner in a dark auditorium" width={3840} height={2160} sizes="(max-width: 700px) 100vw, 90vw" priority /></figure> : project.cover.url && <figure className="editorial-detail__work-cover" data-nav-theme="dark"><Image src={project.cover.url} alt={project.cover.alt || ""} fill unoptimized sizes="(max-width: 700px) 100vw, 90vw" /></figure>}
+    {isFincart ? <figure className="editorial-detail__work-cover" data-nav-theme="dark" data-fincart-image-reveal><video src="/fincart/fincart-showreel.mp4" poster={project.cover.url || undefined} autoPlay loop muted playsInline preload="metadata" aria-label="Fincart app screen showreel" /></figure> : isFincartBranding ? <figure className="editorial-detail__work-cover fincart-brand-story__cover" data-nav-theme="dark" data-fincart-image-reveal><Image src="/fincart-branding/launch-event-cover.jpg" alt="Fincart launch event banner in a dark auditorium" width={3840} height={2160} sizes="100vw" priority /></figure> : project.cover.url && <figure className="editorial-detail__work-cover" data-nav-theme="dark"><Image src={project.cover.url} alt={project.cover.alt || ""} fill unoptimized sizes="100vw" priority /></figure>}
     {isFincart ? <FincartStory /> : isFincartBranding ? <FincartBrandingStory /> : <>
       <div className="editorial-detail__work-body"><EditorialBody blocks={project.body} /></div>
       {project.outcomes && project.outcomes.length > 0 && <section className="editorial-detail__outcomes"><div>{project.outcomes.map((item, index) => <div key={index}><strong>{item.value}</strong><p>{item.label}</p></div>)}</div></section>}

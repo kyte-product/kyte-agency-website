@@ -14,41 +14,27 @@ export function ClientStories({ articles, variant = "carousel" }: { articles: De
 }
 
 function BrandingDesignNews({ articles }: { articles: DesignNewsArticle[] }) {
-  const stories = articles.filter((article) => article.slug && article.cover?.url).slice(0, 10);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const listRef = useRef<HTMLDivElement>(null);
-  const activeStory = activeIndex === null ? null : stories[activeIndex];
-  const activateRow = (row: HTMLElement, index: number) => {
-    const list = listRef.current;
-    if (list) {
-      const rowBounds = row.getBoundingClientRect();
-      const listBounds = list.getBoundingClientRect();
-      list.style.setProperty("--pointer-line-y", `${rowBounds.top - listBounds.top + rowBounds.height / 2}px`);
-    }
-    setActiveIndex(index);
-  };
+  const stories = articles.filter((article) => article.slug && article.cover?.url).slice(0, 3);
 
   return <section className="client-stories client-stories--branding" aria-labelledby="branding-news-title">
     <div className="client-stories__inner">
       <div className="client-stories__editorial-head">
         <h2 id="branding-news-title" data-reveal-words><RevealWords text="Design News" /></h2>
-        <Link href="/insights" className="client-stories__editorial-link branding-nav-action">Explore all stories <ArrowRight size={16} aria-hidden="true" /></Link>
+        <Link href="/insights" className="client-stories__editorial-link branding-nav-action">All stories <ArrowRight size={16} aria-hidden="true" /></Link>
       </div>
 
-      {stories.length > 0 ? <div className="client-stories__editorial-list" ref={listRef} data-active={activeIndex !== null} data-active-last={activeIndex === stories.length - 1} onMouseLeave={() => setActiveIndex(null)} onMouseMove={(event) => { const list = listRef.current; if (list) list.style.setProperty("--pointer-line-y", `${event.clientY - list.getBoundingClientRect().top}px`); }}>
-        {stories.map((story, index) => <article className="client-stories__editorial-row" key={story._id} data-active={activeIndex === index} onMouseEnter={(event) => activateRow(event.currentTarget, index)}>
-          <Link className="client-stories__editorial-link-row" href={`/insights/${encodeURIComponent(story.slug)}`} onFocus={(event) => { const row = event.currentTarget.closest<HTMLElement>(".client-stories__editorial-row"); if (row) activateRow(row, index); }} onBlur={(event) => { if (!event.currentTarget.closest(".client-stories__editorial-list")?.contains(event.relatedTarget as Node | null)) setActiveIndex(null); }}>
-            <span className="client-stories__editorial-title">{story.title}</span>
-            <time className="client-stories__editorial-date" dateTime={story.publishedAt || story.updatedAt || undefined} title={story.publishedAt ? "Published date" : "Last updated"}>
-              {formatEditorialDate(story.publishedAt || story.updatedAt)}
-            </time>
-            <span className="client-stories__editorial-category">{story.category?.split(",").at(-1)?.trim() || "Design News"}</span>
+      {stories.length > 0 ? <div className="client-stories__editorial-grid">
+        {stories.map((story, index) => <article className="client-stories__news-card" key={story._id} data-accent={index % 4}>
+          <Link className="client-stories__news-card-link" href={`/insights/${encodeURIComponent(story.slug)}`} aria-label={`Read ${story.title}`}>
+            <div className="client-stories__news-card-image">
+              <Image src={story.cover.url!} alt={story.cover.alt || ""} fill unoptimized sizes="(max-width: 700px) 90vw, (max-width: 1050px) 45vw, 30vw" />
+            </div>
+            <span className="client-stories__news-card-category">{story.category?.split(",").at(-1)?.trim() || "Design News"}</span>
+            <h3><span>{story.title}</span></h3>
+            {story.summary && <p>{story.summary}</p>}
+            <time dateTime={story.publishedAt || story.updatedAt || undefined}>{formatEditorialDate(story.publishedAt || story.updatedAt)}</time>
           </Link>
         </article>)}
-        <div className="client-stories__editorial-hover-rule" aria-hidden="true" />
-        <div className={`client-stories__editorial-preview${activeStory ? " is-visible" : ""}`} aria-hidden="true">
-          {activeStory && <Image key={activeStory._id} src={activeStory.cover.url!} alt="" fill unoptimized sizes="(max-width: 700px) 40vw, 18vw" />}
-        </div>
       </div> : <p className="client-stories__editorial-empty">New stories are on the way.</p>}
     </div>
   </section>;

@@ -1,0 +1,345 @@
+{
+  "pages": 56,
+  "assets": 238,
+  "pageFailures": [],
+  "headingFailures": [],
+  "assetFailures": [],
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/branding-marketing",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/brand-strategy-identity",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/graphic-design",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/seo-ai-search-optimisation",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/social-media-marketing",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/video-production-motion-graphics",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/careers",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/design-system",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/industries",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/industries/d2c-ecommerce",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/industries/fintech",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/industries/hospitality-food-beverage",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/industries/saas-startups",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights/design-news",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights/how-dior-redefined-luxury-in-india-by-embracing-its-visual-language",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights/sole-identity-how-sneaker-culture-cracked-the-code-on-branding-before-brands-did",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights/the-menu-is-the-message",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights/the-wrap-is-the-campaign-what-car-camouflage-teaches-us-about-building-desire",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights/what-3-years-of-studying-marketing-really-taught-me-about-people",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights/what-your-playlist-says-about-you-(and-why-brands-should-be-listening)",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights/when-advertising-was-unhinged-why-early-2000s-tech-marketing-still-hits-different",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/insights/why-sensory-branding-is-the-next-big-thing-in-2026",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/privacy-policy",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/ecommerce-shopify-websites",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/mobile-app-design",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/saas-web-app-design",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/ux-research-design-audit",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/website-design-development",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/accountify-website",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/arka-inventory-website",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/banza-social-content-production",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/collectbee-website",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/doodle-dept.-website",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/fincart",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/fincart-website-branding",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/make-a-difference-social-media",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/maya-explainer-video",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/mirai-brand-identity",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/msr-assets",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/ogale-machines-design-development",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/revenue-grid-explainer-videos",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/sapani-website",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/smash-guys",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/spicy-tango",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/spicybayer-restaurant-website",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/sproutova-brand-identity",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/staunch-fit-organic-growth",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/strength-socials",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    },
+    {
+      "path": "/work/wynter-s-dreams-website-and-app",
+      "status": 200,
+      "h1": 1,
+      "error": null
+    }
+  ]
+}

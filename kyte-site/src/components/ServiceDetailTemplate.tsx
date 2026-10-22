@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "./SiteHeader";
 import { SiteFooter } from "./SiteFooter";
-import { ExpandingPhotoStage } from "./ExpandingPhotoStage";
+import { ServiceHeroPhoto } from "./ServiceHeroPhoto";
 import { ServiceOfferings } from "./ServiceOfferings";
 import { ServiceApproach } from "./ServiceApproach";
 import { ServiceDecisionStory } from "./ServiceDecisionStory";
@@ -46,7 +46,7 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
     </section>
     {heroArt ? <section className={`service-detail__${heroArt.name}-art`} aria-label={heroArt.label}>
       <Image src={`/hairline/service-${heroArt.name}-hero.svg?v=1`} alt="" width={960} height={560} sizes="(max-width: 780px) 100vw, 1240px" unoptimized priority />
-    </section> : <ExpandingPhotoStage label={`Illustrative photography for ${service.name}`} slides={photography.stage} />}
+    </section> : <ServiceHeroPhoto label={`Illustrative photography for ${service.name}`} slides={photography.stage} />}
     <ServiceOfferings items={service.offerings.map((item) => ({ title: item.title, description: item.body }))} serviceName={service.name} heading={service.offeringsHeading} intro={service.offeringsIntro} />
     <ServiceApproach items={inclusions} heading={service.includedHeading} intro={service.includedIntro} />
     <ServiceDecisionStory items={decisions} heading={service.outcomesHeading} intro={service.outcomesIntro} eyebrow="From scope to outcome" />

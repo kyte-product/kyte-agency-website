@@ -1,0 +1,16 @@
+.process-motion { margin-top: 72px; scroll-margin-top: 110px; }
+.process-motion__frame { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-large); background: var(--surface); }
+.process-motion__frame video { display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
+.process-motion__frame .process-motion__video--mobile { display: none; }
+@media (max-width: 760px) {
+  .process-motion { margin-top: 54px; }
+  .process-motion__frame .process-motion__video--desktop { display: none; }
+  .process-motion__frame .process-motion__video--mobile { display: block; aspect-ratio: 720 / 1120; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .process-motion__frame video { display: none; }
+  .process-motion__frame { aspect-ratio: 2 / 1; background: var(--surface) url("/process/process-diagram-poster.png?v=lines-1") center / cover no-repeat; }
+}
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .process-motion__frame { aspect-ratio: 720 / 1120; background-image: url("/process/process-diagram-mobile-poster.png?v=lines-1"); }
+}

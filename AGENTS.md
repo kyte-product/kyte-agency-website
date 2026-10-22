@@ -16,6 +16,12 @@ For new custom isometric illustrations, use `.agents/skills/kyte-isometric-art/S
 
 The IA and playbook are working plans. When a new user decision changes either, update the source file and record the decision in `WEBSITE_PROGRESS.md`. The older imported Kyte notes and any reference site are background, not permission to reuse claims, copy, designs, or old technical choices. Check current evidence before using them.
 
+## Template baseline and audit process
+
+The shared template baseline is documented in `kyte-site/docs/template-system.md`. Read it before changing shared UI. Use `kyte-site/docs/audit-and-release.md` for repeatable breakpoint, navigation, loading, archival and release checks. Current status stays short in `WEBSITE_PROGRESS.md`; earlier logs are preserved under `kyte-site/docs/history/`.
+
+Retire unused code into dated `kyte-site/backups/` folders with origin/restore instructions. Do not import backup source or include it in runtime checks. Preserve historical graveyard routes and source artwork. Skill package entry points remain under `.agents/skills/<name>/`; use its README index. Generic reveal animation must skip moving client-logo rows, whose own opacity/filter styles must be stable from first paint.
+
 ## How we will design and build
 
 1. **Wireframe together.** The user will send references, screenshots, and cues, including examples such as Stripe and Razorpay. Discuss the page goal, audience, content order, layout, and interactions in simple language. Record choices and open questions. Use references as inspiration and do not copy their protected text or distinctive artwork.

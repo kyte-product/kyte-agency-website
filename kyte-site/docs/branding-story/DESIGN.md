@@ -1,66 +1,11 @@
-# Branding story hero
+# Branding landing design, current baseline 22 October 2026
 
-21 October 2026, local review only.
+The landing retains its editorial design; its five child service routes use the shared light service template.
 
-User screenshot: white editorial poster with four oversized black sans-serif lines and images between words. The final headline line aligns to the right. This supersedes the earlier Pinterest 404 mosaic direction, which has been removed.
+The story hero fills the first viewport below the compact 58px navbar. Regular DM Sans text includes the approved supplied artwork. Bottom corner notes use the same underlined Geist Mono scale and inline glyphs as the Helix annotations.
 
-Copy: Every brand has a story. We make yours unforgettable.
+The blue showreel section, dither Helix, selected work list, pixel boundaries, process, highlighted testimonial columns and service directory remain approved patterns. Typography is DM Sans and Geist Mono. The Design News section is gray and shows only three image-led cards. Their title text stays dark, with line-wrapping pastel background highlights matching the testimonial palette. Its header action reads All stories.
 
-Implementation: shared DM Sans at regular weight, four alternating left/right lines, three images supplied by the user, and the existing Kyte mark before “UNFORGETTABLE.” The heading is capped at 110px in a centered 1120px measure, with reduced line spacing. Words, pictures and the Kyte mark rise from below with a 72ms stagger; reduced-motion preferences remove the entrance animation. The text caption below the headline has been removed. Keep shared Kyte navigation, CTA/footer and Locomotive Scroll. The hero is followed by the user-supplied dither helix carousel and a cobalt selected-work list. The helix artwork rotates with page scroll and has no visible labels or arrow controls. The orbit playground and mixed-typography text reveal were removed at the user’s request. V2 remains removed.
+The closing scroll sentence shares the gray background above it. The blue footer flows into the pixel triangle without a solid blue final rule. The homepage link uses the same outlined oval visual style as the Branding Brochure button.
 
-The supplied design-book collage, chair scene and yellow symbol replace the earlier temporary Pinterest art. Exact attachment references are in public/branding-story/SOURCES.json. These are local exploration assets, not approved case-study artwork.
-
-Responsive layout scales the entire phrase and inline pictures while preserving four lines. Decorative images have empty alt text; the H1 exposes the full sentence once. Hover gently enlarges images; reduced motion disables that transition.
-
-## Selected work
-
-The landing adds a full-width cobalt project section after the helix. Four existing project entries reuse their current names, descriptions, categories, paths and image assets from the shared work showcase. The section starts directly with its heading and rules, which span the viewport, while row content aligns to the site inset. Each compact row places the project name, description, revealed image, categories and the shared tertiary action in five columns. Hover and keyboard focus scramble the project name briefly and uncover its image with a masked reveal. On mobile the image stays visible in each row. Reduced-motion preferences skip the scramble and CSS transitions. Reference direction: MetaLab's work rows and Locomotive's Featured Work name/image reveal and scramble interaction; the blue palette and Kyte content are original to this implementation.
-
-## Showreel and scroll statement
-
-Added immediately after the story hero, before the supplied helix. It reuses the existing Kyte showreel and follows the structure in https://dzinrstudio.com/: a compact introductory row set in Geist Mono above a large inset video anchored to the left gutter, with the right-side arrow removed. The video moves into the viewport center without shrinking; once its center reaches the viewport center, it smoothly scales down in place over the remaining 0.8 viewport heights of scroll. Its final landscape tile sits slightly above the first text line so its lower edge aligns with the visible baseline. The section uses Kyte blue. The opening labels use regular Geist Mono, sit closer to the showreel, and the long statement uses a lighter regular weight. The statement uses the exact sentence visible in the user-supplied reference screenshot: “Design on the web isn't static anymore. Today's brands need energy, personality and meaning. We bring together strategy, design and storytelling to build digital experiences that grab attention, move fast and make people feel.” Its first line indents beside the final small video, with subsequent lines returning to the left edge. The section stays in normal document flow. Reduced-motion preference presents the full layout without scroll animation. The story hero fills the available viewport height beneath the announcement strip and fixed navigation, keeping the blue showreel below the initial viewport. The showreel stage has an additional 20svh of lower breathing room after its scale animation.
-
-At the showreel-to-helix and selected-work-to-process blue/white boundaries, a viewport-wide 64-column by 16-row pixel field makes the transition with finer, more numerous square tiles. Its tiles update continuously from scroll position, reverse as the visitor scrolls upward, and keep an irregular, stepped edge that rises and dips by multiple tiles. The moving edge uses deep blue, Kyte blue, sky blue, lime and white; its settled palette uses Kyte blue and white. Reduced motion shows the quieter endpoint palette.
-
-The section after Selected Work has a large uppercase “Our Process” heading that scrolls normally, followed by a four-card Discover, Define, Develop and Deliver process pinned for several viewport lengths. The pinned cards have even top and bottom breathing room within the viewport. All four blue panels begin closed, then reveal in sequence as the visitor scrolls. Each diamond segment is inside its card and is clipped by the same reveal as the card, so its line appears as part of the panel rather than drawing separately. The outline uses the same white tint as the single-pixel card dividers, without additional guide lines. The diagram has no labels or explanatory text. On narrow screens, cards form a two-by-two grid and each row contains its own taller diamond segment. The rotating image carousel has breathing room above and below its content.
-
-## Client testimonials
-
-After the process section, a light-gray full-width band introduces client quotes with one oversized uppercase heading. A horizontal infinite belt carries vertical columns, each stacking two square-cornered cards whose heights hug their own content. White quote cards alternate with Kyte-blue metric cards that use large impact numbers: 5M+ impressions, 100+ projects, 3M+ views, and 50+ clients. These figures are published on Kyte's current website (https://www.kyte-agency.com/). Quote copy wraps within cards. Short quote phrases use a varied set of soft blue, green, coral and yellow highlights. Metric cards include the shared “Start a project” action, styled as a thin oval outline with italic serif text. Landing actions, including the header contact and closing CTA, use the same oval shape in blue on light surfaces and white on blue or dark surfaces. Duplicated loop content is hidden from screen readers and keyboard navigation. Small screens retain the two-card columns with narrower cards; reduced-motion settings turn the belt into a manually scrollable rail. The layout follows Glide's testimonial section structure, restyled with Kyte's colors and verified content.
-
-
-## Branding services and footer refinement
-
-The service heading is OUR CREATIVE SERVICES, using the same uppercase DM Sans scale and tight tracking as Our Process and Selected Work. Remove practice labels, numbers and decorative glyphs. Five service names are uppercase and individually sized to fit the row at rest and when the image opens. All dividers are 2px.
-
-The live Locomotive homepage was inspected at 1280px. Its `.c-featured-links_visual` is inline between title spans, starts at 0 width, and opens to 1.5em; height is 1em. CSS evidence gives 450ms on entry, 200ms on leave, cubic-bezier(.23,1,.32,1). The local adaptation uses those dimensions and easing, with a nearest-neighbour canvas resolution ramp from coarse pixels to a clear image. Pixel timing is an implementation approximation, not a measured copy of their runtime. Source: https://locomotive.ca/en.
-
-The blue closing scene starts after a reversed instance of the existing scroll-responsive pixel boundary. Individual letters have seeded positive/negative rotations, alternating but varied vertical distances, a damped baseline overshoot and a small rebound. Horizontal position remains scroll-bound with brief frame-independent smoothing. The 3D mark enters at around 40 percent of stage progress and becomes visible around halfway through the sentence pass, then keeps descending without a center dwell. It crosses the footer boundary into an opaque footer grid.
-
-The original model uses Three.js with rounded extruded blades, individually beveled mirror tiles merged into three meshes, a procedurally generated studio reflection environment, silver and restrained violet materials, and corner glints. No remote 3D assets or environment maps are required. Load it only near the closing scene, skip drawing outside the active range, and dispose GPU resources on unmount.
-
-The supplied blue footer image informs the ruled grid, blue surface and compact navigation. Adapt it to Kyte identity and existing links. The user subsequently removed the proposed work-image strip, leaving only studio identity, navigation, contact and legal rows. This footer variant belongs to Branding only.
-
-
-## Branding review corrections, 22 October 2026
-
-- Hero: newest supplied square ArcMatrix artwork before STORY and colourful fan before UNFORGETTABLE. Both use contain and preserve the full silhouette. Sources recorded in public/branding-supplied/SOURCES.json.
-- Services: normal-case titles, Video & Motion Graphics label, edge-to-edge 2px rules, brand-blue hover text, and the first five user-supplied images. Preview height remains equal to text height.
-- Closing letters: rechecked DZINR's public implementation. The reference starts each letter at the viewport right edge and settles it by the left 15%, using random vertical percentages, rotations, and scroll smoothing. Our earlier viewport-height displacement settled before the letters became visible. Replaced it with letter-height offsets and visible-viewport progress, alternating directions, seeded rotations, cubic arrival and a restrained overshoot/rebound.
-- Kyte mark: continuous descent beginning midway through the sentence; hidden as the sentence leaves, with the opaque footer covering its final movement. The homepage portal is a separate sibling above the model's stacking context, preventing any reappearance below the footer.
-- Homepage ending: no pinned viewport or extra gap. A shallow pixel triangle occupies 180px on desktop and 170px on mobile. Geist Mono caption, transparent ellipse with blue text/border, and the same Editorial New Trial italic face used by this page's navigation buttons. Link goes to /. Font remains a local trial preview pending licensed public use.
-- Scope: Branding landing only. Shared footer/banner variants unchanged. Local preview, no deployment.
-
-
-## Supplied motion component and two-font direction, 22 October 2026
-
-- Replaced all Editorial New/italic declarations on the Branding page with upright Geist Mono. DM Sans remains the main display/body face. Mono applies to navigation actions, service menu pills, project/testimonial actions, closing homepage CTA, helix notes, reel topline and the Be the brand tagline. Other routes retain their existing styles.
-- Reel travel extended from 80vh to 125vh, with 110ms exponential interpolation and a 245svh stage. Final width increases by 0.2%, keeping its existing bottom-left resting baseline and growing only up/right.
-- Horizontal letters now follow the user-supplied StickyAnimatedText component and screenshot settings: section 300svh; top/center/bottom/center pattern with sparse seeded direction swaps; top offset -64px, bottom +64px; opposing 12px bounce; 9-degree starting rotation and -3-degree rebound; spread .5; horizontal start viewport +300px. Three-keyframe interpolation is scroll-bound. Horizontal travel completes within the sticky range, preserving the footer occlusion and continuous logo descent. Font remains DM Sans, per the newer page typography instruction.
-- Footer triangle retains lime-green and sky-blue accent pixels in its final edge state. Added compact gray-only variants of the existing pixel transition above and below the testimonials, matching its #f3f4f6 surface. The separate post-process spacer remains outside the sticky range.
-- Desktop review at 1089x764 confirmed two font families, zero italic declarations on rendered page content, no horizontal overflow, correct keyframe transforms, gray boundaries and persistent colored edge pixels. TypeScript, focused ESLint, production build and whitespace checks pass. Mobile motion remains unverified. Local only.
-
-
-## Final release corrections, 22 October 2026
-
-Expanded navigation is horizontally left aligned and vertically centered, with fixed header and bottom actions. Hover does not translate the labels; reveal bounds and glyph padding prevent right clipping. Route-keyed header state and browser history events close the menu on return. Gray transition rows are square. Hero rows are much closer at every breakpoint. Later sentence letters use a rolling visible entrance interval. The kite is behind the sentence and all its movement/rotation/glints are scroll driven, with slightly more rotation. Services highlight the text plus top/bottom rules; testimonials run a 48s loop. Legal-to-pocket spacing increases by 10px. White pocket backing, final rows and a clipped canvas edge eliminate any blue bottom strip while retaining green/sky edge accents. See docs/release/2026-10-22/README.md for audit scope and remaining limits.
+Older directions are preserved in `../history/2026-10-22-before-template-closeout/`. The shared template contract is `../template-system.md`.

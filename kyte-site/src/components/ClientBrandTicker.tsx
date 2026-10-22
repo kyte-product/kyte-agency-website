@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { clientBrands } from "@/components/ClientLogos";
+import { clientBrands } from "@/data/clientBrands";
 import { clientLogoAsset } from "@/data/clientLogoAssets";
 import "./ClientBrandTicker.css";
 
