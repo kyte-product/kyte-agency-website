@@ -1,6 +1,6 @@
 .route-stairs,.route-liquid,.route-fade{position:fixed;inset:0;z-index:9999;width:100%;height:100dvh;pointer-events:auto}
 .route-stairs{display:flex;overflow:hidden}
-.route-stairs__column{position:relative;flex:1;height:100%;background:var(--color-blue);border-right:1px solid var(--color-blue);will-change:transform}
+.route-stairs__column{position:relative;flex:1;height:100%;background:var(--color-blue);border-right:1px solid rgba(255,255,255,.25);will-change:transform}
 .route-stairs__column:last-child{border-right:0}
 .route-fade{background:var(--color-blue)}
 @media(prefers-reduced-motion:reduce){.route-stairs,.route-liquid,.route-fade{display:none}}

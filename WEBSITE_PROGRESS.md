@@ -3717,3 +3717,7 @@ After each prompt, refresh the sections above and add a short entry here with th
 - Saved the original complete controller, exact CSS and restoration instructions in kyte-site/backups/page-transition-original. Removed the rejected pixel renderer from the active code. All service and audit fixes remain. Updated design-system and IA notes. Local port 3001 only; no push or deployment. Focused lint and TypeScript passed; final browser verification follows. Owner: Kyte website team.
 
 - Supplied-transition verification: browser confirmed five columns, successful Home to Branding and return navigation, overlay removal after exit, and reduced-motion bypass. After the color change, all five computed backgrounds were rgb(2, 73, 217), the shared Kyte blue. Focused ESLint, TypeScript and whitespace checks passed. Original backup remains separate and unchanged. Local only.
+
+### 22 October 2026: Stair transition dividers
+
+- Restored visible 1px pale dividers between the five brand-blue stair columns; the final column has no outer divider. Updated page-transition.css. CSS and whitespace reviewed. Local preview on port 3001; no push or deployment. Original transition backup unchanged. Owner: Kyte website team.
