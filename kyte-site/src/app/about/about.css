@@ -31,8 +31,6 @@
 .about-page__service-mark { position: absolute; top: 26px; right: 26px; width: 42px; height: 42px; object-fit: contain; filter: brightness(0) invert(1); }
 .about-page__service-extra .eyebrow { margin-bottom: 14px; color: var(--effect-1); }
 .about-page__service-extra h4 { max-width: 440px; margin: 0; font-size: var(--heading-title); font-weight: var(--heading-weight); line-height: 1.2; letter-spacing: -.035em; }
-.about-page__service-extra .kyte-button { justify-content: space-between; align-self: flex-start; min-width: 200px; margin-top: 24px; background: var(--color-white); color: var(--color-blue); }
-.about-page__service-extra .kyte-button:hover { background: var(--color-control-hover); color: var(--color-blue-hover); }
 @media (max-width: 900px) { .about-page__people { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 700px) {
 }
@@ -57,3 +55,6 @@
 
 .about-page__service-extra .about-page__service-mark{position:relative;inset:auto;width:88px;height:88px;flex:none;filter:none;margin:0 0 auto;align-self:flex-start}
 .about-page__service-extra h4{margin-top:32px}
+
+
+.about-page__service-extra .kyte-button{align-self:flex-start;margin-top:24px}

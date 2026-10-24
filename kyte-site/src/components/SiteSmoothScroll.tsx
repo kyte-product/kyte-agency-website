@@ -69,7 +69,9 @@ export function SiteSmoothScroll() {
       const previous = scroll;
       scroll = undefined;
       if (previous) {
-        previous.stop();
+        // destroy() stops the engine. Calling stop() first with autoToggle
+        // writes inline overflow:clip that survives destroy and freezes native routes.
+        if (root.style.overflow === "clip") root.style.removeProperty("overflow");
         // V5 initializes its observers in the next frame. Let that finish before
         // destroying an instance abandoned by navigation or React Strict Mode.
         if (initialized) previous.destroy();
@@ -82,7 +84,9 @@ export function SiteSmoothScroll() {
     const setup = () => {
       const current = ++generation;
       destroy();
-      if (reducedMotion.matches) {
+      if (reducedMotion.matches || pathname.startsWith("/insights/guides/")) {
+        if (root.style.overflow === "clip") root.style.removeProperty("overflow");
+        root.classList.remove("lenis-stopped", "lenis-locked");
         root.dataset.scrollEngine = "native";
         return;
       }

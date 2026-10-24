@@ -1,24 +1,27 @@
 "use client";
 
+import { Breadcrumbs } from "./Breadcrumbs";
+
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, BookOpen, FileText, Newspaper } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { DotPattern } from "@/components/ui/DotPattern";
 import { useState } from "react";
 import { guideSamples, resourceSamples } from "@/lib/editorial-collections";
 import "./EditorialCollections.css";
 
 export function EditorialShortcuts({ showPlaceholders }: { showPlaceholders: boolean }) {
   const items = [
-    { title: "Design News", description: "Stories and ideas from the Kyte team.", href: "/insights/design-news", icon: Newspaper },
+    { title: "Design News", description: "Stories and ideas from the Kyte team.", href: "/insights/design-news", shape: "ribbon" as const },
     ...(showPlaceholders ? [
-      { title: "Resources", description: "Practical tools and reading for product teams.", href: "/insights/resources", icon: FileText },
-      { title: "Guides", description: "Step-by-step thinking for better digital work.", href: "/insights/guides", icon: BookOpen },
+      { title: "Resources", description: "Practical tools and reading for product teams.", href: "/insights/resources", shape: "define" as const },
+      { title: "Guides", description: "Step-by-step thinking for better digital work.", href: "/insights/guides", shape: "discover" as const },
     ] : []),
   ];
 
-  return <nav className={`editorial-shortcuts${showPlaceholders ? "" : " editorial-shortcuts--single"}`} aria-label="Explore insights">
-    {items.map(({ title, description, href, icon: Icon }) => <div className="editorial-shortcuts__item" key={title}>
-      <Icon className="editorial-shortcuts__icon" size={40} strokeWidth={1.5} aria-hidden="true" />
+  return <nav id="insights-collections" className={`editorial-shortcuts${showPlaceholders ? "" : " editorial-shortcuts--single"}`} aria-label="Explore insights">
+    {items.map(({ title, description, href, shape }) => <div className="editorial-shortcuts__item" key={title}>
+      <div className="editorial-shortcuts__art" aria-hidden="true"><DotPattern shape={shape} tone="brand" /></div>
       <h2>{title}</h2><p>{description}</p>
       <Link href={href}>Explore {title} <ArrowRight size={17} aria-hidden="true" /></Link>
     </div>)}
@@ -28,32 +31,33 @@ export function EditorialShortcuts({ showPlaceholders }: { showPlaceholders: boo
 export function EditorialResources({ standalone = false }: { standalone?: boolean }) {
   const Heading = standalone ? "h1" : "h2";
   return <section className={`design-news__resources${standalone ? " editorial-collection--standalone" : ""}`} aria-labelledby="design-news-resources-heading">
+    {standalone && <Breadcrumbs href="/insights" label="Insights" current="Resources" />}
     <div className="design-news__resources-head"><div><Heading id="design-news-resources-heading">Resources</Heading><p>Practical material for teams working through product and brand decisions.</p></div>{!standalone && <Link className="kyte-button design-news__resources-link" href="/insights/resources">See all resources <ArrowRight size={18} aria-hidden="true" /></Link>}</div>
-    <div className="design-news__resource-grid">{resourceSamples.map((sample) => <article className="design-news__resource" key={sample.title}>
+    <div className="design-news__resource-grid">{resourceSamples.map((sample) => <Link href={`/insights/resources/${sample.slug}`} className="design-news__resource" key={sample.title}>
       <span className="design-news__resource-shelf"><span className="design-news__resource-book"><span className="design-news__resource-back" /><span className="design-news__resource-pages" /><span className="design-news__resource-face editorial-collection__book-face" style={{ backgroundColor: sample.color, color: sample.accent }}><Image className="editorial-collection__book-logo" src="/kyte-agency-logo.svg" alt="" width={1379} height={200} unoptimized /><span className="editorial-collection__book-title">{sample.title}</span><span className="design-news__resource-binding" /></span></span></span>
       <span className="design-news__resource-topic">{sample.kind}</span><strong>{sample.title}</strong>
-    </article>)}</div>
+    </Link>)}</div>
   </section>;
 }
 
 export function EditorialGuides({ standalone = false }: { standalone?: boolean }) {
   const Heading = standalone ? "h1" : "h2";
   const [featured, setFeatured] = useState(0);
-  const [offset, setOffset] = useState(0);
   const selected = guideSamples[featured];
-  const ordered = [...guideSamples.slice(offset), ...guideSamples.slice(0, offset)];
   const moveFeatured = (direction: -1 | 1) => setFeatured((value) => (value + direction + guideSamples.length) % guideSamples.length);
 
   return <section className={`editorial-guides${standalone ? " editorial-collection--standalone" : ""}`} aria-labelledby="editorial-guides-heading">
+    {standalone && <Breadcrumbs href="/insights" label="Insights" current="Guides" />}
     <div className="editorial-guides__lead">
       <div className="editorial-guides__intro"><Heading id="editorial-guides-heading">Guides</Heading><p>Clear, practical starting points for teams designing products and services.</p>{!standalone && <Link href="/insights/guides">See all guides <ArrowRight size={17} aria-hidden="true" /></Link>}</div>
       <div className="editorial-guides__featured" aria-live="polite">
-        <Image className="editorial-guides__mark" src="/kyte-agency-mark.png" alt="" width={512} height={512} unoptimized />
-        <div className="editorial-guides__featured-copy"><h3>{selected.title}</h3><p>{selected.summary}</p></div>
+
+        <div className="editorial-guides__featured-art" aria-hidden="true"><DotPattern shape="orbit" tone="white" seed={`insights-featured:${selected.title}`} motifSlot={featured} /></div>
+        <div className="editorial-guides__featured-copy"><h3><Link href={`/insights/guides/${selected.slug}`}>{selected.title}</Link></h3><p>{selected.summary}</p><Link className="editorial-guides__read" href={`/insights/guides/${selected.slug}`}>Read guide <ArrowRight size={18} aria-hidden="true" /></Link></div>
         <div className="editorial-guides__featured-controls carousel-arrow-controls"><button type="button" onClick={() => moveFeatured(-1)} aria-label="Previous sample guide"><ArrowLeft size={18} /></button><button type="button" onClick={() => moveFeatured(1)} aria-label="Next sample guide"><ArrowRight size={18} /></button></div>
       </div>
     </div>
-    <div className="editorial-guides__highlights-head"><h3>Recent highlights</h3><div className="carousel-arrow-controls"><button type="button" onClick={() => setOffset((value) => (value - 1 + guideSamples.length) % guideSamples.length)} aria-label="Previous guide highlights"><ArrowLeft size={18} /></button><button type="button" onClick={() => setOffset((value) => (value + 1) % guideSamples.length)} aria-label="Next guide highlights"><ArrowRight size={18} /></button></div></div>
-    <div className="editorial-guides__highlights">{ordered.map((sample) => <article key={sample.title} className="editorial-guides__highlight" style={{ backgroundColor: sample.color }}><h4>{sample.title}</h4><p>{sample.preview}</p><Image src="/kyte-agency-mark.png" alt="" width={44} height={44} unoptimized /></article>)}</div>
+    <div className="editorial-guides__highlights-head"><h3>Recent highlights</h3></div>
+    <div className="editorial-guides__highlights">{guideSamples.map((sample) => <article key={sample.title} className="editorial-guides__highlight" style={{ backgroundColor: sample.color }}><Link className="editorial-guides__highlight-link" href={`/insights/guides/${sample.slug}`}><div className="editorial-guides__highlight-art" aria-hidden="true"><DotPattern shape="kite" tone="white" /></div><h4>{sample.title}</h4><p>{sample.preview}</p><span className="kyte-tertiary kyte-tertiary--white">Read guide <ArrowRight size={18} aria-hidden="true" /></span></Link></article>)}</div>
   </section>;
 }

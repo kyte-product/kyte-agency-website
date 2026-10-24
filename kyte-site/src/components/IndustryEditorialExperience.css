@@ -5,7 +5,7 @@
 .industry-editorial h1 { max-width: 920px; font-size: var(--heading-page); line-height: 1.2; }
 .industry-editorial h2 { font-size: var(--heading-section); line-height: 1.2; }
 .industry-editorial h3 { font-size: var(--heading-card); line-height: 1.2; }
-.industry-editorial__eyebrow { margin: 0 0 20px; color: var(--color-blue-bright); font-size:var(--type-label); font-weight: 450; letter-spacing: .1em; text-transform: uppercase; }
+.industry-editorial__eyebrow { margin: 0 0 20px; color: var(--color-blue-bright); font-size:var(--type-label); font-weight: 450; letter-spacing: .1em; text-transform:capitalize; }
 .industry-editorial__hero { padding-top: 112px; }
 .industry-editorial__hero-content { display: grid; grid-template-columns: minmax(0,1.8fr) minmax(260px,1fr); align-items: end; gap: clamp(32px,5vw,72px); margin-bottom: 64px; }
 .industry-editorial__hero h1 { max-width: 690px; }

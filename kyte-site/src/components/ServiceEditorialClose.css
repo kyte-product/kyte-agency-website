@@ -1,6 +1,6 @@
 .service-editorial { padding: clamp(76px,10vw,150px) 0 clamp(70px,8vw,120px); color: var(--brand-color-detail-17191d); background: var(--brand-color-white); }
 .service-editorial__inner { width: 100%; margin-inline: auto; }
-.service-editorial__inner > h2 { padding-inline: var(--brand-section-inset); margin: 0 0 clamp(50px,7vw,100px); font-family: "DM Sans Variable","DM Sans",sans-serif; font-size: var(--brand-heading-editorial); font-weight: 400; letter-spacing: -.075em; line-height: 1.2; text-transform: uppercase; }
+.service-editorial__inner > h2 { padding-inline: var(--brand-section-inset); margin: 0 0 clamp(50px,7vw,100px); font-family: "DM Sans Variable","DM Sans",sans-serif; font-size: var(--brand-heading-editorial); font-weight: 400; letter-spacing: -.075em; line-height: 1.2; text-transform:capitalize; }
 .service-editorial__list { border-top: 2px solid currentColor; }
 .service-editorial__row { position: relative; display: flex; align-items: center; justify-content: center; min-height: 1.9em; padding: .37em 0; border-bottom: 2px solid currentColor; color: inherit; font-size: var(--brand-heading-service-directory); text-decoration: none; }
 .service-editorial__title { display: flex; align-items: center; justify-content: center; max-width: 100%; font-family: "DM Sans Variable","DM Sans",sans-serif; font-size: inherit; font-weight: 400; letter-spacing: -.055em; line-height: 1.2; white-space: nowrap; text-transform: none; }

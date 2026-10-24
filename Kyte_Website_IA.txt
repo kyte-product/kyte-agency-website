@@ -59,7 +59,9 @@ Services menu layout:
 ├── /insights
 │   ├── /insights/design-news
 │   ├── /insights/resources (sample collection enabled for review)
+│   │   └── /insights/resources/[slug] (article template)
 │   ├── /insights/guides (sample collection enabled for review)
+│   │   └── /insights/guides/[slug] (documentation template)
 │   └── /insights/[article-slug]
 │
 ├── /about

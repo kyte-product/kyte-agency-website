@@ -206,7 +206,7 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
   letter-spacing: -.075em;
   line-height: 1.2;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform:capitalize;
   transition: color .24s ease;
   animation: none;
 }

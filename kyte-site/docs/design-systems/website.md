@@ -140,3 +140,51 @@ Interface color literals resolve through palette/detail tokens. Exact client art
 ### Shared motion coverage, 24 October 2026
 
 Root layout mounts one SiteRevealMotion and one TextRevealMotion. Plain text/media use the shared entry reveal; explicit data-reveal-words content uses the word controller on every route. Custom Branding/About/case-study scenes and DS reference pages opt out of generic entry animation. Logo tickers preserve their own treatment. Reduced motion keeps text readable, observers cover streamed content, and route cleanup cancels pending animations. Parent content blocks with their own paragraph/media children avoid duplicate reveal.
+
+
+### Insights dotted artwork, 24 October 2026
+
+Insights shortcut cards use distinct DotPattern motifs in white 112px square containers. Featured guides use a compact white-on-blue dotted motif at the top left above the title: 112px desktop/tablet and 96px mobile. Copy and carousel controls remain in their own grid rows. Recent-highlight cards place a 96px white dotted Kyte silhouette in the top-left content flow, before the heading. Use shape="kite" with the default seed for the literal Kyte mask; custom seeds select geometric reference motifs. The shared component retains its reduced-motion and offscreen-pause behavior. The same EditorialGuides component applies these rules to /insights/guides.
+
+
+24 October 2026: Active text treatments use capitalization instead of uppercase, including metadata and independently owned Branding display text. Supplied artwork/logos and acronyms retain their authored identity. Insights featured news removes the top label/counter; story copy stays bottom aligned. Resource-book back covers are neutral gray, with white/gray paper edges visible during hover.
+
+
+### Resource and guide detail templates, 24 October 2026
+
+Design News and Resources share EditorialArticleTemplate: breadcrumb, title/summary and fact grid, full-width cover, article body and sticky ArticleTopics. Resource routes are /insights/resources/[slug]. Resource-specific fields are audience, format and optional download {url,label,fileType}; download controls render only when a real asset is provided. Resource detail uses a gray image placeholder. Status/topic/format/audience move into the sticky sidebar; header facts are hidden. Header and single-paragraph body both offer the resource download. Sample TXT checklists are included for local review.
+
+Guides use /insights/guides/[slug] and the documentation template: sticky guide-library sidebar on desktop, current-guide state, breadcrumbs, title/summary, audience/level/step count, on-page contents, sectioned reading column and previous/next navigation. The full-height desktop sidebar fills the viewport beneath the live header and scrolls internally; All guides sits beside the article breadcrumbs. Metadata uses a gray strip with a blue left border. Guide sections include plain gray image placeholders. On narrow screens the library sits above the article in normal flow and navigation cards stack. Guide content is modeled as ordered title/description steps and converted into the shared EditorialBody blocks. Keep all links and IDs stable when populating content.
+
+Samples and slugs live in src/lib/editorial-collections.ts; item content and type-specific field contracts live in src/lib/editorial-items.ts. Sample pages are marked noindex, contain no invented publication dates/authors and do not provide fake downloads. Existing Design News continues reading its current CMS data. No CMS schema changes are included in this local template work.
+
+
+Resource layout slots (sidebar/content/hideHeaderFacts) in EditorialArticleTemplate apply these resource differences while Design News keeps its existing article rendering. Guide sample notices are removed from the visible page at the user’s request; the underlying sample data and noindex metadata remain.
+
+
+24 October 2026 scroll correction: Guide detail pages use native document scrolling. Desktop library navigation is sticky within the guide main at a stable 72px top offset, fills the remaining viewport and scrolls internally; it no longer resizes in response to the header's scrolled class. The rail/list background is gray; only the active guide has a white background. Navigation opts out of text reveals. The guide main includes the article and closing CTA in its right column. The rail remains sticky through the CTA, then scrolls upward naturally as that full section ends before the footer. The article and right-column CTA use a centered 1120px maximum outer width, including responsive horizontal padding; reading text remains left aligned. Phone navigation remains in normal flow with bounded internal overflow.
+
+
+24 October 2026 review refinements: Guide facts are three separate gray cards, each with a blue left border; cards stack on narrow phones. All guides appears before the breadcrumbs. The closing guide CTA stays inside the right-side reading region. Resource detail facts use a padded gray panel; the header summary-to-download gap is 20px. Insights shortcuts use distinct unseeded ribbon/define/discover motifs, avoiding duplicate seeded selections. Highlight cards use the literal Kyte mask with static white dots so all four signatures remain identical and legible.
+
+
+### Shared breadcrumbs and guide navigation, 24 October 2026
+
+`Breadcrumbs.tsx` and `Breadcrumbs.css` own the Work detail pattern across Work, Design News, Resources and Guides. A Lucide ChevronLeft (18px) precedes the parent collection link, followed by a slash and muted current title with aria-current="page". Use the body type role and ellipsis for long current titles. The live /design-system controls section includes the specimen.
+
+The guide library fills its rail with balanced 24px side padding and a centered navigation up to 240px wide. Guide pagination cards have no top divider or hover underline; their direction chevron sits at the right of each card, separate from the label and title. Contents links scroll smoothly under the header, with instant movement for reduced motion. Guide highlights use a four-column grid with automatic rows, two columns at tablet and one on phones; there are no highlight carousel controls or title underlines. The featured guide carousel is retained.
+
+The shared header moves its announcement strip with actual document scroll distance, capped at the strip height. There is no delayed threshold transition; layout space stays reserved and the navigation meets the top edge continuously. Strip height is measured on setup/resize rather than during every scroll frame.
+
+
+### 24 October 2026 review refinements
+
+Gray primary variant `.kyte-button--gray` uses the existing #f5f5f5 control surface and a neutral hover surface; all Brochure actions use it. White primary actions use `.kyte-button--light`, including footer Start a project and About View our work. The footer AI cell hugs its content. Resource facts have no row gap and use 12px vertical row padding. Standalone Resources and Guides include the shared Insights breadcrumb.
+
+Card titles never underline. Neutral card titles may change to blue; titles on blue retain white for contrast. White tertiary labels underline on hover/focus, with their arrows outside the decorated text. Guide cards expose an explicit white Read guide action. Filled buttons change surface with no underline. These rules also apply to keyboard focus; preserve visible focus outlines. Branding retains its own type/color foundation and art motion, while title underlines are removed.
+
+Guide reading and CTA outer maximum width is 1120px. Scroll-engine teardown must not call autoToggle stop() before destroy(): stop() writes inline overflow:clip, which destroy() does not remove. Clean up any stale engine-owned clip when entering native guide routes. Page transition shields have timed recovery if completion callbacks are interrupted.
+
+Careers follows openings with the shared ServiceApproach culture principles, then a themed gallery. Gallery themes are toggle buttons with aria-pressed. Each theme has two solid-blue text cards with top-left dotted artwork and four gray image placeholders; use approved photos later. Culture copy describes working principles, with no invented benefits, events or awards. Gallery uses three columns on desktop, two on tablet and one on phones. About impact motifs remain square; shared horizontal impact labels have a 12px gap before their values. Home service cards swap black/blue surfaces on hover and focus. Service-menu cluster titles include ArrowRight.
+
+24 October follow-up: Culture chips sit in a gray control container with white selected state. Theme changes fade between grids over 200ms per phase and use a small entrance offset; reduced motion removes the animation. Each theme has a distinct pair of blue-card slots, always retaining four gray image placeholders. Compact menu rows fill the available viewport width within shared 24px/16px side padding. About hero uses standard brand-blue primary; its team card retains the white variant. DesignRush footer badge links to the verified Kyte Agency profile and has an accessible label.

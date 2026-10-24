@@ -6,8 +6,8 @@
 .services-intro__cta { justify-self: end; margin-bottom: 5px; }
 .services-intro__cards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-top: clamp(40px,5vw,64px); }
 .services-intro__card { position: relative; display: block; min-height: clamp(260px,22vw,310px); overflow: hidden; padding: clamp(28px,3vw,40px); border-radius: var(--radius-medium); color: var(--color-white); background: var(--color-deep); cursor: pointer; transition: background-color .25s ease; }
-.services-intro__card--product,.services-intro__card--product:hover { background: var(--color-deep); }
-.services-intro__card--branding,.services-intro__card--branding:hover { background: var(--color-blue); }
+.services-intro__card--product { background: var(--color-deep); }
+.services-intro__card--branding { background: var(--color-blue); }
 .services-intro__card-link { display: block; }
 .services-intro__card-link::after { position: absolute; inset: 0; z-index: 1; content: ""; }
 .services-intro__card-heading { position: relative; z-index: 1; display: block; max-width: 100%; font-size: var(--heading-card); font-weight: var(--heading-weight); line-height: 1.2; letter-spacing: var(--heading-letter-spacing); }
@@ -58,3 +58,6 @@
 @media(max-width:760px){.services-intro__card-copy{padding:20px}.services-intro__card--informative{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}.services-intro__card--informative .services-intro__pattern{left:60%;width:40%}}
 
 .services-intro__row h2{max-width:900px;text-wrap:balance}
+
+.services-intro__card--product:hover,.services-intro__card--product:focus-within{background:var(--color-blue)}
+.services-intro__card--branding:hover,.services-intro__card--branding:focus-within{background:var(--color-deep)}

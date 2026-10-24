@@ -1,6 +1,6 @@
 # Content population guide
 
-Current: 22 October 2026. The IA owns route names; the SEO playbook owns intent and proof rules. Keep existing slugs stable.
+Current: 24 October 2026. The IA owns route names; the SEO playbook owns intent and proof rules. Keep existing slugs stable.
 
 ## Where to edit
 
@@ -38,3 +38,16 @@ Work imagery and featured projects, service/industry hero placeholders, stock im
 The supplied Fincart product cover says “Reducing Financial Plan Creation Time by 200%.” A time reduction cannot exceed 100%. Confirm the underlying before/after measurement and rewrite the artwork with the correct percentage or speed comparison. The supplied image is preserved exactly in this release; its claim is not independently verified. The other cover metrics also need source sign-off before final launch.
 
 Kyte impact figures shared by Home and the Product landing are maintained in `src/data/kyteImpact.ts`. Edit them there to keep both pages aligned; preserve the views period. Industry metrics remain in `src/data/industrySnapshots.ts` with their source/context and must not be substituted for Kyte figures.
+
+
+## Resource and guide items, 24 October 2026
+
+- Resource sample cards link to /insights/resources/[slug]. Update ResourceItem in src/lib/editorial-items.ts: article title/summary/body/cover, audience, format and optional download URL/label/fileType. Use a real licensed file before adding a download field. Design News and Resources render through EditorialArticleTemplate, so shared article layout changes apply to both.
+- Guide sample cards and featured guide link to /insights/guides/[slug]. Update GuideItem: article title/summary, audience, level and ordered steps with title/description. Steps generate the article body and contents anchors. Library order defines previous/next navigation.
+- Stable slugs are explicit in src/lib/editorial-collections.ts. Titles may change independently. Unknown slugs return 404.
+- These eight pages are sample content and remain noindex. Resources expose sample status; guide notices are hidden at the user’s request. No CMS writes or schema migrations were made. CMS-backed resource/guide collections can later implement the same typed contracts after schema/content review.
+
+
+24 October 2026 detail review: resource preview downloads now point to four real sample TXT checklists in public/downloads/resources. Replace these with approved assets and update download URL/fileType/format together. Resource content is displayed as one paragraph, with details in the sidebar and a gray image placeholder. Guides use a viewport-height desktop library with internal scroll, a highlighted fact strip and gray placeholders between sections. The visible guide sample notice is removed; sample provenance remains in this handoff and source metadata.
+
+Careers culture principles live in `src/app/careers/page.tsx`; gallery themes and the two blue-card positions per theme live in `CareerCultureGallery.tsx`. Gray photo blocks are intentional placeholders, not missing asset requests. Replace with approved team photos and useful alt text. Resource downloads currently contain four real sample TXT checklists; replace URL, format and file type together when approved assets are supplied.

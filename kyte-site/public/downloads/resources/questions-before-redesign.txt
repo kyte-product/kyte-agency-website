@@ -1,0 +1,12 @@
+Questions to ask before a redesign
+
+Sample resource for template review.
+
+Understand the reason
+Record what is not working and what evidence supports the need for a redesign.
+
+Identify constraints
+List the content, technical, accessibility and delivery constraints. Establish the decisions that are still open.
+
+Plan the next step
+Agree a focused research or design task with a clear output and review point.

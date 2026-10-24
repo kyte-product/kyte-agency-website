@@ -68,7 +68,6 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
           >
             {article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 900px) 100vw, 70vw" />}
             <span className="design-news__slide-shade" />
-            <span className="design-news__slide-top"><span>Kyte Design News</span><span>{String(index + 1).padStart(2, "0")} / {String(featured.length).padStart(2, "0")}</span></span>
             <span className="design-news__slide-copy"><span className="design-news__slide-meta">{articleMeta(article)}</span><strong>{article.title}</strong><span className="design-news__slide-cta">Read story <ArrowRight size={17} aria-hidden="true" /></span></span>
           </Link>)}
           {featured.length > 1 && <div className="design-news__arrows carousel-arrow-controls">

@@ -1,8 +1,8 @@
+import { Breadcrumbs } from "@/components/design-system/Breadcrumbs";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, ChevronLeft } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { EditorialBody } from "@/components/design-system/EditorialBody";
@@ -45,11 +45,7 @@ export default async function WorkDetailPage({ params }: Props) {
   return <><SiteHeader /><main className={`editorial-detail editorial-detail--work${isFincart || isFincartBranding ? " editorial-detail--fincart" : ""}`}>
     {(isFincart || isFincartBranding) && <><FincartImageReveal /></>}
     <header className="editorial-detail__heading">
-      <nav className="editorial-detail__breadcrumbs" aria-label="Breadcrumb">
-        <Link className="editorial-detail__breadcrumb-link" href="/work"><ChevronLeft size={18} strokeWidth={1.8} aria-hidden="true" /> Work</Link>
-        <span className="editorial-detail__breadcrumb-separator" aria-hidden="true">/</span>
-        <span aria-current="page">{project.client || project.title}</span>
-      </nav>
+      <Breadcrumbs href="/work" label="Work" current={project.client || project.title} />
       <div className="editorial-detail__work-heading-grid">
         <div><h1 data-reveal-words={isFincart || isFincartBranding ? "" : undefined}>{isFincart || isFincartBranding ? <RevealWords text={project.title} /> : project.title}</h1>{project.summary && <p className="editorial-detail__summary" data-reveal-words={isFincart || isFincartBranding ? "" : undefined}>{isFincart || isFincartBranding ? <RevealWords text={project.summary} /> : project.summary}</p>}{projectUrl && <a className="editorial-detail__live-link kyte-button" href={projectUrl} target="_blank" rel="noopener noreferrer">{isFincart ? "View on App Store" : "View live work"} <ArrowRight size={18} strokeWidth={1.8} aria-hidden="true" /></a>}</div>
         <div className="editorial-detail__work-aside">

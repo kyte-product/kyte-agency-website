@@ -14,7 +14,7 @@
   font-weight: 450;
   letter-spacing: -.075em;
   line-height: 1.2;
-  text-transform: uppercase;
+  text-transform:capitalize;
 }
 
 .brand-testimonials__viewport { overflow: hidden; padding-block: 8px; }

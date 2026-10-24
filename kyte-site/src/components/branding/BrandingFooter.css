@@ -11,7 +11,7 @@
 .branding-footer__brand > span { color: var(--brand-color-detail-ffffffbd); font-size:var(--brand-type-local-12); }
 .branding-footer__links { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-content: start; }
 .branding-footer__links > div { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
-.branding-footer__links a { display: inline-flex; gap: 4px; font-size:var(--brand-type-local-12); letter-spacing: .02em; text-transform: uppercase; }
+.branding-footer__links a { display: inline-flex; gap: 4px; font-size:var(--brand-type-local-12); letter-spacing: .02em; text-transform:capitalize; }
 .branding-footer__contact > p { margin: 0 0 23px; font-size: var(--brand-type-title); letter-spacing: -.035em; line-height: 1.2; }
 .branding-footer__contact > a:not(.branding-footer__cta) { display: inline-flex; align-items: center; gap: 6px; font-size: var(--brand-type-lead); }
 .branding-footer__cta { display: flex; width: fit-content; align-items: center; gap: 8px; margin-top: 26px; padding: 11px 23px; border: 1px solid var(--brand-color-white); border-radius: 50%; font-size:var(--brand-type-local-16); }

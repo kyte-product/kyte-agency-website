@@ -1,0 +1,554 @@
+{
+  "pages": 68,
+  "assets": 381,
+  "pageFailures": [],
+  "headingFailures": [],
+  "contentFailures": [],
+  "assetFailures": [],
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "h1": 1,
+      "title": "Kyte | Product, website and brand design",
+      "description": "Kyte brings product, web and brand design together to help people understand, use and choose what you make.",
+      "error": null
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "h1": 1,
+      "title": "About Kyte | The people behind the work",
+      "description": "Meet the people behind Kyte's product design, branding and marketing work.",
+      "error": null
+    },
+    {
+      "path": "/branding-marketing",
+      "status": 200,
+      "h1": 1,
+      "title": "Branding & Marketing | Kyte Agency",
+      "description": "Brand strategy, identity, creative design, and marketing from Kyte Agency.",
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/brand-strategy-identity",
+      "status": 200,
+      "h1": 1,
+      "title": "Brand Strategy & Identity | Kyte Agency",
+      "description": "Clarify your brand position and turn it into a coherent visual and verbal identity for the places customers meet you.",
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/graphic-design",
+      "status": 200,
+      "h1": 1,
+      "title": "Graphic Design Services | Kyte Agency",
+      "description": "Create consistent graphic design for the formats and channels your team uses, from campaign assets to presentations.",
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/seo-ai-search-optimisation",
+      "status": 200,
+      "h1": 1,
+      "title": "SEO & AI Search Optimisation | Kyte Agency",
+      "description": "Improve the clarity, structure, and discoverability of your website in search and AI-assisted discovery with measurable work.",
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/social-media-marketing",
+      "status": 200,
+      "h1": 1,
+      "title": "Social Media Marketing | Kyte Agency",
+      "description": "Plan and create social content around a clear business goal, audience, publishing rhythm, and review process.",
+      "error": null
+    },
+    {
+      "path": "/branding-marketing/video-production-motion-graphics",
+      "status": 200,
+      "h1": 1,
+      "title": "Video Production & Motion Graphics | Kyte Agency",
+      "description": "Plan and create video and motion formats that explain an idea, show a product, or support a campaign.",
+      "error": null
+    },
+    {
+      "path": "/careers",
+      "status": 200,
+      "h1": 1,
+      "title": "Careers at Kyte | Work with our team",
+      "description": "Explore careers at Kyte Agency and introduce yourself to our product design, branding and marketing team.",
+      "error": null
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "h1": 1,
+      "title": "Contact Kyte | Start a project",
+      "description": "Tell Kyte about the product, website or brand work you are considering.",
+      "error": null
+    },
+    {
+      "path": "/design-system",
+      "status": 200,
+      "h1": 1,
+      "title": "Website design system | Kyte",
+      "description": "Shared foundations, component contracts and template rules for Kyte.",
+      "error": null
+    },
+    {
+      "path": "/design-system/branding",
+      "status": 200,
+      "h1": 1,
+      "title": "Branding landing design system | Kyte",
+      "description": "Independent Branding visual language and foundations for the Branding landing.",
+      "error": null
+    },
+    {
+      "path": "/design-system/product",
+      "status": 200,
+      "h1": 1,
+      "title": "Product design landing design system | Kyte",
+      "description": "Product landing visual rules and the complete original and brand-blue isometric illustration library.",
+      "error": null
+    },
+    {
+      "path": "/industries",
+      "status": 200,
+      "h1": 1,
+      "title": "Industries | Kyte Agency",
+      "description": "Explore how Kyte approaches design challenges across fintech, SaaS, ecommerce, and hospitality.",
+      "error": null
+    },
+    {
+      "path": "/industries/d2c-ecommerce",
+      "status": 200,
+      "h1": 1,
+      "title": "D2C & eCommerce Design | Kyte Agency",
+      "description": "Connect brand, product discovery, product detail, and checkout in a clear eCommerce experience across devices.",
+      "error": null
+    },
+    {
+      "path": "/industries/fintech",
+      "status": 200,
+      "h1": 1,
+      "title": "Fintech Product Design | Kyte Agency",
+      "description": "Design financial products that make complex decisions, money tasks, and account journeys easier to understand and use.",
+      "error": null
+    },
+    {
+      "path": "/industries/hospitality-food-beverage",
+      "status": 200,
+      "h1": 1,
+      "title": "Hospitality & Food Brand and Digital Design | Kyte Agency",
+      "description": "Design clear digital and brand experiences for hospitality and food businesses, from discovery to reservations, orders, and return visits.",
+      "error": null
+    },
+    {
+      "path": "/industries/saas-startups",
+      "status": 200,
+      "h1": 1,
+      "title": "SaaS & Startup Product Design | Kyte Agency",
+      "description": "Shape SaaS and startup products around clear workflows, validated priorities, and design systems that can grow with the product.",
+      "error": null
+    },
+    {
+      "path": "/insights",
+      "status": 200,
+      "h1": 1,
+      "title": "Design News | Kyte",
+      "description": "Ideas and observations from the Kyte team on design, branding, and visual culture.",
+      "error": null
+    },
+    {
+      "path": "/insights/design-news",
+      "status": 200,
+      "h1": 1,
+      "title": "Design News | Kyte",
+      "description": "Browse design, branding, and visual culture stories from the Kyte team.",
+      "error": null
+    },
+    {
+      "path": "/insights/guides",
+      "status": 200,
+      "h1": 1,
+      "title": "Guides | Kyte",
+      "description": "Practical guides for teams designing digital products and services.",
+      "error": null
+    },
+    {
+      "path": "/insights/guides/building-visual-system",
+      "status": 200,
+      "h1": 1,
+      "title": "Building a visual system | Guides | Kyte",
+      "description": "Create consistent interface patterns across screens.",
+      "error": null
+    },
+    {
+      "path": "/insights/guides/planning-product-experience",
+      "status": 200,
+      "h1": 1,
+      "title": "Planning a product experience | Guides | Kyte",
+      "description": "A practical guide to setting goals, learning from users, and shaping a first release.",
+      "error": null
+    },
+    {
+      "path": "/insights/guides/preparing-handoff",
+      "status": 200,
+      "h1": 1,
+      "title": "Preparing for handoff | Guides | Kyte",
+      "description": "Document design decisions for a development team.",
+      "error": null
+    },
+    {
+      "path": "/insights/guides/understanding-users",
+      "status": 200,
+      "h1": 1,
+      "title": "Understanding your users | Guides | Kyte",
+      "description": "Turn research into decisions a product team can act on.",
+      "error": null
+    },
+    {
+      "path": "/insights/how-dior-redefined-luxury-in-india-by-embracing-its-visual-language",
+      "status": 200,
+      "h1": 1,
+      "title": "How Dior Redefined Luxury in India by Embracing Its Visual Language | Design News | Kyte",
+      "description": "Most global luxury houses simplify when they enter India. Dior did the opposite, and the Mumbai showcase shows what amplification instead of adaptation actually looks like.",
+      "error": null
+    },
+    {
+      "path": "/insights/resources",
+      "status": 200,
+      "h1": 1,
+      "title": "Resources | Kyte",
+      "description": "Practical material for teams working through product and brand decisions.",
+      "error": null
+    },
+    {
+      "path": "/insights/resources/better-product-briefs",
+      "status": 200,
+      "h1": 1,
+      "title": "A practical guide to better product briefs | Resources | Kyte",
+      "description": "Sample resource content for reviewing this template. Replace it with approved material before publication.",
+      "error": null
+    },
+    {
+      "path": "/insights/resources/clearer-customer-journey",
+      "status": 200,
+      "h1": 1,
+      "title": "Mapping a clearer customer journey | Resources | Kyte",
+      "description": "Sample resource content for reviewing this template. Replace it with approved material before publication.",
+      "error": null
+    },
+    {
+      "path": "/insights/resources/questions-before-redesign",
+      "status": 200,
+      "h1": 1,
+      "title": "Questions to ask before a redesign | Resources | Kyte",
+      "description": "Sample resource content for reviewing this template. Replace it with approved material before publication.",
+      "error": null
+    },
+    {
+      "path": "/insights/resources/useful-design-system",
+      "status": 200,
+      "h1": 1,
+      "title": "A checklist for a useful design system | Resources | Kyte",
+      "description": "Sample resource content for reviewing this template. Replace it with approved material before publication.",
+      "error": null
+    },
+    {
+      "path": "/insights/sole-identity-how-sneaker-culture-cracked-the-code-on-branding-before-brands-did",
+      "status": 200,
+      "h1": 1,
+      "title": "How Sneaker Culture Built Meaning Before Brands Caught Up | Design News | Kyte",
+      "description": "Sneaker brands built meaning before most brands figured out what meaning was. Here's what they got right, and what every brand can learn from it.",
+      "error": null
+    },
+    {
+      "path": "/insights/the-menu-is-the-message",
+      "status": 200,
+      "h1": 1,
+      "title": "The Menu Is the Message: What Restaurants Teach Brands | Design News | Kyte",
+      "description": "Read a restaurant's menu for two minutes and you already know what it thinks of itself, and of you. Most brands make the same positioning choices without realising it.",
+      "error": null
+    },
+    {
+      "path": "/insights/the-wrap-is-the-campaign-what-car-camouflage-teaches-us-about-building-desire",
+      "status": 200,
+      "h1": 1,
+      "title": "How Car Camouflage Builds Desire Before a Launch | Design News | Kyte",
+      "description": "Dazzle wraps on test cars were built to hide a car's body lines. Somewhere along the way, automakers figured out they also build desire, and stopped hiding.",
+      "error": null
+    },
+    {
+      "path": "/insights/what-3-years-of-studying-marketing-really-taught-me-about-people",
+      "status": 200,
+      "h1": 1,
+      "title": "What 3 Years of Studying Marketing Really Taught Me About People | Design News | Kyte",
+      "description": "Most of what actually gets used at Kyte doesn't come from tools or trends. It comes from a handful of consumer psychology ideas that quietly changed how branding gets approached.",
+      "error": null
+    },
+    {
+      "path": "/insights/what-your-playlist-says-about-you-(and-why-brands-should-be-listening)",
+      "status": 200,
+      "h1": 1,
+      "title": "What Playlists Teach Brands About Voice and Timing | Design News | Kyte",
+      "description": "A playlist is a self-portrait, and most brands have no idea what theirs sounds like. Here is what DJs and curators understand about voice that most content teams don't.",
+      "error": null
+    },
+    {
+      "path": "/insights/when-advertising-was-unhinged-why-early-2000s-tech-marketing-still-hits-different",
+      "status": 200,
+      "h1": 1,
+      "title": "Why Early 2000s Tech Advertising Still Stands Out | Design News | Kyte",
+      "description": "For a brief window in the late 1990s and early 2000s, tech brands chased discomfort over clarity. Here is the strategy underneath the shock value, and what it says about advertising today.",
+      "error": null
+    },
+    {
+      "path": "/insights/why-sensory-branding-is-the-next-big-thing-in-2026",
+      "status": 200,
+      "h1": 1,
+      "title": "Why Sensory Branding Matters for Product Experience | Design News | Kyte",
+      "description": "Branding is quietly shifting from how a brand looks to how it feels. Texture, scent, sound and weight are becoming the new differentiator, and beauty brands are already proving it.",
+      "error": null
+    },
+    {
+      "path": "/privacy-policy",
+      "status": 200,
+      "h1": 1,
+      "title": "Privacy policy | Kyte Agency",
+      "description": "Kyte brings product, web and brand design together to help people understand, use and choose what you make.",
+      "error": null
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "h1": 1,
+      "title": "Terms and conditions | Kyte Agency",
+      "description": "Kyte brings product, web and brand design together to help people understand, use and choose what you make.",
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development",
+      "status": 200,
+      "h1": 1,
+      "title": "UI/UX Design & Development | Kyte Agency",
+      "description": "Research, product design, and development support for useful digital products, websites, and customer journeys.",
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/ecommerce-shopify-websites",
+      "status": 200,
+      "h1": 1,
+      "title": "eCommerce & Shopify Website Design | Kyte Agency",
+      "description": "Plan and design ecommerce storefronts around product discovery, clear product information, and smoother purchase journeys.",
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/mobile-app-design",
+      "status": 200,
+      "h1": 1,
+      "title": "Mobile App Design | Kyte Agency",
+      "description": "Design mobile app journeys, interfaces, and reusable patterns around the tasks people need to complete.",
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/saas-web-app-design",
+      "status": 200,
+      "h1": 1,
+      "title": "SaaS & Web App Design | Kyte Agency",
+      "description": "Simplify complex SaaS and web app workflows with clear information architecture, interfaces, and design systems.",
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/ux-research-design-audit",
+      "status": 200,
+      "h1": 1,
+      "title": "UX Research & Design Audits | Kyte Agency",
+      "description": "Understand where people struggle in your product and turn research, usability findings, and journey reviews into prioritised improvements.",
+      "error": null
+    },
+    {
+      "path": "/ui-ux-design-development/website-design-development",
+      "status": 200,
+      "h1": 1,
+      "title": "Website Design & Development | Kyte Agency",
+      "description": "Plan, design, and build a website that explains your offer clearly and supports the journeys that matter to your visitors.",
+      "error": null
+    },
+    {
+      "path": "/work",
+      "status": 200,
+      "h1": 1,
+      "title": "Case Studies | Kyte Agency",
+      "description": "See Kyte's product, website, brand, and content projects.",
+      "error": null
+    },
+    {
+      "path": "/work/accountify-website",
+      "status": 200,
+      "h1": 1,
+      "title": "Accountify Website | Work | Kyte",
+      "description": "We helped Accountify launch a modern Framer website for their AI-powered accounting and ERP platform",
+      "error": null
+    },
+    {
+      "path": "/work/arka-inventory-website",
+      "status": 200,
+      "h1": 1,
+      "title": "Arka Inventory Website | Work | Kyte",
+      "description": "We helped Arka Inventory revamp their dated website into a modern, conversion-focused Framer site",
+      "error": null
+    },
+    {
+      "path": "/work/banza-social-content-production",
+      "status": 200,
+      "h1": 1,
+      "title": "Banza Social Content and Production | Work | Kyte",
+      "description": "High-production social content and marketing that gave Banza an elevated presence, introducing a new way to think about personal technology.",
+      "error": null
+    },
+    {
+      "path": "/work/collectbee-website",
+      "status": 200,
+      "h1": 1,
+      "title": "Collectbee Website | Work | Kyte",
+      "description": "We helped Collectbee launch a Framer website for their AI-powered accounts receivable and collections platform",
+      "error": null
+    },
+    {
+      "path": "/work/doodle-dept.-website",
+      "status": 200,
+      "h1": 1,
+      "title": "Doodle Dept. Website | Work | Kyte",
+      "description": "A playful Shopify website that turned Doodle Dept\u2019s chaotic creative energy into a memorable shopping experience for the creatively employed.",
+      "error": null
+    },
+    {
+      "path": "/work/fincart",
+      "status": 200,
+      "h1": 1,
+      "title": "Fincart Mobile App | Work | Kyte",
+      "description": "Bringing financial planning, goal-based investing, and portfolio tracking into one mobile experience.",
+      "error": null
+    },
+    {
+      "path": "/work/fincart-website-branding",
+      "status": 200,
+      "h1": 1,
+      "title": "Fincart Website and Brand Identity | Work | Kyte",
+      "description": "A clearer brand and website for financial planning built around life goals, guidance, and long-term progress.",
+      "error": null
+    },
+    {
+      "path": "/work/make-a-difference-social-media",
+      "status": 200,
+      "h1": 1,
+      "title": "Make a Difference Social Media Coverage | Work | Kyte",
+      "description": "Full social media management, production and event coverage for Make A Difference across multiple cities, like Mumbai, Bangalore, and Goa.",
+      "error": null
+    },
+    {
+      "path": "/work/maya-explainer-video",
+      "status": 200,
+      "h1": 1,
+      "title": "Maya Explainer Video | Work | Kyte",
+      "description": "Explaining an AI-powered hiring platform through content.",
+      "error": null
+    },
+    {
+      "path": "/work/mirai-brand-identity",
+      "status": 200,
+      "h1": 1,
+      "title": "Mirai Brand Identity | Work | Kyte",
+      "description": "Mirai, meaning \u2018future\u2019 in Japanese, is a brand that blends the elegance of the past with the vision of tomorrow. We tried to build an identity that reflects its essence.",
+      "error": null
+    },
+    {
+      "path": "/work/msr-assets",
+      "status": 200,
+      "h1": 1,
+      "title": "MSR Assets | Work | Kyte",
+      "description": "A visual identity for a luxury real-estate brand.",
+      "error": null
+    },
+    {
+      "path": "/work/ogale-machines-design-development",
+      "status": 200,
+      "h1": 1,
+      "title": "Ogale Machines Design & Development | Work | Kyte",
+      "description": "Making specialized engineering easier to understand.",
+      "error": null
+    },
+    {
+      "path": "/work/revenue-grid-explainer-videos",
+      "status": 200,
+      "h1": 1,
+      "title": "Revenue Grid Explainer Videos | Work | Kyte",
+      "description": "A series of explainer videos that broke down Revenue Grid\u2019s Salesforce-native revenue intelligence platform into clear, digestible content for sales teams and leaders.",
+      "error": null
+    },
+    {
+      "path": "/work/sapani-website",
+      "status": 200,
+      "h1": 1,
+      "title": "Sapani Website | Work | Kyte",
+      "description": "A clearer digital home for industrial products.",
+      "error": null
+    },
+    {
+      "path": "/work/smash-guys",
+      "status": 200,
+      "h1": 1,
+      "title": "How We Sold Out Smash Guys Before the Launch | Work | Kyte",
+      "description": "Building a restaurant\u2019s presence before the doors opened.",
+      "error": null
+    },
+    {
+      "path": "/work/spicy-tango",
+      "status": 200,
+      "h1": 1,
+      "title": "Giving Spicy Tango a Brand as Bold as Its Recipes | Work | Kyte",
+      "description": "A vibrant packaging and social media identity that brought Spicy Tango\u2019s bold Indian flavours, heirloom recipes and energetic personality to life.",
+      "error": null
+    },
+    {
+      "path": "/work/spicybayer-restaurant-website",
+      "status": 200,
+      "h1": 1,
+      "title": "SpicyBayer Restaurant Website | Work | Kyte",
+      "description": "We helped SpicyBayer bring their Bavarian Indian Tamil fusion restaurant online with a warm, appetite-driven Framer website",
+      "error": null
+    },
+    {
+      "path": "/work/sproutova-brand-identity",
+      "status": 200,
+      "h1": 1,
+      "title": "Sproutova Brand Identity | Work | Kyte",
+      "description": "Agriculture has always been about growth, but growth now comes with systems, data, and intelligence. Sproutova\u2019s identity reflects that shift, rooted in the natural world yet structured for innovation.",
+      "error": null
+    },
+    {
+      "path": "/work/staunch-fit-organic-growth",
+      "status": 200,
+      "h1": 1,
+      "title": "Staunch.Fit Organic Growth | Work | Kyte",
+      "description": "Helping a homegrown fitness startup scale organically with storytelling, systems, and strategy. Staunch.Fit was born with a clear mission, bring certified personal training, yoga, and physiotherapy right to your doorstep.",
+      "error": null
+    },
+    {
+      "path": "/work/strength-socials",
+      "status": 200,
+      "h1": 1,
+      "title": "Building the Strength Socials Brand System | Work | Kyte",
+      "description": "A bold, athlete first brand identity built to unite India\u2019s strength sports community through competition, connection, and shared ambition.",
+      "error": null
+    },
+    {
+      "path": "/work/wynter-s-dreams-website-and-app",
+      "status": 200,
+      "h1": 1,
+      "title": "Wynter\u2019s Dreams Website and App | Work | Kyte",
+      "description": "We helped Wynter's Dreams bring an interactive eBook experience to life for kids, across their website and web app",
+      "error": null
+    }
+  ]
+}
