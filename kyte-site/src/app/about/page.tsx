@@ -51,7 +51,7 @@ export default function AboutPage() {
                 <div className="about-page__portrait">{person.image ? <Image src={person.image} alt="" fill sizes="(max-width: 580px) 44vw, (max-width: 900px) 44vw, 23vw" /> : <span aria-hidden="true">{person.name.split(" ").map((part) => part[0]).slice(0, 2).join("")}</span>}</div>
                 <div className="about-page__person-copy"><h4>{person.name}</h4><p>{person.role}</p></div>
               </article>)}
-              {team.title === "Branding & Marketing Team" && <article className="about-page__service-extra"><DotPattern shape="kite" tone="white" seed="about-team-kyte" className="about-page__service-mark" /><h4>Explore how we build brands people recognize.</h4><Link className="kyte-button" href="/work">View our work <ArrowRight size={17} aria-hidden="true" /></Link></article>}
+              {team.title === "Branding & Marketing Team" && <article className="about-page__service-extra"><DotPattern shape="kite" tone="white" seed="about-team-kyte" className="about-page__service-mark" /><h4>Explore how we build brands people recognize.</h4><Link className="kyte-button kyte-button--light" href="/work">View our work <ArrowRight size={17} aria-hidden="true" /></Link></article>}
             </div>
           </section>)}
         </div>

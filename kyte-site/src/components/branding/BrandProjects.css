@@ -8,7 +8,7 @@
 
 .brand-projects__inner { width: 100%; margin: 0; }
 .brand-projects__heading { padding: 0 var(--brand-section-inset) clamp(18px, 2vw, 28px); border-bottom: 1px solid var(--brand-effect-7); }
-.brand-projects h2 { margin: 0; font-size: var(--brand-heading-editorial); font-weight: 400; letter-spacing: -.075em; line-height: 1.2; text-transform: uppercase; }
+.brand-projects h2 { margin: 0; font-size: var(--brand-heading-editorial); font-weight: 400; letter-spacing: -.075em; line-height: 1.2; text-transform:capitalize; }
 .brand-projects__list { border-bottom: 1px solid var(--brand-effect-5); }
 .brand-project { border-bottom: 1px solid var(--brand-effect-5); }
 .brand-project:last-child { border-bottom: 0; }
@@ -34,7 +34,7 @@
 .brand-project__action.kyte-tertiary { justify-self: end; color: var(--brand-color-white); font-size:var(--brand-type-local-14); white-space: nowrap; }
 .brand-project__link:hover::before, .brand-project__link:focus-visible::before { background: var(--brand-effect-11); }
 .brand-project__link:focus-visible { outline: none; }
-.brand-project__link:focus-visible .brand-project__name { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.brand-project__link:focus-visible .brand-project__name { text-decoration: none; }
 .brand-project__link:focus:not(:focus-visible) { outline: none; }
 .brand-project__link:focus:not(:focus-visible)::before { background: var(--brand-effect-11); }
 .brand-projects__all.kyte-tertiary { margin: 20px var(--brand-section-inset) 0; color: var(--brand-color-white); font-size:var(--brand-type-local-14); }

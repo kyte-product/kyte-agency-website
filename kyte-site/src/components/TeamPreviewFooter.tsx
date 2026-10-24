@@ -46,7 +46,7 @@ export function TeamPreviewFooter() {
             <Link className="site-footer__logo" href="/" aria-label="Kyte home"><Image src="/kyte-agency-logo.svg" alt="" width={1379} height={200} unoptimized /></Link>
             <p>Product, website and brand design for the next stage of your business.</p>
             <address>Bangalore, India</address>
-            <Link className="site-footer__more kyte-tertiary" href="/contact">Start a project <ArrowRight size={16} aria-hidden="true" /></Link>
+            <Link className="site-footer__more kyte-button kyte-button--light" href="/contact">Start a project <ArrowRight size={16} aria-hidden="true" /></Link>
           </div>
 
           <nav className="site-footer__column" aria-label="Product design services">
@@ -74,10 +74,10 @@ export function TeamPreviewFooter() {
         <div className="site-footer__utility-inner">
           <div className="site-footer__utility-grid">
             <div className="site-footer__utility-cell site-footer__designrush">
-              <Image className="site-footer__designrush-badge" src="/designrush-verified-agency-2024.png" alt="DesignRush Verified Agency 2024" width={217} height={290} unoptimized />
+              <a href="https://www.designrush.com/agency/profile/kyte-agency" target="_blank" rel="noopener noreferrer" aria-label="Kyte Agency on DesignRush"><Image className="site-footer__designrush-badge" src="/designrush-verified-agency-2024.png" alt="DesignRush Verified Agency 2024" width={217} height={290} unoptimized /></a>
 
             </div>
-            <div className="site-footer__utility-cell">
+            <div className="site-footer__utility-cell site-footer__ai-cell">
               <p className="site-footer__utility-label">Ask AI About Kyte</p>
               <div className="site-footer__utility-actions site-footer__ai-links">{aiTools.map(([name, icon]) => <AiQuestionLink className={`site-footer__utility-button site-footer__ai-link site-footer__ai-link--${icon}`} provider={name} key={name}><Image className="site-footer__ai-icon" src={`/ai-logos/${icon}.png`} alt="" width={24} height={24} /></AiQuestionLink>)}</div>
             </div>

@@ -65,7 +65,7 @@ function TestimonialSet({ clone = false }: { clone?: boolean }) {
 
 export function BrandTestimonials() {
   return <section className="brand-testimonials" aria-labelledby="brand-testimonials-title">
-    <h2 id="brand-testimonials-title">WHAT OUR CLIENTS SAY</h2>
+    <h2 id="brand-testimonials-title">What Our Clients Say</h2>
     <div className="brand-testimonials__viewport" role="region" aria-label="Client testimonials" tabIndex={0}>
       <div className="brand-testimonials__track">
         <TestimonialSet />

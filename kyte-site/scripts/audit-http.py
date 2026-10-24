@@ -1,7 +1,7 @@
 import urllib.request,urllib.parse,concurrent.futures,json,re,sys
 from html.parser import HTMLParser
 BASE=(sys.argv[1] if len(sys.argv)>1 else 'http://127.0.0.1:3002').rstrip('/')
-MEDIA=re.compile(r'\.(pdf|png|svg|webp|mp4|json)$')
+MEDIA=re.compile(r'\.(pdf|txt|png|svg|webp|mp4|json)$')
 class Page(HTMLParser):
  def __init__(self):super().__init__();self.links=set();self.assets=set();self.h1=0;self.title='';self.in_title=False;self.description=''
  def handle_starttag(self,tag,attrs):

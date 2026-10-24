@@ -4,7 +4,7 @@
 .contact-dialog__close:hover { background: var(--color-field-border); }
 .contact-experience { display: grid; grid-template-columns: minmax(0,48fr) minmax(0,52fr); min-height: 560px; }
 .contact-experience__intro { display: flex; min-width: 0; flex-direction: column; padding: clamp(32px,3.3vw,52px); color: var(--color-white); background: var(--color-deep); }
-.contact-experience__eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; color: var(--color-white); font-size: var(--type-label); font-weight: 450; letter-spacing: .1em; text-transform: uppercase; }
+.contact-experience__eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; color: var(--color-white); font-size: var(--type-label); font-weight: 450; letter-spacing: .1em; text-transform:capitalize; }
 .contact-experience__eyebrow-mark { display: inline-block; flex: 0 0 18px; width: 18px; height: 18px; background: var(--color-white); -webkit-mask: url('/kyte-agency-mark.png') center / contain no-repeat; mask: url('/kyte-agency-mark.png') center / contain no-repeat; }
 .contact-experience__intro h1, .contact-experience__intro h2 { max-width: 410px; margin: 0; font-size: var(--heading-section); font-weight: var(--heading-weight); line-height: 1.2; letter-spacing: var(--heading-letter-spacing); }
 .contact-experience__expect { margin: 28px 0 0; padding: 0; list-style: none; }
@@ -13,7 +13,7 @@
 .contact-experience__expect li > span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: var(--color-white); background: var(--color-blue); font-size:var(--type-caption); font-weight: 450; line-height: 1.2; }
 .contact-experience__expect strong { font-size:var(--type-body); font-weight: 450; line-height: 1.4; }
 .contact-experience__clients { min-width: 0; margin-top: auto; padding-top: 44px; }
-.contact-experience__clients p { margin: 0 0 16px; color: var(--effect-10); font-size:var(--type-label); font-weight: 450; letter-spacing: .08em; text-transform: uppercase; }
+.contact-experience__clients p { margin: 0 0 16px; color: var(--effect-10); font-size:var(--type-label); font-weight: 450; letter-spacing: .08em; text-transform:capitalize; }
 .contact-experience__clients-window { width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, var(--color-detail-000) 10%, var(--color-detail-000) 90%, transparent); mask-image: linear-gradient(to right, transparent, var(--color-detail-000) 10%, var(--color-detail-000) 90%, transparent); }
 .contact-experience__clients-track { display: flex; width: max-content; animation: contact-clients-scroll 80s linear infinite; }
 .contact-experience__clients ul { display: flex; flex: none; align-items: center; gap: 24px; margin: 0; padding: 0 24px 0 0; list-style: none; }
@@ -45,7 +45,7 @@
 .contact-experience__success-mark { display: grid; place-items: center; width: 96px; height: 96px; border-radius: 50%; background: var(--color-blue); animation: contact-success-in 420ms cubic-bezier(.2,.8,.2,1) both; }
 .contact-experience__success-mark svg { width: 64px; height: 64px; }
 .contact-experience__success-mark path { stroke: var(--color-white); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 30; stroke-dashoffset: 30; animation: contact-success-check 440ms ease-out 240ms both; }
-.contact-experience__success-eyebrow { margin: 28px 0 12px; color: var(--color-blue); font-size: var(--type-label); font-weight: 450; letter-spacing: .1em; text-transform: uppercase; }
+.contact-experience__success-eyebrow { margin: 28px 0 12px; color: var(--color-blue); font-size: var(--type-label); font-weight: 450; letter-spacing: .1em; text-transform:capitalize; }
 .contact-experience--success h1,.contact-experience--success h2 { max-width: 720px; margin: 0; color: var(--ink); font-size:var(--heading-section); font-weight: var(--heading-weight); letter-spacing: var(--heading-letter-spacing); line-height: 1.2; }
 .contact-experience--success h1:focus,.contact-experience--success h2:focus { outline: none; }
 .contact-experience__success-copy { max-width: 620px; margin: 18px 0 0; color: var(--muted); font-size: var(--type-body); line-height: 1.5; text-wrap: balance; }

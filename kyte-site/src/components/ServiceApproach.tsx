@@ -34,16 +34,16 @@ function ApproachMark({ symbol, active, seed }: { symbol: number; active: boolea
   return <DotPattern shape={shapes[symbol % shapes.length]} tone={active ? "white" : "brand"} seed={seed} className="service-approach__mark" motifSlot={symbol} />;
 }
 
-export function ServiceApproach({ items = auditInclusions, heading = "A clearer view of what to improve.", intro = "A focused research and audit engagement connects evidence to action, giving your team a clear view of what users need, where they struggle, and which improvements to take forward.", patternSeed = "service-approach" }: { items?: readonly { symbol: number; title: string; description: string }[]; heading?: string; intro?: string; patternSeed?: string }) {
+export function ServiceApproach({ items = auditInclusions, heading = "A clearer view of what to improve.", intro = "A focused research and audit engagement connects evidence to action, giving your team a clear view of what users need, where they struggle, and which improvements to take forward.", patternSeed = "service-approach", ctaHref = "/contact", ctaLabel = "Discuss your project", cardsLabel = "What this service includes" }: { items?: readonly { symbol: number; title: string; description: string }[]; heading?: string; intro?: string; patternSeed?: string; ctaHref?: string; ctaLabel?: string; cardsLabel?: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return <section className="service-approach" aria-labelledby="service-approach-title">
     <div className="service-approach__inner">
       <div className="service-approach__heading section-intro">
         <div><h2 id="service-approach-title">{heading}</h2></div>
-        <div><p>{intro}</p><Link className="kyte-button service-approach__cta" href="/contact">Discuss your project <ArrowRight size={18} aria-hidden="true" /></Link></div>
+        <div><p>{intro}</p><Link className="kyte-button service-approach__cta" href={ctaHref}>{ctaLabel} <ArrowRight size={18} aria-hidden="true" /></Link></div>
       </div>
-      <div className="service-approach__cards" aria-label="What this service includes">
+      <div className="service-approach__cards" aria-label={cardsLabel}>
         {items.map((inclusion, index) => {
           const isActive = activeIndex === index;
           return <article className={`service-approach__card${isActive ? " is-active" : ""}`} key={inclusion.title} onMouseEnter={() => setActiveIndex(index)}>

@@ -8,7 +8,7 @@ Branding owns its visual values in src/app/branding-marketing/branding-tokens.cs
 
 ## Distinct language
 
-Regular, oversized, tightly spaced uppercase DM Sans creates the editorial display. Geist Mono supplies annotations, metadata, service/news actions and footer details. The hero fills the viewport below the actual 58px compact header. Four authored lines combine the current supplied visuals and words; bottom annotations are underlined mono with the approved text glyphs. Follow the actual `BrandStoryHero.tsx` composition, rather than historical references to an older three-image/Kyte-logo arrangement.
+Regular, oversized, tightly spaced capitalized DM Sans creates the editorial display. Geist Mono supplies annotations, metadata, service/news actions and footer details. The hero fills the viewport below the actual 58px compact header. Four authored lines combine the current supplied visuals and words; bottom annotations are underlined mono with the approved text glyphs. Follow the actual `BrandStoryHero.tsx` composition, rather than historical references to an older three-image/Kyte-logo arrangement.
 
 Local actions have a one-pixel outline, oval radius, no shadow and mono type. Service rows use edge-to-edge two-pixel dividers and blue hover copy. Existing images resolve from pixels on hover/focus. Article/news title highlights use the existing pastel family behind dark text, with `box-decoration-break: clone` so wrapped lines remain legible. These highlights and photographs are approved local color exceptions, independent of the Product illustration palette.
 
@@ -37,9 +37,9 @@ Sources: `src/app/branding-marketing/page.tsx`, `branding-editorial.css`, `src/a
 - Test Branding → Home → Product → child services and browser Back without refresh. A hidden cached Branding page must not make destination buttons oval or alter their colors.
 - The active root design-system marker is chosen by exact route. The documentation page uses the neutral Website shell and contains scoped specimens.
 
-## Shared illustration preview
+## Pixelated section boundaries
 
-The palette toggle here shares one provider with the Website and Product systems. It only selects between Product originals and their additive blue outputs; it does not tint Branding photographs, video or pastel editorial highlights. See the [full Product library](product.md) for storage, checksums and build instructions.
+BrandPixelTransition uses a reversible 64 × 16 canvas tile field between blue, white and gray sections. The blue field is 25vw tall; the gray variant is clamped to 80–144px. Seeded column roughness and scroll position determine the resolving edge. Reverse rotates the boundary 180 degrees. Reduced motion draws a stable two-color boundary; decorative canvas ignores pointer input and is hidden from assistive technology. Frames/listeners clean up on route exit. The /design-system/branding page documents these contracts. Product illustration previews are excluded from this system.
 
 Historical experiments and superseded directions remain in `docs/history/`. The older `docs/branding-story/DESIGN.md` is now an entry pointer to this current contract.
 

@@ -14,7 +14,7 @@ export function BrandingFooter() {
         <div><Link href="/work">Work</Link><Link href="/about">About</Link><Link href="/ui-ux-design-development">Product design</Link><Link href="/branding-marketing">Brand & marketing</Link></div>
         <div><Link href="/insights">Design news</Link><Link href="/careers">Careers</Link><Link href="/contact">Contact</Link><a href="https://www.instagram.com/kyte.agency/" target="_blank" rel="noreferrer">Instagram <ArrowRight size={12} /></a><a href="https://www.linkedin.com/company/kyte-agency/" target="_blank" rel="noreferrer">LinkedIn <ArrowRight size={12} /></a></div>
       </nav>
-      <div className="branding-footer__contact"><p>YOUR NEXT CHAPTER<br />STARTS WITH A HELLO.</p><a href="mailto:contact@kyte-agency.com">contact@kyte-agency.com <ArrowRight size={18} /></a><Link className="branding-footer__cta" href="/contact">Start a project <ArrowRight size={17} /></Link></div>
+      <div className="branding-footer__contact"><p>Your Next Chapter<br />Starts With A Hello.</p><a href="mailto:contact@kyte-agency.com">contact@kyte-agency.com <ArrowRight size={18} /></a><Link className="branding-footer__cta" href="/contact">Start a project <ArrowRight size={17} /></Link></div>
     </div>
     <div className="branding-footer__legal"><span>© 2026 Kyte Agency</span><div><CookieSettingsButton /><Link href="/privacy-policy">Privacy policy</Link><Link href="/terms">Terms & conditions</Link></div><Link href="#branding-title" aria-label="Back to top">Back to top ↑</Link></div>
   </footer>;

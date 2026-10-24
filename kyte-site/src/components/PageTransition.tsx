@@ -88,6 +88,24 @@ export function PageTransition() {
     };
   }, [router, changePhase]);
 
+  // Animation callbacks can be interrupted by route commits or tab suspension.
+  // Never leave the full-screen input shield mounted indefinitely.
+  useEffect(() => {
+    if (phase === "idle") return;
+    const timer = window.setTimeout(() => {
+      if (phaseRef.current === "covering") {
+        if (pendingHref.current) {
+          router.push(pendingHref.current, { scroll: false });
+          pendingHref.current = null;
+        }
+        changePhase("revealing");
+      } else {
+        changePhase("idle");
+      }
+    }, phase === "covering" ? NAVIGATION_TIMEOUT : 1600);
+    return () => window.clearTimeout(timer);
+  }, [phase, router, changePhase]);
+
   return phase === "idle" ? null : <div aria-hidden="true" data-page-transition={phase}>
     <TransitionSurface type="double-stairs" isVisible={phase === "covering"} onComplete={onComplete} />
   </div>;

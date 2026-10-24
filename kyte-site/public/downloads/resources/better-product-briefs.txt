@@ -1,0 +1,12 @@
+A practical guide to better product briefs
+
+Sample resource for template review.
+
+Clarify the problem
+Describe the situation, who experiences it and why it matters. Separate the evidence you have from the assumptions you still need to check.
+
+Define success
+Write down the decision this brief should support, the intended outcome and the constraints the team needs to work within.
+
+Use the brief together
+Review the brief with design, product and development. Assign open questions and keep the brief current as you learn.

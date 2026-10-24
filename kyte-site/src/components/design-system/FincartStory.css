@@ -4,7 +4,7 @@
 .fincart-story__section { padding-bottom: 56px; }
 .fincart-story__statement { max-width: 1020px; margin-bottom: 34px; }
 .fincart-story__statement h2 { text-transform: capitalize; }
-.fincart-story__intro-aside > p { margin: 0 0 20px; color: var(--color-muted-soft); font-size:var(--type-lead); font-weight: 400; line-height: 1.4; text-transform: uppercase; }
+.fincart-story__intro-aside > p { margin: 0 0 20px; color: var(--color-muted-soft); font-size:var(--type-lead); font-weight: 400; line-height: 1.4; text-transform:capitalize; }
 .fincart-story__statement p { margin: 0; color: var(--ink); font-size: var(--heading-title); font-weight: 450; line-height: 1.3; letter-spacing: -.02em; }
 .fincart-story__intro .fincart-story__statement { margin-bottom: 0; }
 .fincart-story__intro-aside { padding-top: 2px; }
@@ -102,7 +102,7 @@
 .fincart-brand-story { overflow: visible; padding: clamp(76px,9vw,124px) var(--section-inset) clamp(90px,10vw,140px); color: var(--ink); background: var(--color-white); }
 .fincart-brand-story__opening { display: grid; gap: clamp(42px,6vw,82px); margin-bottom: clamp(48px,6vw,80px); }
 .fincart-brand-story__statement { max-width: 1020px; }
-.fincart-brand-story__label,.fincart-brand-story__scope > p { margin: 0 0 20px; color: var(--color-muted-soft); font-size:var(--type-lead); font-weight: 400; line-height: 1.4; text-transform: uppercase; }
+.fincart-brand-story__label,.fincart-brand-story__scope > p { margin: 0 0 20px; color: var(--color-muted-soft); font-size:var(--type-lead); font-weight: 400; line-height: 1.4; text-transform:capitalize; }
 .fincart-brand-story__statement--wide { max-width: 1080px; }
 .fincart-brand-story__copy { display: grid; gap: clamp(18px,2.2vw,30px); }
 .fincart-brand-story__copy p { max-width: 1020px; margin: 0; color: var(--ink); font-size: var(--heading-title); font-weight: 450; line-height: 1.3; letter-spacing: -.02em; }

@@ -25,7 +25,7 @@
 .industry-card h3 { margin: 30px 0 10px; font-size: var(--heading-card); font-weight: var(--heading-weight); line-height: 1.2; letter-spacing: var(--heading-letter-spacing); }
 .industry-card__summary { max-width: 520px; margin: 0; color: var(--muted); font-size: var(--type-body); line-height: var(--body-line-height); }
 .industry-card__detail { display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 14px; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
-.industry-card__detail span { padding-top: 2px; color: var(--color-blue); font-size: var(--type-label); font-weight: 450; letter-spacing: .06em; text-transform: uppercase; }
+.industry-card__detail span { padding-top: 2px; color: var(--color-blue); font-size: var(--type-label); font-weight: 450; letter-spacing: .06em; text-transform:capitalize; }
 .industry-card__detail p { max-width: 420px; margin: 0; color: var(--ink); font-size:var(--type-body); line-height: 1.5; }
 .industry-card ul { display: flex; flex-wrap: wrap; gap: 7px; margin: 20px 0 26px; padding: 0; list-style: none; }
 .industry-card li { padding: 6px 10px; border: 1px solid var(--line); border-radius: var(--site-corner-radius, 3px); color: var(--muted); background: var(--color-white); font-size:var(--type-label); line-height: 1.2; }

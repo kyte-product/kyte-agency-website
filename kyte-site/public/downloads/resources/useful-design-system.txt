@@ -1,0 +1,12 @@
+A checklist for a useful design system
+
+Sample resource for template review.
+
+Inventory existing patterns
+Collect the screens and components in use. Compare their type, spacing, colour and behaviour before proposing a shared pattern.
+
+Record the decisions
+Define tokens, component states, accessibility expectations and ownership. Use examples that explain when a pattern belongs.
+
+Maintain the system
+Check changes against real pages and update the documentation alongside the implementation.

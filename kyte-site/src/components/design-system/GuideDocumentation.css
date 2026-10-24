@@ -1,0 +1,78 @@
+.guide-docs{width:var(--page-width);margin:0 auto;padding:64px var(--section-inset) 96px;display:grid;grid-template-columns:240px minmax(0,760px);gap:clamp(32px,5vw,72px);align-items:start}
+.guide-docs__sidebar{position:sticky;top:calc(96px + var(--announcement-height));max-height:calc(100svh - 160px);overflow:auto;padding-right:24px;border-right:1px solid var(--line)}
+.guide-docs__back{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:var(--type-caption);margin-bottom:32px}
+.guide-docs__sidebar h2,.guide-docs__contents h2{font-size:var(--type-body);line-height:1.4;font-weight:450;margin:0 0 16px}
+.guide-docs__sidebar ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.guide-docs__sidebar li a{display:block;padding:12px;font-size:var(--type-body);line-height:1.4;color:var(--muted)}
+.guide-docs__sidebar a[aria-current=page]{background:var(--color-surface);color:var(--accent);border-left:2px solid var(--accent)}
+.guide-docs__article{min-width:0}.guide-docs__breadcrumbs{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:var(--type-caption);margin-bottom:24px}
+.guide-docs__article h1{font-size:var(--heading-page);font-weight:450;line-height:1.2;letter-spacing:var(--heading-letter-spacing);margin:0 0 24px}
+.guide-docs__summary{font-size:var(--type-lead);line-height:1.5;color:var(--muted)}
+.guide-docs__facts{display:flex;flex-wrap:wrap;gap:24px;margin:32px 0}.guide-docs__facts dt{font-size:var(--type-caption);color:var(--muted);margin-bottom:6px}.guide-docs__facts dd{margin:0;font-size:var(--type-body)}
+.guide-docs__sample{padding:16px;background:var(--color-surface);font-size:var(--type-caption);line-height:1.5;color:var(--muted);border-left:2px solid var(--accent)}
+.guide-docs__contents{margin:32px 0;padding:24px;border-block:1px solid var(--line)}.guide-docs__contents ol{margin:0;padding-left:20px;display:grid;gap:12px}.guide-docs__contents a{color:var(--accent);font-size:var(--type-body)}
+.guide-docs a:hover{text-decoration:underline;text-underline-offset:4px}.guide-docs .editorial-body h2{scroll-margin-top:calc(100px + var(--announcement-height))}
+.guide-docs__pagination{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px;border-top:1px solid var(--line);padding-top:24px}.guide-docs__pagination a{display:grid;gap:12px;align-content:start;padding:20px;border:1px solid var(--line)}.guide-docs__pagination span{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:var(--type-caption)}.guide-docs__pagination strong{font-size:var(--type-body);font-weight:450;line-height:1.4}
+.editorial-resource-cover{height:100%;display:grid;place-items:center;background:var(--color-surface)}.editorial-resource-cover .dot-pattern{width:min(60%,420px);height:min(80%,420px)}
+@media(max-width:1120px){.guide-docs{grid-template-columns:190px minmax(0,1fr);gap:28px}}
+@media(max-width:650px){.guide-docs{grid-template-columns:minmax(0,1fr);padding-block:40px 64px;gap:32px}.guide-docs__sidebar{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--line);padding:0 0 24px}.guide-docs__back{margin-bottom:16px}.guide-docs__sidebar ul{grid-template-columns:1fr 1fr}.guide-docs__sidebar li a{padding:10px}.guide-docs__pagination{grid-template-columns:1fr}.guide-docs__pagination>span:empty{display:none}.guide-docs__contents{padding-inline:0}}
+
+/* Documentation shell: sidebar occupies the visible height beneath the header. */
+.guide-docs{--guide-nav-offset:calc(72px + var(--announcement-height));width:100%;padding:0;gap:0;grid-template-columns:minmax(240px,calc(var(--page-edge) + 240px)) minmax(0,1fr)}
+.guide-docs__sidebar{top:var(--guide-nav-offset);height:calc(100svh - var(--guide-nav-offset));max-height:none;padding:40px 24px 32px max(24px,var(--page-edge));background:var(--color-surface);overflow-y:auto;overscroll-behavior:contain}
+.guide-docs__reading{min-width:0}
+.guide-docs__article{width:100%;max-width:1120px;margin-inline:auto;padding:56px clamp(24px,4vw,64px) 96px}
+.guide-docs__topline{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.guide-docs__topline .guide-docs__breadcrumbs,.guide-docs__topline .guide-docs__back{margin:0}
+.guide-docs__facts{padding:20px 24px;background:var(--color-surface);border-left:2px solid var(--accent)}
+.guide-docs__image-placeholder{width:100%;aspect-ratio:16/9;margin:32px 0;background:var(--color-placeholder)}
+.editorial-detail--resource .editorial-detail__news-details{grid-template-columns:minmax(0,1fr)}
+.editorial-detail--resource .editorial-detail__news-details>.kyte-button{justify-self:start;margin-top:24px}
+.editorial-resource-cover{background:var(--color-placeholder)}
+.editorial-resource-facts .editorial-detail__facts{display:grid;gap:20px;margin:0;padding:0;border:0}
+.editorial-resource-description p{margin:0 0 28px;font-size:var(--type-lead);line-height:1.5;color:var(--muted)}
+@media(max-width:650px){.guide-docs{grid-template-columns:minmax(0,1fr)}.guide-docs__sidebar{height:auto;max-height:40svh;padding:24px;position:static}.guide-docs__article{padding:32px 20px 64px}.guide-docs__facts{padding:16px;gap:20px}.guide-docs__topline{align-items:flex-start}.guide-docs__image-placeholder{margin-block:24px}}
+
+/* Native sticky navigation releases at the end of the guide content. */
+@media(min-width:651px){
+ .guide-docs__sidebar{position:sticky;align-self:start;top:72px;height:calc(100svh - 72px);padding-top:40px;background:var(--color-surface);scrollbar-gutter:stable}
+ .guide-docs__reading{grid-column:2}
+}
+.guide-docs__sidebar,.guide-docs__sidebar ul{background:var(--color-surface)}
+
+/* Gray navigation rail; only the selected guide receives a white surface. */
+.guide-docs__sidebar,.guide-docs__sidebar ul{background:var(--color-surface)}
+.guide-docs__sidebar a[aria-current=page]{background:var(--color-white)}
+.guide-docs__topline{justify-content:flex-start;gap:24px}
+.guide-docs__facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:0;border:0;background:transparent}
+.guide-docs__facts>div{min-width:0;padding:20px;background:var(--color-surface);border-left:2px solid var(--accent)}
+.editorial-detail--resource .editorial-resource-facts .editorial-detail__facts{padding:24px;background:var(--color-surface)}
+.editorial-detail--resource .editorial-resource-facts .editorial-detail__facts>div{grid-template-columns:minmax(0,1fr) minmax(0,1.4fr)}
+.editorial-detail--resource .editorial-resource-facts .editorial-detail__facts dt{font-size:var(--type-caption)}
+.editorial-detail--resource .editorial-resource-facts .editorial-detail__facts dd{font-size:var(--type-body)}
+.editorial-detail--resource .editorial-detail__news-details{gap:20px}
+.editorial-detail--resource .editorial-detail__news-details>.kyte-button{margin-top:0}
+@media(min-width:651px){
+ .guide-docs__reading > .split-cta{width:100%;padding-top:0}
+ .guide-docs__reading > .split-cta .split-cta__inner{width:100%;max-width:1120px;margin-inline:auto;padding-inline:clamp(24px,4vw,64px)}
+ .guide-docs__reading > .split-cta .split-cta__card{height:auto;min-height:360px}
+ .guide-docs__reading > .split-cta .split-cta__content{padding:24px}
+ .guide-docs__reading > .split-cta .split-cta__content h2{font-size:var(--heading-title)}
+ .guide-docs__reading > .split-cta .split-cta__art{min-height:260px}
+}
+@media(max-width:480px){.guide-docs__facts{grid-template-columns:minmax(0,1fr)}.guide-docs__facts>div{padding:16px}}
+
+/* Center the library within its rail and keep navigation cards quiet on hover. */
+.guide-docs__sidebar{padding-inline:24px}
+.guide-docs__sidebar nav{width:100%;max-width:240px;margin-inline:auto}
+.guide-docs__pagination{border-top:0;padding-top:0}
+.guide-docs__pagination a{position:relative;padding-right:52px}
+.guide-docs__pagination a:hover,.guide-docs__article .editorial-detail__breadcrumbs a:hover{text-decoration:none}
+.guide-docs__pagination-chevron{position:absolute;right:20px;top:50%;transform:translateY(-50%)}
+html:has(.guide-docs){scroll-padding-top:72px}
+.guide-docs .editorial-body h2{scroll-margin-top:24px}
+@media(prefers-reduced-motion:no-preference){html[data-scroll-engine=native]:has(.guide-docs){scroll-behavior:smooth}}
+
+.editorial-detail--resource .editorial-resource-facts .editorial-detail__facts{gap:0;padding:20px}
+.editorial-detail--resource .editorial-resource-facts .editorial-detail__facts>div{padding-block:12px}
+.editorial-detail--resource .editorial-resource-facts .editorial-detail__facts>div:last-child{padding-bottom:0}

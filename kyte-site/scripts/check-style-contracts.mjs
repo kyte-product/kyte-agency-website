@@ -7,6 +7,7 @@ async function walk(dir){for(const item of await readdir(dir,{withFileTypes:true
  if(item.isDirectory()){await walk(file);continue;}
  if(!file.endsWith('.css'))continue;
  const source=await readFile(file,'utf8');
+ if(/text-transform\s*:\s*uppercase/.test(source))failures.push(`${file}: uppercase text treatment`);
  const retired=/--(?:type-(?:action|subtitle|card(?:-large)?|title|section(?:-large)?|feature|display)|heading-(?:display-large|page-mobile|section-mobile))\b/;
  if(!branding(file)&&!file.endsWith('branding-tokens.css')&&retired.test(source))failures.push(`${file}: retired typography role`);
  if(branding(file)){

@@ -35,7 +35,7 @@ function ServiceRow({ service }: { service: typeof services[number] }) {
 export function ServiceEditorialDirectory() {
   return <section className="service-editorial" aria-labelledby="service-editorial-title" data-site-reveal-ignore>
     <div className="service-editorial__inner">
-      <h2 id="service-editorial-title">OUR CREATIVE SERVICES</h2>
+      <h2 id="service-editorial-title">Our Creative Services</h2>
       <div className="service-editorial__list">{services.map(service => <ServiceRow key={service.href} service={service} />)}</div>
     </div>
   </section>;

@@ -1,3 +1,5 @@
+import { CareerCultureGallery } from "./CareerCultureGallery";
+import { ServiceApproach } from "@/components/ServiceApproach";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -51,6 +53,13 @@ export default async function CareersPage() {
           </div>
         </div>
       </section>
+      <ServiceApproach heading="How we work together." intro="Our approach to culture starts with how we listen, share ideas and support the work. These are the principles we want to bring to everyday collaboration." patternSeed="careers-culture" ctaHref="/about" ctaLabel="Meet the team" cardsLabel="Our culture principles" items={[
+        { symbol: 0, title: "Listen with care", description: "Ask questions, understand the context and make room for perspectives beyond your own." },
+        { symbol: 1, title: "Build together", description: "Bring design, brand and development into the conversation, and make decisions visible to the team." },
+        { symbol: 2, title: "Keep learning", description: "Seek useful feedback, share what you learn and stay open to changing direction when the evidence calls for it." },
+        { symbol: 3, title: "Care for the craft", description: "Give attention to the details that help people use, understand and trust the things we make." },
+      ]} />
+      <CareerCultureGallery />
     </main>
     <SiteFooter />
   </>;

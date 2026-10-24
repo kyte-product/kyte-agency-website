@@ -18,7 +18,7 @@
   font-weight: 400;
   letter-spacing: -.075em;
   line-height: 1.2;
-  text-transform: uppercase;
+  text-transform:capitalize;
 }
 
 .brand-process__sticky {
