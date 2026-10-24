@@ -25,7 +25,21 @@ Date: 24 October 2026. Owner: Kyte website team.
 
 Authorized: push complete reviewed batch to kyte-product/kyte-agency-website, merge to main and deploy to existing Vercel project.
 
-Status: reviewed locally, publication in progress. PR, exact commit and Ready deployment are added after verification.
+Status: application release merged and verified in production.
+
+- Application PR: https://github.com/kyte-product/kyte-agency-website/pull/71.
+- Reviewed source commit: `e9ac1e09fb8e82bef05906e70bdd93f0d2f16445`.
+- Application main merge: `2a278bd9867210ed2e4eb2fc8c0336337b73684e`.
+- Preview: `dpl_CFTUFV4GWUMHBT2b8Zci5kjwu1px`, Ready; GitHub Vercel check passed before merge.
+- Production: `dpl_GuNJCFyEEYAYpL1fh3ZpAPCYAJhb`, Ready, production target, verified through the public alias.
+- Immutable URL: https://kyte-agency-website-5x5idjg9u-kyte-product.vercel.app.
+- Public alias: https://kyte-agency.vercel.app.
+- [Production crawl](2026-10-24-insights-careers/production-http.json): all 68 pages and 381 assets passed, with zero metadata/H1/asset failures.
+- Live client navigation into the planning guide: native engine, no root clip/transition shield, scrollY advanced to 600 without refresh.
+- Live Careers gallery theme interaction and 393px layout passed; two blue cards, four gray photo placeholders and no horizontal overflow.
+- Visuals: [desktop culture gallery](2026-10-24-insights-careers/production-careers-desktop.png), [phone culture gallery](2026-10-24-insights-careers/production-careers-phone.png).
+
+A documentation-only follow-up records this evidence without changing the reviewed application source.
 
 Target: team kyte-product, project kyte-agency-website (`prj_9OhUuqvAA2Dt6PBpxnQHGFhLUU4E`), root kyte-site, production alias https://kyte-agency.vercel.app.
 
