@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import "./BrandHomePortal.css";
 
@@ -55,6 +55,6 @@ export function BrandHomePortal() {
     return()=>{cancelAnimationFrame(frame);observer.disconnect();window.removeEventListener("scroll",request);window.removeEventListener("resize",request);reduced.removeEventListener("change",request);};
   },[]);
   return <section ref={sectionRef} className="brand-home-portal" aria-label="Continue to the Kyte homepage" data-site-reveal-ignore>
-    <div className="brand-home-portal__sticky"><canvas ref={canvasRef} aria-hidden="true" /><div className="brand-home-portal__content"><p>There’s more to Kyte.</p><Link className="branding-nav-action" href="/">Go to Kyte homepage <ArrowUpRight size={18} aria-hidden="true" /></Link></div></div>
+    <div className="brand-home-portal__sticky"><canvas ref={canvasRef} aria-hidden="true" /><div className="brand-home-portal__content"><p>There’s more to Kyte.</p><Link className="branding-nav-action" href="/">Go to Kyte homepage <ArrowRight size={18} aria-hidden="true" /></Link></div></div>
   </section>;
 }

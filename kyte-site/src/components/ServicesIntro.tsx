@@ -10,7 +10,7 @@ export function ServicesIntro() {
       <div className="services-intro__inner">
 
         <div className="services-intro__row" data-site-reveal-ignore>
-          <h2 id="services-intro-title" data-reveal-words data-reveal-delay="90"><RevealWords text="Two Expert Departments" /></h2>
+          <h2 id="services-intro-title" data-reveal-words data-reveal-delay="90"><RevealWords text="Two Expert Departments, For All Your UI/UX, Branding & Marketing Needs" /></h2>
           <Link className="kyte-button services-intro__cta" href="/contact">
             Request a consultation <ChevronRight size={16} aria-hidden="true" />
           </Link>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowUpRight, ChevronLeft } from "lucide-react";
+import { ArrowRight, ChevronLeft } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { EditorialBody } from "@/components/design-system/EditorialBody";
@@ -10,7 +10,6 @@ import { FincartStory } from "@/components/design-system/FincartStory";
 import { FincartBrandingStory } from "@/components/design-system/FincartBrandingStory";
 import { FincartImageReveal } from "@/components/design-system/FincartImageReveal";
 import { RevealWords } from "@/components/RevealWords";
-import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { workEntry } from "@/lib/editorial";
 import "@/components/design-system/EditorialPages.css";
 
@@ -44,7 +43,7 @@ export default async function WorkDetailPage({ params }: Props) {
   const isFincartBranding = slug === "fincart-website-branding";
 
   return <><SiteHeader /><main className={`editorial-detail editorial-detail--work${isFincart || isFincartBranding ? " editorial-detail--fincart" : ""}`}>
-    {(isFincart || isFincartBranding) && <><TextRevealMotion /><FincartImageReveal /></>}
+    {(isFincart || isFincartBranding) && <><FincartImageReveal /></>}
     <header className="editorial-detail__heading">
       <nav className="editorial-detail__breadcrumbs" aria-label="Breadcrumb">
         <Link className="editorial-detail__breadcrumb-link" href="/work"><ChevronLeft size={18} strokeWidth={1.8} aria-hidden="true" /> Work</Link>
@@ -52,7 +51,7 @@ export default async function WorkDetailPage({ params }: Props) {
         <span aria-current="page">{project.client || project.title}</span>
       </nav>
       <div className="editorial-detail__work-heading-grid">
-        <div><h1 data-reveal-words={isFincart || isFincartBranding ? "" : undefined}>{isFincart || isFincartBranding ? <RevealWords text={project.title} /> : project.title}</h1>{project.summary && <p className="editorial-detail__summary" data-reveal-words={isFincart || isFincartBranding ? "" : undefined}>{isFincart || isFincartBranding ? <RevealWords text={project.summary} /> : project.summary}</p>}{projectUrl && <a className="editorial-detail__live-link kyte-button" href={projectUrl} target="_blank" rel="noopener noreferrer">{isFincart ? "View on App Store" : "View live work"} <ArrowUpRight size={18} strokeWidth={1.8} aria-hidden="true" /></a>}</div>
+        <div><h1 data-reveal-words={isFincart || isFincartBranding ? "" : undefined}>{isFincart || isFincartBranding ? <RevealWords text={project.title} /> : project.title}</h1>{project.summary && <p className="editorial-detail__summary" data-reveal-words={isFincart || isFincartBranding ? "" : undefined}>{isFincart || isFincartBranding ? <RevealWords text={project.summary} /> : project.summary}</p>}{projectUrl && <a className="editorial-detail__live-link kyte-button" href={projectUrl} target="_blank" rel="noopener noreferrer">{isFincart ? "View on App Store" : "View live work"} <ArrowRight size={18} strokeWidth={1.8} aria-hidden="true" /></a>}</div>
         <div className="editorial-detail__work-aside">
           <dl className="editorial-detail__facts"><div><dt>Client</dt><dd>{project.client || project.title}</dd></div>{project.period?.trim() && <div><dt>Timeline</dt><dd>{project.period}</dd></div>}{project.projectType?.trim() && <div><dt>Project type</dt><dd>{project.projectType}</dd></div>}{project.role && project.role !== project.title && <div><dt>Kyte&apos;s role</dt><dd>{project.role}</dd></div>}</dl>
         </div>

@@ -46,11 +46,12 @@ export function ServiceDecisionStory({ items = auditDecisions, ctaLabel = "Discu
 
   return <section className="service-decisions" aria-labelledby="service-decisions-title">
     <div className="service-decisions__inner">
-      <div className="service-decisions__layout">
-        <div className="service-decisions__feature">
           <div className="service-decisions__heading"><h2 id="service-decisions-title">{heading}</h2><p>{intro}</p>
             <Link className="kyte-button" href="/contact">{ctaLabel} <ArrowRight size={18} aria-hidden="true" /></Link>
           </div>
+      <div className="service-decisions__layout">
+        <div className="service-decisions__feature">
+
           <div className={`service-decisions__visual-frame service-decisions__visual-frame--${surface}`} aria-hidden="true" data-pattern={decisionPatterns[active % decisionPatterns.length]}>
             <DotPattern shape={decisionPatterns[active % decisionPatterns.length]} tone={surface === "blue" ? "white" : surface === "black" ? "charcoal" : "brand"} seed={`${patternSeed}:${items[active]?.title ?? active}`} className="service-decisions__dot-pattern" animateOnChange={animatePattern} motifSlot={active} />
           </div>

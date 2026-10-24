@@ -82,7 +82,7 @@ function ClientStoriesCarousel({ articles }: { articles: DesignNewsArticle[] }) 
 
   return <section className="client-stories" aria-labelledby="client-stories-title">
     <div className="client-stories__inner">
-      <div className="client-stories__intro">
+      <div className="client-stories__intro section-intro">
         <div>
 
           <h2 id="client-stories-title" data-reveal-words><RevealWords text="Ideas and observations from Design News." /></h2>

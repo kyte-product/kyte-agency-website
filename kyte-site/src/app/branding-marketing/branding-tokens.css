@@ -1,0 +1,156 @@
+/* Independent Branding foundation. Do not alias Website tokens. */
+:where(html[data-design-system="branding"],.branding-marketing-page,.brand-closing,.ds-brand-specimen){
+  --brand-color-night: #050505;
+  --brand-color-ink: #1a1a16;
+  --brand-color-blue: #0249d9;
+  --brand-color-blue-hover: #013bb0;
+  --brand-color-eyebrow: var(--brand-color-blue);
+  --brand-color-electric: #a88af2;
+  --brand-color-sky: #d9cafa;
+  --brand-color-ice: #e9e2fa;
+  --brand-color-aqua: #f5f1fd;
+  --brand-color-white: #ffffff;
+  --brand-color-muted: #757573;
+  --brand-description-color: var(--brand-color-muted);
+  --brand-description-on-dark: #bdbdbd;
+  --brand-description-on-brand: #dce7ff;
+  --brand-color-border: #eeeeec;
+  --brand-color-surface: #f8f8f7;
+  --brand-color-surface-secondary: #fafafa;
+  --brand-color-control-hover: #f5f5f5;
+  --brand-color-mint: #f1f0f7;
+  --brand-color-cobalt: #0249d9;
+  --brand-color-cyan: #64c8ea;
+  --brand-color-coral: #f35c70;
+  --brand-color-orange: #ff713d;
+  --brand-color-gold: #ffcb65;
+  --brand-color-lime: #c7eb55;
+  --brand-color-deep: #171717;
+  --brand-color-deep-raised: #303030;
+  --brand-color-on-dark-muted: var(--brand-description-on-dark);
+  --brand-color-blue-bright: #084ee1;
+  --brand-color-blue-soft: #4f65e8;
+  --brand-color-muted-strong: #555b62;
+  --brand-color-muted-mid: #626262;
+  --brand-color-muted-soft: #9f9f9f;
+  --brand-color-border-strong: #e7e7e7;
+  --brand-color-border-alt: #e9eaeb;
+  --brand-color-placeholder: #e7e8ea;
+  --brand-color-muted-plain: #555;
+  --brand-color-muted-secondary: #676767;
+  --brand-color-muted-tertiary: #777;
+  --brand-color-border-soft: #dedede;
+  --brand-color-border-faq: #dcdcdc;
+  --brand-color-border-soft-alt: #d7d7d7;
+  --brand-color-placeholder-plain: #eee;
+  --brand-color-surface-about: #f1f1f1;
+  --brand-color-surface-raised: #f5f6f8;
+  --brand-color-border-medium: #cfd2d6;
+  --brand-color-border-control: #d5d7da;
+  --brand-color-border-dim: #c5c7c8;
+  --brand-color-field-surface: #f6f6f5;
+  --brand-color-field-surface-alt: #f1f1f0;
+  --brand-color-field-border: #e7e7e6;
+  --brand-gradient-brand: linear-gradient(120deg,#013bb0,#0249d9,#3778ee);
+  --brand-gradient-soft: linear-gradient(115deg,#f1f0f7,#f8f8f7 54%,#f5f1fd);
+  --brand-gradient-expressive: linear-gradient(125deg,#263b99 0%,#5a58da 23%,#b759d4 39%,#f35c70 57%,#ff713d 74%,#ffcb65 100%);
+  --brand-ink: var(--brand-color-ink);
+  --brand-muted: var(--brand-color-muted);
+  --brand-line: var(--brand-color-border);
+  --brand-surface: var(--brand-color-surface);
+  --brand-accent: var(--brand-color-blue);
+  --brand-page-max: 1344px;
+  --brand-page-gutter: 16px;
+  --brand-page-width: min(var(--brand-page-max),calc(100vw - (var(--brand-page-gutter) * 2)));
+  --brand-page-edge: max(var(--brand-page-gutter),calc((100vw - var(--brand-page-max))/2));
+  --brand-section-inset: clamp(20px,2.4vw,32px);
+  --brand-radius-small: 8px;
+  --brand-radius-medium: 12px;
+  --brand-radius-large: 18px;
+  --brand-radius-control: var(--brand-radius-small);
+  --brand-radius-card: var(--brand-radius-large);
+  --brand-type-label: 12px;
+  --brand-type-action: 15px;
+  --brand-type-caption: 14px;
+  --brand-type-body: 16px;
+  --brand-type-lead: 18px;
+  --brand-type-subtitle: 20px;
+  --brand-type-card: 24px;
+  --brand-type-card-large: 28px;
+  --brand-type-title: 32px;
+  --brand-type-section: 40px;
+  --brand-type-section-large: 48px;
+  --brand-type-feature: 56px;
+  --brand-type-display: 80px;
+  --brand-heading-display: 80px;
+  --brand-heading-page: 64px;
+  --brand-heading-page-mobile: 40px;
+  --brand-heading-section: 40px;
+  --brand-heading-section-mobile: 30px;
+  --brand-heading-card: 22px;
+  --brand-heading-line-height: 1.2;
+  --brand-heading-weight: 450;
+  --brand-heading-letter-spacing: -.035em;
+  --brand-lead-line-height: 1.4;
+  --brand-body-line-height: 1.5;
+  --brand-body-weight: 425;
+  --brand-section-space: clamp(64px,6.6vw,88px);
+  --brand-section-space-mobile: 64px;
+  --brand-section-title-copy-gap: 16px;
+  --brand-section-intro-columns: minmax(0,1fr) minmax(0,1.3fr);
+  --brand-section-intro-gap: clamp(26px,3.4vw,40px);
+  --brand-card-title-copy-gap: 8px;
+  --brand-motion-fast: 200ms;
+  --brand-motion-standard: 400ms;
+  --brand-announcement-height: 40px;
+  --brand-page-intro-top-space: clamp(72px,7vw,96px);
+  --brand-heading-display-large: 96px;
+  --brand-heading-editorial: 144px;
+  --brand-heading-brand: 104px;
+  --brand-heading-flight: 240px;
+  --brand-heading-service-directory: 64px;
+}
+@media(max-width:1100px){:where(html[data-design-system="branding"],.branding-marketing-page,.brand-closing,.ds-brand-specimen){--brand-heading-display:64px;--brand-heading-page:56px;--brand-heading-section:36px;--brand-type-title:28px;--brand-heading-display-large:72px;--brand-heading-editorial:96px;--brand-heading-brand:80px;--brand-heading-flight:160px;--brand-heading-service-directory:40px;}}
+@media(max-width:760px){:where(html[data-design-system="branding"],.branding-marketing-page,.brand-closing,.ds-brand-specimen){--brand-heading-display:40px;--brand-heading-page:40px;--brand-heading-section:30px;--brand-type-card:22px;--brand-type-title:24px;--brand-heading-display-large:40px;--brand-heading-editorial:48px;--brand-heading-brand:32px;--brand-heading-flight:80px;--brand-heading-service-directory:18px;}}
+
+:where(html[data-design-system="branding"],.branding-marketing-page,.brand-closing,.ds-brand-specimen){
+  --brand-color-detail-003fc4: #003fc4;
+  --brand-color-detail-151515: #151515;
+  --brand-color-detail-17191d: #17191d;
+  --brand-color-detail-292a2d: #292a2d;
+  --brand-color-detail-45474d: #45474d;
+  --brand-color-detail-62646a: #62646a;
+  --brand-color-detail-65666a: #65666a;
+  --brand-color-detail-777980: #777980;
+  --brand-color-detail-c8f0d8: #c8f0d8;
+  --brand-color-detail-c9e2ff: #c9e2ff;
+  --brand-color-detail-e9e7e4: #e9e7e4;
+  --brand-color-detail-f1f5ff: #f1f5ff;
+  --brand-color-detail-f3f4f6: #f3f4f6;
+  --brand-color-detail-f3f4f7: #f3f4f7;
+  --brand-color-detail-f7f7f5: #f7f7f5;
+  --brand-color-detail-ffc9c1: #ffc9c1;
+  --brand-color-detail-ffe95f: #ffe95f;
+  --brand-color-detail-ffffff70: #ffffff70;
+  --brand-color-detail-ffffffbd: #ffffffbd;
+  --brand-effect-1: rgba(255, 255, 255, .94);
+  --brand-effect-10: rgb(255 255 255 / 65%);
+  --brand-effect-11: rgb(0 22 85 / 13%);
+  --brand-effect-12: rgba(255, 255, 255, .76);
+  --brand-effect-2: rgba(26, 26, 22, .1);
+  --brand-effect-3: rgba(9, 25, 86, .38);
+  --brand-effect-4: rgba(255,255,255,.62);
+  --brand-effect-5: rgb(255 255 255 / 42%);
+  --brand-effect-6: rgb(255 255 255 / 88%);
+  --brand-effect-7: rgb(255 255 255 / 54%);
+  --brand-effect-8: rgb(255 255 255 / 0%);
+  --brand-effect-9: rgb(255 255 255 / 84%);
+}
+
+/* Shared infrastructure resolves to Branding-owned values on this route. */
+html[data-design-system="branding"]{--color-night:var(--brand-color-night);--color-ink:var(--brand-color-ink);--color-blue:var(--brand-color-blue);--color-blue-hover:var(--brand-color-blue-hover);--color-eyebrow:var(--brand-color-eyebrow);--color-electric:var(--brand-color-electric);--color-sky:var(--brand-color-sky);--color-ice:var(--brand-color-ice);--color-aqua:var(--brand-color-aqua);--color-white:var(--brand-color-white);--color-muted:var(--brand-color-muted);--description-color:var(--brand-description-color);--description-on-dark:var(--brand-description-on-dark);--description-on-brand:var(--brand-description-on-brand);--color-border:var(--brand-color-border);--color-surface:var(--brand-color-surface);--color-surface-secondary:var(--brand-color-surface-secondary);--color-control-hover:var(--brand-color-control-hover);--color-mint:var(--brand-color-mint);--color-cobalt:var(--brand-color-cobalt);--color-cyan:var(--brand-color-cyan);--color-coral:var(--brand-color-coral);--color-orange:var(--brand-color-orange);--color-gold:var(--brand-color-gold);--color-lime:var(--brand-color-lime);--color-deep:var(--brand-color-deep);--color-deep-raised:var(--brand-color-deep-raised);--color-on-dark-muted:var(--brand-color-on-dark-muted);--color-blue-bright:var(--brand-color-blue-bright);--color-blue-soft:var(--brand-color-blue-soft);--color-muted-strong:var(--brand-color-muted-strong);--color-muted-mid:var(--brand-color-muted-mid);--color-muted-soft:var(--brand-color-muted-soft);--color-border-strong:var(--brand-color-border-strong);--color-border-alt:var(--brand-color-border-alt);--color-placeholder:var(--brand-color-placeholder);--color-muted-plain:var(--brand-color-muted-plain);--color-muted-secondary:var(--brand-color-muted-secondary);--color-muted-tertiary:var(--brand-color-muted-tertiary);--color-border-soft:var(--brand-color-border-soft);--color-border-faq:var(--brand-color-border-faq);--color-border-soft-alt:var(--brand-color-border-soft-alt);--color-placeholder-plain:var(--brand-color-placeholder-plain);--color-surface-about:var(--brand-color-surface-about);--color-surface-raised:var(--brand-color-surface-raised);--color-border-medium:var(--brand-color-border-medium);--color-border-control:var(--brand-color-border-control);--color-border-dim:var(--brand-color-border-dim);--color-field-surface:var(--brand-color-field-surface);--color-field-surface-alt:var(--brand-color-field-surface-alt);--color-field-border:var(--brand-color-field-border);--gradient-brand:var(--brand-gradient-brand);--gradient-soft:var(--brand-gradient-soft);--gradient-expressive:var(--brand-gradient-expressive);--ink:var(--brand-ink);--muted:var(--brand-muted);--line:var(--brand-line);--surface:var(--brand-surface);--accent:var(--brand-accent);--page-max:var(--brand-page-max);--page-gutter:var(--brand-page-gutter);--page-width:var(--brand-page-width);--page-edge:var(--brand-page-edge);--section-inset:var(--brand-section-inset);--radius-small:var(--brand-radius-small);--radius-medium:var(--brand-radius-medium);--radius-large:var(--brand-radius-large);--radius-control:var(--brand-radius-control);--radius-card:var(--brand-radius-card);--type-label:var(--brand-type-label);--type-action:var(--brand-type-action);--type-caption:var(--brand-type-caption);--type-body:var(--brand-type-body);--type-lead:var(--brand-type-lead);--type-subtitle:var(--brand-type-subtitle);--type-card:var(--brand-type-card);--type-card-large:var(--brand-type-card-large);--type-title:var(--brand-type-title);--type-section:var(--brand-type-section);--type-section-large:var(--brand-type-section-large);--type-feature:var(--brand-type-feature);--type-display:var(--brand-type-display);--heading-display:var(--brand-heading-display);--heading-page:var(--brand-heading-page);--heading-page-mobile:var(--brand-heading-page-mobile);--heading-section:var(--brand-heading-section);--heading-section-mobile:var(--brand-heading-section-mobile);--heading-card:var(--brand-heading-card);--heading-line-height:var(--brand-heading-line-height);--heading-weight:var(--brand-heading-weight);--heading-letter-spacing:var(--brand-heading-letter-spacing);--lead-line-height:var(--brand-lead-line-height);--body-line-height:var(--brand-body-line-height);--body-weight:var(--brand-body-weight);--section-space:var(--brand-section-space);--section-space-mobile:var(--brand-section-space-mobile);--section-title-copy-gap:var(--brand-section-title-copy-gap);--section-intro-columns:var(--brand-section-intro-columns);--section-intro-gap:var(--brand-section-intro-gap);--card-title-copy-gap:var(--brand-card-title-copy-gap);--motion-fast:var(--brand-motion-fast);--motion-standard:var(--brand-motion-standard);--announcement-height:var(--brand-announcement-height);--page-intro-top-space:var(--brand-page-intro-top-space);--heading-display-large:var(--brand-heading-display-large);--heading-editorial:var(--brand-heading-editorial);--heading-brand:var(--brand-heading-brand);--heading-flight:var(--brand-heading-flight);--heading-service-directory:var(--brand-heading-service-directory);}
+
+:where(html[data-design-system="branding"],.branding-marketing-page,.brand-closing,.ds-brand-specimen){--brand-type-local-12:12px;--brand-type-local-13:13px;--brand-type-local-16:16px;--brand-type-local-15:15px;--brand-type-local-17:17px;--brand-type-local-29:29px;--brand-type-local-10:10px;--brand-type-local-18:18px;--brand-type-local-14:14px;--brand-type-local-11:11px;}
+
+.ds-brand-specimen .ds-brand-headline{font-size:var(--brand-heading-page);line-height:1.2;color:var(--brand-color-white)}
+.ds-brand-specimen{background:var(--brand-color-blue)}

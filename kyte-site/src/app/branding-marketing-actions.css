@@ -10,37 +10,37 @@
   border-radius: 50%;
   box-shadow: none;
   font-family: "Geist Mono", monospace;
-  font-size: clamp(16px, 1.5vw, 21px);
+  font-size: var(--brand-type-subtitle);
   font-style: normal;
   font-weight: 400;
   letter-spacing: -.025em;
-  line-height: 1;
+  line-height: 1.2;
   text-decoration: none;
   transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease;
 }
 
 .branding-marketing-page .kyte-button {
-  color: var(--color-blue);
+  color: var(--brand-color-blue);
   background: transparent;
 }
 
-.branding-marketing-page .kyte-tertiary { color: var(--color-blue); }
+.branding-marketing-page .kyte-tertiary { color: var(--brand-color-blue); }
 
 .branding-marketing-page .kyte-button:hover,
 .branding-marketing-page .kyte-tertiary:hover {
-  color: #fff;
-  background: var(--color-blue);
+  color: var(--brand-color-white);
+  background: var(--brand-color-blue);
   text-decoration: none;
   transform: translateY(-1px);
 }
 
 .branding-marketing-page :is(.brand-project__action, .brand-projects__all, .brand-testimonial__cta) {
-  color: #fff;
+  color: var(--brand-color-white);
 }
 
 .branding-marketing-page :is(.brand-project__action, .brand-projects__all, .brand-testimonial__cta):hover {
-  color: var(--color-blue);
-  background: #fff;
+  color: var(--brand-color-blue);
+  background: var(--brand-color-white);
 }
 
 .branding-marketing-page .kyte-button:focus-visible,
@@ -58,31 +58,31 @@
   border-radius: 50%;
   box-shadow: none;
   font-family: "Geist Mono", monospace;
-  font-size: clamp(16px, 1.5vw, 21px);
+  font-size: var(--brand-type-subtitle);
   font-style: normal;
   font-weight: 400;
   letter-spacing: -.025em;
-  line-height: 1;
+  line-height: 1.2;
   text-decoration: none;
   transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease;
 }
 
 .site-header.is-branding-editorial .contact-button {
-  color: var(--color-blue);
+  color: var(--brand-color-blue);
   background: transparent;
 }
 
-.site-header.is-branding-editorial .mobile-menu__contact .kyte-button { color: #fff; background: transparent; }
+.site-header.is-branding-editorial .mobile-menu__contact .kyte-button { color: var(--brand-color-white); background: transparent; }
 
 .site-header.is-branding-editorial .contact-button:hover {
-  color: #fff;
-  background: var(--color-blue);
+  color: var(--brand-color-white);
+  background: var(--brand-color-blue);
   transform: translateY(-1px);
 }
 
 .site-header.is-branding-editorial .mobile-menu__contact .kyte-button:hover {
-  color: var(--color-blue);
-  background: #fff;
+  color: var(--brand-color-blue);
+  background: var(--brand-color-white);
   transform: translateY(-1px);
 }
 
@@ -107,8 +107,8 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
 .site-header.is-branding-editorial.is-branding-editorial.is-scrolled { top: 0; }
 .site-header.is-branding-editorial.is-branding-editorial::before {
   inset: 0;
-  background: rgba(255, 255, 255, .94);
-  box-shadow: inset 0 -1px 0 rgba(26, 26, 22, .1);
+  background: var(--brand-effect-1);
+  box-shadow: inset 0 -1px 0 var(--brand-effect-2);
   backdrop-filter: blur(14px);
 }
 .site-header.is-branding-editorial.is-branding-editorial .announcement-bar,
@@ -118,7 +118,7 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
   height: 58px;
   justify-content: space-between;
   gap: 14px;
-  padding-inline: var(--section-inset);
+  padding-inline: var(--brand-section-inset);
   border: 0;
   border-radius: 0;
 }
@@ -137,25 +137,25 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
   justify-content: center;
   gap: 6px;
   padding: 8px 21px 10px;
-  border: 1px solid var(--color-blue);
+  border: 1px solid var(--brand-color-blue);
   border-radius: 50%;
   box-shadow: none;
   font-family: "Geist Mono", monospace;
-  font-size: 18px;
+  font-size:var(--brand-type-local-18);
   font-style: normal;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.2;
   text-decoration: none;
   transition: color .22s ease, background-color .22s ease, transform .22s ease;
 }
 .site-header.is-branding-editorial.is-branding-editorial .brochure-button.branding-nav-action {
-  color: var(--color-blue);
-  background: #fff;
-  box-shadow: inset 0 0 0 .75px var(--color-blue);
+  color: var(--brand-color-blue);
+  background: var(--brand-color-white);
+  box-shadow: inset 0 0 0 .75px var(--brand-color-blue);
 }
 .site-header.is-branding-editorial.is-branding-editorial .contact-button.branding-nav-action {
-  color: #fff;
-  background: var(--color-blue);
+  color: var(--brand-color-white);
+  background: var(--brand-color-blue);
 }
 .site-header.is-branding-editorial.is-branding-editorial .branding-nav-action:hover { transform: translateY(-1px); }
 .site-header.is-branding-editorial.is-branding-editorial .mobile-actions { display: flex; align-items: center; }
@@ -172,14 +172,14 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
   outline: 0;
   box-shadow: none !important;
   background: transparent !important;
-  line-height: 0;
+  line-height: 1.2;
   cursor: pointer;
 }
-.site-header.is-branding-editorial.is-branding-editorial .mobile-toggle span { display: block; width: 20px; height: 1.5px; margin: 5px auto; border-radius: 0; background: var(--ink); }
-.site-header.is-branding-editorial.is-branding-editorial.is-mobile-open::before { background: var(--color-blue); box-shadow: none; }
+.site-header.is-branding-editorial.is-branding-editorial .mobile-toggle span { display: block; width: 20px; height: 1.5px; margin: 5px auto; border-radius: 0; background: var(--brand-ink); }
+.site-header.is-branding-editorial.is-branding-editorial.is-mobile-open::before { background: var(--brand-color-blue); box-shadow: none; }
 .site-header.is-branding-editorial.is-branding-editorial.is-mobile-open .brand__logo--light { display: none; }
 .site-header.is-branding-editorial.is-branding-editorial.is-mobile-open .brand__logo--dark { display: block; }
-.site-header.is-branding-editorial.is-branding-editorial.is-mobile-open .mobile-toggle span { background: #fff; }
+.site-header.is-branding-editorial.is-branding-editorial.is-mobile-open .mobile-toggle span { background: var(--brand-color-white); }
 .site-header.is-branding-editorial.is-branding-editorial.is-mobile-open .mobile-toggle span:first-child { transform: translateY(3px) rotate(45deg); }
 .site-header.is-branding-editorial.is-branding-editorial.is-mobile-open .mobile-toggle span:last-child { transform: translateY(-3px) rotate(-45deg); }
 .site-header.is-branding-editorial.is-branding-editorial.is-mobile-open .nav-actions { visibility: hidden; }
@@ -191,8 +191,8 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
-  padding: clamp(18px, 3.5vh, 40px) var(--section-inset) 24px;
-  background: var(--color-blue);
+  padding: clamp(18px, 3.5vh, 40px) var(--brand-section-inset) 24px;
+  background: var(--brand-color-blue);
   animation: branding-menu-in .68s cubic-bezier(.22,1,.36,1) both;
 }
 .branding-editorial-menu__links { display: flex; flex: 0 0 auto; flex-direction: column; align-items: flex-start; align-self: flex-start; width: max-content; max-width: 100%; margin: auto 0; text-align: left; }
@@ -200,11 +200,11 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
 .branding-editorial-menu__links > .branding-editorial-menu__item > a {
   display: block;
   max-width: 100%;
-  color: rgba(9, 25, 86, .38);
-  font-size: clamp(38px, min(7.2vw, 8.5vh), 104px);
+  color: var(--brand-effect-3);
+  font-size: var(--brand-heading-display-large);
   font-weight: 450;
   letter-spacing: -.075em;
-  line-height: .82;
+  line-height: 1.2;
   text-decoration: none;
   text-transform: uppercase;
   transition: color .24s ease;
@@ -213,9 +213,9 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
 .branding-editorial-menu__links > .branding-editorial-menu__item > a > span { display: inline-block; padding-right: .12em; animation: branding-menu-item-in .68s cubic-bezier(.2,.8,.2,1) both; }
 .branding-editorial-menu__links > .branding-editorial-menu__item > a:hover,
 .branding-editorial-menu__links > .branding-editorial-menu__item > a:focus-visible,
-.branding-editorial-menu__links > .branding-editorial-menu__item > a.is-current { color: #fff; }
+.branding-editorial-menu__links > .branding-editorial-menu__item > a.is-current { color: var(--brand-color-white); }
 .branding-editorial-menu__links > .branding-editorial-menu__item > a:hover,
-.branding-editorial-menu__links > .branding-editorial-menu__item > a:focus-visible { color: #fff; }
+.branding-editorial-menu__links > .branding-editorial-menu__item > a:focus-visible { color: var(--brand-color-white); }
 .branding-editorial-menu__links > .branding-editorial-menu__item > a:hover { transform: none; }
 .branding-editorial-menu__links .branding-editorial-menu__item:nth-child(1) > a > span { animation-delay: 150ms; }
 .branding-editorial-menu__links .branding-editorial-menu__item:nth-child(2) > a > span { animation-delay: 205ms; }
@@ -225,9 +225,9 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
 .branding-editorial-menu__links .branding-editorial-menu__item:nth-child(6) > a > span { animation-delay: 425ms; }
 .branding-editorial-menu__links .branding-editorial-menu__item:nth-child(7) > a > span { animation-delay: 480ms; }
 .branding-editorial-menu__actions { display: flex; flex: 0 0 auto; gap: 9px; padding-top: 28px; animation: branding-menu-item-in .65s .4s cubic-bezier(.2,.8,.2,1) both; }
-.branding-editorial-menu__actions .kyte-button { min-height: 0; padding: 9px 20px 11px; border: 1px solid currentColor; border-radius: 50%; font-family: "Geist Mono", monospace; font-size: clamp(16px, 1.5vw, 21px); font-style: normal; font-weight: 400; line-height: 1; }
-.branding-editorial-menu__brochure { color: var(--color-blue); background: #fff; }
-.branding-editorial-menu__contact { color: #fff !important; background: #003fc4 !important; border-color: #003fc4 !important; }
+.branding-editorial-menu__actions .kyte-button { min-height: 0; padding: 9px 20px 11px; border: 1px solid currentColor; border-radius: 50%; font-family: "Geist Mono", monospace; font-size: var(--brand-type-subtitle); font-style: normal; font-weight: 400; line-height: 1.2; }
+.branding-editorial-menu__brochure { color: var(--brand-color-blue); background: var(--brand-color-white); }
+.branding-editorial-menu__contact { color: var(--brand-color-white) !important; background: var(--brand-color-detail-003fc4) !important; border-color: var(--brand-color-detail-003fc4) !important; }
 .branding-editorial-menu__service-list {
   display: flex;
   flex-wrap: wrap;
@@ -247,9 +247,9 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
 .branding-editorial-menu__item:has(.branding-editorial-menu__services:focus-visible) .branding-editorial-menu__service-list,
 .branding-editorial-menu__item:has(.branding-editorial-menu__service-list :focus-visible) .branding-editorial-menu__service-list,
 .branding-editorial-menu__service-list:hover { max-height: 180px; padding: 10px 0 20px; opacity: 1; visibility: visible; pointer-events: auto; }
-.branding-editorial-menu__service-list a { display: inline-flex; min-height: 36px; max-width: 100%; align-items: center; justify-content: center; padding: 7px 16px 9px; border: 1px solid rgba(255,255,255,.62); border-radius: 50%; color: #fff; font-family: "Geist Mono", monospace; font-size: 17px; font-style: normal; font-weight: 400; letter-spacing: 0; line-height: 1; text-decoration: none; text-transform: none; white-space: normal; transition: color .2s ease, background-color .2s ease, transform .28s cubic-bezier(.2,.8,.2,1); }
+.branding-editorial-menu__service-list a { display: inline-flex; min-height: 36px; max-width: 100%; align-items: center; justify-content: center; padding: 7px 16px 9px; border: 1px solid var(--brand-effect-4); border-radius: 50%; color: var(--brand-color-white); font-family: "Geist Mono", monospace; font-size:var(--brand-type-local-17); font-style: normal; font-weight: 400; letter-spacing: 0; line-height: 1.2; text-decoration: none; text-transform: none; white-space: normal; transition: color .2s ease, background-color .2s ease, transform .28s cubic-bezier(.2,.8,.2,1); }
 .branding-editorial-menu__service-list a:hover,
-.branding-editorial-menu__service-list a:focus-visible { color: var(--color-blue); background: #fff; }
+.branding-editorial-menu__service-list a:focus-visible { color: var(--brand-color-blue); background: var(--brand-color-white); }
 .branding-editorial-menu__service-list .service-dot { display: none; }
 .brand-helix-scroll__sticky { top: 58px; height: calc(100svh - 58px); }
 
@@ -265,13 +265,13 @@ html:is([data-corner-scope="branding"],:not([data-corner-scope]):has(.branding-m
 @media (max-width: 650px) {
   .site-header.is-branding-editorial.is-branding-editorial .nav-row { padding-inline: 16px; }
   .site-header.is-branding-editorial.is-branding-editorial .nav-actions { gap: 5px; }
-  .site-header.is-branding-editorial.is-branding-editorial .branding-nav-action { min-height: 34px; gap: 4px; padding: 6px 10px; font-size: 12px; }
+  .site-header.is-branding-editorial.is-branding-editorial .branding-nav-action { min-height: 34px; gap: 4px; padding: 6px 10px; font-size:var(--brand-type-local-12); }
   .site-header.is-branding-editorial.is-branding-editorial .brand__logo { width: 112px; }
   .site-header.is-branding-editorial.is-branding-editorial .mobile-toggle { width: 34px; height: 34px; padding: 6px; }
   .branding-editorial-menu { padding: 20px 16px 18px; }
-  .branding-editorial-menu__links > .branding-editorial-menu__item > a { font-size: clamp(34px, min(12vw, 8vh), 64px); }
+  .branding-editorial-menu__links > .branding-editorial-menu__item > a { font-size: var(--brand-heading-page); }
   .branding-editorial-menu__service-list { display: flex; gap: 7px; max-width: 100%; }
-  .branding-editorial-menu__service-list a { min-height: 32px; padding: 6px 12px 7px; font-size: 14px; white-space: normal; }
+  .branding-editorial-menu__service-list a { min-height: 32px; padding: 6px 12px 7px; font-size:var(--brand-type-local-14); white-space: normal; }
   .branding-editorial-menu__item:has(.branding-editorial-menu__services:hover) .branding-editorial-menu__service-list,
   .branding-editorial-menu__item:has(.branding-editorial-menu__services:focus-visible) .branding-editorial-menu__service-list,
   .branding-editorial-menu__item:has(.branding-editorial-menu__service-list :focus-visible) .branding-editorial-menu__service-list,

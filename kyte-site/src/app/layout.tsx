@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@fontsource-variable/dm-sans";
 import { PageTransition } from "@/components/PageTransition";
+import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { SiteRevealMotion } from "@/components/SiteRevealMotion";
 import { ContactModal } from "@/components/ContactExperience";
 import { CookieSettings } from "@/components/CookieSettings";
@@ -20,5 +21,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" data-palette="kyte" suppressHydrationWarning><body><IllustrationPaletteProvider>{children}<SiteSmoothScroll /><SiteRevealMotion /><ContactModal /><CookieSettings /><PageTransition /></IllustrationPaletteProvider></body></html>;
+  return <html lang="en" data-palette="kyte" suppressHydrationWarning><body><IllustrationPaletteProvider>{children}<SiteSmoothScroll /><SiteRevealMotion /><TextRevealMotion /><ContactModal /><CookieSettings /><PageTransition /></IllustrationPaletteProvider></body></html>;
 }

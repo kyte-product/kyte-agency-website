@@ -27,15 +27,15 @@
 .service-offering h3 { margin: 0; color: var(--ink); font-size: var(--heading-card); font-weight: var(--heading-weight); line-height: 1.2; letter-spacing: var(--heading-letter-spacing); }
 .service-offering p { max-width: 720px; margin: 0; color: var(--muted); font-size: var(--type-body); line-height: var(--body-line-height); }
 .service-offering h3 + p { margin-top: 0 !important; }
-.service-offering__number { min-width: 92px; color: var(--color-muted-soft); font-size: clamp(42px,5vw,68px); font-weight: 400; line-height: .95; letter-spacing: -.065em; text-align: right; }
+.service-offering__number { min-width: 92px; color: var(--color-muted-soft); font-size: var(--heading-page); font-weight: 400; line-height: 1.2; letter-spacing: -.065em; text-align: right; }
 
 @media (max-width: 700px) {
   .service-offerings__inner { padding-block: 72px 84px; }
-  .service-offerings h2 { margin-bottom: 30px; font-size: var(--heading-section-mobile); }
+  .service-offerings h2 { margin-bottom: 30px; font-size: var(--heading-section); }
   .service-offering { grid-template-columns: minmax(0,1fr) auto; gap: 10px 18px; padding-block: 24px; }
-  .service-offering h3 { font-size: 20px; }
+  .service-offering h3 { font-size:var(--type-lead); }
   .service-offering p { grid-column: 1; font-size: var(--type-body); }
-  .service-offering__number { grid-column: 2; grid-row: 1 / span 2; min-width: 48px; font-size: 38px; }
+  .service-offering__number { grid-column: 2; grid-row: 1 / span 2; min-width: 48px; font-size:var(--heading-section); }
 }
 
 /* Full-bleed rules, with row content aligned to the shared page container. */

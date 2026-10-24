@@ -1,10 +1,10 @@
 # Branding landing design system
 
-Current: 23 October 2026. Browser reference: `/design-system/branding`. Live route: `/branding-marketing`. Inherits [Website](website.md). This extension never applies to `/branding-marketing/*` child services.
+Current: 23 October 2026. Browser reference: `/design-system/branding`. Live route: `/branding-marketing`. Independent visual foundation. This extension never applies to `/branding-marketing/*` child services.
 
-## Inherited foundation
+## Independent foundation
 
-Use Website's Kyte blue/black/white colors, DM Sans, semantic descriptions, 1344px content frame, accessibility, contact destination, page transition and route/scroll lifecycle. Keep the shared menu behavior. Local editorial actions do not change primary actions elsewhere.
+Branding owns its visual values in src/app/branding-marketing/branding-tokens.css. All component token references use --brand- names, including fixed responsive heading roles. Shared navigation and contact behavior remain reusable infrastructure. Keep the shared menu behavior. Local editorial actions do not change primary actions elsewhere.
 
 ## Distinct language
 
@@ -27,7 +27,7 @@ Local actions have a one-pixel outline, oval radius, no shadow and mono type. Se
 | 9 | `ClientStories` with Branding variant | Exactly three Design News cards, categories, summaries, dates and All stories action |
 | 10 | `ServiceFlightCta` | Blue scroll-bound closing sentence, blue footer, final white pixel pocket and outlined oval homepage link |
 
-Sources: `src/app/branding-marketing/page.tsx`, `branding-editorial.css`, `src/app/branding-marketing-actions.css`, `src/components/branding/`, `ServiceEditorialClose` and `ClientStories`. These files extend shared tokens. Do not duplicate global foundations into local components.
+Sources: `src/app/branding-marketing/page.tsx`, `branding-editorial.css`, `src/app/branding-marketing-actions.css`, `src/components/branding/`, `ServiceEditorialClose` and `ClientStories`. These files use independent Branding tokens. Do not duplicate global foundations into local components.
 
 ## Responsive and runtime contract
 
@@ -42,3 +42,21 @@ Sources: `src/app/branding-marketing/page.tsx`, `branding-editorial.css`, `src/a
 The palette toggle here shares one provider with the Website and Product systems. It only selects between Product originals and their additive blue outputs; it does not tint Branding photographs, video or pastel editorial highlights. See the [full Product library](product.md) for storage, checksums and build instructions.
 
 Historical experiments and superseded directions remain in `docs/history/`. The older `docs/branding-story/DESIGN.md` is now an entry pointer to this current contract.
+
+
+24 October 2026: Branding typography uses fixed breakpoint values. Hero: 104px desktop, 80px tablet, 32px mobile. Oversized editorial headings: 144/96/48px. Service directory: 64/40/18px. The flight phrase uses 240/160/80px. Smaller text inherits the Website scale. Viewport-based text sizing and title-length-based font calculations are retired.
+
+
+### Line-height reference, 24 October 2026
+
+Only 1.2, 1.3, 1.4, 1.5 and 1.6 are permitted. See `/design-system/branding#line-height` for explicit font size / line-height pairs at desktop, tablet and mobile. Headings use 1.2, compact supporting copy 1.3, leads/captions 1.4, body 1.5 and spacious reading copy 1.6. Branding display treatments also use 1.2, including hero word spans, editorial services, flight phrase and service directory. No tighter display exception remains.
+
+
+## Independent token register, 24 October 2026
+
+The live /design-system/branding page lists local typography, colors and icon rules. Annotation sizes are 10, 11, 12, 13, 14, 15, 16, 17, 18, 29px; local weights are 400, 450, 500, 550. News titles use DM Sans 20px/26px weight 500. Decorative EditorialGlyph motifs are scoped Branding artwork; action icons use Lucide. Exact local detail colors and effects are registered under branding_details in color-register.json. Website token edits do not change the Branding snapshot. The allowed five-value leading scale is also owned locally.
+
+
+### Shared motion coverage, 24 October 2026
+
+Root layout mounts one SiteRevealMotion and one TextRevealMotion. Plain text/media use the shared entry reveal; explicit data-reveal-words content uses the word controller on every route. Custom Branding/About/case-study scenes and DS reference pages opt out of generic entry animation. Logo tickers preserve their own treatment. Reduced motion keeps text readable, observers cover streamed content, and route cleanup cancels pending animations. Parent content blocks with their own paragraph/media children avoid duplicate reveal.

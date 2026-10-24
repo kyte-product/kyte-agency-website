@@ -1,6 +1,5 @@
-// Keep sample collections off the public site until editorial content is ready.
-// Set SHOW_EDITORIAL_PLACEHOLDERS=true in a local or preview environment to review them.
-export const showEditorialPlaceholders = process.env.SHOW_EDITORIAL_PLACEHOLDERS === "true";
+// Sample Resources and Guides are visible for the requested editorial preview.
+export const showEditorialPlaceholders = true;
 
 export const resourceSamples = [
   { title: "A practical guide to better product briefs", kind: "Resource", color: "#ffc48c", accent: "#3a2419" },

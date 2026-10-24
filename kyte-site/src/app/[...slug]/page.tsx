@@ -7,7 +7,6 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { ServiceOurProcess } from "@/components/ServiceOurProcess";
 import { WorkShowcase } from "@/components/WorkShowcase";
 import { HomeFaq } from "@/components/HomeFaq";
-import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { ServiceTestimonials } from "@/components/ServiceTestimonials";
 import { ServiceOfferings } from "@/components/ServiceOfferings";
 import { ServiceApproach } from "@/components/ServiceApproach";
@@ -62,7 +61,7 @@ export default async function PlannedPage({ params }: { params: Promise<{ slug: 
     const faqItems = service?.faqs.map(({ title, body }) => ({ question: title, answer: body }));
     const inline = service?.heroInline;
     return <><SiteHeader /><main className="service-detail">
-      <TextRevealMotion />
+
       <section className="service-detail__hero" aria-labelledby="ux-audit-title">
         <div className="service-detail__hero-inner">
 

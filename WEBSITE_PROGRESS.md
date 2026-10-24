@@ -123,3 +123,69 @@ Added the user’s follow-up to the same release: replace four framework stage i
 ## 23 October 2026: Product follow-up published and verified
 
 PR #66 merged at `c02965ccc8c4f9c5da718230739c979c64d883c8`; production `dpl_Bri3qAAhJxHgprgANSRQCTmyfgCq` is Ready. The live Product page confirms grid default/list switching with larger type, four existing Kyte totals, all ten dot fields and functioning framework selection, without overflow or uncaught errors. Final deployment, rollback and browser evidence are in `kyte-site/docs/release/2026-10-23-product-work-impact.md`. All relevant system, template, content and IA notes were updated. Documentation-only publication record follows the application release. Owner: Kyte website team. Next: content population.
+
+
+## 24 October 2026: local preview restored from latest GitHub main
+
+User requested replacing the repair preview with the latest repository version. Cloned kyte-product/kyte-agency-website main at 82d8ace into /private/tmp/kyte-latest-repo-20261024 and started its unmodified application source on 127.0.0.1:3001. Installed locked dependencies from the local npm cache. Browser confirmed homepage rendering, five project covers, zero broken image elements and no build overlay. Earlier repair folder retained separately. No GitHub push or Vercel deployment. Owner: Kyte website team. Next: review this repository baseline.
+
+
+## 24 October 2026: browser review comments 1–15
+
+Implemented the review in the fresh latest-main clone, branch codex/browser-review-refinements. Homepage department heading uses the supplied wording; Selected Work has a right-aligned View all work action; the existing FAQ sits before the closing CTA. Shared footer shows only the DesignRush badge and the phone is +91 7022603523. Service menu group headings link to their landing pages and its feature is a Fincart project card; Industries features the car-camouflage Design News card, with both feature eyebrows removed. Shared service/industry decision headings span the content width above their interactive layouts; service inclusion sections have a contact CTA. Insights displays existing sample Resources and Guides with accessible collection routes. About uses a top-left dotted Kyte mark, links the team CTA to Work, and adds left-side dot patterns in all four impact cards.
+
+Validation: focused ESLint, TypeScript in production build, design-system/palette/variant guards and production build passed. Build logged Sanity DNS failures in the restricted environment and used existing content fallbacks. Browser checks at 1414px and 393px confirmed no document overflow or broken loaded images on Home, About, Insights, the research service and D2C industry route. Confirmed dropdown heading destinations and feature images, FAQ toggle, phone link, badge-only footer, 1280px-wide desktop decision heading and Resources route. Local preview remains on port 3001. No push, merge or deployment requested in this review. Owner: Kyte website team. Next: user review.
+
+
+## 24 October 2026: shared actions and section-introduction consistency
+
+Applied the three design-system review comments to active source. Removed the tertiary hover border under SVG arrows so the underline stays on the label. Replaced active ArrowUpRight components and diagonal glyphs with Lucide ArrowRight, including all three design-system pages, editorial controls, careers, contact, case-study links and Branding actions. Historical graveyard snapshots retain their captured source. Standardized matching split heading/description sections on the design-system reference ratio 1:1.3 with a shared 26–40px gap and top alignment; descriptions explicitly override the global stacked h2 + p margin. These introductions stack below 760px. Updated the Website browser and canonical design-system docs.
+
+Checks: focused ESLint, TypeScript and full production build passed, including illustration/design-system guards; build used existing fallbacks after restricted-environment Sanity DNS failures. Browser checks at 1093px verified matching 422px/549px columns across all three design systems, Product, Industries, Work and the research service; measured heading/description top offset is 0px on the DS specimens and the tertiary SVG border is 0px. Mobile 393px checks confirmed one-column introductions and no document overflow. No active ArrowUpRight or diagonal glyph references remain. Local preview only; no push or deployment. Owner: Kyte website team. Next: user review.
+
+
+## 24 October 2026: fixed typography at three breakpoints
+
+Replaced 130 fluid font-size declarations across 36 active CSS files with shared fixed typography roles. Website headings use display 80/64/40px, page title 64/56/40px and section heading 40/36/30px at desktop >1100px, tablet 761–1100px and mobile ≤760px. Body/UI sizes remain fixed. Branding keeps explicit fixed display variants. Removed the service directory title-length/viewport font calculation. Retained fluid spacing and artwork geometry. Updated the Website browser specimen and all three canonical design-system documents. Added check:typography to prebuild to reject reintroduced fluid text sizes.
+
+Checks: production build, TypeScript, focused ESLint and typography/design-system/palette guards passed; build logged restricted-network Sanity DNS warnings and used existing fallbacks. Browser review covered Home, Product, Branding, About, Careers, Website DS, research service and Insights at 1440, 1280, 1032, 810, 393 and 320px. Home H1 measured 80px at both desktop widths, 64px at both tablet widths and 40px at both mobile widths. Adjusted the narrow testimonial heading/control layout, Branding creative-services title and Product partner-card label space to avoid clipping. Local review only; no GitHub or Vercel changes. Owner: Kyte website team. Next: user review of fixed type sizes.
+
+## 24 October 2026: explicit typography line heights
+
+Documented desktop/tablet/mobile font size and line height in pixels, plus unitless multipliers and weights, for every shared typography role in /design-system#type. Added auxiliary fixed roles, mobile aliases and authored Branding hero/editorial/flight/directory exceptions. Specimens now render their listed leading and weight instead of a universal 1.15 line height. All three canonical system documents and extension-page reference links are updated. Existing live-page line-height overrides remain unchanged.
+
+Checks: focused ESLint, TypeScript, typography guard, design-system guard and git diff --check passed. Browser confirmed tablet specimen values, mobile 393px display leading 43.2px, body leading 24px and no document overflow. Desktop reference screenshot saved locally. No push or deployment. Owner: Kyte website team. Next: user review of the typography reference.
+
+## 24 October 2026: approved five-value line-height scale
+
+User restricted line heights to 1.2, 1.3, 1.4, 1.5 and 1.6. Normalized active CSS declarations in 42 files to this unitless scale, including shared heading tokens, controls, reading text and Branding display treatments. Added the body 1.5 inheritance baseline. Updated all three system documents, browser tables and specimen values, replacing prior tighter display exceptions. Branding hero reveal masks now accommodate 1.2 leading without negative inter-line compression. Historical graveyard assets are retained. Extended the typography guard to reject unapproved line heights.
+
+Validation: focused ESLint, TypeScript, full production build and design-system/palette/typography guards passed. Build retained existing content fallbacks after restricted-network Sanity DNS warnings. Browser reviewed Branding at 1093px and 393px, Home and Product at 393px, and the DS at mobile/desktop; no document overflow observed. Mobile heading specimens compute to 40px/48px and 30px/36px, with body 16px/24px. Local changes only. Owner: Kyte website team. Next: user visual review.
+
+## 24 October 2026: explicit primary-action typography
+
+Reviewed homepage View all work action. It already used .kyte-button, but its hardcoded 15px size was missing from the typography catalog and inherited the surrounding heading's negative tracking. Added --type-action at 15px, documented desktop/tablet/mobile 15px/21px leading, weight 450 and zero tracking. Shared primary buttons explicitly reset letter spacing; the DS specimen and controls contract now include the role. Browser computed the selected action at 15px, weight 450, line height 21px and normal tracking. Focused ESLint, typography guard and diff whitespace check passed. Local only. Owner: Kyte website team. Next: user review.
+
+## 24 October 2026: whole-source design-system consistency audit
+
+Completed source audit of 171 active CSS/TS/TSX files, 49 stylesheets and 24 page modules against all three design-system contracts. Recorded 73 unregistered font-size declarations, 32 undocumented weight declarations, 191 approved-size literals bypassing tokens, 132 root-palette color literals, 167 hex occurrences outside that palette and 62 functional colors requiring contextual review. Identified unresolved Branding news-title font mismatch, icon exception boundaries and corner-token/effective-style disagreement. Counts are source declarations, not confirmed visible defects; artwork/client palettes, alpha effects and approved Branding treatments require contextual exceptions. No active diagonal action arrows or alternate icon package imports found; 42 Lucide imports and eight inline SVG sites recorded.
+
+Deliverables: kyte-site/docs/audits/2026-10-24-design-system-audit.md, machine-readable inventory JSON and scripts/audit-design-styles.py. Typography and design-system guards passed. No application styles changed, and no deployment performed. Owner: Kyte website team. Next: normalize confirmed findings with affected-template visual review.
+
+
+## 24 October 2026: independent Branding foundation and style-audit fixes
+
+Branding now owns --brand- color/type/layout/control tokens, responsive values and registered local annotation sizes in branding-tokens.css. Branding component CSS uses this namespace; shared route infrastructure aliases to its independent snapshot. Website generic heading and description rules exclude the landing. /design-system/branding documents local type/leading/weights, colors, effects and scoped decorative glyphs, while child services keep Website. Corrected news titles to DM Sans.
+
+Normalized other active CSS to registered typography roles and weights, centralized raw component colors with exact scene/client/effect values preserved, aligned root corner defaults with 2px, and replaced the custom contact success check with Lucide Check plus adjusted stroke animation. Added check:styles to prebuild and a color detail register. Audit report includes resolution and original inventory remains retained. Focused lint, TypeScript, production build and existing guards passed; new style guard passes. Browser checked Branding at 1093/393px and Home/Product/About/Careers/Insights/Contact at 393px without document overflow. Local changes only. Owner: Kyte website team. Next: visual review before publication.
+
+## 24 October 2026: consolidate shared typography
+
+Reduced the Website/Product catalog from 18 documented size roles to nine: Display, Page, Section, Title, Card, Lead, Body, Caption and Metadata. Actions now use Body at 16px/24px weight 450, subtitles use Lead, card copy/large-card variants use Card at 24/24/22px, and extra display/feature/section roles merge into existing heading roles. Removed retired CSS token definitions and references, including separate mobile aliases. Branding's independent snapshot and component references are preserved. Updated /design-system#type, canonical Website/Product docs and the style guard to reject retired shared roles. Emphasis and approved component leading remain explicit variants of the smaller size catalog.
+
+Checks: focused ESLint, TypeScript, style/typography/design-system/illustration guards and production build passed. Browser confirmed exactly nine catalog specimens and no document overflow on DS desktop plus Home/Product/About at 393px. Local changes only. Owner: Kyte website team. Next: user review of consolidated typography.
+
+
+## 24 October 2026: final typography, reveals and release checks
+
+Verified active styles use the consolidated roles, with independent Branding and authored SVG text exceptions. Centralized word reveal in RootLayout and removed page-level duplicate mounts, so marked text works across all routes. Shared reveal excludes custom scenes and reference pages; nested blocks with paragraph/media children avoid duplicate entry animation. Updated all three system contracts and release record. Production build/TypeScript, focused lint and all prebuild guards passed. Final DOM responsive matrix: 56 checks over 14 templates at 320/393/810/1440px, no document overflow or broken completed images. Exact evidence: kyte-site/docs/audits/2026-10-24-final-responsive.json. User authorized push, merge and production deployment. Publication in progress, exact revision/status to follow. Owner: Kyte website team.

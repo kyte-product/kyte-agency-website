@@ -65,8 +65,27 @@ For new or edited original geometry, run `npm run build:illustrations`, which bu
 
 ## Selected Work and Kyte impact, 23 October follow-up
 
-The Product landing uses the existing WorkShowcase grid/list toggle with grid as the fresh-load default. Only this landing enlarges list descriptions to 24–30px desktop and 22px mobile; metadata is 18px desktop and 16px mobile. The tablet list keeps metadata under its text, separate from the image. Grid typography stays inherited.
+The Product landing uses the existing WorkShowcase grid/list toggle with grid as the fresh-load default. Only this landing enlarges list descriptions to 24px desktop/tablet and 22px mobile; metadata is 18px desktop and 16px mobile. The tablet list keeps metadata under its text, separate from the image. Grid typography stays inherited.
 
 KyteApproach includes the same ImpactCards row used on industry pages, with white/blue/charcoal/white surfaces and breathing dot fields. Its accessible label is “Kyte impact numbers.” Four cards reuse the existing homepage figures: 100+ projects, 50+ clients, 3M+ views in one year and 200M+ impressions. `src/data/kyteImpact.ts` owns these figures for both Home and Product. These are Kyte totals, not industry statistics; their existing editorial proof status is unchanged. At smaller widths the shared rail scrolls without widening the page.
 
 The framework stage marks use 80 × 72px dot fields (64px square on phones), with nodes sized to contain them and centered on the selected stage. “How We Work Together” uses six 96px square dot fields. Both use stable group seeds and unique motif slots, the shared gray/blue tone, fixed 7px grid geometry, offscreen pause and reduced-motion behavior. Stage names and written outcomes remain visible and keyboard accessible.
+
+
+24 October 2026: Product typography inherits the Website fixed desktop/tablet/mobile scale. Page and section headings use the shared fixed roles; the isometric artwork and its embedded text remain unchanged.
+
+
+### Line-height reference, 24 October 2026
+
+Only 1.2, 1.3, 1.4, 1.5 and 1.6 are permitted. See [Website line-height specifications](website.md#line-height-specifications-24-october-2026) and `/design-system#type` for explicit font size / line-height pairs at desktop, tablet and mobile. Headings use 1.2, compact supporting copy 1.3, leads/captions 1.4, body 1.5 and spacious reading copy 1.6. Branding display treatments also use 1.2, including hero word spans, editorial services, flight phrase and service directory. No tighter display exception remains.
+
+
+24 October 2026: Product interface type uses the registered Website scale and weights 400/425/450. Original scene backplates and client artwork colors are preserved through registered detail variables, not treated as additional primary brand colors. Branding is independently owned.
+
+
+24 October 2026: Product inherits the consolidated nine-role Website typography catalog. Card copy/large card merge into Card (24/24/22px), subtitles into Lead (18px), actions into Body (16px, 450 weight), feature titles into Page and extra display/section roles into Display/Section. See website.md for all exact leading pairs. Branding remains independently owned.
+
+
+### Shared motion coverage, 24 October 2026
+
+Root layout mounts one SiteRevealMotion and one TextRevealMotion. Plain text/media use the shared entry reveal; explicit data-reveal-words content uses the word controller on every route. Custom Branding/About/case-study scenes and DS reference pages opt out of generic entry animation. Logo tickers preserve their own treatment. Reduced motion keeps text readable, observers cover streamed content, and route cleanup cancels pending animations. Parent content blocks with their own paragraph/media children avoid duplicate reveal.

@@ -14,7 +14,7 @@ export const instant = false;
 export default async function WorkPage() {
   const projects = await workEntries();
   return <><SiteHeader /><main className="work-index">
-    <header className="work-index__head"><h1>Take a look at our <span className="work-index__accent">work</span>.</h1><p>Browse product, website, brand, and content projects, and see what we made for each client.</p></header>
+    <header className="work-index__head section-intro"><h1>Take a look at our <span className="work-index__accent">work</span>.</h1><p>Browse product, website, brand, and content projects, and see what we made for each client.</p></header>
     <WorkIndex projects={projects} />
   </main><SiteFooter /></>;
 }

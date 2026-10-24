@@ -4,9 +4,9 @@
   width: 100%;
   height: 25vw;
   overflow: hidden;
-  background: #fff;
+  background: var(--brand-color-white);
   pointer-events: none;
-  line-height: 0;
+  line-height: 1.2;
 }
 
 .brand-pixel-transition__canvas {

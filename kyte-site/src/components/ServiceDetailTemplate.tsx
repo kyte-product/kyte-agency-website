@@ -12,7 +12,6 @@ import { ServiceOurProcess } from "./ServiceOurProcess";
 import { WorkShowcase } from "./WorkShowcase";
 import { ServiceTestimonials } from "./ServiceTestimonials";
 import { HomeFaq } from "./HomeFaq";
-import { TextRevealMotion } from "./TextRevealMotion";
 import type { ServicePageContent } from "@/data/servicePages";
 import { getServicePhotography } from "@/data/pagePhotography";
 import "../app/service-detail.css";
@@ -36,7 +35,7 @@ export function ServiceDetailTemplate({ service }: { service: ServicePageContent
   ];
   const decisions = service.outcomes.map((item, index) => ({ ...item, ...photography.decisions[index] }));
   return <><SiteHeader /><main className="service-detail">
-    <TextRevealMotion />
+
     <section className="service-detail__hero" aria-labelledby="service-detail-title">
       <div className="service-detail__hero-inner">
 

@@ -1,0 +1,3995 @@
+{
+  "scope": "Active src CSS/TS/TSX, excluding graveyard. Source declaration inventory, not a computed-style assertion for every route or state.",
+  "files": 171,
+  "css_files": 49,
+  "page_modules": 24,
+  "counts": {
+    "literal_palette_color": 132,
+    "color_outside_root_palette": 167,
+    "literal_size_matches_scale": 191,
+    "unregistered_size": 73,
+    "literal_function_color": 62,
+    "undocumented_weight": 32
+  },
+  "icon_imports": {
+    "lucide-react": 42
+  },
+  "custom_svg": [
+    {
+      "path": "src/components/ContactExperience.tsx",
+      "line": 67
+    },
+    {
+      "path": "src/components/ProductDesignIllustrations.tsx",
+      "line": 13
+    },
+    {
+      "path": "src/components/ProductDesignFramework.tsx",
+      "line": 80
+    },
+    {
+      "path": "src/components/ui/DotPattern.tsx",
+      "line": 243
+    },
+    {
+      "path": "src/components/ui/page-transition.tsx",
+      "line": 137
+    },
+    {
+      "path": "src/components/branding/BrandProcessSection.tsx",
+      "line": 74
+    },
+    {
+      "path": "src/components/branding/BrandProcessSection.tsx",
+      "line": 79
+    },
+    {
+      "path": "src/components/branding/EditorialGlyph.tsx",
+      "line": 19
+    }
+  ],
+  "findings": [
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/service-detail.css",
+      "line": 2,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/service-detail.css",
+      "line": 17,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 144,
+      "value": "18px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 250,
+      "value": "17px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 268,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 274,
+      "value": "14px"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 31,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 38,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 43,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 75,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 78,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 85,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 153,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 157,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 182,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 216,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 218,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 229,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 230,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 230,
+      "value": "#003fc4"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 230,
+      "value": "#003fc4"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 250,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 252,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 110,
+      "value": "rgba(255, 255, 255, .94)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 111,
+      "value": "rgba(26, 26, 22, .1)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 203,
+      "value": "rgba(9, 25, 86, .38)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/branding-marketing-actions.css",
+      "line": 250,
+      "value": "rgba(255,255,255,.62)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 170,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 182,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 191,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 223,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 224,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 231,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 233,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 246,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 248,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 304,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 332,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 339,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 340,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 341,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 398,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/globals.css",
+      "line": 439,
+      "value": "20px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/globals.css",
+      "line": 171,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/globals.css",
+      "line": 311,
+      "value": "350"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/globals.css",
+      "line": 398,
+      "value": "550"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 157,
+      "value": "rgba(255,255,255,.13)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 157,
+      "value": "rgba(26,26,22,.07)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 159,
+      "value": "rgba(10,10,10,.16)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 159,
+      "value": "rgba(255,255,255,.18)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 164,
+      "value": "rgba(255,255,255,.72)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 175,
+      "value": "rgba(30,30,24,.25)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 209,
+      "value": "rgba(0,0,0,.1)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 209,
+      "value": "rgba(30,30,24,.25)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 297,
+      "value": "rgba(10,18,31,.04)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 297,
+      "value": "rgba(10,18,31,.56)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/globals.css",
+      "line": 398,
+      "value": "rgba(0,0,0,.35)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/industries/industries.css",
+      "line": 24,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/industries/industries.css",
+      "line": 29,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/industries/industries.css",
+      "line": 31,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/industries/industries.css",
+      "line": 32,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/industries/industries.css",
+      "line": 39,
+      "value": "17px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/industries/industries.css",
+      "line": 43,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/industries/industries.css",
+      "line": 58,
+      "value": "28px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/about/about.css",
+      "line": 15,
+      "value": "17px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/about/about.css",
+      "line": 28,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/about/about.css",
+      "line": 29,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/about/about.css",
+      "line": 50,
+      "value": "15px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/about/about.css",
+      "line": 51,
+      "value": "13px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/about/about.css",
+      "line": 28,
+      "value": "550"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/about/about.css",
+      "line": 12,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/about/about.css",
+      "line": 30,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/about/about.css",
+      "line": 34,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/about/about.css",
+      "line": 32,
+      "value": "rgba(255,255,255,.8)"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/careers/careers.css",
+      "line": 79,
+      "value": "25px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/careers/careers.css",
+      "line": 80,
+      "value": "13px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/careers/careers.css",
+      "line": 104,
+      "value": "13px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/careers/careers.css",
+      "line": 138,
+      "value": "13px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/careers/careers.css",
+      "line": 152,
+      "value": "23px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/careers/careers.css",
+      "line": 153,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/careers/careers.css",
+      "line": 165,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/careers/careers.css",
+      "line": 186,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/careers/careers.css",
+      "line": 189,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/careers/careers.css",
+      "line": 216,
+      "value": "16px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/careers/careers.css",
+      "line": 187,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/careers/careers.css",
+      "line": 196,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/careers/careers.css",
+      "line": 245,
+      "value": "550"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 24,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 44,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 89,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 90,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/careers/careers.css",
+      "line": 90,
+      "value": "#323232"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/careers/careers.css",
+      "line": 90,
+      "value": "#323232"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 91,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/careers/careers.css",
+      "line": 106,
+      "value": "#d9d9d7"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/careers/careers.css",
+      "line": 107,
+      "value": "#d9d9d7"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/careers/careers.css",
+      "line": 124,
+      "value": "#0004"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/careers/careers.css",
+      "line": 126,
+      "value": "#0009"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 134,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 144,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 145,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 189,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 198,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 202,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 242,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 249,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 250,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 253,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 254,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/careers/careers.css",
+      "line": 255,
+      "value": "#fff"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 37,
+      "value": "23px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 37,
+      "value": "17px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 38,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 38,
+      "value": "20px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 38,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 39,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 40,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 40,
+      "value": "23px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 40,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 40,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 41,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 41,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 42,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 42,
+      "value": "23px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 43,
+      "value": "25px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 43,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 44,
+      "value": "18px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 44,
+      "value": "23px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 45,
+      "value": "19px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 46,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 46,
+      "value": "24px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 48,
+      "value": "19px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 48,
+      "value": "21px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 56,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 65,
+      "value": "25px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 67,
+      "value": "19px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 69,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 70,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 77,
+      "value": "17px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 86,
+      "value": "25px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 87,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 88,
+      "value": "13px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 89,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 100,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 101,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 106,
+      "value": "22px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 110,
+      "value": "19px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 118,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 119,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 131,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 132,
+      "value": "22px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 138,
+      "value": "21px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 146,
+      "value": "21px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 147,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 149,
+      "value": "55px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 149,
+      "value": "28px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 165,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 167,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 172,
+      "value": "18px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 178,
+      "value": "21px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 178,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 178,
+      "value": "20px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 178,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 203,
+      "value": "21px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 204,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 262,
+      "value": "20px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 281,
+      "value": "20px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 282,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 283,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 288,
+      "value": "19px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 294,
+      "value": "21px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 295,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 296,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 302,
+      "value": "19px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 302,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 338,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 343,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 343,
+      "value": "16px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 65,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 165,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 296,
+      "value": "550"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 16,
+      "value": "#f8f9fa"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 16,
+      "value": "#eef0f4"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 27,
+      "value": "#f7fbff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 27,
+      "value": "#f0f3f8"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 28,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 30,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 31,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 32,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 33,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 35,
+      "value": "#9cebd7"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 35,
+      "value": "#b5cafa"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 35,
+      "value": "#f6c7df"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 36,
+      "value": "#f7d1aa"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 36,
+      "value": "#c2c0ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 36,
+      "value": "#a7e5ef"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 36,
+      "value": "#bfe6b2"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 36,
+      "value": "#dbb4ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 36,
+      "value": "#ffc9b4"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 39,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 45,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 52,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 65,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 74,
+      "value": "#ffcf95"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 74,
+      "value": "#947bff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 74,
+      "value": "#ecb9e9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 74,
+      "value": "#d9bfff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 74,
+      "value": "#f6dbb6"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 74,
+      "value": "#facb88"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 75,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 79,
+      "value": "#ffa348"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 79,
+      "value": "#ffe1a9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 79,
+      "value": "#fff4de"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 79,
+      "value": "#c8a5ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 79,
+      "value": "#6145e8"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 79,
+      "value": "#ffa348"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 90,
+      "value": "#b9eca9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 90,
+      "value": "#fee1a6"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 93,
+      "value": "#f1a5e5"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 93,
+      "value": "#a9bbff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 94,
+      "value": "#83e9c5"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 94,
+      "value": "#b6acff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 95,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 111,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 114,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 127,
+      "value": "#f5b5db"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 127,
+      "value": "#b9b5ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 127,
+      "value": "#a8e2d1"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 128,
+      "value": "#23378044"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 129,
+      "value": "#fada8f"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 129,
+      "value": "#f4b6c4"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 129,
+      "value": "#bdaceb"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 130,
+      "value": "#a8e7d0"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 130,
+      "value": "#abd3fa"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 130,
+      "value": "#efd2b4"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 133,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 135,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 141,
+      "value": "#a8d7be"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 141,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 145,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 170,
+      "value": "#000"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 172,
+      "value": "#061b3105"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 174,
+      "value": "#061b3108"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 182,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 183,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 185,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 201,
+      "value": "#f7f8f8"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 202,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 211,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 213,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 215,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 217,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 219,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 233,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 238,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 241,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 244,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 247,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 250,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 253,
+      "value": "#f8f9f9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/ui-ux-design-development/product-design.css",
+      "line": 268,
+      "value": "#061b3108"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 5,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 9,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 14,
+      "value": "18px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 22,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 30,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 35,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 35,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 35,
+      "value": "12px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 23,
+      "value": "500"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 10,
+      "value": "#f3f4f7"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 14,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 15,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 19,
+      "value": "#e9e7e4"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 22,
+      "value": "#62646a"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 24,
+      "value": "#c9e2ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 25,
+      "value": "#c8f0d8"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 26,
+      "value": "#ffc9c1"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 27,
+      "value": "#ffe95f"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 29,
+      "value": "#292a2d"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 30,
+      "value": "#777980"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/branding-marketing/branding-editorial.css",
+      "line": 37,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/design-system/system.css",
+      "line": 5,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/design-system/system.css",
+      "line": 7,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/design-system/system.css",
+      "line": 9,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/design-system/system.css",
+      "line": 10,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/design-system/system.css",
+      "line": 10,
+      "value": "12px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/design-system/system.css",
+      "line": 11,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/design-system/system.css",
+      "line": 13,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/design-system/system.css",
+      "line": 14,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/app/design-system/system.css",
+      "line": 14,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/design-system/system.css",
+      "line": 15,
+      "value": "13px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/app/design-system/system.css",
+      "line": 18,
+      "value": "13px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/design-system/system.css",
+      "line": 10,
+      "value": "500"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/design-system/system.css",
+      "line": 10,
+      "value": "500"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/app/design-system/system.css",
+      "line": 14,
+      "value": "500"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/design-system/system.css",
+      "line": 4,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/app/design-system/system.css",
+      "line": 14,
+      "value": "#f8f9fa"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/app/design-system/system.css",
+      "line": 15,
+      "value": "#d9cafa"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/app/design-system/system.css",
+      "line": 11,
+      "value": "rgb(0 0 0 / 7%)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceOfferings.css",
+      "line": 36,
+      "value": "20px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ServiceOfferings.css",
+      "line": 38,
+      "value": "38px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/IndustryEditorialExperience.css",
+      "line": 8,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/IndustryEditorialExperience.css",
+      "line": 13,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/IndustryEditorialExperience.css",
+      "line": 14,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/IndustryEditorialExperience.css",
+      "line": 48,
+      "value": "14px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/IndustryEditorialExperience.css",
+      "line": 8,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/IndustryEditorialExperience.css",
+      "line": 14,
+      "value": "550"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/IndustryEditorialExperience.css",
+      "line": 1,
+      "value": "#fff"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ServiceApproach.css",
+      "line": 17,
+      "value": "23px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceApproach.css",
+      "line": 35,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceApproach.css",
+      "line": 41,
+      "value": "20px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/ServiceApproach.css",
+      "line": 17,
+      "value": "300"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServiceApproach.css",
+      "line": 9,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServiceApproach.css",
+      "line": 16,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServiceApproach.css",
+      "line": 18,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServiceApproach.css",
+      "line": 52,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ServiceApproach.css",
+      "line": 18,
+      "value": "rgba(255,255,255,.25)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ServiceApproach.css",
+      "line": 18,
+      "value": "rgba(255,255,255,.08)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/HomeFaq.css",
+      "line": 14,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 122,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 158,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 187,
+      "value": "18px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 188,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 192,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 193,
+      "value": "15px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 121,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 159,
+      "value": "500"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 142,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 156,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 122,
+      "value": "rgb(255 255 255 / 76%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ServiceOurProcess.css",
+      "line": 141,
+      "value": "rgb(255 255 255 / 34%)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ContactExperience.css",
+      "line": 13,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ContactExperience.css",
+      "line": 14,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ContactExperience.css",
+      "line": 16,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ContactExperience.css",
+      "line": 24,
+      "value": "22px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ContactExperience.css",
+      "line": 28,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ContactExperience.css",
+      "line": 30,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ContactExperience.css",
+      "line": 40,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ContactExperience.css",
+      "line": 42,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ContactExperience.css",
+      "line": 63,
+      "value": "36px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ContactExperience.css",
+      "line": 66,
+      "value": "15px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/ContactExperience.css",
+      "line": 13,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/ContactExperience.css",
+      "line": 14,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/ContactExperience.css",
+      "line": 48,
+      "value": "550"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 1,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 6,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 7,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 8,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 13,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ContactExperience.css",
+      "line": 17,
+      "value": "#000"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ContactExperience.css",
+      "line": 17,
+      "value": "#000"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ContactExperience.css",
+      "line": 17,
+      "value": "#000"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ContactExperience.css",
+      "line": 17,
+      "value": "#000"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ContactExperience.css",
+      "line": 35,
+      "value": "#858582"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 36,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ContactExperience.css",
+      "line": 40,
+      "value": "#b42318"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ContactExperience.css",
+      "line": 41,
+      "value": "#176038"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ContactExperience.css",
+      "line": 42,
+      "value": "#e8e8e6"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 44,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 47,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 1,
+      "value": "rgba(0,0,0,.22)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 2,
+      "value": "rgba(10,12,18,.56)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 11,
+      "value": "rgba(255,255,255,.18)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ContactExperience.css",
+      "line": 16,
+      "value": "rgba(255,255,255,.72)"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/KyteApproach.css",
+      "line": 1,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/TeamPreviewFooter.css",
+      "line": 12,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/TeamPreviewFooter.css",
+      "line": 35,
+      "value": "15px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/TeamPreviewFooter.css",
+      "line": 37,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/TeamPreviewFooter.css",
+      "line": 42,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/TeamPreviewFooter.css",
+      "line": 52,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/SplitCtaBanner.css",
+      "line": 16,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/SplitCtaBanner.css",
+      "line": 25,
+      "value": "16px"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/SplitCtaBanner.css",
+      "line": 5,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/SplitCtaBanner.css",
+      "line": 7,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/SplitCtaBanner.css",
+      "line": 9,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/WorkShowcase.css",
+      "line": 33,
+      "value": "#c8c8c5"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/WorkShowcase.css",
+      "line": 8,
+      "value": "rgba(0,0,0,.08)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 27,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 30,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 30,
+      "value": "48px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 30,
+      "value": "11px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 31,
+      "value": "46px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 31,
+      "value": "15px"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 1,
+      "value": "#f3f4f7"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 5,
+      "value": "#d5d6d9"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 7,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 18,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 20,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/HomeProjectScroll.css",
+      "line": 27,
+      "value": "rgb(255 255 255 / 45%)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceDecisionStory.css",
+      "line": 23,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/HomeTestimonials.css",
+      "line": 10,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/HomeTestimonials.css",
+      "line": 11,
+      "value": "20px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/HomeTestimonials.css",
+      "line": 13,
+      "value": "58px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/HomeTestimonials.css",
+      "line": 34,
+      "value": "54px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/HomeTestimonials.css",
+      "line": 35,
+      "value": "20px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/HomeTestimonials.css",
+      "line": 38,
+      "value": "14px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/HomeTestimonials.css",
+      "line": 20,
+      "value": "550"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServicesIntro.css",
+      "line": 15,
+      "value": "15px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ServicesIntro.css",
+      "line": 32,
+      "value": "17px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServicesIntro.css",
+      "line": 37,
+      "value": "24px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServicesIntro.css",
+      "line": 52,
+      "value": "22px"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServicesIntro.css",
+      "line": 8,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServicesIntro.css",
+      "line": 15,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ServicesIntro.css",
+      "line": 14,
+      "value": "rgba(255,255,255,.78)"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ServiceEditorialClose.css",
+      "line": 1,
+      "value": "#17191d"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServiceEditorialClose.css",
+      "line": 1,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ServiceEditorialClose.css",
+      "line": 15,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/CookieSettings.css",
+      "line": 11,
+      "value": "24px"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/CookieSettings.css",
+      "line": 1,
+      "value": "#0002"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/CookieSettings.css",
+      "line": 7,
+      "value": "#0003"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/CookieSettings.css",
+      "line": 8,
+      "value": "#0009"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 16,
+      "value": "17px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 17,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 19,
+      "value": "23px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 20,
+      "value": "21px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 25,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 26,
+      "value": "22px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 32,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 33,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 37,
+      "value": "22px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/ServiceTestimonials.css",
+      "line": 16,
+      "value": "550"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ui/DotPattern.css",
+      "line": 1,
+      "value": "#dce0e8"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ui/DotPattern.css",
+      "line": 2,
+      "value": "#3260d3"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/ui/DotPattern.css",
+      "line": 2,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/ui/DotPattern.css",
+      "line": 3,
+      "value": "#373a40"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/ui/page-transition.css",
+      "line": 4,
+      "value": "rgb(255 255 255 / 28%)"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 61,
+      "value": "13px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 121,
+      "value": "11px"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 6,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 7,
+      "value": "#17191d"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 49,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 50,
+      "value": "#0249d9"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 142,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 55,
+      "value": "rgb(255 255 255 / 42%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 87,
+      "value": "rgb(255 255 255 / 88%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 101,
+      "value": "rgb(255 255 255 / 42%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 119,
+      "value": "rgb(255 255 255 / 42%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProcessSection.css",
+      "line": 120,
+      "value": "rgb(255 255 255 / 42%)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 33,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 34,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 40,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 50,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 51,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 52,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 63,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 65,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 66,
+      "value": "12px"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 2,
+      "value": "#0249d9"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 5,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 34,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 40,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 41,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 10,
+      "value": "rgb(255 255 255 / 54%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 12,
+      "value": "rgb(255 255 255 / 42%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 13,
+      "value": "rgb(255 255 255 / 42%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 26,
+      "value": "rgb(255 255 255 / 0%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 30,
+      "value": "rgb(255 255 255 / 84%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 33,
+      "value": "rgb(255 255 255 / 65%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 35,
+      "value": "rgb(0 22 85 / 13%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandProjects.css",
+      "line": 39,
+      "value": "rgb(0 22 85 / 13%)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 10,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 11,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 14,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 17,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 19,
+      "value": "11px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 28,
+      "value": "11px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 29,
+      "value": "29px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 30,
+      "value": "17px"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 1,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 1,
+      "value": "#0249d9"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 4,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 5,
+      "value": "#ffffff70"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 5,
+      "value": "#0249d9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 7,
+      "value": "#ffffff70"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 11,
+      "value": "#ffffffbd"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 17,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 18,
+      "value": "#0249d9"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 18,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 19,
+      "value": "#ffffff70"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 19,
+      "value": "#0249d9"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 21,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandingFooter.css",
+      "line": 25,
+      "value": "#ffffff70"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 89,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 148,
+      "value": "17px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 93,
+      "value": "550"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 5,
+      "value": "#f3f4f6"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 60,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 80,
+      "value": "#c9e2ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 81,
+      "value": "#c8f0d8"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 82,
+      "value": "#ffc9c1"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 83,
+      "value": "#ffe95f"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 94,
+      "value": "#65666a"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 104,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandTestimonials.css",
+      "line": 128,
+      "value": "#f1f5ff"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandStoryHero.css",
+      "line": 167,
+      "value": "12px"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandStoryHero.css",
+      "line": 21,
+      "value": "#45474d"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 6,
+      "value": "12px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 7,
+      "value": "15px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 9,
+      "value": "11px"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 1,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 2,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 6,
+      "value": "#17191d"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 8,
+      "value": "#0249d9"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 12,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 14,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 15,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandHomePortal.css",
+      "line": 16,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandPixelTransition.css",
+      "line": 7,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandReelStatement.css",
+      "line": 109,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandReelStatement.css",
+      "line": 122,
+      "value": "12px"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/branding/BrandReelStatement.css",
+      "line": 9,
+      "value": "#0249d9"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandReelStatement.css",
+      "line": 10,
+      "value": "#f7f7f5"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandReelStatement.css",
+      "line": 54,
+      "value": "#151515"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandReelStatement.css",
+      "line": 88,
+      "value": "#f7f7f5"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/branding/BrandReelStatement.css",
+      "line": 71,
+      "value": "rgba(255, 255, 255, .76)"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/branding/BrandHelixSection.css",
+      "line": 68,
+      "value": "10px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/branding/BrandHelixSection.css",
+      "line": 84,
+      "value": "12px"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/branding/BrandHelixSection.css",
+      "line": 27,
+      "value": "#17191d"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 17,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 18,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 19,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 30,
+      "value": "20px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 31,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 34,
+      "value": "16px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 41,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/about/AboutSections.css",
+      "line": 50,
+      "value": "50px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 53,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 54,
+      "value": "14px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/about/AboutSections.css",
+      "line": 64,
+      "value": "11px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 65,
+      "value": "18px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/about/AboutSections.css",
+      "line": 67,
+      "value": "13px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/about/AboutSections.css",
+      "line": 77,
+      "value": "16px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/about/AboutSections.css",
+      "line": 17,
+      "value": "550"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/about/AboutSections.css",
+      "line": 7,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/about/AboutSections.css",
+      "line": 28,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/about/AboutSections.css",
+      "line": 32,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/about/AboutSections.css",
+      "line": 38,
+      "value": "#000"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/about/AboutSections.css",
+      "line": 38,
+      "value": "#000"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/about/AboutSections.css",
+      "line": 49,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/about/AboutSections.css",
+      "line": 50,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/about/AboutSections.css",
+      "line": 75,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/about/AboutSections.css",
+      "line": 75,
+      "value": "#000"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/about/AboutSections.css",
+      "line": 75,
+      "value": "#000"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/about/AboutSections.css",
+      "line": 75,
+      "value": "#000"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/about/AboutSections.css",
+      "line": 75,
+      "value": "#000"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/about/AboutSections.css",
+      "line": 34,
+      "value": "rgba(255,255,255,.84)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/about/AboutSections.css",
+      "line": 51,
+      "value": "rgba(255,255,255,.68)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialCollections.css",
+      "line": 38,
+      "value": "28px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/design-system/EditorialCollections.css",
+      "line": 13,
+      "value": "550"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/EditorialCollections.css",
+      "line": 22,
+      "value": "rgba(50,50,93,.2)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/EditorialCollections.css",
+      "line": 22,
+      "value": "rgba(0,0,0,.2)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/EditorialCollections.css",
+      "line": 26,
+      "value": "rgba(255,255,255,.86)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/EditorialCollections.css",
+      "line": 34,
+      "value": "rgba(255,255,255,.84)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/CaseStudyTemplate.css",
+      "line": 57,
+      "value": "56px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/design-system/CaseStudyTemplate.css",
+      "line": 13,
+      "value": "500"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/design-system/CaseStudyTemplate.css",
+      "line": 84,
+      "value": "500"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/CaseStudyTemplate.css",
+      "line": 4,
+      "value": "rgb(0 0 0 / 5%)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/CaseStudyTemplate.css",
+      "line": 5,
+      "value": "rgb(0 0 0 / 8%)"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 27,
+      "value": "18px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 28,
+      "value": "17px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 38,
+      "value": "18px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 39,
+      "value": "17px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 66,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 67,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 79,
+      "value": "18px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 82,
+      "value": "27px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 84,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 99,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 108,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 108,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 115,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 117,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 118,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 123,
+      "value": "14px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 27,
+      "value": "500"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 64,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/EditorialPages.css",
+      "line": 123,
+      "value": "#b8bdc7"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 7,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 39,
+      "value": "14px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 41,
+      "value": "16px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 47,
+      "value": "17px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 95,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 105,
+      "value": "18px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 169,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 170,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 201,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 202,
+      "value": "15px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 203,
+      "value": "22px"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 213,
+      "value": "15px"
+    },
+    {
+      "category": "unregistered_size",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 214,
+      "value": "44px"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 40,
+      "value": "550"
+    },
+    {
+      "category": "undocumented_weight",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 46,
+      "value": "550"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 7,
+      "value": "#9f9f9f"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 13,
+      "value": "#f2f5f9"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 16,
+      "value": "#e9eaeb"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 16,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 16,
+      "value": "#0000000b"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 16,
+      "value": "#0000000d"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 21,
+      "value": "#f5f8ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 21,
+      "value": "#535862"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 22,
+      "value": "#faffef"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 23,
+      "value": "#fff2ed"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 24,
+      "value": "#fff1f2"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 25,
+      "value": "#f7f3ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 28,
+      "value": "#2970ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 28,
+      "value": "#ffffff40"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 28,
+      "value": "#0004"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 29,
+      "value": "#528bff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 29,
+      "value": "#ffffff80"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 30,
+      "value": "#84adff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 31,
+      "value": "#2970ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 31,
+      "value": "#ffffff80"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 32,
+      "value": "#528bff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 32,
+      "value": "#ffffff80"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 36,
+      "value": "#e9eaeb"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 36,
+      "value": "#fafafa"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 37,
+      "value": "#e9eaeb"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 39,
+      "value": "#dbe6fb"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 39,
+      "value": "#f2f5ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 39,
+      "value": "#2970ff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 41,
+      "value": "#72777e"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 43,
+      "value": "#fafafa"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 47,
+      "value": "#72777e"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 48,
+      "value": "#e0e2e5"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 49,
+      "value": "#0002"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 53,
+      "value": "#fafafa"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 61,
+      "value": "#fafafa"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 61,
+      "value": "#ededed"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 67,
+      "value": "#0649a7"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 70,
+      "value": "#08090b"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 80,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 80,
+      "value": "#ededed"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 81,
+      "value": "#014cb0"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 82,
+      "value": "#0751b7"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 82,
+      "value": "#064db6"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 82,
+      "value": "#001b49"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 95,
+      "value": "#9f9f9f"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 105,
+      "value": "#9f9f9f"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 116,
+      "value": "#f4f4f4"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/FincartStory.css",
+      "line": 123,
+      "value": "#fff"
+    },
+    {
+      "category": "literal_size_matches_scale",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 74,
+      "value": "15px"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 65,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 65,
+      "value": "#efefef"
+    },
+    {
+      "category": "literal_palette_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 65,
+      "value": "#fff"
+    },
+    {
+      "category": "color_outside_root_palette",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 65,
+      "value": "#9a9a9a"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 15,
+      "value": "rgba(0,0,0,.28)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 15,
+      "value": "rgba(0,0,0,.12)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 15,
+      "value": "rgba(0,0,0,.35)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 15,
+      "value": "rgba(0,0,0,.78)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 15,
+      "value": "rgba(0,0,0,.9)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 62,
+      "value": "rgba(0,0,0,.05)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 62,
+      "value": "rgba(0,0,0,.1)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 62,
+      "value": "rgba(0,0,0,.1)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 66,
+      "value": "rgba(255,255,255,0)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 66,
+      "value": "rgba(255,255,255,.28)"
+    },
+    {
+      "category": "literal_function_color",
+      "path": "src/components/design-system/DesignNews.css",
+      "line": 66,
+      "value": "rgba(0,0,0,.35)"
+    }
+  ]
+}
