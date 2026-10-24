@@ -2,6 +2,11 @@
 
 Updated 23 October 2026. Owner: Kyte website team.
 
+### 24 October 2026: Upgrade Next.js for the security advisory
+
+- Updated the latest mainline app from Next.js 16.4.2 to 16.4.3 and aligned `eslint-config-next`; retained the existing `ts-deepmerge` compatibility override and saved `experimental.agentUpgrade: "security"`.
+- Checks: clean `npm ci`, `next --version` 16.4.3, ESLint and production build pass. npm audit reported no vulnerabilities after the compatible Zod fix. Sanity API DNS was unavailable during prerendering, and the app used its fallback data. Owner: Kyte website team.
+
 ## Current status
 
 The latest Product landing follow-up is merged through PR #66 at `c02965ccc8c4f9c5da718230739c979c64d883c8`. Vercel production `dpl_Bri3qAAhJxHgprgANSRQCTmyfgCq` is verified Ready at https://kyte-agency.vercel.app. Selected Work now offers list/grid controls with grid as default and larger Product list text. Four existing Kyte impact totals use the shared industry-style card row. Framework and working-principle icons are shared breathing dot grids. Build, lint, TypeScript, source/design-system guards, 33 targeted four-breakpoint checks, four shared-impact regressions and a live browser smoke check passed. Sanity and launch settings remain unchanged.
