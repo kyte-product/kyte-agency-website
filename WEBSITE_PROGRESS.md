@@ -4,9 +4,9 @@ Updated 24 October 2026. Owner: Kyte website team.
 
 ## Current status
 
-The Insights, guide/resource templates, Careers culture and shared-control review batch has passed final local release gates and is authorized for GitHub/main/Vercel publication on 24 October 2026. Production build with published CMS access, full lint/TypeScript, source/style/palette guards, 176 responsive checks, four short-laptop checks and a 68-page/381-asset HTTP crawl passed. Release status, evidence and rollback are tracked in `kyte-site/docs/release/2026-10-24-insights-careers.md`. Publication is in progress; do not treat this status as deployed until that record includes the verified main commit and Ready production deployment.
+The Insights, guide/resource templates, Careers culture and shared-control review batch is merged through PR #71 at `2a278bd9867210ed2e4eb2fc8c0336337b73684e`. Vercel production `dpl_GuNJCFyEEYAYpL1fh3ZpAPCYAJhb` is verified Ready at https://kyte-agency.vercel.app. Release evidence and rollback are in `kyte-site/docs/release/2026-10-24-insights-careers.md`.
 
-The Website and Branding system docs, live DS pages, IA and content-population guide reflect the reviewed templates. Branding owns its independent visual foundation. Resource/guide examples remain noindex sample content; gray photos are intentional placeholders. CMS content, credentials, legal/analytics configuration and contact delivery are unchanged. Port 3001 remains the review server.
+Full lint/TypeScript, production build with published CMS access, source/style/palette/deep-merge checks, 176 four-breakpoint checks and four short-laptop checks passed. Local and live crawls each passed 68 linked pages and 381 assets. Live guide client navigation scrolls without refresh; Careers theme and phone layout were verified. Website/Branding docs, IA and content-population notes are updated. Branding remains visually independent. Samples stay noindex; photos remain intentional placeholders. No CMS writes, contact-delivery claims, analytics changes or indexing launch are included. Next: approved content/photo replacement and further user review. Port 3001 remains the local review server.
 
 
 ## Template decisions
@@ -236,3 +236,8 @@ Added a gray #f5f5f5 container around culture theme chips with a white selected 
 ## 24 October 2026: final review and publication authorized
 
 Restored the original root progress record after detecting an accidental content-guide replacement, preserving the follow-up review log. Updated current design-system ownership and palette scope in the index, content-population notes and release evidence. Final gates: 44 routes × 320/393/810/1440px = 176 checks with no document overflow, H1 issues or broken loaded images; four short-laptop checks; production-build HTTP crawl 68 pages/381 assets with no failures; full ESLint, TypeScript, production build with live CMS access, source graph, deep-merge, illustration and design-system guards passed. TXT files are now classified as download assets by the repeatable HTTP audit. Verified client navigation into a guide leaves no root clip/transition shield and scrolls without refresh. Publication to the existing repository/main/Vercel is explicitly authorized. Previous Ready deployment dpl_5PpiJ1v8zHZ2PQV2QoECpfnwuqet is the rollback target. Owner: Kyte website team. Next: push reviewed branch, merge PR and verify production.
+
+
+## 24 October 2026: verified Insights/Careers production release
+
+Pushed source e9ac1e0 and merged PR #71 at 2a278bd after successful Vercel preview. Production dpl_GuNJCFyEEYAYpL1fh3ZpAPCYAJhb is Ready and resolves from the public Kyte alias. Live crawl passed 68 pages/381 assets. Browser verified new guide routes, client-navigation scroll cleanup and mobile culture tabs/gallery. Saved desktop/phone production evidence and exact rollback in the release report. Documentation-only follow-up records publication; application source is unchanged. Existing sample/noindex/placeholder and content-approval limitations remain. Owner: Kyte website team. Next: final content population and user review.
