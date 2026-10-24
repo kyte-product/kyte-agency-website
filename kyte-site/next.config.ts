@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  experimental: {
+    agentUpgrade: "security",
+  },
   cacheComponents: true,
   turbopack: { resolveAlias: { "ts-deepmerge": "./src/lib/deepmerge-compat.ts" } },
   partialPrefetching: true,
