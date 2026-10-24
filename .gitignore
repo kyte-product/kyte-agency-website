@@ -16,3 +16,5 @@
 
 # Local third-party reference captures for analysis only.
 /exports/goodface-material-study/
+.vercel
+.env*

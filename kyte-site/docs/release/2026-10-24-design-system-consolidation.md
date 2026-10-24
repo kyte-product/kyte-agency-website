@@ -8,4 +8,7 @@ Responsive evidence: ../audits/2026-10-24-final-responsive.json records 56 route
 
 Motion: root owns both reveal controllers; per-page duplicates removed. Explicit custom scene and reference-page exceptions remain. Nested content avoids double entry animation. Reduced-motion preferences are respected.
 
-Publication target: kyte-product/kyte-agency-website, main, Vercel project prj_9OhUuqvAA2Dt6PBpxnQHGFhLUU4E, alias https://kyte-agency.vercel.app. GitHub merge and production deployment pending verification. Previous main 82d8ace and Ready deployment dpl_Bri3qAAhJxHgprgANSRQCTmyfgCq provide rollback references.
+Publication target: kyte-product/kyte-agency-website, main, Vercel project prj_9OhUuqvAA2Dt6PBpxnQHGFhLUU4E, alias https://kyte-agency.vercel.app. Application PR #69 merged as aa205e14d55fa0f7ba369caadfa188ea0662269b. Production deployment dpl_BgDQSdzqNWwfyh5E5f425haBejeg is Ready and assigned to the public alias. Verified previous production rollback: dpl_GGL7TuUhq4xLu9Gq2xV8PL4WGyPv, https://kyte-agency-website-gxt7wv661-kyte-product.vercel.app.
+
+
+Live evidence: ../audits/2026-10-24-production-checks.json. Website DS has nine roles; Branding DS shows independent ownership. Home/Product/industry pages had no document overflow or broken completed images; phone checks on Home/Branding/Product passed. The visible homepage word reveal activated. Application deployment: https://kyte-agency-website-2d05mcohw-kyte-product.vercel.app. Final documentation publication may trigger a deployment of identical application source. Root ignores also cover Vercel local metadata and environment files.

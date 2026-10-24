@@ -1,0 +1,65 @@
+[
+  {
+    "broken": 0,
+    "independent": false,
+    "overflow": false,
+    "path": "/design-system",
+    "roles": 9,
+    "title": "Website design system | Kyte"
+  },
+  {
+    "broken": 0,
+    "independent": true,
+    "overflow": false,
+    "path": "/design-system/branding",
+    "roles": 0,
+    "title": "Branding landing design system | Kyte"
+  },
+  {
+    "broken": 0,
+    "independent": false,
+    "overflow": false,
+    "path": "/",
+    "roles": 0,
+    "title": "Kyte | Product, website and brand design"
+  },
+  {
+    "broken": 0,
+    "independent": false,
+    "overflow": false,
+    "path": "/ui-ux-design-development",
+    "roles": 0,
+    "title": "UI/UX Design & Development | Kyte Agency"
+  },
+  {
+    "broken": 0,
+    "independent": false,
+    "overflow": false,
+    "path": "/industries/d2c-ecommerce",
+    "roles": 0,
+    "title": "D2C & eCommerce Design | Kyte Agency"
+  },
+  {
+    "overflow": false,
+    "path": "/",
+    "visibleWordTargets": [
+      {
+        "revealed": true,
+        "text": "We Design, Build & Market Exceptional Digital Expe"
+      }
+    ],
+    "width": 393
+  },
+  {
+    "overflow": false,
+    "path": "/branding-marketing",
+    "visibleWordTargets": [],
+    "width": 393
+  },
+  {
+    "overflow": false,
+    "path": "/ui-ux-design-development",
+    "visibleWordTargets": [],
+    "width": 393
+  }
+]
