@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { ArrowUpRight, Plus, X } from "lucide-react";
+import { ArrowRight, Plus, X } from "lucide-react";
 import type { CareerRole } from "@/lib/sanity";
 import { isSafeApplicationUrl } from "@/lib/sanity";
 
@@ -59,7 +59,7 @@ export function CareerOpportunities({ roles }: { roles: CareerRole[] }) {
             {selected.hiringProcess && <section><h3>Hiring process</h3><p>{selected.hiringProcess}</p></section>}
           </div>
         </div>
-        <div className="careers-dialog__footer">{isSafeApplicationUrl(selected.applyUrl) ? <a className="kyte-button careers-dialog__apply" href={selected.applyUrl!} target="_blank" rel="noopener noreferrer">Apply now <ArrowUpRight size={17} aria-hidden="true" /></a> : <button className="kyte-button careers-dialog__apply" type="button" disabled>Apply now</button>}</div>
+        <div className="careers-dialog__footer">{isSafeApplicationUrl(selected.applyUrl) ? <a className="kyte-button careers-dialog__apply" href={selected.applyUrl!} target="_blank" rel="noopener noreferrer">Apply now <ArrowRight size={17} aria-hidden="true" /></a> : <button className="kyte-button careers-dialog__apply" type="button" disabled>Apply now</button>}</div>
       </div>}
     </dialog>
   </>;

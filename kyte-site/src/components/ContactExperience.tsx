@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ChevronDown, X } from "lucide-react";
+import { ArrowRight, Check, ChevronDown, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { clientLogoAsset } from "@/data/clientLogoAssets";
 import "./ContactExperience.css";
@@ -64,13 +64,13 @@ export function ContactContent({ idPrefix, onNavigate }: ContactContentProps) {
   if (submissionState === "success") {
     return <div className="contact-experience contact-experience--success" role="status">
       <div className="contact-experience__success-mark" aria-hidden="true">
-        <svg viewBox="0 0 80 80" fill="none"><path d="m21 40 13 13 25-26" pathLength="1" /></svg>
+        <Check aria-hidden="true" />
       </div>
       <p className="contact-experience__success-eyebrow">Message received</p>
       <TitleTag id={`${idPrefix}-contact-title`} ref={successHeadingRef} tabIndex={-1}>Thanks for reaching out.</TitleTag>
       <p className="contact-experience__success-copy">We&apos;ve received your enquiry. The Kyte team will follow up by email.</p>
       <div className="contact-experience__success-actions">
-        <Link className="kyte-button" href="/work" onClick={onNavigate}>Explore our work <ArrowUpRight size={17} aria-hidden="true" /></Link>
+        <Link className="kyte-button" href="/work" onClick={onNavigate}>Explore our work <ArrowRight size={17} aria-hidden="true" /></Link>
         <Link className="kyte-button kyte-button--outline" href="/" onClick={onNavigate}>Back to home</Link>
       </div>
     </div>;
@@ -104,7 +104,7 @@ export function ContactContent({ idPrefix, onNavigate }: ContactContentProps) {
           <label className="contact-experience__field contact-experience__field--full"><span>What are you working on? <abbr title="required">*</abbr></span><textarea name="project" required rows={4} placeholder="A little context about the challenge, project, or idea" /></label>
         </div>
         <input className="contact-experience__honeypot" name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-        <button className="kyte-button contact-experience__submit" type="submit" disabled={submissionState === "sending"}>{submissionState === "sending" ? "Sending…" : "Submit"} <ArrowUpRight size={17} aria-hidden="true" /></button>
+        <button className="kyte-button contact-experience__submit" type="submit" disabled={submissionState === "sending"}>{submissionState === "sending" ? "Sending…" : "Submit"} <ArrowRight size={17} aria-hidden="true" /></button>
         {submissionMessage && <p className={`contact-experience__feedback contact-experience__feedback--${submissionState}`} role={submissionState === "error" ? "alert" : "status"}>{submissionMessage}</p>}
       </form>
       <p className="contact-experience__email">Prefer to write directly? <a href={`mailto:${contactEmail}`}>{contactEmail}</a></p>

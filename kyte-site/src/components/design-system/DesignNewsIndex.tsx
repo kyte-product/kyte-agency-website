@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import type { DesignNewsArticle } from "@/lib/sanity";
 import { EditorialGuides, EditorialResources, EditorialShortcuts } from "./EditorialCollections";
@@ -56,7 +56,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
 
           <h1 id="design-news-heading">Ideas from the <span>creative team.</span></h1>
           <p>Writing on visual culture, branding, and the ideas shaping how people experience products.</p>
-          <a className="kyte-button" href="#all-stories">See all stories <ArrowUpRight size={17} aria-hidden="true" /></a>
+          <a className="kyte-button" href="#all-stories">See all stories <ArrowRight size={17} aria-hidden="true" /></a>
         </div>
         {featured.length > 0 && <div className="design-news__feature" aria-roledescription="carousel" aria-label="Featured Design News">
           {featured.map((article, index) => <Link
@@ -69,7 +69,7 @@ export function DesignNewsIndex({ articles, showPlaceholders = false, newsOnly =
             {article.cover.url && <Image src={article.cover.url} alt="" fill unoptimized sizes="(max-width: 900px) 100vw, 70vw" />}
             <span className="design-news__slide-shade" />
             <span className="design-news__slide-top"><span>Kyte Design News</span><span>{String(index + 1).padStart(2, "0")} / {String(featured.length).padStart(2, "0")}</span></span>
-            <span className="design-news__slide-copy"><span className="design-news__slide-meta">{articleMeta(article)}</span><strong>{article.title}</strong><span className="design-news__slide-cta">Read story <ArrowUpRight size={17} aria-hidden="true" /></span></span>
+            <span className="design-news__slide-copy"><span className="design-news__slide-meta">{articleMeta(article)}</span><strong>{article.title}</strong><span className="design-news__slide-cta">Read story <ArrowRight size={17} aria-hidden="true" /></span></span>
           </Link>)}
           {featured.length > 1 && <div className="design-news__arrows carousel-arrow-controls">
             <button type="button" aria-label="Previous featured story" onClick={() => changeSlide(-1)}><ArrowLeft size={18} /></button>

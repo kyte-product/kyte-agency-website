@@ -3,7 +3,6 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DesignNewsIndex } from "@/components/design-system/DesignNewsIndex";
 import { designNewsEntries } from "@/lib/editorial";
-import { showEditorialPlaceholders } from "@/lib/editorial-collections";
 
 export const metadata: Metadata = {
   title: "Design News | Kyte",
@@ -13,5 +12,5 @@ export const instant = false;
 
 export default async function InsightsPage() {
   const articles = await designNewsEntries();
-  return <><SiteHeader /><DesignNewsIndex articles={articles} showPlaceholders={showEditorialPlaceholders} /><SiteFooter /></>;
+  return <><SiteHeader /><DesignNewsIndex articles={articles} showPlaceholders /><SiteFooter /></>;
 }

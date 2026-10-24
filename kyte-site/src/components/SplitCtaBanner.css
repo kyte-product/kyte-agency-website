@@ -2,18 +2,18 @@
 .home-page .home-testimonials + .split-cta { padding-top: 44px; padding-bottom: 88px; }
 .editorial-detail--work + .split-cta { padding-top: 0; }
 .split-cta__inner { width: var(--page-width); margin: 0 auto; padding-inline: var(--section-inset); }
-.split-cta__card { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); height: 424px; overflow: hidden; border-radius: var(--radius-medium); color: #fff; background: var(--color-deep); }
+.split-cta__card { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); height: 424px; overflow: hidden; border-radius: var(--radius-medium); color: var(--color-white); background: var(--color-deep); }
 .split-cta__content { display: flex; align-items: center; min-width: 0; padding: 42px; }
-.split-cta__content h2 { max-width: 500px; margin: 0; color: #fff; font-size: clamp(38px,3.65vw,54px); font-weight: var(--heading-weight); letter-spacing: -.025em; line-height: 1.08; }
+.split-cta__content h2 { max-width: 500px; margin: 0; color: var(--color-white); font-size:var(--heading-section); font-weight: var(--heading-weight); letter-spacing: -.025em; line-height: 1.2; }
 .split-cta__content p { margin: 20px 0 28px; color: var(--color-on-dark-muted); font-size: var(--type-body); line-height: var(--body-line-height); }
-.split-cta__content .kyte-button:focus-visible { outline-color: #fff; }
+.split-cta__content .kyte-button:focus-visible { outline-color: var(--color-white); }
 .split-cta__art { position: relative; min-width: 0; overflow: hidden; background: var(--color-blue); }
 .split-cta__art > .dot-pattern { position: absolute; inset: 24px; width: calc(100% - 48px); height: calc(100% - 48px); }
 
 @media (max-width: 900px) {
   .split-cta__content { padding: 30px; }
-  .split-cta__content h2 { font-size: clamp(32px,4.4vw,44px); }
-  .split-cta__content p { font-size: 16px; }
+  .split-cta__content h2 { font-size: var(--heading-section); }
+  .split-cta__content p { font-size:var(--type-body); }
 }
 
 @media (max-width: 760px) {
@@ -21,6 +21,6 @@
   .split-cta__card { display: flex; height: auto; flex-direction: column; }
   .split-cta__art { order: -1; height: 246px; }
   .split-cta__content { min-height: 256px; padding: 32px 24px; }
-  .split-cta__content h2 { font-size: clamp(32px,8vw,38px); }
-  .split-cta__content p { margin: 14px 0 20px; font-size: 16px; }
+  .split-cta__content h2 { font-size: var(--heading-section); }
+  .split-cta__content p { margin: 14px 0 20px; font-size:var(--type-body); }
 }

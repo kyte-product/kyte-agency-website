@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { ProductDesignCardArt, ProductDesignHeroArt, ProductStageIllustration, type ProductStageTitle } from "@/components/ProductDesignIllustrations";
 import { ProductDesignCarousel } from "@/components/ProductDesignCarousel";
 import { ProductDesignFramework } from "@/components/ProductDesignFramework";
@@ -48,7 +47,7 @@ const process = [
 ];
 
 export default function ProductDesignLandingPage() {
-  return <><SiteHeader /><main className="product-landing"><TextRevealMotion />
+  return <><SiteHeader /><main className="product-landing">
     <section className="product-landing__hero" aria-labelledby="product-design-title">
       <div className="product-landing__hero-copy"><h1 id="product-design-title">Digital products built around <span className="product-landing__highlight">human experience.</span></h1><p>We connect research, design, and development to make useful websites and products that people can understand and enjoy using.</p><Link className="kyte-button" href="/contact">Talk about your product <ArrowRight size={18} aria-hidden="true" /></Link></div>
       <ProductDesignHeroArt />

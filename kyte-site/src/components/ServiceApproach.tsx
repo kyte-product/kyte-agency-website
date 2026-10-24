@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Minus, Plus } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Minus, Plus } from "lucide-react";
 import { DotPattern } from "./ui/DotPattern";
 import "./ServiceApproach.css";
 
@@ -38,9 +39,9 @@ export function ServiceApproach({ items = auditInclusions, heading = "A clearer 
 
   return <section className="service-approach" aria-labelledby="service-approach-title">
     <div className="service-approach__inner">
-      <div className="service-approach__heading">
+      <div className="service-approach__heading section-intro">
         <div><h2 id="service-approach-title">{heading}</h2></div>
-        <p>{intro}</p>
+        <div><p>{intro}</p><Link className="kyte-button service-approach__cta" href="/contact">Discuss your project <ArrowRight size={18} aria-hidden="true" /></Link></div>
       </div>
       <div className="service-approach__cards" aria-label="What this service includes">
         {items.map((inclusion, index) => {

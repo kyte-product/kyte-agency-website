@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { IndustryEditorialExperience } from "@/components/IndustryEditorialExperience";
-import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { industryPages } from "@/data/industryPages";
 
 type IndustryParams = { slug: string };
@@ -27,7 +26,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<I
   if (!industry) notFound();
 
   return <><SiteHeader /><main className="industry-detail">
-    <TextRevealMotion />
+
     <IndustryEditorialExperience industry={industry} />
   </main><SiteFooter /></>;
 }

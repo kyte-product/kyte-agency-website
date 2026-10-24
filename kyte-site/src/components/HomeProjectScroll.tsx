@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { ImpactCards } from "./ImpactCards";
 import "./HomeProjectScroll.css";
 
@@ -59,7 +61,7 @@ export function HomeProjectScroll() {
 
   return <section className="home-project-scroll" id="work-preview" ref={sectionRef} aria-labelledby="home-project-scroll-title">
     <div className="home-project-scroll__stage" ref={stageRef} data-site-reveal-ignore>
-      <h2 className="home-project-scroll__heading" id="home-project-scroll-title">Selected Work</h2>
+      <div className="home-project-scroll__heading"><h2 id="home-project-scroll-title">Selected Work</h2><Link className="kyte-button" href="/work">View all work <ArrowRight size={18} aria-hidden="true" /></Link></div>
       <div className="home-project-scroll__track" ref={trackRef}>
         {projectCovers.map(([name, alt]) => <div className="home-project-scroll__card" key={name}>
           <Image src={`/images/work/home-covers/${name}.webp`} alt={alt} fill sizes="(max-width: 600px) 82vw, (max-width: 1100px) 42vw, 540px" />

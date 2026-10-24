@@ -75,12 +75,7 @@ export function TeamPreviewFooter() {
           <div className="site-footer__utility-grid">
             <div className="site-footer__utility-cell site-footer__designrush">
               <Image className="site-footer__designrush-badge" src="/designrush-verified-agency-2024.png" alt="DesignRush Verified Agency 2024" width={217} height={290} unoptimized />
-              <div className="site-footer__designrush-copy">
-                <p className="site-footer__utility-label">On DesignRush</p>
-                <div className="site-footer__utility-actions">
-                  <Link className="site-footer__utility-button site-footer__designrush-profile" href="https://www.designrush.com/agency/profile/kyte-agency" target="_blank" rel="noopener noreferrer">View Agency Profile <ArrowRight size={16} aria-hidden="true" /></Link>
-                </div>
-              </div>
+
             </div>
             <div className="site-footer__utility-cell">
               <p className="site-footer__utility-label">Ask AI About Kyte</p>
@@ -97,7 +92,7 @@ export function TeamPreviewFooter() {
               <p className="site-footer__utility-label">Reach Out To Us</p>
               <div className="site-footer__utility-actions site-footer__reach-actions">
                 <a className="site-footer__utility-button" href="mailto:contact@kyte-agency.com"><Mail size={16} strokeWidth={1.75} aria-hidden="true" />contact@kyte-agency.com</a>
-                <a className="site-footer__utility-button" href="tel:+919876543210"><Phone size={16} strokeWidth={1.75} aria-hidden="true" />+91 9876543210</a>
+                <a className="site-footer__utility-button" href="tel:+917022603523"><Phone size={16} strokeWidth={1.75} aria-hidden="true" />+91 7022603523</a>
               </div>
             </div>
           </div>

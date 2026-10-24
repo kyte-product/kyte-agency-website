@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, FileText, Newspaper } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, FileText, Newspaper } from "lucide-react";
 import { useState } from "react";
 import { guideSamples, resourceSamples } from "@/lib/editorial-collections";
 import "./EditorialCollections.css";
@@ -28,7 +28,7 @@ export function EditorialShortcuts({ showPlaceholders }: { showPlaceholders: boo
 export function EditorialResources({ standalone = false }: { standalone?: boolean }) {
   const Heading = standalone ? "h1" : "h2";
   return <section className={`design-news__resources${standalone ? " editorial-collection--standalone" : ""}`} aria-labelledby="design-news-resources-heading">
-    <div className="design-news__resources-head"><div><Heading id="design-news-resources-heading">Resources</Heading><p>Practical material for teams working through product and brand decisions.</p></div>{!standalone && <Link className="kyte-button design-news__resources-link" href="/insights/resources">See all resources <ArrowUpRight size={18} aria-hidden="true" /></Link>}</div>
+    <div className="design-news__resources-head"><div><Heading id="design-news-resources-heading">Resources</Heading><p>Practical material for teams working through product and brand decisions.</p></div>{!standalone && <Link className="kyte-button design-news__resources-link" href="/insights/resources">See all resources <ArrowRight size={18} aria-hidden="true" /></Link>}</div>
     <div className="design-news__resource-grid">{resourceSamples.map((sample) => <article className="design-news__resource" key={sample.title}>
       <span className="design-news__resource-shelf"><span className="design-news__resource-book"><span className="design-news__resource-back" /><span className="design-news__resource-pages" /><span className="design-news__resource-face editorial-collection__book-face" style={{ backgroundColor: sample.color, color: sample.accent }}><Image className="editorial-collection__book-logo" src="/kyte-agency-logo.svg" alt="" width={1379} height={200} unoptimized /><span className="editorial-collection__book-title">{sample.title}</span><span className="design-news__resource-binding" /></span></span></span>
       <span className="design-news__resource-topic">{sample.kind}</span><strong>{sample.title}</strong>

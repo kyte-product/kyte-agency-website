@@ -1,10 +1,10 @@
 .legal-page { min-height: 70vh; background: var(--color-white); }
 .legal-page__inner { width: var(--page-width); margin: 0 auto; padding: clamp(72px,8vw,120px) var(--section-inset); }
-.legal-page h1 { max-width: 800px; margin: 24px 0; font-size: clamp(42px,6vw,72px); font-weight: var(--heading-weight); letter-spacing: -.045em; line-height: 1.05; }
+.legal-page h1 { max-width: 800px; margin: 24px 0; font-size: var(--heading-page); font-weight: var(--heading-weight); letter-spacing: -.045em; line-height: 1.2; }
 .legal-page__notice { max-width: 690px; margin: 0; color: var(--muted); font-size: var(--type-lead); line-height: 1.5; }
 .legal-page__sections { display: grid; max-width: 840px; gap: 0; margin-top: 64px; border-top: 1px solid var(--line); }
 .legal-page__sections section { display: grid; grid-template-columns: minmax(180px,1fr) minmax(0,2fr); gap: 30px; padding: 26px 0; border-bottom: 1px solid var(--line); }
-.legal-page__sections h2 { margin: 0; font-size: var(--type-subtitle); font-weight: 450; }
+.legal-page__sections h2 { margin: 0; font-size: var(--type-lead); font-weight: 450; }
 .legal-page__sections p { margin: 0; color: var(--muted); font-size: var(--type-body); line-height: 1.6; }
 .legal-page__contact { margin: 38px 0 24px; color: var(--muted); font-size: var(--type-body); }
 .legal-page__contact a, .legal-page__home { color: var(--color-blue); }

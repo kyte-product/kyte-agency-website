@@ -1,6 +1,6 @@
-.dot-pattern { display:block;width:100%;height:100%;overflow:hidden;pointer-events:none;--dot-rest:#dce0e8;--dot-highlight:var(--color-blue); }
-.dot-pattern--white { --dot-rest:#3260d3;--dot-highlight:#fff; }
-.dot-pattern--charcoal { --dot-rest:#373a40;--dot-highlight:var(--color-blue); }
+.dot-pattern { display:block;width:100%;height:100%;overflow:hidden;pointer-events:none;--dot-rest:var(--color-detail-dce0e8);--dot-highlight:var(--color-blue); }
+.dot-pattern--white { --dot-rest:var(--color-detail-3260d3);--dot-highlight:var(--color-white); }
+.dot-pattern--charcoal { --dot-rest:var(--color-detail-373a40);--dot-highlight:var(--color-blue); }
 .dot-pattern__dot { fill:var(--dot-rest); }
 .dot-pattern__dot--on { fill:var(--dot-highlight); }
 .dot-pattern__dot--a { fill:var(--dot-highlight);animation:dot-pattern-color 5s step-end infinite; }

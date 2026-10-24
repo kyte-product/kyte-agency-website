@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { DotPattern } from "@/components/ui/DotPattern";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { CSSProperties } from "react";
@@ -44,7 +45,7 @@ export function AboutPhilosophy() {
 export function AboutGlance() {
   return <section className="about-glance" aria-labelledby="about-glance-title">
     <div className="about-section-inner">
-      <div className="about-glance__heading"><h2 id="about-glance-title">One team, connected around the work.</h2><p>From first questions to a finished product, identity or campaign, different disciplines work from the same brief.</p></div>
+      <div className="about-glance__heading section-intro"><h2 id="about-glance-title">One team, connected around the work.</h2><p>From first questions to a finished product, identity or campaign, different disciplines work from the same brief.</p></div>
       <div className="about-glance__grid">
         <article className="about-glance__card about-glance__agency" data-about-reveal>
           <Image src="/kyte-agency-mark.png" alt="" width={38} height={38} className="about-glance__agency-mark" unoptimized />
@@ -66,6 +67,6 @@ export function AboutGlance() {
 
 export function AboutImpact() {
   return <section className="about-impact" aria-labelledby="about-impact-title">
-    <div className="about-section-inner about-impact__layout"><div className="about-impact__intro"><h2 id="about-impact-title">Our impact, in numbers.</h2><p>Results across product, brand, website and content projects.</p></div><div className="about-impact__cards">{aboutImpact.map((item, index) => <article className="about-impact__card" data-about-reveal key={item.description} style={{ "--card-delay": `${index * 90}ms`, "--step": index } as CSSProperties}><FincartImpactNumber value={item.value} suffix={item.suffix} /><p>{item.description}</p></article>)}</div></div>
+    <div className="about-section-inner about-impact__layout"><div className="about-impact__intro"><h2 id="about-impact-title">Our impact, in numbers.</h2><p>Results across product, brand, website and content projects.</p></div><div className="about-impact__cards">{aboutImpact.map((item, index) => <article className="about-impact__card" data-about-reveal key={item.description} style={{ "--card-delay": `${index * 90}ms`, "--step": index } as CSSProperties}><DotPattern shape="orbit" tone="brand" seed={`about-impact:${index}`} motifSlot={index} className="about-impact__pattern" /><div className="about-impact__copy"><FincartImpactNumber value={item.value} suffix={item.suffix} /><p>{item.description}</p></div></article>)}</div></div>
   </section>;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { FlightKite } from "./branding/FlightKite";
 import { ServicePixelImage } from "./branding/ServicePixelImage";
@@ -20,11 +20,10 @@ function ServiceRow({ service }: { service: typeof services[number] }) {
   const [active, setActive] = useState(false);
   const words = service.title.split(" ");
   const midpoint = Math.ceil(words.length / 2);
-  const fontSize = Math.min(5.4, 94 / (service.title.length * .54 + 2.8));
   return <Link className="service-editorial__row" href={service.href} aria-label={service.title}
     onPointerEnter={() => setActive(true)} onPointerLeave={() => setActive(false)}
     onFocus={() => setActive(true)} onBlur={() => setActive(false)}
-    style={{ "--service-font-size": `${fontSize}vw` } as CSSProperties}>
+    >
     <span className="service-editorial__title" aria-hidden="true">
       <span>{words.slice(0, midpoint).join(" ")}</span>
       <span className="service-editorial__preview"><span><ServicePixelImage src={service.image} active={active} /></span></span>

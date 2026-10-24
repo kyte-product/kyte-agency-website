@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ClientBrandTicker } from "@/components/ClientBrandTicker";
@@ -47,7 +47,7 @@ export default async function CareersPage() {
             </div>
             {rolesUnavailable ? <p className="careers-page__empty">We cannot load current opportunities right now. Please check back shortly.</p> : roles.length === 0 ? <p className="careers-page__empty">We do not have any confirmed openings right now.</p> : null}
             {roles.length > 0 && <CareerOpportunities roles={roles} />}
-            <div className="careers-page__team-card"><p>Want to know who you might work with?</p><Link href="/about">Meet the team <ArrowUpRight size={17} aria-hidden="true" /></Link></div>
+            <div className="careers-page__team-card"><p>Want to know who you might work with?</p><Link href="/about">Meet the team <ArrowRight size={17} aria-hidden="true" /></Link></div>
           </div>
         </div>
       </section>

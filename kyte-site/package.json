@@ -12,8 +12,10 @@
     "build:illustration-variants": "node hairline/build-brand-variants.mjs",
     "check:illustration-variants": "node hairline/check-illustration-variants.mjs",
     "check:design-systems": "node scripts/check-design-systems.mjs",
-    "prebuild": "npm run check:design-systems && npm run check:illustration-palettes && npm run check:illustration-variants",
-    "audit:source": "python3 scripts/audit-source.py"
+    "prebuild": "npm run check:design-systems && npm run check:illustration-palettes && npm run check:illustration-variants && npm run check:typography && npm run check:styles",
+    "audit:source": "python3 scripts/audit-source.py",
+    "check:typography": "node scripts/check-typography.mjs",
+    "check:styles": "node scripts/check-style-contracts.mjs"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.3.0",

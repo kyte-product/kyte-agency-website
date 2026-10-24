@@ -58,8 +58,8 @@ Services menu layout:
 │
 ├── /insights
 │   ├── /insights/design-news
-│   ├── /insights/resources (hidden until editorial launch)
-│   ├── /insights/guides (hidden until editorial launch)
+│   ├── /insights/resources (sample collection enabled for review)
+│   ├── /insights/guides (sample collection enabled for review)
 │   └── /insights/[article-slug]
 │
 ├── /about

@@ -1,7 +1,7 @@
 import type {Metadata} from 'next'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
-import {ArrowLeft, ArrowUpRight} from 'lucide-react'
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import {SiteHeader} from '@/components/SiteHeader'
 import {SiteFooter} from '@/components/SiteFooter'
 import {getPublishedCareerRoleBySlug, isSafeApplicationUrl} from '@/lib/sanity'
@@ -43,7 +43,7 @@ export default async function CareerRolePage({params}: Props) {
             <h1 id="career-role-title">{role.title}</h1>
             <p>{role.summary}</p>
             <div className="careers-role__facts">{[role.location, role.workMode, role.employmentType].filter(Boolean).map(item => <span key={item}>{item}</span>)}</div>
-            {isSafeApplicationUrl(role.applyUrl) ? <a className="kyte-button careers-page__apply" href={role.applyUrl!} target="_blank" rel="noopener noreferrer">Apply now <ArrowUpRight size={17} aria-hidden="true" /></a> : <button className="kyte-button careers-page__apply" type="button" disabled>Apply now <ArrowUpRight size={17} aria-hidden="true" /></button>}
+            {isSafeApplicationUrl(role.applyUrl) ? <a className="kyte-button careers-page__apply" href={role.applyUrl!} target="_blank" rel="noopener noreferrer">Apply now <ArrowRight size={17} aria-hidden="true" /></a> : <button className="kyte-button careers-page__apply" type="button" disabled>Apply now <ArrowRight size={17} aria-hidden="true" /></button>}
           </div>
           <div className="careers-role__body">
             <section aria-labelledby="role-responsibilities"><h2 id="role-responsibilities">What you will do</h2><ul>{role.responsibilities?.map((item, index) => <li key={`${index}-${item}`}>{item}</li>)}</ul></section>

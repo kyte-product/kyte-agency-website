@@ -1,8 +1,8 @@
 import { Suspense } from "react";
-import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { ClientStories } from "@/components/ClientStories";
 import { designNewsEntries } from "@/lib/editorial";
 import "./branding-editorial.css";
+import "./branding-tokens.css";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { BrandStoryHero } from "@/components/branding/BrandStoryHero";
@@ -28,7 +28,7 @@ async function BrandingDesignNews() {
 export default function BrandingMarketingPage() {
   return <>
     <SiteHeader />
-    <main className="branding-marketing-page"><TextRevealMotion /><BrandStoryHero /><BrandReelStatement /><BrandPixelTransition /><BrandHelixSection /><BrandProjects /><BrandPixelTransition /><BrandProcessSection /><div className="brand-process-afterspace" aria-hidden="true" /><BrandPixelTransition tone="gray" reverse /><BrandTestimonials /><BrandPixelTransition tone="gray" /><ServiceEditorialDirectory /><Suspense fallback={<section className="branding-news-loading" aria-label="Loading Design News" />}><BrandingDesignNews /></Suspense></main>
+    <main className="branding-marketing-page"><BrandStoryHero /><BrandReelStatement /><BrandPixelTransition /><BrandHelixSection /><BrandProjects /><BrandPixelTransition /><BrandProcessSection /><div className="brand-process-afterspace" aria-hidden="true" /><BrandPixelTransition tone="gray" reverse /><BrandTestimonials /><BrandPixelTransition tone="gray" /><ServiceEditorialDirectory /><Suspense fallback={<section className="branding-news-loading" aria-label="Loading Design News" />}><BrandingDesignNews /></Suspense></main>
     <ServiceFlightCta />
   </>;
 }

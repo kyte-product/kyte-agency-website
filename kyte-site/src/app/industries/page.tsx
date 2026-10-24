@@ -4,7 +4,6 @@ import { ArrowRight, Landmark, Layers3, ShoppingBag, Utensils } from "lucide-rea
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WorkShowcase } from "@/components/WorkShowcase";
-import { TextRevealMotion } from "@/components/TextRevealMotion";
 import { RevealWords } from "@/components/RevealWords";
 import "./industries.css";
 
@@ -54,7 +53,7 @@ const sectors = [
 
 export default function IndustriesPage() {
   return <><SiteHeader /><main className="industries-page">
-    <TextRevealMotion />
+
     <section className="industries-hero" aria-labelledby="industries-title">
       <div className="industries-hero__inner">
 
@@ -66,7 +65,7 @@ export default function IndustriesPage() {
 
     <section className="industry-directory" id="industry-directory" aria-labelledby="industry-directory-title">
       <div className="industry-directory__inner">
-        <div className="industry-directory__heading">
+        <div className="industry-directory__heading section-intro">
           <div><h2 id="industry-directory-title">Different contexts. Thoughtful design.</h2></div>
           <p>Start with the challenges your customers and teams face. Then explore the services that can help address them.</p>
         </div>
